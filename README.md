@@ -1,4 +1,4 @@
-# openelectioncompass
+![OpenElectionCompass](documentation/assets/title.png)
 
 ## Project setup
 ```
