@@ -34,7 +34,6 @@ export default {
     readTranslations(json) {
       const translations = JSON.parse(json);
       _forEach(translations, (translation, language) => {
-        console.log(language, translation);
         this.$i18n.setLocaleMessage(language, translation);
       });
     },
