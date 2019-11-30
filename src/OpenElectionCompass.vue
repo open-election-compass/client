@@ -35,9 +35,11 @@ export default {
       const translations = JSON.parse(json);
       _forEach(translations, (translation, language) => {
         this.$i18n.setLocaleMessage(language, translation);
+        this.$root.theses = translation.theses;
       });
     },
   },
+
 };
 </script>
 

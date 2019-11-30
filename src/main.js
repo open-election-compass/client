@@ -14,6 +14,11 @@ const i18n = new VueI18n({
 Vue.component('open-election-compass', OpenElectionCompass);
 
 new Vue({
+  data() {
+    return {
+      theses: [],
+    };
+  },
   router,
   i18n,
   el: '#open-election-compass',
