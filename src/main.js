@@ -1,6 +1,7 @@
 import Vue from 'vue';
 import VueI18n from 'vue-i18n';
 import OpenElectionCompass from './OpenElectionCompass.vue';
+import Icon from '@/components/Icon.vue';
 import router from './router/index';
 
 Vue.config.productionTip = false;
@@ -12,6 +13,7 @@ const i18n = new VueI18n({
 });
 
 Vue.component('open-election-compass', OpenElectionCompass);
+Vue.component('icon', Icon);
 
 new Vue({
   data() {
