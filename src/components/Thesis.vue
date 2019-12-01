@@ -2,6 +2,7 @@
   <div
     class="border-b-2 border-gray-300"
     v-if="hasBeenActivated"
+    :data-test="`thesis-${index}`"
   >
     <div class="p-8">
       <small class="text-sm font-bold text-gray-600 block text-center mb-4">
@@ -28,6 +29,7 @@
           text-gray-600 px-8 py-4 text-xs font-bold
           focus:outline-none
         "
+        :data-test="`thesis-${index}-skip`"
       >
         {{ status === null ? $t('skip') : $t('clear') }}
       </button>
@@ -39,6 +41,7 @@
           w-full text-left border-gray-300 p-4 font-bold text-sm
           focus:outline-none"
         :class="status === 'approve' ? 'bg-green-400 text-white' : 'text-green-600 bg-gray-100'"
+        :data-test="`thesis-${index}-approve`"
       >
         <icon name="check" />
         <span class="ml-4">{{ $t('approve') }}</span>
@@ -49,6 +52,7 @@
           w-full text-left border-gray-300 p-4 font-bold text-sm
           focus:outline-none"
         :class="status === 'neutral' ? 'bg-gray-500 text-white' : 'text-gray-600 bg-gray-100'"
+        :data-test="`thesis-${index}-neutral`"
       >
         <icon name="minus" />
         <span class="ml-4">{{ $t('neutral') }}</span>
@@ -59,6 +63,7 @@
           w-full text-left border-gray-300 p-4 font-bold text-sm
           focus:outline-none"
         :class="status === 'reject' ? 'bg-red-400 text-white' : 'text-red-600 bg-gray-100'"
+        :data-test="`thesis-${index}-reject`"
       >
         <icon name="times" />
         <span class="ml-4">{{ $t('reject') }}</span>
