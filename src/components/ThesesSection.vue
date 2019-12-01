@@ -25,7 +25,7 @@ export default {
   },
   data() {
     const data = {
-      statuses: [],
+      statuses: {},
     };
     this.theses.forEach((thesis, index) => { data.statuses[index] = null; });
     return data;

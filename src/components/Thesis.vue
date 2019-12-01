@@ -1,7 +1,7 @@
 <template>
   <div
-    class="border-t-2 border-gray-300"
-    :class="active ? '' : 'opacity-50'"
+    class="border-b-2 border-gray-300"
+    v-if="hasBeenActivated"
   >
     <div class="p-8">
       <small class="text-sm font-bold text-gray-600 block text-center mb-4">
@@ -91,11 +91,17 @@ export default {
   data() {
     return {
       status: null,
+      hasBeenActivated: this.index === 0,
     };
   },
   watch: {
     status() {
       this.$emit('status', this.status);
+    },
+    active(value) {
+      if (value) {
+        this.hasBeenActivated = true;
+      }
     },
   },
 };

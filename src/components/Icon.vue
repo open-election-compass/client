@@ -1,5 +1,9 @@
 <template>
-  <font-awesome-icon :icon="['fas', name]" :class="classes" :fixed-width="monospace" :spin="spinning"></font-awesome-icon>
+  <font-awesome-icon
+    :icon="['fas', name]"
+    :class="classes"
+    :fixed-width="monospace"
+    :spin="spinning" />
 </template>
 
 <script>
@@ -11,33 +15,33 @@ library.add(faCheck, faMinus, faTimes);
 
 export default {
 
-name: 'Icon',
+  name: 'Icon',
 
-props: {
-  name: {
-    type: String,
-    required: true,
+  props: {
+    name: {
+      type: String,
+      required: true,
+    },
+    monospace: {
+      type: Boolean,
+      default: true,
+    },
+    spinning: {
+      type: Boolean,
+      default: false,
+    },
   },
-  monospace: {
-    type: Boolean,
-    default: true,
-  },
-  spinning: {
-    type: Boolean,
-    default: false,
-  },
-},
 
-computed: {
-  classes() {
-    return {
-      'c-icon': true,
-    }
-  }
-},
+  computed: {
+    classes() {
+      return {
+        'c-icon': true,
+      };
+    },
+  },
 
-components: {
-  FontAwesomeIcon,
-},
+  components: {
+    FontAwesomeIcon,
+  },
 };
 </script>
