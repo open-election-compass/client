@@ -1,26 +1,67 @@
 <template>
-  <div class="p-8">
-    <strong class="text-2xl leading-tight text-primary font-bold">{{ thesis.statement }}</strong>
-    <div class="mt-8 flex flex-wrap">
+  <div
+    class="border-t-2 border-gray-300"
+    :class="active ? '' : 'opacity-50'"
+  >
+    <div class="p-8">
+      <small class="text-sm font-bold text-gray-600 block text-center mb-4">
+        {{ $t('thesis', { count: index + 1, total }) }}
+      </small>
+      <strong
+        class="
+          text-2xl leading-tight font-bold
+          sm:text-3xl
+          md:text-4xl
+        "
+        :class="{
+          'text-primary': status === null || status === 'skip',
+          'text-green-400': status === 'approve',
+          'text-gray-500': status === 'neutral',
+          'text-red-400': status === 'reject',
+        }"
+      >{{ thesis.statement }}</strong>
+    </div>
+    <div class="text-right">
       <button
-        class="flex-1 border-2 border-green-400 text-green-600 p-4 rounded mr-2"
+        @click="status === null ? status = 'skip' : status = null"
+        class="
+          text-gray-600 px-8 py-4 text-xs font-bold
+          focus:outline-none
+        "
       >
-        {{ $t('approve') }}
+        {{ status === null ? $t('skip') : $t('clear') }}
+      </button>
+    </div>
+    <div class="ml-8 mr-8 mb-8 rounded overflow-hidden">
+      <button
+        @click="status = 'approve'"
+        class="
+          w-full text-left border-gray-300 p-4 font-bold text-sm
+          focus:outline-none"
+        :class="status === 'approve' ? 'bg-green-400 text-white' : 'text-green-600 bg-gray-100'"
+      >
+        <icon name="check" />
+        <span class="ml-4">{{ $t('approve') }}</span>
       </button>
       <button
-        class="flex-1 border-2 border-gray-400 text-gray-600 p-4 rounded mr-2"
+        @click="status = 'neutral'"
+        class="
+          w-full text-left border-gray-300 p-4 font-bold text-sm
+          focus:outline-none"
+        :class="status === 'neutral' ? 'bg-gray-500 text-white' : 'text-gray-600 bg-gray-100'"
       >
-        {{ $t('neutral') }}
+        <icon name="minus" />
+        <span class="ml-4">{{ $t('neutral') }}</span>
       </button>
       <button
-        class="flex-1 border-2 border-red-400 text-red-600 p-4 rounded"
+        @click="status = 'reject'"
+        class="
+          w-full text-left border-gray-300 p-4 font-bold text-sm
+          focus:outline-none"
+        :class="status === 'reject' ? 'bg-red-400 text-white' : 'text-red-600 bg-gray-100'"
       >
-        {{ $t('disapprove') }}
-      </button>
-      <button
-        class="text-gray-600 p-4 w-full"
-      >
-        {{ $t('skip') }}
+        <icon name="times" />
+        <span class="ml-4">{{ $t('reject') }}</span>
       </button>
     </div>
   </div>
@@ -30,9 +71,31 @@
 export default {
   name: 'Thesis',
   props: {
+    index: {
+      type: Number,
+      required: true,
+    },
+    total: {
+      type: Number,
+      required: true,
+    },
     thesis: {
       type: Object,
       required: true,
+    },
+    active: {
+      type: Boolean,
+      required: true,
+    },
+  },
+  data() {
+    return {
+      status: null,
+    };
+  },
+  watch: {
+    status() {
+      this.$emit('status', this.status);
     },
   },
 };
@@ -41,16 +104,20 @@ export default {
 <i18n>
 {
   "en": {
+    "thesis": "Thesis {count} / {total}",
     "approve": "Approve",
     "neutral": "Neutral",
-    "disapprove": "Disapprove",
-    "skip": "Skip"
+    "reject": "Reject",
+    "skip": "Skip",
+    "clear": "Clear"
   },
   "de": {
-    "approve": "Stimme zu",
+    "thesis": "These {count} / {total}",
+    "approve": "Zustimmung",
     "neutral": "Neutral",
-    "disapprove": "Lehne ab",
-    "skip": "Überspringen"
+    "reject": "Ablehnung",
+    "skip": "Überspringen",
+    "clear": "Zurücksetzen"
   }
 }
 </i18n>

@@ -3,7 +3,11 @@
     <Thesis
       v-for="(thesis, index) in theses"
       :key="index"
+      :index="index"
+      :total="theses.length"
       :thesis="thesis"
+      :active="statuses[index - 1] !== null"
+      @status="statuses[index] = $event"
     />
   </div>
 </template>
@@ -18,6 +22,13 @@ export default {
       type: Array,
       required: true,
     },
+  },
+  data() {
+    const data = {
+      statuses: [],
+    };
+    this.theses.forEach((thesis, index) => { data.statuses[index] = null; });
+    return data;
   },
   components: {
     Thesis,
