@@ -9,9 +9,19 @@
 <script>
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
-import { faCheck, faMinus, faTimes } from '@fortawesome/free-solid-svg-icons';
+import {
+  faChevronRight,
+  faCheck,
+  faMinus,
+  faTimes,
+} from '@fortawesome/free-solid-svg-icons';
 
-library.add(faCheck, faMinus, faTimes);
+library.add(
+  faChevronRight,
+  faCheck,
+  faMinus,
+  faTimes,
+);
 
 export default {
 
