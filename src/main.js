@@ -19,6 +19,7 @@ new Vue({
   data() {
     return {
       theses: [],
+      parties: [],
     };
   },
   router,

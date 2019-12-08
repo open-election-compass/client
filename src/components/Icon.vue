@@ -12,6 +12,7 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 import {
   faChevronRight,
   faCheck,
+  faCircle,
   faMinus,
   faTimes,
 } from '@fortawesome/free-solid-svg-icons';
@@ -19,6 +20,7 @@ import {
 library.add(
   faChevronRight,
   faCheck,
+  faCircle,
   faMinus,
   faTimes,
 );

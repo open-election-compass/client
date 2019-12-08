@@ -5,7 +5,9 @@
 </template>
 
 <script>
+import _assign from 'lodash/assign';
 import _forEach from 'lodash/forEach';
+import _map from 'lodash/map';
 
 export default {
   name: 'OpenElectionCompass',
@@ -36,6 +38,9 @@ export default {
       _forEach(translations, (translation, language) => {
         this.$i18n.setLocaleMessage(language, translation);
         this.$root.theses = translation.theses;
+        this.$root.parties = _map(translation.parties, party => _assign(party, {
+          selected: false,
+        }));
       });
     },
   },

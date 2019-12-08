@@ -1,12 +1,14 @@
 <template>
-  <div class="border-b-2 border-gray-300">
+  <div
+    class="border-b-2 border-gray-300"
+    v-if="hasBeenActivated"
+  >
     <div
       class="
         container max-w-2xl mx-auto
         sm:py-16 sm:max-w-3xl
         lg:py-24 lg:max-w-4xl
       "
-      v-if="hasBeenActivated"
       :data-test="`thesis-${index}`"
     >
       <div class="p-8 sm:pb-16 lg:pb-24">

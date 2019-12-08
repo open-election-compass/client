@@ -3,6 +3,7 @@
     <start-section />
     <introduction-section />
     <theses-section :theses="$root.theses" />
+    <party-section :parties="$root.parties" />
   </div>
 </template>
 
@@ -10,6 +11,7 @@
 import StartSection from '@/components/StartSection.vue';
 import IntroductionSection from '@/components/IntroductionSection.vue';
 import ThesesSection from '@/components/ThesesSection.vue';
+import PartySection from '@/components/PartySection.vue';
 
 export default {
   name: 'home',
@@ -17,6 +19,7 @@ export default {
     StartSection,
     IntroductionSection,
     ThesesSection,
+    PartySection,
   },
 };
 </script>
