@@ -3,7 +3,8 @@
     <start-section />
     <introduction-section />
     <theses-section />
-    <party-section />
+    <party-section v-if="$store.getters['theses/complete']" />
+    <match-section />
   </div>
 </template>
 
@@ -12,6 +13,7 @@ import StartSection from '@/components/StartSection.vue';
 import IntroductionSection from '@/components/IntroductionSection.vue';
 import ThesesSection from '@/components/ThesesSection.vue';
 import PartySection from '@/components/PartySection.vue';
+import MatchSection from '@/components/MatchSection.vue';
 
 export default {
   name: 'home',
@@ -20,6 +22,7 @@ export default {
     IntroductionSection,
     ThesesSection,
     PartySection,
+    MatchSection,
   },
 };
 </script>

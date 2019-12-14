@@ -7,6 +7,9 @@ export default {
     theses(state) {
       return state.theses;
     },
+    complete(state) {
+      return !state.theses.some(thesis => thesis.status === null);
+    },
   },
   actions: {
     activate({ commit }, { index }) {
