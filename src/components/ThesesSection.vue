@@ -17,7 +17,7 @@ export default {
   name: 'ThesesSection',
   computed: {
     theses() {
-      return this.$t('theses');
+      return this.$store.getters['theses/theses'];
     },
   },
   components: {

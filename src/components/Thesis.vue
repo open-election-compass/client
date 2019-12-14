@@ -31,7 +31,7 @@
             'text-gray-500': status === 'neutral',
             'text-red-400': status === 'reject',
           }"
-        >{{ thesis.statement }}</strong>
+        >{{ $t(`theses.${index}.statement`) }}</strong>
       </div>
       <div class="text-right">
         <button

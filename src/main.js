@@ -13,6 +13,12 @@ Vue.use(VueI18n);
 
 const i18n = new VueI18n({
   locale: 'en',
+
+  // When accessing root locales in single file components with their own locales, vue-i18n will
+  // print a fallback warning in the console. This gets quite annoying, since we do that a lot and
+  // there is nothing wrong about it. Thankfully, we can disable that.
+  // For more information see: https://github.com/kazupon/vue-i18n/issues/201
+  silentTranslationWarn: true,
 });
 
 Vue.component('open-election-compass', OpenElectionCompass);
