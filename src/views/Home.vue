@@ -2,8 +2,8 @@
   <div>
     <start-section />
     <introduction-section />
-    <theses-section :theses="$root.theses" />
-    <party-section :parties="$root.parties" />
+    <theses-section />
+    <party-section />
   </div>
 </template>
 

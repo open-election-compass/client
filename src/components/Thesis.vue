@@ -127,21 +127,35 @@ export default {
       type: Object,
       required: true,
     },
-    active: {
-      type: Boolean,
-      required: true,
-    },
   },
-  data() {
-    return {
-      status: null,
-      hasBeenActivated: this.index === 0,
-    };
+  computed: {
+    active: {
+      get() {
+        const previousThesis = this.$store.getters['theses/theses'][this.index - 1];
+        return previousThesis !== undefined && previousThesis.status !== null;
+      },
+    },
+    status: {
+      get() {
+        return this.$store.getters['theses/theses'][this.index].status;
+      },
+      set(value) {
+        this.$store.commit('theses/setStatus', {
+          index: this.index,
+          status: value,
+        });
+      },
+    },
+    hasBeenActivated: {
+      get() {
+        return this.$store.getters['theses/theses'][this.index].hasBeenActivated;
+      },
+      set() {
+        return this.$store.commit('theses/activated', { index: this.index });
+      },
+    },
   },
   watch: {
-    status() {
-      this.$emit('status', this.status);
-    },
     active(value) {
       if (value) {
         this.hasBeenActivated = true;

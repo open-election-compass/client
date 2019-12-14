@@ -6,8 +6,6 @@
       :index="index"
       :total="theses.length"
       :thesis="thesis"
-      :active="statuses[index - 1] !== null"
-      @status="statuses[index] = $event"
     />
   </div>
 </template>
@@ -17,18 +15,10 @@ import Thesis from '@/components/Thesis.vue';
 
 export default {
   name: 'ThesesSection',
-  props: {
-    theses: {
-      type: Array,
-      required: true,
+  computed: {
+    theses() {
+      return this.$t('theses');
     },
-  },
-  data() {
-    const data = {
-      statuses: {},
-    };
-    this.theses.forEach((thesis, index) => { data.statuses[index] = null; });
-    return data;
   },
   components: {
     Thesis,

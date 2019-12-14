@@ -5,12 +5,16 @@
 </template>
 
 <script>
-import _assign from 'lodash/assign';
 import _forEach from 'lodash/forEach';
-import _map from 'lodash/map';
 
 export default {
   name: 'OpenElectionCompass',
+  data() {
+    return {
+      theses: null,
+      parties: null,
+    };
+  },
   props: {
     language: {
       type: String,
@@ -23,6 +27,17 @@ export default {
   created() {
     this.setLocale(this.language);
     this.readTranslations(this.$slots.default[0].text);
+    _forEach(this.$t('theses'), (thesis, index) => { // eslint-disable-line no-unused-vars
+      this.$store.commit('theses/addThesis', {
+        status: null,
+        hasBeenActivated: index === 0,
+      });
+    });
+    _forEach(this.$t('parties'), (party, index) => { // eslint-disable-line no-unused-vars
+      this.$store.commit('parties/addParty', {
+        selected: false,
+      });
+    });
   },
   watch: {
     language(value) {
@@ -37,10 +52,6 @@ export default {
       const translations = JSON.parse(json);
       _forEach(translations, (translation, language) => {
         this.$i18n.setLocaleMessage(language, translation);
-        this.$root.theses = translation.theses;
-        this.$root.parties = _map(translation.parties, party => _assign(party, {
-          selected: false,
-        }));
       });
     },
   },

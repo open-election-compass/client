@@ -18,28 +18,28 @@
     </p>
     <ul>
       <li
-        v-for="(party, index) in $root.parties"
+        v-for="(party, index) in parties"
         :key="index"
       >
         <input
           type="checkbox"
-          v-model="selected[index]"
+          v-model="parties[index].selected"
           :id="`party-${index}-checkbox`"
           class="hidden"
         />
         <label
           :for="`party-${index}-checkbox`"
           class="p-4 rounded block mb-4 flex items-center justify-start"
-          :class="selected[index] ? 'bg-primary' : 'bg-gray-200'"
+          :class="parties[index].selected ? 'bg-primary' : 'bg-gray-200'"
         >
           <icon
-            :name="selected[index] ? 'check' : 'circle'"
+            :name="parties[index].selected ? 'check' : 'circle'"
             class="text-white mr-4 flex-initial"
           />
           <span class="flex-initial font-bold mr-8">{{ party.short }}</span>
           <span class="flex-auto text-right">{{ party.name }}</span>
         </label>
-        <p class="mb-8 text-gray-600">{{ party.description }}</p>
+        <p class="m-8 text-gray-600">{{ party.description }}</p>
       </li>
     </ul>
   </div>
@@ -48,17 +48,9 @@
 <script>
 export default {
   name: 'PartySection',
-  data() {
-    const data = {
-      selected: {},
-    };
-    this.parties.forEach((party, index) => { data.selected[index] = false; });
-    return data;
-  },
-  props: {
-    parties: {
-      type: Array,
-      required: true,
+  computed: {
+    parties() {
+      return this.$t('parties');
     },
   },
 };
