@@ -9,12 +9,6 @@ import _forEach from 'lodash/forEach';
 
 export default {
   name: 'OpenElectionCompass',
-  data() {
-    return {
-      theses: null,
-      parties: null,
-    };
-  },
   props: {
     language: {
       type: String,
@@ -30,7 +24,7 @@ export default {
     _forEach(this.$t('theses'), (thesis, index) => { // eslint-disable-line no-unused-vars
       this.$store.commit('theses/addThesis', {
         status: null,
-        hasBeenActivated: index === 0,
+        activated: index === 0,
       });
     });
     _forEach(this.$t('parties'), (party, index) => { // eslint-disable-line no-unused-vars

@@ -148,10 +148,10 @@ export default {
     },
     hasBeenActivated: {
       get() {
-        return this.$store.getters['theses/theses'][this.index].hasBeenActivated;
+        return this.$store.getters['theses/theses'][this.index].activated;
       },
       set() {
-        return this.$store.commit('theses/activated', { index: this.index });
+        return this.$store.dispatch('theses/activate', { index: this.index });
       },
     },
   },

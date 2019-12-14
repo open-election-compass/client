@@ -8,15 +8,20 @@ export default {
       return state.theses;
     },
   },
+  actions: {
+    activate({ commit }, { index }) {
+      commit('setActivated', { index, activated: true });
+    },
+  },
   mutations: {
     addThesis(state, thesis) {
       state.theses.push(thesis);
     },
-    setStatus(state, payload) {
-      state.theses[payload.index].status = payload.status;
+    setStatus(state, { index, status }) {
+      state.theses[index].status = status;
     },
-    activated(state, payload) {
-      state.theses[payload.index].hasBeenActivated = true;
+    setActivated(state, { index, activated }) {
+      state.theses[index].activated = activated;
     },
   },
 };
