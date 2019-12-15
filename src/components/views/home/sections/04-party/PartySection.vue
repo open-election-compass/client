@@ -32,7 +32,7 @@
 </template>
 
 <script>
-import Party from '@/components/Party.vue';
+import Party from './Party.vue';
 
 export default {
   name: 'PartySection',

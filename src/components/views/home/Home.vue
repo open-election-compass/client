@@ -9,11 +9,11 @@
 </template>
 
 <script>
-import StartSection from '@/components/StartSection.vue';
-import IntroductionSection from '@/components/IntroductionSection.vue';
-import ThesesSection from '@/components/ThesesSection.vue';
-import PartySection from '@/components/PartySection.vue';
-import MatchSection from '@/components/MatchSection.vue';
+import StartSection from './sections/01-start/StartSection.vue';
+import IntroductionSection from './sections/02-introduction/IntroductionSection.vue';
+import ThesesSection from './sections/03-theses/ThesesSection.vue';
+import PartySection from './sections/04-party/PartySection.vue';
+import MatchSection from './sections/05-match/MatchSection.vue';
 
 export default {
   name: 'home',

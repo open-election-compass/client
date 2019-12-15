@@ -21,7 +21,7 @@
 </template>
 
 <script>
-import Match from '@/components/Match.vue';
+import Match from './Match.vue';
 
 export default {
   name: 'MatchSection',

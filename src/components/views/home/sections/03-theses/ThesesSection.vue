@@ -11,7 +11,7 @@
 </template>
 
 <script>
-import Thesis from '@/components/Thesis.vue';
+import Thesis from './Thesis.vue';
 
 export default {
   name: 'ThesesSection',
