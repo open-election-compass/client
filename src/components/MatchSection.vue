@@ -1,35 +1,23 @@
 <template>
-  <div class="bg-primary">
-    <div
-      class="
-        container max-w-2xl mx-auto p-8
-        sm:py-16 sm:max-w-3xl
-        lg:py-24 lg:max-w-4xl
-      "
-    >
-      <h2 class="
-        text-2xl leading-tight font-bold mb-10 text-white
-        sm:text-3xl
-        lg:text-4xl
-      ">
-        {{ $t('heading') }}
-      </h2>
-      <p class="mb-10 sm:text-xl lg:text-2xl">
-        {{ $t('explanation') }}
-      </p>
-      <ul>
-        <li
-          v-for="({ party, percentage }) in results"
-          :key="party.alias"
-        >
-          <match
-            :party="party"
-            :percentage="percentage"
-          />
-        </li>
-      </ul>
-    </div>
-  </div>
+  <page-section class="bg-primary">
+    <h2 class="text-white">
+      {{ $t('heading') }}
+    </h2>
+    <p class="mb-10">
+      {{ $t('explanation') }}
+    </p>
+    <ul>
+      <li
+        v-for="({ party, percentage }) in results"
+        :key="party.alias"
+      >
+        <match
+          :party="party"
+          :percentage="percentage"
+        />
+      </li>
+    </ul>
+  </page-section>
 </template>
 
 <script>

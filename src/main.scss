@@ -1,3 +1,10 @@
+@tailwind base;
+@tailwind components;
+
+@import "styles/headings.scss";
+
+@tailwind utilities;
+
 * {
 	-webkit-tap-highlight-color: transparent;
 }

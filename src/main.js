@@ -3,6 +3,7 @@ import Vuex from 'vuex';
 import VueI18n from 'vue-i18n';
 import OpenElectionCompass from './OpenElectionCompass.vue';
 import Icon from '@/components/Icon.vue';
+import PageSection from '@/elements/PageSection.vue';
 import router from './router/index';
 import store from './store/index';
 import numberFormats from './locales/numberFormats';
@@ -23,8 +24,9 @@ const i18n = new VueI18n({
   silentTranslationWarn: true,
 });
 
-Vue.component('open-election-compass', OpenElectionCompass);
 Vue.component('icon', Icon);
+Vue.component('open-election-compass', OpenElectionCompass);
+Vue.component('page-section', PageSection);
 
 new Vue({
   router,

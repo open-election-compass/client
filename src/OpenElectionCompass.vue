@@ -113,9 +113,7 @@ export default {
 </script>
 
 <style lang="scss">
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import './main.scss';
 
 #oec-wrapper {
   font-family: Arial, sans-serif;
@@ -123,6 +121,4 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
-@import './main.scss';
 </style>

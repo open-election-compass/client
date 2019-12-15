@@ -1,0 +1,21 @@
+h2 {
+	@apply text-2xl leading-tight font-bold mb-10;
+}
+
+@screen sm {
+  h2 {
+    @apply text-3xl;
+  }
+	h2 + p {
+		@apply text-xl;
+	}
+}
+
+@screen lg {
+  h2 {
+    @apply text-4xl;
+  }
+	h2 + p {
+		@apply text-2xl;
+	}
+}

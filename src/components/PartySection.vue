@@ -1,19 +1,9 @@
 <template>
-  <div
-    class="
-      container max-w-2xl mx-auto p-8
-      sm:py-16 sm:max-w-3xl
-      lg:py-24 lg:max-w-4xl
-    "
-  >
-    <h2 class="
-      text-2xl leading-tight font-bold mb-10 text-primary
-      sm:text-3xl
-      lg:text-4xl
-    ">
+  <page-section>
+    <h2 class="text-primary">
       {{ $t('heading') }}
     </h2>
-    <p class="mb-10 sm:text-xl lg:text-2xl">
+    <p class="mb-10">
       {{ $t('instruction') }}
     </p>
     <ul>
@@ -38,7 +28,7 @@
         <icon name="chevron-right" :monospace="false" />
       </button>
     </div>
-  </div>
+  </page-section>
 </template>
 
 <script>
