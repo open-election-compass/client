@@ -4,7 +4,7 @@
     <introduction-section />
     <theses-section />
     <party-section v-if="$store.getters['theses/complete']" />
-    <match-section />
+    <match-section v-if="$store.getters['parties/chosen']" />
   </div>
 </template>
 
