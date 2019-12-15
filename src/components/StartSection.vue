@@ -18,7 +18,7 @@
       md:text-lg md:px-6 md:py-3
       lg:text-2xl lg:px-8 lg:py-4
     ">
-      <span class="mr-4 md:mr-6 lg:mr-8">Los geht's</span>
+      <span class="mr-4 md:mr-6 lg:mr-8">{{ $t('go') }}</span>
       <icon name="chevron-right" :monospace="false" />
     </a>
     <p class="
@@ -33,3 +33,14 @@ export default {
   name: 'StartSection',
 };
 </script>
+
+<i18n>
+{
+  "en": {
+    "go": "Let's go"
+  },
+  "de": {
+    "go": "Los geht's"
+  }
+}
+</i18n>
