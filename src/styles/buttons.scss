@@ -1,5 +1,9 @@
 .button {
   @apply px-4 py-2 rounded inline-block self-center;
+  &:focus {
+    @apply outline-none;
+    transform: scale(1.1);
+  }
   span + .icon, .icon + span {
     @apply ml-4;
   }

@@ -13,7 +13,7 @@
     ">
       {{ $t('title') }}
     </h1>
-    <a class="button button-primary">
+    <a class="button button-primary" tabindex="1">
       <span>{{ $t('go') }}</span>
       <icon name="chevron-right" :monospace="false" />
     </a>
