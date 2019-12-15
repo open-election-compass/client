@@ -49,69 +49,32 @@
         flex flex-col ml-8 mr-8 mb-8 rounded overflow-hidden
         md:flex-row md:mx-6
       ">
-        <button
+        <vote-button
           @click="status = 'approve'"
-          class="
-            w-full text-left border-gray-300 p-4 font-bold text-sm
-            sm:text-base
-            md:text-center md:mx-2 md:rounded
-            lg:text-lg
-            focus:outline-none"
-          :class="status === 'approve' ? 'bg-green-400 text-white' : 'text-green-600 bg-gray-100'"
+          type="approve"
+          :active="status === 'approve'"
           :data-test="`thesis-${index}-approve`"
-        >
-          <icon name="check" />
-          <span class="
-            ml-4
-            md:block md:mt-2 md:ml-0
-          ">
-            {{ $t('approve') }}
-          </span>
-        </button>
-        <button
+        />
+        <vote-button
           @click="status = 'neutral'"
-          class="
-            w-full text-left border-gray-300 p-4 font-bold text-sm
-            sm:text-base
-            md:text-center md:mx-2 md:rounded
-            lg:text-lg
-            focus:outline-none"
-          :class="status === 'neutral' ? 'bg-gray-500 text-white' : 'text-gray-600 bg-gray-100'"
+          type="neutral"
+          :active="status === 'neutral'"
           :data-test="`thesis-${index}-neutral`"
-        >
-          <icon name="minus" />
-          <span class="
-            ml-4
-            md:block md:mt-2 md:ml-0
-          ">
-            {{ $t('neutral') }}
-          </span>
-        </button>
-        <button
+        />
+        <vote-button
           @click="status = 'reject'"
-          class="
-            w-full text-left border-gray-300 p-4 font-bold text-sm
-            sm:text-base
-            md:text-center md:mx-2 md:rounded
-            lg:text-lg
-            focus:outline-none"
-          :class="status === 'reject' ? 'bg-red-400 text-white' : 'text-red-600 bg-gray-100'"
+          type="reject"
+          :active="status === 'reject'"
           :data-test="`thesis-${index}-reject`"
-        >
-          <icon name="times" />
-          <span class="
-            ml-4
-            md:block md:mt-2 md:ml-0
-          ">
-            {{ $t('reject') }}
-          </span>
-        </button>
+        />
       </div>
     </div>
   </div>
 </template>
 
 <script>
+import VoteButton from './VoteButton.vue';
+
 export default {
   name: 'Thesis',
   props: {
@@ -162,6 +125,9 @@ export default {
       }
     },
   },
+  components: {
+    VoteButton,
+  },
 };
 </script>
 
@@ -169,17 +135,11 @@ export default {
 {
   "en": {
     "thesis": "Thesis {count} / {total}",
-    "approve": "Approve",
-    "neutral": "Neutral",
-    "reject": "Reject",
     "skip": "Skip",
     "clear": "Clear"
   },
   "de": {
     "thesis": "These {count} / {total}",
-    "approve": "Zustimmung",
-    "neutral": "Neutral",
-    "reject": "Ablehnung",
     "skip": "Überspringen",
     "clear": "Zurücksetzen"
   }
