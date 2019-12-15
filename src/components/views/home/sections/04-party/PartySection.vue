@@ -16,15 +16,10 @@
     </ul>
     <div class="text-center">
       <button
-        class="
-          bg-primary text-color-white px-4 py-2 rounded inline-block self-center
-          md:text-lg md:px-6 md:py-3
-          lg:text-2xl lg:px-8 lg:py-4
-          focus:outline-none
-        "
+        class="button button-primary"
         @click="$store.dispatch('parties/chose')"
       >
-        <span class="mr-4 md:mr-6 lg:mr-8">{{ $t('proceed') }}</span>
+        <span>{{ $t('proceed') }}</span>
         <icon name="chevron-right" :monospace="false" />
       </button>
     </div>

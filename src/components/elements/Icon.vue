@@ -1,7 +1,7 @@
 <template>
   <font-awesome-icon
     :icon="['fas', name]"
-    :class="classes"
+    class="icon"
     :fixed-width="monospace"
     :spin="spinning" />
 </template>
@@ -41,14 +41,6 @@ export default {
     spinning: {
       type: Boolean,
       default: false,
-    },
-  },
-
-  computed: {
-    classes() {
-      return {
-        'c-icon': true,
-      };
     },
   },
 

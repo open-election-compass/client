@@ -1,0 +1,28 @@
+.button {
+  @apply px-4 py-2 rounded inline-block self-center;
+  span + .icon, .icon + span {
+    @apply ml-4;
+  }
+}
+
+.button-primary {
+  @apply bg-primary text-black;
+}
+
+@screen md {
+  .button {
+    @apply text-lg px-6 py-3;
+    span + .icon, .icon + span {
+      @apply ml-6;
+    }
+  }
+}
+
+@screen lg {
+  .button {
+    @apply text-2xl px-8 py-4;
+    span + .icon, .icon + span {
+      @apply ml-8;
+    }
+  }
+}

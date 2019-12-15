@@ -13,12 +13,8 @@
     ">
       {{ $t('title') }}
     </h1>
-    <a class="
-      bg-primary text-color-white px-4 py-2 rounded inline-block self-center
-      md:text-lg md:px-6 md:py-3
-      lg:text-2xl lg:px-8 lg:py-4
-    ">
-      <span class="mr-4 md:mr-6 lg:mr-8">{{ $t('go') }}</span>
+    <a class="button button-primary">
+      <span>{{ $t('go') }}</span>
       <icon name="chevron-right" :monospace="false" />
     </a>
     <p class="
