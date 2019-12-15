@@ -49,6 +49,7 @@ export default {
         positions[party.alias] = thesis.positions[party.alias].position;
       });
       this.$store.commit('theses/addThesis', {
+        index,
         status: null,
         activated: index === 0,
         positions,
@@ -61,6 +62,7 @@ export default {
       this.readTranslation(configuration, `parties.${index}.short`, translations);
       this.readTranslation(configuration, `parties.${index}.description`, translations);
       this.$store.commit('parties/addParty', {
+        index,
         alias: party.alias,
         selected: false,
       });

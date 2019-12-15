@@ -1,52 +1,88 @@
 <template>
-  <div
-    class="
-      container max-w-2xl mx-auto p-8 bg-primary
-      sm:py-16 sm:max-w-3xl
-      lg:py-24 lg:max-w-4xl
-    "
-  >
-    <h2 class="
-      text-2xl leading-tight font-bold mb-10 text-white
-      sm:text-3xl
-      lg:text-4xl
-    ">
-      {{ $t('heading') }}
-    </h2>
+  <div class="bg-primary">
+    <div
+      class="
+        container max-w-2xl mx-auto p-8
+        sm:py-16 sm:max-w-3xl
+        lg:py-24 lg:max-w-4xl
+      "
+    >
+      <h2 class="
+        text-2xl leading-tight font-bold mb-10 text-white
+        sm:text-3xl
+        lg:text-4xl
+      ">
+        {{ $t('heading') }}
+      </h2>
+      <p class="mb-10 sm:text-xl lg:text-2xl">
+        {{ $t('explanation') }}
+      </p>
+      <ul>
+        <li
+          v-for="({ party, percentage }) in results"
+          :key="party.alias"
+        >
+          <match
+            :party="party"
+            :percentage="percentage"
+          />
+        </li>
+      </ul>
+    </div>
   </div>
 </template>
 
 <script>
-/* eslint-disable */
+import Match from '@/components/Match.vue';
+
 export default {
   name: 'MatchSection',
   computed: {
+    selectedParties() {
+      return this.$store.getters['parties/selectedParties'];
+    },
+    theses() {
+      return this.$store.getters['theses/theses'];
+    },
     results() {
-      const parties = this.$store.getters['parties/parties'];
-      const theses = this.$store.getters['theses/theses'];
-      const matches = parties.map((party) => {
+      // Maximum possible points
+      const maxPoints = this.$store.getters['theses/maxPoints'];
+
+      // Calculate points
+      const matches = this.selectedParties.map((party) => {
         let points = 0;
-        theses.forEach((thesis, index) => {
-          console.log(thesis.positions[party.alias]);
+        this.theses.forEach((thesis) => {
           if (thesis.status !== 'skipped' && thesis.positions[party.alias] === thesis.status) {
             points += 1;
           }
         });
-        return points;
+        const percentage = 1 / maxPoints * points;
+        return { party, points, percentage };
       });
+
+      // Sort by points
+      matches.sort((a, b) => b.points - a.points);
+
       return matches;
     },
+  },
+  components: {
+    Match,
   },
 };
 </script>
 
+<!-- eslint-disable max-len -->
 <i18n>
 {
   "en": {
-    "heading": "Your result"
+    "heading": "Your result",
+    "explanation": "This chart describes how much you and the respective parties agreed on the above theses. The higher the percentage, the more your positions match. Keep in mind, that this is no voting recommendation, but a tool for orientation and discussion."
   },
   "de": {
-    "heading": "Dein Ergebnis"
+    "heading": "Dein Ergebnis",
+    "explanation": "Dieses Diagramm zeigt an, wie sehr du und die jeweiligen Parteien bzgl. der obigen Thesen übereinstimmt. Je höher die Prozentzahl, desto ähnlicher sind eure Positionen. Denke daran, dass dies keine Wahl-Empfehlung ist, sondern nur ein Werkzeug der Orientierung und Diskussion."
   }
 }
 </i18n>
+<!-- eslint-enable max-len -->

@@ -10,6 +10,14 @@ export default {
     complete(state) {
       return !state.theses.some(thesis => thesis.status === null);
     },
+    maxPoints(state) {
+      return state.theses.reduce((points, thesis) => {
+        if (thesis.status === null || thesis.status === 'skip') {
+          return points;
+        }
+        return points + 1;
+      }, 0);
+    },
   },
   actions: {
     activate({ commit }, { index }) {

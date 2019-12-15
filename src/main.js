@@ -5,6 +5,7 @@ import OpenElectionCompass from './OpenElectionCompass.vue';
 import Icon from '@/components/Icon.vue';
 import router from './router/index';
 import store from './store/index';
+import numberFormats from './locales/numberFormats';
 
 Vue.config.productionTip = false;
 
@@ -13,6 +14,7 @@ Vue.use(VueI18n);
 
 const i18n = new VueI18n({
   locale: 'en',
+  numberFormats,
 
   // When accessing root locales in single file components with their own locales, vue-i18n will
   // print a fallback warning in the console. This gets quite annoying, since we do that a lot and
