@@ -29,7 +29,7 @@ export default {
     type: {
       type: String,
       required: true,
-      validate(value) {
+      validator(value) {
         return ['approve', 'neutral', 'reject'].includes(value);
       },
     },
