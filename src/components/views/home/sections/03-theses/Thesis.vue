@@ -14,35 +14,27 @@
       <div class="p-8 sm:pb-16 lg:pb-24">
         <small class="
           text-sm font-bold text-gray-600 block text-center mb-4
-          sm:pb-8 lg:pb-16
+          sm:pb-8
+          lg:pb-16 lg:text-base
         ">
           {{ $t('thesis', { count: index + 1, total }) }}
         </small>
-        <strong
-          class="
-            text-2xl leading-tight font-bold block
-            sm:text-3xl sm:max-w-2xl
-            md:text-4xl
-            lg:text-5xl lg:max-w-3xl
-          "
-          :class="{
-            'text-primary': status === null || status === 'skip',
-            'text-green-400': status === 'approve',
-            'text-gray-500': status === 'neutral',
-            'text-red-400': status === 'reject',
-          }"
-        >{{ $t(`theses.${index}.statement`) }}</strong>
+        <statement :status="status" :statement="$t(`theses.${index}.statement`)" />
       </div>
       <div class="text-right">
         <button
           @click="status === null ? status = 'skip' : status = null"
           class="
             text-gray-600 px-8 py-4 text-xs font-bold
+            lg:text-base
             focus:outline-none
           "
           :data-test="`thesis-${index}-skip`"
         >
-          {{ status === null ? $t('skip') : $t('clear') }}
+          <span class="mr-1">
+            {{ status === null ? $t('skip') : $t('clear') }}
+          </span>
+          <icon name="chevron-right" />
         </button>
       </div>
       <div class="
@@ -73,6 +65,7 @@
 </template>
 
 <script>
+import Statement from './Statement.vue';
 import VoteButton from './VoteButton.vue';
 
 export default {
@@ -126,6 +119,7 @@ export default {
     },
   },
   components: {
+    Statement,
     VoteButton,
   },
 };
