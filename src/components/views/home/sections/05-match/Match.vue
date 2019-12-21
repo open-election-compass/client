@@ -17,7 +17,7 @@
         {{ $n(percentage, 'percentage') }}
       </span>
     </div>
-    <p class="m-8 text-yellow-900">{{ $t(`parties.${party.index}.description`) }}</p>
+    <p class="mb-10 text-yellow-900">{{ $t(`parties.${party.index}.description`) }}</p>
   </div>
 </template>
 

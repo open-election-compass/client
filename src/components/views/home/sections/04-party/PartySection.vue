@@ -6,7 +6,7 @@
     <p class="mb-10">
       {{ $t('instruction') }}
     </p>
-    <ul class="mb-16">
+    <ul class="mb-10">
       <li
         v-for="(party, index) in parties"
         :key="index"
@@ -16,7 +16,7 @@
     </ul>
     <div class="text-center">
       <button
-        class="button button-primary"
+        class="button button-primary mb-4"
         @click="$store.dispatch('parties/chose')"
       >
         <span>{{ $t('proceed') }}</span>
