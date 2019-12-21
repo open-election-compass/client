@@ -40,7 +40,7 @@ export default {
       const matches = this.selectedParties.map((party) => {
         let points = 0;
         this.theses.forEach((thesis) => {
-          if (thesis.status !== 'skipped' && thesis.positions[party.alias] === thesis.status) {
+          if (thesis.status !== 'skip' && thesis.positions[party.alias] === thesis.status) {
             points += 1;
           }
         });

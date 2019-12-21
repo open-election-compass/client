@@ -26,7 +26,7 @@ export default {
   props: {
     status: {
       type: String,
-      required: true,
+      default: null,
       validator(value) {
         return ['approve', 'reject', 'neutral', 'skip'].includes(value);
       },

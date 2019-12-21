@@ -23,7 +23,7 @@
       </div>
       <div class="text-right">
         <button
-          @click="status === null ? status = 'skip' : status = null"
+          @click="status = 'skip'"
           class="
             text-gray-600 px-8 py-4 text-xs font-bold
             lg:text-base
@@ -32,7 +32,7 @@
           :data-test="`thesis-${index}-skip`"
         >
           <span class="mr-1">
-            {{ status === null ? $t('skip') : $t('clear') }}
+            {{ $t('skip') }}
           </span>
           <icon name="chevron-right" />
         </button>
@@ -129,13 +129,11 @@ export default {
 {
   "en": {
     "thesis": "Thesis {count} / {total}",
-    "skip": "Skip",
-    "clear": "Clear"
+    "skip": "Skip"
   },
   "de": {
     "thesis": "These {count} / {total}",
-    "skip": "Überspringen",
-    "clear": "Zurücksetzen"
+    "skip": "Überspringen"
   }
 }
 </i18n>
