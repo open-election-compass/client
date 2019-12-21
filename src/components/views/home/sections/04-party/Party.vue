@@ -18,7 +18,6 @@
       <span class="flex-initial font-bold mr-8">{{ $t(`parties.${index}.short`) }}</span>
       <span class="flex-auto text-right">{{ $t(`parties.${index}.name`) }}</span>
     </label>
-    <p class="m-8 text-gray-600">{{ $t(`parties.${index}.description`) }}</p>
   </div>
 </template>
 

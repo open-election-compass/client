@@ -6,7 +6,7 @@
     <p class="mb-10">
       {{ $t('instruction') }}
     </p>
-    <ul>
+    <ul class="mb-16">
       <li
         v-for="(party, index) in parties"
         :key="index"
