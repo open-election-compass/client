@@ -16,14 +16,15 @@
       <footer class="order-1 flex-none">
         <cite class="
           not-italic block mb-8 text-center
-          lg:py-6 lg:text-right lg:mr-12
+          md:text-lg
+          lg:py-6 lg:text-right lg:mr-12 lg:text-xl
         ">
-          <span class="block font-bold">
+          <span class="block font-bold mb-2">
             {{ $t(`parties.${party.index}.short`) }}
           </span>
-          <span class="text-sm text-green-500">
+          <span class="block-inline text-sm bg-green-400 text-white rounded p-2">
             <icon class="mr-1" name="check" />
-            <span>
+            <span class="font-bold">
               {{ $t('approves') }}
             </span>
           </span>

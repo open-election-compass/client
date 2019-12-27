@@ -12,14 +12,15 @@
       <footer class="order-1 flex-none">
         <cite class="
           not-italic block mb-8 text-center
-          lg:mb-12
+          md:text-lg
+          lg:mb-12 lg:text-xl
         ">
-          <span class="block font-bold">
+          <span class="block font-bold mb-2">
             {{ $t(`parties.${party.index}.short`) }}
           </span>
-          <span class="text-sm text-gray-500">
+          <span class="block-inline text-sm bg-gray-500 text-white rounded p-2">
             <icon class="mr-1" name="minus" />
-            <span>
+            <span class="font-bold">
               {{ $t('neutral') }}
             </span>
           </span>
@@ -69,10 +70,10 @@ export default {
 <i18n>
 {
   "en": {
-    "neutral": "is neutral"
+    "neutral": "neutral"
   },
   "de": {
-    "neutral": "ist neutral"
+    "neutral": "neutral"
   }
 }
 </i18n>

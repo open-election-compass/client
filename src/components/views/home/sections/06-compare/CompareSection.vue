@@ -2,7 +2,7 @@
   <div>
     <page-section class="bg-white">
       <h2 class="text-primary">{{ $t('heading') }}</h2>
-      <p class="mb-10">
+      <p>
         {{ $t('explanation') }}
       </p>
     </page-section>

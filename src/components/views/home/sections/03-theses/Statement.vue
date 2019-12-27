@@ -22,12 +22,19 @@
     <template v-if="badge">
       <small class="
         rounded inline-block py-2 px-3 text-white font-bold mt-8 ml-auto
+        md:text-lg
       "
       :class="{
         'bg-gray-500': status === null || status === 'skip' || status === 'neutral',
         'bg-green-400': status === 'approve',
         'bg-red-400': status === 'reject',
       }">
+        <icon class="mr-2" :name="{
+          approve: 'check',
+          neutral: 'minus',
+          reject: 'times',
+          skip: 'circle',
+        }[status]" />
         {{ $t(`badge.${status}`) }}
       </small>
     </template>
