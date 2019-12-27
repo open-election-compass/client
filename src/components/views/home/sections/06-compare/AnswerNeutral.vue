@@ -7,7 +7,7 @@
         bubble order-2 flex-auto
         xl:max-w-2xl xl:mx-auto
       ">
-        {{ $t(`theses.${thesis.index}.positions.${party.alias}.explanation`) }}
+        <show-more :text="$t(`theses.${thesis.index}.positions.${party.alias}.explanation`)" />
       </p>
       <footer class="order-1 flex-none">
         <cite class="
