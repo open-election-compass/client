@@ -1,5 +1,8 @@
 <template>
-  <div class="my-12 lg:my-32">
+  <div class="
+    mt-12
+    lg:mt-32
+  ">
     <component
       :is="component"
       :party="party"

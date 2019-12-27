@@ -4,7 +4,7 @@
     2xl:ml-56 2xl:-mr-56
   ">
     <blockquote class="
-      my-8 flex flex-col
+      mt-8 flex flex-col
       lg:flex-row
     ">
       <p class="

@@ -1,7 +1,7 @@
 <template>
   <div>
     <blockquote class="
-      my-8 flex flex-col
+      mt-8 flex flex-col
     ">
       <p class="
         bubble order-2 flex-auto
