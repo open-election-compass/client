@@ -9,6 +9,7 @@
         <statement
           :statement="$t(`theses.${thesis.index}.statement`)"
           :status="getStatus(thesis.index)"
+          :badge="true"
         />
         <template
           v-for="party in selectedParties"
