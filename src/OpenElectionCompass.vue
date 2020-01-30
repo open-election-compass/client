@@ -39,6 +39,7 @@ export default {
     this.readTranslation(configuration, 'subtitle', translations);
     this.readTranslation(configuration, 'introduction.heading', translations);
     this.readTranslation(configuration, 'introduction.text', translations);
+    this.readTranslation(configuration, 'footer-links', translations);
 
     // Read configuration for theses and extract translations
     _forEach(configuration.theses, (thesis, index) => {

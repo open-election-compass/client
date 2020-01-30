@@ -6,6 +6,7 @@
     <party-section v-if="$store.getters['theses/complete']" />
     <match-section v-if="$store.getters['parties/chosen']" />
     <compare-section v-if="$store.getters['parties/chosen']" />
+    <footer-section />
   </div>
 </template>
 
@@ -16,6 +17,7 @@ import ThesesSection from './sections/03-theses/ThesesSection.vue';
 import PartySection from './sections/04-party/PartySection.vue';
 import MatchSection from './sections/05-match/MatchSection.vue';
 import CompareSection from './sections/06-compare/CompareSection.vue';
+import FooterSection from './sections/07-footer/FooterSection.vue';
 
 export default {
   name: 'home',
@@ -26,6 +28,7 @@ export default {
     PartySection,
     MatchSection,
     CompareSection,
+    FooterSection,
   },
 };
 </script>
