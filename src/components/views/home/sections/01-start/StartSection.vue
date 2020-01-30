@@ -1,11 +1,6 @@
 <template>
   <div class="container mx-auto p-8 flex flex-col h-screen content-center justify-around">
-    <img
-      src="@/assets/logo.svg"
-      alt="Open Election Compass"
-      style="width: 30%; max-width:100px;"
-      class="self-center"
-    />
+    <open-election-compass-logo class="self-center"/>
     <h1 class="
       text-2xl leading-tight text-center max-w-4xl mx-auto
       md:text-5xl
