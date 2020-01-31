@@ -2,7 +2,10 @@
   <footer>
     <page-section class="bg-gray-300 text-white" :padding="false">
       <nav class="text-gray-600">
-        <ul class="flex justify-center">
+        <ul class="
+          justify-center -mx-4
+          md:flex
+        ">
           <li
             v-for="(link, index) in footerLinks"
             :key="index"
@@ -14,14 +17,20 @@
     </page-section>
     <page-section class="bg-gray-800">
       <div class="max-w-sm mx-auto">
-        <div class="lg:flex">
+        <div class="sm:flex">
           <open-election-compass-logo
             width="50px"
             color="#718096"
-            class="flex-none lg:mr-8"
+            class="
+              flex-none mb-6 mx-auto
+              sm:m-0 sm:mr-8
+            "
           />
           <i18n
-            class="text-sm font-bold text-medium text-gray-600"
+            class="
+              text-sm font-bold text-medium text-gray-600 text-center
+              sm:text-left
+            "
             path="explanation"
             tag="p"
             for="oec"
