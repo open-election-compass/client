@@ -55,11 +55,11 @@ export default {
 {
   "en": {
     "explanation": "This election compass is based on the open source project {0} which is free to use.",
-    "oec": "Open Election Compass"
+    "oec": "OpenElectionCompass"
   },
   "de": {
-    "explanation": "Die technische Umsetzung dieses Wahlkompasses wird ermöglicht durch das Open Source Projekt {0}. Der Code ist unter einer freien Lizenz für jeden zugänglich.",
-    "oec": "Open Election Compass"
+    "explanation": "Dieser Wahlkompass basiert auf dem frei zugänglichen Open Source Projekt {0}.",
+    "oec": "OpenElectionCompass"
   }
 }
 </i18n>
