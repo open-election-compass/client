@@ -14,6 +14,7 @@
     <p class="
       text-sm text-center text-gray-500
       md:text-lg
+      lg:text-xl
     ">{{ $t('subtitle') }}</p>
   </div>
 </template>
