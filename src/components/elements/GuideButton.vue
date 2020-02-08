@@ -1,0 +1,296 @@
+<template>
+  <transition name="popup">
+    <div
+      class="
+        fixed bottom-0 left-0 right-0 p-4 w-full text-center
+        md:pb-8
+        lg:pb-16
+      "
+      v-if="visible"
+    >
+      <button
+        class="
+          w-full bg-green-400 rounded text-white font-bold shadow-md p-4 levitating
+          sm:max-w-lg sm:text-lg
+          md:text-xl
+        "
+        @click="goToActiveSection"
+      >
+        {{ $t(`messages.${activeSection.message}`) }}
+        <icon name="chevron-right" :monospace="false" />
+      </button>
+    </div>
+  </transition>
+</template>
+
+<script>
+import _throttle from 'lodash/throttle';
+
+export default {
+  name: 'GuideButton',
+  data() {
+    return {
+      scrollPosition: 0, // to determine direction
+      actualSection: null,
+      sections: [],
+      visible: false,
+    };
+  },
+  mounted() {
+    this.initSections();
+    this.wrapperElement.addEventListener('scroll', this.updateActualSection);
+    this.$watch('actualSection', this.updateVisibility);
+    this.$watch('activeSection', this.updateVisibility);
+  },
+  computed: {
+    wrapperElement() {
+      return this.$root.$el.querySelector('#oec-wrapper');
+    },
+    theses() {
+      return this.$store.getters['theses/theses'];
+    },
+    partiesChosen() {
+      return this.$store.getters['parties/chosen'];
+    },
+    activeSection() {
+      const uncompletedSection = this.sections.find(section => section.completed === false);
+      if (uncompletedSection !== null) {
+        return uncompletedSection;
+      }
+      return this.sections[0];
+    },
+    nextSection() {
+      const indexOfCurrentSection = this.sections
+        .findIndex(section => section.alias === this.activeSection.alias);
+      if (indexOfCurrentSection === this.sections.length - 1) {
+        return false;
+      }
+      return this.sections[indexOfCurrentSection + 1];
+    },
+  },
+  methods: {
+    updateVisibility: _throttle(function updateVisibilityThrottled() {
+      if (this.actualSection && this.activeSection) {
+        this.visible = this.actualSection.alias !== this.activeSection.alias;
+        return;
+      }
+      this.visible = false;
+    }, 500),
+    initSections() {
+      let sections = [];
+
+      // Add Start section
+      sections.push({
+        alias: 'start',
+        completed: true,
+        message: 'start',
+      });
+
+      // Add Introduction section
+      sections.push({
+        alias: 'introduction',
+        completed: false,
+        message: 'introduction',
+      });
+      this.$watch('actualSection', (section) => {
+        if (section && section.alias === 'introduction') {
+          this.markSectionAsCompleted('introduction');
+        }
+      });
+
+      // Add theses
+      // eslint-disable-next-line arrow-body-style
+      sections = sections.concat(this.theses.map((thesis, index) => {
+        const alias = `thesis-${index}`;
+        this.$watch(`theses.${index}.status`, (status) => {
+          if (status !== null) {
+            this.markSectionAsCompleted(alias);
+          }
+        });
+        return {
+          alias,
+          completed: false,
+          message: index === 0 ? 'first-thesis' : 'thesis',
+        };
+      }));
+
+      // Add Party section
+      sections.push({
+        alias: 'party',
+        completed: false,
+        message: 'party',
+      });
+      this.$watch('partiesChosen', (chosen) => {
+        if (chosen) {
+          this.markSectionAsCompleted('party');
+          this.goToActiveSection(true);
+        }
+      });
+
+      // Add Party, Match and Compare section
+      sections = sections.concat([
+        {
+          alias: 'match',
+          completed: false,
+          message: 'match',
+        },
+        {
+          alias: 'compare',
+          completed: false,
+          message: 'compare',
+        },
+      ]);
+
+      this.$set(this, 'sections', sections);
+    },
+    updateActualSection() {
+      const scrollPosition = this.wrapperElement.scrollTop;
+      const wrapperHeight = this.wrapperElement.offsetHeight;
+
+      const sections = this.sections.slice(); // = clone
+      const direction = scrollPosition < this.scrollPosition ? 'up' : 'down';
+      if (direction === 'down') {
+        sections.reverse(); // when scrolling down, the first element *coming* into view is relevant
+      }
+      this.scrollPosition = scrollPosition;
+
+      const actualSection = sections.find((section) => {
+        // Find dom node
+        const sectionElement = this.wrapperElement // eslint-disable-line no-param-reassign
+          .querySelector(`[data-guide-section="${section.alias}"]`);
+        if (sectionElement === null) {
+          return false;
+        }
+
+        // Determine the height of the section being visible in the viewport / wrapper:
+        // - rect.top:    The length from the top border of the wrapper to the top border of the
+        //                section.
+        // - rect.bottom: The length from the top border of the wrapper to the bottom border of the
+        //                section. Notice, that this works a little different than you might expect!
+        // - rect.height: The height of the section. Shrinks, when element leaves the viewport at
+        //                the top, but not at the bottom!
+        const rect = sectionElement.getBoundingClientRect();
+        let visibleHeight = 0;
+        if (rect.top >= 0) {
+          // Section is below the top border of the wrapper
+          visibleHeight = rect.height - (rect.bottom - wrapperHeight);
+        } else {
+          // Section is at least partly above the top border of the wrapper
+          visibleHeight = rect.height + rect.top;
+        }
+
+        // Limit visibleHeight to >= 0, because a section that hasn't entered the viewport covers
+        // 0 % of it
+        visibleHeight = Math.max(0, visibleHeight);
+
+        // Limit the actual height of the section to the height of the wrapper, so a section that is
+        // bigger than the wrapper, reaches 100 % when it covers the whole wrapper.
+        const sectionHeight = Math.min(wrapperHeight, sectionElement.offsetHeight);
+
+        // Limit visibleHeight to the (also limited) sectionHeight, because an element that is
+        // smaller in height than the wrapper cannot possibly cover it completely.
+        visibleHeight = Math.min(sectionHeight, visibleHeight);
+
+        const visiblePercent = 1 / sectionHeight * visibleHeight;
+        return visiblePercent > 0.6;
+      });
+
+      if (actualSection) {
+        // When actualSection is null, no element takes more than 60 % of the viewport. This happens
+        // between two sections, when the viewport's height is rather narrow, in which case, we
+        // simply keep the last section set.
+        this.actualSection = actualSection;
+      }
+    },
+    markSectionAsCompleted(alias) {
+      const completedSection = this.sections.find(section => section.alias === alias);
+      if (completedSection !== null) {
+        completedSection.completed = true;
+      }
+    },
+    goToActiveSection() {
+      if (!this.visible || !this.activeSection) {
+        return;
+      }
+      // Find dom node of active section
+      const sectionElement = this.wrapperElement // eslint-disable-line no-param-reassign
+        .querySelector(`[data-guide-section="${this.activeSection.alias}"]`);
+      this.wrapperElement.scrollTo({
+        behavior: 'smooth', // using iamdustan/smoothscroll polyfill
+        left: 0,
+        top: sectionElement.offsetTop,
+      });
+    },
+  },
+};
+</script>
+
+<i18n>
+{
+  "en": {
+    "messages": {
+      "start": "Let's go",
+      "introduction": "Learn how this works",
+      "first-thesis": "Start with the first thesis",
+      "thesis": "Proceed to the next thesis",
+      "party": "Select the parties",
+      "match": "See your result",
+      "compare": "View the ansers in detail"
+    }
+  },
+  "de": {
+    "messages": {
+      "start": "Los geht's",
+      "introduction": "Zur Einführung",
+      "first-thesis": "Auf zur ersten These",
+      "thesis": "Weiter zur nächsten These",
+      "party": "Parteien auswählen",
+      "match": "Ergebnis anschauen",
+      "compare": "Antworten im Detail lesen"
+    }
+  }
+}
+</i18n>
+
+<style lang="scss" scoped>
+  .levitating {
+    animation-name: levitating;
+    animation-duration: 1.5s;
+    animation-timing-function: cubic-bezier(0.445, 0.050, 0.550, 0.950); // ease-in-out-sine
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+  }
+  @keyframes levitating {
+    0% {
+      transform: scale(1) translateY(2.5%);
+      background-color: #38A169;
+    }
+    100% {
+      transform: scale(1.025) translateY(0);
+      background-color: #68D391;
+    }
+  }
+
+  .popup-enter-active {
+    animation-name: popup;
+    animation-duration: 0.25s;
+    animation-timing-function: ease-out;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+  }
+  .popup-leave-active {
+    animation-name: popup;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-in;
+    animation-direction: reverse;
+    animation-fill-mode: backwards;
+  }
+  @keyframes popup {
+    0% {
+      transform: translateY(10em);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+</style>

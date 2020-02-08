@@ -1,5 +1,5 @@
 <template>
-  <page-section>
+  <page-section data-guide-section="party">
     <h2 class="text-primary">
       {{ $t('heading') }}
     </h2>

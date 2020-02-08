@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div data-guide-section="compare">
     <page-section class="bg-white">
       <h2 class="text-primary">{{ $t('heading') }}</h2>
       <p>

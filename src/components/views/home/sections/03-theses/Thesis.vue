@@ -1,11 +1,12 @@
 <template>
   <div
-    class="border-b-2 border-gray-300"
+    class="border-b-2 border-gray-300 min-h-screen flex flex-col justify-center"
     v-if="hasBeenActivated"
+    :data-guide-section="`thesis-${index}`"
   >
     <div
       class="
-        container max-w-2xl mx-auto
+        container max-w-2xl mx-auto flex-initial
         sm:py-16 sm:max-w-3xl
         lg:py-24 lg:max-w-4xl
       "

@@ -1,17 +1,16 @@
 <template>
-  <div class="container mx-auto p-8 flex flex-col h-screen content-center justify-around">
+  <div
+    class="container mx-auto p-8 flex flex-col h-screen content-center justify-center"
+    data-guide-section="start"
+  >
     <open-election-compass-logo class="self-center"/>
     <h1 class="
-      text-2xl leading-tight text-center max-w-4xl mx-auto
-      md:text-5xl
+      text-2xl leading-tight text-center max-w-4xl mx-auto my-8
+      md:text-5xl md:my-16
       lg:text-6xl
     ">
       {{ $t('title') }}
     </h1>
-    <a class="button button-primary" tabindex="1">
-      <span>{{ $t('go') }}</span>
-      <icon name="chevron-right" :monospace="false" />
-    </a>
     <p class="
       text-sm text-center text-gray-500
       md:text-lg
@@ -24,14 +23,3 @@ export default {
   name: 'StartSection',
 };
 </script>
-
-<i18n>
-{
-  "en": {
-    "go": "Let's go"
-  },
-  "de": {
-    "go": "Los geht's"
-  }
-}
-</i18n>

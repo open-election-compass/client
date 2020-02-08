@@ -1,6 +1,7 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
 import VueI18n from 'vue-i18n';
+import smoothscroll from 'smoothscroll-polyfill';
 import OpenElectionCompass from './OpenElectionCompass.vue';
 import Icon from '@/components/elements/Icon.vue';
 import OpenElectionCompassLogo from '@/components/elements/OpenElectionCompassLogo.vue';
@@ -25,6 +26,8 @@ const i18n = new VueI18n({
   // For more information see: https://github.com/kazupon/vue-i18n/issues/201
   silentTranslationWarn: true,
 });
+
+smoothscroll.polyfill();
 
 Vue.component('open-election-compass', OpenElectionCompass);
 Vue.component('icon', Icon);

@@ -1,5 +1,5 @@
 <template>
-  <page-section class="bg-primary">
+  <page-section class="bg-primary" data-guide-section="match">
     <h2 class="text-white">
       {{ $t('heading') }}
     </h2>

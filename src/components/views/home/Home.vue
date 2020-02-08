@@ -7,6 +7,7 @@
     <match-section v-if="$store.getters['parties/chosen']" />
     <compare-section v-if="$store.getters['parties/chosen']" />
     <footer-section />
+    <guide-button v-if="ready" />
   </div>
 </template>
 
@@ -18,9 +19,18 @@ import PartySection from './sections/04-party/PartySection.vue';
 import MatchSection from './sections/05-match/MatchSection.vue';
 import CompareSection from './sections/06-compare/CompareSection.vue';
 import FooterSection from './sections/07-footer/FooterSection.vue';
+import GuideButton from '../../elements/GuideButton.vue';
 
 export default {
   name: 'home',
+  data() {
+    return {
+      ready: false,
+    };
+  },
+  mounted() {
+    this.ready = true;
+  },
   components: {
     StartSection,
     IntroductionSection,
@@ -29,6 +39,7 @@ export default {
     MatchSection,
     CompareSection,
     FooterSection,
+    GuideButton,
   },
 };
 </script>
