@@ -1,7 +1,11 @@
 .button {
   @apply px-4 py-3 rounded inline-block self-center font-bold;
+  transition: background-color 0.15s ease-out, color 0.15s ease-out;
   span + .icon, .icon + span {
     @apply ml-4;
+  }
+  &:disabled {
+    @apply bg-gray-100 text-gray-300;
   }
 }
 
