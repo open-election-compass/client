@@ -6,7 +6,7 @@
         md:pb-8
         lg:pb-16
       "
-      v-if="visible"
+      v-if="enabled && relevant"
     >
       <button
         class="
@@ -31,16 +31,17 @@ export default {
   data() {
     return {
       scrollPosition: 0, // to determine direction
-      actualSection: null,
-      sections: [],
-      visible: false,
+      actualSection: null, // the section the user is currently in, according to the scroll position
+      sections: [], // list of sections in order of appearance
+      relevant: false, // is the user in the wrong section?
+      enabled: true, // when a section is completed it can choose to enable/disable the GuideButton
     };
   },
   mounted() {
     this.initSections();
     this.wrapperElement.addEventListener('scroll', this.updateActualSection);
-    this.$watch('actualSection', this.updateVisibility);
-    this.$watch('activeSection', this.updateVisibility);
+    this.$watch('actualSection', this.updateRelevance);
+    this.$watch('activeSection', this.updateRelevance);
   },
   computed: {
     wrapperElement() {
@@ -69,12 +70,12 @@ export default {
     },
   },
   methods: {
-    updateVisibility: _throttle(function updateVisibilityThrottled() {
+    updateRelevance: _throttle(function updateRelevanceThrottled() {
       if (this.actualSection && this.activeSection) {
-        this.visible = this.actualSection.alias !== this.activeSection.alias;
+        this.relevant = this.actualSection.alias !== this.activeSection.alias;
         return;
       }
-      this.visible = false;
+      this.relevant = false;
     }, 500),
     initSections() {
       let sections = [];
@@ -95,6 +96,7 @@ export default {
       this.$watch('actualSection', (section) => {
         if (section && section.alias === 'introduction') {
           this.markSectionAsCompleted('introduction');
+          this.enabled = true;
         }
       });
 
@@ -105,6 +107,7 @@ export default {
         this.$watch(`theses.${index}.status`, (status) => {
           if (status !== null) {
             this.markSectionAsCompleted(alias);
+            this.enabled = true;
           }
         });
         return {
@@ -123,23 +126,36 @@ export default {
       this.$watch('partiesChosen', (chosen) => {
         if (chosen) {
           this.markSectionAsCompleted('party');
-          this.goToActiveSection(true);
+          this.enabled = false;
+          this.goToActiveSection();
         }
       });
 
-      // Add Party, Match and Compare section
-      sections = sections.concat([
-        {
-          alias: 'match',
-          completed: false,
-          message: 'match',
-        },
-        {
-          alias: 'compare',
-          completed: false,
-          message: 'compare',
-        },
-      ]);
+      // Add match section
+      sections.push({
+        alias: 'match',
+        completed: false,
+        message: 'match',
+      });
+      this.$watch('actualSection', (section) => {
+        if (section && section.alias === 'match') {
+          this.markSectionAsCompleted('match');
+          this.enabled = true;
+        }
+      });
+
+      // Add compare section
+      sections.push({
+        alias: 'compare',
+        completed: false,
+        message: 'compare',
+      });
+      this.$watch('actualSection', (section) => {
+        if (section && section.alias === 'compare') {
+          this.markSectionAsCompleted('compare');
+          this.enabled = false;
+        }
+      });
 
       this.$set(this, 'sections', sections);
     },
@@ -209,7 +225,7 @@ export default {
       }
     },
     goToActiveSection() {
-      if (!this.visible || !this.activeSection) {
+      if (!this.activeSection) {
         return;
       }
       // Find dom node of active section
@@ -235,7 +251,7 @@ export default {
       "thesis": "Proceed to the next thesis",
       "party": "Select the parties",
       "match": "See your result",
-      "compare": "View the ansers in detail"
+      "compare": "Read the parties' statements"
     }
   },
   "de": {
@@ -246,7 +262,7 @@ export default {
       "thesis": "Weiter zur nächsten These",
       "party": "Parteien auswählen",
       "match": "Ergebnis anschauen",
-      "compare": "Antworten im Detail lesen"
+      "compare": "Statements der Parteien lesen"
     }
   }
 }
