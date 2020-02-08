@@ -41,6 +41,13 @@ export default {
     this.wrapperElement.addEventListener('scroll', this.updateActualSection);
     this.$watch('actualSection', this.updateRelevance);
     this.$watch('activeSection', this.updateRelevance);
+
+    // Show GuideButton on start section with delay to help users discover scrolling
+    setTimeout(() => {
+      if (this.actualSection === null) {
+        this.relevant = true;
+      }
+    }, 3000);
   },
   computed: {
     wrapperElement() {
@@ -288,8 +295,8 @@ export default {
 
   .popup-enter-active {
     animation-name: popup;
-    animation-duration: 0.25s;
-    animation-timing-function: ease-out;
+    animation-duration: 0.4s;
+    animation-timing-function: cubic-bezier(0.235, 1.470, 0.580, 0.995);
     animation-direction: normal;
     animation-fill-mode: forwards;
   }
