@@ -10,14 +10,13 @@
     >
       <button
         class="
-          w-full bg-green-400 rounded text-white font-bold shadow-md p-4 levitating
-          sm:max-w-lg sm:text-lg
-          md:text-xl
+          button button-positive w-full shadow-md levitating
+          sm:max-w-lg
         "
         @click="goToActiveSection"
       >
-        {{ $t(`messages.${activeSection.message}`) }}
-        <icon name="chevron-right" :monospace="false" />
+        <span>{{ $t(`messages.${activeSection.message}`) }}</span>
+        <icon name="arrow-right" :monospace="false" />
       </button>
     </div>
   </transition>
@@ -251,7 +250,7 @@ export default {
       "thesis": "Proceed to the next thesis",
       "party": "Select the parties",
       "match": "See your result",
-      "compare": "Read the parties' statements"
+      "compare": "Read the statements"
     }
   },
   "de": {

@@ -10,7 +10,7 @@
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 import {
-  faChevronRight,
+  faArrowRight,
   faCheck,
   faCircle,
   faMinus,
@@ -18,7 +18,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 
 library.add(
-  faChevronRight,
+  faArrowRight,
   faCheck,
   faCircle,
   faMinus,

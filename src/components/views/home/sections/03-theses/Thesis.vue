@@ -32,10 +32,8 @@
           "
           :data-test="`thesis-${index}-skip`"
         >
-          <span class="mr-1">
-            {{ $t('skip') }}
-          </span>
-          <icon name="chevron-right" />
+          {{ $t('skip') }}
+          <icon name="arrow-right" />
         </button>
       </div>
       <div class="

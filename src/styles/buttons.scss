@@ -1,5 +1,5 @@
 .button {
-  @apply px-4 py-2 rounded inline-block self-center;
+  @apply px-4 py-2 rounded inline-block self-center font-bold;
   &:focus {
     @apply outline-none;
     transform: scale(1.1);
@@ -11,6 +11,14 @@
 
 .button-primary {
   @apply bg-primary text-black;
+}
+
+.button-positive {
+  @apply bg-green-400 text-white;
+}
+
+.button-negative {
+  @apply bg-red-400 text-white;
 }
 
 @screen md {
