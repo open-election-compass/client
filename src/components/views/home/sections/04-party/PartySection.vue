@@ -18,7 +18,7 @@
       <button
         class="button button-positive mb-4"
         @click="$store.dispatch('parties/chose')"
-        :disabled="selectedParties < 1"
+        :disabled="selectedParties.length < 2"
         v-if="!chosen"
       >
         <icon name="check" :monospace="false" />
