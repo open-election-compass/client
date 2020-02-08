@@ -14,9 +14,9 @@
     >
       <div class="p-8 sm:pb-16 lg:pb-24">
         <small class="
-          text-sm font-bold text-gray-600 block text-center mb-4
-          sm:pb-8
-          lg:pb-16 lg:text-base
+          text-sm font-bold text-black block text-center mb-4
+          sm:pb-8 sm:text-base
+          lg:text-xl
         ">
           {{ $t('thesis', { count: index + 1, total }) }}
         </small>
