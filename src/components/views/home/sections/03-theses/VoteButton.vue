@@ -2,11 +2,10 @@
   <button
     @click="$emit('click', $event)"
     class="
-      w-full text-left p-4 font-bold text-sm
+      w-full text-left p-4 font-bold text-sm my-1 rounded
       sm:text-base
-      md:text-center md:mx-2 md:rounded
-      lg:text-lg
-      focus:outline-none
+      md:text-center md:mx-2 md:my-0 md:text-lg
+      lg:text-xl
     "
     :class="classes"
   >

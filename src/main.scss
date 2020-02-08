@@ -9,3 +9,8 @@
 * {
 	-webkit-tap-highlight-color: transparent;
 }
+
+button:focus, input:focus {
+	outline: none;
+	box-shadow: 0 0 0 3px theme('colors.gray.400');
+}

@@ -2,8 +2,8 @@
   <transition name="popup">
     <div
       class="
-        fixed bottom-0 left-0 right-0 p-4 w-full text-center
-        md:pb-8
+        fixed bottom-0 left-0 right-0 p-8 w-full text-center
+        md:pb-12
         lg:pb-16
       "
       v-if="enabled && relevant"
@@ -278,11 +278,11 @@ export default {
   @keyframes levitating {
     0% {
       transform: scale(1) translateY(2.5%);
-      background-color: #38A169;
+      background-color: theme('colors.green.500');
     }
     100% {
       transform: scale(1.025) translateY(0);
-      background-color: #68D391;
+      background-color: theme('colors.green.400');
     }
   }
 

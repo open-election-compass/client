@@ -26,7 +26,7 @@
         <button
           @click="status = 'skip'"
           class="
-            text-gray-600 px-8 py-4 text-xs font-bold
+            text-gray-600 px-4 py-2 mr-8 mb-2 text-xs font-bold rounded
             lg:text-base
             focus:outline-none
           "
@@ -37,7 +37,7 @@
         </button>
       </div>
       <div class="
-        flex flex-col ml-8 mr-8 mb-8 rounded overflow-hidden
+        flex flex-col ml-8 mr-8 mb-8 rounded
         md:flex-row md:mx-6
       ">
         <vote-button
@@ -45,18 +45,21 @@
           type="approve"
           :active="status === 'approve'"
           :data-test="`thesis-${index}-approve`"
+          tab-index="1"
         />
         <vote-button
           @click="status = 'neutral'"
           type="neutral"
           :active="status === 'neutral'"
           :data-test="`thesis-${index}-neutral`"
+          tab-index="2"
         />
         <vote-button
           @click="status = 'reject'"
           type="reject"
           :active="status === 'reject'"
           :data-test="`thesis-${index}-reject`"
+          tab-index="3"
         />
       </div>
     </div>
