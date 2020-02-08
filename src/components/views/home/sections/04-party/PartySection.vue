@@ -18,6 +18,8 @@
       <button
         class="button button-positive mb-4"
         @click="$store.dispatch('parties/chose')"
+        :disabled="selectedParties < 1"
+        v-if="!chosen"
       >
         <icon name="check" :monospace="false" />
         <span>{{ $t('proceed') }}</span>
@@ -34,6 +36,12 @@ export default {
   computed: {
     parties() {
       return this.$store.getters['parties/parties'];
+    },
+    selectedParties() {
+      return this.$store.getters['parties/selectedParties'];
+    },
+    chosen() {
+      return this.$store.getters['parties/chosen'];
     },
   },
   components: {
