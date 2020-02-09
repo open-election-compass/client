@@ -8,7 +8,7 @@
       class="
         container max-w-2xl mx-auto flex-initial
         sm:py-16 sm:max-w-3xl
-        lg:py-24 lg:max-w-4xl
+        lg:pb-24 lg:max-w-4xl
       "
       :data-test="`thesis-${index}`"
     >
@@ -41,23 +41,26 @@
         md:flex-row md:mx-6
       ">
         <vote-button
-          @click="status = 'approve'"
+          @click="clickVoteButton('approve')"
           type="approve"
           :active="status === 'approve'"
+          :factor="factor"
           :data-test="`thesis-${index}-approve`"
           tab-index="1"
         />
         <vote-button
-          @click="status = 'neutral'"
+          @click="clickVoteButton('neutral')"
           type="neutral"
           :active="status === 'neutral'"
+          :factor="factor"
           :data-test="`thesis-${index}-neutral`"
           tab-index="2"
         />
         <vote-button
-          @click="status = 'reject'"
+          @click="clickVoteButton('reject')"
           type="reject"
           :active="status === 'reject'"
+          :factor="factor"
           :data-test="`thesis-${index}-reject`"
           tab-index="3"
         />
@@ -86,6 +89,16 @@ export default {
       required: true,
     },
   },
+  methods: {
+    clickVoteButton(status) {
+      if (this.status !== status || status === 'neutral' || (this.status === status && this.factor > 1)) {
+        this.factor = 1;
+      } else {
+        this.factor = 2;
+      }
+      this.status = status;
+    },
+  },
   computed: {
     active: {
       get() {
@@ -101,6 +114,17 @@ export default {
         this.$store.commit('theses/setStatus', {
           index: this.index,
           status: value,
+        });
+      },
+    },
+    factor: {
+      get() {
+        return this.$store.getters['theses/theses'][this.index].factor;
+      },
+      set(value) {
+        this.$store.commit('theses/setFactor', {
+          index: this.index,
+          factor: value,
         });
       },
     },

@@ -31,6 +31,9 @@ export default {
     setStatus(state, { index, status }) {
       state.theses[index].status = status;
     },
+    setFactor(state, { index, factor }) {
+      state.theses[index].factor = factor;
+    },
     setActivated(state, { index, activated }) {
       state.theses[index].activated = activated;
     },

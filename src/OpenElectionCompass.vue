@@ -52,6 +52,7 @@ export default {
       this.$store.commit('theses/addThesis', {
         index,
         status: null,
+        factor: 1,
         activated: index === 0,
         positions,
       });
