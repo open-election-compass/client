@@ -1,5 +1,20 @@
 ![OpenElectionCompass](documentation/assets/title.png)
 
+# Project state
+
+The project is under **active development, but not production-ready** until
+[v1.0](https://github.com/tillsanders/openElectionCompass/milestones) is released. You can sign up
+for our [email newsletter](http://eepurl.com/gRApTD) to receive updates on new releases, upcoming
+features and the community, or you can join our [Discord Channel](https://discord.gg/qjVsRDd) for
+technical support, questions, feature requests and chatting.
+
+# Usage
+
+## Deployment on your own server
+
+Currently, it is only possible to deploy OpenElectionCompass on your own systems. However, the
+process is relatively simple to be accessible for people with limited coding skills.
+
 ## Project setup
 ```
 npm install
