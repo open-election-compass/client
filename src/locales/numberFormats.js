@@ -5,7 +5,7 @@ export default {
     },
   },
   de: {
-    currency: {
+    percentage: {
       style: 'percent',
     },
   },
