@@ -2,7 +2,7 @@
   <div>
     <strong
       class="
-        text-2xl leading-tight font-bold block
+        text-2xl leading-tight font-bold block transition duration-200
         sm:text-3xl sm:max-w-2xl
         md:text-4xl
         lg:text-5xl lg:max-w-3xl
