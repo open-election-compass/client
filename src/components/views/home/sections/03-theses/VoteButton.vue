@@ -2,7 +2,8 @@
   <button
     @click="$emit('click', $event)"
     class="
-      w-full text-left p-4 font-bold text-sm my-1 rounded
+      w-full text-left p-4 font-bold text-sm my-1
+      rounded border border-solid
       transition shadow-md hover:shadow-lg duration-200
       sm:text-base
       md:text-center md:mx-2 md:my-0 md:text-lg
@@ -41,12 +42,12 @@ export default {
   computed: {
     classes() {
       return {
-        'bg-green-400 text-white': this.type === 'approve' && this.active,
-        'bg-gray-100 text-green-600': this.type === 'approve' && !this.active,
-        'bg-gray-500 text-white': this.type === 'neutral' && this.active,
-        'bg-gray-100 text-gray-600': this.type === 'neutral' && !this.active,
-        'bg-red-400 text-white': this.type === 'reject' && this.active,
-        'bg-gray-100 text-red-600': this.type === 'reject' && !this.active,
+        'bg-green-400 text-white border-green-600': this.type === 'approve' && this.active,
+        'bg-gray-100 text-green-600 border-gray-300': this.type === 'approve' && !this.active,
+        'bg-gray-500 text-white border-gray-600': this.type === 'neutral' && this.active,
+        'bg-gray-100 text-gray-600 border-gray-300': this.type === 'neutral' && !this.active,
+        'bg-red-400 text-white border-red-600': this.type === 'reject' && this.active,
+        'bg-gray-100 text-red-600 border-gray-300': this.type === 'reject' && !this.active,
       };
     },
   },

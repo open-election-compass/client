@@ -12,6 +12,8 @@
       "
       :data-test="`thesis-${index}`"
     >
+
+      <!-- Thesis -->
       <div class="p-8 sm:pb-16 lg:pb-24">
         <small class="
           text-sm font-bold text-black block text-center mb-4
@@ -22,6 +24,8 @@
         </small>
         <statement :status="status" :statement="$t(`theses.${index}.statement`)" />
       </div>
+
+      <!-- Buttons -->
       <div class="text-right">
         <button
           @click="status = 'skip'"
@@ -68,14 +72,19 @@
         mx-8 text-center
         md:mx-6 md:mt-12
       "
-      :class="status === 'neutral' ? 'opacity-50' : ''">
+      :class="status === 'neutral' ? 'opacity-25' : ''">
         <label
           :for="`important-${index}`"
           class="
-            p-3 pr-4 rounded-full cursor-pointer
+            p-3 pr-4 cursor-pointer
+            rounded-full border border-solid
             transition shadow-md hover:shadow-lg duration-200
           "
-          :class="factor > 1 ? 'bg-primary text-white' : 'bg-gray-100 text-gray-600'"
+          :class="
+            factor > 1 ?
+            'bg-primary text-white border-yellow-600' :
+            'bg-gray-100 text-gray-600 border-gray-300'
+          "
         >
           <input
             class="hidden"

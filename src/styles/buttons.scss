@@ -1,24 +1,24 @@
 .button {
-  @apply px-4 py-3 rounded inline-block self-center font-bold;
+  @apply px-4 py-3 rounded inline-block self-center font-bold border border-gray-300;
   transition: background-color 0.15s ease-out, color 0.15s ease-out;
   span + .icon, .icon + span {
     @apply ml-4;
   }
   &:disabled {
-    @apply bg-gray-100 text-gray-300;
+    @apply bg-gray-100 text-gray-300 border-gray-200;
   }
 }
 
 .button-primary {
-  @apply bg-primary text-black;
+  @apply bg-primary text-black border border-yellow-600;
 }
 
 .button-positive {
-  @apply bg-green-400 text-white;
+  @apply bg-green-400 text-white border border-green-600;
 }
 
 .button-negative {
-  @apply bg-red-400 text-white;
+  @apply bg-red-400 text-white border border-red-600;
 }
 
 @screen md {
