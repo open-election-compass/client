@@ -69,15 +69,15 @@
 
       <!-- Important Toggle -->
       <div class="
-        mx-8 text-center
-        md:mx-6 md:mt-12
+        mx-8 mt-8 text-center
+        md:mx-6 md:mt-12 lg:mt-24
       "
       :class="status === 'neutral' ? 'opacity-25' : ''">
         <label
           :for="`important-${index}`"
           class="
             p-3 pr-4 cursor-pointer
-            rounded border border-solid
+            rounded-full border border-solid
             transition shadow-md hover:shadow-lg duration-200
           "
           :class="
