@@ -1,6 +1,10 @@
 <template>
   <div
-    class="border-b-2 border-gray-300 min-h-screen flex flex-col justify-center"
+    class="
+      border-b-2 border-gray-300 min-h-screen flex flex-col justify-center
+      transition-opacity duration-200
+    "
+    :class="status === 'skip' ? 'opacity-50 bg-gray-100' : ''"
     v-if="hasBeenActivated"
     :data-guide-section="`thesis-${index}`"
   >
@@ -28,7 +32,7 @@
       <!-- Buttons -->
       <div class="text-right">
         <button
-          @click="status = 'skip'"
+          @click="clickVoteButton('skip')"
           class="
             text-gray-600 px-4 py-2 mr-8 mb-2 text-xs font-bold rounded
             lg:text-base
@@ -94,7 +98,7 @@
             v-model="factor"
             :true-value="2"
             :false-value="1"
-            :disabled="status === 'neutral'"
+            :disabled="status === 'neutral' || status === 'skip'"
           />
           <icon :name="factor === 1 ? 'circle' : 'exclamation-circle'" />
           <span class="ml-3 font-bold">{{ $t('important') }}</span>
@@ -126,7 +130,7 @@ export default {
   },
   methods: {
     clickVoteButton(status) {
-      if (status === 'neutral') {
+      if (status === 'neutral' || status === 'skip') {
         this.factor = 1;
       }
       this.status = status;
