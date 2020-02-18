@@ -268,7 +268,7 @@ export default {
       "thesis": "Weiter zur nächsten These",
       "party": "Parteien auswählen",
       "match": "Ergebnis anschauen",
-      "compare": "Statements der Parteien lesen"
+      "compare": "Begründungen der Parteien lesen"
     }
   }
 }
