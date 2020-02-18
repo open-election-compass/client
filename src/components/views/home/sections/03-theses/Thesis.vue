@@ -37,14 +37,13 @@
         </button>
       </div>
       <div class="
-        flex flex-col ml-8 mr-8 mb-8 rounded
-        md:flex-row md:mx-6
+        flex flex-col mx-8 mb-4 rounded
+        md:flex-row md:mx-6 md:mb-8
       ">
         <vote-button
           @click="clickVoteButton('approve')"
           type="approve"
           :active="status === 'approve'"
-          :factor="factor"
           :data-test="`thesis-${index}-approve`"
           tab-index="1"
         />
@@ -52,7 +51,6 @@
           @click="clickVoteButton('neutral')"
           type="neutral"
           :active="status === 'neutral'"
-          :factor="factor"
           :data-test="`thesis-${index}-neutral`"
           tab-index="2"
         />
@@ -60,10 +58,38 @@
           @click="clickVoteButton('reject')"
           type="reject"
           :active="status === 'reject'"
-          :factor="factor"
           :data-test="`thesis-${index}-reject`"
           tab-index="3"
         />
+      </div>
+
+      <!-- Important Toggle -->
+      <div class="
+        mx-8 text-center
+        md:mx-6 md:mt-12
+      "
+      :class="status === 'neutral' ? 'opacity-50' : ''">
+        <label
+          :for="`important-${index}`"
+          class="
+            p-3 pr-4 rounded-full cursor-pointer
+            transition shadow-md hover:shadow-lg duration-200
+          "
+          :class="factor > 1 ? 'bg-primary text-white' : 'bg-gray-100 text-gray-600'"
+        >
+          <input
+            class="hidden"
+            type="checkbox"
+            :name="`important-${index}`"
+            :id="`important-${index}`"
+            v-model="factor"
+            :true-value="2"
+            :false-value="1"
+            :disabled="status === 'neutral'"
+          />
+          <icon :name="factor === 1 ? 'circle' : 'exclamation-circle'" />
+          <span class="ml-3 font-bold">{{ $t('important') }}</span>
+        </label>
       </div>
     </div>
   </div>
@@ -91,10 +117,8 @@ export default {
   },
   methods: {
     clickVoteButton(status) {
-      if (this.status !== status || status === 'neutral' || (this.status === status && this.factor > 1)) {
+      if (status === 'neutral') {
         this.factor = 1;
-      } else {
-        this.factor = 2;
       }
       this.status = status;
     },
@@ -155,11 +179,13 @@ export default {
 {
   "en": {
     "thesis": "Thesis {count} / {total}",
-    "skip": "Skip"
+    "skip": "Skip",
+    "important": "Important"
   },
   "de": {
     "thesis": "These {count} / {total}",
-    "skip": "Überspringen"
+    "skip": "Überspringen",
+    "important": "Wichtig"
   }
 }
 </i18n>
