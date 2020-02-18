@@ -10,7 +10,7 @@
     >
       <button
         class="
-          button button-positive w-full shadow-md levitating
+          button button-positive w-full shadow-xl levitating
           sm:max-w-lg
         "
         @click="goToActiveSection"
