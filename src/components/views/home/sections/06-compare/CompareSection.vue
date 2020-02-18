@@ -14,6 +14,7 @@
       <statement
         :statement="$t(`theses.${thesis.index}.statement`)"
         :status="getStatus(thesis.index)"
+        :factor="thesis.factor"
         :badge="true"
       />
       <template

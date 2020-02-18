@@ -20,23 +20,36 @@
       {{ statement }}<span class="text-gray-300">{{ $t('quoteEnd') }}</span>
     </strong>
     <template v-if="badge">
-      <small class="
-        rounded inline-block py-2 px-3 text-white font-bold mt-8 ml-auto
-        md:text-lg
-      "
-      :class="{
-        'bg-gray-500': status === null || status === 'skip' || status === 'neutral',
-        'bg-green-400': status === 'approve',
-        'bg-red-400': status === 'reject',
-      }">
-        <icon class="mr-2" :name="{
-          approve: 'check',
-          neutral: 'minus',
-          reject: 'times',
-          skip: 'circle',
-        }[status]" />
-        {{ $t(`badge.${status}`) }}
-      </small>
+      <div class="block md:inline-block">
+        <small class="
+          rounded-full inline-block py-2 pl-3 pr-4 text-white font-bold mt-8
+          md:text-lg
+        "
+        :class="{
+          'bg-gray-500': status === null || status === 'skip' || status === 'neutral',
+          'bg-green-400': status === 'approve',
+          'bg-red-400': status === 'reject',
+        }">
+          <icon class="mr-2" :name="{
+            approve: 'check',
+            neutral: 'minus',
+            reject: 'times',
+            skip: 'circle',
+          }[status]" />
+          {{ $t(`badge.${status}`) }}
+        </small>
+      </div>
+    </template>
+    <template v-if="badge && factor > 1">
+      <div class="block mt-2 md:inline-block md:ml-4 md:mt-0">
+        <small class="
+          rounded-full inline-block py-2 pl-3 pr-4 text-white font-bold bg-primary
+          md:text-lg
+        ">
+          <icon class="mr-2" name="exclamation-circle" />
+          {{ $t(`badge.important`) }}
+        </small>
+      </div>
     </template>
   </div>
 </template>
@@ -56,6 +69,10 @@ export default {
       type: String,
       required: true,
     },
+    factor: {
+      type: Number,
+      default: 1,
+    },
     badge: {
       type: Boolean,
       default: false,
@@ -73,7 +90,8 @@ export default {
       "approve": "You approved",
       "reject": "You rejected",
       "neutral": "You we're neutral",
-      "skip": "You skipped this"
+      "skip": "You skipped this",
+      "important": "You marked this as important"
     }
   },
   "de": {
@@ -83,7 +101,8 @@ export default {
       "approve": "Du hast zugestimmt",
       "reject": "Du hast abgelehnt",
       "neutral": "Du warst neutral",
-      "skip": "Übersprungen"
+      "skip": "Übersprungen",
+      "important": "Von dir als wichtig markiert"
     }
   }
 }

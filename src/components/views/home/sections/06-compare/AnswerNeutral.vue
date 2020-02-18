@@ -18,7 +18,7 @@
           <span class="block font-bold mb-2">
             {{ $t(`parties.${party.index}.short`) }}
           </span>
-          <span class="block-inline text-sm bg-gray-500 text-white rounded p-2">
+          <span class="block-inline text-sm bg-gray-500 text-white rounded-full p-2 pr-3">
             <icon class="mr-1" name="minus" />
             <span class="font-bold">
               {{ $t('neutral') }}

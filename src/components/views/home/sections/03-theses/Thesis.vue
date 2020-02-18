@@ -77,7 +77,7 @@
           :for="`important-${index}`"
           class="
             p-3 pr-4 cursor-pointer
-            rounded-full border border-solid
+            rounded border border-solid
             transition shadow-md hover:shadow-lg duration-200
           "
           :class="
