@@ -33,25 +33,55 @@ export default {
       return this.$store.getters['theses/theses'];
     },
     results() {
-      // Maximum possible points
-      const maxPoints = this.$store.getters['theses/maxPoints'];
+      // Calculate points for every party
+      const matches = this.calculate(this.selectedParties, this.theses);
 
-      // Calculate points
-      const matches = this.selectedParties.map((party) => {
-        let points = 0;
-        this.theses.forEach((thesis) => {
-          if (thesis.status !== 'skip' && thesis.positions[party.alias] === thesis.status) {
-            points += 1;
-          }
-        });
+      // Sort by points
+      return matches.sort((a, b) => b.points - a.points);
+    },
+  },
+  methods: {
+    calculate(selectedParties, theses) {
+      const maxPoints = this.calculateMaxPoints(theses);
+      return selectedParties.map((party) => {
+        const points = this.calculatePointsForParty(party, theses);
         const percentage = 1 / maxPoints * points;
         return { party, points, percentage };
       });
+    },
+    calculateMaxPoints(theses) {
+      return theses.reduce((points, thesis) => {
+        if (thesis.status === 'skip' || thesis.status === null) {
+          return points;
+        }
+        return points + 2 * thesis.factor;
+      }, 0);
+    },
+    calculatePointsForParty(party, theses) {
+      return theses.reduce((points, thesis) => {
+        const userPosition = thesis.status;
+        const partyPosition = thesis.positions[party.alias];
 
-      // Sort by points
-      matches.sort((a, b) => b.points - a.points);
+        // Skipped thesis?
+        if (userPosition === 'skip' || userPosition === null) {
+          return points;
+        }
 
-      return matches;
+        // Exact match?
+        if (userPosition === partyPosition) {
+          return points + 2 * thesis.factor;
+        }
+
+        // Near match?
+        if (
+          (userPosition === 'neutral' && ['approve', 'reject'].includes(partyPosition))
+          || (partyPosition === 'neutral' && ['approve', 'reject'].includes(userPosition))
+        ) {
+          return points + 1 * thesis.factor;
+        }
+
+        return points;
+      }, 0);
     },
   },
   components: {
