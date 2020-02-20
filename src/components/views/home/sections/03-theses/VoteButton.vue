@@ -10,6 +10,7 @@
       lg:text-xl
     "
     :class="classes"
+    :aria-label="$t(`${type}-aria`)"
   >
     <icon v-if="type === 'approve'" name="check" />
     <icon v-else-if="type === 'neutral'" name="minus" />
@@ -58,13 +59,19 @@ export default {
 {
   "en": {
     "approve": "Approve",
+    "approve-aria": "Approve – click here to approve this thesis!",
     "neutral": "Neutral",
-    "reject": "Reject"
+    "neutral-aria": "Neutral – click here to remain neutral regarding this thesis!",
+    "reject": "Reject",
+    "reject-aria": "Reject – click here to reject this thesis!"
   },
   "de": {
     "approve": "Zustimmung",
+    "approve-aria": "Zustimmung – klicke hier, um dieser These zuzustimmen!",
     "neutral": "Neutral",
-    "reject": "Ablehnung"
+    "neutral-aria": "Neutral – klicke hier, um bei dieser These neutral zu bleiben!",
+    "reject": "Ablehnung",
+    "reject-aria": "Ablehnung – klicke hier, um diese These abzulehnen!"
   }
 }
 </i18n>
