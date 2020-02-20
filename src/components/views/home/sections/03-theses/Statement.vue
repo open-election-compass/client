@@ -14,10 +14,11 @@
         'text-red-400': status === 'reject',
       }"
     >
-      <span class="relative text-gray-300">
+      <span class="relative text-gray-300" aria-hidden="true">
         <span class="absolute" style="right:100%">{{ $t('quoteStart') }}</span>
       </span>
-      {{ statement }}<span class="text-gray-300">{{ $t('quoteEnd') }}</span>
+      {{ statement }}
+      <span class="text-gray-300" aria-hidden="true">{{ $t('quoteEnd') }}</span>
     </strong>
     <template v-if="badge">
       <div class="block md:inline-block">
