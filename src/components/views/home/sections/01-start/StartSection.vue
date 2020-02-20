@@ -3,6 +3,7 @@
     class="container mx-auto p-8 flex flex-col h-screen content-center justify-center"
     data-guide-section="start"
     role="banner"
+    :aria-label="$t('banner-aria')"
   >
     <open-election-compass-logo class="self-center"/>
     <h1 class="
@@ -25,3 +26,14 @@ export default {
   name: 'StartSection',
 };
 </script>
+
+<i18n>
+{
+  "en": {
+    "banner-aria": "Start section"
+  },
+  "de": {
+    "banner-aria": "Startseite"
+  }
+}
+</i18n>
