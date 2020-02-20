@@ -1,11 +1,13 @@
 <template>
   <div>
     <start-section />
-    <introduction-section />
-    <theses-section />
-    <party-section v-if="$store.getters['theses/complete']" />
-    <match-section v-if="$store.getters['parties/chosen']" />
-    <compare-section v-if="$store.getters['parties/chosen']" />
+    <main>
+      <introduction-section />
+      <theses-section />
+      <party-section v-if="$store.getters['theses/complete']" />
+      <match-section v-if="$store.getters['parties/chosen']" />
+      <compare-section v-if="$store.getters['parties/chosen']" />
+    </main>
     <footer-section />
     <guide-button v-if="ready" />
   </div>
