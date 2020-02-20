@@ -21,11 +21,14 @@
 
       <!-- Thesis -->
       <div class="p-8 sm:pb-16 lg:pb-24">
-        <small class="
-          text-sm font-bold text-black block text-center mb-4
-          sm:pb-8 sm:text-base
-          lg:text-xl
-        ">
+        <small
+          class="
+            text-sm font-bold text-black block text-center mb-4
+            sm:pb-8 sm:text-base
+            lg:text-xl
+          "
+          aria-hidden="true"
+        >
           {{ $t('thesis', { count: index + 1, total }) }}
         </small>
         <statement :status="status" :statement="$t(`theses.${index}.statement`)" />
@@ -41,6 +44,7 @@
             focus:outline-none
           "
           :data-test="`thesis-${index}-skip`"
+          :aria-label="$t('skip-aria')"
         >
           {{ $t('skip') }}
           <icon name="arrow-right" />
@@ -93,6 +97,7 @@
             'bg-primary text-white border-yellow-600' :
             'bg-gray-100 text-gray-600 border-gray-300'
           "
+          :aria-label="$t('important-aria')"
         >
           <input
             class="sr-only"
@@ -198,13 +203,17 @@ export default {
     "thesis": "Thesis {count} / {total}",
     "thesis-aria-label": "Thesis {count} of {total}",
     "skip": "Skip",
-    "important": "Important"
+    "skip-aria": "Skip – skips this thesis so it will not be counted.",
+    "important": "Important",
+    "important-aria": "Important – marks this thesis as important for you."
   },
   "de": {
     "thesis": "These {count} / {total}",
     "thesis-aria-label": "These {count} von {total}",
     "skip": "Überspringen",
-    "important": "Wichtig"
+    "skip-aria": "Überspringen – überspringt diese These, sodass sie nicht gezählt wird.",
+    "important": "Wichtig",
+    "important-aria": "Wichtig – markiert diese These als wichtig für dich."
   }
 }
 </i18n>
