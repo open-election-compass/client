@@ -1,7 +1,8 @@
 <template>
-  <div
+  <header
     class="container mx-auto p-8 flex flex-col h-screen content-center justify-center"
     data-guide-section="start"
+    role="banner"
   >
     <open-election-compass-logo class="self-center"/>
     <h1 class="
@@ -12,11 +13,11 @@
       {{ $t('title') }}
     </h1>
     <p class="
-      text-sm text-center text-gray-500
+      text-sm text-center text-gray-700
       md:text-lg
       lg:text-xl
     ">{{ $t('subtitle') }}</p>
-  </div>
+  </header>
 </template>
 
 <script>
