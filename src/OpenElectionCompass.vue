@@ -67,6 +67,7 @@ export default {
         index,
         alias: party.alias,
         selected: false,
+        logo: party.logo === undefined ? null : party.logo,
       });
     });
 

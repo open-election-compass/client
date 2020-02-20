@@ -8,7 +8,10 @@
     />
     <label
       :for="`party-${index}-checkbox`"
-      class="p-4 block mb-4 flex items-center justify-start rounded border cursor-pointer"
+      class="
+        p-4 block mb-4 flex items-center justify-start rounded border cursor-pointer
+        transition shadow-md hover:shadow-lg duration-200
+      "
       :class="selected ? 'bg-primary border-yellow-600' : 'bg-gray-200 border-gray-300'"
     >
       <icon
