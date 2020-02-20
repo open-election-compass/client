@@ -1,5 +1,5 @@
 <template>
-  <footer>
+  <footer role="contentinfo">
     <page-section class="bg-gray-300 text-white" :padding="false">
       <nav class="text-gray-600">
         <ul class="
