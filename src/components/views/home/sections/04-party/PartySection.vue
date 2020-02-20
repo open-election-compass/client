@@ -9,6 +9,7 @@
     <ul
       class="mb-10"
       :class="showLogos ? 'flex flex-wrap justify-start items-stretch -mx-2' : ''"
+      role="list"
     >
       <li
         v-for="(party, index) in parties"

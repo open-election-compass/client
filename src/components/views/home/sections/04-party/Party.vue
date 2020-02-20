@@ -7,12 +7,15 @@
         transition shadow-md hover:shadow-lg duration-200
       "
       :class="selected ? 'bg-primary border-yellow-600' : 'bg-gray-200 border-gray-300'"
+      :aria-label="$t('party-aria', { party: $t(`parties.${index}.name`) })"
+      role="listitem"
     >
       <input
         type="checkbox"
         v-model="selected"
         :id="`party-${index}-checkbox`"
         class="sr-only"
+        :aria-label="$t('checkbox-aria')"
       />
       <icon
         :name="selected ? 'check' : 'circle'"
@@ -45,3 +48,16 @@ export default {
   },
 };
 </script>
+
+<i18n>
+{
+  "en": {
+    "party-aria": "Party {party}",
+    "checkbox-aria": "Click here to select or deselect this party for comparison."
+  },
+  "de": {
+    "party-aria": "Partei {party}",
+    "checkbox-aria": "Klicke hier um diese Partei zum Vergleich aus- bzw. abzuwählen."
+  }
+}
+</i18n>
