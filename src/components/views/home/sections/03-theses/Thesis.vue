@@ -7,6 +7,8 @@
     :class="status === 'skip' ? 'opacity-50 bg-gray-100' : ''"
     v-if="hasBeenActivated"
     :data-guide-section="`thesis-${index}`"
+    role="form"
+    :aria-label="$t('thesis-aria-label', { count: index + 1, total })"
   >
     <div
       class="
@@ -72,15 +74,17 @@
       </div>
 
       <!-- Important Toggle -->
-      <div class="
-        mx-8 mt-8 text-center
-        md:mx-6 md:mt-12 lg:mt-24
-      "
-      :class="status === 'neutral' ? 'opacity-25' : ''">
+      <div
+        class="
+          mx-8 mt-8 text-center
+          md:mx-6 md:mt-12 lg:mt-24
+        "
+        :class="status === 'neutral' ? 'opacity-25' : ''"
+      >
         <label
           :for="`important-${index}`"
           class="
-            p-3 pr-4 cursor-pointer
+            p-3 pr-4 cursor-pointer focusable-child
             rounded-full border border-solid
             transition shadow-md hover:shadow-lg duration-200
           "
@@ -91,7 +95,7 @@
           "
         >
           <input
-            class="hidden"
+            class="sr-only"
             type="checkbox"
             :name="`important-${index}`"
             :id="`important-${index}`"
@@ -192,11 +196,13 @@ export default {
 {
   "en": {
     "thesis": "Thesis {count} / {total}",
+    "thesis-aria-label": "Thesis {count} of {total}",
     "skip": "Skip",
     "important": "Important"
   },
   "de": {
     "thesis": "These {count} / {total}",
+    "thesis-aria-label": "These {count} von {total}",
     "skip": "Überspringen",
     "important": "Wichtig"
   }
