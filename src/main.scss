@@ -10,7 +10,7 @@
 	-webkit-tap-highlight-color: transparent;
 }
 
-button:focus, input:focus {
+button:focus, input:focus, .focusable-child:focus-within {
 	outline: none;
 	box-shadow: 0 0 0 3px theme('colors.gray.400');
 }
