@@ -1,6 +1,6 @@
 <template>
-  <svg :width="width" viewBox="0 0 1000 1200" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <g id="icon" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+  <svg :width="width" viewBox="0 0 1000 1200" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" :alt="$t('alt')">
+    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
       <path
         d="
           M200,50 C117.157288,50 50,117.157288 50,200 L50,800 C50,882.842712 117.157288,950 200,950
@@ -41,3 +41,14 @@ export default {
   },
 };
 </script>
+
+<i18n>
+{
+  "en": {
+    "alt": "Logo of the Election Compass"
+  },
+  "de": {
+    "alt": "Logo des Wahl-Kompasses"
+  }
+}
+</i18n>
