@@ -27,8 +27,7 @@
           transition shadow-md hover:shadow-lg duration-200
         "
         @click="$store.dispatch('parties/chose')"
-        :disabled="selectedParties.length < 2"
-        v-if="!chosen"
+        :disabled="selectedParties.length < 2 || chosen"
       >
         <icon name="check" :monospace="false" />
         <span>{{ $t('proceed') }}</span>

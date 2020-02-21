@@ -3,17 +3,26 @@
     xl:-ml-48
     2xl:-ml-56
   ">
-    <blockquote class="
-      mt-8 flex flex-col
-      lg:flex-row
-    ">
-      <p class="
-        bubble order-2 flex-auto
-        xl:max-w-2xl
-      ">
+    <blockquote
+      class="
+        mt-8 flex flex-col
+        lg:flex-row
+      "
+      :aria-label="$t('answer-aria', {
+        party: $t(`parties.${party.index}.name`),
+        answer: $t(`theses.${thesis.index}.positions.${party.alias}.explanation`),
+      })"
+    >
+      <p
+        class="
+          bubble order-2 flex-auto
+          xl:max-w-2xl
+        "
+        aria-hidden="true"
+      >
         <show-more :text="$t(`theses.${thesis.index}.positions.${party.alias}.explanation`)" />
       </p>
-      <footer class="order-1 flex-none">
+      <footer class="order-1 flex-none" aria-hidden="true">
         <cite class="
           not-italic block mb-8 text-center
           md:text-lg
@@ -77,13 +86,17 @@ export default {
   }
 </style>
 
+<!-- eslint-disable max-len -->
 <i18n>
 {
   "en": {
-    "approves": "approves"
+    "approves": "approves",
+    "answer-aria": "The party '{party}' approves this thesis with the following answer: {answer}"
   },
   "de": {
-    "approves": "stimmt zu"
+    "approves": "stimmt zu",
+    "answer-aria": "Die Partei '{party}' stimmt dieser These zu mit der folgenden Begründung: {answer}"
   }
 }
 </i18n>
+<!-- eslint-enable max-len -->

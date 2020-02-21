@@ -7,8 +7,9 @@
     :class="status === 'skip' ? 'opacity-50 bg-gray-100' : ''"
     v-if="hasBeenActivated"
     :data-guide-section="`thesis-${index}`"
-    role="form"
-    :aria-label="$t('thesis-aria-label', { count: index + 1, total })"
+    role="region"
+    :aria-roledescription="$t('role-aria')"
+    :aria-label="$t('region-aria', { count: index + 1, total })"
   >
     <div
       class="
@@ -21,17 +22,7 @@
 
       <!-- Thesis -->
       <div class="p-8 sm:pb-16 lg:pb-24">
-        <small
-          class="
-            text-sm font-bold text-black block text-center mb-4
-            sm:pb-8 sm:text-base
-            lg:text-xl
-          "
-          aria-hidden="true"
-        >
-          {{ $t('thesis', { count: index + 1, total }) }}
-        </small>
-        <statement :status="status" :statement="$t(`theses.${index}.statement`)" />
+        <statement :index="index" :status="status" />
       </div>
 
       <!-- Buttons -->
@@ -97,10 +88,12 @@
             'bg-primary text-white border-yellow-600' :
             'bg-gray-100 text-gray-600 border-gray-300'
           "
+          role="checkbox"
+          :aria-checked="factor > 1"
           :aria-label="$t('important-aria')"
         >
           <input
-            class="sr-only"
+            class="hidden"
             type="checkbox"
             :name="`important-${index}`"
             :id="`important-${index}`"
@@ -110,7 +103,9 @@
             :disabled="status === 'neutral' || status === 'skip'"
           />
           <icon :name="factor === 1 ? 'circle' : 'exclamation-circle'" />
-          <span class="ml-3 font-bold">{{ $t('important') }}</span>
+          <span class="ml-3 font-bold">
+            {{ $t('important') }}
+          </span>
         </label>
       </div>
     </div>
@@ -128,10 +123,6 @@ export default {
       type: Number,
       required: true,
     },
-    total: {
-      type: Number,
-      required: true,
-    },
     thesis: {
       type: Object,
       required: true,
@@ -146,6 +137,9 @@ export default {
     },
   },
   computed: {
+    total() {
+      return this.$store.getters['theses/total'];
+    },
     active: {
       get() {
         const previousThesis = this.$store.getters['theses/theses'][this.index - 1];
@@ -200,16 +194,16 @@ export default {
 <i18n>
 {
   "en": {
-    "thesis": "Thesis {count} / {total}",
-    "thesis-aria-label": "Thesis {count} of {total}",
+    "role-aria": "Thesis",
+    "region-aria": "Thesis {count} of {total}",
     "skip": "Skip",
     "skip-aria": "Skip – skips this thesis so it will not be counted.",
     "important": "Important",
     "important-aria": "Important – marks this thesis as important for you."
   },
   "de": {
-    "thesis": "These {count} / {total}",
-    "thesis-aria-label": "These {count} von {total}",
+    "role-aria": "These",
+    "region-aria": "These {count} von {total}",
     "skip": "Überspringen",
     "skip-aria": "Überspringen – überspringt diese These, sodass sie nicht gezählt wird.",
     "important": "Wichtig",

@@ -1,15 +1,24 @@
 <template>
   <div>
-    <blockquote class="
-      mt-8 flex flex-col
-    ">
-      <p class="
-        bubble order-2 flex-auto
-        xl:max-w-2xl xl:mx-auto
-      ">
+    <blockquote
+      class="
+        mt-8 flex flex-col
+      "
+      :aria-label="$t('answer-aria', {
+        party: $t(`parties.${party.index}.name`),
+        answer: $t(`theses.${thesis.index}.positions.${party.alias}.explanation`),
+      })"
+    >
+      <p
+        class="
+          bubble order-2 flex-auto
+          xl:max-w-2xl xl:mx-auto
+        "
+        aria-hidden="true"
+      >
         <show-more :text="$t(`theses.${thesis.index}.positions.${party.alias}.explanation`)" />
       </p>
-      <footer class="order-1 flex-none">
+      <footer class="order-1 flex-none" aria-hidden="true">
         <cite class="
           not-italic block mb-8 text-center
           md:text-lg
@@ -67,13 +76,17 @@ export default {
   }
 </style>
 
+<!-- eslint-disable max-len -->
 <i18n>
 {
   "en": {
-    "neutral": "neutral"
+    "neutral": "neutral",
+    "answer-aria": "The party '{party}' remains neutral to this thesis, providing the following answer: {answer}"
   },
   "de": {
-    "neutral": "neutral"
+    "neutral": "neutral",
+    "answer-aria": "Die Partei '{party}' bleibt bei dieser These neutral, mit der folgenden Begründung: {answer}"
   }
 }
 </i18n>
+<!-- eslint-enable max-len -->

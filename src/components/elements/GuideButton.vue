@@ -7,6 +7,7 @@
         lg:pb-16
       "
       v-if="enabled && relevant"
+      aria-hidden="true"
     >
       <button
         class="

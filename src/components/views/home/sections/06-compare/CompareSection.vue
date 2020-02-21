@@ -10,9 +10,11 @@
       v-for="(thesis) in theses"
       :key="thesis.index"
       class="border-t-2 border-gray-300"
+      role="region"
+      :aria-label="$t('region-aria', { count: thesis.index + 1, total })"
     >
       <statement
-        :statement="$t(`theses.${thesis.index}.statement`)"
+        :index="thesis.index"
         :status="getStatus(thesis.index)"
         :factor="thesis.factor"
         :badge="true"
@@ -61,11 +63,13 @@ export default {
 {
   "en": {
     "heading": "Their answers",
-    "explanation": "The parties typically provide statements for every thesis to explain their reasoning. It is not always obvious why a party asumes a certain position so it is recommended to read this statements or the respective election manifestos."
+    "explanation": "The parties typically provide statements for every thesis to explain their reasoning. It is not always obvious why a party asumes a certain position so it is recommended to read this statements or the respective election manifestos.",
+    "region-aria": "Thesis {count} of {total}"
   },
   "de": {
     "heading": "Die Antworten",
-    "explanation": "Die Parteien stellen üblicherweise eine Erklärung zu jeder Entscheidung bereit. Da es nicht immer offensichtlich ist, warum eine Partei eine bestimmte Position vertritt, empfiehlt es sich, diese Erklärungen oder die jeweiligen Wahlprogramme zu lesen."
+    "explanation": "Die Parteien stellen üblicherweise eine Erklärung zu jeder Entscheidung bereit. Da es nicht immer offensichtlich ist, warum eine Partei eine bestimmte Position vertritt, empfiehlt es sich, diese Erklärungen oder die jeweiligen Wahlprogramme zu lesen.",
+    "region-aria": "These {count} von {total}"
   }
 }
 </i18n>

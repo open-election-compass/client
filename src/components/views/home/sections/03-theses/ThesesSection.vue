@@ -4,7 +4,6 @@
       v-for="(thesis, index) in theses"
       :key="index"
       :index="index"
-      :total="theses.length"
       :thesis="thesis"
     />
   </div>

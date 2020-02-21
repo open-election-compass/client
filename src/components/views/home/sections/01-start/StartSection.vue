@@ -3,7 +3,7 @@
     class="container mx-auto p-8 flex flex-col h-screen content-center justify-center"
     data-guide-section="start"
     role="banner"
-    :aria-label="$t('banner-aria')"
+    :aria-roledescription="$t('banner-aria')"
   >
     <open-election-compass-logo class="self-center"/>
     <h1 class="

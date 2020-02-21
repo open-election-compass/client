@@ -6,10 +6,11 @@
     <p class="mb-10">
       {{ $t('explanation') }}
     </p>
-    <ul>
+    <ul role="list">
       <li
         v-for="({ party, percentage }) in results"
         :key="party.alias"
+        role="listitem"
       >
         <match
           :party="party"

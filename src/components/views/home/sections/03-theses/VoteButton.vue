@@ -11,6 +11,8 @@
     "
     :class="classes"
     :aria-label="$t(`${type}-aria`)"
+    role="checkbox"
+    :aria-checked="active"
   >
     <icon v-if="type === 'approve'" name="check" />
     <icon v-else-if="type === 'neutral'" name="minus" />

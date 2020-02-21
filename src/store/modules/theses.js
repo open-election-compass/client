@@ -7,6 +7,9 @@ export default {
     theses(state) {
       return state.theses;
     },
+    total(state) {
+      return state.theses.length;
+    },
     complete(state) {
       return !state.theses.some(thesis => thesis.status === null);
     },

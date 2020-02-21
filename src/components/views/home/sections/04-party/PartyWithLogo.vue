@@ -1,5 +1,5 @@
 <template>
-  <div class="h-full">
+  <div class="h-full" role="listitem">
     <label
       :for="`party-${index}-checkbox`"
       class="
@@ -8,14 +8,15 @@
         md:flex-col md:h-full"
       :class="selected ? 'bg-primary border-yellow-600' : 'bg-gray-200 border-gray-300'"
       :aria-label="$t('party-aria', { party: $t(`parties.${index}.name`) })"
-      role="listitem"
+      role="checkbox"
+      :aria-checked="selected"
     >
       <input
         type="checkbox"
         v-model="selected"
         :id="`party-${index}-checkbox`"
-        class="sr-only"
-        :aria-label="$t('checkbox-aria')"
+        class="hidden"
+        aria-hidden="true"
       />
       <div v-if="logo" class="flex-none order-2 md:flex-1 md:order-1" aria-hidden="true">
         <img :src="logo" :alt="$t(`parties.${index}.name`)" class="w-16 h-16 md:w-full md:h-full" />
@@ -65,15 +66,15 @@ export default {
 };
 </script>
 
+<!-- eslint-disable max-len -->
 <i18n>
 {
   "en": {
-    "party-aria": "Party {party}",
-    "checkbox-aria": "Click here to select or deselect this party for comparison."
+    "party-aria": "Party '{party}' – click here to select or deselect this party for comparison."
   },
   "de": {
-    "party-aria": "Partei {party}",
-    "checkbox-aria": "Klicke hier um diese Partei zum Vergleich aus- bzw. abzuwählen."
+    "party-aria": "Partei '{party}' – klicke hier um diese Partei zum Vergleich aus- bzw. abzuwählen."
   }
 }
 </i18n>
+<!-- eslint-enable max-len -->

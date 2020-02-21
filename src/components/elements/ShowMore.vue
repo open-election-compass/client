@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <span>{{ short }}</span><span v-if="isTruncated">{{ more ? rest : ' ...' }}</span>
+  <div :aria-label="text">
+    <span>{{ short }}</span><span v-if="isTruncated">{{ more ? rest : ' ...' }}</span><!-- eslint-disable-line max-len -->
     <a @click="toggle" v-if="isTruncated" class="font-bold cursor-pointer">
       &nbsp;{{ $t(more ? 'hide' : 'show').replace(' ', '\xa0') }}
     </a>
