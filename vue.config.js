@@ -11,7 +11,9 @@ module.exports = {
       filename: 'demo-de.html',
     },
   },
+
   runtimeCompiler: true,
+
   pluginOptions: {
     i18n: {
       locale: 'en',
@@ -20,6 +22,7 @@ module.exports = {
       enableInSFC: false,
     },
   },
+
   chainWebpack: (config) => {
     config.module
       .rule('i18n')
@@ -29,4 +32,8 @@ module.exports = {
       .loader('@kazupon/vue-i18n-loader')
       .end();
   },
+
+  css: {
+    extract: false
+  }
 };
