@@ -196,17 +196,17 @@ export default {
   "en": {
     "role-aria": "Thesis",
     "region-aria": "Thesis {count} of {total}",
-    "skip": "Skip",
+    "skip": "I don't know",
     "skip-aria": "Skip – skips this thesis so it will not be counted.",
-    "important": "Important",
+    "important": "Important to me",
     "important-aria": "Important – marks this thesis as important for you."
   },
   "de": {
     "role-aria": "These",
     "region-aria": "These {count} von {total}",
-    "skip": "Überspringen",
+    "skip": "Weiß ich nicht",
     "skip-aria": "Überspringen – überspringt diese These, sodass sie nicht gezählt wird.",
-    "important": "Wichtig",
+    "important": "Wichtig für mich",
     "important-aria": "Wichtig – markiert diese These als wichtig für dich."
   }
 }
