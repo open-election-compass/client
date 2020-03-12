@@ -16,7 +16,7 @@ jobs:
     - name: Build
       run: npm ci && npm run build
 
-    - name: Deploy VuePress website to GitHub Pages
+    - name: Deploy Demos to GitHub Pages
       if: success()
       uses: crazy-max/ghaction-github-pages@v1.3.0
       with:
