@@ -100,14 +100,12 @@ export default {
      * @return  {Object}        Returns the `to` object.
      */
     readTranslation(from, path, to) {
-      const translations = _get(from, path, false);
-      if (typeof translations !== 'object') {
-        console.warn(`Found no translations at path '${path}'. Check your configuration.`); // eslint-disable-line no-console
+      const translation = _get(from, path);
+      if (translation === undefined) {
+        console.warn(`Found no translation at path '${path}'. Check your configuration.`); // eslint-disable-line no-console
         return to;
       }
-      _forEach(translations, (translation, language) => {
-        _set(to, `${language}.${path}`, translation);
-      });
+      _set(to, `${from.language}.${path}`, translation);
       return to;
     },
   },
