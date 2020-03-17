@@ -1,6 +1,26 @@
 <template>
   <div>
-    <!-- Counter -->
+    <!-- Counter and Title -->
+    <small
+      class="
+        text-sm block text-left mb-4
+        sm:pb-8 sm:text-base
+        lg:text-xl
+      "
+      v-if="$root.$te(`theses.${index}.title`)"
+    >
+      <span
+        class="font-bold text-black"
+        aria-hidden="true"
+      >
+        {{ $t('thesis', { count: index + 1, total }) }}
+      </span>
+      <span class="text-gray-600">
+        – {{ $t(`theses.${index}.title`) }}
+      </span>
+    </small>
+
+    <!-- Counter only -->
     <small
       class="
         text-sm font-bold text-black block text-center mb-4
@@ -8,6 +28,7 @@
         lg:text-xl
       "
       aria-hidden="true"
+      v-else
     >
       {{ $t('thesis', { count: index + 1, total }) }}
     </small>

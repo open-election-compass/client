@@ -43,6 +43,7 @@ export default {
 
     // Read configuration for theses and extract translations
     _forEach(configuration.theses, (thesis, index) => {
+      this.readTranslation(configuration, `theses.${index}.title`, translations, true);
       this.readTranslation(configuration, `theses.${index}.statement`, translations);
       const positions = {};
       _forEach(configuration.parties, (party) => {
@@ -93,16 +94,19 @@ export default {
      * It extracts the translations for every language and places them at the given `path` in the
      * `to` object, but under their respective languages on top-level.
      *
-     * @param   {Object}  from  The object the translations are extracted from.
-     * @param   {String}  path  The path at which the translations are read/written.
-     * @param   {Object}  to    The object the translations are written to.
+     * @param   {Object}   from      The object the translations are extracted from.
+     * @param   {String}   path      The path at which the translations are read/written.
+     * @param   {Object}   to        The object the translations are written to.
+     * @param   {Boolean}  optional  Optional translations don't throw errors when missing.
      *
      * @return  {Object}        Returns the `to` object.
      */
-    readTranslation(from, path, to) {
+    readTranslation(from, path, to, optional = false) {
       const translation = _get(from, path);
       if (translation === undefined) {
-        console.warn(`Found no translation at path '${path}'. Check your configuration.`); // eslint-disable-line no-console
+        if (!optional) {
+          console.warn(`Found no translation at path '${path}'. Check your configuration.`); // eslint-disable-line no-console
+        }
         return to;
       }
       _set(to, `${from.language}.${path}`, translation);
