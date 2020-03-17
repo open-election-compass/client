@@ -46,6 +46,7 @@
         'text-green-400': status === 'approve',
         'text-gray-500': status === 'neutral',
         'text-red-400': status === 'reject',
+        'line-through': status === 'skip',
       }"
       :aria-label="$t('statement-aria', { statement: $t(`theses.${index}.statement`) })"
     >
