@@ -1,10 +1,11 @@
 <template>
   <div id="oec-wrapper">
     <div
-      v-if="loading"
-      class="loading text-primary"
+      v-if="status === 'loading' || status === 'error'"
+      class="loading"
     >
-      <icon name="slash" spinning monospace />
+      <icon v-if="status === 'loading'" name="slash" class="text-primary" spinning monospace />
+      <icon v-else-if="status === 'error'" name="times" class="text-red-500" monospace />
     </div>
     <router-view v-else />
   </div>
@@ -20,7 +21,7 @@ export default {
 
   data() {
     return {
-      loading: true,
+      status: 'loading',
     };
   },
 
@@ -54,66 +55,89 @@ export default {
         throw new Error('Please reference a script-tag in the load-url attribute to load the content from.');
       }
       content = JSON.parse(tag.text);
-    } else if (this.loadUrl === 'string' && this.loadUrl.length > 0) {
-      throw new Error('Loading from URL is not supported... yet!');
+      const result = this.parseContent(content);
+      if (result) {
+        this.status = 'ready';
+      } else {
+        this.status = 'error';
+      }
+    } else if (typeof this.loadUrl === 'string' && this.loadUrl.length > 0) {
+      const xhr = new XMLHttpRequest();
+      xhr.onload = () => {
+        if (xhr.status >= 200 && xhr.status < 300) {
+          const result = this.parseContent(JSON.parse(xhr.responseText));
+          if (result) {
+            this.status = 'ready';
+          } else {
+            this.status = 'error';
+          }
+        } else {
+          this.status = 'error';
+          throw new Error(`Failed loading content from URL '${this.loadUrl}'!`);
+        }
+      };
+      xhr.open('GET', this.loadUrl);
+      xhr.send();
     }
-
-    const languages = content.languages.map(language => language.code);
-    if (languages.length === 0) {
-      console.error('No translation loaded, because no translation attributes were found on the base element. Should look like this: <open-election-compass translation-en="https://example.com/en.json" />'); // eslint-disable-line no-console
-    }
-
-    // Set the first language as the default language
-    this.setLocale(languages[0]);
-
-    // Extract translations from content
-    const translations = {};
-    this.readTranslation(content, 'title', translations);
-    this.readTranslation(content, 'subtitle', translations);
-    this.readTranslation(content, 'introduction.heading', translations);
-    this.readTranslation(content, 'introduction.text', translations);
-    _forEach(content['footer-links'], (link, index) => {
-      this.readTranslation(content, `footer-links.${index}.text`, translations);
-    });
-
-    // Read content for theses and extract translations
-    _forEach(content.theses, (thesis, index) => {
-      this.readTranslation(content, `theses.${index}.title`, translations, true);
-      this.readTranslation(content, `theses.${index}.statement`, translations);
-      const positions = {};
-      _forEach(content.parties, (party) => {
-        this.readTranslation(content, `theses.${index}.positions.${party.alias}.explanation`, translations);
-        positions[party.alias] = thesis.positions[party.alias].position;
-      });
-      this.$store.commit('theses/addThesis', {
-        index,
-        status: null,
-        factor: 1,
-        activated: index === 0,
-        positions,
-      });
-    });
-
-    // Read content for parties and extract translations
-    _forEach(content.parties, (party, index) => {
-      this.readTranslation(content, `parties.${index}.name`, translations);
-      this.readTranslation(content, `parties.${index}.short`, translations);
-      this.readTranslation(content, `parties.${index}.description`, translations);
-      this.$store.commit('parties/addParty', {
-        index,
-        alias: party.alias,
-        selected: false,
-        logo: party.logo === undefined ? null : party.logo,
-      });
-    });
-
-    _forEach(translations, (translation, language) => {
-      this.$i18n.setLocaleMessage(language, translation);
-    });
-
-    this.loading = false;
   },
   methods: {
+    parseContent(content) {
+      const languages = content.languages.map(language => language.code);
+      if (languages.length === 0) {
+        console.error('No translation loaded, because no translation attributes were found on the base element. Should look like this: <open-election-compass translation-en="https://example.com/en.json" />'); // eslint-disable-line no-console
+      }
+
+      // Set the first language as the default language
+      this.setLocale(languages[0]);
+
+      // Extract translations from content
+      const translations = {};
+      this.readTranslation(content, 'title', translations);
+      this.readTranslation(content, 'subtitle', translations);
+      this.readTranslation(content, 'introduction.heading', translations);
+      this.readTranslation(content, 'introduction.text', translations);
+      _forEach(content['footer-links'], (link, index) => {
+        this.readTranslation(content, `footer-links.${index}.text`, translations);
+      });
+
+      // Read content for theses and extract translations
+      _forEach(content.theses, (thesis, index) => {
+        this.readTranslation(content, `theses.${index}.title`, translations, true);
+        this.readTranslation(content, `theses.${index}.statement`, translations);
+        const positions = {};
+        _forEach(content.parties, (party) => {
+          this.readTranslation(content, `theses.${index}.positions.${party.alias}.explanation`, translations);
+          positions[party.alias] = thesis.positions[party.alias].position;
+        });
+        this.$store.commit('theses/addThesis', {
+          index,
+          status: null,
+          factor: 1,
+          activated: index === 0,
+          positions,
+        });
+      });
+
+      // Read content for parties and extract translations
+      _forEach(content.parties, (party, index) => {
+        this.readTranslation(content, `parties.${index}.name`, translations);
+        this.readTranslation(content, `parties.${index}.short`, translations);
+        this.readTranslation(content, `parties.${index}.description`, translations);
+        this.$store.commit('parties/addParty', {
+          index,
+          alias: party.alias,
+          selected: false,
+          logo: party.logo === undefined ? null : party.logo,
+        });
+      });
+
+      _forEach(translations, (translation, language) => {
+        this.$i18n.setLocaleMessage(language, translation);
+      });
+
+      return true;
+    },
+
     /**
      * Set the current language in the vue-i18n plugin.
      *
