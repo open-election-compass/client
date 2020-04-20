@@ -48,20 +48,27 @@ export default {
     // – or –
     // <open-election-compass load-tag="#oec-content" />
     // <script type="application/json" id="oec-content">...
-    let content = null;
     if (typeof this.loadTag === 'string' && this.loadTag.length > 0) {
-      const tag = document.querySelector(this.loadTag);
-      if (tag.tagName !== 'SCRIPT') {
+      this.loadContentFromTag(this.loadTag);
+    } else if (typeof this.loadUrl === 'string' && this.loadUrl.length > 0) {
+      this.loadContentFromUrl(this.loadUrl);
+    }
+  },
+  methods: {
+    loadContentFromTag(tag) {
+      const element = document.querySelector(tag);
+      if (element.tagName !== 'SCRIPT') {
         throw new Error('Please reference a script-tag in the load-url attribute to load the content from.');
       }
-      content = JSON.parse(tag.text);
+      const content = JSON.parse(element.text);
       const result = this.parseContent(content);
       if (result) {
         this.status = 'ready';
       } else {
         this.status = 'error';
       }
-    } else if (typeof this.loadUrl === 'string' && this.loadUrl.length > 0) {
+    },
+    loadContentFromUrl(url) {
       const xhr = new XMLHttpRequest();
       xhr.onload = () => {
         if (xhr.status >= 200 && xhr.status < 300) {
@@ -73,14 +80,12 @@ export default {
           }
         } else {
           this.status = 'error';
-          throw new Error(`Failed loading content from URL '${this.loadUrl}'!`);
+          throw new Error(`Failed loading content from URL '${url}'!`);
         }
       };
-      xhr.open('GET', this.loadUrl);
+      xhr.open('GET', url);
       xhr.send();
-    }
-  },
-  methods: {
+    },
     parseContent(content) {
       const languages = content.languages.map(language => language.code);
       if (languages.length === 0) {
