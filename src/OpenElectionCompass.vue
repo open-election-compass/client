@@ -1,6 +1,12 @@
 <template>
   <div id="oec-wrapper">
-    <router-view/>
+    <div
+      v-if="loading"
+      class="loading text-primary"
+    >
+      <icon name="slash" spinning monospace />
+    </div>
+    <router-view v-else />
   </div>
 </template>
 
@@ -11,43 +17,72 @@ import _set from 'lodash/set';
 
 export default {
   name: 'OpenElectionCompass',
+
+  data() {
+    return {
+      loading: true,
+    };
+  },
+
   props: {
-    language: {
+    loadTag: {
       type: String,
-      validator(value) {
-        return ['de', 'en'].includes(value);
-      },
-      default: 'en',
+      default: null,
+    },
+    loadUrl: {
+      type: String,
+      default: null,
     },
   },
+
   /**
-   * The created hook. Interprets the JSON configuration passed to the components' default slot. And
+   * The mounted hook. Interprets the JSON configuration passed to the components' default slot. And
    * creates translations and vuex stores, accordingly.
    *
    * @return  {undefined}
    */
-  created() {
-    // Set current language from language property
-    this.setLocale(this.language);
+  mounted() {
+    // Get JSON content from element attributes. Example:
+    // <open-election-compass load-url="https://example.com/content.json" />
+    // – or –
+    // <open-election-compass load-tag="#oec-content" />
+    // <script type="application/json" id="oec-content">...
+    let content = null;
+    if (typeof this.loadTag === 'string' && this.loadTag.length > 0) {
+      const tag = document.querySelector(this.loadTag);
+      if (tag.tagName !== 'SCRIPT') {
+        throw new Error('Please reference a script-tag in the load-url attribute to load the content from.');
+      }
+      content = JSON.parse(tag.text);
+    } else if (this.loadUrl === 'string' && this.loadUrl.length > 0) {
+      throw new Error('Loading from URL is not supported... yet!');
+    }
 
-    // Load JSON configuration from slot
-    const configuration = JSON.parse(this.$slots.default[0].text);
+    const languages = content.languages.map(language => language.code);
+    if (languages.length === 0) {
+      console.error('No translation loaded, because no translation attributes were found on the base element. Should look like this: <open-election-compass translation-en="https://example.com/en.json" />'); // eslint-disable-line no-console
+    }
 
-    // Extract translations from configuration
+    // Set the first language as the default language
+    this.setLocale(languages[0]);
+
+    // Extract translations from content
     const translations = {};
-    this.readTranslation(configuration, 'title', translations);
-    this.readTranslation(configuration, 'subtitle', translations);
-    this.readTranslation(configuration, 'introduction.heading', translations);
-    this.readTranslation(configuration, 'introduction.text', translations);
-    this.readTranslation(configuration, 'footer-links', translations);
+    this.readTranslation(content, 'title', translations);
+    this.readTranslation(content, 'subtitle', translations);
+    this.readTranslation(content, 'introduction.heading', translations);
+    this.readTranslation(content, 'introduction.text', translations);
+    _forEach(content['footer-links'], (link, index) => {
+      this.readTranslation(content, `footer-links.${index}.text`, translations);
+    });
 
-    // Read configuration for theses and extract translations
-    _forEach(configuration.theses, (thesis, index) => {
-      this.readTranslation(configuration, `theses.${index}.title`, translations, true);
-      this.readTranslation(configuration, `theses.${index}.statement`, translations);
+    // Read content for theses and extract translations
+    _forEach(content.theses, (thesis, index) => {
+      this.readTranslation(content, `theses.${index}.title`, translations, true);
+      this.readTranslation(content, `theses.${index}.statement`, translations);
       const positions = {};
-      _forEach(configuration.parties, (party) => {
-        this.readTranslation(configuration, `theses.${index}.positions.${party.alias}.explanation`, translations);
+      _forEach(content.parties, (party) => {
+        this.readTranslation(content, `theses.${index}.positions.${party.alias}.explanation`, translations);
         positions[party.alias] = thesis.positions[party.alias].position;
       });
       this.$store.commit('theses/addThesis', {
@@ -59,11 +94,11 @@ export default {
       });
     });
 
-    // Read configuration for parties and extract translations
-    _forEach(configuration.parties, (party, index) => {
-      this.readTranslation(configuration, `parties.${index}.name`, translations);
-      this.readTranslation(configuration, `parties.${index}.short`, translations);
-      this.readTranslation(configuration, `parties.${index}.description`, translations);
+    // Read content for parties and extract translations
+    _forEach(content.parties, (party, index) => {
+      this.readTranslation(content, `parties.${index}.name`, translations);
+      this.readTranslation(content, `parties.${index}.short`, translations);
+      this.readTranslation(content, `parties.${index}.description`, translations);
       this.$store.commit('parties/addParty', {
         index,
         alias: party.alias,
@@ -75,6 +110,8 @@ export default {
     _forEach(translations, (translation, language) => {
       this.$i18n.setLocaleMessage(language, translation);
     });
+
+    this.loading = false;
   },
   methods: {
     /**
@@ -94,22 +131,22 @@ export default {
      * It extracts the translations for every language and places them at the given `path` in the
      * `to` object, but under their respective languages on top-level.
      *
-     * @param   {Object}   from      The object the translations are extracted from.
-     * @param   {String}   path      The path at which the translations are read/written.
-     * @param   {Object}   to        The object the translations are written to.
-     * @param   {Boolean}  optional  Optional translations don't throw errors when missing.
+     * @param   {Object}  from  The object the translations are extracted from.
+     * @param   {String}  path  The path at which the translations are read/written.
+     * @param   {Object}  to    The object the translations are written to.
      *
      * @return  {Object}        Returns the `to` object.
      */
-    readTranslation(from, path, to, optional = false) {
-      const translation = _get(from, path);
-      if (translation === undefined) {
-        if (!optional) {
-          console.warn(`Found no translation at path '${path}'. Check your configuration.`); // eslint-disable-line no-console
-        }
+    readTranslation(from, path, to) {
+      const translations = _get(from, path);
+      if (typeof translations !== 'object') {
+        console.warn(`Found no translations at path '${path}'. Check your configuration.`); // eslint-disable-line no-console
         return to;
       }
-      _set(to, `${from.language}.${path}`, translation);
+      _forEach(
+        translations,
+        (translation, language) => _set(to, `${language}.${path}`, translation),
+      );
       return to;
     },
   },
@@ -134,5 +171,20 @@ export default {
   bottom: 0;
   left: 0;
   overflow-y: auto;
+}
+</style>
+
+<style lang="scss" scoped>
+.loading {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  font-size: 4rem;
+  line-height: 1;
+  .icon {
+    position: relative;
+    left: -50%;
+    top: -2rem;
+  }
 }
 </style>
