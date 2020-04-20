@@ -5,10 +5,10 @@ module.exports = {
       template: 'public/index.html',
       filename: 'index.html',
     },
-    'demo-de': {
+    'demo-luedenscheid': {
       entry: 'src/main.js',
-      template: 'public/demo-de.html',
-      filename: 'demo-de.html',
+      template: 'public/demo-luedenscheid.html',
+      filename: 'demo-luedenscheid.html',
     },
   },
 
