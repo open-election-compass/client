@@ -10,7 +10,7 @@
             v-for="(link, index) in footerLinks"
             :key="index"
           >
-            <a :href="link.href" class="p-4 block">{{ link.text }}</a>
+            <a :href="link.href" class="p-4 block">{{ $t(`footer-links.${index}.text`) }}</a>
           </li>
         </ul>
       </nav>
@@ -53,7 +53,7 @@
 export default {
   computed: {
     footerLinks() {
-      return this.$t('footer-links');
+      return this.$store.getters['footerLinks/links'];
     },
   },
 };

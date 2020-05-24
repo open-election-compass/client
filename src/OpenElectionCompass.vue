@@ -101,8 +101,14 @@ export default {
       this.readTranslation(content, 'subtitle', translations);
       this.readTranslation(content, 'introduction.heading', translations);
       this.readTranslation(content, 'introduction.text', translations);
+
+      // Extract footer links
       _forEach(content['footer-links'], (link, index) => {
         this.readTranslation(content, `footer-links.${index}.text`, translations);
+        this.$store.commit('footerLinks/addLink', {
+          index,
+          href: link.href,
+        });
       });
 
       // Read content for theses and extract translations
