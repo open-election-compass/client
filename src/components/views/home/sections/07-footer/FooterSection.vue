@@ -67,7 +67,7 @@ export default {
     "oec": "OpenElectionCompass"
   },
   "de": {
-    "explanation": "Dieser Wahlkompass basiert auf dem frei zugänglichen Open Source Projekt {0}.",
+    "explanation": "Dieser Wahlkompass basiert auf dem kostenfreien Open Source Projekt {0}.",
     "oec": "OpenElectionCompass"
   }
 }
