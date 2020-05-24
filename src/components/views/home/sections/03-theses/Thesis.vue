@@ -6,7 +6,7 @@
     "
     :class="status === 'skip' ? 'opacity-50 bg-gray-100' : ''"
     v-if="hasBeenActivated"
-    :data-guide-section="`thesis-${index}`"
+    :data-section="`thesis-${index}`"
     role="region"
     :aria-roledescription="$t('role-aria')"
     :aria-label="$t('region-aria', { count: index + 1, total })"

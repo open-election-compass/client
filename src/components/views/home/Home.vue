@@ -1,19 +1,25 @@
 <template>
-  <div>
-    <start-section />
-    <main :aria-roledescription="$t('role-aria')">
-      <introduction-section />
-      <theses-section />
-      <party-section v-if="$store.getters['theses/complete']" />
-      <match-section v-if="$store.getters['parties/chosen']" />
-      <compare-section v-if="$store.getters['parties/chosen']" />
-    </main>
-    <footer-section />
-    <guide-button v-if="ready" />
-  </div>
+  <MainNavigation>
+    <template v-slot:site>
+      <SectionWatcher>
+        <start-section />
+        <main :aria-roledescription="$t('role-aria')">
+          <introduction-section />
+          <theses-section />
+          <party-section v-if="$store.getters['theses/complete']" />
+          <match-section v-if="$store.getters['parties/chosen']" />
+          <compare-section v-if="$store.getters['parties/chosen']" />
+        </main>
+        <footer-section />
+        <guide-button v-if="ready" />
+      </SectionWatcher>
+    </template>
+  </MainNavigation>
 </template>
 
 <script>
+import MainNavigation from '../../elements/MainNavigation.vue';
+import SectionWatcher from '../../elements/SectionWatcher.vue';
 import StartSection from './sections/01-start/StartSection.vue';
 import IntroductionSection from './sections/02-introduction/IntroductionSection.vue';
 import ThesesSection from './sections/03-theses/ThesesSection.vue';
@@ -34,6 +40,8 @@ export default {
     this.ready = true;
   },
   components: {
+    MainNavigation,
+    SectionWatcher,
     StartSection,
     IntroductionSection,
     ThesesSection,

@@ -1,7 +1,7 @@
 <template>
   <header
     class="container mx-auto p-8 flex flex-col h-screen content-center justify-center"
-    data-guide-section="start"
+    data-section="start"
     role="banner"
     :aria-roledescription="$t('banner-aria')"
   >

@@ -1,6 +1,6 @@
 <template>
-  <div data-guide-section="compare">
-    <page-section class="bg-white">
+  <div>
+    <page-section class="bg-white" data-section="compare">
       <h2 class="text-primary">{{ $t('heading') }}</h2>
       <p>
         {{ $t('explanation') }}
@@ -11,7 +11,9 @@
       :key="thesis.index"
       class="border-t-2 border-gray-300"
       role="region"
+      :data-section="`compare-thesis-${thesis.index}`"
       :aria-label="$t('region-aria', { count: thesis.index + 1, total })"
+      :id="`compare-thesis-${thesis.index}`"
     >
       <statement
         :index="thesis.index"
@@ -41,6 +43,9 @@ export default {
   computed: {
     theses() {
       return this.$store.getters['theses/theses'];
+    },
+    total() {
+      return this.$store.getters['theses/total'];
     },
     selectedParties() {
       return this.$store.getters['parties/selectedParties'];

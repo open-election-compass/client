@@ -1,7 +1,7 @@
 <template>
   <page-section
     class="bg-gray-200 text-gray-600"
-    data-guide-section="introduction"
+    data-section="introduction"
   >
     <h2 class="
       text-2xl leading-tight font-bold mb-10

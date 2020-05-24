@@ -13,6 +13,9 @@ export default {
     complete(state) {
       return !state.theses.some(thesis => thesis.status === null);
     },
+    completedTheses(state) {
+      return state.theses.filter(thesis => thesis.status === null);
+    },
   },
   actions: {
     activate({ commit }, { index }) {
