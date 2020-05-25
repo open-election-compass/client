@@ -105,9 +105,9 @@ export default {
       // Extract footer links
       _forEach(content['footer-links'], (link, index) => {
         this.readTranslation(content, `footer-links.${index}.text`, translations);
+        this.readTranslation(content, `footer-links.${index}.href`, translations);
         this.$store.commit('footerLinks/addLink', {
           index,
-          href: link.href,
         });
       });
 

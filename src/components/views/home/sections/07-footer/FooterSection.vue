@@ -10,7 +10,12 @@
             v-for="(link, index) in footerLinks"
             :key="index"
           >
-            <a :href="link.href" class="p-4 block">{{ $t(`footer-links.${index}.text`) }}</a>
+            <a
+              :href="$t(`footer-links.${index}.href`)"
+              class="p-4 block"
+            >
+              {{ $t(`footer-links.${index}.text`) }}
+            </a>
           </li>
         </ul>
       </nav>
