@@ -9,7 +9,7 @@ export default {
       return state.parties;
     },
     selectedParties(state) {
-      return state.parties.filter(party => party.selected);
+      return state.parties.filter((party) => party.selected);
     },
     chosen(state) {
       return state.chosen;

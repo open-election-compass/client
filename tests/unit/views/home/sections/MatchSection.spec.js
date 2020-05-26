@@ -31,7 +31,6 @@ describe('MatchSection.vue', () => {
   });
 
   it('calculates result', () => {
-
     // Theses with no status
     let theses = [
       { status: null, factor: 1 }, // 0
@@ -110,7 +109,6 @@ describe('MatchSection.vue', () => {
   });
 
   it('calculates points per party', () => {
-
     const party = {
       alias: 'foo',
     };
@@ -195,7 +193,6 @@ describe('MatchSection.vue', () => {
   });
 
   it('calculates matches', () => {
-
     const parties = [
       { alias: 'foo' },
       { alias: 'bar' },
@@ -214,9 +211,9 @@ describe('MatchSection.vue', () => {
     const matches = wrapper.vm.calculate(parties, theses);
     expect(matches[0].party.alias).to.equal('foo');
     expect(matches[0].points).to.equal(10);
-    expect(matches[0].percentage).to.equal(1 / 20 * 10);
+    expect(matches[0].percentage).to.equal((1 / 20) * 10);
     expect(matches[1].party.alias).to.equal('bar');
     expect(matches[1].points).to.equal(8);
-    expect(matches[1].percentage).to.equal(1 / 20 * 8);
+    expect(matches[1].percentage).to.equal((1 / 20) * 8);
   });
 });

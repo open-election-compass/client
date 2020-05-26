@@ -167,7 +167,7 @@ export default {
         // smaller in height than the wrapper cannot possibly cover it completely.
         visibleHeight = Math.min(sectionHeight, visibleHeight);
 
-        const visiblePercent = 1 / sectionHeight * visibleHeight;
+        const visiblePercent = (1 / sectionHeight) * visibleHeight;
         return visiblePercent > 0.6;
       });
 

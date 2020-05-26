@@ -46,7 +46,7 @@ export default {
       const maxPoints = this.calculateMaxPoints(theses);
       return selectedParties.map((party) => {
         const points = this.calculatePointsForParty(party, theses);
-        const percentage = 1 / maxPoints * points;
+        const percentage = (1 / maxPoints) * points;
         return { party, points, percentage };
       });
     },

@@ -53,7 +53,7 @@ export default {
       return this.$store.getters['parties/chosen'];
     },
     showLogos() {
-      return this.parties.some(party => party.logo !== null);
+      return this.parties.some((party) => party.logo !== null);
     },
   },
   components: {

@@ -11,10 +11,10 @@ export default {
       return state.theses.length;
     },
     complete(state) {
-      return !state.theses.some(thesis => thesis.status === null);
+      return !state.theses.some((thesis) => thesis.status === null);
     },
     completedTheses(state) {
-      return state.theses.filter(thesis => thesis.status === null);
+      return state.theses.filter((thesis) => thesis.status === null);
     },
   },
   actions: {

@@ -18,7 +18,7 @@ export default {
       return state.actualSection;
     },
     activeSection(state) {
-      const uncompletedSection = state.sections.find(section => section.completed === false);
+      const uncompletedSection = state.sections.find((section) => section.completed === false);
       if (uncompletedSection !== null) {
         return uncompletedSection;
       }
@@ -44,7 +44,7 @@ export default {
       state.actualSection = section;
     },
     markSectionAsCompleted(state, alias) {
-      const completedSection = state.sections.find(section => section.alias === alias);
+      const completedSection = state.sections.find((section) => section.alias === alias);
       if (completedSection !== null) {
         completedSection.completed = true;
       }

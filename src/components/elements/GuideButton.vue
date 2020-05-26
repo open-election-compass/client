@@ -66,7 +66,7 @@ export default {
     },
     nextSection() {
       const indexOfCurrentSection = this.sections
-        .findIndex(section => section.alias === this.activeSection.alias);
+        .findIndex((section) => section.alias === this.activeSection.alias);
       if (indexOfCurrentSection === this.sections.length - 1) {
         return false;
       }

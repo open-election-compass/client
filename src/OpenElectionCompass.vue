@@ -87,7 +87,7 @@ export default {
       xhr.send();
     },
     parseContent(content) {
-      const languages = content.languages.map(language => language.code);
+      const languages = content.languages.map((language) => language.code);
       if (languages.length === 0) {
         console.error('No translation loaded, because no translation attributes were found on the base element. Should look like this: <open-election-compass translation-en="https://example.com/en.json" />'); // eslint-disable-line no-console
       }
