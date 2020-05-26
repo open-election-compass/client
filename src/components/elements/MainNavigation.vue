@@ -174,7 +174,7 @@ export default {
       about.links = this.$store.getters['footerLinks/links'].map((link, index) => ({
         alias: `footer-link-${index}`,
         caption: this.$t(`footer-links.${index}.text`),
-        to: link.href,
+        to: this.$t(`footer-links.${index}.href`),
       }));
       return [home, theses, evaluation, compare, about];
     },
