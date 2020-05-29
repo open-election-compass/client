@@ -17,37 +17,41 @@
         class="main-navigation__menu"
       >
         <ul class="main-navigation__groups">
-          <li
+          <template
             v-for="group in groups"
-            :key="group.alias"
-            class="main-navigation__group"
           >
-            <button class="main-navigation__caption" @click="toggleGroup(group.alias)">
-              <span>{{ group.caption }}</span>
-              &nbsp;
-              <icon :name="!hiddenGroups.includes(group.alias) ? 'angle-down' : 'angle-up'" />
-            </button>
-            <ul v-if="!hiddenGroups.includes(group.alias)" class="main-navigation__links">
-              <li
-                v-for="link in group.links"
-                :key="link.alias"
-                class="main-navigation__link"
-                :class="{
-                  'main-navigation__link--active': isActive(link),
-                  'main-navigation__link--disabled': link.disabled,
-                }"
-              >
-                <a
-                  class="main-navigation__caption"
-                  :href="link.to"
-                  @click="goToLink(link.to, $event)"
+            <li
+              v-if="group.links.length > 0"
+              :key="group.alias"
+              class="main-navigation__group"
+            >
+              <button class="main-navigation__caption" @click="toggleGroup(group.alias)">
+                <span>{{ group.caption }}</span>
+                &nbsp;
+                <icon :name="!hiddenGroups.includes(group.alias) ? 'angle-down' : 'angle-up'" />
+              </button>
+              <ul v-if="!hiddenGroups.includes(group.alias)" class="main-navigation__links">
+                <li
+                  v-for="link in group.links"
+                  :key="link.alias"
+                  class="main-navigation__link"
+                  :class="{
+                    'main-navigation__link--active': isActive(link),
+                    'main-navigation__link--disabled': link.disabled,
+                  }"
                 >
-                  {{ link.caption }}
-                  <small v-if="link.description">{{ link.description }}</small>
-                </a>
-              </li>
-            </ul>
-          </li>
+                  <a
+                    class="main-navigation__caption"
+                    :href="link.to"
+                    @click="goToLink(link.to, $event)"
+                  >
+                    {{ link.caption }}
+                    <small v-if="link.description">{{ link.description }}</small>
+                  </a>
+                </li>
+              </ul>
+            </li>
+          </template>
         </ul>
       </nav>
     </transition>
