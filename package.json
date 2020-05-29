@@ -1,7 +1,8 @@
 {
-  "name": "openelectioncompass",
+  "name": "client",
   "version": "0.1.0",
-  "private": true,
+  "author": "Till Sanders <mail@till-sanders.de>",
+  "license": "GPL-3.0",
   "scripts": {
     "dev": "npm run serve",
     "serve": "vue-cli-service serve",
