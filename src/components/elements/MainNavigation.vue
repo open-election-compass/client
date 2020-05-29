@@ -294,6 +294,7 @@ export default {
     margin-right: -1rem;
     font-weight: 700;
     transition: all 0.2s ease-out;
+    display: none;
   }
 
   .main-navigation__toggle-icon {
@@ -431,6 +432,10 @@ export default {
       padding-right: 4rem;
       padding-bottom: 4rem;
       width: 30rem;
+    }
+
+    .main-navigation__toggle-caption {
+      display: inline-block;
     }
 
     button.main-navigation__caption {
