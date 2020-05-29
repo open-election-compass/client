@@ -12,7 +12,7 @@ module.exports = {
     },
   },
 
-  publicPath: process.env.NODE_ENV === 'production' ? '/openElectionCompass/' : '/',
+  publicPath: process.env.NODE_ENV === 'production' ? '/client/' : '/',
 
   runtimeCompiler: true,
 
