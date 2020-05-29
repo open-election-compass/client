@@ -8,7 +8,12 @@
       class="main-navigation__toggle"
       id="test"
     >
-      <icon :name="active ? 'times' : 'bars'" monospace />
+      <span class="main-navigation__toggle-caption">
+        {{ $t('menu') }}
+      </span>
+      <span class="main-navigation__toggle-icon">
+        <icon :name="active ? 'times' : 'bars'" monospace />
+      </span>
     </button>
     <transition name="menu">
       <nav
@@ -262,29 +267,58 @@ export default {
   }
 
   .main-navigation__toggle {
-    padding: 1rem;
-    background-color: theme('colors.gray.400');
     position: fixed;
     z-index: 301;
     top: 1.5rem;
     right: 0;
-    height: 1.5rem;
-    box-sizing: content-box;
-    transform-style: preserve-3d;
-    transition: background-color 0.2s ease-out;
-    border-radius: 5px 0 0 5px;
+    background-color: transparent;
     &:hover, &:focus {
       box-shadow: none;
-      background-color: theme('colors.primary');
+      .main-navigation__toggle-caption,
+      .main-navigation__toggle-icon {
+        background-color: theme('colors.primary');
+      }
     }
+  }
+
+  .main-navigation__toggle-caption,
+  .main-navigation__toggle-icon {
+    background-color: theme('colors.gray.400');
+    border-radius: 5px 0 0 5px;
+    display: inline-block;
+    transition: background-color 0.2s ease-out;
+  }
+
+  .main-navigation__toggle-caption {
+    padding: 1rem 2rem 1rem 1rem;
+    margin-right: -1rem;
+    font-weight: 700;
+    transition: all 0.2s ease-out;
+  }
+
+  .main-navigation__toggle-icon {
+    padding: 1rem;
+    position: relative;
+    z-index: 2;
   }
 
   .main-navigation--active {
     .main-navigation__toggle {
-      background-color: theme('colors.yellow.600');
-      color: inherit;
+      .main-navigation__toggle-caption,
+      .main-navigation__toggle-icon {
+        background-color: theme('colors.yellow.600');
+        color: inherit;
+      }
+      .main-navigation__toggle-caption {
+        transform: translateX(6rem);
+        opacity: 0;
+        pointer-events: none;
+      }
       &:hover, &:focus {
-        background-color: #FFF;
+        .main-navigation__toggle-caption,
+        .main-navigation__toggle-icon {
+          background-color: #FFF;
+        }
       }
     }
   }
