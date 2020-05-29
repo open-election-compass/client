@@ -3,6 +3,14 @@
   "version": "0.1.0",
   "author": "Till Sanders <mail@till-sanders.de>",
   "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/open-election-compass/client/issues"
+  },
+  "homepage": "https://open-election-compass.com",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/open-election-compass/client.git"
+  },
   "scripts": {
     "dev": "npm run serve",
     "serve": "vue-cli-service serve",
