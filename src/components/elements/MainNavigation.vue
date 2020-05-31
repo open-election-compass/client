@@ -6,7 +6,6 @@
     <button
       @click="toggleMenu()"
       class="main-navigation__toggle"
-      id="test"
     >
       <span class="main-navigation__toggle-caption">
         {{ $t('menu') }}
@@ -30,7 +29,7 @@
               :key="group.alias"
               class="main-navigation__group"
             >
-              <button class="main-navigation__caption" @click="toggleGroup(group.alias)">
+              <button class="main-navigation__group-toggle" @click="toggleGroup(group.alias)">
                 <span>{{ group.caption }}</span>
                 &nbsp;
                 <icon :name="!hiddenGroups.includes(group.alias) ? 'angle-down' : 'angle-up'" />
@@ -39,20 +38,36 @@
                 <li
                   v-for="link in group.links"
                   :key="link.alias"
-                  class="main-navigation__link"
+                  class="main-navigation__item"
                   :class="{
-                    'main-navigation__link--active': isActive(link),
-                    'main-navigation__link--disabled': link.disabled,
+                    'main-navigation__item--active': isActive(link),
                   }"
                 >
-                  <a
-                    class="main-navigation__caption"
+                  <BaseButton
+                    v-if="link.to"
+                    class="main-navigation__link"
+                    tag="a"
                     :href="link.to"
+                    :disabled="link.disabled"
+                    theme="white"
+                    text-align="left"
                     @click="goToLink(link.to, $event)"
                   >
                     {{ link.caption }}
                     <small v-if="link.description">{{ link.description }}</small>
-                  </a>
+                  </BaseButton>
+                  <BaseButton
+                    v-else-if="link.event"
+                    class="main-navigation__action"
+                    :disabled="link.disabled"
+                    theme="primary-dark"
+                    text-align="left"
+                    :left="link.icon || null"
+                    @click="$emit(link.event)"
+                  >
+                    {{ link.caption }}
+                    <small v-if="link.description">{{ link.description }}</small>
+                  </BaseButton>
                 </li>
               </ul>
             </li>
@@ -72,6 +87,8 @@
 </template>
 
 <script>
+import BaseButton from './BaseButton.vue';
+
 export default {
   name: 'MainNavigation',
   data() {
@@ -79,6 +96,9 @@ export default {
       active: false,
       hiddenGroups: [],
     };
+  },
+  components: {
+    BaseButton,
   },
   mounted() {
     this.$watch('actualSection', () => {
@@ -90,6 +110,19 @@ export default {
       return this.$store.getters['sections/actualSection'];
     },
     groups() {
+      const compass = {
+        alias: 'compass',
+        caption: this.$t('links.compass'),
+        links: [
+          {
+            alias: 'languages',
+            caption: this.$t('links.languages'),
+            event: 'open-language-switch',
+            icon: 'language',
+          },
+        ],
+      };
+
       const home = {
         alias: 'home',
         caption: this.$t('links.home'),
@@ -185,7 +218,7 @@ export default {
         caption: this.$t(`footer-links.${index}.text`),
         to: this.$t(`footer-links.${index}.href`),
       }));
-      return [home, theses, evaluation, compare, about];
+      return [compass, home, theses, evaluation, compare, about];
     },
   },
   methods: {
@@ -205,12 +238,12 @@ export default {
       this.active = false;
     },
     focusActiveMenuItem(smooth = false) {
-      const activeItem = this.$el.querySelector('.main-navigation__link--active');
+      const activeItem = this.$el.querySelector('.main-navigation__item--active');
       if (!activeItem || !this.$refs.menu) {
         return;
       }
       let offset = 150; // not ideal, but better then an offset of 0px, should no caption be found
-      const caption = this.$el.querySelector('.main-navigation__caption');
+      const caption = this.$el.querySelector('.main-navigation__group-toggle');
       if (caption) {
         offset = caption.offsetHeight + 10; // some extra px to account for the shadow
       }
@@ -243,6 +276,7 @@ export default {
     isActive(link) {
       return (
         this.actualSection
+        && link.to
         && link.to.charAt(0) === '#'
         && this.actualSection.alias === link.to.substring(1)
       );
@@ -336,41 +370,10 @@ export default {
   }
 
   .main-navigation__links {
-    padding: 0.5rem 1rem;
+    padding: 0.5rem 1rem 20px 1rem; // 20px to leave space for the link's box-shadow
   }
 
-  .main-navigation__link {
-    & + & {
-      margin-top: 1rem;
-    }
-    a {
-      display: block;
-      background-color: #FFF;
-      border-radius: 5px;
-      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-      border: 1px solid theme('colors.yellow.500');
-      transition: all 0.2s ease-out;
-
-      &:not(.main-navigation__link--disabled):hover,
-      &:not(.main-navigation__link--disabled):focus {
-        cursor: pointer;
-        outline: none;
-        border-color: transparent;
-        box-shadow:
-          0 4px 6px -1px rgba(0, 0, 0, 0.1),
-          0 2px 4px -1px rgba(0, 0, 0, 0.06),
-          0 0 0 3px theme('colors.yellow.600');
-      }
-    }
-    &.main-navigation__link--disabled a {
-      opacity: 0.25;
-    }
-    &.main-navigation__link--active a {
-      transform: scale(1.025);
-    }
-  }
-
-  button.main-navigation__caption {
+  button.main-navigation__group-toggle {
     font-size: 1.5rem;
     box-sizing: border-box;
     background-color: theme('colors.primary');
@@ -390,16 +393,21 @@ export default {
     }
   }
 
-  a.main-navigation__caption {
-    font-size: 1.25rem;
-    padding: 0.75rem 1rem;
-    display: block;
-    border-radius: 5px;
-    small {
-      display: block;
-      font-size: 0.75em;
-      color: theme('colors.gray.600');
+  .main-navigation__item {
+    & + & {
+      margin-top: 1rem;
     }
+    &.main-navigation__item--active {
+      .main-navigation__link,
+      .main-navigation__action {
+        transform: scale(1.025);
+      }
+    }
+  }
+
+  .main-navigation__link,
+  .main-navigation__action {
+    width: 100%;
   }
 
   .menu-enter, .menu-leave-to {
@@ -438,12 +446,15 @@ export default {
       display: inline-block;
     }
 
-    button.main-navigation__caption {
+    button.main-navigation__group-toggle {
       padding: 3rem 1rem 1rem 1rem;
     }
 
-    .main-navigation__link.main-navigation__link--active a {
-      transform: scale(1.05);
+    .main-navigation__item.main-navigation__item--active {
+      .main-navigation__link,
+      .main-navigation__action {
+        transform: scale(1.05);
+      }
     }
   }
 </style>
@@ -454,6 +465,8 @@ export default {
     "menu": "Menu",
     "thesis": "Thesis {count}",
     "links": {
+      "compass": "Election Compass",
+      "languages": "Change language",
       "home": "Start",
       "introduction": "Introduction",
       "theses": "Theses",
@@ -468,6 +481,8 @@ export default {
     "menu": "Menü",
     "thesis": "These {count}",
     "links": {
+      "compass": "Wahlkompass",
+      "languages": "Sprache wechseln",
       "home": "Start",
       "introduction": "Einleitung",
       "theses": "Thesen",

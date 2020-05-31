@@ -1,23 +1,32 @@
 <template>
-  <MainNavigation>
-    <template v-slot:site>
-      <SectionWatcher>
-        <start-section />
-        <main :aria-roledescription="$t('role-aria')">
-          <introduction-section />
-          <theses-section />
-          <party-section v-if="$store.getters['theses/complete']" />
-          <match-section v-if="$store.getters['parties/chosen']" />
-          <compare-section v-if="$store.getters['parties/chosen']" />
-        </main>
-        <footer-section />
-        <guide-button v-if="ready" />
-      </SectionWatcher>
-    </template>
-  </MainNavigation>
+  <div>
+    <LanguageSwitch
+      :visible="showLanguageSwitch"
+      @close="showLanguageSwitch = false"
+    />
+    <MainNavigation
+      @open-language-switch="showLanguageSwitch = true"
+    >
+      <template v-slot:site>
+        <SectionWatcher>
+          <start-section />
+          <main :aria-roledescription="$t('role-aria')">
+            <introduction-section />
+            <theses-section />
+            <party-section v-if="$store.getters['theses/complete']" />
+            <match-section v-if="$store.getters['parties/chosen']" />
+            <compare-section v-if="$store.getters['parties/chosen']" />
+          </main>
+          <footer-section />
+          <guide-button v-if="ready" />
+        </SectionWatcher>
+      </template>
+    </MainNavigation>
+  </div>
 </template>
 
 <script>
+import LanguageSwitch from '../../elements/LanguageSwitch.vue';
 import MainNavigation from '../../elements/MainNavigation.vue';
 import SectionWatcher from '../../elements/SectionWatcher.vue';
 import StartSection from './sections/01-start/StartSection.vue';
@@ -30,16 +39,18 @@ import FooterSection from './sections/07-footer/FooterSection.vue';
 import GuideButton from '../../elements/GuideButton.vue';
 
 export default {
-  name: 'home',
+  name: 'Home',
   data() {
     return {
       ready: false,
+      showLanguageSwitch: false,
     };
   },
   mounted() {
     this.ready = true;
   },
   components: {
+    LanguageSwitch,
     MainNavigation,
     SectionWatcher,
     StartSection,

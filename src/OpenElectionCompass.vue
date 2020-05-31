@@ -7,7 +7,7 @@
       <icon v-if="status === 'loading'" name="slash" class="text-primary" spinning monospace />
       <icon v-else-if="status === 'error'" name="times" class="text-red-500" monospace />
     </div>
-    <router-view v-else />
+    <Home v-else />
   </div>
 </template>
 
@@ -15,9 +15,14 @@
 import _forEach from 'lodash/forEach';
 import _get from 'lodash/get';
 import _set from 'lodash/set';
+import Home from '@/components/views/home/Home.vue';
 
 export default {
   name: 'OpenElectionCompass',
+
+  components: {
+    Home,
+  },
 
   data() {
     return {
@@ -33,6 +38,11 @@ export default {
     loadUrl: {
       type: String,
       default: null,
+    },
+    language: {
+      type: String,
+      default: null,
+      validator: (value) => ['en', 'de'].includes(value),
     },
   },
 
@@ -53,6 +63,23 @@ export default {
     } else if (typeof this.loadUrl === 'string' && this.loadUrl.length > 0) {
       this.loadContentFromUrl(this.loadUrl);
     }
+  },
+  computed: {
+    activeLanguage() {
+      return this.$store.getters['languages/active'];
+    },
+  },
+  watch: {
+    activeLanguage(language) {
+      if (language && language.code) {
+        this.setLocale(language.code);
+      }
+    },
+    language(code) {
+      if (code) {
+        this.setLocale(code);
+      }
+    },
   },
   methods: {
     loadContentFromTag(tag) {
@@ -92,8 +119,20 @@ export default {
         console.error('No translation loaded, because no translation attributes were found on the base element. Should look like this: <open-election-compass translation-en="https://example.com/en.json" />'); // eslint-disable-line no-console
       }
 
-      // Set the first language as the default language
-      this.setLocale(languages[0]);
+      // Add languages to store
+      _forEach(content.languages, (language, index) => {
+        this.$store.commit('languages/addLanguage', {
+          index,
+          name: language.name,
+          code: language.code,
+        });
+      });
+      this.$store.dispatch('languages/setBrowserLanguageAsFallback');
+
+      // If a default language is provided from the outside (e.g. from a parent router), set it
+      if (this.language && this.$store.getters['languages/usesFallback']) {
+        this.$store.commit('languages/activateLanguage', { code: this.language });
+      }
 
       // Extract translations from content
       const translations = {};

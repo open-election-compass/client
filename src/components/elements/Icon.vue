@@ -11,12 +11,15 @@ import { library } from '@fortawesome/fontawesome-svg-core';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 import {
   faAngleDown,
+  faAngleLeft,
+  faAngleRight,
   faAngleUp,
   faArrowRight,
   faBars,
   faCheck,
   faCircle,
   faExclamationCircle,
+  faLanguage,
   faMinus,
   faSlash,
   faTimes,
@@ -24,12 +27,15 @@ import {
 
 library.add(
   faAngleDown,
+  faAngleLeft,
+  faAngleRight,
   faAngleUp,
   faArrowRight,
   faBars,
   faCheck,
   faCircle,
   faExclamationCircle,
+  faLanguage,
   faMinus,
   faSlash,
   faTimes,

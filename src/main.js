@@ -1,13 +1,13 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
 import VueI18n from 'vue-i18n';
+import VScrollLock from 'v-scroll-lock';
 import smoothscroll from 'smoothscroll-polyfill';
 import Icon from '@/components/elements/Icon.vue';
 import OpenElectionCompassLogo from '@/components/elements/OpenElectionCompassLogo.vue';
 import PageSection from '@/components/elements/PageSection.vue';
 import ShowMore from '@/components/elements/ShowMore.vue';
 import OpenElectionCompass from './OpenElectionCompass.vue';
-import router from './router/index';
 import store from './store/index';
 import numberFormats from './locales/numberFormats';
 
@@ -15,6 +15,7 @@ Vue.config.productionTip = false;
 
 Vue.use(Vuex);
 Vue.use(VueI18n);
+Vue.use(VScrollLock);
 
 const i18n = new VueI18n({
   locale: 'en',
@@ -36,7 +37,6 @@ Vue.component('page-section', PageSection);
 Vue.component('show-more', ShowMore);
 
 new Vue({
-  router,
   store,
   i18n,
   el: '#open-election-compass',
