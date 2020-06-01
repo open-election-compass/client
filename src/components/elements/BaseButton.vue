@@ -125,6 +125,8 @@ export default {
   cursor: pointer;
   transition: all 0.2s ease-out;
   font-weight: 500;
+  appearance: none;
+  display: inline-block;
   small {
     display: block;
     font-weight: normal;
