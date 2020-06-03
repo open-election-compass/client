@@ -1,26 +1,28 @@
 <template>
-  <transition name="popup">
-    <div
-      class="
-        fixed bottom-0 left-0 right-0 p-8 w-full text-center
-        md:pb-12
-        lg:pb-16
-      "
-      v-if="active"
-      aria-hidden="true"
-    >
-      <button
+  <div class="fixed bottom-0 left-0 right-0 overflow-hidden">
+    <transition name="popup">
+      <div
         class="
-          button button-positive w-full shadow-xl levitating
-          sm:max-w-lg
+          p-8 w-full text-center
+          md:pb-12
+          lg:pb-16
         "
-        @click="goToActiveSection"
+        v-if="active"
+        aria-hidden="true"
       >
-        <span>{{ $t(`messages.${activeSection.message}`) }}</span>
-        <icon name="arrow-right" :monospace="false" />
-      </button>
-    </div>
-  </transition>
+        <button
+          class="
+            button button-positive w-full shadow-xl levitating
+            sm:max-w-lg
+          "
+          @click="goToActiveSection"
+        >
+          <span>{{ $t(`messages.${activeSection.message}`) }}</span>
+          <icon name="arrow-right" :monospace="false" />
+        </button>
+      </div>
+    </transition>
+  </div>
 </template>
 
 <script>

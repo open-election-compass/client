@@ -17,6 +17,7 @@
     <transition name="menu">
       <nav
         v-if="active"
+        v-scroll-lock="active && fullWidthMode"
         ref="menu"
         class="main-navigation__menu"
       >
@@ -94,6 +95,7 @@ export default {
   data() {
     return {
       active: false,
+      fullWidthMode: false,
       hiddenGroups: [],
     };
   },
@@ -104,6 +106,13 @@ export default {
     this.$watch('actualSection', () => {
       this.focusActiveMenuItem(true);
     }, { deep: true });
+
+    // Update fullWidthMode depending on window size
+    const mediaQuery = window.matchMedia('(max-width: 40rem)');
+    mediaQuery.addListener(({ matches }) => {
+      this.fullWidthMode = matches;
+    });
+    this.fullWidthMode = mediaQuery.matches;
   },
   computed: {
     actualSection() {
@@ -292,12 +301,6 @@ export default {
 
   .main-navigation__site {
     background-color: #FFF;
-    height: 100vh;
-    overflow: hidden;
-  }
-
-  .main-navigation__site-wrapper {
-    overflow: hidden;
   }
 
   .main-navigation__toggle {
@@ -380,7 +383,7 @@ export default {
     width: 100%;
     text-align: left;
     color: theme('colors.yellow.800');
-    padding: 2rem 2rem 1rem 2rem;
+    padding: 2rem 2rem 2rem 2rem;
     display: block;
     position: sticky;
     top: 0;
@@ -411,7 +414,7 @@ export default {
   }
 
   .menu-enter, .menu-leave-to {
-    transform: translateX(30rem);
+    transform: translateX(40rem);
   }
 
   .menu-enter-active {
@@ -423,23 +426,13 @@ export default {
   }
 
   @media (min-width: 40rem) {
-    .main-navigation__site-wrapper {
-      transition: all 0.3s ease-out;
-      transform-origin: 100% 50%;
-    }
-
-    .main-navigation--active .main-navigation__site-wrapper {
-      transform: scale(0.9) translateX(-38rem);
-      box-shadow: 0 2rem 4rem 0 rgba(#000, 0.2);
-      border-radius: 1.5rem;
-    }
-
     .main-navigation__menu {
       left: initial;
-      background-color: transparent;
-      padding-right: 4rem;
-      padding-bottom: 4rem;
-      width: 30rem;
+      background-color: theme('colors.primary');
+      padding: 0 2rem 4rem 2rem;
+      width: 32rem;
+      border-radius: 1.5rem 0 0 1.5rem;
+      box-shadow: 0 0 4rem 0 rgba(#555, 0.25);
     }
 
     .main-navigation__toggle-caption {

@@ -230,21 +230,33 @@ export default {
 
 <style lang="scss">
 @import './main.scss';
+@import '@/styles/core.scss';
 
 #oec-wrapper {
   font-family: Arial, sans-serif;
   color: #222;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  width: 100vw;
-  height: 100vh;
-  z-index: 9999;
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  overflow-y: auto;
+  &::before {
+    content: '';
+    position: fixed;
+    z-index: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(
+      0deg,
+      $theme-dark-background 0%,
+      $theme-dark-background 50%,
+      #FFF 50%,
+      #FFF 100%
+    );
+  }
+  & > div {
+    position: relative;
+    z-index: 1;
+  }
 }
 </style>
 

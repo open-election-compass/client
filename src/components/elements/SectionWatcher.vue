@@ -13,7 +13,7 @@ export default {
     };
   },
   mounted() {
-    this.$el.addEventListener('scroll', this.updateActualSection);
+    window.addEventListener('scroll', this.updateActualSection);
     this.initSections();
     this.$root.$on('navigate-to:active-section', this.goToActiveSection);
     this.$root.$on('navigate-to:section', this.goToSection);
@@ -120,8 +120,9 @@ export default {
       });
     },
     updateActualSection() {
-      const scrollPosition = this.$el.scrollTop;
-      const wrapperHeight = this.$el.offsetHeight;
+      const scrollPosition = window.pageYOffset
+        || document.documentElement.scrollTop || document.body.scrollTop || 0;
+      const wrapperHeight = window.innerHeight;
 
       const sections = this.sections.slice(); // = clone
       const direction = scrollPosition < this.scrollPosition ? 'up' : 'down';
@@ -143,13 +144,12 @@ export default {
         //                section.
         // - rect.bottom: The length from the top border of the wrapper to the bottom border of the
         //                section. Notice, that this works a little different than you might expect!
-        // - rect.height: The height of the section. Shrinks, when element leaves the viewport at
-        //                the top, but not at the bottom!
+        // - rect.height: The height of the section.
         const rect = sectionElement.getBoundingClientRect();
         let visibleHeight = 0;
         if (rect.top >= 0) {
           // Section is below the top border of the wrapper
-          visibleHeight = rect.height - (rect.bottom - wrapperHeight);
+          visibleHeight = wrapperHeight - rect.top;
         } else {
           // Section is at least partly above the top border of the wrapper
           visibleHeight = rect.height + rect.top;
@@ -187,7 +187,7 @@ export default {
     goToSection(alias) {
       // Find dom node of section
       const sectionElement = this.$el.querySelector(`[data-section="${alias}"]`);
-      this.$el.scrollTo({
+      window.scrollTo({
         behavior: 'smooth', // using iamdustan/smoothscroll polyfill
         left: 0,
         top: sectionElement.offsetTop,
@@ -197,10 +197,8 @@ export default {
 };
 </script>
 
-<style scoped>
-  .section-watcher {
-    height: 100%;
-    -webkit-overflow-scrolling: touch;
-    overflow-y: scroll;
-  }
+<style lang="scss" scoped>
+.scroll-watcher {
+  overflow: hidden;
+}
 </style>
