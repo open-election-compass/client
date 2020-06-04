@@ -14,12 +14,12 @@ jobs:
     - uses: actions/checkout@v2
 
     - name: Build
-      run: npm ci && npm run build
+      run: npm ci && npm run build:demo
 
     - name: Deploy Demos to GitHub Pages
       if: success()
       uses: crazy-max/ghaction-github-pages@v1.3.0
       with:
-        build_dir: dist
+        build_dir: dist/demo
       env:
         GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN }}
