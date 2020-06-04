@@ -12,6 +12,7 @@
 </template>
 
 <script>
+import domReady from '@wordpress/dom-ready';
 import _forEach from 'lodash/forEach';
 import _get from 'lodash/get';
 import _set from 'lodash/set';
@@ -58,11 +59,13 @@ export default {
     // – or –
     // <open-election-compass load-tag="#oec-content" />
     // <script type="application/json" id="oec-content">...
-    if (typeof this.loadTag === 'string' && this.loadTag.length > 0) {
-      this.loadContentFromTag(this.loadTag);
-    } else if (typeof this.loadUrl === 'string' && this.loadUrl.length > 0) {
-      this.loadContentFromUrl(this.loadUrl);
-    }
+    domReady(() => {
+      if (typeof this.loadTag === 'string' && this.loadTag.length > 0) {
+        this.loadContentFromTag(this.loadTag);
+      } else if (typeof this.loadUrl === 'string' && this.loadUrl.length > 0) {
+        this.loadContentFromUrl(this.loadUrl);
+      }
+    });
   },
   computed: {
     activeLanguage() {
