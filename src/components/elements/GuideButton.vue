@@ -1,25 +1,20 @@
 <template>
-  <div class="fixed bottom-0 left-0 right-0 overflow-hidden">
+  <div class="guide-button">
     <transition name="popup">
       <div
-        class="
-          p-8 w-full text-center
-          md:pb-12
-          lg:pb-16
-        "
+        class="guide-button__wrapper"
         v-if="active"
         aria-hidden="true"
       >
-        <button
-          class="
-            button button-positive w-full shadow-xl levitating
-            sm:max-w-lg
-          "
+        <BaseButton
+          class="guide-button__button"
+          theme="positive"
+          right="arrow-right"
+          size="big"
           @click="goToActiveSection"
         >
-          <span>{{ $t(`messages.${activeSection.message}`) }}</span>
-          <icon name="arrow-right" :monospace="false" />
-        </button>
+          {{ $t(`messages.${activeSection.message}`) }}
+        </BaseButton>
       </div>
     </transition>
   </div>
@@ -27,9 +22,13 @@
 
 <script>
 import _throttle from 'lodash/throttle';
+import BaseButton from '@/components/elements/BaseButton.vue';
 
 export default {
   name: 'GuideButton',
+  components: {
+    BaseButton,
+  },
   data() {
     return {
       relevant: false, // is the user in the wrong section?
@@ -118,44 +117,91 @@ export default {
 </i18n>
 
 <style lang="scss" scoped>
-  .levitating {
-    animation-name: levitating;
-    animation-duration: 1.5s;
-    animation-timing-function: cubic-bezier(0.445, 0.050, 0.550, 0.950); // ease-in-out-sine
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
+.guide-button {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+}
+
+.guide-button__wrapper {
+  width: 100%;
+  padding: 1rem;
+  text-align: center;
+}
+
+@media screen and (min-width: 40rem) {
+  .guide-button__wrapper {
+    padding: 2rem;
   }
-  @keyframes levitating {
-    0% {
-      transform: scale(1) translateY(2.5%);
-      background-color: theme('colors.green.500');
-    }
-    100% {
-      transform: scale(1.025) translateY(0);
-      background-color: theme('colors.green.400');
-    }
+}
+
+@media screen and (min-width: 60rem) {
+  .guide-button__wrapper {
+    padding: 3rem;
+  }
+}
+
+.guide-button__button {
+  width: 100%;
+  max-width: 500px;
+  animation-name: levitating;
+  animation-duration: 1.5s;
+  animation-timing-function: cubic-bezier(0.445, 0.05, 0.55, 0.95); // ease-in-out-sine
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes levitating {
+  0% {
+    background-color: theme('colors.green.500');
+    transform: scale(1) translateY(2.5%);
+  }
+
+  100% {
+    background-color: theme('colors.green.400');
+    transform: scale(1.025) translateY(0);
+  }
+}
+
+.popup-enter-active {
+  animation-name: popup;
+  animation-duration: 0.4s;
+  animation-timing-function: cubic-bezier(0.235, 1.47, 0.58, 0.995);
+  animation-direction: normal;
+  animation-fill-mode: forwards;
+}
+
+.popup-leave-active {
+  animation-name: popup;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-in;
+  animation-direction: reverse;
+  animation-fill-mode: backwards;
+}
+
+@media (prefers-reduced-motion) {
+  .guide-button__button {
+    animation-name: none;
   }
 
   .popup-enter-active {
-    animation-name: popup;
-    animation-duration: 0.4s;
-    animation-timing-function: cubic-bezier(0.235, 1.470, 0.580, 0.995);
-    animation-direction: normal;
-    animation-fill-mode: forwards;
+    animation-name: none;
   }
+
   .popup-leave-active {
-    animation-name: popup;
-    animation-duration: 0.5s;
-    animation-timing-function: ease-in;
-    animation-direction: reverse;
-    animation-fill-mode: backwards;
+    animation-name: none;
   }
-  @keyframes popup {
-    0% {
-      transform: translateY(10em);
-    }
-    100% {
-      transform: translateY(0);
-    }
+}
+
+@keyframes popup {
+  0% {
+    transform: translateY(10em);
   }
+
+  100% {
+    transform: translateY(0);
+  }
+}
 </style>
