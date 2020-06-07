@@ -116,130 +116,167 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "../../styles/core.scss";
+@import '../../styles/core';
 
 .base-button {
-  border: none;
+  display: inline-block;
+  font-weight: 500;
+  border: 0;
   border-radius: $border-radius;
   box-shadow: $shadow-normal;
   cursor: pointer;
   transition: all 0.2s ease-out;
-  font-weight: 500;
   appearance: none;
-  display: inline-block;
+
   small {
     display: block;
-    font-weight: normal;
-    color: rgba(#000, 0.5);
     margin-top: 0.25em;
+    color: rgba(#000, 0.5);
+    font-weight: normal;
     font-size: 0.75em;
   }
+
   &:hover {
     outline: none;
     box-shadow: $shadow-hover;
   }
+
   &:focus {
     outline: none;
     box-shadow: $shadow-focus;
   }
+
+  &.base-button--theme-primary:disabled
+  &.base-button--theme-primary.base-button--disabled,
+  &.base-button--theme-positive:disabled
+  &.base-button--theme-positive.base-button--disabled,
+  &.base-button--theme-neutral:disabled
+  &.base-button--theme-neutral.base-button--disabled,
+  &.base-button--theme-negative:disabled
+  &.base-button--theme-negative.base-button--disabled,
+  &.base-button--theme-white:disabled
+  &.base-button--theme-white.base-button--disabled,
+  &.base-button--theme-primary-dark:disabled
+  &.base-button--theme-primary-dark.base-button--disabled {
+    box-shadow: $shadow-normal !important;
+    cursor: default;
+    opacity: 0.25;
+  }
+
   &.base-button--theme-primary {
+    color: $theme-primary-text;
     background-color: $theme-primary-background;
     border: 1px solid $theme-primary-border;
-    color: $theme-primary-text;
-    &:hover {
-      background-color: lighten($theme-primary-background, 10%);
-      border-color: lighten($theme-primary-border, 10%);
-    }
-    &:focus {
-      border-color: transparent;
-    }
   }
+
+  &.base-button--theme-primary:hover {
+    background-color: lighten($theme-primary-background, 10%);
+    border-color: lighten($theme-primary-border, 10%);
+  }
+
+  &.base-button--theme-primary:focus {
+    border-color: transparent;
+  }
+
   &.base-button--theme-positive {
+    color: $theme-positive-text;
     background-color: $theme-positive-background;
     border: 1px solid $theme-positive-border;
-    color: $theme-positive-text;
-    &:hover {
-      background-color: lighten($theme-positive-background, 10%);
-      border-color: lighten($theme-positive-border, 10%);
-    }
-    &:focus {
-      border-color: transparent;
-    }
   }
+
+  &.base-button--theme-positive:hover {
+    background-color: lighten($theme-positive-background, 10%);
+    border-color: lighten($theme-positive-border, 10%);
+  }
+
+  &.base-button--theme-positive:focus {
+    border-color: transparent;
+  }
+
   &.base-button--theme-neutral {
+    color: $theme-neutral-text;
     background-color: $theme-neutral-background;
     border: 1px solid $theme-neutral-border;
-    color: $theme-neutral-text;
-    &:hover {
-      background-color: lighten($theme-neutral-background, 2%);
-      border-color: lighten($theme-neutral-border, 2%);
-    }
-    &:focus {
-      border-color: transparent;
-    }
   }
+
+  &.base-button--theme-neutral:hover {
+    background-color: lighten($theme-neutral-background, 2%);
+    border-color: lighten($theme-neutral-border, 2%);
+  }
+
+  &.base-button--theme-neutral:focus {
+    border-color: transparent;
+  }
+
   &.base-button--theme-negative {
+    color: $theme-negative-text;
     background-color: $theme-negative-background;
     border: 1px solid $theme-negative-border;
-    color: $theme-negative-text;
-    &:hover {
-      background-color: lighten($theme-negative-background, 10%);
-      border-color: lighten($theme-negative-border, 10%);
-    }
-    &:focus {
-      border-color: transparent;
-    }
   }
+
+  &.base-button--theme-negative:hover {
+    background-color: lighten($theme-negative-background, 10%);
+    border-color: lighten($theme-negative-border, 10%);
+  }
+
+  &.base-button--theme-negative:focus {
+    border-color: transparent;
+  }
+
   &.base-button--theme-white {
+    color: $theme-white-text;
     background-color: $theme-white-background;
     border: 1px solid $theme-white-border;
-    color: $theme-white-text;
-    &:hover {
-      background-color: lighten($theme-white-background, 10%);
-      border-color: lighten($theme-white-border, 10%);
-    }
-    &:focus {
-      border-color: transparent;
-    }
   }
+
+  &.base-button--theme-white:hover {
+    background-color: lighten($theme-white-background, 10%);
+    border-color: lighten($theme-white-border, 10%);
+  }
+
+  &.base-button--theme-white:focus {
+    border-color: transparent;
+  }
+
   &.base-button--theme-primary-dark {
+    color: $theme-primary-dark-text;
     background-color: $theme-primary-dark-background;
     border: 1px solid $theme-primary-dark-border;
-    color: $theme-primary-dark-text;
-    &:hover {
-      background-color: lighten($theme-primary-dark-background, 10%);
-      border-color: lighten($theme-primary-dark-border, 10%);
-    }
   }
-  &.base-button--theme-primary,
-  &.base-button--theme-positive,
-  &.base-button--theme-neutral,
-  &.base-button--theme-negative,
-  &.base-button--theme-white,
-  &.base-button--theme-primary-dark {
-    &:disabled, &.base-button--disabled {
-      opacity: 0.25;
-      cursor: default;
-      box-shadow: $shadow-normal !important;
-    }
+
+  &.base-button--theme-primary-dark:hover,
+  &.base-button--theme-primary-dark:focus {
+    background-color: lighten($theme-primary-dark-background, 10%);
+    border-color: lighten($theme-primary-dark-border, 10%);
   }
+
   &.base-button--size-small {
     padding: 0.75em 1em;
     font-size: 0.875em;
   }
+
   &.base-button--size-normal {
     padding: 0.65em 0.875em;
     font-size: 1.25em;
   }
+
   &.base-button--size-big {
     padding: 2em 3em;
     font-size: 1.5em;
   }
+
   &.base-button--text-align-center {
     text-align: center;
   }
+
   &.base-button--text-align-left {
     text-align: left;
+  }
+}
+
+@media (prefers-reduced-motion) {
+  .base-button {
+    transition: none;
   }
 }
 
