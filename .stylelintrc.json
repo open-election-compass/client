@@ -1,0 +1,12 @@
+{
+  "extends": [
+    "stylelint-config-recommended",
+    "stylelint-config-sass-guidelines",
+    "stylelint-a11y/recommended",
+    "stylelint-config-rational-order"
+  ],
+  "rules": {
+    "selector-class-pattern": null,
+    "order/properties-alphabetical-order": null
+  }
+}
