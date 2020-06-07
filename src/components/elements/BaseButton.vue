@@ -5,8 +5,8 @@
     :class="classes"
     :disabled="disabled"
     :tabindex="disabled ? -1 : tabindex"
-    :href="href"
-    :type="type"
+    :href="tag === 'a' ? href : undefined"
+    :type="tag === 'button' ? type : undefined"
     @click="onClick"
   >
     <span
