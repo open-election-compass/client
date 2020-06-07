@@ -257,12 +257,24 @@ export default {
 
   &.base-button--size-normal {
     padding: 0.65em 0.875em;
-    font-size: 1.25em;
+    font-size: 1.15em;
   }
 
   &.base-button--size-big {
-    padding: 2em 3em;
-    font-size: 1.5em;
+    padding: 0.65em 0.875em;
+    font-size: 1.15em;
+  }
+
+  @media screen and (min-width: 50rem) {
+    &.base-button--size-normal {
+      padding: 0.65em 0.875em;
+      font-size: 1.25em;
+    }
+
+    &.base-button--size-big {
+      padding: 0.875em 1.25em;
+      font-size: 1.5em;
+    }
   }
 
   &.base-button--text-align-center {
