@@ -1,5 +1,10 @@
 module.exports = {
   env: {
-    mocha: true,
+    'jest/globals': true,
   },
+  extends: [
+    'plugin:jest/recommended',
+    'plugin:jest/style',
+  ],
+  plugins: ['jest'],
 };

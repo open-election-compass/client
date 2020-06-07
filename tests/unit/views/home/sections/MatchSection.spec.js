@@ -1,4 +1,3 @@
-import { expect } from 'chai';
 import { shallowMount, createLocalVue } from '@vue/test-utils';
 import Vuex from 'vuex';
 import VuexPartyModule from '@/store/modules/parties';
@@ -37,7 +36,7 @@ describe('MatchSection.vue', () => {
       { status: null, factor: 1 }, // 0
       { status: null, factor: 2 }, // 0
     ];
-    expect(wrapper.vm.calculateMaxPoints(theses)).to.equal(0);
+    expect(wrapper.vm.calculateMaxPoints(theses)).toBe(0);
 
     // Theses with status `skip`
     theses = [
@@ -45,7 +44,7 @@ describe('MatchSection.vue', () => {
       { status: 'skip', factor: 2 }, // 0
       { status: null, factor: 2 }, // 0
     ];
-    expect(wrapper.vm.calculateMaxPoints(theses)).to.equal(0);
+    expect(wrapper.vm.calculateMaxPoints(theses)).toBe(0);
 
     // Theses with status `approve`
     theses = [
@@ -53,7 +52,7 @@ describe('MatchSection.vue', () => {
       { status: 'approve', factor: 1 }, // 2
       { status: 'skip', factor: 1 }, // 0
     ];
-    expect(wrapper.vm.calculateMaxPoints(theses)).to.equal(4);
+    expect(wrapper.vm.calculateMaxPoints(theses)).toBe(4);
 
     // Theses with status `approve` and an important flag
     theses = [
@@ -61,7 +60,7 @@ describe('MatchSection.vue', () => {
       { status: 'approve', factor: 2 }, // 4
       { status: 'skip', factor: 1 }, // 0
     ];
-    expect(wrapper.vm.calculateMaxPoints(theses)).to.equal(6);
+    expect(wrapper.vm.calculateMaxPoints(theses)).toBe(6);
 
     // Theses with status `neutral`
     theses = [
@@ -69,7 +68,7 @@ describe('MatchSection.vue', () => {
       { status: 'neutral', factor: 1 }, // 2
       { status: 'skip', factor: 1 }, // 0
     ];
-    expect(wrapper.vm.calculateMaxPoints(theses)).to.equal(4);
+    expect(wrapper.vm.calculateMaxPoints(theses)).toBe(4);
 
     // Theses with status `neutral` and an important flag
     theses = [
@@ -77,7 +76,7 @@ describe('MatchSection.vue', () => {
       { status: 'neutral', factor: 2 }, // 4
       { status: 'skip', factor: 1 }, // 0
     ];
-    expect(wrapper.vm.calculateMaxPoints(theses)).to.equal(6);
+    expect(wrapper.vm.calculateMaxPoints(theses)).toBe(6);
 
     // Theses with status `reject`
     theses = [
@@ -85,7 +84,7 @@ describe('MatchSection.vue', () => {
       { status: 'reject', factor: 1 }, // 2
       { status: 'skip', factor: 1 }, // 0
     ];
-    expect(wrapper.vm.calculateMaxPoints(theses)).to.equal(4);
+    expect(wrapper.vm.calculateMaxPoints(theses)).toBe(4);
 
     // Theses with status `reject` and an important flag
     theses = [
@@ -93,7 +92,7 @@ describe('MatchSection.vue', () => {
       { status: 'reject', factor: 2 }, // 4
       { status: 'skip', factor: 1 }, // 0
     ];
-    expect(wrapper.vm.calculateMaxPoints(theses)).to.equal(6);
+    expect(wrapper.vm.calculateMaxPoints(theses)).toBe(6);
 
     // Theses with various statuses
     theses = [
@@ -105,7 +104,7 @@ describe('MatchSection.vue', () => {
       { status: 'neutral', factor: 2 }, // 4
       { status: 'skip', factor: 1 }, // 0
     ];
-    expect(wrapper.vm.calculateMaxPoints(theses)).to.equal(16);
+    expect(wrapper.vm.calculateMaxPoints(theses)).toBe(16);
   });
 
   it('calculates points per party', () => {
@@ -119,7 +118,7 @@ describe('MatchSection.vue', () => {
       { status: 'approve', factor: 1, positions: { foo: null } }, // 0
       { status: null, factor: 1, positions: { foo: 'approve' } }, // 0
     ];
-    expect(wrapper.vm.calculatePointsForParty(party, theses)).to.equal(0);
+    expect(wrapper.vm.calculatePointsForParty(party, theses)).toBe(0);
 
     // User position and party position are `skip`
     theses = [
@@ -128,7 +127,7 @@ describe('MatchSection.vue', () => {
       { status: 'approve', factor: 1, positions: { foo: 'skip' } }, // 0
       { status: 'skip', factor: 1, positions: { foo: 'skip' } }, // 0
     ];
-    expect(wrapper.vm.calculatePointsForParty(party, theses)).to.equal(0);
+    expect(wrapper.vm.calculatePointsForParty(party, theses)).toBe(0);
 
     // User position and party match exactly
     theses = [
@@ -136,7 +135,7 @@ describe('MatchSection.vue', () => {
       { status: 'neutral', factor: 1, positions: { foo: 'neutral' } }, // 2
       { status: 'reject', factor: 1, positions: { foo: 'reject' } }, // 2
     ];
-    expect(wrapper.vm.calculatePointsForParty(party, theses)).to.equal(6);
+    expect(wrapper.vm.calculatePointsForParty(party, theses)).toBe(6);
 
     // User position and party match exactly and theses are important
     theses = [
@@ -144,7 +143,7 @@ describe('MatchSection.vue', () => {
       { status: 'neutral', factor: 2, positions: { foo: 'neutral' } }, // 4
       { status: 'reject', factor: 2, positions: { foo: 'reject' } }, // 4
     ];
-    expect(wrapper.vm.calculatePointsForParty(party, theses)).to.equal(12);
+    expect(wrapper.vm.calculatePointsForParty(party, theses)).toBe(12);
 
     // User position and party are compatible
     theses = [
@@ -153,7 +152,7 @@ describe('MatchSection.vue', () => {
       { status: 'reject', factor: 1, positions: { foo: 'neutral' } }, // 1
       { status: 'neutral', factor: 1, positions: { foo: 'reject' } }, // 1
     ];
-    expect(wrapper.vm.calculatePointsForParty(party, theses)).to.equal(4);
+    expect(wrapper.vm.calculatePointsForParty(party, theses)).toBe(4);
 
     // User position and party are compatible and theses are important
     theses = [
@@ -162,21 +161,21 @@ describe('MatchSection.vue', () => {
       { status: 'reject', factor: 2, positions: { foo: 'neutral' } }, // 2
       { status: 'neutral', factor: 2, positions: { foo: 'reject' } }, // 2
     ];
-    expect(wrapper.vm.calculatePointsForParty(party, theses)).to.equal(8);
+    expect(wrapper.vm.calculatePointsForParty(party, theses)).toBe(8);
 
     // User position and party don't match at all
     theses = [
       { status: 'approve', factor: 1, positions: { foo: 'reject' } }, // 0
       { status: 'reject', factor: 1, positions: { foo: 'approve' } }, // 0
     ];
-    expect(wrapper.vm.calculatePointsForParty(party, theses)).to.equal(0);
+    expect(wrapper.vm.calculatePointsForParty(party, theses)).toBe(0);
 
     // User position and party don't match at all and theses are important
     theses = [
       { status: 'approve', factor: 2, positions: { foo: 'reject' } }, // 0
       { status: 'reject', factor: 2, positions: { foo: 'approve' } }, // 0
     ];
-    expect(wrapper.vm.calculatePointsForParty(party, theses)).to.equal(0);
+    expect(wrapper.vm.calculatePointsForParty(party, theses)).toBe(0);
 
     // Theses with various statuses
     theses = [
@@ -189,7 +188,7 @@ describe('MatchSection.vue', () => {
       { status: 'neutral', factor: 2, positions: { foo: 'skip' } }, // 0
       { status: 'skip', factor: 1, positions: { foo: 'skip' } }, // 0
     ];
-    expect(wrapper.vm.calculatePointsForParty(party, theses)).to.equal(10);
+    expect(wrapper.vm.calculatePointsForParty(party, theses)).toBe(10);
   });
 
   it('calculates matches', () => {
@@ -209,11 +208,11 @@ describe('MatchSection.vue', () => {
       { status: 'skip', factor: 1, positions: { foo: 'skip', bar: 'neutral' } }, // foo 0, bar 0
     ];
     const matches = wrapper.vm.calculate(parties, theses);
-    expect(matches[0].party.alias).to.equal('foo');
-    expect(matches[0].points).to.equal(10);
-    expect(matches[0].percentage).to.equal((1 / 20) * 10);
-    expect(matches[1].party.alias).to.equal('bar');
-    expect(matches[1].points).to.equal(8);
-    expect(matches[1].percentage).to.equal((1 / 20) * 8);
+    expect(matches[0].party.alias).toBe('foo');
+    expect(matches[0].points).toBe(10);
+    expect(matches[0].percentage).toBe((1 / 20) * 10);
+    expect(matches[1].party.alias).toBe('bar');
+    expect(matches[1].points).toBe(8);
+    expect(matches[1].percentage).toBe((1 / 20) * 8);
   });
 });
