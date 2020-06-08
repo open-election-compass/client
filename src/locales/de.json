@@ -1,0 +1,13 @@
+{
+  "elements": {
+    "guide-button": {
+      "start": "Los geht's",
+      "introduction": "Zur Einführung",
+      "first-thesis": "Auf zur ersten These",
+      "thesis": "Weiter zur nächsten These",
+      "party": "Parteien auswählen",
+      "match": "Ergebnis anschauen",
+      "compare": "Begründungen der Parteien lesen"
+    }
+  }
+}

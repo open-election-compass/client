@@ -1,0 +1,13 @@
+{
+  "elements": {
+    "guide-button": {
+      "start": "Let's go",
+      "introduction": "Learn how this works",
+      "first-thesis": "Start with the first thesis",
+      "thesis": "Proceed to the next thesis",
+      "party": "Select the parties",
+      "match": "See your result",
+      "compare": "Read the statements"
+    }
+  }
+}

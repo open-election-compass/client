@@ -185,7 +185,7 @@ export default {
       });
 
       _forEach(translations, (translation, language) => {
-        this.$i18n.setLocaleMessage(language, translation);
+        this.$i18n.mergeLocaleMessage(language, translation);
       });
 
       return true;

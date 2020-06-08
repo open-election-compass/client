@@ -13,7 +13,7 @@
           size="big"
           @click="goToActiveSection"
         >
-          {{ $t(`messages.${activeSection.message}`) }}
+          {{ $t(`elements.guide-button.${activeSection.message}`) }}
         </BaseButton>
       </div>
     </transition>
@@ -62,7 +62,7 @@ export default {
         && this.$store.getters['sections/guideButtonEnabled']
         && typeof this.activeSection.completed === 'boolean'
         && typeof this.activeSection.message === 'string'
-        && this.$te(`messages.${this.activeSection.message}`)
+        && this.$te(`elements.guide-button.${this.activeSection.message}`)
       );
     },
     nextSection() {
@@ -88,33 +88,6 @@ export default {
   },
 };
 </script>
-
-<i18n>
-{
-  "en": {
-    "messages": {
-      "start": "Let's go",
-      "introduction": "Learn how this works",
-      "first-thesis": "Start with the first thesis",
-      "thesis": "Proceed to the next thesis",
-      "party": "Select the parties",
-      "match": "See your result",
-      "compare": "Read the statements"
-    }
-  },
-  "de": {
-    "messages": {
-      "start": "Los geht's",
-      "introduction": "Zur Einführung",
-      "first-thesis": "Auf zur ersten These",
-      "thesis": "Weiter zur nächsten These",
-      "party": "Parteien auswählen",
-      "match": "Ergebnis anschauen",
-      "compare": "Begründungen der Parteien lesen"
-    }
-  }
-}
-</i18n>
 
 <style lang="scss" scoped>
 .guide-button {
