@@ -146,21 +146,21 @@ export default {
     box-shadow: $shadow-focus;
   }
 
-  &.base-button--theme-primary:disabled
+  &.base-button--theme-primary:disabled,
   &.base-button--theme-primary.base-button--disabled,
-  &.base-button--theme-positive:disabled
+  &.base-button--theme-positive:disabled,
   &.base-button--theme-positive.base-button--disabled,
-  &.base-button--theme-neutral:disabled
+  &.base-button--theme-neutral:disabled,
   &.base-button--theme-neutral.base-button--disabled,
-  &.base-button--theme-negative:disabled
+  &.base-button--theme-negative:disabled,
   &.base-button--theme-negative.base-button--disabled,
-  &.base-button--theme-white:disabled
+  &.base-button--theme-white:disabled,
   &.base-button--theme-white.base-button--disabled,
-  &.base-button--theme-primary-dark:disabled
+  &.base-button--theme-primary-dark:disabled,
   &.base-button--theme-primary-dark.base-button--disabled {
     box-shadow: $shadow-normal !important;
     cursor: default;
-    opacity: 0.25;
+    opacity: 0.35;
   }
 
   &.base-button--theme-primary {
