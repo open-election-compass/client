@@ -427,7 +427,7 @@ export default {
 
   @media (min-width: 40rem) {
     .main-navigation__menu {
-      left: initial;
+      left: auto;
       background-color: theme('colors.primary');
       padding: 0 2rem 4rem 2rem;
       width: 32rem;

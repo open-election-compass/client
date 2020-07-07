@@ -12,7 +12,7 @@
       <p
         class="
           bubble order-2 flex-auto
-          xl:max-w-2xl xl:mx-auto
+          xl:max-w-2xl xl:mx-auto xl:self-center
         "
         aria-hidden="true"
       >

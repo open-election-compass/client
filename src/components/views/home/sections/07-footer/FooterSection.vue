@@ -22,7 +22,7 @@
     </page-section>
     <page-section class="bg-gray-800">
       <div class="max-w-sm mx-auto">
-        <div class="sm:flex">
+        <div class="sm:flex items-center">
           <open-election-compass-logo
             width="50px"
             color="#718096"

@@ -1,5 +1,9 @@
 <template>
-  <div>
+  <!--
+    The additional flexbox is only needed for IE 11. Please remove earliest 2050 ;)
+    https://stackoverflow.com/questions/19371626/flexbox-not-centering-vertically-in-ie/33222765#33222765
+  -->
+  <div :class="this.full ? 'flex flex-col' : ''">
     <div
       class="
         container max-w-2xl mx-auto
