@@ -4,11 +4,7 @@ import Icon from '@/components/elements/Icon.vue';
 
 describe('BaseButton.vue', () => {
   let wrapper;
-  const options = {
-    mocks: {
-      $t: () => {},
-    },
-  };
+  const options = {};
 
   beforeEach(() => {
     wrapper = shallowMount(BaseButton, options);

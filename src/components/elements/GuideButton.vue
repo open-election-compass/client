@@ -21,7 +21,6 @@
 </template>
 
 <script>
-import _throttle from 'lodash/throttle';
 import BaseButton from '@/components/elements/BaseButton.vue';
 
 export default {
@@ -32,7 +31,19 @@ export default {
   data() {
     return {
       relevant: false, // is the user in the wrong section?
+      lastCallToUpdateRelevanceFunction: null, // used to throttle update of `relevant`
+      waitForUpdateRelevanceThrottle: null, // timeout, in case `updateRelevance()` is throttling
     };
+  },
+  props: {
+    initialDelay: {
+      type: Number,
+      default: 3000,
+    },
+    throttle: {
+      type: Number,
+      default: 500,
+    },
   },
   mounted() {
     this.$watch('actualSection', this.updateRelevance);
@@ -43,7 +54,7 @@ export default {
       if (this.actualSection === null) {
         this.relevant = true;
       }
-    }, 3000);
+    }, this.initialDelay);
   },
   computed: {
     sections() {
@@ -75,14 +86,36 @@ export default {
     },
   },
   methods: {
-    updateRelevance: _throttle(function updateRelevanceThrottled() {
+    updateRelevance() {
+      // This function implements a basic throttle. Initially, it used lodash's `throttle()`, but
+      // this was incompatible with out unit tests.
+      const now = Date.now();
+      const wait = now - this.lastCallToUpdateRelevanceFunction;
+      if (typeof now === 'number' && wait < this.throttle) {
+        if (this.waitForUpdateRelevanceThrottle) {
+          clearTimeout(this.waitForUpdateRelevanceThrottle);
+        }
+        this.waitForUpdateRelevanceThrottle = setTimeout(this.updateRelevance, wait);
+        return false;
+      }
+      this.lastCallToUpdateRelevanceFunction = now;
+
+      // Determine, if GuideButton is relevant at the moment
       if (this.actualSection && this.activeSection) {
         this.relevant = this.actualSection.alias !== this.activeSection.alias;
-        return;
+        return true;
       }
       this.relevant = false;
-    }, 500),
+      return true;
+    },
     goToActiveSection() {
+      // Overwrite `relevant` to hide the GuideButton
+      this.relevant = false;
+
+      // Activate `updateRelevance()` throttling, so the button will stay hidden for the `delay`
+      this.lastCallToUpdateRelevanceFunction = Date.now();
+
+      // Trigger scrolling
       this.$root.$emit('navigate-to:active-section');
     },
   },
