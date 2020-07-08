@@ -16,6 +16,14 @@ export default {
     completedTheses(state) {
       return state.theses.filter((thesis) => thesis.status === null);
     },
+    maxPoints(state) {
+      return state.theses.reduce((points, thesis) => {
+        if (thesis.status === 'skip' || thesis.status === null) {
+          return points;
+        }
+        return points + 2 * thesis.factor;
+      }, 0);
+    },
   },
   actions: {
     activate({ commit }, { index }) {

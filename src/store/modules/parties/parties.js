@@ -1,3 +1,5 @@
+import calculatePointsForParty from './calculatePointsForParty';
+
 export default {
   namespaced: true,
   state: {
@@ -13,6 +15,16 @@ export default {
     },
     chosen(state) {
       return state.chosen;
+    },
+    results(state, { selectedParties }, rootState, rootGetters) {
+      const theses = rootGetters['theses/theses'];
+      const maxPoints = rootGetters['theses/maxPoints'];
+      const results = selectedParties.map((party) => {
+        const points = calculatePointsForParty(party, theses);
+        const percentage = (1 / maxPoints) * points;
+        return { party, points, percentage };
+      });
+      return results.sort((a, b) => b.points - a.points);
     },
   },
   actions: {

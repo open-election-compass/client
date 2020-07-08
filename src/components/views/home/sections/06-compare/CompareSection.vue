@@ -22,11 +22,11 @@
         :badge="true"
       />
       <template
-        v-for="party in selectedParties"
+        v-for="result in results"
       >
         <answer
-          :key="`${thesis.index}-${party.index}`"
-          :party="party"
+          :key="`${thesis.index}-${result.party.index}`"
+          :party="result.party"
           :thesis="thesis"
         />
       </template>
@@ -47,8 +47,8 @@ export default {
     total() {
       return this.$store.getters['theses/total'];
     },
-    selectedParties() {
-      return this.$store.getters['parties/selectedParties'];
+    results() {
+      return this.$store.getters['parties/results'];
     },
   },
   methods: {

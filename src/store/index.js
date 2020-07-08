@@ -1,11 +1,11 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
 
-import footerLinks from './modules/footerLinks';
-import languages from './modules/languages';
-import parties from './modules/parties';
-import sections from './modules/sections';
-import theses from './modules/theses';
+import footerLinks from './modules/footerLinks/footerLinks';
+import languages from './modules/languages/languages';
+import parties from './modules/parties/parties';
+import sections from './modules/sections/sections';
+import theses from './modules/theses/theses';
 
 Vue.use(Vuex);
 
