@@ -32,19 +32,31 @@
 
         <!-- Buttons -->
         <div class="text-right">
-          <button
-            @click="clickVoteButton('skip')"
-            class="
-              text-gray-600 px-4 py-2 mr-8 mb-2 text-xs font-bold rounded
-              lg:text-base
-              focus:outline-none
-            "
-            :data-test="`thesis-${index}-skip`"
-            :aria-label="$t('skip-aria')"
-          >
-            {{ $t('skip') }}
-            <icon name="arrow-right" />
-          </button>
+          <div class="inline-block">
+            <tooltip
+              class="tooltip"
+              :content="$tc('too-many-skip', maxSkip)"
+              :enabled="skipButtonDisabled && status !== 'skip'"
+              :a11y="false"
+              size="large"
+              trigger="mouseenter focusin"
+            >
+              <button
+                @click="clickVoteButton('skip')"
+                class="
+                  text-gray-600 px-4 py-2 mr-8 mb-2 text-xs font-bold rounded
+                  lg:text-base
+                  focus:outline-none
+                "
+                :class="skipButtonDisabled ? 'opacity-25' : ''"
+                :data-test="`thesis-${index}-skip`"
+                :aria-label="$t('skip-aria')"
+              >
+                {{ $t('skip') }}
+                <icon name="arrow-right" />
+              </button>
+            </tooltip>
+          </div>
         </div>
         <div class="
           flex flex-col mx-8 mb-4 rounded
@@ -79,13 +91,13 @@
             mx-8 mt-8 text-center
             md:mx-6 md:mt-12 lg:mt-24
           "
-          :class="status === 'neutral' || limited ? 'opacity-25' : ''"
+          :class="status === 'neutral' || importantButtonDisabled ? 'opacity-25' : ''"
         >
           <div class="inline-block">
             <tooltip
               class="tooltip"
-              :content="$t('too-many-important', { count: maxImportant })"
-              :enabled="limited && status !== 'neutral' && status !== 'skip'"
+              :content="$tc('too-many-important', maxImportant)"
+              :enabled="importantButtonDisabled && status !== 'neutral' && status !== 'skip'"
               :a11y="false"
               size="large"
               trigger="mouseenter focusin"
@@ -145,6 +157,13 @@ export default {
   },
   methods: {
     clickVoteButton(status) {
+      if (status === 'skip' && this.skipButtonDisabled) {
+        // The skip-button is greyed out, so we're stopping here. Instead of doing this check
+        // here, we could simply disable the button, but it would then no longer be able to
+        // receive focus. This would lead to the tooltip explaining why the user cannot skip this
+        // thesis being unreachable. This however is vital for screen readers.
+        return;
+      }
       if (status === 'neutral' || status === 'skip') {
         this.factor = 1;
       }
@@ -154,6 +173,8 @@ export default {
   computed: {
     ...mapGetters({
       total: 'theses/total',
+      countSkip: 'theses/countSkip',
+      maxSkip: 'theses/maxSkip',
       countImportant: 'theses/countImportant',
       maxImportant: 'theses/maxImportant',
     }),
@@ -179,7 +200,7 @@ export default {
         return this.$store.getters['theses/theses'][this.index].factor;
       },
       set(value) {
-        if (['neutral', 'skip'].includes(this.status) || this.limited) {
+        if (['neutral', 'skip'].includes(this.status) || this.importantButtonDisabled) {
           // The important-button is greyed out, so we're stopping here. Instead of doing this check
           // here, we could simply disable the checkbox of the important-button, but it would then
           // no longer be able to receive focus. This would lead to the tooltip explaining why the
@@ -201,7 +222,10 @@ export default {
         return this.$store.dispatch('theses/activate', { index: this.index });
       },
     },
-    limited() {
+    skipButtonDisabled() {
+      return this.countSkip >= this.maxSkip && this.status !== 'skip';
+    },
+    importantButtonDisabled() {
       return this.countImportant >= this.maxImportant && this.factor < 2;
     },
   },
@@ -219,6 +243,7 @@ export default {
 };
 </script>
 
+<!-- eslint-disable max-len -->
 <i18n>
 {
   "en": {
@@ -228,7 +253,8 @@ export default {
     "skip-aria": "Skip – skips this thesis so it will not be counted.",
     "important": "Important to me",
     "important-aria": "Important – marks this thesis as important for you.",
-    "too-many-important": "Please mark no more than {count} theses as important!"
+    "too-many-skip": "There are only very few theses, so you cannot skip one. | Please skip no more than 1 thesis to receive a meaningful result! | Please skip no more than {count} theses to receive a meaningful result!",
+    "too-many-important": "There are only very few theses, so you cannot mark one as important. | Please mark no more than 1 thesis as important to receive a meaningful result! | Please mark no more than {count} theses as important to receive a meaningful result!"
   },
   "de": {
     "role-aria": "These",
@@ -237,7 +263,9 @@ export default {
     "skip-aria": "Überspringen – überspringt diese These, sodass sie nicht gezählt wird.",
     "important": "Wichtig für mich",
     "important-aria": "Wichtig – markiert diese These als wichtig für dich.",
-    "too-many-important": "Bitte markiere nicht mehr als {count} Thesen als wichtig!"
+    "too-many-skip": "Es gibt nur sehr wenige Thesen, du kannst daher keine überspringen. | Bitte überspringe nicht mehr als 1 These um ein aussagekräftiges Ergebnis zu erhalten! | Bitte überspringe nicht mehr als {count} Thesen um ein aussagekräftiges Ergebnis zu erhalten!",
+    "too-many-important": "Es gibt nur sehr wenige Thesen, du kannst daher keine als wichtig markieren. | Bitte markiere nicht mehr als 1 These als wichtig um ein aussagekräftiges Ergebnis zu erhalten! | Bitte markiere nicht mehr als {count} Thesen als wichtig um ein aussagekräftiges Ergebnis zu erhalten!"
   }
 }
 </i18n>
+<!-- eslint-enable max-len -->

@@ -30,6 +30,15 @@ export default {
     maxImportant(state) {
       return Math.floor(state.theses.length * 0.5);
     },
+    countSkip(state) {
+      return state.theses.reduce(
+        (count, thesis) => (thesis.status === 'skip' ? count + 1 : count),
+        0,
+      );
+    },
+    maxSkip(state) {
+      return Math.floor(state.theses.length * 0.25);
+    },
   },
   actions: {
     activate({ commit }, { index }) {
