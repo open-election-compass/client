@@ -23,4 +23,4 @@ export default function calculatePointsForParty(party, theses) {
 
     return points;
   }, 0);
-};
+}

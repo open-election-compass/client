@@ -14,3 +14,7 @@ button:focus, input:focus, .focusable-child:focus-within {
 	outline: none;
 	box-shadow: 0 0 0 3px theme('colors.gray.400');
 }
+
+.tooltip * {
+	outline: none !important;
+}

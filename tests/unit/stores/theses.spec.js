@@ -82,4 +82,30 @@ describe('Theses Store', () => {
     ];
     expect(VuexThesesModule.getters.maxPoints(state)).toBe(16);
   });
+
+  it('counts theses marked as important', () => {
+    state.theses = [
+      { status: 'approved', factor: 1 },
+      { status: 'reject', factor: 2 }, // important
+      { status: 'neutral', factor: 1 },
+      { status: 'neutral', factor: 1 },
+      { status: 'approved', factor: 1 },
+      { status: 'skip', factor: 1 },
+      { status: 'reject', factor: 2 }, // important
+    ];
+    expect(VuexThesesModule.getters.countImportant(state)).toBe(2);
+  });
+
+  it('calculates the maximum of theses that can be marked as important (max 50%)', () => {
+    state.theses = [
+      { status: 'approved', factor: 1 },
+      { status: 'reject', factor: 2 },
+      { status: 'neutral', factor: 1 },
+      { status: 'neutral', factor: 1 },
+      { status: 'approved', factor: 1 },
+      { status: 'skip', factor: 1 },
+      { status: 'reject', factor: 2 },
+    ];
+    expect(VuexThesesModule.getters.maxImportant(state)).toBe(3);
+  });
 });

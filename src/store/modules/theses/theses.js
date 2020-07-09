@@ -24,6 +24,12 @@ export default {
         return points + 2 * thesis.factor;
       }, 0);
     },
+    countImportant(state) {
+      return state.theses.reduce((count, thesis) => (thesis.factor > 1 ? count + 1 : count), 0);
+    },
+    maxImportant(state) {
+      return Math.floor(state.theses.length * 0.5);
+    },
   },
   actions: {
     activate({ commit }, { index }) {

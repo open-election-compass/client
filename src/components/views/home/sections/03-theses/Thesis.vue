@@ -79,39 +79,47 @@
             mx-8 mt-8 text-center
             md:mx-6 md:mt-12 lg:mt-24
           "
-          :class="status === 'neutral' ? 'opacity-25' : ''"
+          :class="status === 'neutral' || limited ? 'opacity-25' : ''"
         >
-          <label
-            :for="`important-${index}`"
-            class="
-              p-3 pr-4 cursor-pointer focusable-child
-              rounded-full border border-solid
-              transition shadow-md hover:shadow-lg duration-200
-            "
-            :class="
-              factor > 1 ?
-              'bg-primary text-white border-yellow-600' :
-              'bg-gray-100 text-gray-600 border-gray-300'
-            "
-            role="checkbox"
-            :aria-checked="factor > 1"
-            :aria-label="$t('important-aria')"
-          >
-            <input
-              class="hidden"
-              type="checkbox"
-              :name="`important-${index}`"
-              :id="`important-${index}`"
-              v-model="factor"
-              :true-value="2"
-              :false-value="1"
-              :disabled="status === 'neutral' || status === 'skip'"
-            />
-            <icon :name="factor === 1 ? 'circle' : 'exclamation-circle'" />
-            <span class="ml-3 font-bold">
-              {{ $t('important') }}
-            </span>
-          </label>
+          <div class="inline-block">
+            <tooltip
+              class="tooltip"
+              :content="$t('too-many-important', { count: maxImportant })"
+              :enabled="limited && status !== 'neutral' && status !== 'skip'"
+              :a11y="false"
+              size="large"
+              trigger="mouseenter focusin"
+            >
+              <label
+                :for="`important-${index}`"
+                class="
+                  p-3 pr-4 cursor-pointer focusable-child
+                  rounded-full border border-solid
+                  transition shadow-md hover:shadow-lg duration-200
+                "
+                :class="
+                  factor > 1 ?
+                  'bg-primary text-white border-yellow-600' :
+                  'bg-gray-100 text-gray-600 border-gray-300'
+                "
+                :aria-label="$t('important-aria')"
+              >
+                <input
+                  class="sr-only"
+                  type="checkbox"
+                  :name="`important-${index}`"
+                  :id="`important-${index}`"
+                  v-model="factor"
+                  :true-value="2"
+                  :false-value="1"
+                />
+                <icon :name="factor === 1 ? 'circle' : 'exclamation-circle'" />
+                <span class="ml-3 font-bold">
+                  {{ $t('important') }}
+                </span>
+              </label>
+            </tooltip>
+          </div>
         </div>
       </div>
     </div>
@@ -119,6 +127,7 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex';
 import Statement from './Statement.vue';
 import VoteButton from './VoteButton.vue';
 
@@ -143,9 +152,11 @@ export default {
     },
   },
   computed: {
-    total() {
-      return this.$store.getters['theses/total'];
-    },
+    ...mapGetters({
+      total: 'theses/total',
+      countImportant: 'theses/countImportant',
+      maxImportant: 'theses/maxImportant',
+    }),
     active: {
       get() {
         const previousThesis = this.$store.getters['theses/theses'][this.index - 1];
@@ -168,6 +179,14 @@ export default {
         return this.$store.getters['theses/theses'][this.index].factor;
       },
       set(value) {
+        if (['neutral', 'skip'].includes(this.status) || this.limited) {
+          // The important-button is greyed out, so we're stopping here. Instead of doing this check
+          // here, we could simply disable the checkbox of the important-button, but it would then
+          // no longer be able to receive focus. This would lead to the tooltip explaining why the
+          // user cannot mark this thesis as important being skipped. This however is vital for
+          // screen readers.
+          return;
+        }
         this.$store.commit('theses/setFactor', {
           index: this.index,
           factor: value,
@@ -181,6 +200,9 @@ export default {
       set() {
         return this.$store.dispatch('theses/activate', { index: this.index });
       },
+    },
+    limited() {
+      return this.countImportant >= this.maxImportant && this.factor < 2;
     },
   },
   watch: {
@@ -205,7 +227,8 @@ export default {
     "skip": "I don't know",
     "skip-aria": "Skip – skips this thesis so it will not be counted.",
     "important": "Important to me",
-    "important-aria": "Important – marks this thesis as important for you."
+    "important-aria": "Important – marks this thesis as important for you.",
+    "too-many-important": "Please mark no more than {count} theses as important!"
   },
   "de": {
     "role-aria": "These",
@@ -213,7 +236,8 @@ export default {
     "skip": "Weiß ich nicht",
     "skip-aria": "Überspringen – überspringt diese These, sodass sie nicht gezählt wird.",
     "important": "Wichtig für mich",
-    "important-aria": "Wichtig – markiert diese These als wichtig für dich."
+    "important-aria": "Wichtig – markiert diese These als wichtig für dich.",
+    "too-many-important": "Bitte markiere nicht mehr als {count} Thesen als wichtig!"
   }
 }
 </i18n>
