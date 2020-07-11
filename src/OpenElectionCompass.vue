@@ -45,6 +45,10 @@ export default {
       default: null,
       validator: (value) => ['en', 'de'].includes(value),
     },
+    kioskMode: {
+      type: Boolean,
+      default: false,
+    },
   },
 
   /**
@@ -66,6 +70,7 @@ export default {
         this.loadContentFromUrl(this.loadUrl);
       }
     });
+    this.$store.commit('options/setKioskMode', this.kioskMode);
   },
   computed: {
     activeLanguage() {
@@ -82,6 +87,9 @@ export default {
       if (code) {
         this.setLocale(code);
       }
+    },
+    kioskMode(value) {
+      this.$store.commit('options/setKioskMode', value);
     },
   },
   methods: {

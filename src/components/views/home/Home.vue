@@ -22,6 +22,7 @@
         </SectionWatcher>
       </template>
     </MainNavigation>
+    <KioskMode v-if="$store.getters['options/kioskMode']" />
   </div>
 </template>
 
@@ -37,6 +38,7 @@ import MatchSection from './sections/05-match/MatchSection.vue';
 import CompareSection from './sections/06-compare/CompareSection.vue';
 import FooterSection from './sections/07-footer/FooterSection.vue';
 import GuideButton from '../../elements/GuideButton.vue';
+import KioskMode from '../../elements/KioskMode.vue';
 
 export default {
   name: 'Home',
@@ -61,6 +63,7 @@ export default {
     CompareSection,
     FooterSection,
     GuideButton,
+    KioskMode,
   },
 };
 </script>

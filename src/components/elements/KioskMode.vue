@@ -1,0 +1,122 @@
+<template>
+  <Modal
+    :visible="isInactive"
+    :heading="$t('heading')"
+    :description="$tc('description', secondsTilReset)"
+    :buttons="[
+      {
+        caption: this.$t('reset'),
+        theme: 'neutral',
+        eventName: 'reset',
+      },
+      {
+        caption: this.$t('resume'),
+        theme: 'primary',
+        eventName: 'resume',
+      },
+    ]"
+    icon="clock"
+    width="slim"
+    @reset="reset"
+    @resume="resume"
+  >
+  </Modal>
+</template>
+
+<script>
+import throttle from 'lodash/throttle';
+import Modal from './Modal.vue';
+
+export default {
+  name: 'KioskMode',
+  components: {
+    Modal,
+  },
+  props: {
+    threshold: {
+      type: Number,
+      default: 1000 * 60 * 5, // 5 min
+    },
+    countdown: {
+      type: Number,
+      default: 60, // seconds
+    },
+  },
+  data() {
+    return {
+      isInactive: false,
+      userActivityTimeout: null,
+      countdownInterval: null,
+      secondsTilReset: null,
+    };
+  },
+  methods: {
+    resetUserActivityTimeout: throttle(function resetUserActivity() {
+      clearTimeout(this.userActivityTimeout);
+      if (this.isInactive) {
+        return; // already visible
+      }
+      this.userActivityTimeout = setTimeout(() => {
+        this.isInactive = true;
+        this.startCountdown();
+      }, this.threshold);
+    }, 250),
+    startCountdown() {
+      this.secondsTilReset = this.countdown;
+      this.countdownInterval = setInterval(() => {
+        this.secondsTilReset -= 1;
+        if (this.secondsTilReset <= 0) {
+          this.reset();
+        }
+      }, 1000);
+    },
+    clearCountdown() {
+      clearInterval(this.countdownInterval);
+    },
+    reset() {
+      window.scrollTo({
+        top: 0,
+      });
+      window.location.reload();
+    },
+    resume() {
+      this.clearCountdown();
+      this.isInactive = false;
+    },
+  },
+  beforeMount() {
+    window.addEventListener('mousemove', this.resetUserActivityTimeout);
+    window.addEventListener('scroll', this.resetUserActivityTimeout);
+    window.addEventListener('keydown', this.resetUserActivityTimeout);
+    window.addEventListener('resize', this.resetUserActivityTimeout);
+    window.addEventListener('touchstart', this.resetUserActivityTimeout);
+  },
+  beforeDestroy() {
+    window.removeEventListener('mousemove', this.userActivityThrottler);
+    window.removeEventListener('scroll', this.userActivityThrottler);
+    window.removeEventListener('keydown', this.userActivityThrottler);
+    window.removeEventListener('resize', this.userActivityThrottler);
+    window.removeEventListener('touchstart', this.resetUserActivityTimeout);
+    clearTimeout(this.userActivityTimeout);
+  },
+};
+</script>
+
+<!-- eslint-disable max-len -->
+<i18n>
+{
+  "en": {
+    "heading": "Should we reset?",
+    "description": "You appear to be inactive. The election compass will be reset now and all your answers will be deleted. | You appear to be inactive. The election compass will be reset in {count} seconds and all your answers will be deleted. | You appear to be inactive. The election compass will be reset in {count} second and all your answers will be deleted.",
+    "reset": "Reset now",
+    "resume": "Not yet!"
+  },
+  "de": {
+    "heading": "Zurücksetzen?",
+    "description": "Es scheint, als seiest du abwesend. Der Wahlkompass wird in jetzt zurückgesetzt und deine Antworten gelöscht. | Es scheint, als seiest du abwesend. Der Wahlkompass wird in {count} Sekunde zurückgesetzt und deine Antworten gelöscht. | Es scheint, als seiest du abwesend. Der Wahlkompass wird in {count} Sekunden zurückgesetzt und deine Antworten gelöscht.",
+    "reset": "Ja, sofort",
+    "resume": "Noch nicht!"
+  }
+}
+</i18n>
+<!-- eslint-enable max-len -->
