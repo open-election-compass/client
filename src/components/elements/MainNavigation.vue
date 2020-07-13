@@ -131,6 +131,14 @@ export default {
           },
         ],
       };
+      if (this.$store.getters['options/kioskMode']) {
+        compass.links.push({
+          alias: 'reset',
+          caption: this.$t('links.reset'),
+          event: 'reset',
+          icon: 'trash',
+        });
+      }
 
       const home = {
         alias: 'home',
@@ -460,6 +468,7 @@ export default {
     "links": {
       "compass": "Election Compass",
       "languages": "Change language",
+      "reset": "Reset",
       "home": "Start",
       "introduction": "Introduction",
       "theses": "Theses",
@@ -476,6 +485,7 @@ export default {
     "links": {
       "compass": "Wahlkompass",
       "languages": "Sprache wechseln",
+      "reset": "Zurücksetzen",
       "home": "Start",
       "introduction": "Einleitung",
       "theses": "Thesen",

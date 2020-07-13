@@ -35,7 +35,7 @@ export default {
   props: {
     threshold: {
       type: Number,
-      default: 1000 * 60 * 5, // 5 min
+      default: 1000 * 60 * 3, // 3 min
     },
     countdown: {
       type: Number,
@@ -90,6 +90,7 @@ export default {
     window.addEventListener('keydown', this.resetUserActivityTimeout);
     window.addEventListener('resize', this.resetUserActivityTimeout);
     window.addEventListener('touchstart', this.resetUserActivityTimeout);
+    this.$root.$on('reset', this.reset);
   },
   beforeDestroy() {
     window.removeEventListener('mousemove', this.userActivityThrottler);

@@ -24,6 +24,7 @@ import {
   faMinus,
   faSlash,
   faTimes,
+  faTrash,
 } from '@fortawesome/free-solid-svg-icons';
 
 library.add(
@@ -41,6 +42,7 @@ library.add(
   faMinus,
   faSlash,
   faTimes,
+  faTrash,
 );
 
 export default {
