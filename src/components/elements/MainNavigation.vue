@@ -122,15 +122,16 @@ export default {
       const compass = {
         alias: 'compass',
         caption: this.$t('links.compass'),
-        links: [
-          {
-            alias: 'languages',
-            caption: this.$t('links.languages'),
-            event: 'open-language-switch',
-            icon: 'language',
-          },
-        ],
+        links: [],
       };
+      if (this.$store.getters['languages/languages'].length > 1) {
+        compass.links.push({
+          alias: 'languages',
+          caption: this.$t('links.languages'),
+          event: 'open-language-switch',
+          icon: 'language',
+        });
+      }
       if (this.$store.getters['options/kioskMode']) {
         compass.links.push({
           alias: 'reset',
