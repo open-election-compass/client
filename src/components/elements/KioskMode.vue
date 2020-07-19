@@ -15,7 +15,7 @@
         eventName: 'resume',
       },
     ]"
-    icon="clock"
+    icon="undo"
     width="slim"
     @reset="reset"
     @resume="resume"
@@ -61,8 +61,12 @@ export default {
         this.startCountdown();
       }, this.threshold);
     }, 250),
-    startCountdown() {
-      this.secondsTilReset = this.countdown;
+    startCountdown(seconds = null) {
+      if (seconds) {
+        this.secondsTilReset = seconds;
+      } else {
+        this.secondsTilReset = this.countdown;
+      }
       this.countdownInterval = setInterval(() => {
         this.secondsTilReset -= 1;
         if (this.secondsTilReset <= 0) {
@@ -90,7 +94,13 @@ export default {
     window.addEventListener('keydown', this.resetUserActivityTimeout);
     window.addEventListener('resize', this.resetUserActivityTimeout);
     window.addEventListener('touchstart', this.resetUserActivityTimeout);
-    this.$root.$on('reset', this.reset);
+    this.$root.$on('reset', ({ seconds }) => {
+      if (typeof seconds === 'number' && seconds > 0) {
+        this.isInactive = true;
+        return this.startCountdown(seconds);
+      }
+      return this.reset();
+    });
   },
   beforeDestroy() {
     window.removeEventListener('mousemove', this.userActivityThrottler);
@@ -108,13 +118,13 @@ export default {
 {
   "en": {
     "heading": "Should we reset?",
-    "description": "You appear to be inactive. The election compass will be reset now and all your answers will be deleted. | You appear to be inactive. The election compass will be reset in {count} seconds and all your answers will be deleted. | You appear to be inactive. The election compass will be reset in {count} second and all your answers will be deleted.",
+    "description": "The election compass will be reset now and all your answers will be deleted. | The election compass will be reset in {count} seconds and all your answers will be deleted. | The election compass will be reset in {count} second and all your answers will be deleted.",
     "reset": "Reset now",
     "resume": "Not yet!"
   },
   "de": {
     "heading": "Zurücksetzen?",
-    "description": "Es scheint, als seiest du abwesend. Der Wahlkompass wird in jetzt zurückgesetzt und deine Antworten gelöscht. | Es scheint, als seiest du abwesend. Der Wahlkompass wird in {count} Sekunde zurückgesetzt und deine Antworten gelöscht. | Es scheint, als seiest du abwesend. Der Wahlkompass wird in {count} Sekunden zurückgesetzt und deine Antworten gelöscht.",
+    "description": "Der Wahlkompass wird in jetzt zurückgesetzt und deine Antworten gelöscht. | Der Wahlkompass wird in {count} Sekunde zurückgesetzt und deine Antworten gelöscht. | Der Wahlkompass wird in {count} Sekunden zurückgesetzt und deine Antworten gelöscht.",
     "reset": "Ja, sofort",
     "resume": "Noch nicht!"
   }

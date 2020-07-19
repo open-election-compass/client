@@ -6,7 +6,7 @@
     />
     <MainNavigation
       @open-language-switch="showLanguageSwitch = true"
-      @reset="$root.$emit('reset')"
+      @reset="$root.$emit('reset', { seconds: 15 })"
     >
       <template v-slot:site>
         <SectionWatcher>

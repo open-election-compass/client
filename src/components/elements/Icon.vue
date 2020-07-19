@@ -18,13 +18,12 @@ import {
   faBars,
   faCheck,
   faCircle,
-  faClock,
   faExclamationCircle,
   faLanguage,
   faMinus,
   faSlash,
   faTimes,
-  faTrash,
+  faUndo,
 } from '@fortawesome/free-solid-svg-icons';
 
 library.add(
@@ -36,13 +35,12 @@ library.add(
   faBars,
   faCheck,
   faCircle,
-  faClock,
   faExclamationCircle,
   faLanguage,
   faMinus,
   faSlash,
   faTimes,
-  faTrash,
+  faUndo,
 );
 
 export default {

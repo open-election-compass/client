@@ -136,7 +136,7 @@ export default {
           alias: 'reset',
           caption: this.$t('links.reset'),
           event: 'reset',
-          icon: 'trash',
+          icon: 'undo',
         });
       }
 
