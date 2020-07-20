@@ -105,9 +105,11 @@
               <label
                 :for="`important-${index}`"
                 class="
-                  p-3 pr-4 cursor-pointer focusable-child
+                  p-3 pr-4 cursor-pointer focusable-child text-sm
                   rounded-full border border-solid
                   transition shadow-md hover:shadow-lg duration-200
+                  sm:text-base
+                  md:text-lg
                 "
                 :class="
                   factor > 1 ?

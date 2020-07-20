@@ -25,7 +25,7 @@
       </span>
     </div>
     <p
-      class="mb-10 text-yellow-900"
+      class="mb-10 text-yellow-900 text-sm sm:text-base"
     >
       <show-more :length="500" :text="$t(`parties.${party.index}.description`)" />
     </p>

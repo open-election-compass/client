@@ -4,7 +4,9 @@
       :for="`party-${index}-checkbox`"
       class="
         p-4 block mb-4 flex items-center justify-start rounded border cursor-pointer focusable-child
-        transition shadow-md hover:shadow-lg duration-200
+        transition shadow-md hover:shadow-lg duration-200 text-sm
+        sm:text-base
+        md:text-lg
       "
       :class="selected ? 'bg-primary border-yellow-600' : 'bg-gray-200 border-gray-300'"
       :aria-label="$t('party-aria', { party: $t(`parties.${index}.name`) })"
