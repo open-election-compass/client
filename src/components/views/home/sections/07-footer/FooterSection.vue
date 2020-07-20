@@ -21,7 +21,7 @@
       </nav>
     </page-section>
     <page-section class="bg-gray-800">
-      <div class="max-w-sm mx-auto">
+      <div class="max-w-xs mx-auto">
         <div class="sm:flex items-center">
           <open-election-compass-logo
             width="50px"
@@ -44,9 +44,7 @@
               href="https://open-election-compass.com"
               target="_blank"
               class="underline"
-            >
-              {{ $t('oec') }}
-            </a>
+            >{{ $t('oec') }}</a>
           </i18n>
         </div>
       </div>
@@ -68,11 +66,11 @@ export default {
 <i18n>
 {
   "en": {
-    "explanation": "This election compass is based on the open source project {0} which is free to use.",
+    "explanation": "This election compass is based on the free open source project {0}.",
     "oec": "OpenElectionCompass"
   },
   "de": {
-    "explanation": "Dieser Wahlkompass basiert auf dem kostenfreien Open Source Projekt {0}.",
+    "explanation": "Dieser Wahlkompass basiert auf dem freien Open Source Projekt {0}.",
     "oec": "OpenElectionCompass"
   }
 }
