@@ -5,11 +5,14 @@
       <p>
         {{ $t('explanation') }}
       </p>
-      <aside class="
-        bg-gray-200 rounded p-4 mt-8 text-center
-        md:p-6 md:text-lg
-        lg:p-8
-      ">
+      <aside
+        v-if="$store.getters['options/kioskMode']"
+        class="
+          bg-gray-200 rounded p-4 mt-8 text-center
+          md:p-6 md:text-lg
+          lg:p-8
+        "
+      >
         <div class="
           text-lg text-center
           md:text-xl
