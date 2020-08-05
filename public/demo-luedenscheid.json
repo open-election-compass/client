@@ -1,5 +1,6 @@
 {
   "version": "1",
+  "algorithm": "cityblock/accept-partly-reject",
   "languages": [{
     "name": "Deutsch",
     "code": "de"

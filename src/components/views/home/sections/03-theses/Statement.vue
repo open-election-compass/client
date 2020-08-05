@@ -69,7 +69,7 @@
             'bg-green-400': status === 'approve',
             'bg-red-400': status === 'reject',
           }"
-          :aria-label="$t(`badge.${status}-aria`)"
+          :aria-label="$t(`badge.${statusVariant}-aria`)"
         >
           <icon class="mr-2" :name="{
             approve: 'check',
@@ -77,7 +77,7 @@
             reject: 'times',
             skip: 'circle',
           }[status]" />
-          {{ $t(`badge.${status}`) }}
+          {{ $t(`badge.${statusVariant}`) }}
         </small>
       </div>
     </template>
@@ -128,6 +128,13 @@ export default {
     total() {
       return this.$store.getters['theses/total'];
     },
+    statusVariant() {
+      const variant = this.$store.getters['options/variant'];
+      if (variant === 'accept-partly-reject' && this.status === 'neutral') {
+        return 'partly';
+      }
+      return this.status;
+    },
   },
 };
 </script>
@@ -146,6 +153,8 @@ export default {
       "reject-aria": "You rejected this thesis.",
       "neutral": "You we're neutral",
       "neutral-aria": "You we're neutral regarding this thesis.",
+      "partly": "You agreed partly",
+      "partly-aria": "You agreed partly with this thesis.",
       "skip": "You skipped this",
       "skip-aria": "You skipped this thesis.",
       "important": "You marked this as important",
@@ -164,6 +173,8 @@ export default {
       "reject-aria": "Du hast diese These abgelehnt.",
       "neutral": "Du warst neutral",
       "neutral-aria": "Du warst zu dieser These neutral.",
+      "partly": "Du hast teilweise zugestimmt",
+      "partly-aria": "Du hast dieser These teilweise zugestimmt.",
       "skip": "Übersprungen",
       "skip-aria": "Du hast diese These übersprungen.",
       "important": "Von dir als wichtig markiert",

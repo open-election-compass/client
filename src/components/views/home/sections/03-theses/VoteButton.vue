@@ -15,7 +15,7 @@
     :aria-checked="active"
   >
     <icon v-if="type === 'approve'" name="check" />
-    <icon v-else-if="type === 'neutral'" name="minus" />
+    <icon v-else-if="['neutral', 'partly'].includes(type)" name="minus" />
     <icon v-else-if="type === 'reject'" name="times" />
     <span class="
       ml-4
@@ -34,7 +34,7 @@ export default {
       type: String,
       required: true,
       validator(value) {
-        return ['approve', 'neutral', 'reject'].includes(value);
+        return ['approve', 'neutral', 'partly', 'reject'].includes(value);
       },
     },
     active: {
@@ -47,8 +47,8 @@ export default {
       return {
         'bg-green-400 text-white border-green-600': this.type === 'approve' && this.active,
         'bg-gray-100 text-green-600 border-gray-300': this.type === 'approve' && !this.active,
-        'bg-gray-500 text-white border-gray-600': this.type === 'neutral' && this.active,
-        'bg-gray-100 text-gray-600 border-gray-300': this.type === 'neutral' && !this.active,
+        'bg-gray-500 text-white border-gray-600': ['neutral', 'partly'].includes(this.type) && this.active,
+        'bg-gray-100 text-gray-600 border-gray-300': ['neutral', 'partly'].includes(this.type) && !this.active,
         'bg-red-400 text-white border-red-600': this.type === 'reject' && this.active,
         'bg-gray-100 text-red-600 border-gray-300': this.type === 'reject' && !this.active,
       };
@@ -64,6 +64,8 @@ export default {
     "approve-aria": "Approve – click here to approve this thesis!",
     "neutral": "Neutral",
     "neutral-aria": "Neutral – click here to remain neutral regarding this thesis!",
+    "partly": "Partly",
+    "partly-aria": "Partly – click here to agree partly with this thesis!",
     "reject": "Reject",
     "reject-aria": "Reject – click here to reject this thesis!"
   },
@@ -72,6 +74,8 @@ export default {
     "approve-aria": "Zustimmung – klicke hier, um dieser These zuzustimmen!",
     "neutral": "Neutral",
     "neutral-aria": "Neutral – klicke hier, um bei dieser These neutral zu bleiben!",
+    "partly": "Teilweise",
+    "partly-aria": "Teilweise – klicke hier, um dieser These teilweise zuzustimmen!",
     "reject": "Ablehnung",
     "reject-aria": "Ablehnung – klicke hier, um diese These abzulehnen!"
   }

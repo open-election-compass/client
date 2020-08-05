@@ -70,8 +70,17 @@
             tab-index="1"
           />
           <vote-button
+            v-if="variant === 'accept-neutral-reject'"
             @click="clickVoteButton('neutral')"
             type="neutral"
+            :active="status === 'neutral'"
+            :data-test="`thesis-${index}-neutral`"
+            tab-index="2"
+          />
+          <vote-button
+            v-if="variant === 'accept-partly-reject'"
+            @click="clickVoteButton('neutral')"
+            type="partly"
             :active="status === 'neutral'"
             :data-test="`thesis-${index}-neutral`"
             tab-index="2"
@@ -174,6 +183,7 @@ export default {
   },
   computed: {
     ...mapGetters({
+      variant: 'options/variant',
       total: 'theses/total',
       countSkip: 'theses/countSkip',
       maxSkip: 'theses/maxSkip',

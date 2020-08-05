@@ -4,10 +4,12 @@
       class="
         mt-8 flex flex-col
       "
-      :aria-label="$t('answer-aria', {
-        party: $t(`parties.${party.index}.name`),
-        answer: $t(`theses.${thesis.index}.positions.${party.alias}.explanation`),
-      })"
+      :aria-label="
+        $t(variant === 'accept-neutral-reject' ? 'answer-neutral-aria' : 'answer-partly-aria', {
+          party: $t(`parties.${party.index}.name`),
+          answer: $t(`theses.${thesis.index}.positions.${party.alias}.explanation`),
+        })
+      "
     >
       <p
         class="
@@ -30,7 +32,7 @@
           <span class="block-inline text-sm bg-gray-500 text-white rounded-full p-2 pr-3">
             <icon class="mr-1" name="minus" />
             <span class="font-bold">
-              {{ $t('neutral') }}
+              {{ variant === 'accept-neutral-reject' ? $t('neutral') : $t('partly') }}
             </span>
           </span>
         </cite>
@@ -50,6 +52,11 @@ export default {
     thesis: {
       type: Object,
       required: true,
+    },
+  },
+  computed: {
+    variant() {
+      return this.$store.getters['options/variant'];
     },
   },
 };
@@ -81,11 +88,15 @@ export default {
 {
   "en": {
     "neutral": "neutral",
-    "answer-aria": "The party '{party}' remains neutral to this thesis, providing the following answer: {answer}"
+    "partly": "partly",
+    "answer-neutral-aria": "The party '{party}' remains neutral to this thesis, providing the following answer: {answer}",
+    "answer-partly-aria": "The party '{party}' supports this thesis partly, providing the following answer: {answer}"
   },
   "de": {
     "neutral": "neutral",
-    "answer-aria": "Die Partei '{party}' bleibt bei dieser These neutral, mit der folgenden Begründung: {answer}"
+    "partly": "teilweise",
+    "answer-neutral-aria": "Die Partei '{party}' bleibt bei dieser These neutral, mit der folgenden Begründung: {answer}",
+    "answer-partly-aria": "Die Partei '{party}' unterstützt diese These teilweise, mit der folgenden Begründung: {answer}"
   }
 }
 </i18n>
