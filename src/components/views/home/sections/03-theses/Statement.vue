@@ -53,7 +53,7 @@
       <span class="relative text-gray-300" aria-hidden="true">
         <span class="absolute" style="right:100%">{{ $t('quoteStart') }}</span>
       </span>
-      {{ $t(`theses.${index}.statement`) }}<span class="text-gray-300" aria-hidden="true">{{ $t('quoteEnd') }}</span><!-- eslint-disable-line max-len -->
+      <Definitions :text="$t(`theses.${index}.statement`)" /><span class="text-gray-300" aria-hidden="true">{{ $t('quoteEnd') }}</span><!-- eslint-disable-line max-len -->
     </h3>
     <template v-if="badge">
       <div
@@ -101,8 +101,13 @@
 </template>
 
 <script>
+import Definitions from '@/components/elements/Definitions.vue';
+
 export default {
   name: 'Statement',
+  components: {
+    Definitions,
+  },
   props: {
     index: {
       type: Number,
