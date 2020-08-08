@@ -47,8 +47,10 @@ export default {
       return {
         'bg-green-400 text-white border-green-600': this.type === 'approve' && this.active,
         'bg-gray-100 text-green-600 border-gray-300': this.type === 'approve' && !this.active,
-        'bg-gray-500 text-white border-gray-600': ['neutral', 'partly'].includes(this.type) && this.active,
-        'bg-gray-100 text-gray-600 border-gray-300': ['neutral', 'partly'].includes(this.type) && !this.active,
+        'bg-gray-500 text-white border-gray-600': this.type === 'neutral' && this.active,
+        'bg-gray-100 text-gray-600 border-gray-300': this.type === 'neutral' && !this.active,
+        'bg-yellow-500 text-white border-yellow-600': this.type === 'partly' && this.active,
+        'bg-gray-100 text-yellow-600 border-gray-300': this.type === 'partly' && !this.active,
         'bg-red-400 text-white border-red-600': this.type === 'reject' && this.active,
         'bg-gray-100 text-red-600 border-gray-300': this.type === 'reject' && !this.active,
       };
