@@ -1,3 +1,4 @@
+import i18n from '@/locales/i18n';
 import algorithms from './algorithms/index';
 
 export default {
@@ -35,7 +36,7 @@ export default {
     },
   },
   actions: {
-    activateAlgorithm({ getters, commit }, { algorithm, i18n }) {
+    activateAlgorithm({ getters, commit }, { algorithm }) {
       commit('setAlgorithm', algorithm);
       getters.algorithm.options.forEach((option) => {
         Object.keys(option.locales).forEach((locale) => {
