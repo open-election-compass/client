@@ -1,28 +1,22 @@
 <template>
   <button
-    @click="$emit('click', $event)"
-    class="
-      w-full text-left p-4 font-bold text-sm my-1
-      rounded border border-solid
-      transition shadow-md hover:shadow-lg duration-200
-      sm:text-base
-      md:text-center md:mx-2 md:my-0 md:text-lg
-      lg:text-xl
-    "
-    :class="classes"
-    :aria-label="$t(`${type}-aria`)"
+    :class="{
+      'vote-button': true,
+      'vote-button--active': active,
+      'vote-button--large-icons': largeIcons,
+    }"
+    :style="cssVariables"
+    :aria-label="$t(`algorithm.options.${alias}.button-aria`)"
     role="checkbox"
     :aria-checked="active"
+    @click="$emit('click', $event)"
   >
-    <icon v-if="type === 'approve'" name="check" />
-    <icon v-else-if="['neutral', 'partly'].includes(type)" name="minus" />
-    <icon v-else-if="type === 'reject'" name="times" />
-    <span class="
-      ml-4
-      md:block md:mt-2 md:ml-0
-    ">
-      {{ $t(type) }}
-    </span>
+    <icon class="vote-button__icon" :name="icon" />
+    <div class="vote-button__caption">
+      <span>
+        {{ $t(`algorithm.options.${alias}.button`) }}
+      </span>
+    </div>
   </button>
 </template>
 
@@ -30,12 +24,25 @@
 export default {
   name: 'VoteButton',
   props: {
-    type: {
+    alias: {
       type: String,
       required: true,
-      validator(value) {
-        return ['approve', 'neutral', 'partly', 'reject'].includes(value);
-      },
+    },
+    icon: {
+      type: String,
+      required: true,
+    },
+    baseColor: {
+      type: String,
+      required: true,
+    },
+    contrastColor: {
+      type: String,
+      required: true,
+    },
+    darkerColor: {
+      type: String,
+      required: true,
     },
     active: {
       type: Boolean,
@@ -43,43 +50,97 @@ export default {
     },
   },
   computed: {
-    classes() {
+    largeIcons() { return this.$store.getters['algorithm/algorithm'].options.length > 3; },
+    cssVariables() {
       return {
-        'bg-green-400 text-white border-green-600': this.type === 'approve' && this.active,
-        'bg-gray-100 text-green-600 border-gray-300': this.type === 'approve' && !this.active,
-        'bg-gray-500 text-white border-gray-600': this.type === 'neutral' && this.active,
-        'bg-gray-100 text-gray-600 border-gray-300': this.type === 'neutral' && !this.active,
-        'bg-yellow-500 text-white border-yellow-600': this.type === 'partly' && this.active,
-        'bg-gray-100 text-yellow-600 border-gray-300': this.type === 'partly' && !this.active,
-        'bg-red-400 text-white border-red-600': this.type === 'reject' && this.active,
-        'bg-gray-100 text-red-600 border-gray-300': this.type === 'reject' && !this.active,
+        '--darker-color': this.darkerColor,
+        '--base-color': this.baseColor,
+        '--contrast-color': this.contrastColor,
       };
     },
   },
 };
 </script>
 
-<i18n>
-{
-  "en": {
-    "approve": "Approve",
-    "approve-aria": "Approve – click here to approve this thesis!",
-    "neutral": "Neutral",
-    "neutral-aria": "Neutral – click here to remain neutral regarding this thesis!",
-    "partly": "Partly",
-    "partly-aria": "Partly – click here to agree partly with this thesis!",
-    "reject": "Reject",
-    "reject-aria": "Reject – click here to reject this thesis!"
-  },
-  "de": {
-    "approve": "Zustimmung",
-    "approve-aria": "Zustimmung – klicke hier, um dieser These zuzustimmen!",
-    "neutral": "Neutral",
-    "neutral-aria": "Neutral – klicke hier, um bei dieser These neutral zu bleiben!",
-    "partly": "Teilweise",
-    "partly-aria": "Teilweise – klicke hier, um dieser These teilweise zuzustimmen!",
-    "reject": "Ablehnung",
-    "reject-aria": "Ablehnung – klicke hier, um diese These abzulehnen!"
+<style lang="scss">
+@import '@/styles/core';
+
+.vote-button {
+  width: 100%;
+  text-align: left;
+  padding: 1.25em;
+  font-weight: bold;
+  font-size: 0.875em;
+  margin: 0.25em 0;
+  line-height: 1;
+  border: 1px solid $theme-neutral-border;
+  transition-property: background-color, border-color, color, opacity, box-shadow;
+  transition-duration: 0.2s;
+  border-radius: $border-radius;
+  box-shadow: $shadow-normal;
+  color: var(--color);
+  background-color: $theme-neutral-background;
+  color: var(--darker-color);
+  &:hover {
+    box-shadow: $shadow-hover;
+  }
+  &:focus {
+    box-shadow: $shadow-focus;
+  }
+  &.vote-button--active {
+    background-color: var(--base-color);
+    color: var(--contrast-color);
+    border-color: var(--darker-color);
+  }
+  @media (min-width: 40em) {
+    font-size: 1em;
+  }
+  @media (min-width: 48em) {
+    text-align: center;
+    margin: 0 0.5em;
+    font-size: 1.125em;
+    flex: 1 1 0%;
+  }
+  @media (min-width: 64em) {
+    font-size: 1.25em;
   }
 }
-</i18n>
+
+.vote-button__icon {
+  @media (min-width: 48em) {
+    margin-bottom: 0.25em;
+  }
+}
+
+@media (min-width: 48em) {
+  .vote-button--large-icons {
+    .vote-button__icon {
+      font-size: 1.875em;
+    }
+    .vote-button__caption {
+      font-size: 0.875em;
+      min-height: 2em;
+    }
+  }
+}
+
+@media (min-width: 64em) {
+  .vote-button--large-icons {
+    .vote-button__icon {
+      font-size: 2.25em;
+    }
+  }
+}
+
+.vote-button__caption {
+  display: inline-block;
+  margin-left: 1em;
+  @media (min-width: 48em) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0.5em 0 0 0;
+  }
+}
+</style>

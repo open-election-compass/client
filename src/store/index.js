@@ -1,6 +1,7 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
 
+import algorithm from './modules/algorithm/algorithm';
 import footerLinks from './modules/footerLinks/footerLinks';
 import languages from './modules/languages/languages';
 import options from './modules/options/options';
@@ -12,6 +13,7 @@ Vue.use(Vuex);
 
 export default new Vuex.Store({
   modules: {
+    algorithm,
     footerLinks,
     languages,
     options,

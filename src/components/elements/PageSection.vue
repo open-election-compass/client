@@ -9,6 +9,7 @@
         container max-w-2xl mx-auto
         sm:max-w-3xl
         lg:max-w-4xl
+        xl:max-w-5xl
       "
       :class="containerClasses"
     >

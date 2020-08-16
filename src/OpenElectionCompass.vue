@@ -145,8 +145,11 @@ export default {
         this.$store.commit('languages/activateLanguage', { code: this.language });
       }
 
-      // Read options
-      this.$store.commit('options/setAlgorithmAndVariant', _get(content, 'algorithm', 'cityblock/accept-neutral-reject'));
+      // Set up algorithm
+      this.$store.dispatch('algorithm/activateAlgorithm', {
+        algorithm: _get(content, 'algorithm', 'cityblock/approve-neutral-reject'),
+        i18n: this.$i18n,
+      });
 
       // Extract translations from content
       const translations = {};

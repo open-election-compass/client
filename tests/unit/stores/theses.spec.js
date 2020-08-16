@@ -3,6 +3,9 @@ import VuexThesesModule from '@/store/modules/theses/theses';
 const state = {
   theses: [],
 };
+const rootGetters = {
+  'algorithm/highestPoint': 2,
+};
 
 describe('Theses Store', () => {
   it('calculates the maximum points', () => {
@@ -12,7 +15,7 @@ describe('Theses Store', () => {
       { status: null, factor: 1 }, // 0
       { status: null, factor: 2 }, // 0
     ];
-    expect(VuexThesesModule.getters.maxPoints(state)).toBe(0);
+    expect(VuexThesesModule.getters.maxPoints(state, {}, {}, rootGetters)).toBe(0);
 
     // Theses with status `skip`
     state.theses = [
@@ -20,7 +23,7 @@ describe('Theses Store', () => {
       { status: 'skip', factor: 2 }, // 0
       { status: null, factor: 2 }, // 0
     ];
-    expect(VuexThesesModule.getters.maxPoints(state)).toBe(0);
+    expect(VuexThesesModule.getters.maxPoints(state, {}, {}, rootGetters)).toBe(0);
 
     // Theses with status `approve`
     state.theses = [
@@ -28,7 +31,7 @@ describe('Theses Store', () => {
       { status: 'approve', factor: 1 }, // 2
       { status: 'skip', factor: 1 }, // 0
     ];
-    expect(VuexThesesModule.getters.maxPoints(state)).toBe(4);
+    expect(VuexThesesModule.getters.maxPoints(state, {}, {}, rootGetters)).toBe(4);
 
     // Theses with status `approve` and an important flag
     state.theses = [
@@ -36,7 +39,7 @@ describe('Theses Store', () => {
       { status: 'approve', factor: 2 }, // 4
       { status: 'skip', factor: 1 }, // 0
     ];
-    expect(VuexThesesModule.getters.maxPoints(state)).toBe(6);
+    expect(VuexThesesModule.getters.maxPoints(state, {}, {}, rootGetters)).toBe(6);
 
     // Theses with status `neutral`
     state.theses = [
@@ -44,7 +47,7 @@ describe('Theses Store', () => {
       { status: 'neutral', factor: 1 }, // 2
       { status: 'skip', factor: 1 }, // 0
     ];
-    expect(VuexThesesModule.getters.maxPoints(state)).toBe(4);
+    expect(VuexThesesModule.getters.maxPoints(state, {}, {}, rootGetters)).toBe(4);
 
     // Theses with status `neutral` and an important flag
     state.theses = [
@@ -52,7 +55,7 @@ describe('Theses Store', () => {
       { status: 'neutral', factor: 2 }, // 4
       { status: 'skip', factor: 1 }, // 0
     ];
-    expect(VuexThesesModule.getters.maxPoints(state)).toBe(6);
+    expect(VuexThesesModule.getters.maxPoints(state, {}, {}, rootGetters)).toBe(6);
 
     // Theses with status `reject`
     state.theses = [
@@ -60,7 +63,7 @@ describe('Theses Store', () => {
       { status: 'reject', factor: 1 }, // 2
       { status: 'skip', factor: 1 }, // 0
     ];
-    expect(VuexThesesModule.getters.maxPoints(state)).toBe(4);
+    expect(VuexThesesModule.getters.maxPoints(state, {}, {}, rootGetters)).toBe(4);
 
     // Theses with status `reject` and an important flag
     state.theses = [
@@ -68,7 +71,7 @@ describe('Theses Store', () => {
       { status: 'reject', factor: 2 }, // 4
       { status: 'skip', factor: 1 }, // 0
     ];
-    expect(VuexThesesModule.getters.maxPoints(state)).toBe(6);
+    expect(VuexThesesModule.getters.maxPoints(state, {}, {}, rootGetters)).toBe(6);
 
     // Theses with various statuses
     state.theses = [
@@ -80,7 +83,7 @@ describe('Theses Store', () => {
       { status: 'neutral', factor: 2 }, // 4
       { status: 'skip', factor: 1 }, // 0
     ];
-    expect(VuexThesesModule.getters.maxPoints(state)).toBe(16);
+    expect(VuexThesesModule.getters.maxPoints(state, {}, {}, rootGetters)).toBe(16);
   });
 
   it('counts theses marked as important', () => {

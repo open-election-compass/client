@@ -41,11 +41,9 @@
         md:text-4xl
         lg:text-5xl lg:max-w-3xl
       "
+      :style="status !== null && status !== 'skip' ? `color:${colors.base}` : ''"
       :class="{
         'text-primary': status === null || status === 'skip',
-        'text-green-400': status === 'approve',
-        'text-gray-500': status === 'neutral',
-        'text-red-400': status === 'reject',
         'line-through': status === 'skip',
       }"
       :aria-label="$t('statement-aria', { statement: $t(`theses.${index}.statement`) })"
@@ -65,19 +63,17 @@
             md:text-lg
           "
           :class="{
-            'bg-gray-500': status === null || status === 'skip' || status === 'neutral',
-            'bg-green-400': status === 'approve',
-            'bg-red-400': status === 'reject',
+            'bg-gray-500': status === null || status === 'skip',
           }"
-          :aria-label="$t(`badge.${statusVariant}-aria`)"
+          :style="
+            status !== null && status !== 'skip' ?
+            `background:${colors.base};color:${colors.contrast}` :
+            ''
+          "
+          :aria-label="badgeTextAria"
         >
-          <icon class="mr-2" :name="{
-            approve: 'check',
-            neutral: 'minus',
-            reject: 'times',
-            skip: 'circle',
-          }[status]" />
-          {{ $t(`badge.${statusVariant}`) }}
+          <icon class="mr-2" :name="option.icon" />
+          {{ badgeText }}
         </small>
       </div>
     </template>
@@ -116,9 +112,6 @@ export default {
     status: {
       type: String,
       default: null,
-      validator(value) {
-        return ['approve', 'reject', 'neutral', 'skip'].includes(value);
-      },
     },
     factor: {
       type: Number,
@@ -130,15 +123,38 @@ export default {
     },
   },
   computed: {
+    algorithm() {
+      return this.$store.getters['algorithm/algorithm'];
+    },
+    skipped() {
+      return this.status === null || this.status === 'skip';
+    },
+    option() {
+      if (this.skipped) {
+        return {
+          icon: 'question',
+          direction: 'neutral',
+        };
+      }
+      return this.algorithm.options.find((option) => option.alias === this.status);
+    },
+    colors() {
+      return this.algorithm.options.find((option) => option.alias === this.status).colors;
+    },
     total() {
       return this.$store.getters['theses/total'];
     },
-    statusVariant() {
-      const variant = this.$store.getters['options/variant'];
-      if (variant === 'accept-partly-reject' && this.status === 'neutral') {
-        return 'partly';
+    badgeText() {
+      if (this.skipped) {
+        return this.$t('badge.skip');
       }
-      return this.status;
+      return this.$t(`algorithm.options.${this.option.alias}.badge`);
+    },
+    badgeTextAria() {
+      if (this.skipped) {
+        return this.$t('badge.skip-aria');
+      }
+      return this.$t(`algorithm.options.${this.option.alias}.badge-aria`);
     },
   },
 };
@@ -152,14 +168,6 @@ export default {
     "quoteStart": "‘",
     "quoteEnd": "’",
     "badge": {
-      "approve": "You approved",
-      "approve-aria": "You approved this thesis.",
-      "reject": "You rejected",
-      "reject-aria": "You rejected this thesis.",
-      "neutral": "You we're neutral",
-      "neutral-aria": "You we're neutral regarding this thesis.",
-      "partly": "You agreed partly",
-      "partly-aria": "You agreed partly with this thesis.",
       "skip": "You skipped this",
       "skip-aria": "You skipped this thesis.",
       "important": "You marked this as important",
@@ -172,14 +180,6 @@ export default {
     "quoteStart": "„",
     "quoteEnd": "“",
     "badge": {
-      "approve": "Du hast zugestimmt",
-      "approve-aria": "Du hast dieser These zugestimmt.",
-      "reject": "Du hast abgelehnt",
-      "reject-aria": "Du hast diese These abgelehnt.",
-      "neutral": "Du warst neutral",
-      "neutral-aria": "Du warst zu dieser These neutral.",
-      "partly": "Du hast teilweise zugestimmt",
-      "partly-aria": "Du hast dieser These teilweise zugestimmt.",
       "skip": "Übersprungen",
       "skip-aria": "Du hast diese These übersprungen.",
       "important": "Von dir als wichtig markiert",

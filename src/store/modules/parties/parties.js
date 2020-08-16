@@ -18,9 +18,10 @@ export default {
     },
     results(state, { selectedParties }, rootState, rootGetters) {
       const theses = rootGetters['theses/theses'];
+      const algorithm = rootGetters['algorithm/algorithm'];
       const maxPoints = rootGetters['theses/maxPoints'];
       const results = selectedParties.map((party) => {
-        const points = calculatePointsForParty(party, theses);
+        const points = calculatePointsForParty(party, theses, algorithm);
         const percentage = (1 / maxPoints) * points;
         return { party, points, percentage };
       });

@@ -63,34 +63,17 @@
           md:flex-row md:mx-6 md:mb-8
         ">
           <vote-button
-            @click="clickVoteButton('approve')"
-            type="approve"
-            :active="status === 'approve'"
-            :data-test="`thesis-${index}-approve`"
-            tab-index="1"
-          />
-          <vote-button
-            v-if="variant === 'accept-neutral-reject'"
-            @click="clickVoteButton('neutral')"
-            type="neutral"
-            :active="status === 'neutral'"
-            :data-test="`thesis-${index}-neutral`"
-            tab-index="2"
-          />
-          <vote-button
-            v-if="variant === 'accept-partly-reject'"
-            @click="clickVoteButton('neutral')"
-            type="partly"
-            :active="status === 'neutral'"
-            :data-test="`thesis-${index}-neutral`"
-            tab-index="2"
-          />
-          <vote-button
-            @click="clickVoteButton('reject')"
-            type="reject"
-            :active="status === 'reject'"
-            :data-test="`thesis-${index}-reject`"
-            tab-index="3"
+            v-for="(option, index) in algorithm.options"
+            :key="option.alias"
+            @click="clickVoteButton(option.alias, option.direction)"
+            :alias="option.alias"
+            :icon="option.icon"
+            :base-color="option.colors.base"
+            :contrast-color="option.colors.contrast"
+            :darker-color="option.colors.darker"
+            :active="status === option.alias"
+            :data-test="`thesis-${index}-${option.alias}`"
+            tabindex="0"
           />
         </div>
 
@@ -100,13 +83,13 @@
             mx-8 mt-8 text-center
             md:mx-6 md:mt-12 lg:mt-24
           "
-          :class="status === 'neutral' || importantButtonDisabled ? 'opacity-25' : ''"
+          :class="status && direction === 'neutral' || importantButtonDisabled ? 'opacity-25' : ''"
         >
           <div class="inline-block">
             <tooltip
               class="tooltip"
               :content="$tc('too-many-important', maxImportant)"
-              :enabled="importantButtonDisabled && status !== 'neutral' && status !== 'skip'"
+              :enabled="importantButtonDisabled && direction !== 'neutral' && status !== 'skip'"
               :a11y="false"
               size="large"
               trigger="mouseenter focusin"
@@ -167,7 +150,7 @@ export default {
     },
   },
   methods: {
-    clickVoteButton(status) {
+    clickVoteButton(status, direction = null) {
       if (status === 'skip' && this.skipButtonDisabled) {
         // The skip-button is greyed out, so we're stopping here. Instead of doing this check
         // here, we could simply disable the button, but it would then no longer be able to
@@ -175,7 +158,7 @@ export default {
         // thesis being unreachable. This however is vital for screen readers.
         return;
       }
-      if (status === 'neutral' || status === 'skip') {
+      if (direction === 'neutral' || status === 'skip') {
         this.factor = 1;
       }
       this.status = status;
@@ -183,7 +166,7 @@ export default {
   },
   computed: {
     ...mapGetters({
-      variant: 'options/variant',
+      algorithm: 'algorithm/algorithm',
       total: 'theses/total',
       countSkip: 'theses/countSkip',
       maxSkip: 'theses/maxSkip',
@@ -212,7 +195,11 @@ export default {
         return this.$store.getters['theses/theses'][this.index].factor;
       },
       set(value) {
-        if (['neutral', 'skip'].includes(this.status) || this.importantButtonDisabled) {
+        if (
+          (this.status && this.direction === 'neutral')
+          || this.status === 'skip'
+          || this.importantButtonDisabled
+        ) {
           // The important-button is greyed out, so we're stopping here. Instead of doing this check
           // here, we could simply disable the checkbox of the important-button, but it would then
           // no longer be able to receive focus. This would lead to the tooltip explaining why the
@@ -225,6 +212,13 @@ export default {
           factor: value,
         });
       },
+    },
+    direction() {
+      const option = this.algorithm.options.find((item) => item.alias === this.status);
+      if (option !== undefined) {
+        return option.direction;
+      }
+      return 'neutral';
     },
     hasBeenActivated: {
       get() {

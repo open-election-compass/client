@@ -16,12 +16,13 @@ export default {
     completedTheses(state) {
       return state.theses.filter((thesis) => thesis.status === null);
     },
-    maxPoints(state) {
+    maxPoints(state, getters, rootState, rootGetters) {
+      const highestPoint = rootGetters['algorithm/highestPoint'];
       return state.theses.reduce((points, thesis) => {
         if (thesis.status === 'skip' || thesis.status === null) {
           return points;
         }
-        return points + 2 * thesis.factor;
+        return points + highestPoint * thesis.factor;
       }, 0);
     },
     countImportant(state) {

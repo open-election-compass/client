@@ -5,6 +5,11 @@ module.exports = {
       template: 'public/index.html',
       filename: 'index.html',
     },
+    'demo-kieskompas': {
+      entry: 'src/main.js',
+      template: 'public/demo-kieskompas.html',
+      filename: 'demo-kieskompas.html',
+    },
     'demo-luedenscheid': {
       entry: 'src/main.js',
       template: 'public/demo-luedenscheid.html',

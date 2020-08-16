@@ -2,6 +2,7 @@ import { createLocalVue } from '@vue/test-utils';
 import Vuex from 'vuex';
 import VuexPartiesModule from '@/store/modules/parties/parties';
 import calculatePointsForParty from '@/store/modules/parties/calculatePointsForParty';
+import cityBlockAlgorithm from '@/store/modules/algorithm/algorithms/cityblock/approve-neutral-reject.js';
 
 const localVue = createLocalVue();
 localVue.use(Vuex);
@@ -18,7 +19,7 @@ describe('Parties Store', () => {
       { status: 'approve', factor: 1, positions: { foo: null } }, // 0
       { status: null, factor: 1, positions: { foo: 'approve' } }, // 0
     ];
-    expect(calculatePointsForParty(party, theses)).toBe(0);
+    expect(calculatePointsForParty(party, theses, cityBlockAlgorithm)).toBe(0);
 
     // User position and party position are `skip`
     theses = [
@@ -27,7 +28,7 @@ describe('Parties Store', () => {
       { status: 'approve', factor: 1, positions: { foo: 'skip' } }, // 0
       { status: 'skip', factor: 1, positions: { foo: 'skip' } }, // 0
     ];
-    expect(calculatePointsForParty(party, theses)).toBe(0);
+    expect(calculatePointsForParty(party, theses, cityBlockAlgorithm)).toBe(0);
 
     // User position and party match exactly
     theses = [
@@ -35,7 +36,7 @@ describe('Parties Store', () => {
       { status: 'neutral', factor: 1, positions: { foo: 'neutral' } }, // 2
       { status: 'reject', factor: 1, positions: { foo: 'reject' } }, // 2
     ];
-    expect(calculatePointsForParty(party, theses)).toBe(6);
+    expect(calculatePointsForParty(party, theses, cityBlockAlgorithm)).toBe(6);
 
     // User position and party match exactly and theses are important
     theses = [
@@ -43,7 +44,7 @@ describe('Parties Store', () => {
       { status: 'neutral', factor: 2, positions: { foo: 'neutral' } }, // 4
       { status: 'reject', factor: 2, positions: { foo: 'reject' } }, // 4
     ];
-    expect(calculatePointsForParty(party, theses)).toBe(12);
+    expect(calculatePointsForParty(party, theses, cityBlockAlgorithm)).toBe(12);
 
     // User position and party are compatible
     theses = [
@@ -52,7 +53,7 @@ describe('Parties Store', () => {
       { status: 'reject', factor: 1, positions: { foo: 'neutral' } }, // 1
       { status: 'neutral', factor: 1, positions: { foo: 'reject' } }, // 1
     ];
-    expect(calculatePointsForParty(party, theses)).toBe(4);
+    expect(calculatePointsForParty(party, theses, cityBlockAlgorithm)).toBe(4);
 
     // User position and party are compatible and theses are important
     theses = [
@@ -61,21 +62,21 @@ describe('Parties Store', () => {
       { status: 'reject', factor: 2, positions: { foo: 'neutral' } }, // 2
       { status: 'neutral', factor: 2, positions: { foo: 'reject' } }, // 2
     ];
-    expect(calculatePointsForParty(party, theses)).toBe(8);
+    expect(calculatePointsForParty(party, theses, cityBlockAlgorithm)).toBe(8);
 
     // User position and party don't match at all
     theses = [
       { status: 'approve', factor: 1, positions: { foo: 'reject' } }, // 0
       { status: 'reject', factor: 1, positions: { foo: 'approve' } }, // 0
     ];
-    expect(calculatePointsForParty(party, theses)).toBe(0);
+    expect(calculatePointsForParty(party, theses, cityBlockAlgorithm)).toBe(0);
 
     // User position and party don't match at all and theses are important
     theses = [
       { status: 'approve', factor: 2, positions: { foo: 'reject' } }, // 0
       { status: 'reject', factor: 2, positions: { foo: 'approve' } }, // 0
     ];
-    expect(calculatePointsForParty(party, theses)).toBe(0);
+    expect(calculatePointsForParty(party, theses, cityBlockAlgorithm)).toBe(0);
 
     // Theses with various statuses
     theses = [
@@ -88,7 +89,7 @@ describe('Parties Store', () => {
       { status: 'neutral', factor: 2, positions: { foo: 'skip' } }, // 0
       { status: 'skip', factor: 1, positions: { foo: 'skip' } }, // 0
     ];
-    expect(calculatePointsForParty(party, theses)).toBe(10);
+    expect(calculatePointsForParty(party, theses, cityBlockAlgorithm)).toBe(10);
   });
 
   it('filters selected parties', () => {
@@ -128,6 +129,7 @@ describe('Parties Store', () => {
         { status: 'neutral', factor: 2, positions: { a: 'skip', b: 'approve' } }, // a 0, b 2
         { status: 'skip', factor: 1, positions: { a: 'skip', b: 'neutral' } }, // a 0, b 0
       ],
+      'algorithm/algorithm': cityBlockAlgorithm,
     };
 
     const matches = VuexPartiesModule.getters.results(state, getters, rootState, rootGetters);
