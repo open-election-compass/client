@@ -56,9 +56,10 @@ library.add(
 );
 
 export default {
-
   name: 'Icon',
-
+  components: {
+    FontAwesomeIcon,
+  },
   props: {
     name: {
       type: String,
@@ -72,10 +73,6 @@ export default {
       type: Boolean,
       default: false,
     },
-  },
-
-  components: {
-    FontAwesomeIcon,
   },
 };
 </script>

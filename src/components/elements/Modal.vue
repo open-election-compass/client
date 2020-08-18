@@ -5,8 +5,8 @@
       class="modal"
       :class="classes"
       role="dialog"
-      aria-labelledby="modal-title"
-      aria-describedby="modal-description"
+      aria-labelledby="modal__title"
+      aria-describedby="modal__description"
     >
       <div class="modal__wrapper">
         <div class="modal__overlay" @click="$emit('close')" />
@@ -51,8 +51,8 @@
 </template>
 
 <script lang="js">
-import BaseButton from './BaseButton.vue';
-import Icon from './Icon.vue';
+import BaseButton from '@/components/elements/BaseButton.vue';
+import Icon from '@/components/elements//Icon.vue';
 
 export default {
   name: 'Modal',
@@ -106,8 +106,8 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
-@import "../../styles/core.scss";
+<style lang="scss">
+@import "@/styles/core";
 
 .modal__wrapper {
   position: fixed;

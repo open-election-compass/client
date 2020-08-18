@@ -10,7 +10,7 @@
           class="guide-button__button"
           theme="positive"
           right="arrow-right"
-          size="big"
+          size="large"
           @click="goToActiveSection"
         >
           {{ $t(`elements.guide-button.${activeSection.message}`) }}

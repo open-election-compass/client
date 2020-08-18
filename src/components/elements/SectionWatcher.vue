@@ -197,7 +197,7 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 .scroll-watcher {
   overflow: hidden;
 }

@@ -7,32 +7,39 @@ export default {
       type: String,
       required: true,
     },
+    disabled: {
+      type: Boolean,
+      default: false,
+    },
   },
   render(createElement, { props }) {
     let nodes = props.text.split(/(\[.*\]<.*>)/);
     nodes = nodes.map((node) => {
       const matches = node.match(/\[(.*)\]<(.*)>/);
-      if (matches !== null) {
-        return createElement('span', {
-          class: 'definitions__expression',
-          attrs: {
-            content: `${matches[1]}: ${matches[2]}`,
-          },
-          directives: [
-            {
-              name: 'tooltip',
-              value: {
-                allowHTML: false,
-                distance: 10,
-                hideOnClick: false,
-                size: 'large',
-                theme: 'left',
-              },
-            },
-          ],
-        }, [matches[1]]);
+      if (props.disabled && matches !== null) {
+        return matches[1];
       }
-      return node;
+      if (matches === null) {
+        return node;
+      }
+      return createElement('span', {
+        class: 'definitions__expression',
+        attrs: {
+          content: `${matches[1]}: ${matches[2]}`,
+        },
+        directives: [
+          {
+            name: 'tooltip',
+            value: {
+              allowHTML: false,
+              distance: 10,
+              hideOnClick: false,
+              size: 'large',
+              theme: 'left',
+            },
+          },
+        ],
+      }, [matches[1]]);
     });
     return createElement('span', {
       class: 'definitions',

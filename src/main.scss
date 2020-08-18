@@ -1,20 +1,52 @@
-@tailwind base;
-@tailwind components;
+@import "styles/core";
+@import "styles/base";
+@import "styles/headings";
 
-@import "styles/headings.scss";
-@import "styles/buttons.scss";
+:root {
+	--theme-primary-color: #FFD01C;
 
-@tailwind utilities;
+	--shadow-normal: #{$shadow-normal};
+	--shadow-focus: #{$shadow-focus};
+	--shadow-hover: #{$shadow-hover};
 
-* {
-	-webkit-tap-highlight-color: transparent;
-}
+	--border-radius: #{$border-radius};
 
-button:focus, input:focus, .focusable-child:focus-within {
-	outline: none;
-	box-shadow: 0 0 0 3px theme('colors.gray.400');
-}
+	--theme-primary-background: #{$theme-primary-background};
+	--theme-primary-text: #{$theme-primary-text};
+	--theme-primary-border: #{$theme-primary-border};
 
-.tooltip * {
-	outline: none !important;
+	--theme-base-background: #{$theme-base-background};
+	--theme-base-text: #{$theme-base-text};
+	--theme-base-border: #{$theme-base-border};
+
+	--theme-positive-background: #{$theme-positive-background};
+	--theme-positive-text: #{$theme-positive-text};
+	--theme-positive-border: #{$theme-positive-border};
+
+	--theme-neutral-background: #{$theme-neutral-background};
+	--theme-neutral-text: #{$theme-neutral-text};
+	--theme-neutral-border: #{$theme-neutral-border};
+
+	--theme-negative-background: #{$theme-negative-background};
+	--theme-negative-text: #{$theme-negative-text};
+	--theme-negative-border: #{$theme-negative-border};
+
+	--theme-disabled-background: #{$theme-disabled-background};
+	--theme-disabled-text: #{$theme-disabled-text};
+	--theme-disabled-border: #{$theme-disabled-border};
+
+	--theme-gray-background: #{$theme-gray-background};
+	--theme-gray-text: #{$theme-gray-text};
+
+	--theme-white-background: #{$theme-white-background};
+	--theme-white-text: #{$theme-white-text};
+	--theme-white-border: #{$theme-white-border};
+
+	--theme-primary-dark-background: #{$theme-primary-dark-background};
+	--theme-primary-dark-text: #{$theme-primary-dark-text};
+	--theme-primary-dark-border: #{$theme-primary-dark-border};
+
+	--theme-dark-background: #{$theme-dark-background};
+	--theme-dark-text: #{$theme-dark-text};
+	--theme-dark-border: #{$theme-dark-border};
 }

@@ -1,59 +1,52 @@
 <template>
-  <footer role="contentinfo">
-    <page-section class="bg-gray-300 text-white" :padding="false">
-      <nav class="text-gray-600">
-        <ul class="
-          justify-center -mx-4
-          md:flex
-        ">
+  <footer class="footer-section" role="contentinfo">
+    <PageSection class="footer-section__links" :padding="false">
+      <nav>
+        <ul>
           <li
             v-for="(link, index) in footerLinks"
             :key="index"
           >
-            <a
-              :href="$t(`footer-links.${index}.href`)"
-              class="p-4 block"
-            >
+            <a :href="$t(`footer-links.${index}.href`)">
               {{ $t(`footer-links.${index}.text`) }}
             </a>
           </li>
         </ul>
       </nav>
-    </page-section>
-    <page-section class="bg-gray-800">
-      <div class="max-w-xs mx-auto">
-        <div class="sm:flex items-center">
-          <open-election-compass-logo
-            width="50px"
-            color="#718096"
-            class="
-              flex-none mb-6 mx-auto
-              sm:m-0 sm:mr-8
-            "
-          />
-          <i18n
-            class="
-              text-sm font-bold text-medium text-gray-600 text-center
-              sm:text-left
-            "
-            path="explanation"
-            tag="p"
-            for="oec"
-          >
-            <a
-              href="https://open-election-compass.com"
-              target="_blank"
-              class="underline"
-            >{{ $t('oec') }}</a>
-          </i18n>
-        </div>
+    </PageSection>
+    <PageSection class="footer-section__open-source">
+      <div class="footer-section__project">
+        <OpenElectionCompassLogo
+          class="footer-section__logo"
+          width="50px"
+          color="#718096"
+        />
+        <i18n
+          class="footer-section__project-link"
+          path="explanation"
+          tag="p"
+          for="oec"
+        >
+          <a
+            href="https://open-election-compass.com"
+            target="_blank"
+          >{{ $t('oec') }}</a>
+        </i18n>
       </div>
-    </page-section>
+    </PageSection>
   </footer>
 </template>
 
 <script>
+import OpenElectionCompassLogo from '@/components/elements/OpenElectionCompassLogo.vue';
+import PageSection from '@/components/elements/PageSection.vue';
+
 export default {
+  name: 'FooterSection',
+  components: {
+    PageSection,
+    OpenElectionCompassLogo,
+  },
   computed: {
     footerLinks() {
       return this.$store.getters['footerLinks/links'];
@@ -76,3 +69,57 @@ export default {
 }
 </i18n>
 <!-- eslint-enable max-len -->
+
+<style lang="scss">
+.footer-section__links {
+  background-color: #e2e8f0;
+  color: #fff;
+  nav {
+    color: #718096;
+  }
+  ul {
+    @media (min-width: 48em) {
+      display: flex;
+      justify-content: center;
+    }
+  }
+  a {
+    padding: 1em;
+    display: block;
+  }
+}
+
+.footer-section__open-source {
+  background-color: #2d3748;
+}
+
+.footer-section__logo {
+  flex: none;
+  margin: 0 auto 1.5em auto;
+  @media (min-width: 40em) {
+    margin: 0 2em 0 0;
+  }
+}
+
+.footer-section__project {
+  max-width: 20em;
+  margin: 0 auto;
+  @media (min-width: 40em) {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.footer-section__project-link {
+  font-size: 0.875em;
+  font-weight: bold;
+  color: #718096;
+  text-align: center;
+  @media (min-width: 40em) {
+    text-align: left;
+  }
+  a {
+    text-decoration: underline;
+  }
+}
+</style>

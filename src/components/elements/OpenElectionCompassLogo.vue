@@ -1,5 +1,12 @@
 <template>
-  <svg :width="width" viewBox="0 0 1000 1200" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" :alt="$t('alt')">
+  <svg
+    :width="width"
+    viewBox="0 0 1000 1200"
+    version="1.1"
+    xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink"
+    :alt="$t('alt')"
+  >
     <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
       <path
         d="

@@ -1,34 +1,33 @@
 <template>
-  <header
-    class="container mx-auto p-8 flex flex-col h-screen content-center justify-center"
+  <PageSection
+    tag="header"
+    class="start-section"
     data-section="start"
+    full
     role="banner"
     :aria-roledescription="$t('banner-aria')"
   >
     <!-- wrapping div needed for IE11 -->
-    <div class="self-center flex-initial">
-      <open-election-compass-logo />
+    <div class="start-section__logo">
+      <OpenElectionCompassLogo width="1em" />
     </div>
-    <!-- `self-center` needed for IE11 -->
-    <h1 class="
-      self-center text-2xl leading-tight text-center max-w-4xl mx-auto my-8
-      md:text-5xl md:my-16
-      lg:text-6xl
-    ">
+    <h1 class="start-section__heading">
       {{ $t('title') }}
     </h1>
-    <!-- `self-center` needed for IE11 -->
-    <p class="
-      self-center text-sm text-center text-gray-700
-      md:text-lg
-      lg:text-xl
-    ">{{ $t('subtitle') }}</p>
-  </header>
+    <p class="start-section__subtitle">{{ $t('subtitle') }}</p>
+  </PageSection>
 </template>
 
 <script>
+import OpenElectionCompassLogo from '@/components/elements/OpenElectionCompassLogo.vue';
+import PageSection from '@/components/elements/PageSection.vue';
+
 export default {
   name: 'StartSection',
+  components: {
+    OpenElectionCompassLogo,
+    PageSection,
+  },
 };
 </script>
 
@@ -42,3 +41,50 @@ export default {
   }
 }
 </i18n>
+
+<style lang="scss">
+.start-section {
+  text-align: center;
+}
+
+.start-section__logo {
+  display: inline-block;
+  font-size: 4em;
+  @media (min-width: 48em) {
+    font-size: 6em;
+  }
+}
+
+.start-section__heading {
+  // `align-self` needed for IE11
+  align-self: center;
+  font-size: 1.5em;
+  line-height: 1.25;
+  text-align: center;
+  max-width: 56em;
+  margin: 2em auto 1em;
+  @media (min-width: 38em) {
+    font-size: 2em;
+  }
+  @media (min-width: 48em) {
+    font-size: 3em;
+  }
+  @media (min-width: 64em) {
+    font-size: 4em;
+  }
+}
+
+.start-section__subtitle {
+  // `align-self` needed for IE11
+  align-self: center;
+  font-size: 0.875em;
+  text-align: center;
+  color: #999;
+  @media (min-width: 48em) {
+    font-size: 1.125em;
+  }
+  @media (min-width: 64em) {
+    font-size: 1.25em;
+  }
+}
+</style>

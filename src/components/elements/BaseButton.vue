@@ -31,7 +31,7 @@
 </template>
 
 <script lang="js">
-import Icon from './Icon.vue';
+import Icon from '@/components/elements/Icon.vue';
 
 export default {
   name: 'BaseButton',
@@ -57,13 +57,13 @@ export default {
       type: String,
       default: 'primary',
       validator: (value) => [
-        'primary', 'positive', 'neutral', 'negative', 'white', 'primary-dark',
+        'primary', 'positive', 'neutral', 'negative', 'white', 'primary-dark', 'transparent',
       ].includes(value),
     },
     size: {
       type: String,
       default: 'normal',
-      validator: (value) => ['small', 'normal', 'big'].includes(value),
+      validator: (value) => ['small', 'normal', 'large'].includes(value),
     },
     textAlign: {
       type: String,
@@ -115,8 +115,8 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
-@import '../../styles/core';
+<style lang="scss">
+@import '@/styles/core';
 
 .base-button {
   display: inline-block;
@@ -124,7 +124,6 @@ export default {
   border: 0;
   border-radius: $border-radius;
   box-shadow: $shadow-normal;
-  cursor: pointer;
   transition: all 0.2s ease-out;
   appearance: none;
 
@@ -159,6 +158,11 @@ export default {
   &.base-button--theme-primary-dark:disabled,
   &.base-button--theme-primary-dark.base-button--disabled {
     box-shadow: $shadow-normal !important;
+    cursor: default;
+    opacity: 0.35;
+  }
+  &.base-button--theme-transparent:disabled,
+  &.base-button--theme-transparent.base-button--disabled {
     cursor: default;
     opacity: 0.35;
   }
@@ -250,6 +254,22 @@ export default {
     border-color: lighten($theme-primary-dark-border, 10%);
   }
 
+  &.base-button--theme-transparent {
+    color: #4a5568;
+    background-color: transparent;
+    border: 1px solid transparent;
+    box-shadow: none;
+  }
+
+  &.base-button--theme-transparent:hover {
+    border-color: #D5D5D5;
+    box-shadow: $shadow-hover;
+  }
+
+  &.base-button--theme-transparent:focus {
+    box-shadow: $shadow-focus;
+  }
+
   &.base-button--size-small {
     padding: 0.75em 1em;
     font-size: 0.875em;
@@ -260,18 +280,22 @@ export default {
     font-size: 1.15em;
   }
 
-  &.base-button--size-big {
+  &.base-button--size-large {
     padding: 0.65em 0.875em;
     font-size: 1.15em;
   }
 
   @media screen and (min-width: 50rem) {
+    &.base-button--size-small {
+      font-size: 1em;
+    }
+
     &.base-button--size-normal {
       padding: 0.65em 0.875em;
       font-size: 1.25em;
     }
 
-    &.base-button--size-big {
+    &.base-button--size-large {
       padding: 0.875em 1.25em;
       font-size: 1.5em;
     }

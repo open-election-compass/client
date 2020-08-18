@@ -11,7 +11,7 @@
         {{ $t('menu') }}
       </span>
       <span class="main-navigation__toggle-icon">
-        <icon :name="active ? 'times' : 'bars'" monospace />
+        <Icon :name="active ? 'times' : 'bars'" monospace />
       </span>
     </button>
     <transition name="menu">
@@ -33,7 +33,7 @@
               <button class="main-navigation__group-toggle" @click="toggleGroup(group.alias)">
                 <span>{{ group.caption }}</span>
                 &nbsp;
-                <icon :name="!hiddenGroups.includes(group.alias) ? 'angle-down' : 'angle-up'" />
+                <Icon :name="!hiddenGroups.includes(group.alias) ? 'angle-down' : 'angle-up'" />
               </button>
               <ul v-if="!hiddenGroups.includes(group.alias)" class="main-navigation__links">
                 <li
@@ -55,7 +55,9 @@
                     @click="goToLink(link.to, $event)"
                   >
                     {{ link.caption }}
-                    <small v-if="link.description">{{ link.description }}</small>
+                    <small v-if="link.description">
+                      <Definitions :text="link.description" disabled />
+                    </small>
                   </BaseButton>
                   <BaseButton
                     v-else-if="link.event"
@@ -67,7 +69,9 @@
                     @click="$emit(link.event)"
                   >
                     {{ link.caption }}
-                    <small v-if="link.description">{{ link.description }}</small>
+                    <small v-if="link.description">
+                      <Definitions :text="link.description" disabled />
+                    </small>
                   </BaseButton>
                 </li>
               </ul>
@@ -88,19 +92,23 @@
 </template>
 
 <script>
-import BaseButton from './BaseButton.vue';
+import BaseButton from '@/components/elements/BaseButton.vue';
+import Definitions from '@/components/elements/Definitions.vue';
+import Icon from '@/components/elements/Icon.vue';
 
 export default {
   name: 'MainNavigation',
+  components: {
+    BaseButton,
+    Definitions,
+    Icon,
+  },
   data() {
     return {
       active: false,
       fullWidthMode: false,
       hiddenGroups: [],
     };
-  },
-  components: {
-    BaseButton,
   },
   mounted() {
     this.$watch('actualSection', () => {
@@ -303,162 +311,164 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
-  .main-navigation {
-    background-color: theme('colors.primary');
-  }
+<style lang="scss">
+.main-navigation {
+  background-color: var(--theme-primary-background);
+}
 
-  .main-navigation__site {
-    background-color: #FFF;
-  }
+.main-navigation__site {
+  background-color: #FFF;
+}
 
+.main-navigation__toggle {
+  position: fixed;
+  z-index: 301;
+  top: 1.5rem;
+  right: 0;
+  background-color: transparent;
+  &:hover, &:focus {
+    box-shadow: none;
+    .main-navigation__toggle-caption,
+    .main-navigation__toggle-icon {
+      background-color: var(--theme-primary-background);
+      color: var(--theme-primary-text);
+    }
+  }
+}
+
+.main-navigation__toggle-caption,
+.main-navigation__toggle-icon {
+  background-color: var(--theme-gray-background);
+  color: var(--theme-gray-text);
+  border-radius: 5px 0 0 5px;
+  display: inline-block;
+  transition: background-color 0.2s ease-out;
+}
+
+.main-navigation__toggle-caption {
+  padding: 1rem 2rem 1rem 1rem;
+  margin-right: -1rem;
+  font-weight: 700;
+  transition: all 0.2s ease-out;
+  display: none;
+}
+
+.main-navigation__toggle-icon {
+  padding: 1rem;
+  position: relative;
+  z-index: 2;
+}
+
+.main-navigation--active {
   .main-navigation__toggle {
-    position: fixed;
-    z-index: 301;
-    top: 1.5rem;
-    right: 0;
-    background-color: transparent;
+    .main-navigation__toggle-caption,
+    .main-navigation__toggle-icon {
+      background-color: var(--theme-primary-dark-background);
+      color: inherit;
+    }
+    .main-navigation__toggle-caption {
+      transform: translateX(6rem);
+      opacity: 0;
+      pointer-events: none;
+    }
     &:hover, &:focus {
-      box-shadow: none;
       .main-navigation__toggle-caption,
       .main-navigation__toggle-icon {
-        background-color: theme('colors.primary');
+        background-color: #FFF;
       }
     }
   }
+}
 
-  .main-navigation__toggle-caption,
-  .main-navigation__toggle-icon {
-    background-color: theme('colors.gray.400');
-    border-radius: 5px 0 0 5px;
-    display: inline-block;
-    transition: background-color 0.2s ease-out;
+.main-navigation__menu {
+  background-color: var(--theme-primary-background);
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow-y: auto;
+  z-index: 300;
+}
+
+.main-navigation__links {
+  padding: 0.5rem 1rem 20px 1rem; // 20px to leave space for the link's box-shadow
+}
+
+button.main-navigation__group-toggle {
+  font-size: 1.5rem;
+  box-sizing: border-box;
+  background-color: var(--theme-primary-background);
+  width: 100%;
+  text-align: left;
+  color: var(--theme-primary-text);
+  padding: 2rem 2rem 2rem 2rem;
+  display: block;
+  position: sticky;
+  top: 0;
+  z-index: 3;
+  &:focus {
+    box-shadow: none;
+    span {
+      text-decoration: underline;
+    }
+  }
+}
+
+.main-navigation__item {
+  & + & {
+    margin-top: 1rem;
+  }
+  &.main-navigation__item--active {
+    .main-navigation__link,
+    .main-navigation__action {
+      transform: scale(1.025);
+    }
+  }
+}
+
+.main-navigation__link,
+.main-navigation__action {
+  width: 100%;
+}
+
+.menu-enter, .menu-leave-to {
+  transform: translateX(40rem);
+}
+
+.menu-enter-active {
+  transition: transform 0.3s ease-out;
+}
+
+.menu-leave-active {
+  transition: transform 0.2s ease-out;
+}
+
+@media (min-width: 40rem) {
+  .main-navigation__menu {
+    left: auto;
+    background-color: var(--theme-primary-background);
+    padding: 0 2rem 4rem 2rem;
+    width: 32rem;
+    border-radius: 1.5rem 0 0 1.5rem;
+    box-shadow: 0 0 4rem 0 rgba(#555, 0.25);
   }
 
   .main-navigation__toggle-caption {
-    padding: 1rem 2rem 1rem 1rem;
-    margin-right: -1rem;
-    font-weight: 700;
-    transition: all 0.2s ease-out;
-    display: none;
-  }
-
-  .main-navigation__toggle-icon {
-    padding: 1rem;
-    position: relative;
-    z-index: 2;
-  }
-
-  .main-navigation--active {
-    .main-navigation__toggle {
-      .main-navigation__toggle-caption,
-      .main-navigation__toggle-icon {
-        background-color: theme('colors.yellow.600');
-        color: inherit;
-      }
-      .main-navigation__toggle-caption {
-        transform: translateX(6rem);
-        opacity: 0;
-        pointer-events: none;
-      }
-      &:hover, &:focus {
-        .main-navigation__toggle-caption,
-        .main-navigation__toggle-icon {
-          background-color: #FFF;
-        }
-      }
-    }
-  }
-
-  .main-navigation__menu {
-    background-color: theme('colors.primary');
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    overflow-y: auto;
-    z-index: 300;
-  }
-
-  .main-navigation__links {
-    padding: 0.5rem 1rem 20px 1rem; // 20px to leave space for the link's box-shadow
+    display: inline-block;
   }
 
   button.main-navigation__group-toggle {
-    font-size: 1.5rem;
-    box-sizing: border-box;
-    background-color: theme('colors.primary');
-    width: 100%;
-    text-align: left;
-    color: theme('colors.yellow.800');
-    padding: 2rem 2rem 2rem 2rem;
-    display: block;
-    position: sticky;
-    top: 0;
-    z-index: 3;
-    &:focus {
-      box-shadow: none;
-      span {
-        text-decoration: underline;
-      }
-    }
+    padding: 3rem 1rem 1rem 1rem;
   }
 
-  .main-navigation__item {
-    & + & {
-      margin-top: 1rem;
-    }
-    &.main-navigation__item--active {
-      .main-navigation__link,
-      .main-navigation__action {
-        transform: scale(1.025);
-      }
+  .main-navigation__item.main-navigation__item--active {
+    .main-navigation__link,
+    .main-navigation__action {
+      transform: scale(1.05);
     }
   }
-
-  .main-navigation__link,
-  .main-navigation__action {
-    width: 100%;
-  }
-
-  .menu-enter, .menu-leave-to {
-    transform: translateX(40rem);
-  }
-
-  .menu-enter-active {
-    transition: transform 0.3s ease-out;
-  }
-
-  .menu-leave-active {
-    transition: transform 0.2s ease-out;
-  }
-
-  @media (min-width: 40rem) {
-    .main-navigation__menu {
-      left: auto;
-      background-color: theme('colors.primary');
-      padding: 0 2rem 4rem 2rem;
-      width: 32rem;
-      border-radius: 1.5rem 0 0 1.5rem;
-      box-shadow: 0 0 4rem 0 rgba(#555, 0.25);
-    }
-
-    .main-navigation__toggle-caption {
-      display: inline-block;
-    }
-
-    button.main-navigation__group-toggle {
-      padding: 3rem 1rem 1rem 1rem;
-    }
-
-    .main-navigation__item.main-navigation__item--active {
-      .main-navigation__link,
-      .main-navigation__action {
-        transform: scale(1.05);
-      }
-    }
-  }
+}
 </style>
 
 <i18n>

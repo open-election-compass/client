@@ -3,10 +3,6 @@ import Vuex from 'vuex';
 import VScrollLock from 'v-scroll-lock';
 import smoothscroll from 'smoothscroll-polyfill';
 import VueTippy, { TippyComponent } from 'vue-tippy';
-import Icon from '@/components/elements/Icon.vue';
-import OpenElectionCompassLogo from '@/components/elements/OpenElectionCompassLogo.vue';
-import PageSection from '@/components/elements/PageSection.vue';
-import ShowMore from '@/components/elements/ShowMore.vue';
 import OpenElectionCompass from './OpenElectionCompass.vue';
 import i18n from './locales/i18n';
 import store from './store/index';
@@ -27,10 +23,6 @@ Vue.use(VueTippy, {
 Vue.component('tooltip', TippyComponent);
 
 Vue.component('open-election-compass', OpenElectionCompass);
-Vue.component('icon', Icon);
-Vue.component('open-election-compass-logo', OpenElectionCompassLogo);
-Vue.component('page-section', PageSection);
-Vue.component('show-more', ShowMore);
 
 new Vue({
   store,

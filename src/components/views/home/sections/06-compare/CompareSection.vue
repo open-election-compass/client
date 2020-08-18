@@ -1,50 +1,20 @@
 <template>
-  <div>
-    <page-section class="bg-white" data-section="compare">
-      <h2 class="text-primary">{{ $t('heading') }}</h2>
-      <p>
-        {{ $t('explanation') }}
-      </p>
-      <aside
-        v-if="$store.getters['options/kioskMode']"
-        class="
-          bg-gray-200 rounded p-4 mt-8 text-center
-          md:p-6 md:text-lg
-          lg:p-8
-        "
-      >
-        <div class="
-          text-lg text-center
-          md:text-xl
-          lg:text-3xl
-        ">
-          <Icon name="undo" class="gray-500" />
-        </div>
-        <strong class="block my-4 md:text-xl lg:text-2xl">
-          {{ $t('kiosk.heading') }}
-        </strong>
-        <p>{{ $t('kiosk.explanation') }}</p>
-        <BaseButton
-          class="mt-4 md:mt-6"
-          theme="negative"
-          left="undo"
-          size="small"
-          @click="$root.$emit('reset', { seconds: 15 })"
-        >
-          {{ $t('kiosk.reset') }}
-        </BaseButton>
-      </aside>
-    </page-section>
-    <page-section
+  <div class="compare-section">
+    <PageSection class="compare-section__introduction" data-section="compare">
+      <h2 class="compare-section__heading">{{ $t('heading') }}</h2>
+      <p>{{ $t('explanation') }}</p>
+      <KioskModeHint v-if="kioskMode" />
+    </PageSection>
+    <PageSection
       v-for="(thesis) in theses"
       :key="thesis.index"
-      class="border-t-2 border-gray-300"
+      class="compare-section__theses"
       role="region"
       :data-section="`compare-thesis-${thesis.index}`"
       :aria-label="$t('region-aria', { count: thesis.index + 1, total })"
       :id="`compare-thesis-${thesis.index}`"
     >
-      <statement
+      <Statement
         :index="thesis.index"
         :status="getStatus(thesis.index)"
         :factor="thesis.factor"
@@ -53,45 +23,43 @@
       <template
         v-for="result in results"
       >
-        <answer
+        <Answer
           :key="`${thesis.index}-${result.party.index}`"
           :party="result.party"
           :thesis="thesis"
         />
       </template>
-    </page-section>
+    </PageSection>
   </div>
 </template>
 
 <script>
-import Answer from './Answer.vue';
-import BaseButton from '../../../../elements/BaseButton.vue';
-import Icon from '../../../../elements/Icon.vue';
-import Statement from '../03-theses/Statement.vue';
+import { mapGetters } from 'vuex';
+import Answer from '@/components/views/home/sections/06-compare/Answer.vue';
+import KioskModeHint from '@/components/views/home/sections/06-compare/KioskModeHint.vue';
+import PageSection from '@/components/elements/PageSection.vue';
+import Statement from '@/components/views/home/sections/03-theses/Statement.vue';
 
 export default {
   name: 'CompareSection',
+  components: {
+    Answer,
+    KioskModeHint,
+    PageSection,
+    Statement,
+  },
   computed: {
-    theses() {
-      return this.$store.getters['theses/theses'];
-    },
-    total() {
-      return this.$store.getters['theses/total'];
-    },
-    results() {
-      return this.$store.getters['parties/results'];
-    },
+    ...mapGetters({
+      kioskMode: 'options/kioskMode',
+      theses: 'theses/theses',
+      total: 'theses/total',
+      results: 'parties/results',
+    }),
   },
   methods: {
     getStatus(index) {
       return this.$store.getters['theses/theses'][index].status;
     },
-  },
-  components: {
-    Answer,
-    BaseButton,
-    Icon,
-    Statement,
   },
 };
 </script>
@@ -102,23 +70,28 @@ export default {
   "en": {
     "heading": "Their answers",
     "explanation": "The parties typically provide statements for every thesis to explain their reasoning. It is not always obvious why a party asumes a certain position so it is recommended to read this statements or the respective election manifestos.",
-    "region-aria": "Thesis {count} of {total}",
-    "kiosk": {
-      "heading": "Please reset when you're done",
-      "explanation": "Take your time reading and comparing the answers statements below. When you're done, you can reset the election compass here for the next person. This will also delete your own answers. Hint: you can also find a reset button in the menu. Thank you!",
-      "reset": "Reset"
-    }
+    "region-aria": "Thesis {count} of {total}"
   },
   "de": {
     "heading": "Die Antworten",
     "explanation": "Die Parteien stellen üblicherweise eine Erklärung zu jeder Entscheidung bereit. Da es nicht immer offensichtlich ist, warum eine Partei eine bestimmte Position vertritt, empfiehlt es sich, diese Erklärungen oder die jeweiligen Wahlprogramme zu lesen.",
-    "region-aria": "These {count} von {total}",
-    "kiosk": {
-      "heading": "Bitte setz mich zurück, wenn du fertig bist",
-      "explanation": "Lies und vergleiche die Erklärungen unterhalb in Ruhe. Wenn du fertig bist, kannst du den Wahlkompass hier für die nächste Person zurücksetzen. Dadurch werden auch deine eigenen Antworten gelöscht. Tipp: Du findest diese Option auch im Menü. Vielen Dank!",
-      "reset": "Zurücksetzen"
-    }
+    "region-aria": "These {count} von {total}"
   }
 }
 </i18n>
 <!-- eslint-enable max-len -->
+
+<style lang="scss">
+.compare-section__introduction {
+  background-color: #fff;
+  border-bottom: 2px solid var(--theme-neutral-background);
+}
+
+.compare-section__heading {
+  color: var(--theme-primary-color);
+}
+
+.compare-section__theses + .compare-section__theses {
+  border-top: 2px solid var(--theme-neutral-background);
+}
+</style>

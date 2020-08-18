@@ -28,18 +28,18 @@
 </template>
 
 <script>
-import LanguageSwitch from '../../elements/LanguageSwitch.vue';
-import MainNavigation from '../../elements/MainNavigation.vue';
-import SectionWatcher from '../../elements/SectionWatcher.vue';
-import StartSection from './sections/01-start/StartSection.vue';
-import IntroductionSection from './sections/02-introduction/IntroductionSection.vue';
-import ThesesSection from './sections/03-theses/ThesesSection.vue';
-import PartySection from './sections/04-party/PartySection.vue';
-import MatchSection from './sections/05-match/MatchSection.vue';
-import CompareSection from './sections/06-compare/CompareSection.vue';
-import FooterSection from './sections/07-footer/FooterSection.vue';
-import GuideButton from '../../elements/GuideButton.vue';
-import KioskMode from '../../elements/KioskMode.vue';
+import LanguageSwitch from '@/components/elements/LanguageSwitch.vue';
+import MainNavigation from '@/components/elements/MainNavigation.vue';
+import SectionWatcher from '@/components/elements/SectionWatcher.vue';
+import StartSection from '@/components/views/home/sections/01-start/StartSection.vue';
+import IntroductionSection from '@/components/views/home/sections/02-introduction/IntroductionSection.vue';
+import ThesesSection from '@/components/views/home/sections/03-theses/ThesesSection.vue';
+import PartySection from '@/components/views/home/sections/04-party/PartySection.vue';
+import MatchSection from '@/components/views/home/sections/05-match/MatchSection.vue';
+import CompareSection from '@/components/views/home/sections/06-compare/CompareSection.vue';
+import FooterSection from '@/components/views/home/sections/07-footer/FooterSection.vue';
+import GuideButton from '@/components/elements/GuideButton.vue';
+import KioskMode from '@/components/elements/KioskMode.vue';
 
 export default {
   name: 'Home',

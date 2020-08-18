@@ -1,29 +1,25 @@
 <template>
-  <!--
-    The additional flexbox is only needed for IE 11. Please remove earliest 2050 ;)
-    https://stackoverflow.com/questions/19371626/flexbox-not-centering-vertically-in-ie/33222765#33222765
-  -->
-  <div :class="this.full ? 'flex flex-col' : ''">
-    <div
-      class="
-        container max-w-2xl mx-auto
-        sm:max-w-3xl
-        lg:max-w-4xl
-        xl:max-w-5xl
-      "
-      :class="containerClasses"
-    >
-      <div :class="slotClasses">
+  <component :is="tag" :class="{
+    'page-section': true,
+    'page-section--full': full,
+    'page-section--padding': padding,
+  }">
+    <div class="page-section__container">
+      <div class="page-section__slot">
         <slot></slot>
       </div>
     </div>
-  </div>
+  </component>
 </template>
 
 <script>
 export default {
   name: 'PageSection',
   props: {
+    tag: {
+      type: String,
+      default: 'div',
+    },
     padding: {
       type: Boolean,
       default: true,
@@ -33,19 +29,47 @@ export default {
       default: false,
     },
   },
-  computed: {
-    containerClasses() {
-      return {
-        'p-8 sm:py-16 lg:py-24': this.padding,
-        'px-8': !this.padding,
-        'min-h-screen flex flex-col justify-center': this.full,
-      };
-    },
-    slotClasses() {
-      return {
-        'flex-initial': this.full,
-      };
-    },
-  },
 };
 </script>
+
+<style lang="scss">
+@import "@/styles/core";
+
+.page-section {
+  &.page-section--full {
+    display: flex;
+    flex-direction: column;
+    // The additional flexbox is only needed for IE 11. Please remove earliest 2050 ;)
+    // https://stackoverflow.com/questions/19371626/flexbox-not-centering-vertically-in-ie/33222765#33222765
+  }
+}
+
+.page-section__container {
+  max-width: 64em;
+  margin: 0 auto;
+}
+
+.page-section.page-section--full {
+  .page-section__container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .page-section__slot {
+    flex: 0 1 auto;
+  }
+}
+
+.page-section.page-section--padding {
+  .page-section__container {
+    padding: 2em;
+    @media (min-width: 40em) {
+      padding: 4em;
+    }
+    @media (min-width: 64em) {
+      padding: 6em;
+    }
+  }
+}
+</style>

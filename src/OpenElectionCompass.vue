@@ -4,8 +4,8 @@
       v-if="status === 'loading' || status === 'error'"
       class="loading"
     >
-      <icon v-if="status === 'loading'" name="slash" class="text-primary" spinning monospace />
-      <icon v-else-if="status === 'error'" name="times" class="text-red-500" monospace />
+      <Icon v-if="status === 'loading'" name="slash" class="text-primary" spinning monospace />
+      <Icon v-else-if="status === 'error'" name="times" class="text-red-500" monospace />
     </div>
     <Home v-else />
   </div>
@@ -17,12 +17,14 @@ import _forEach from 'lodash/forEach';
 import _get from 'lodash/get';
 import _set from 'lodash/set';
 import Home from '@/components/views/home/Home.vue';
+import Icon from '@/components/elements/Icon.vue';
 
 export default {
   name: 'OpenElectionCompass',
 
   components: {
     Home,
+    Icon,
   },
 
   data() {

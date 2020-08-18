@@ -11,7 +11,7 @@
     :aria-checked="active"
     @click="$emit('click', $event)"
   >
-    <icon class="vote-button__icon" :name="icon" />
+    <Icon class="vote-button__icon" :name="icon" />
     <div class="vote-button__caption">
       <span>
         {{ $t(`algorithm.options.${alias}.button`) }}
@@ -21,8 +21,13 @@
 </template>
 
 <script>
+import Icon from '@/components/elements/Icon.vue';
+
 export default {
   name: 'VoteButton',
+  components: {
+    Icon,
+  },
   props: {
     alias: {
       type: String,
@@ -76,9 +81,9 @@ export default {
   border: 1px solid $theme-neutral-border;
   transition-property: background-color, border-color, color, opacity, box-shadow;
   transition-duration: 0.2s;
+  transition-timing-function: ease-out;
   border-radius: $border-radius;
   box-shadow: $shadow-normal;
-  color: var(--color);
   background-color: $theme-neutral-background;
   color: var(--darker-color);
   &:hover {

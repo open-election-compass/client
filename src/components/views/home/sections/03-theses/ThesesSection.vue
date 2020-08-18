@@ -10,7 +10,7 @@
 </template>
 
 <script>
-import Thesis from './Thesis.vue';
+import Thesis from '@/components/views/home/sections/03-theses/Thesis.vue';
 
 export default {
   name: 'ThesesSection',

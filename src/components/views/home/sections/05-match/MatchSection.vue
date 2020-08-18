@@ -1,9 +1,9 @@
 <template>
-  <page-section class="bg-primary" full data-section="match">
-    <h2 class="text-white">
+  <PageSection class="match-section" full data-section="match">
+    <h2 class="match-section__heading">
       {{ $t('heading') }}
     </h2>
-    <p class="mb-10">
+    <p class="match-section__explanation">
       {{ $t('explanation') }}
     </p>
     <ul role="list">
@@ -12,33 +12,32 @@
         :key="party.alias"
         role="listitem"
       >
-        <match
+        <Match
           :party="party"
           :percentage="percentage"
         />
       </li>
     </ul>
-  </page-section>
+  </PageSection>
 </template>
 
 <script>
-import Match from './Match.vue';
+import { mapGetters } from 'vuex';
+import Match from '@/components/views/home/sections/05-match/Match.vue';
+import PageSection from '@/components/elements/PageSection.vue';
 
 export default {
   name: 'MatchSection',
-  computed: {
-    selectedParties() {
-      return this.$store.getters['parties/selectedParties'];
-    },
-    theses() {
-      return this.$store.getters['theses/theses'];
-    },
-    results() {
-      return this.$store.getters['parties/results'];
-    },
-  },
   components: {
     Match,
+    PageSection,
+  },
+  computed: {
+    ...mapGetters({
+      selectedParties: 'parties/selectedParties',
+      theses: 'theses/theses',
+      results: 'parties/results',
+    }),
   },
 };
 </script>
@@ -57,3 +56,17 @@ export default {
 }
 </i18n>
 <!-- eslint-enable max-len -->
+
+<style lang="scss">
+.match-section {
+  background-color: var(--theme-primary-color);
+}
+
+.match-section__heading {
+  color: #fff;
+}
+
+.match-section__explanation {
+  margin-bottom: 2.5em;
+}
+</style>

@@ -33,8 +33,8 @@
 </template>
 
 <script lang="js">
-import BaseButton from './BaseButton.vue';
-import Modal from './Modal.vue';
+import BaseButton from '@/components/elements/BaseButton.vue';
+import Modal from '@/components/elements/Modal.vue';
 
 export default {
   name: 'LanguageSwitch',
@@ -63,7 +63,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "../../styles/core.scss";
+@import "@/styles/core.scss";
 
 .language-switch__menu {
   list-style-type: none;

@@ -5,7 +5,7 @@
         class="bubble__bubble"
         aria-hidden="true"
       >
-        <show-more :text="content" :length="showMoreLimit" />
+        <ShowMore :text="content" :length="showMoreLimit" />
       </p>
       <footer class="bubble__footer" aria-hidden="true">
         <cite>
@@ -13,10 +13,13 @@
             {{ $t(`parties.${party.index}.short`) }}
           </span>
           <span class="bubble__status">
-            <icon :name="statusIcon" />
-            <span>
+            <Badge
+              :icon="statusIcon"
+              :background-color="statusBackgroundColor"
+              :text-color="statusTextColor"
+            >
               {{ statusText }}
-            </span>
+            </Badge>
           </span>
         </cite>
       </footer>
@@ -25,8 +28,15 @@
 </template>
 
 <script>
+import Badge from '@/components/views/home/sections/03-theses/Badge.vue';
+import ShowMore from '@/components/elements/ShowMore.vue';
+
 export default {
   name: 'Bubble',
+  components: {
+    Badge,
+    ShowMore,
+  },
   props: {
     party: {
       type: Object,
@@ -83,8 +93,6 @@ export default {
       return {
         '--bubble-background': this.backgroundColor,
         '--bubble-text': this.textColor,
-        '--bubble-status-background': this.statusBackgroundColor,
-        '--bubble-status-text': this.statusTextColor,
       };
     },
   },
@@ -180,59 +188,53 @@ export default {
 .bubble__footer {
   order: 1;
   flex: none;
+  text-align: center;
+  margin-bottom: 2em;
   cite {
     font-style: normal;
-    display: block;
-    margin-bottom: 2em;
-    text-align: center;
-    @media (min-width: 48em) {
-      font-size: 1.125em;
-    }
-    @media (min-width: 64em) {
-      font-size: 1.25em;
-    }
   }
-}
-
-@media (min-width: 64em) {
-  .bubble--positive .bubble__footer cite {
-    text-align: right;
-    padding: 1.5em 0;
-    margin-right: 3em;
-  }
-
-  .bubble--neutral .bubble__footer cite {
-    margin-bottom: rem;
-  }
-
-  .bubble--negative .bubble__footer {
-    order: 2;
-    cite {
-      text-align: left;
-      padding: 1.5em 0;
-      margin-left: 3em;
-    }
+  @media (min-width: 48em) {
+    margin-bottom: 2.5em;
   }
 }
 
 .bubble__party {
-  display: block;
   font-weight: bold;
+  display: block;
   margin-bottom: 0.5em;
+  padding: 0 0.25em;
+  @media (min-width: 48em) {
+    font-size: 1.125em;
+  }
+  @media (min-width: 64em) {
+    font-size: 1.25em;
+  }
 }
 
-.bubble__status {
-  display: inline-block;
-  font-size: 0.875em;
-  background-color: var(--bubble-status-background);
-  color: var(--bubble-status-text);
-  border-radius: 9999px;
-  padding: 0.5em 0.75em 0.5em 0.5em;
-  .icon {
-    margin-right: 0.25em;
+.bubble__status {}
+
+@media (min-width: 64em) {
+  .bubble--positive .bubble__footer {
+    margin-right: 3em;
+    margin-bottom: 0;
+    padding: 1.5em 0;
+    .bubble__party {
+      text-align: right;
+    }
   }
-  span {
-    font-weight: bold;
+
+  .bubble--neutral .bubble__footer {
+    margin-bottom: 3em;
+  }
+
+  .bubble--negative .bubble__footer {
+    order: 2;
+    margin-left: 3em;
+    margin-bottom: 0;
+    padding: 1.5em 0;
+    .bubble__party {
+      text-align: left;
+    }
   }
 }
 </style>

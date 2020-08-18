@@ -1,107 +1,73 @@
 <template>
-  <div>
+  <div
+    :class="{
+      statement: true,
+      'statement--status-empty': status === null,
+      'statement--status-skip': status === 'skip',
+    }"
+    :style="cssVariables"
+  >
     <!-- Counter and Title -->
-    <small
-      class="
-        text-sm block text-left mb-4
-        sm:pb-8 sm:text-base
-        lg:text-xl
-      "
-      v-if="$root.$te(`theses.${index}.title`)"
-    >
+    <small :class="{
+      'statement__caption': true,
+      'statement__caption--counter-only': !$root.$te(`theses.${index}.title`),
+    }">
       <span
-        class="font-bold text-black"
+        class="statement__counter"
         aria-hidden="true"
       >
         {{ $t('thesis', { count: index + 1, total }) }}
       </span>
-      <span class="text-gray-600">
+      <span v-if="$root.$te(`theses.${index}.title`)" class="statement__title">
         – {{ $t(`theses.${index}.title`) }}
       </span>
     </small>
 
-    <!-- Counter only -->
-    <small
-      class="
-        text-sm font-bold text-black block text-center mb-4
-        sm:pb-8 sm:text-base
-        lg:text-xl
-      "
-      aria-hidden="true"
-      v-else
-    >
-      {{ $t('thesis', { count: index + 1, total }) }}
-    </small>
-
     <!-- Statement -->
     <h3
-      class="
-        text-2xl leading-tight font-bold block transition duration-200
-        sm:text-3xl sm:max-w-2xl
-        md:text-4xl
-        lg:text-5xl lg:max-w-3xl
-      "
-      :style="status !== null && status !== 'skip' ? `color:${colors.base}` : ''"
-      :class="{
-        'text-primary': status === null || status === 'skip',
-        'line-through': status === 'skip',
-      }"
+      class="statement__thesis"
       :aria-label="$t('statement-aria', { statement: $t(`theses.${index}.statement`) })"
     >
-      <span class="relative text-gray-300" aria-hidden="true">
-        <span class="absolute" style="right:100%">{{ $t('quoteStart') }}</span>
+      <span class="statement__quote-start" aria-hidden="true">
+        <span>{{ $t('quoteStart') }}</span>
       </span>
-      <Definitions :text="$t(`theses.${index}.statement`)" /><span class="text-gray-300" aria-hidden="true">{{ $t('quoteEnd') }}</span><!-- eslint-disable-line max-len -->
+      <Definitions :text="$t(`theses.${index}.statement`)" /><span class="statement__quote-end" aria-hidden="true">{{ $t('quoteEnd') }}</span><!-- eslint-disable-line max-len -->
     </h3>
-    <template v-if="badge">
-      <div
-        class="block md:inline-block"
-      >
-        <small
-          class="
-            rounded-full inline-block py-2 pl-3 pr-4 text-white font-bold mt-8
-            md:text-lg
-          "
-          :class="{
-            'bg-gray-500': status === null || status === 'skip',
-          }"
-          :style="
-            status !== null && status !== 'skip' ?
-            `background:${colors.base};color:${colors.contrast}` :
-            ''
-          "
+
+    <!-- Badges -->
+    <div v-if="badge" class="statement__badges">
+      <template v-if="badge">
+        <Badge
+          :icon="option.icon"
+          :backgroundColor="colors.base"
+          :textColor="colors.contrast"
           :aria-label="badgeTextAria"
         >
-          <icon class="mr-2" :name="option.icon" />
           {{ badgeText }}
-        </small>
-      </div>
-    </template>
-    <template v-if="badge && factor > 1">
-      <div
-        class="block mt-2 md:inline-block md:ml-4 md:mt-0"
-      >
-        <small
-          class="
-            rounded-full inline-block py-2 pl-3 pr-4 text-white font-bold bg-primary
-            md:text-lg
-          "
+        </Badge>
+      </template>
+      <template v-if="badge && factor > 1">
+        <Badge
+          icon="exclamation-circle"
+          backgroundColor="#FFD01C"
+          textColor="#fff"
           :aria-label="$t(`badge.important-aria`)"
         >
-          <icon class="mr-2" name="exclamation-circle" />
           {{ $t(`badge.important`) }}
-        </small>
-      </div>
-    </template>
+        </Badge>
+      </template>
+    </div>
   </div>
 </template>
 
 <script>
+import Badge from '@/components/views/home/sections/03-theses/Badge.vue';
 import Definitions from '@/components/elements/Definitions.vue';
 
 export default {
   name: 'Statement',
   components: {
+    Badge,
     Definitions,
   },
   props: {
@@ -139,6 +105,12 @@ export default {
       return this.algorithm.options.find((option) => option.alias === this.status);
     },
     colors() {
+      if (this.skipped) {
+        return {
+          base: '#a0aec0',
+          contrast: '#fff',
+        };
+      }
       return this.algorithm.options.find((option) => option.alias === this.status).colors;
     },
     total() {
@@ -155,6 +127,12 @@ export default {
         return this.$t('badge.skip-aria');
       }
       return this.$t(`algorithm.options.${this.option.alias}.badge-aria`);
+    },
+    cssVariables() {
+      return {
+        '--base-color': this.colors.base,
+        '--base-contrast': this.colors.contrast,
+      };
     },
   },
 };
@@ -188,3 +166,77 @@ export default {
   }
 }
 </i18n>
+
+<style lang="scss">
+.statement__caption {
+  display: block;
+  text-align: left;
+  margin-bottom: 1em;
+  font-size: 0.875em;
+  &.statement__caption--counter-only {
+    text-align: center;
+  }
+  @media (min-width: 40em) {
+    padding-bottom: 2em;
+    font-size: 1em;
+  }
+  @media (min-width: 64em) {
+    font-size: 1.25em;
+  }
+}
+
+.statement__counter {
+  font-weight: bold;
+  color: var(--theme-primary-text);
+}
+
+.statement__title {
+  color: #777;
+}
+
+.statement__thesis {
+  color: var(--base-color);
+  font-size: 1.5em;
+  line-height: 1.25;
+  font-weight: bold;
+  display: block;
+  transition: color 0.2s ease-out;
+  @media (min-width: 40em) {
+    font-size: 1.875em;
+    max-width: 42rem;
+  }
+  @media (min-width: 48em) {
+    font-size: 2.25em;
+  }
+  @media (min-width: 64em) {
+    font-size: 3em;
+    max-width: 48em;
+  }
+}
+
+.statement.statement--status-empty, .statement.statement--status-skip {
+  .statement__thesis {
+    color: var(--theme-primary-color);
+  }
+}
+.statement.statement--status-skip .statement__thesis {
+  text-decoration: line-through;
+}
+
+.statement__quote-start {
+  position: relative;
+  color: #e2e8f0;
+  span {
+    position: absolute;
+    right:100%;
+  }
+}
+
+.statement__quote-end {
+  color: #e2e8f0;
+}
+
+.statement__badges {
+  margin-top: 2em;
+}
+</style>
