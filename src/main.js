@@ -3,6 +3,7 @@ import Vuex from 'vuex';
 import VScrollLock from 'v-scroll-lock';
 import smoothscroll from 'smoothscroll-polyfill';
 import VueTippy, { TippyComponent } from 'vue-tippy';
+import 'ie11-custom-properties';
 import OpenElectionCompass from './OpenElectionCompass.vue';
 import i18n from './locales/i18n';
 import store from './store/index';

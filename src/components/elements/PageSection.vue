@@ -39,6 +39,7 @@ export default {
   &.page-section--full {
     display: flex;
     flex-direction: column;
+    margin: 0 auto;
     // The additional flexbox is only needed for IE 11. Please remove earliest 2050 ;)
     // https://stackoverflow.com/questions/19371626/flexbox-not-centering-vertically-in-ie/33222765#33222765
   }
@@ -55,6 +56,7 @@ export default {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    width: 100%;
   }
   .page-section__slot {
     flex: 0 1 auto;

@@ -215,12 +215,15 @@ export default {
 }
 
 .thesis__skip {
-  display: flex;
-  justify-content: flex-end;
   margin-right: 2.25em;
   margin-bottom: 0.5em;
   @media (min-width: 48em) {
     margin-bottom: 1em;
+  }
+  button {
+    margin-left: auto;
+    display: block;
+    width: auto;
   }
 }
 
