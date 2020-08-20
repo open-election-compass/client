@@ -5,10 +5,10 @@ module.exports = {
       template: 'public/index.html',
       filename: 'index.html',
     },
-    'demo-kieskompas': {
+    'demo-hybrid': {
       entry: 'src/main.js',
-      template: 'public/demo-kieskompas.html',
-      filename: 'demo-kieskompas.html',
+      template: 'public/demo-hybrid.html',
+      filename: 'demo-hybrid.html',
     },
     'demo-luedenscheid': {
       entry: 'src/main.js',
