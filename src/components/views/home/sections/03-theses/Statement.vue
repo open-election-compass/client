@@ -210,7 +210,7 @@ export default {
   }
   @media (min-width: 64em) {
     font-size: 3em;
-    max-width: 48em;
+    max-width: 48rem;
   }
 }
 
