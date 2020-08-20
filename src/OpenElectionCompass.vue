@@ -2,12 +2,19 @@
   <div id="oec-wrapper">
     <div
       v-if="status === 'loading' || status === 'error'"
-      class="loading"
+      :class="{
+        'oec-wrapper__loading': true,
+        'oec-wrapper__loading--error': status === 'error',
+      }"
     >
-      <Icon v-if="status === 'loading'" name="slash" class="text-primary" spinning monospace />
-      <Icon v-else-if="status === 'error'" name="times" class="text-red-500" monospace />
+      <div class="oec-wrapper__loading-icon">
+        <Icon v-if="status === 'loading'" name="slash" spinning monospace />
+        <Icon v-else-if="status === 'error'" name="times" monospace />
+      </div>
     </div>
-    <Home v-else />
+    <div v-else class="oec-wrapper__page">
+      <Home />
+    </div>
   </div>
 </template>
 
@@ -271,18 +278,23 @@ export default {
       #FFF 100%
     );
   }
-  & > div {
-    position: relative;
-    z-index: 1;
-  }
+}
+
+.oec-wrapper__page {
+  position: relative;
+  z-index: 1;
 }
 </style>
 
 <style lang="scss" scoped>
-.loading {
+.oec-wrapper__loading {
+  background: #fff;
   position: fixed;
-  top: 50%;
-  left: 50%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 10;
   font-size: 4rem;
   line-height: 1;
   .icon {
@@ -290,5 +302,16 @@ export default {
     left: -50%;
     top: -2rem;
   }
+}
+
+.oec-wrapper__loading-icon {
+  color: var(--theme-primary-color);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+
+.oec-wrapper__loading--error .oec-wrapper__loading-icon {
+  color: var(--theme-negative-background);
 }
 </style>
