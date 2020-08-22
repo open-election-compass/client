@@ -3,26 +3,32 @@
     'skip-button': true,
     'skip-button--disabled': disabled,
   }">
-    <tooltip
-      class="tooltip"
-      :content="$tc('too-many-skip', maxSkip)"
-      :enabled="!tooltipDisabled"
-      :a11y="false"
-      size="large"
-      trigger="mouseenter focusin"
-    >
-      <BaseButton
-        class="skip-button__button"
-        theme="transparent"
-        size="small"
-        right="arrow-right"
-        :data-test="`thesis-skip`"
-        :aria-label="$t('skip-aria')"
-        @click="$emit('click', $event)"
+    <div class="skip-button__tooltip-wrapper">
+      <!--
+        Because IE11 cannot properly position the button using flexbox and other positioning methods
+        cause the tooltip to be off, we're using the wrapper here.
+      -->
+      <tooltip
+        class="tooltip"
+        :content="$tc('too-many-skip', maxSkip)"
+        :enabled="!tooltipDisabled"
+        :a11y="false"
+        size="large"
+        trigger="mouseenter focusin"
       >
-        {{ $t('skip') }}
-      </BaseButton>
-    </tooltip>
+        <BaseButton
+          class="skip-button__button"
+          theme="transparent"
+          size="small"
+          right="arrow-right"
+          :data-test="`thesis-skip`"
+          :aria-label="$t('skip-aria')"
+          @click="$emit('click', $event)"
+        >
+          {{ $t('skip') }}
+        </BaseButton>
+      </tooltip>
+    </div>
   </div>
 </template>
 
@@ -70,8 +76,11 @@ export default {
 
 <style lang="scss">
 .skip-button {
-  width: auto;
-  margin-left: auto;
+  text-align: right;
+}
+.skip-button__tooltip-wrapper {
+  text-align: left;
+  display: inline-block;
 }
 
 .skip-button__button {
