@@ -82,10 +82,6 @@ export default {
 <!-- eslint-enable max-len -->
 
 <style lang="scss">
-.party {
-
-}
-
 .party__button {
   width: 100%;
   padding: 1em;
@@ -103,7 +99,7 @@ export default {
   border: 1px solid var(--theme-neutral-border);
   background-color: var(--theme-neutral-background);
   color: var(--theme-neutral-text);
-  font-size: 0.875em;
+  font-size: 1em;
   &:hover {
     box-shadow: var(--shadow-hover);
   }
@@ -111,11 +107,8 @@ export default {
     outline: 0;
     box-shadow: var(--shadow-focus);
   }
-  @media (min-width: 40em) {
-    font-size: 1em;
-  }
-  @media (min-width: 48em) {
-    font-size: 1.25;
+  @media (min-width: 50em) {
+    font-size: 1.25em;
   }
 }
 
@@ -173,7 +166,8 @@ export default {
 .party__name {
   flex: 1 1 auto;
   text-align: right;
-  word-wrap: break-word;
+  word-wrap: anywhere;
+  hyphens: auto;
 }
 
 .party--logo {
@@ -194,6 +188,7 @@ export default {
     align-items: center;
     text-align: left;
     order: 1;
+    width: 100%;
     @media (min-width: 48em) {
       align-items: flex-start;
       order: 2;
