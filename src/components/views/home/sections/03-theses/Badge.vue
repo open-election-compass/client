@@ -1,8 +1,10 @@
 <template>
-  <small class="badge" :style="cssVariables">
-    <Icon class="badge__icon" :name="icon" />
-    <slot />
-  </small>
+  <div class="badge">
+    <small class="badge__badge" :style="cssVariables">
+      <Icon class="badge__icon" :name="icon" />
+      <slot />
+    </small>
+  </div>
 </template>
 
 <script>
@@ -40,21 +42,27 @@ export default {
 
 <style lang="scss">
 .badge {
-  margin-right: auto;
+  display: block;
+  padding-top: 0.5em;
+}
+
+.badge__badge {
+  display: inline-block;
   border-radius: 9999px;
   padding: 0.5em 1em 0.5em 0.75em;
   background-color: var(--color-background);
   color: var(--color-text);
   font-weight: bold;
-  margin-top: 2em;
 }
 
 @media (min-width: 48em) {
+  .badge {
+    display: inline-block;
+    font-size: 1.125em;
+    padding-top: 0;
+  }
   .badge + .badge {
     margin-left: 1em;
-  }
-  .badge {
-    font-size: 1.125em;
   }
 }
 
