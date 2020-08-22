@@ -127,14 +127,6 @@ export default {
   transition: all 0.2s ease-out;
   appearance: none;
 
-  small {
-    display: block;
-    margin-top: 0.25em;
-    color: rgba(#000, 0.5);
-    font-weight: normal;
-    font-size: 0.75em;
-  }
-
   &:hover {
     outline: none;
     box-shadow: $shadow-hover;
