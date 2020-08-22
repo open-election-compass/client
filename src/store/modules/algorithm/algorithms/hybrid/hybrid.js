@@ -128,8 +128,8 @@ export default {
       },
       locales: {
         en: {
-          button: 'Starke Ablehnung',
-          'button-aria': 'Starke Ablehnung – klicke hier, um diese deutlich These abzulehnen!',
+          button: 'Strongly reject',
+          'button-aria': 'Strongly reject – click here to strongly reject this thesis!',
           badge: 'You strongly rejected',
           'badge-aria': 'You strongly rejected this thesis.',
           status: 'strongly rejects',
