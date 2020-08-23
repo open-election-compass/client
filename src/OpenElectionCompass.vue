@@ -49,6 +49,10 @@ export default {
       type: String,
       default: null,
     },
+    loadObject: {
+      type: Object,
+      default: null,
+    },
     language: {
       type: String,
       default: null,
@@ -77,6 +81,8 @@ export default {
         this.loadContentFromTag(this.loadTag);
       } else if (typeof this.loadUrl === 'string' && this.loadUrl.length > 0) {
         this.loadContentFromUrl(this.loadUrl);
+      } else if (typeof this.loadObject === 'object' && this.loadObject !== null) {
+        this.loadContentFromObject(this.loadObject);
       }
     });
     this.$store.commit('options/setKioskMode', this.kioskMode);
@@ -132,6 +138,14 @@ export default {
       };
       xhr.open('GET', url);
       xhr.send();
+    },
+    loadContentFromObject(content) {
+      const result = this.parseContent(content);
+      if (result) {
+        this.status = 'ready';
+      } else {
+        this.status = 'error';
+      }
     },
     parseContent(content) {
       const languages = content.languages.map((language) => language.code);
