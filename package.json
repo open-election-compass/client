@@ -1,8 +1,15 @@
 {
-  "name": "client",
-  "version": "0.1.0",
+  "name": "@open-election-compass/client",
+  "version": "1.0.0",
   "author": "Till Sanders <mail@till-sanders.de>",
   "license": "GPL-3.0",
+  "main": "dist/lib/open-election-compass.umd.min.js",
+  "files": [
+    "/dist/lib",
+    "/src",
+    "LICENSE",
+    "README.md"
+  ],
   "bugs": {
     "url": "https://github.com/open-election-compass/client/issues"
   },
@@ -11,16 +18,22 @@
     "type": "git",
     "url": "https://github.com/open-election-compass/client.git"
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "dev": "npm run serve",
     "serve": "vue-cli-service serve",
     "build": "npm run build:demo && npm run build:lib",
     "build:demo": "vue-cli-service build --target app --inline-vue --name open-election-compass --dest dist/demo",
     "build:lib": "npx vue-cli-service build --target lib --inline-vue --name open-election-compass --dest dist/lib ./src/main.js --report && unlink dist/lib/demo.html",
+    "test": "npm run test:unit",
     "test:unit": "vue-cli-service test:unit",
     "test:e2e": "vue-cli-service test:e2e",
     "lint": "vue-cli-service lint",
-    "lint:style": "stylelint **/*.{css,vue}"
+    "lint:style": "stylelint **/*.{css,vue}",
+    "prerelease": "npm run build:lib",
+    "release": "np"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.28",
@@ -61,6 +74,7 @@
     "geckodriver": "^1.19.1",
     "husky": "^3.1.0",
     "node-sass": "^4.14.1",
+    "np": "*",
     "sass-loader": "^8.0.2",
     "stylelint": "^13.6.0",
     "stylelint-a11y": "^1.2.3",
