@@ -6,6 +6,7 @@
   "main": "dist/lib/open-election-compass.umd.min.js",
   "files": [
     "/dist/lib",
+    "/dist/nuxt",
     "/src",
     "LICENSE",
     "README.md"
@@ -27,6 +28,7 @@
     "build": "npm run build:demo && npm run build:lib",
     "build:demo": "vue-cli-service build --target app --inline-vue --name open-election-compass --dest dist/demo",
     "build:lib": "npx vue-cli-service build --target lib --inline-vue --name open-election-compass --dest dist/lib ./src/main.js --report && unlink dist/lib/demo.html",
+    "build:nuxt": "npx vue-cli-service build --target lib --name open-election-compass --dest dist/nuxt ./src/nuxtPlugin.js --formats commonjs --report",
     "test": "npm run test:unit",
     "test:unit": "vue-cli-service test:unit",
     "test:e2e": "vue-cli-service test:e2e",

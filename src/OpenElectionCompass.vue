@@ -171,6 +171,7 @@ export default {
       // Set up algorithm
       this.$store.dispatch('algorithm/activateAlgorithm', {
         algorithm: _get(content, 'algorithm', 'cityblock/approve-neutral-reject'),
+        i18n: this.$root.$i18n,
       });
 
       // Extract translations from content

@@ -13,7 +13,9 @@ export default {
     };
   },
   mounted() {
-    window.addEventListener('scroll', this.updateActualSection);
+    if (window) {
+      window.addEventListener('scroll', this.updateActualSection);
+    }
     this.initSections();
     this.$root.$on('navigate-to:active-section', this.goToActiveSection);
     this.$root.$on('navigate-to:section', this.goToSection);
