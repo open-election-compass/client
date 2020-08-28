@@ -196,11 +196,13 @@ export default {
 
 <style lang="scss">
 .thesis {
-  border-bottom: 2px solid var(--theme-neutral-background);
   transition: opacity 0.2s ease-out;
   &.thesis--status-skip {
     opacity: 0.5;
     background-color: #f7fafc;
+  }
+  & + .thesis {
+    border-top: 2px solid var(--theme-neutral-background);
   }
 }
 

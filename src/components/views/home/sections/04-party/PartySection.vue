@@ -85,6 +85,10 @@ export default {
 <!-- eslint-enable max-len -->
 
 <style lang="scss">
+.party-section {
+  border-top: 2px solid var(--theme-neutral-background);
+}
+
 .party-section__heading {
   color: var(--theme-primary-color);
 }
