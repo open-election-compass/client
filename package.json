@@ -25,7 +25,7 @@
   "scripts": {
     "dev": "npm run serve",
     "serve": "vue-cli-service serve",
-    "build": "npm run build:demo && npm run build:lib",
+    "build": "npm run build:demo && npm run build:lib && npm run build:nuxt",
     "build:demo": "vue-cli-service build --target app --inline-vue --name open-election-compass --dest dist/demo",
     "build:lib": "npx vue-cli-service build --target lib --inline-vue --name open-election-compass --dest dist/lib ./src/main.js --report && unlink dist/lib/demo.html",
     "build:nuxt": "npx vue-cli-service build --target lib --name open-election-compass --dest dist/nuxt ./src/nuxtPlugin.js --formats commonjs --report",
