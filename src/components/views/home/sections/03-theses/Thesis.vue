@@ -238,7 +238,7 @@ export default {
 }
 
 .thesis__important-button {
-  margin: 2em 2em 0 2em;
+  margin: 2em 2em 2em 2em;
   text-align: center;
   @media (min-width: 48em) {
     margin: 3em 1.5em 0 1.5em;

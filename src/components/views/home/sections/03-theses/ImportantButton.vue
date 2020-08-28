@@ -118,6 +118,7 @@ export default {
 }
 
 .important-button__button {
+  display: inline-block;
   padding: 0.75em 1em 0.75em 0.75em;
   cursor: pointer;
   font-size: 0.875em;
