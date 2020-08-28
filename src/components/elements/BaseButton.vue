@@ -7,6 +7,7 @@
     :tabindex="disabled ? -1 : tabindex"
     :href="tag === 'a' ? href : undefined"
     :type="tag === 'button' ? type : undefined"
+    :target="tag === 'a' ? target : undefined"
     @click="onClick"
   >
     <span
@@ -77,6 +78,10 @@ export default {
     right: {
       type: String,
       default: '',
+    },
+    target: {
+      type: String,
+      default: '_self',
     },
     disabled: {
       type: Boolean,
