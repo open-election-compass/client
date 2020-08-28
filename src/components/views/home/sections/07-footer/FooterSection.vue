@@ -7,7 +7,7 @@
             v-for="(link, index) in footerLinks"
             :key="index"
           >
-            <a :href="$t(`footer-links.${index}.href`)">
+            <a :href="$t(`footer-links.${index}.href`)" target="_blank">
               {{ $t(`footer-links.${index}.text`) }}
             </a>
           </li>

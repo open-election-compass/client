@@ -50,6 +50,7 @@
                     tag="a"
                     :href="link.to"
                     :disabled="link.disabled"
+                    :target="link.newTab ? '_blank' : '_self'"
                     theme="white"
                     text-align="left"
                     @click="goToLink(link.to, $event)"
@@ -243,6 +244,7 @@ export default {
         alias: `footer-link-${index}`,
         caption: this.$t(`footer-links.${index}.text`),
         to: this.$t(`footer-links.${index}.href`),
+        newTab: true,
       }));
       return [compass, home, theses, evaluation, compare, about];
     },
