@@ -196,11 +196,12 @@ export default {
 
 .statement__thesis {
   color: var(--base-color);
-  font-size: 1.5em;
+  font-size: 1.35em;
   line-height: 1.25;
   font-weight: bold;
   display: block;
   transition: color 0.2s ease-out;
+  overflow-wrap: break-word;
   @media (min-width: 40em) {
     font-size: 1.875em;
     max-width: 42rem;
