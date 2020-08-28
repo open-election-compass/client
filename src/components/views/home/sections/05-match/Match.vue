@@ -13,7 +13,7 @@
         {{ $t(`parties.${party.index}.short`) }}
       </span>
       <span class="match__percentage">
-        {{ $n(percentage, 'percentage') }}
+        {{ $n(percentage, { style: 'percent' }) }}
       </span>
     </div>
     <p class="match__party-description">
