@@ -1,7 +1,7 @@
 <template>
-  <div :aria-label="text">
+  <div class="show-more" :aria-label="text">
     <span>{{ short }}</span><span v-if="isTruncated">{{ more ? rest : ' ...' }}</span><!-- eslint-disable-line max-len -->
-    <a @click="toggle" v-if="isTruncated" class="font-bold cursor-pointer">
+    <a @click="toggle" v-if="isTruncated" class="show-more__toggle">
       &nbsp;{{ $t(more ? 'hide' : 'show').replace(' ', '\xa0') }}
     </a>
   </div>
@@ -60,3 +60,10 @@ export default {
   }
 }
 </i18n>
+
+<style lang="scss">
+.show-more__toggle {
+  font-weight: bold;
+  cursor: pointer;
+}
+</style>
