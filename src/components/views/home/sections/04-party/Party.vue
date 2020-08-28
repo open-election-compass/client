@@ -168,6 +168,10 @@ export default {
   text-align: right;
   word-wrap: anywhere;
   hyphens: auto;
+  font-size: 1em;
+  @media (min-width: 48em) {
+    font-size: 0.75em
+  }
 }
 
 .party--logo {

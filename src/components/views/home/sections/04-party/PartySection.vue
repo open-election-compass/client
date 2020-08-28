@@ -115,9 +115,6 @@ export default {
         padding-top: 0.5em;
         padding-bottom: 0.5em;
       }
-      @media (min-width: 60em) {
-        width: 25%;
-      }
     }
   }
 }
