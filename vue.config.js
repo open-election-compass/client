@@ -41,6 +41,6 @@ module.exports = {
   },
 
   css: {
-    extract: true,
+    extract: process.env.EXTRACT_CSS === 'true',
   },
 };
