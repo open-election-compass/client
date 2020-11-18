@@ -1,6 +1,7 @@
 ![OpenElectionCompass](documentation/assets/title.png)
 
 [![Join the community on Spectrum](https://withspectrum.github.io/badge/badge.svg)](https://spectrum.chat/openelectioncompass)
+[![Financial contributors](https://opencollective.com/openelectioncompass/tiers/badge.svg)](https://opencollective.com/openelectioncompass)
 
 # Project state
 
