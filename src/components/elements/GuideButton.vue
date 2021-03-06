@@ -21,13 +21,8 @@
 </template>
 
 <script>
-import BaseButton from '@/components/elements/BaseButton.vue';
-
 export default {
   name: 'GuideButton',
-  components: {
-    BaseButton,
-  },
   data() {
     return {
       relevant: false, // is the user in the wrong section?

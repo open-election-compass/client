@@ -33,13 +33,8 @@
 </template>
 
 <script>
-import BaseButton from '@/components/elements/BaseButton.vue';
-
 export default {
   name: 'SkipButton',
-  components: {
-    BaseButton,
-  },
   props: {
     disabled: {
       type: Boolean,

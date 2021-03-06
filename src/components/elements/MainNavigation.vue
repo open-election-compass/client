@@ -93,16 +93,12 @@
 </template>
 
 <script>
-import BaseButton from '@/components/elements/BaseButton.vue';
 import Definitions from '@/components/elements/Definitions.vue';
-import Icon from '@/components/elements/Icon.vue';
 
 export default {
   name: 'MainNavigation',
   components: {
-    BaseButton,
     Definitions,
-    Icon,
   },
   data() {
     return {

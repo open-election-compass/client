@@ -34,13 +34,8 @@
 </template>
 
 <script>
-import Icon from '@/components/elements/Icon.vue';
-
 export default {
   name: 'Party',
-  components: {
-    Icon,
-  },
   props: {
     index: {
       type: Number,

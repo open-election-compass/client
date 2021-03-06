@@ -2,7 +2,7 @@ import { createLocalVue } from '@vue/test-utils';
 import Vuex from 'vuex';
 import VuexPartiesModule from '@/store/modules/parties/parties';
 import calculatePointsForParty from '@/store/modules/parties/calculatePointsForParty';
-import cityBlockAlgorithm from '@/store/modules/algorithm/algorithms/cityblock/approve-neutral-reject.js';
+import cityBlockAlgorithm from '@/store/modules/algorithm/algorithms/cityblock/approve-neutral-reject';
 
 const localVue = createLocalVue();
 localVue.use(Vuex);

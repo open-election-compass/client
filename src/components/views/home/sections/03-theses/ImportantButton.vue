@@ -37,13 +37,8 @@
 </template>
 
 <script>
-import Icon from '@/components/elements/Icon.vue';
-
 export default {
   name: 'ImportantButton',
-  components: {
-    Icon,
-  },
   data() {
     return {
       cache: 1,

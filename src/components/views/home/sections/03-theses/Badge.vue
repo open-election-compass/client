@@ -8,13 +8,8 @@
 </template>
 
 <script>
-import Icon from '@/components/elements/Icon.vue';
-
 export default {
   name: 'Badge',
-  components: {
-    Icon,
-  },
   props: {
     icon: {
       type: String,

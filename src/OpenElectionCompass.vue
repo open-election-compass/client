@@ -23,15 +23,14 @@ import domReady from '@wordpress/dom-ready';
 import _forEach from 'lodash/forEach';
 import _get from 'lodash/get';
 import _set from 'lodash/set';
+import { localize } from 'vee-validate';
 import Home from '@/components/views/home/Home.vue';
-import Icon from '@/components/elements/Icon.vue';
 
 export default {
   name: 'OpenElectionCompass',
 
   components: {
     Home,
-    Icon,
   },
 
   data() {
@@ -181,6 +180,11 @@ export default {
       this.readTranslation(content, 'introduction.heading', translations);
       this.readTranslation(content, 'introduction.text', translations);
 
+      // Set up analysis
+      this.$store.commit('analysis/setEndpoint', _get(content, 'analysis.endpoint', null));
+      this.readTranslation(content, 'analysis.institution', translations);
+      this.readTranslation(content, 'analysis.survey', translations);
+
       // Extract footer links
       _forEach(content['footer-links'], (link, index) => {
         this.readTranslation(content, `footer-links.${index}.text`, translations);
@@ -237,6 +241,7 @@ export default {
      */
     setLocale(locale) {
       this.$i18n.locale = locale;
+      localize(locale); // vee-validate
     },
 
     /**
