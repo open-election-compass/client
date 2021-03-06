@@ -33,15 +33,8 @@
 </template>
 
 <script lang="js">
-import BaseButton from '@/components/elements/BaseButton.vue';
-import Modal from '@/components/elements/Modal.vue';
-
 export default {
   name: 'LanguageSwitch',
-  components: {
-    BaseButton,
-    Modal,
-  },
   props: {
     visible: {
       type: Boolean,

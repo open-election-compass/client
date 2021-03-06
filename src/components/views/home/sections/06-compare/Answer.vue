@@ -56,7 +56,17 @@ export default {
       if (this.skipped) {
         return this.$t('skip.content', { party: this.$t(`parties.${this.party.index}.name`) });
       }
-      return this.$t(`theses.${this.thesis.index}.positions.${this.party.alias}.explanation`);
+      if (
+        !this.$te(`theses.${this.thesis.index}.positions.${this.party.alias}.explanation`)
+        && !this.$root.$te(`theses.${this.thesis.index}.positions.${this.party.alias}.explanation`)
+      ) {
+        return this.$t('empty.content', { party: this.$t(`parties.${this.party.index}.name`) });
+      }
+      const explanation = this.$t(`theses.${this.thesis.index}.positions.${this.party.alias}.explanation`).trim();
+      if (explanation === '') {
+        return this.$t('empty.content', { party: this.$t(`parties.${this.party.index}.name`) });
+      }
+      return explanation;
     },
     colors() {
       if (this.skipped) {
@@ -115,12 +125,18 @@ export default {
     "skip": {
       "status-text": "unknown",
       "content": "The party '{party}' did not provide any answers or position regarding this thesis."
+    },
+    "empty": {
+      "content": "The party '{party}' did not provide any statement to explain their position regarding this thesis."
     }
   },
   "de": {
     "skip": {
       "status-text": "unbekannt",
       "content": "Die Partei '{party}' hat keine Position oder Begründung für diese These bereitgestellt."
+    },
+    "empty": {
+      "content": "Die Partei '{party}' hat keine Erklärung zu ihrer Position für diese These bereitgestellt."
     }
   }
 }

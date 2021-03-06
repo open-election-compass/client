@@ -21,13 +21,8 @@
 </template>
 
 <script>
-import Icon from '@/components/elements/Icon.vue';
-
 export default {
   name: 'VoteButton',
-  components: {
-    Icon,
-  },
   props: {
     alias: {
       type: String,

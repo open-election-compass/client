@@ -25,13 +25,9 @@
 
 <script>
 import throttle from 'lodash/throttle';
-import Modal from '@/components/elements/Modal.vue';
 
 export default {
   name: 'KioskMode',
-  components: {
-    Modal,
-  },
   props: {
     threshold: {
       type: Number,

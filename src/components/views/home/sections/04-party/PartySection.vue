@@ -39,14 +39,12 @@
 </template>
 
 <script>
-import BaseButton from '@/components/elements/BaseButton.vue';
 import PageSection from '@/components/elements/PageSection.vue';
 import Party from '@/components/views/home/sections/04-party/Party.vue';
 
 export default {
   name: 'PartySection',
   components: {
-    BaseButton,
     PageSection,
     Party,
   },

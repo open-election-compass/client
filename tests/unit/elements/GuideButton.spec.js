@@ -1,7 +1,10 @@
 import { createLocalVue, shallowMount } from '@vue/test-utils';
 import Vuex from 'vuex';
-import BaseButton from '@/components/elements/BaseButton.vue';
 import GuideButton from '@/components/elements/GuideButton.vue';
+
+const BaseButton = {
+  template: '<button><slot /></button>',
+};
 
 const localVue = createLocalVue();
 localVue.use(Vuex);
@@ -51,6 +54,9 @@ describe('GuideButton.vue', () => {
       propsData: {
         initialDelay: 0, // easier to test without timeouts
         throttle: 0, // jest.useFakeTimers() would not affect lodash's throttle()
+      },
+      stubs: {
+        BaseButton,
       },
       store,
       localVue,

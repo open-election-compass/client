@@ -30,11 +30,15 @@
         />
       </template>
     </PageSection>
+    <AdditionalAnalysis :active="$store.getters['analysis/optIn'] === true" />
+    <AnalysisBanner v-if="$store.getters['analysis/enabled']" />
   </div>
 </template>
 
 <script>
 import { mapGetters } from 'vuex';
+import AdditionalAnalysis from '@/components/views/home/sections/06-compare/AdditionalAnalysis.vue';
+import AnalysisBanner from '@/components/views/home/sections/06-compare/AnalysisBanner.vue';
 import Answer from '@/components/views/home/sections/06-compare/Answer.vue';
 import KioskModeHint from '@/components/views/home/sections/06-compare/KioskModeHint.vue';
 import PageSection from '@/components/elements/PageSection.vue';
@@ -43,6 +47,8 @@ import Statement from '@/components/views/home/sections/03-theses/Statement.vue'
 export default {
   name: 'CompareSection',
   components: {
+    AdditionalAnalysis,
+    AnalysisBanner,
     Answer,
     KioskModeHint,
     PageSection,

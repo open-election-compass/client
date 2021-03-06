@@ -20,15 +20,8 @@
 </template>
 
 <script>
-import BaseButton from '@/components/elements/BaseButton.vue';
-import Icon from '@/components/elements/Icon.vue';
-
 export default {
   name: 'KioskModeHint',
-  components: {
-    BaseButton,
-    Icon,
-  },
 };
 </script>
 
