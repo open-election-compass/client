@@ -6,10 +6,12 @@
       :index="index"
       :thesis="thesis"
     />
+    <FriendsProgress />
   </div>
 </template>
 
 <script>
+import FriendsProgress from '@/components/views/home/sections/03-theses/FriendsProgress.vue';
 import Thesis from '@/components/views/home/sections/03-theses/Thesis.vue';
 
 export default {
@@ -20,6 +22,7 @@ export default {
     },
   },
   components: {
+    FriendsProgress,
     Thesis,
   },
 };

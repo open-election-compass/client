@@ -20,6 +20,7 @@
         :factor="thesis.factor"
         :badge="true"
       />
+      <FriendsPositions :thesis="thesis" />
       <template
         v-for="result in results"
       >
@@ -40,6 +41,7 @@ import { mapGetters } from 'vuex';
 import AdditionalAnalysis from '@/components/views/home/sections/06-compare/AdditionalAnalysis.vue';
 import AnalysisBanner from '@/components/views/home/sections/06-compare/AnalysisBanner.vue';
 import Answer from '@/components/views/home/sections/06-compare/Answer.vue';
+import FriendsPositions from '@/components/views/home/sections/06-compare/FriendsPositions.vue';
 import KioskModeHint from '@/components/views/home/sections/06-compare/KioskModeHint.vue';
 import PageSection from '@/components/elements/PageSection.vue';
 import Statement from '@/components/views/home/sections/03-theses/Statement.vue';
@@ -50,6 +52,7 @@ export default {
     AdditionalAnalysis,
     AnalysisBanner,
     Answer,
+    FriendsPositions,
     KioskModeHint,
     PageSection,
     Statement,

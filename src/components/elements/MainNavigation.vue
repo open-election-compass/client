@@ -112,6 +112,11 @@ export default {
       this.focusActiveMenuItem(true);
     }, { deep: true });
 
+    // Listen for a new friends session being started
+    this.$root.$on('how-u-doin', () => {
+      this.hideMenu();
+    });
+
     // Update fullWidthMode depending on window size
     const mediaQuery = window.matchMedia('(max-width: 40rem)');
     mediaQuery.addListener(({ matches }) => {
@@ -135,6 +140,20 @@ export default {
           caption: this.$t('links.languages'),
           event: 'open-language-switch',
           icon: 'language',
+        });
+      }
+      if (this.$store.getters['options/friendsEnabled']) {
+        compass.links.push({
+          alias: 'friends-invite',
+          caption: this.$t('links.friends-invite'),
+          event: 'open-friends-invite-modal',
+          icon: 'user-plus',
+        });
+        compass.links.push({
+          alias: 'friends-join',
+          caption: this.$t('links.friends-join'),
+          event: 'open-friends-join-modal',
+          icon: 'user-friends',
         });
       }
       if (this.$store.getters['options/kioskMode']) {
@@ -477,6 +496,8 @@ button.main-navigation__group-toggle {
     "links": {
       "compass": "Election Compass",
       "languages": "Change language",
+      "friends-join": "Join friends",
+      "friends-invite": "Invite friends",
       "reset": "Reset",
       "home": "Start",
       "introduction": "Introduction",
@@ -494,6 +515,8 @@ button.main-navigation__group-toggle {
     "links": {
       "compass": "Wahlkompass",
       "languages": "Sprache wechseln",
+      "friends-join": "Mit Freund:innen verbinden",
+      "friends-invite": "Freund:innen einladen",
       "reset": "Zurücksetzen",
       "home": "Start",
       "introduction": "Einleitung",

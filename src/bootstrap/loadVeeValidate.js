@@ -1,5 +1,7 @@
 import Vue from 'vue';
-import { ValidationProvider, extend, localize } from 'vee-validate';
+import {
+  ValidationObserver, ValidationProvider, extend, localize,
+} from 'vee-validate';
 import {
   alpha, email, integer, length, max, min, oneOf, regex, required,
 } from 'vee-validate/dist/rules.umd';
@@ -19,5 +21,6 @@ export default function loadVeeValidate() {
 
   localize({ de, en });
 
+  Vue.component('ValidationObserver', ValidationObserver);
   Vue.component('ValidationProvider', ValidationProvider);
 }

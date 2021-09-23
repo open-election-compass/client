@@ -1,6 +1,8 @@
 import Vue from 'vue';
 import '@open-election-compass/ui/dist/open-election-compass-ui.css';
 import {
+  AccordionList,
+  AsyncButton,
   BaseButton,
   FieldInput,
   FieldSelect,
@@ -10,6 +12,8 @@ import {
 } from '@open-election-compass/ui';
 
 export default function loadOpenElectionCompassUI() {
+  Vue.component('AccordionList', AccordionList);
+  Vue.component('AsyncButton', AsyncButton);
   Vue.component('BaseButton', BaseButton);
   Vue.component('FieldInput', FieldInput);
   Vue.component('FieldSelect', FieldSelect);

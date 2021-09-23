@@ -61,6 +61,22 @@ export default {
       type: Boolean,
       default: false,
     },
+    friends: {
+      type: Boolean,
+      default: false,
+    },
+    friendsHost: {
+      type: String,
+      default: 'friends.open-election-compass.com',
+    },
+    friendsPort: {
+      type: Number,
+      default: 443,
+    },
+    friendsPath: {
+      type: String,
+      default: '/',
+    },
   },
 
   /**
@@ -85,6 +101,10 @@ export default {
       }
     });
     this.$store.commit('options/setKioskMode', this.kioskMode);
+    this.$store.commit('options/setFriendsEnabled', this.friends);
+    this.$store.commit('options/setFriendsHost', this.friendsHost);
+    this.$store.commit('options/setFriendsPort', this.friendsPort);
+    this.$store.commit('options/setFriendsPath', this.friendsPath);
   },
   computed: {
     activeLanguage() {
