@@ -1,5 +1,6 @@
 import Vue from 'vue';
 import VueI18n from 'vue-i18n';
+import { localize } from 'vee-validate';
 import de from './de.json';
 import en from './en.json';
 
@@ -17,5 +18,8 @@ const i18n = new VueI18n({
 
 i18n.setLocaleMessage('de', de);
 i18n.setLocaleMessage('en', en);
+
+localize('de', de.validation);
+localize('en', en.validation);
 
 export default i18n;

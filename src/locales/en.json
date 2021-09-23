@@ -9,5 +9,18 @@
       "match": "See your result",
       "compare": "Read the statements"
     }
+  },
+  "validation": {
+    "names": {
+      "name": "Name",
+      "remote-peer-id": "Friend's device"
+    },
+    "fields": {
+      "name": {
+        "min": "Please enter a name.",
+        "regex": "Only letters, numbers and spaces, no special characters.",
+        "required": "Please enter a name."
+      }
+    }
   }
 }

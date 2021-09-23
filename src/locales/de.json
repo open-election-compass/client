@@ -9,5 +9,18 @@
       "match": "Ergebnis anschauen",
       "compare": "Begründungen der Parteien lesen"
     }
+  },
+  "validation": {
+    "names": {
+      "name": "Name",
+      "remote-peer-id": "Befreundetes Gerät"
+    },
+    "fields": {
+      "name": {
+        "min": "Bitte gib einen Namen ein.",
+        "regex": "Nur Buchstaben, Zahlen und Leerzeichen, keine Sonderzeichen.",
+        "required": "Bitte gib einen Namen ein."
+      }
+    }
   }
 }
