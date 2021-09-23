@@ -1,0 +1,21 @@
+name: NPM Registry
+
+on:
+  release:
+    types: [published]
+
+jobs:
+  push-to-npm-registry:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Build
+      run: npm ci && npm run build
+
+    - uses: JS-DevTools/npm-publish@v1
+      if: success()
+      with:
+        token: ${{ secrets.NPM_TOKEN }}
+        access: public
