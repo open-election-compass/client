@@ -1,3 +1,5 @@
+Easy to use voting advice application – create your own election compass. Free and open source.
+
 ![OpenElectionCompass](documentation/assets/title.png)
 
 [![Join the community on GitHub Discussions](https://img.shields.io/badge/join%20the%20community-on%20GitHub%20Discussions-%23535ae8)](https://github.com/open-election-compass/client/discussions)
