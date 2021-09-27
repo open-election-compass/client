@@ -22,7 +22,7 @@
       <template v-slot:site>
         <SectionWatcher>
           <start-section />
-          <main :aria-roledescription="$t('role-aria')">
+          <main :aria-roledescription="$t('views.home.home.role-aria')">
             <introduction-section />
             <theses-section />
             <party-section v-if="$store.getters['theses/complete']" />
@@ -87,14 +87,3 @@ export default {
   },
 };
 </script>
-
-<i18n>
-{
-  "en": {
-    "role-aria": "Election Compass"
-  },
-  "de": {
-    "role-aria": "Wahl-Kompass"
-  }
-}
-</i18n>

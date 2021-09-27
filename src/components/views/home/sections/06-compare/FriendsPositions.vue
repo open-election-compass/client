@@ -68,28 +68,15 @@ export default {
   },
   methods: {
     answerAria(name, answerAlias) {
-      let position = this.$t('skip');
+      let position = this.$t('views.home.compare.friends-positions.skip');
       if (answerAlias !== 'skip') {
         position = this.$t(`algorithm.options.${answerAlias}.button`);
       }
-      return this.$t('answer-aria', { name, position });
+      return this.$t('views.home.compare.friends-positions.answer-aria', { name, position });
     },
   },
 };
 </script>
-
-<i18n>
-{
-  "en": {
-    "answer-aria": "{name}: {position}",
-    "skip": "Skipped"
-  },
-  "de": {
-    "answer-aria": "{name}: {position}",
-    "skip": "Übersprungen"
-  }
-}
-</i18n>
 
 <style lang="scss">
 .friends-positions__answer {

@@ -6,7 +6,7 @@
   }">
     <tooltip
       class="tooltip"
-      :content="$tc('too-many-important', maxImportant)"
+      :content="$tc('views.home.theses.important-button.too-many-important', maxImportant)"
       :enabled="!tooltipDisabled"
       :a11y="false"
       size="large"
@@ -15,7 +15,7 @@
       <label
         :for="name"
         class="important-button__button"
-        :aria-label="$t('important-aria')"
+        :aria-label="$t('views.home.theses.important-button.important-aria')"
       >
         <input
           class="sr-only"
@@ -29,7 +29,7 @@
         />
         <Icon :name="factor === 1 ? 'circle' : 'exclamation-circle'" />
         <span>
-          {{ $t('important') }}
+          {{ $t('views.home.theses.important-button.important') }}
         </span>
       </label>
     </tooltip>
@@ -85,23 +85,6 @@ export default {
   },
 };
 </script>
-
-<!-- eslint-disable max-len -->
-<i18n>
-{
-  "en": {
-    "important": "Important to me",
-    "important-aria": "Important – marks this thesis as important for you.",
-    "too-many-important": "There are only very few theses, so you cannot mark one as important. | Please mark no more than 1 thesis as important to receive a meaningful result! | Please mark no more than {count} theses as important to receive a meaningful result!"
-  },
-  "de": {
-    "important": "Wichtig für mich",
-    "important-aria": "Wichtig – markiert diese These als wichtig für dich.",
-    "too-many-important": "Es gibt nur sehr wenige Thesen, du kannst daher keine als wichtig markieren. | Bitte markiere nicht mehr als 1 These als wichtig um ein aussagekräftiges Ergebnis zu erhalten! | Bitte markiere nicht mehr als {count} Thesen als wichtig um ein aussagekräftiges Ergebnis zu erhalten!"
-  }
-}
-</i18n>
-<!-- eslint-enable max-len -->
 
 <style lang="scss">
 .important-button {

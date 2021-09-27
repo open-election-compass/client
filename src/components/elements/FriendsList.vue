@@ -1,6 +1,8 @@
 <template>
   <div class="friends-list">
-    <p v-if="friends.length < 1" class="friends-list__empty">{{ $t('empty') }}</p>
+    <p v-if="friends.length < 1" class="friends-list__empty">
+      {{ $t('elements.friends-list.empty') }}
+    </p>
     <table v-else class="friends-list__friends">
       <tr
         v-for="friend in friends"
@@ -8,7 +10,11 @@
         class="friends-list__friend"
       >
         <td>
-          <Icon v-if="friend.peerId === host.peer" name="crown" :title="$t('host')" />
+          <Icon
+            v-if="friend.peerId === host.peer"
+            name="crown"
+            :title="$t('elements.friends-list.host')"
+          />
         </td>
         <td>
           {{ getFriendName(friend) }}
@@ -71,18 +77,3 @@ export default {
   }
 }
 </style>
-
-<i18n>
-{
-  "en": {
-    "heading": "Connected devices",
-    "empty": "The host needs to accept you're request to join the session.",
-    "host": "Host"
-  },
-  "de": {
-    "heading": "Verbundene Geräte",
-    "empty": "Deine Anfrage der Sitzung beizutreten muss noch akzeptiert werden.",
-    "host": "Gastgeber:in"
-  }
-}
-</i18n>

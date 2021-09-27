@@ -1,8 +1,10 @@
 <template>
   <aside class="analysis-banner">
-    <h2 class="analysis-banner__heading">{{ $t('heading') }}</h2>
+    <h2 class="analysis-banner__heading">{{ $t('views.home.compare.analysis-banner.heading') }}</h2>
     <p class="analysis-banner__explanation">
-      {{ $t('explanation', { someone: $t('analysis.institution') }) }}
+      {{ $t('views.home.compare.analysis-banner.explanation', {
+        someone: $t('analysis.institution')
+      }) }}
     </p>
     <BaseButton
       class="analysis-banner__send"
@@ -10,14 +12,14 @@
       size="small"
       @click="sendAnalysis"
     >
-      {{ $t('send') }}
+      {{ $t('views.home.compare.analysis-banner.send') }}
     </BaseButton>
     <BaseButton
       class="analysis-banner__close"
       theme="positive"
       @click="close"
     >
-      {{ $t('close') }}
+      {{ $t('views.home.compare.analysis-banner.close') }}
     </BaseButton>
   </aside>
 </template>
@@ -89,22 +91,3 @@ export default {
   }
 }
 </style>
-
-<!-- eslint-disable max-len -->
-<i18n>
-{
-  "en": {
-    "heading": "Do you want to donate your answers to science?",
-    "explanation": "You can help {someone} understand this election better by donating your answers and results to scientific research. We only save anonymized data which we can not trace back to you.",
-    "send": "Submit statistic data now",
-    "close": "No, continue reading"
-  },
-  "de": {
-    "heading": "Möchtest du deine Antworten der Wissenschaft spenden?",
-    "explanation": "Du kannst {someone} helfen, diese Wahlen besser zu verstehen indem du deine Antworten und Ergebnisse der Forschung spendest. Wir speichern nur anonymisierte Datensätze, die wir nicht zu dir zurückverfolgen können.",
-    "send": "Statistische Daten jetzt senden",
-    "close": "Nein, weiterlesen"
-  }
-}
-</i18n>
-<!-- eslint-enable max-len -->

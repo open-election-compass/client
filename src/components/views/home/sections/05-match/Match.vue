@@ -3,7 +3,7 @@
     <div
       class="match__bar"
       role="img"
-      :aria-label="$t('match-aria', {
+      :aria-label="$t('views.home.match.match.match-aria', {
         party: $t(`parties.${party.index}.name`),
         percentage: Math.round(percentage * 100),
       })"
@@ -42,19 +42,6 @@ export default {
   },
 };
 </script>
-
-<!-- eslint-disable max-len -->
-<i18n>
-{
-  "en": {
-    "match-aria": "Your match for the party '{party}' is at {percentage} %"
-  },
-  "de": {
-    "match-aria": "Deine Übereinstimmung mit den Positionen der Partei '{party}' liegt bei {percentage} %"
-  }
-}
-</i18n>
-<!-- eslint-enable max-len -->
 
 <style lang="scss">
 .match {

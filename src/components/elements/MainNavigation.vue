@@ -8,7 +8,7 @@
       class="main-navigation__toggle"
     >
       <span class="main-navigation__toggle-caption">
-        {{ $t('menu') }}
+        {{ $t('elements.main-navigation.menu') }}
       </span>
       <span class="main-navigation__toggle-icon">
         <Icon :name="active ? 'times' : 'bars'" monospace />
@@ -131,13 +131,13 @@ export default {
     groups() {
       const compass = {
         alias: 'compass',
-        caption: this.$t('links.compass'),
+        caption: this.$t('elements.main-navigation.links.compass'),
         links: [],
       };
       if (this.$store.getters['languages/languages'].length > 1) {
         compass.links.push({
           alias: 'languages',
-          caption: this.$t('links.languages'),
+          caption: this.$t('elements.main-navigation.links.languages'),
           event: 'open-language-switch',
           icon: 'language',
         });
@@ -145,13 +145,13 @@ export default {
       if (this.$store.getters['options/friendsEnabled']) {
         compass.links.push({
           alias: 'friends-invite',
-          caption: this.$t('links.friends-invite'),
+          caption: this.$t('elements.main-navigation.links.friends-invite'),
           event: 'open-friends-invite-modal',
           icon: 'user-plus',
         });
         compass.links.push({
           alias: 'friends-join',
-          caption: this.$t('links.friends-join'),
+          caption: this.$t('elements.main-navigation.links.friends-join'),
           event: 'open-friends-join-modal',
           icon: 'user-friends',
         });
@@ -159,7 +159,7 @@ export default {
       if (this.$store.getters['options/kioskMode']) {
         compass.links.push({
           alias: 'reset',
-          caption: this.$t('links.reset'),
+          caption: this.$t('elements.main-navigation.links.reset'),
           event: 'reset',
           icon: 'undo',
         });
@@ -167,16 +167,16 @@ export default {
 
       const home = {
         alias: 'home',
-        caption: this.$t('links.home'),
+        caption: this.$t('elements.main-navigation.links.home'),
         links: [
           {
             alias: 'home',
-            caption: this.$t('links.home'),
+            caption: this.$t('elements.main-navigation.links.home'),
             to: '#start',
           },
           {
             alias: 'introduction',
-            caption: this.$t('links.introduction'),
+            caption: this.$t('elements.main-navigation.links.introduction'),
             to: '#introduction',
           },
         ],
@@ -184,7 +184,7 @@ export default {
 
       const theses = {
         alias: 'theses',
-        caption: this.$t('links.theses'),
+        caption: this.$t('elements.main-navigation.links.theses'),
       };
       theses.links = this.$store.getters['theses/theses'].map((thesis, index) => {
         let caption;
@@ -192,7 +192,7 @@ export default {
         if (this.$root.$te(`theses.${index}.title`)) {
           caption = `${index + 1} – ${this.$t(`theses.${index}.title`)}`;
         } else {
-          caption = this.$t('thesis', { count: index + 1 });
+          caption = this.$t('elements.main-navigation.thesis', { count: index + 1 });
           description = `„${this.$t(`theses.${index}.statement`)}“`;
         }
         let disabled = thesis.status === null;
@@ -211,17 +211,17 @@ export default {
 
       const evaluation = {
         alias: 'evaluation',
-        caption: this.$t('links.evaluation'),
+        caption: this.$t('elements.main-navigation.links.evaluation'),
         links: [
           {
             alias: 'party',
-            caption: this.$t('links.party'),
+            caption: this.$t('elements.main-navigation.links.party'),
             disabled: !this.$store.getters['theses/complete'],
             to: '#party',
           },
           {
             alias: 'match',
-            caption: this.$t('links.match'),
+            caption: this.$t('elements.main-navigation.links.match'),
             disabled: !this.$store.getters['parties/chosen'],
             to: '#match',
           },
@@ -230,7 +230,7 @@ export default {
 
       const compare = {
         alias: 'compare',
-        caption: this.$t('links.compare'),
+        caption: this.$t('elements.main-navigation.links.compare'),
       };
       const compareDisabled = !this.$store.getters['parties/chosen'];
       compare.links = this.$store.getters['theses/theses'].map((thesis, index) => {
@@ -239,7 +239,7 @@ export default {
         if (this.$root.$te(`theses.${index}.title`)) {
           caption = `${index + 1} – ${this.$t(`theses.${index}.title`)}`;
         } else {
-          caption = this.$t('thesis', { count: index + 1 });
+          caption = this.$t('elements.main-navigation.thesis', { count: index + 1 });
           description = `„${this.$t(`theses.${index}.statement`)}“`;
         }
         return {
@@ -253,7 +253,7 @@ export default {
 
       const about = {
         alias: 'about',
-        caption: this.$t('links.about'),
+        caption: this.$t('elements.main-navigation.links.about'),
       };
       about.links = this.$store.getters['footerLinks/links'].map((link, index) => ({
         alias: `footer-link-${index}`,
@@ -487,46 +487,3 @@ button.main-navigation__group-toggle {
   }
 }
 </style>
-
-<i18n>
-{
-  "en": {
-    "menu": "Menu",
-    "thesis": "Thesis {count}",
-    "links": {
-      "compass": "Election Compass",
-      "languages": "Change language",
-      "friends-join": "Join friends",
-      "friends-invite": "Invite friends",
-      "reset": "Reset",
-      "home": "Start",
-      "introduction": "Introduction",
-      "theses": "Theses",
-      "evaluation": "Evaluation",
-      "party": "Party selection",
-      "match": "Result",
-      "compare": "Statements",
-      "about": "About"
-    }
-  },
-  "de": {
-    "menu": "Menü",
-    "thesis": "These {count}",
-    "links": {
-      "compass": "Wahlkompass",
-      "languages": "Sprache wechseln",
-      "friends-join": "Mit Freund:innen verbinden",
-      "friends-invite": "Freund:innen einladen",
-      "reset": "Zurücksetzen",
-      "home": "Start",
-      "introduction": "Einleitung",
-      "theses": "Thesen",
-      "evaluation": "Auswertung",
-      "party": "Parteienwahl",
-      "match": "Ergebnis",
-      "compare": "Antworten der Parteien",
-      "about": "Über"
-    }
-  }
-}
-</i18n>

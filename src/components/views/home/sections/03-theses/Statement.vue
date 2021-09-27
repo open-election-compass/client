@@ -16,7 +16,7 @@
         class="statement__counter"
         aria-hidden="true"
       >
-        {{ $t('thesis', { count: index + 1, total }) }}
+        {{ $t('views.home.theses.statement.thesis', { count: index + 1, total }) }}
       </span>
       <span v-if="$root.$te(`theses.${index}.title`)" class="statement__title">
         – {{ $t(`theses.${index}.title`) }}
@@ -26,12 +26,14 @@
     <!-- Statement -->
     <h3
       class="statement__thesis"
-      :aria-label="$t('statement-aria', { statement: $t(`theses.${index}.statement`) })"
+      :aria-label="$t('views.home.theses.statement.statement-aria', {
+        statement: $t(`theses.${index}.statement`)
+      })"
     >
       <span class="statement__quote-start" aria-hidden="true">
-        <span>{{ $t('quoteStart') }}</span>
+        <span>{{ $t('views.home.theses.statement.quoteStart') }}</span>
       </span>
-      <Definitions :text="$t(`theses.${index}.statement`)" /><span class="statement__quote-end" aria-hidden="true">{{ $t('quoteEnd') }}</span><!-- eslint-disable-line max-len -->
+      <Definitions :text="$t(`theses.${index}.statement`)" /><span class="statement__quote-end" aria-hidden="true">{{ $t('views.home.theses.statement.quoteEnd') }}</span><!-- eslint-disable-line max-len -->
     </h3>
 
     <!-- Badges -->
@@ -51,9 +53,9 @@
           icon="exclamation-circle"
           backgroundColor="#FFD01C"
           textColor="#fff"
-          :aria-label="$t(`badge.important-aria`)"
+          :aria-label="$t(`views.home.theses.statement.badge.important-aria`)"
         >
-          {{ $t(`badge.important`) }}
+          {{ $t(`views.home.theses.statement.badge.important`) }}
         </Badge>
       </template>
     </div>
@@ -118,13 +120,13 @@ export default {
     },
     badgeText() {
       if (this.skipped) {
-        return this.$t('badge.skip');
+        return this.$t('views.home.theses.statement.badge.skip');
       }
       return this.$t(`algorithm.options.${this.option.alias}.badge`);
     },
     badgeTextAria() {
       if (this.skipped) {
-        return this.$t('badge.skip-aria');
+        return this.$t('views.home.theses.statement.badge.skip-aria');
       }
       return this.$t(`algorithm.options.${this.option.alias}.badge-aria`);
     },
@@ -137,35 +139,6 @@ export default {
   },
 };
 </script>
-
-<i18n>
-{
-  "en": {
-    "thesis": "Thesis {count} / {total}",
-    "statement-aria": "The thesis is: '{statement}'",
-    "quoteStart": "‘",
-    "quoteEnd": "’",
-    "badge": {
-      "skip": "You skipped this",
-      "skip-aria": "You skipped this thesis.",
-      "important": "You marked this as important",
-      "important-aria": "You marked this thesis as important."
-    }
-  },
-  "de": {
-    "thesis": "These {count} / {total}",
-    "statement-aria": "Die These lautet: '{statement}'",
-    "quoteStart": "„",
-    "quoteEnd": "“",
-    "badge": {
-      "skip": "Übersprungen",
-      "skip-aria": "Du hast diese These übersprungen.",
-      "important": "Von dir als wichtig markiert",
-      "important-aria": "Du hast diese These als wichtig markiert."
-    }
-  }
-}
-</i18n>
 
 <style lang="scss">
 .statement__caption {

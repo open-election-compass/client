@@ -35,17 +35,8 @@ export default {
     },
   },
   actions: {
-    activateAlgorithm({ getters, commit }, { algorithm, i18n }) {
+    activateAlgorithm({ commit }, { algorithm }) {
       commit('setAlgorithm', algorithm);
-      getters.algorithm.options.forEach((option) => {
-        Object.keys(option.locales).forEach((locale) => {
-          const messages = {};
-          messages.algorithm = {};
-          messages.algorithm.options = {};
-          messages.algorithm.options[option.alias] = option.locales[locale];
-          i18n.mergeLocaleMessage(locale, messages);
-        });
-      });
     },
   },
 };

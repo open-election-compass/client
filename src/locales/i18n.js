@@ -1,8 +1,12 @@
 import Vue from 'vue';
 import VueI18n from 'vue-i18n';
 import { localize } from 'vee-validate';
-import de from './de.json';
-import en from './en.json';
+import {
+  deLocale as deUILocale,
+  enLocale as enUILocale,
+} from '@open-election-compass/ui';
+import de from './de.yaml';
+import en from './en.yaml';
 
 Vue.use(VueI18n);
 
@@ -17,7 +21,10 @@ const i18n = new VueI18n({
 });
 
 i18n.setLocaleMessage('de', de);
+i18n.mergeLocaleMessage('de', deUILocale);
+
 i18n.setLocaleMessage('en', en);
+i18n.mergeLocaleMessage('en', enUILocale);
 
 localize('de', de.validation);
 localize('en', en.validation);

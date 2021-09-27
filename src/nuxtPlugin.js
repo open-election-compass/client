@@ -23,8 +23,8 @@ import storeModuleOptions from './store/modules/options/options';
 import storeModuleParties from './store/modules/parties/parties';
 import storeModuleSections from './store/modules/sections/sections';
 import storeModuleTheses from './store/modules/theses/theses';
-import de from './locales/de.json';
-import en from './locales/en.json';
+import de from './locales/de.yaml';
+import en from './locales/en.yaml';
 
 export default function installOpenElectionCompassNuxtPlugin({ app, store }) {
   // Install locales

@@ -1,8 +1,8 @@
 <template>
   <div class="compare-section">
     <PageSection class="compare-section__introduction" data-section="compare">
-      <h2 class="compare-section__heading">{{ $t('heading') }}</h2>
-      <p>{{ $t('explanation') }}</p>
+      <h2 class="compare-section__heading">{{ $t('views.home.compare.section.heading') }}</h2>
+      <p>{{ $t('views.home.compare.section.explanation') }}</p>
       <KioskModeHint v-if="kioskMode" />
     </PageSection>
     <PageSection
@@ -11,7 +11,7 @@
       class="compare-section__theses"
       role="region"
       :data-section="`compare-thesis-${thesis.index}`"
-      :aria-label="$t('region-aria', { count: thesis.index + 1, total })"
+      :aria-label="$t('views.home.compare.section.region-aria', { count: thesis.index + 1, total })"
       :id="`compare-thesis-${thesis.index}`"
     >
       <Statement
@@ -72,23 +72,6 @@ export default {
   },
 };
 </script>
-
-<!-- eslint-disable max-len -->
-<i18n>
-{
-  "en": {
-    "heading": "Their answers",
-    "explanation": "The parties typically provide statements for every thesis to explain their reasoning. It is not always obvious why a party asumes a certain position so it is recommended to read this statements or the respective election manifestos.",
-    "region-aria": "Thesis {count} of {total}"
-  },
-  "de": {
-    "heading": "Die Antworten",
-    "explanation": "Die Parteien stellen üblicherweise eine Erklärung zu jeder Entscheidung bereit. Da es nicht immer offensichtlich ist, warum eine Partei eine bestimmte Position vertritt, empfiehlt es sich, diese Erklärungen oder die jeweiligen Wahlprogramme zu lesen.",
-    "region-aria": "These {count} von {total}"
-  }
-}
-</i18n>
-<!-- eslint-enable max-len -->
 
 <style lang="scss">
 .compare-section__introduction {

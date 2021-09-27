@@ -9,8 +9,8 @@
     }"
     :data-section="`thesis-${index}`"
     role="region"
-    :aria-roledescription="$t('role-aria')"
-    :aria-label="$t('region-aria', { count: index + 1, total })"
+    :aria-roledescription="$t('views.home.theses.thesis.role-aria')"
+    :aria-label="$t('views.home.theses.thesis.region-aria', { count: index + 1, total })"
     :data-test="`thesis-${index}`"
   >
     <!-- Thesis -->
@@ -178,21 +178,6 @@ export default {
   },
 };
 </script>
-
-<!-- eslint-disable max-len -->
-<i18n>
-{
-  "en": {
-    "role-aria": "Thesis",
-    "region-aria": "Thesis {count} of {total}"
-  },
-  "de": {
-    "role-aria": "These",
-    "region-aria": "These {count} von {total}"
-  }
-}
-</i18n>
-<!-- eslint-enable max-len -->
 
 <style lang="scss">
 .thesis {

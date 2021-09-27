@@ -2,8 +2,8 @@
   <nav class="language-switch">
     <Modal
       :visible="visible"
-      :heading="$t('heading')"
-      :description="$t('description')"
+      :heading="$t('elements.language-switch.heading')"
+      :description="$t('elements.language-switch.description')"
       name="language"
       width="slim"
       icon="language"
@@ -73,18 +73,3 @@ export default {
   }
 }
 </style>
-
-<i18n>
-{
-  "en": {
-    "button": "Languages",
-    "heading": "Languages",
-    "description": "Please choose your preferred language."
-  },
-  "de": {
-    "button": "Sprachen",
-    "heading": "Sprachen",
-    "description": "Bitte wähle deine bevorzugte Sprache."
-  }
-}
-</i18n>

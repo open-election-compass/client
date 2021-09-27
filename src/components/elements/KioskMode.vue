@@ -1,16 +1,16 @@
 <template>
   <Modal
     :visible="isInactive"
-    :heading="$t('heading')"
+    :heading="$t('elements.kiosk-mode.heading')"
     :description="$tc('description', secondsTilReset)"
     :buttons="[
       {
-        caption: this.$t('reset'),
+        caption: this.$t('elements.kiosk-mode.reset'),
         theme: 'neutral',
         eventName: 'reset',
       },
       {
-        caption: this.$t('resume'),
+        caption: this.$t('elements.kiosk-mode.resume'),
         theme: 'primary',
         eventName: 'resume',
       },
@@ -108,22 +108,3 @@ export default {
   },
 };
 </script>
-
-<!-- eslint-disable max-len -->
-<i18n>
-{
-  "en": {
-    "heading": "Should we reset?",
-    "description": "The election compass will be reset now and all your answers will be deleted. | The election compass will be reset in {count} seconds and all your answers will be deleted. | The election compass will be reset in {count} second and all your answers will be deleted.",
-    "reset": "Reset now",
-    "resume": "Not yet!"
-  },
-  "de": {
-    "heading": "Zurücksetzen?",
-    "description": "Der Wahlkompass wird in jetzt zurückgesetzt und deine Antworten gelöscht. | Der Wahlkompass wird in {count} Sekunde zurückgesetzt und deine Antworten gelöscht. | Der Wahlkompass wird in {count} Sekunden zurückgesetzt und deine Antworten gelöscht.",
-    "reset": "Ja, sofort",
-    "resume": "Noch nicht!"
-  }
-}
-</i18n>
-<!-- eslint-enable max-len -->

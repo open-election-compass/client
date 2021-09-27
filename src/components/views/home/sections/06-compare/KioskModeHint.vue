@@ -4,9 +4,9 @@
       <Icon name="undo" />
     </div>
     <strong class="kiosk-mode-hint__heading">
-      {{ $t('heading') }}
+      {{ $t('views.home.compare.kiosk-mode-hint.heading') }}
     </strong>
-    <p>{{ $t('explanation') }}</p>
+    <p>{{ $t('views.home.compare.kiosk-mode-hint.explanation') }}</p>
     <BaseButton
       class="kiosk-mode-hint__button"
       theme="negative"
@@ -14,7 +14,7 @@
       size="small"
       @click="$root.$emit('reset', { seconds: 15 })"
     >
-      {{ $t('reset') }}
+      {{ $t('views.home.compare.kiosk-mode-hint.reset') }}
     </BaseButton>
   </aside>
 </template>
@@ -24,23 +24,6 @@ export default {
   name: 'KioskModeHint',
 };
 </script>
-
-<!-- eslint-disable max-len -->
-<i18n>
-{
-  "en": {
-    "heading": "Please reset when you're done",
-    "explanation": "Take your time reading and comparing the answers statements below. When you're done, you can reset the election compass here for the next person. This will also delete your own answers. Hint: you can also find a reset button in the menu. Thank you!",
-    "reset": "Reset"
-  },
-  "de": {
-    "heading": "Bitte setz mich zurück, wenn du fertig bist",
-    "explanation": "Lies und vergleiche die Erklärungen unterhalb in Ruhe. Wenn du fertig bist, kannst du den Wahlkompass hier für die nächste Person zurücksetzen. Dadurch werden auch deine eigenen Antworten gelöscht. Tipp: Du findest diese Option auch im Menü. Vielen Dank!",
-    "reset": "Zurücksetzen"
-  }
-}
-</i18n>
-<!-- eslint-enable max-len -->
 
 <style lang="scss">
 .kiosk-mode-hint {

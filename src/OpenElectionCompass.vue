@@ -169,7 +169,7 @@ export default {
     parseContent(content) {
       const languages = content.languages.map((language) => language.code);
       if (languages.length === 0) {
-        console.error('No translation loaded, because no translation attributes were found on the base element. Should look like this: <open-election-compass translation-en="https://example.com/en.json" />'); // eslint-disable-line no-console
+        console.error('No translation loaded, because no languages were configured.'); // eslint-disable-line no-console
       }
 
       // Add languages to store
@@ -178,6 +178,7 @@ export default {
           index,
           name: language.name,
           code: language.code,
+          overwrites: language.overwrites ?? null,
         });
       });
       this.$store.dispatch('languages/setBrowserLanguageAsFallback');
@@ -190,7 +191,6 @@ export default {
       // Set up algorithm
       this.$store.dispatch('algorithm/activateAlgorithm', {
         algorithm: _get(content, 'algorithm', 'cityblock/approve-neutral-reject'),
-        i18n: this.$root.$i18n,
       });
 
       // Extract translations from content

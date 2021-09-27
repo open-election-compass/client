@@ -23,14 +23,14 @@
         />
         <i18n
           class="footer-section__project-link"
-          path="explanation"
+          path="views.home.footer.section.explanation"
           tag="p"
           for="oec"
         >
           <a
             href="https://open-election-compass.com"
             target="_blank"
-          >{{ $t('oec') }}</a>
+          >{{ $t('views.home.footer.section.oec') }}</a>
         </i18n>
       </div>
     </PageSection>
@@ -54,21 +54,6 @@ export default {
   },
 };
 </script>
-
-<!-- eslint-disable max-len -->
-<i18n>
-{
-  "en": {
-    "explanation": "This election compass is based on the free open source project {0}.",
-    "oec": "OpenElectionCompass"
-  },
-  "de": {
-    "explanation": "Dieser Wahlkompass basiert auf dem freien Open Source Projekt {0}.",
-    "oec": "OpenElectionCompass"
-  }
-}
-</i18n>
-<!-- eslint-enable max-len -->
 
 <style lang="scss">
 .footer-section__links {

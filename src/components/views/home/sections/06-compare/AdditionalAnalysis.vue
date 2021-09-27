@@ -1,7 +1,7 @@
 <template>
   <Modal
     class="additional-analysis"
-    :heading="$t('heading')"
+    :heading="$t('views.home.compare.additional-analysis.heading')"
     :buttons="modalButtons"
     icon="chart-bar"
     width="narrow"
@@ -11,11 +11,13 @@
   >
     <div v-if="currentQuestion" ref="field">
       <div v-if="currentQuestion.type === 'start'" class="additional-analysis__start">
-        <p>{{ $t('start') }}</p>
+        <p>{{ $t('views.home.compare.additional-analysis.start') }}</p>
       </div>
       <div v-else-if="currentQuestion.type === 'end'" class="additional-analysis__end">
-        <p v-if="$root.$te('analysis.survey')">{{ $t('help-even-more') }}</p>
-        <p v-else>{{ $t('thanks') }}</p>
+        <p v-if="$root.$te('analysis.survey')">
+          {{ $t('views.home.compare.additional-analysis.help-even-more') }}
+        </p>
+        <p v-else>{{ $t('views.home.compare.additional-analysis.thanks') }}</p>
       </div>
       <component
         v-else-if="currentField"
@@ -32,13 +34,13 @@
         :label="currentQuestion.label"
         :rules="currentQuestion.rules"
         :placeholder="
-          $te(`fields.${currentQuestion.alias}.placeholder`)
-          ? $t(`fields.${currentQuestion.alias}.placeholder`)
+          $te(`views.home.compare.additional-analysis.fields.${currentQuestion.alias}.placeholder`)
+          ? $t(`views.home.compare.additional-analysis.fields.${currentQuestion.alias}.placeholder`)
           : undefined
         "
         :description="
-          $te(`fields.${currentQuestion.alias}.description`)
-          ? $t(`fields.${currentQuestion.alias}.description`)
+          $te(`views.home.compare.additional-analysis.fields.${currentQuestion.alias}.description`)
+          ? $t(`views.home.compare.additional-analysis.fields.${currentQuestion.alias}.description`)
           : undefined
         "
         :options="currentQuestion.options"
@@ -98,31 +100,31 @@ export default {
         {
           alias: 'age',
           type: 'number',
-          name: this.$t('fields.age.name'),
-          label: this.$t('fields.age.label'),
+          name: this.$t('views.home.compare.additional-analysis.fields.age.name'),
+          label: this.$t('views.home.compare.additional-analysis.fields.age.label'),
           rules: 'required|integer',
         },
         {
           alias: 'gender',
           type: 'switch',
-          name: this.$t('fields.gender.name'),
-          label: this.$t('fields.gender.label'),
+          name: this.$t('views.home.compare.additional-analysis.fields.gender.name'),
+          label: this.$t('views.home.compare.additional-analysis.fields.gender.label'),
           options: [
             {
               value: 'female',
-              option: this.$t('fields.gender.options.female'),
+              option: this.$t('views.home.compare.additional-analysis.fields.gender.options.female'),
             },
             {
               value: 'diverse',
-              option: this.$t('fields.gender.options.diverse'),
+              option: this.$t('views.home.compare.additional-analysis.fields.gender.options.diverse'),
             },
             {
               value: 'male',
-              option: this.$t('fields.gender.options.male'),
+              option: this.$t('views.home.compare.additional-analysis.fields.gender.options.male'),
             },
             {
               value: 'none',
-              option: this.$t('fields.gender.options.none'),
+              option: this.$t('views.home.compare.additional-analysis.fields.gender.options.none'),
             },
           ],
           rules: 'required',
@@ -130,32 +132,32 @@ export default {
         {
           alias: 'education',
           type: 'switch',
-          name: this.$t('fields.education.name'),
-          label: this.$t('fields.education.label'),
+          name: this.$t('views.home.compare.additional-analysis.fields.education.name'),
+          label: this.$t('views.home.compare.additional-analysis.fields.education.label'),
           options: [
             {
               value: 'student',
-              option: this.$t('fields.education.options.student'),
+              option: this.$t('views.home.compare.additional-analysis.fields.education.options.student'),
             },
             {
               value: 'nothing',
-              option: this.$t('fields.education.options.nothing'),
+              option: this.$t('views.home.compare.additional-analysis.fields.education.options.nothing'),
             },
             {
               value: 'lower',
-              option: this.$t('fields.education.options.lower'),
+              option: this.$t('views.home.compare.additional-analysis.fields.education.options.lower'),
             },
             {
               value: 'higher',
-              option: this.$t('fields.education.options.higher'),
+              option: this.$t('views.home.compare.additional-analysis.fields.education.options.higher'),
             },
             {
               value: 'academic',
-              option: this.$t('fields.education.options.academic'),
+              option: this.$t('views.home.compare.additional-analysis.fields.education.options.academic'),
             },
             {
               value: 'none',
-              option: this.$t('fields.education.options.none'),
+              option: this.$t('views.home.compare.additional-analysis.fields.education.options.none'),
             },
           ],
           rules: 'required',
@@ -163,32 +165,32 @@ export default {
         {
           alias: 'party',
           type: 'select',
-          name: this.$t('fields.party.name'),
-          label: this.$t('fields.party.label'),
+          name: this.$t('views.home.compare.additional-analysis.fields.party.name'),
+          label: this.$t('views.home.compare.additional-analysis.fields.party.label'),
           options: (() => {
             const options = this.parties.map((party) => ({
               value: party.alias,
-              option: this.$t(`parties.${party.index}.short`),
+              option: this.$t(`views.home.compare.additional-analysis.parties.${party.index}.short`),
             }));
             options.push({
               value: '###OTHER###',
-              option: this.$t('fields.party.options.other'),
+              option: this.$t('views.home.compare.additional-analysis.fields.party.options.other'),
             });
             options.push({
               value: '###NON_VOTER###',
-              option: this.$t('fields.party.options.non-voter'),
+              option: this.$t('views.home.compare.additional-analysis.fields.party.options.non-voter'),
             });
             options.push({
               value: '###NOT_ELIGIBLE###',
-              option: this.$t('fields.party.options.not-eligible'),
+              option: this.$t('views.home.compare.additional-analysis.fields.party.options.not-eligible'),
             });
             options.push({
               value: '###NOT_SURE###',
-              option: this.$t('fields.party.options.not-sure'),
+              option: this.$t('views.home.compare.additional-analysis.fields.party.options.not-sure'),
             });
             options.push({
               value: '###NONE###',
-              option: this.$t('fields.party.options.none'),
+              option: this.$t('views.home.compare.additional-analysis.fields.party.options.none'),
             });
             return options;
           })(),
@@ -223,7 +225,7 @@ export default {
       // Close Button
       const buttons = [
         {
-          caption: this.$t('buttons.close'),
+          caption: this.$t('views.home.compare.additional-analysis.buttons.close'),
           theme: 'neutral',
           eventName: 'close',
           disabled: this.currentQuestionAlias === 'start',
@@ -234,7 +236,7 @@ export default {
       if (this.currentQuestionAlias === 'end' && this.$root.$te('analysis.survey')) {
         buttons.push({
           tag: 'a',
-          caption: this.$t('buttons.open-questionnaire'),
+          caption: this.$t('views.home.compare.additional-analysis.buttons.open-questionnaire'),
           theme: 'primary',
           href: this.$t('analysis.survey'),
           target: '_blank',
@@ -246,8 +248,8 @@ export default {
       if (this.currentQuestionAlias !== 'end') {
         buttons.push({
           caption: this.currentQuestionAlias === 'start'
-            ? this.$t('buttons.start')
-            : this.$t('buttons.proceed'),
+            ? this.$t('views.home.compare.additional-analysis.buttons.start')
+            : this.$t('views.home.compare.additional-analysis.buttons.proceed'),
           theme: 'positive',
           eventName: 'proceed',
         });
@@ -306,116 +308,3 @@ export default {
   }
 }
 </style>
-
-<!-- eslint-disable max-len -->
-<i18n>
-{
-  "en": {
-    "heading": "Statistics",
-    "buttons": {
-      "close": "Quit",
-      "start": "Let's go",
-      "proceed": "Submit and next",
-      "open-questionnaire": "Open survey in new tab"
-    },
-    "start": "Thank you for sharing! Your data becomes more valuable for statistics if you share some more background information about yourself – would you help some more? Simply answer as many questions as you like!",
-    "help-even-more": "Thank you very much! Would you like to help even more? You can answer some more specific questions here:",
-    "thanks": "Thank you for sharing! Those were all the questions – you helped us a lot! Click on 'Quit' to go back to your results.",
-    "fields": {
-      "age": {
-        "name": "Age",
-        "label": "How old are you now?",
-        "placeholder": "25",
-        "description": "Your age is important to research what people of different age groups think about the theses and parties."
-      },
-      "gender": {
-        "name": "Gender",
-        "label": "What is your gender?",
-        "options": {
-          "female": "female",
-          "diverse": "diverse",
-          "male": "male",
-          "none": "no answer"
-        }
-      },
-      "education": {
-        "name": "Qualification",
-        "label": "What is your highest educational qualification?",
-        "options": {
-          "student": "Currently a student",
-          "nothing": "No complete qualification",
-          "lower": "Middle School or similar",
-          "higher": "High School or similar",
-          "academic": "Academic",
-          "none": "no answer"
-        }
-      },
-      "party": {
-        "name": "Party",
-        "label": "If the election was today, who would you cast your vote for?",
-        "options": {
-          "other": "Other",
-          "non-voter": "I won't vote",
-          "not-eligible": "I am not eligible",
-          "not-sure": "I'm not sure",
-          "none": "no answer"
-        }
-      }
-    }
-  },
-  "de": {
-    "heading": "Statistik",
-    "buttons": {
-      "close": "Beenden",
-      "start": "Los geht's",
-      "proceed": "Senden und weiter",
-      "open-questionnaire": "Umfrage in neuem Tab öffnen"
-    },
-    "start": "Vielen Dank für's Teilen! Dein Datensatz wird wertvoller, wenn du noch einige Fragen zu deiner Person beantwortest – würdest du noch etwas mehr mithelfen? Beantworte einfach so viele Fragen, wie du möchtest!",
-    "help-even-more": "Vielen Dank! Möchtest du noch mehr tun? Dann kannst du noch ein paar genauere Fragen beantworten:",
-    "thanks": "Vielen Dank! Das waren alle Fragen – du hast uns sehr geholfen. Klicke auf 'Beenden' um zu deinem Ergebnis zurückzukehren.",
-    "fields": {
-      "age": {
-        "name": "Alter",
-        "label": "Wie alt bist du?",
-        "placeholder": "25",
-        "description": "Dein Alter ist wichtig um zu ermitteln wie die jeweiligen Altersgruppen zu den Thesen und Parteien stehen."
-      },
-      "gender": {
-        "name": "Geschlecht",
-        "label": "Welches Geschlecht hast du?",
-        "options": {
-          "female": "weiblich",
-          "diverse": "divers",
-          "male": "männlich",
-          "none": "keine Angabe"
-        }
-      },
-      "education": {
-        "name": "Bildungsabschluss",
-        "label": "Was ist dein höchster Bildungsabschluss?",
-        "options": {
-          "student": "Noch Schüler:in",
-          "nothing": "Schule beendet ohne Abschluss",
-          "lower": "Haupt- oder Realschulabschluss",
-          "higher": "Abitur oder Fachoberschulreife",
-          "academic": "Abgeschlossenes Studium",
-          "none": "keine Angabe"
-        }
-      },
-      "party": {
-        "name": "Partei",
-        "label": "Wenn heute der gewählt würde, wer bekäme deine Stimme?",
-        "options": {
-          "other": "Sonstige",
-          "non-voter": "Ich nehme nicht teil",
-          "not-eligible": "Ich bin nicht stimmberechtigt",
-          "not-sure": "Ich bin nicht sicher",
-          "none": "keine Angabe"
-        }
-      }
-    }
-  }
-}
-</i18n>
-<!-- eslint-enable max-len -->

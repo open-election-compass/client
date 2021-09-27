@@ -1,6 +1,8 @@
 <template>
   <div class="guests-list">
-    <p v-if="guests.length < 1" class="guests-list__empty">{{ $t('empty') }}</p>
+    <p v-if="guests.length < 1" class="guests-list__empty">
+      {{ $t('elements.guests-list.empty') }}
+    </p>
     <table v-else class="guests-list__guests">
       <tr
         v-for="guest in guests"
@@ -24,17 +26,17 @@
             size="small"
             @click="$store.commit('friends/host/acceptGuest', { peerId: guest.peerId })"
           >
-            {{ $t('accept') }}
+            {{ $t('elements.guests-list.accept') }}
           </BaseButton>
           <small v-else>
             <template v-if="guest.connectionStatus === 'CONNECTED' && guest.accepted">
-              {{ $t('status.connected') }}
+              {{ $t('elements.guests-list.status.connected') }}
             </template>
             <template v-else-if="guest.connectionStatus === 'CONNECTING'">
-              {{ $t('status.connecting') }}
+              {{ $t('elements.guests-list.status.connecting') }}
             </template>
             <template v-else-if="guest.connectionStatus === 'DISCONNECTED'">
-              {{ $t('status.disconnected') }}
+              {{ $t('elements.guests-list.status.disconnected') }}
             </template>
           </small>
         </td>
@@ -131,28 +133,3 @@ export default {
   }
 }
 </style>
-
-<i18n>
-{
-  "en": {
-    "heading": "Connected devices",
-    "empty": "Nobody joined the session yet.",
-    "accept": "Accept",
-    "status": {
-      "connecting": "Connecting",
-      "connected": "Connected",
-      "disconnected": "Disconnected"
-    }
-  },
-  "de": {
-    "heading": "Verbundene Geräte",
-    "empty": "Bisher ist niemand der Sitzung beigetreten.",
-    "accept": "Hinzufügen",
-    "status": {
-      "connecting": "Verbinden ...",
-      "connected": "Verbunden",
-      "disconnected": "Getrennt"
-    }
-  }
-}
-</i18n>

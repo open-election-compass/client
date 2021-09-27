@@ -5,7 +5,7 @@
     data-section="start"
     full
     role="banner"
-    :aria-roledescription="$t('banner-aria')"
+    :aria-roledescription="$t('views.home.start.section.banner-aria')"
   >
     <!-- wrapping div needed for IE11 -->
     <div class="start-section__logo">
@@ -30,17 +30,6 @@ export default {
   },
 };
 </script>
-
-<i18n>
-{
-  "en": {
-    "banner-aria": "Start section"
-  },
-  "de": {
-    "banner-aria": "Startseite"
-  }
-}
-</i18n>
 
 <style lang="scss">
 .start-section {

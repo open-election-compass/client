@@ -1,6 +1,7 @@
 import getUserLocale from 'get-user-locale';
+import i18n from '@/locales/i18n';
 
-const supportedLanguages = ['en', 'de'];
+const officialLanguages = ['en', 'de'];
 
 export default {
   namespaced: true,
@@ -31,8 +32,12 @@ export default {
   },
   mutations: {
     addLanguage(state, language) {
-      if (!supportedLanguages.includes(language.code)) {
-        throw new Error(`The language code '${language.code}' is not recognized. The language might not be supported yet. Please open an issue to add a new language to this project.`);
+      if (!officialLanguages.includes(language.code)) {
+        // eslint-disable-next-line no-console
+        console.warn(`The language code '${language.code}' is not recognized as an officially supported language. This is not a concern if you added a custom language. If you want to expand the official language support, please get in touch with the maintainers.`);
+      }
+      if (typeof language.overwrites === 'object') {
+        i18n.mergeLocaleMessage(language.code, language.overwrites);
       }
       state.languages.push({
         code: language.code,

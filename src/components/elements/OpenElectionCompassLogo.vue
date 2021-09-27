@@ -5,7 +5,7 @@
     version="1.1"
     xmlns="http://www.w3.org/2000/svg"
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    :alt="$t('alt')"
+    :alt="$t('elements.open-election-compass-logo.alt')"
   >
     <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
       <path
@@ -48,14 +48,3 @@ export default {
   },
 };
 </script>
-
-<i18n>
-{
-  "en": {
-    "alt": "Logo of the Election Compass"
-  },
-  "de": {
-    "alt": "Logo des Wahl-Kompasses"
-  }
-}
-</i18n>

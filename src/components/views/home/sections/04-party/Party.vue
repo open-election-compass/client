@@ -10,7 +10,7 @@
     <button
       :for="`party-${index}-checkbox`"
       class="party__button"
-      :aria-label="$t('party-aria', { party: $t(`parties.${index}.name`) })"
+      :aria-label="$t('views.home.party.party.party-aria', { party: $t(`parties.${index}.name`) })"
       role="checkbox"
       tabindex="0"
       :aria-checked="selected"
@@ -62,19 +62,6 @@ export default {
   },
 };
 </script>
-
-<!-- eslint-disable max-len -->
-<i18n>
-{
-  "en": {
-    "party-aria": "Party '{party}' – click here to select or deselect this party for comparison."
-  },
-  "de": {
-    "party-aria": "Partei '{party}' – klicke hier um diese Partei zum Vergleich aus- bzw. abzuwählen."
-  }
-}
-</i18n>
-<!-- eslint-enable max-len -->
 
 <style lang="scss">
 .party__button {
