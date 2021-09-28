@@ -1,3 +1,4 @@
+---
 elements:
   friends-invite-modal:
     heading: "Freund:innen einladen"
@@ -211,9 +212,9 @@ views:
         heading: "Die Antworten"
         explanation: "Die Parteien stellen üblicherweise eine Erklärung zu jeder Entscheidung bereit. Da es nicht immer offensichtlich ist, warum eine Partei eine bestimmte Position vertritt, empfiehlt es sich, diese Erklärungen oder die jeweiligen Wahlprogramme zu lesen."
         region-aria: "These {count} von {total}"
-      friends-positions:
+      friends-position:
         answer-aria: "{name}: {position}"
-        skip: "Übersprungen"
+        skip: "Skipped"
       kiosk-mode-hint:
         heading: "Bitte setz mich zurück, wenn du fertig bist"
         explanation: "Lies und vergleiche die Erklärungen unterhalb in Ruhe. Wenn du fertig bist, kannst du den Wahlkompass hier für die nächste Person zurücksetzen. Dadurch werden auch deine eigenen Antworten gelöscht. Tipp: Du findest diese Option auch im Menü. Vielen Dank!"
