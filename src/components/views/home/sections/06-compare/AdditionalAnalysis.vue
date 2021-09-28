@@ -170,7 +170,7 @@ export default {
           options: (() => {
             const options = this.parties.map((party) => ({
               value: party.alias,
-              option: this.$t(`views.home.compare.additional-analysis.parties.${party.index}.short`),
+              option: this.$t(`parties.${party.index}.short`),
             }));
             options.push({
               value: '###OTHER###',
