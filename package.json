@@ -7,7 +7,6 @@
   "files": [
     "/dist/lib",
     "/dist/nuxt",
-    "/src",
     "LICENSE",
     "README.md"
   ],
@@ -27,8 +26,8 @@
     "serve": "vue-cli-service serve",
     "build": "npm run build:demo && npm run build:lib && npm run build:nuxt",
     "build:demo": "vue-cli-service build --target app --inline-vue --name open-election-compass --dest dist/demo",
-    "build:lib": "npx vue-cli-service build --target lib --inline-vue --name open-election-compass --dest dist/lib ./src/main.js --report && unlink dist/lib/demo.html",
-    "build:nuxt": "EXTRACT_CSS=true npx vue-cli-service build --target lib --name open-election-compass --dest dist/nuxt ./src/nuxtPlugin.js --formats umd-min --report",
+    "build:lib": "npx vue-cli-service build --target lib --inline-vue --name open-election-compass --dest dist/lib ./src/main.js && unlink dist/lib/demo.html",
+    "build:nuxt": "EXTRACT_CSS=true npx vue-cli-service build --target lib --name open-election-compass --dest dist/nuxt ./src/nuxtPlugin.js --formats umd-min && cp src/nuxtModule.js dist/nuxt/",
     "test": "npm run test:unit",
     "test:unit": "vue-cli-service test:unit",
     "test:e2e": "vue-cli-service test:e2e",
