@@ -240,7 +240,7 @@ export default {
         this.$store.commit('parties/addParty', {
           index,
           alias: party.alias,
-          selected: false,
+          selected: content.parties.length > 9, // preselect all parties if there are too many
           logo: party.logo === undefined ? null : party.logo,
         });
       });
