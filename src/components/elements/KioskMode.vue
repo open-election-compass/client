@@ -2,7 +2,7 @@
   <Modal
     :visible="isInactive"
     :heading="$t('elements.kiosk-mode.heading')"
-    :description="$tc('description', secondsTilReset)"
+    :description="$tc('elements.kiosk-mode.description', secondsTilReset)"
     :buttons="[
       {
         caption: this.$t('elements.kiosk-mode.reset'),
