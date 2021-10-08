@@ -12,119 +12,119 @@ elements:
       explanation:
         - "الهدف من الجلسة المشتركة هو أن تستخدم \"بوصلة الانتخابات\" برفقة أصدقائك. يجب على أحد الأشخاص أن يدعو أصدقائه -أولاً- إلى الجلسة المشتركة، وبعد أن ينضم الجميع إلى الجلسة يمكنهم أن يبدؤوا باستخدام \"بوصلة الانتخابات\" مثلما يستخدمونها عادةً، غير أنهم سوف يرون إجابات بعضهم بعضاً وسوف يستطيعون مناقشتها معاً."
     security:
-      heading: "Are my answers safe?"
+      heading: "هل إجاباتنا سرية؟"
       explanation:
-        - "Yes! Your answers are exchanged directly between your devices via a secure connection. A server helps the devices find themselves on the Internet - your answers, however, are not sent via the server, but directly from device to device."
+        - "نعم! تنتقل إجاباتكم بين أجهزتكم بدون وسيط خارجي وعبر اتصال آمن. وظيفة خوادمنا هي مساعدة أجهزتكم على الاتصال ببعضها عبر الإنترنت، وأما أجوبتكم فهي لا تنتقل إلى خوادمنا، وإنما بين أجهزتكم حصراً."
     registration:
-      heading: "Do I need to register to use this feature?"
+      heading: "هل أحتاج لتسجيل حسابٍ للاستفادة من هذه الميزة؟"
       explanation:
-        - "No registration is necessary. All you have to do is enter your name and you can join a session."
-    cancel: "Cancel"
-    confirm: "Open session"
+        - "لست مضطراً لتسجيل حساب. كل ما عليك هو كتابة اسمك والانضمام إلى جلسة."
+    cancel: "تراجع"
+    confirm: "ابدأ جلسة"
   friends-join-modal:
-    heading: "Join friends"
-    description: "Connect with your friends in a shared session and see everyone's answers in real time."
+    heading: "انضم لأصدقائك"
+    description: "انضم لأصدقائك في جلسة مشتركة لتطّلع على أجوبتهم."
     form:
       name:
-        label: "Your name / nickname"
-        description: "Please provide your name so your friends can recognize you. You can also use a nickname."
+        label: "اسمك أو كنيتك"
+        description: "اكتب اسمك -لطفاً- لكي يعرفك أصدقاؤك. بإمكانك اختيار كنية بدل اسمك الحقيقي."
       join:
-        label: "Friend's device"
-        description: "Join a shared session by entering the device ID of whoever is hosting the session."
+        label: "جهاز صديقك"
+        description: "للانصمام إلى الجلسة المشتركة، عليك إدخال الرقم التعريفي (ID) لجهاز مضيف الجلسة؛ أي الشخص الذي بدأها."
     introduction:
-      heading: "What is a shared session?"
+      heading: "ما هي الجلسة المشتركة؟"
       explanation:
-        - "A shared session allows you to experience the election compass with your friends. One person invites the others to a shared session. Once everyone joined, you can each use the election compass as you normally would. But in addition to the parties, you can now also see each other's answers and start a discussion."
+        - "الهدف من الجلسة المشتركة هو أن تستخدم \"بوصلة الانتخابات\" برفقة أصدقائك. يجب على أحد الأشخاص أن يدعو أصدقائه -أولاً- إلى الجلسة المشتركة، وبعد أن ينضم الجميع إلى الجلسة يمكنهم أن يبدؤوا باستخدام \"بوصلة الانتخابات\" مثلما يستخدمونها عادةً، غير أنهم سوف يرون إجابات بعضهم بعضاً وسوف يستطيعون مناقشتها معاً."
     security:
-      heading: "Are my answers safe?"
+      heading: "هل إجاباتنا سرية؟"
       explanation:
-        - "Yes! Your answers are exchanged directly between your devices via a secure connection. A server helps the devices find themselves on the Internet - your answers, however, are not sent via the server, but directly from device to device."
+        - "نعم! تنتقل إجاباتكم بين أجهزتكم بدون وسيط خارجي وعبر اتصال آمن. وظيفة خوادمنا هي مساعدة أجهزتكم على الاتصال ببعضها عبر الإنترنت، وأما أجوبتكم فهي لا تنتقل إلى خوادمنا، وإنما بين أجهزتكم حصراً."
     registration:
-      heading: "Do I need to register to use this feature?"
+      heading: "هل أحتاج لتسجيل حسابٍ للاستفادة من هذه الميزة؟"
       explanation:
-        - "No registration is necessary. All you have to do is enter your name and you can join a session."
-    cancel: "Cancel"
-    confirm: "Join"
+        - "لست مضطراً لتسجيل حساب. كل ما عليك هو كتابة اسمك والانضمام إلى جلسة."
+    cancel: "تراجع"
+    confirm: "انضم"
   friends-list:
-    heading: "Connected devices"
-    empty: "The host needs to accept you're request to join the session."
-    host: "Host"
+    heading: "الأجهزة المتصلة"
+    empty: "يجب أن يوافق المضيف على طلبك للانضمام إلى الجلسة."
+    host: "المضيف"
   friends-status-modal:
-    heading: "Shared Session"
+    heading: "جلسة مشتركة"
     mode:
       INACTIVE:
-        heading: "Not connected"
-        text: "You're not connected to anybody. Join your an existing session or host your own over the main menu."
+        heading: "غير متصل"
+        text: "أنت لستَ متصلاً بأي شخص. عليك الانضمام إلى جلسة موجودة أو بدأ جلسة جديدة من القائمة الرئيسية."
       GUEST:
-        heading: "Guest"
-        text: "You're participating in a shared session, hosted by someone else."
+        heading: "ضيف"
+        text: "أنت تشارك في جلسة مشتركة يستضيفها شخص غيرك."
       HOST:
-        heading: "Host"
-        text: "You're the host of this session. Invite your friends using your device ID and accept their requests to join."
+        heading: "المضيف"
+        text: "أنت مضيف الجلسة. إن أردت دعوة أصدقائك فيجب عليك أن ترسل إليهم رقم جهازك التعريفي (ID)، ثم أن تقبل طلبات انضمامهم."
     own-peer-id:
-      label: "Your device"
-      description: "This is your device ID. Your friends need to enter this on their device to connect to our shared session."
+      label: "جهازك"
+      description: "هذا هو رقم جهازك التعريفي (ID). يجب على أصدقائك إدخال هذا الرقم للانضمام إلى الجلسة المشتركة."
   guests-list:
-    heading: "Connected devices"
-    empty: "Nobody joined the session yet."
-    accept: "Accept"
+    heading: "الأجهزة المتصلة"
+    empty: "لم ينضم أحد للجلسة."
+    accept: "قبول"
     status:
-      connecting: "Connecting"
-      connected: "Connected"
-      disconnected: "Disconnected"
+      connecting: "بحث عن اتصال"
+      connected: "متصل"
+      disconnected: "انقطع الاتصال"
   guide-button:
-    start: "Let's go"
-    introduction: "Learn how this works"
-    first-thesis: "Start with the first thesis"
-    thesis: "Proceed to the next thesis"
-    party: "Select the parties"
-    match: "See your result"
-    compare: "Read the statements"
+    start: "لنبدأ"
+    introduction: "علِّمني كيفية استخدام الأداة"
+    first-thesis: "اطلع على أول سؤال"
+    thesis: "السؤال التالي"
+    party: "اختر أشخاصاً أو جهات"
+    match: "شاهد النتيجة"
+    compare: "اقرأ التفاصيل"
   kiosk-mode:
-    heading: "Should we reset?"
-    description: "The election compass will be reset now and all your answers will be deleted. | The election compass will be reset in {count} seconds and all your answers will be deleted. | The election compass will be reset in {count} second and all your answers will be deleted."
-    reset: "Reset now"
-    resume: "Not yet!"
+    heading: "أترغب بالإعادة؟"
+    description: "سوف تحذف كل إجاباتك وتعود \"بوصلة الانتخابات\" فارغة. | سوف تُعَاد \"بوصلة الانتخابات\" خلال {count} ثوانٍ وسوف تُحْذَف كل إجاباتك. | سوف تُعَاد \"بوصلة الانتخابات\" خلال {count} ثانية وسوف تُحْذَف كل إجاباتك."
+    reset: "الإعادة الآن"
+    resume: "ليس بعد!"
   language-switch:
-    button: "Languages"
-    heading: "Languages"
-    description: "Please choose your preferred language."
+    button: "اللغات"
+    heading: "اللغات"
+    description: "اختر لغتك رجاءً."
   main-navigation:
-    menu: "Menu"
-    thesis: "Thesis {count}"
+    menu: "القائمة"
+    thesis: "السؤال {count}"
     links:
-      compass: "Election Compass"
-      languages: "Change language"
-      friends-join: "Join friends"
-      friends-invite: "Invite friends"
-      reset: "Reset"
-      home: "Start"
-      introduction: "Introduction"
-      theses: "Theses"
-      evaluation: "Evaluation"
-      party: "Party selection"
-      match: "Result"
-      compare: "Statements"
-      about: "About"
+      compass: "بوصلة الانتخابات"
+      languages: "تغيير اللغة"
+      friends-join: "انضم لأصدقائك"
+      friends-invite: "ادع أصدقاءك"
+      reset: "إعادة"
+      home: "ابدأ"
+      introduction: "مقدمة"
+      theses: "الأسئلة"
+      evaluation: "تحليل الإجابات"
+      party: "اختيار الأشخاص أو الجهات"
+      match: "النتيجة"
+      compare: "التفاصيل"
+      about: "من نحن"
   open-election-compass-logo:
-    alt: "Logo of the Election Compass"
+    alt: "شعار \"بوصلة الانتخابات\""
   show-more:
-    show: "show more"
-    hide: "hide"
+    show: "رؤية المزيد"
+    hide: "إخفاء"
 views:
   home:
     home:
-      role-aria: "Election Compass"
+      role-aria: "بوصلة الانتخابات"
     start:
       section:
-        banner-aria: "Start section"
+        banner-aria: "ابدأ القسم"
     theses:
       important-button:
-        important: "Important to me"
-        important-aria: "Important – marks this thesis as important for you."
-        too-many-important: "There are only very few theses, so you cannot mark one as important. | Please mark no more than 1 thesis as important to receive a meaningful result! | Please mark no more than {count} theses as important to receive a meaningful result!"
+        important: "مهم بالنسبة لي"
+        important-aria: "مهم: استخدم هذا الخيار لو كان السؤال مهماً بنظرك."
+        too-many-important: "الأسئلة قليلة جداً، لذا لن تستطيع تصنيف هذا السؤال كمهم. | عليك -لطفاً- ألا تُصنِّف أكثر من سؤال واحد كمهم، لتحصل على نتيجة مفيدة! | عليك -لطفاً- ألا تُصنِّف أكثر من {count} سؤال كمهم، لتحصل على نتيجة مفيدة!"
       skip-button:
-        skip: "I don't know"
+        skip: "لا أعرف"
         skip-aria: "Skip – skips this thesis so it will not be counted."
         too-many-skip: "There are only very few theses, so you cannot skip one. | Please skip no more than 1 thesis to receive a meaningful result! | Please skip no more than {count} theses to receive a meaningful result!"
       statement:
