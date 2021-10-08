@@ -1,16 +1,16 @@
 ---
 elements:
   friends-invite-modal:
-    heading: "Invite friends"
-    description: "Invite your friends to a shared session where everyone can see each other's answers in real time."
+    heading: "ادع أصدقاءك"
+    description: "ادع أصدقاءك لجلسة مشتركة تستطيعون فيها رؤية إجابات بعضكم بعضاً."
     form:
       name:
-        label: "Your name / nickname"
-        description: "Please provide your name so your friends can recognize you. You can also use a nickname."
+        label: "اسمك أو كنيتك"
+        description: "اكتب اسمك -لطفاً- لكي يعرفك أصدقاؤك. بإمكانك اختيار كنية بدل اسمك الحقيقي."
     introduction:
-      heading: "What is a shared session?"
+      heading: "ما هي الجلسة المشتركة؟"
       explanation:
-        - "A shared session allows you to experience the election compass with your friends. One person invites the others to a shared session. Once everyone joined, you can each use the election compass as you normally would. But in addition to the parties, you can now also see each other's answers and start a discussion."
+        - "الهدف من الجلسة المشتركة هو أن تستخدم \"بوصلة الانتخابات\" برفقة أصدقائك. يجب على أحد الأشخاص أن يدعو أصدقائه -أولاً- إلى الجلسة المشتركة، وبعد أن ينضم الجميع إلى الجلسة يمكنهم أن يبدؤوا باستخدام \"بوصلة الانتخابات\" مثلما يستخدمونها عادةً، غير أنهم سوف يرون إجابات بعضهم بعضاً وسوف يستطيعون مناقشتها معاً."
     security:
       heading: "Are my answers safe?"
       explanation:
