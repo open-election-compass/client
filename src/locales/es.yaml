@@ -1,80 +1,80 @@
 ---
 elements:
   friends-invite-modal:
-    heading: "Invite friends"
-    description: "Invite your friends to a shared session where everyone can see each other's answers in real time."
+    heading: "Invitar a amigos"
+    description: "Invita a tus amigos a una sesión compartida en la que todos pueden ver las respuestas de los demás en tiempo real."
     form:
       name:
-        label: "Your name / nickname"
-        description: "Please provide your name so your friends can recognize you. You can also use a nickname."
+        label: "Tu nombre / apodo"
+        description: "Indica tu nombre para que tus amigos puedan reconocerte. También puedes utilizar un apodo."
     introduction:
-      heading: "What is a shared session?"
+      heading: "¿Qué es una sesión compartida?"
       explanation:
-        - "A shared session allows you to experience the election compass with your friends. One person invites the others to a shared session. Once everyone joined, you can each use the election compass as you normally would. But in addition to the parties, you can now also see each other's answers and start a discussion."
+        - "Una sesión compartida te permite experimentar la brújula electoral con tus amigos. Una persona invita a los demás a una sesión compartida. Una vez que todos se han unido, cada uno puede utilizar la brújula electoral como lo haría normalmente. Pero además de los grupos, ahora también puedes ver las respuestas de los demás e iniciar un debate."
     security:
-      heading: "Are my answers safe?"
+      heading: "¿Son seguras mis respuestas?"
       explanation:
-        - "Yes! Your answers are exchanged directly between your devices via a secure connection. A server helps the devices find themselves on the Internet - your answers, however, are not sent via the server, but directly from device to device."
+        - "Sí, tus respuestas se intercambian directamente entre tus dispositivos a través de una conexión segura. Un servidor ayuda a los dispositivos a encontrarse en Internet, pero tus respuestas no se envían a través del servidor, sino directamente de dispositivo a dispositivo."
     registration:
-      heading: "Do I need to register to use this feature?"
+      heading: "¿Tengo que registrarme para utilizar esta función?"
       explanation:
-        - "No registration is necessary. All you have to do is enter your name and you can join a session."
-    cancel: "Cancel"
-    confirm: "Open session"
+        - "No es necesario registrarse. Solo tienes que introducir tu nombre y podrás unirte a una sesión."
+    cancel: "Anular"
+    confirm: "Sesión abierta"
   friends-join-modal:
-    heading: "Join friends"
-    description: "Connect with your friends in a shared session and see everyone's answers in real time."
+    heading: "Únete a tus amigos"
+    description: "Conéctate con tus amigos en una sesión compartida y ve las respuestas de todos en tiempo real."
     form:
       name:
-        label: "Your name / nickname"
-        description: "Please provide your name so your friends can recognize you. You can also use a nickname."
+        label: "Tu nombre / apodo"
+        description: "Indica tu nombre para que tus amigos puedan reconocerte. También puedes utilizar un apodo."
       join:
-        label: "Friend's device"
-        description: "Join a shared session by entering the device ID of whoever is hosting the session."
+        label: "Dispositivo del amigo"
+        description: "Únete a una sesión compartida introduciendo el ID del dispositivo de quien aloja la sesión."
     introduction:
-      heading: "What is a shared session?"
+      heading: "¿Qué es una sesión compartida?"
       explanation:
-        - "A shared session allows you to experience the election compass with your friends. One person invites the others to a shared session. Once everyone joined, you can each use the election compass as you normally would. But in addition to the parties, you can now also see each other's answers and start a discussion."
+        - "Una sesión compartida te permite experimentar la brújula electoral con tus amigos. Una persona invita a los demás a una sesión compartida. Una vez que todos se han unido, cada uno puede utilizar la brújula electoral como lo haría normalmente. Pero además de los grupos, ahora también puedes ver las respuestas de los demás e iniciar un debate."
     security:
-      heading: "Are my answers safe?"
+      heading: "¿Son seguras mis respuestas?"
       explanation:
-        - "Yes! Your answers are exchanged directly between your devices via a secure connection. A server helps the devices find themselves on the Internet - your answers, however, are not sent via the server, but directly from device to device."
+        - "Sí, tus respuestas se intercambian directamente entre tus dispositivos a través de una conexión segura. Un servidor ayuda a los dispositivos a encontrarse en Internet, pero tus respuestas no se envían a través del servidor, sino directamente de dispositivo a dispositivo."
     registration:
-      heading: "Do I need to register to use this feature?"
+      heading: "¿Tengo que registrarme para utilizar esta función?"
       explanation:
-        - "No registration is necessary. All you have to do is enter your name and you can join a session."
-    cancel: "Cancel"
-    confirm: "Join"
+        - "No es necesario registrarse. Solo tienes que introducir tu nombre y podrás unirte a una sesión."
+    cancel: "Anular"
+    confirm: "Únete"
   friends-list:
-    heading: "Connected devices"
-    empty: "The host needs to accept you're request to join the session."
-    host: "Host"
+    heading: "Dispositivos conectados"
+    empty: "El anfitrión debe aceptar tu solicitud para unirse a la sesión."
+    host: "Anfitrión"
   friends-status-modal:
-    heading: "Shared Session"
+    heading: "Sesión compartida"
     mode:
       INACTIVE:
-        heading: "Not connected"
-        text: "You're not connected to anybody. Join your an existing session or host your own over the main menu."
+        heading: "No conectado"
+        text: "No estás conectado con nadie. Únete a una sesión existente o organiza la tuya propia a través del menú principal."
       GUEST:
-        heading: "Guest"
-        text: "You're participating in a shared session, hosted by someone else."
+        heading: "Invitado"
+        text: "Estás participando en una sesión compartida, organizada por otra persona."
       HOST:
-        heading: "Host"
-        text: "You're the host of this session. Invite your friends using your device ID and accept their requests to join."
+        heading: "Anfitrión"
+        text: "Eres el anfitrión de esta sesión. Invita a tus amigos con el ID de tu dispositivo y acepta sus solicitudes de participación."
     own-peer-id:
-      label: "Your device"
-      description: "This is your device ID. Your friends need to enter this on their device to connect to our shared session."
+      label: "Tu dispositivo"
+      description: "Este es el ID de tu dispositivo. Tus amigos deben introducirlo en su dispositivo para conectarse a nuestra sesión compartida."
   guests-list:
-    heading: "Connected devices"
-    empty: "Nobody joined the session yet."
-    accept: "Accept"
+    heading: "Dispositivos conectados"
+    empty: "Todavía no se ha incorporado nadie a la sesión."
+    accept: "Aceptar"
     status:
-      connecting: "Connecting"
-      connected: "Connected"
-      disconnected: "Disconnected"
+      connecting: "Conectando"
+      connected: "Conectado"
+      disconnected: "Desconectado"
   guide-button:
-    start: "Let's go"
-    introduction: "Learn how this works"
+    start: "Vamos"
+    introduction: "Aprende cómo funciona"
     first-thesis: "Start with the first thesis"
     thesis: "Proceed to the next thesis"
     party: "Select the parties"
