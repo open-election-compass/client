@@ -82,7 +82,7 @@ elements:
     compare: "Przeczytaj stanowiska"
   kiosk-mode:
     heading: "Czy powinniśmy zresetować?"
-    description: "The election compass will be reset now and all your answers will be deleted. | The election compass will be reset in {count} seconds and all your answers will be deleted. | The election compass will be reset in {count} second and all your answers will be deleted."
+    description: "Kompas wyborczy zostanie zresetowany i wszystkie twoje odpowiedzi zostaną usunięte. | Kompas wyborczy zostanie zresetowany za {count} sekund, a wszystkie twoje odpowiedzi zostaną usunięte. | Kompas wyborczy zostanie zresetowany za {count} sekund, a wszystkie twoje odpowiedzi zostaną usunięte."
     reset: "Zresetuj teraz"
     resume: "Jeszcze nie!"
   language-switch:
@@ -145,7 +145,7 @@ views:
         party-aria: "Parta '{party}' – kliknij tutaj, żeby odznaczyć tę partię z wyboru."
       section:
         heading: "Wybierz partie, które chcesz porównać"
-        instruction: "Please select the parties you want to compare your own decisions to. You can select as many parties as you like, but you have to select at least two. The following list is presented in the same order as the parties will appear on the ballot."
+        instruction: "Proszę wybrać partie, z którymi chcesz porównać swoje własne decyzje. Możesz wybrać tyle partii, ilu chcesz, ale musisz wybrać co najmniej dwóch. Poniższa lista jest przedstawiona w takiej samej kolejności, w jakiej partie pojawią się na karcie do głosowania."
         proceed: "Załatwione"
     match:
       match:
