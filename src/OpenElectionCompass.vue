@@ -55,7 +55,6 @@ export default {
     language: {
       type: String,
       default: null,
-      validator: (value) => ['en', 'de'].includes(value),
     },
     kioskMode: {
       type: Boolean,

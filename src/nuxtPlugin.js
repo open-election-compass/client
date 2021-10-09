@@ -3,8 +3,12 @@ import VScrollLock from 'v-scroll-lock';
 import smoothscroll from 'smoothscroll-polyfill';
 import VueTippy, { TippyComponent } from 'vue-tippy';
 import { localize } from 'vee-validate';
-import veeValidateEn from 'vee-validate/dist/locale/en.json';
+import veeValidateAr from 'vee-validate/dist/locale/ar.json';
 import veeValidateDe from 'vee-validate/dist/locale/de.json';
+import veeValidateEn from 'vee-validate/dist/locale/en.json';
+import veeValidateEs from 'vee-validate/dist/locale/es.json';
+import veeValidateId from 'vee-validate/dist/locale/id.json';
+import veeValidateIt from 'vee-validate/dist/locale/it.json';
 import '@open-election-compass/ui/dist/open-election-compass-ui.css';
 import {
   BaseButton,
@@ -23,13 +27,21 @@ import storeModuleOptions from './store/modules/options/options';
 import storeModuleParties from './store/modules/parties/parties';
 import storeModuleSections from './store/modules/sections/sections';
 import storeModuleTheses from './store/modules/theses/theses';
+import ar from './locales/ar.yaml';
 import de from './locales/de.yaml';
 import en from './locales/en.yaml';
+import es from './locales/es.yaml';
+import id from './locales/id.yaml';
+import it from './locales/it.yaml';
 
 export default function installOpenElectionCompassNuxtPlugin({ app, store }) {
   // Install locales
+  app.i18n.mergeLocaleMessage('ar', ar);
   app.i18n.mergeLocaleMessage('de', de);
   app.i18n.mergeLocaleMessage('en', en);
+  app.i18n.mergeLocaleMessage('es', es);
+  app.i18n.mergeLocaleMessage('id', id);
+  app.i18n.mergeLocaleMessage('it', it);
 
   // Install store modules
   store.registerModule('algorithm', storeModuleAlgorithm);
@@ -63,8 +75,12 @@ export default function installOpenElectionCompassNuxtPlugin({ app, store }) {
   Vue.component('tooltip', TippyComponent);
 
   localize({
-    veeValidateEn,
+    veeValidateAr,
     veeValidateDe,
+    veeValidateEn,
+    veeValidateEs,
+    veeValidateId,
+    veeValidateIt,
   });
 
   // Install component
