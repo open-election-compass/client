@@ -53,14 +53,23 @@ export default {
       return this.algorithm.options.find((option) => option.alias === this.position);
     },
     content() {
+      // TODO: This is not a nice implementation.
       if (this.skipped) {
         return this.$t('views.home.compare.answer.skip.content', { party: this.$t(`parties.${this.party.index}.name`) });
       }
       if (
         !this.$te(`theses.${this.thesis.index}.positions.${this.party.alias}.explanation`)
+        && !this.$te(`theses.${this.thesis.index}.positions.${this.party.alias}.explanation`, this.$store.getters['languages/fallback'].code)
         && !this.$root.$te(`theses.${this.thesis.index}.positions.${this.party.alias}.explanation`)
       ) {
         return this.$t('views.home.compare.answer.empty.content', { party: this.$t(`parties.${this.party.index}.name`) });
+      }
+      if (
+        !this.$te(`theses.${this.thesis.index}.positions.${this.party.alias}.explanation`)
+        && this.$te(`theses.${this.thesis.index}.positions.${this.party.alias}.explanation`, this.$store.getters['languages/fallback'].code)
+        && !this.$root.$te(`theses.${this.thesis.index}.positions.${this.party.alias}.explanation`)
+      ) {
+        return this.$t(`theses.${this.thesis.index}.positions.${this.party.alias}.explanation`, this.$store.getters['languages/fallback'].code);
       }
       const explanation = this.$t(`theses.${this.thesis.index}.positions.${this.party.alias}.explanation`).trim();
       if (explanation === '') {
