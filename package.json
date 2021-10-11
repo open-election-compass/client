@@ -1,6 +1,6 @@
 {
   "name": "@open-election-compass/client",
-  "version": "1.0.0-beta.11",
+  "version": "1.0.0-beta.12",
   "author": "Till Sanders <mail@till-sanders.de>",
   "license": "GPL-3.0",
   "main": "dist/lib/open-election-compass.umd.min.js",
@@ -40,7 +40,7 @@
     "@fortawesome/fontawesome-svg-core": "^1.2.28",
     "@fortawesome/free-solid-svg-icons": "^5.13.0",
     "@fortawesome/vue-fontawesome": "^2.0.2",
-    "@open-election-compass/ui": "^0.9.0",
+    "@open-election-compass/ui": "^0.11.0",
     "@wordpress/dom-ready": "^2.9.0",
     "core-js": "^3.6.5",
     "cross-fetch": "^3.0.5",

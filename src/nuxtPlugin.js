@@ -9,6 +9,8 @@ import veeValidateEn from 'vee-validate/dist/locale/en.json';
 import veeValidateEs from 'vee-validate/dist/locale/es.json';
 import veeValidateId from 'vee-validate/dist/locale/id.json';
 import veeValidateIt from 'vee-validate/dist/locale/it.json';
+import veeValidatePl from 'vee-validate/dist/locale/pl.json';
+import veeValidatePt from 'vee-validate/dist/locale/pt_BR.json';
 import '@open-election-compass/ui/dist/open-election-compass-ui.css';
 import {
   BaseButton,
@@ -33,6 +35,8 @@ import en from './locales/en.yaml';
 import es from './locales/es.yaml';
 import id from './locales/id.yaml';
 import it from './locales/it.yaml';
+import pl from './locales/pl.yaml';
+import pt from './locales/pt.yaml';
 
 export default function installOpenElectionCompassNuxtPlugin({ app, store }) {
   // Install locales
@@ -42,6 +46,8 @@ export default function installOpenElectionCompassNuxtPlugin({ app, store }) {
   app.i18n.mergeLocaleMessage('es', es);
   app.i18n.mergeLocaleMessage('id', id);
   app.i18n.mergeLocaleMessage('it', it);
+  app.i18n.mergeLocaleMessage('pl', pl);
+  app.i18n.mergeLocaleMessage('pt', pt);
 
   // Install store modules
   store.registerModule('algorithm', storeModuleAlgorithm);
@@ -81,6 +87,8 @@ export default function installOpenElectionCompassNuxtPlugin({ app, store }) {
     veeValidateEs,
     veeValidateId,
     veeValidateIt,
+    veeValidatePl,
+    veeValidatePt,
   });
 
   // Install component

@@ -8,6 +8,8 @@ import {
   esLocale as esUILocale,
   idLocale as idUILocale,
   itLocale as itUILocale,
+  plLocale as plUILocale,
+  ptLocale as ptUILocale,
 } from '@open-election-compass/ui';
 import ar from './ar.yaml';
 import de from './de.yaml';
@@ -15,6 +17,8 @@ import en from './en.yaml';
 import es from './es.yaml';
 import id from './id.yaml';
 import it from './it.yaml';
+import pl from './pl.yaml';
+import pt from './pt.yaml';
 
 Vue.use(VueI18n);
 
@@ -46,11 +50,19 @@ i18n.mergeLocaleMessage('id', idUILocale);
 i18n.setLocaleMessage('it', it);
 i18n.mergeLocaleMessage('it', itUILocale);
 
+i18n.setLocaleMessage('pl', pl);
+i18n.mergeLocaleMessage('pl', plUILocale);
+
+i18n.setLocaleMessage('pt', pt);
+i18n.mergeLocaleMessage('pt', ptUILocale);
+
 localize('ar', ar.validation);
 localize('de', de.validation);
 localize('en', en.validation);
 localize('es', es.validation);
 localize('id', id.validation);
 localize('it', it.validation);
+localize('pl', pl.validation);
+localize('pt', pt.validation);
 
 export default i18n;
