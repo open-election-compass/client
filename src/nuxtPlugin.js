@@ -7,10 +7,13 @@ import veeValidateAr from 'vee-validate/dist/locale/ar.json';
 import veeValidateDe from 'vee-validate/dist/locale/de.json';
 import veeValidateEn from 'vee-validate/dist/locale/en.json';
 import veeValidateEs from 'vee-validate/dist/locale/es.json';
+import veeValidateFr from 'vee-validate/dist/locale/fr.json';
+import veeValidateHu from 'vee-validate/dist/locale/hu.json';
 import veeValidateId from 'vee-validate/dist/locale/id.json';
 import veeValidateIt from 'vee-validate/dist/locale/it.json';
 import veeValidatePl from 'vee-validate/dist/locale/pl.json';
 import veeValidatePt from 'vee-validate/dist/locale/pt_BR.json';
+import veeValidateTr from 'vee-validate/dist/locale/tr.json';
 import '@open-election-compass/ui/dist/open-election-compass-ui.css';
 import {
   BaseButton,
@@ -33,10 +36,13 @@ import ar from './locales/ar.yaml';
 import de from './locales/de.yaml';
 import en from './locales/en.yaml';
 import es from './locales/es.yaml';
+import fr from './locales/fr.yaml';
+import hu from './locales/hu.yaml';
 import id from './locales/id.yaml';
 import it from './locales/it.yaml';
 import pl from './locales/pl.yaml';
 import pt from './locales/pt.yaml';
+import tr from './locales/tr.yaml';
 
 export default function installOpenElectionCompassNuxtPlugin({ app, store }) {
   // Install locales
@@ -44,10 +50,13 @@ export default function installOpenElectionCompassNuxtPlugin({ app, store }) {
   app.i18n.mergeLocaleMessage('de', de);
   app.i18n.mergeLocaleMessage('en', en);
   app.i18n.mergeLocaleMessage('es', es);
+  app.i18n.mergeLocaleMessage('fr', fr);
+  app.i18n.mergeLocaleMessage('hu', hu);
   app.i18n.mergeLocaleMessage('id', id);
   app.i18n.mergeLocaleMessage('it', it);
   app.i18n.mergeLocaleMessage('pl', pl);
   app.i18n.mergeLocaleMessage('pt', pt);
+  app.i18n.mergeLocaleMessage('tr', tr);
 
   // Install store modules
   store.registerModule('algorithm', storeModuleAlgorithm);
@@ -85,10 +94,13 @@ export default function installOpenElectionCompassNuxtPlugin({ app, store }) {
     veeValidateDe,
     veeValidateEn,
     veeValidateEs,
+    veeValidateFr,
+    veeValidateHu,
     veeValidateId,
     veeValidateIt,
     veeValidatePl,
     veeValidatePt,
+    veeValidateTr,
   });
 
   // Install component

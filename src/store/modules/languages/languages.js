@@ -1,7 +1,7 @@
 import getUserLocale from 'get-user-locale';
 import i18n from '@/locales/i18n';
 
-const officialLanguages = ['ar', 'de', 'en', 'es', 'id', 'it', 'pl', 'pt'];
+const officialLanguages = ['ar', 'de', 'en', 'es', 'fr', 'hu', 'id', 'it', 'pl', 'pt', 'tr'];
 
 export default {
   namespaced: true,
