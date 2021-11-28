@@ -127,28 +127,28 @@ views:
         skip: "Bilmiyorum"
         skip-aria: "Atla – bu açıklamayı atlar, böylece bu sayılmaz."
         too-many-skip: "Sadece çok az tez var, bu yüzden birini atlayamazsınız. | Anlamlı bir sonuç almak için lütfen 1'den fazla tezi atlamayın! | Anlamlı bir sonuç almak için lütfen {count} tezden fazlasını atlamayın!"
-      statement:
+      statement-text:
         thesis: "Açıklama {count} / {total}"
         statement-aria: "Açıklama: '{statement}'"
         quoteStart: "‘"
         quoteEnd: "’"
-        badge:
+        statement-badge:
           skip: "Bunu atladınız"
           skip-aria: "Bu açıklamayı atladınız."
           important: "Bunu önemli olarak işaretlediniz"
           important-aria: "Bu açıklamayı önemli olarak işaretlediniz."
-      thesis:
+      statement-wrapper:
         role-aria: "Açıklama"
         region-aria: "Açıklama {count} / {total}"
     party:
-      party:
+      party-item:
         party-aria: "{party}' partisi – karşılaştırmak için buraya tıklayarak seçin veya seçimi kaldırın."
       section:
         heading: "Karşılaştırmak istediğiniz partileri seçin"
         instruction: "Lütfen kararlarınızı karşılaştırmak istediğiniz tarafları seçin. İstediğiniz kadar taraf seçebilirsiniz ancak en az iki taraf seçmelisiniz. Aşağıdaki liste, tarafların oy pusulasındaki sırasıyla aynı sıralama doğrultusunda sunulmaktadır."
         proceed: "Tamamlandı"
     match:
-      match:
+      match-display:
         match-aria: "Tarafla '{party}' uyumunuz % {percentage}"
       section:
         heading: "Sonuçlarınız"

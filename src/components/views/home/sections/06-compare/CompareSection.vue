@@ -14,7 +14,7 @@
       :aria-label="$t('views.home.compare.section.region-aria', { count: thesis.index + 1, total })"
       :id="`compare-thesis-${thesis.index}`"
     >
-      <Statement
+      <StatementText
         :index="thesis.index"
         :status="getStatus(thesis.index)"
         :factor="thesis.factor"
@@ -24,7 +24,7 @@
       <template
         v-for="result in results"
       >
-        <Answer
+        <FullAnswer
           :key="`${thesis.index}-${result.party.index}`"
           :party="result.party"
           :thesis="thesis"
@@ -40,22 +40,22 @@
 import { mapGetters } from 'vuex';
 import AdditionalAnalysis from '@/components/views/home/sections/06-compare/AdditionalAnalysis.vue';
 import AnalysisBanner from '@/components/views/home/sections/06-compare/AnalysisBanner.vue';
-import Answer from '@/components/views/home/sections/06-compare/Answer.vue';
+import FullAnswer from '@/components/views/home/sections/06-compare/FullAnswer.vue';
 import FriendsPositions from '@/components/views/home/sections/06-compare/FriendsPositions.vue';
 import KioskModeHint from '@/components/views/home/sections/06-compare/KioskModeHint.vue';
 import PageSection from '@/components/elements/PageSection.vue';
-import Statement from '@/components/views/home/sections/03-theses/Statement.vue';
+import StatementText from '@/components/views/home/sections/03-theses/StatementText.vue';
 
 export default {
   name: 'CompareSection',
   components: {
     AdditionalAnalysis,
     AnalysisBanner,
-    Answer,
+    FullAnswer,
     FriendsPositions,
     KioskModeHint,
     PageSection,
-    Statement,
+    StatementText,
   },
   computed: {
     ...mapGetters({

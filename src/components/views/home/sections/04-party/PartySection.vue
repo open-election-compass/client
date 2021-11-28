@@ -11,7 +11,6 @@
         'party-section__parties': true,
         'party-section__parties--logos': showLogos,
       }"
-      role="list"
     >
       <li
         v-for="(party, index) in parties"
@@ -21,7 +20,7 @@
           'party-section__party--logos': showLogos,
         }"
       >
-        <party :index="index" :show-logo="showLogos" :logo="party.logo" />
+        <PartyItem :index="index" :show-logo="showLogos" :logo="party.logo" />
       </li>
     </ul>
     <div class="party-section__actions">
@@ -40,13 +39,13 @@
 
 <script>
 import PageSection from '@/components/elements/PageSection.vue';
-import Party from '@/components/views/home/sections/04-party/Party.vue';
+import PartyItem from '@/components/views/home/sections/04-party/PartyItem.vue';
 
 export default {
   name: 'PartySection',
   components: {
     PageSection,
-    Party,
+    PartyItem,
   },
   computed: {
     parties() {

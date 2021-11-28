@@ -57,7 +57,7 @@
                   >
                     {{ link.caption }}
                     <small v-if="link.description">
-                      <Definitions :text="link.description" disabled />
+                      <DefinitionsTooltip :text="link.description" disabled />
                     </small>
                   </BaseButton>
                   <BaseButton
@@ -71,7 +71,7 @@
                   >
                     {{ link.caption }}
                     <small v-if="link.description">
-                      <Definitions :text="link.description" disabled />
+                      <DefinitionsTooltip :text="link.description" disabled />
                     </small>
                   </BaseButton>
                 </li>
@@ -81,6 +81,7 @@
         </ul>
       </nav>
     </transition>
+    <!-- eslint-disable-next-line vuejs-accessibility/click-events-have-key-events -->
     <div
       class="main-navigation__site-wrapper"
       @click="hideMenu()"
@@ -93,12 +94,12 @@
 </template>
 
 <script>
-import Definitions from '@/components/elements/Definitions.vue';
+import DefinitionsTooltip from '@/components/elements/DefinitionsTooltip.vue';
 
 export default {
   name: 'MainNavigation',
   components: {
-    Definitions,
+    DefinitionsTooltip,
   },
   data() {
     return {

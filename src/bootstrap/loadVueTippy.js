@@ -8,5 +8,5 @@ export default function loadVueTippy() {
     arrowType: 'round',
     distance: 25,
   });
-  Vue.component('tooltip', TippyComponent);
+  Vue.component('TippyTooltip', TippyComponent);
 }

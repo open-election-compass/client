@@ -1,5 +1,5 @@
 <template>
-  <footer class="footer-section" role="contentinfo">
+  <footer class="footer-section">
     <PageSection class="footer-section__links" :padding="false">
       <nav>
         <ul>

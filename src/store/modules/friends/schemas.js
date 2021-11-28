@@ -6,13 +6,13 @@ export const incomingDataSchema = yup.object().strict(true).noUnknown().shape({
 });
 
 export const friendProfileSchema = yup.object().strict(true).noUnknown().shape({
-  name: yup.string().nullable().matches(new RegExp(/^[\p{Letter}\p{Mark}\d\s]*$/, 'u')),
+  name: yup.string().nullable().matches(/^[\p{Letter}\p{Mark}\d\s]*$/u),
 });
 
 export const friendAnswersSchema = yup.array().strict().of(yup.string().nullable());
 
 export const friendSchema = yup.object().strict(true).noUnknown().shape({
-  peerId: yup.string().required().length(8).matches(new RegExp(/^[\dA-Z]*$/)),
+  peerId: yup.string().required().length(8).matches(/^[\dA-Z]*$/),
   profile: friendProfileSchema,
   answers: friendAnswersSchema,
   dataUpdatedAt: yup.number().positive().integer(),

@@ -1,6 +1,6 @@
 <script>
 export default {
-  name: 'Definitions',
+  name: 'DefinitionsTooltip',
   functional: true,
   props: {
     text: {
@@ -23,7 +23,7 @@ export default {
         return node;
       }
       return createElement('span', {
-        class: 'definitions__expression',
+        class: 'definitions-tooltip__expression',
         attrs: {
           content: `${matches[1]}: ${matches[2]}`,
         },
@@ -42,14 +42,14 @@ export default {
       }, [matches[1]]);
     });
     return createElement('span', {
-      class: 'definitions',
+      class: 'definitions-tooltip',
     }, nodes);
   },
 };
 </script>
 
 <style lang="scss">
-.definitions__expression {
+.definitions-tooltip__expression {
   cursor: pointer;
   border-bottom: 2px dotted currentColor;
   &:focus {

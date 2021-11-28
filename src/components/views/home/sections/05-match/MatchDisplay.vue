@@ -1,22 +1,22 @@
 <template>
-  <div class="match" role="figure">
+  <div class="match-display" role="figure">
     <div
-      class="match__bar"
+      class="match-display__bar"
       role="img"
-      :aria-label="$t('views.home.match.match.match-aria', {
+      :aria-label="$t('views.home.match.match-display.match-aria', {
         party: $t(`parties.${party.index}.name`),
         percentage: Math.round(percentage * 100),
       })"
     >
-      <div class="match__progress" :style="`width:${percentage * 100}%`" />
-      <span class="match__party-name">
+      <div class="match-display__progress" :style="`width:${percentage * 100}%`" />
+      <span class="match-display__party-name">
         {{ $t(`parties.${party.index}.short`) }}
       </span>
-      <span class="match__percentage">
+      <span class="match-display__percentage">
         {{ $n(percentage, { style: 'percent' }) }}
       </span>
     </div>
-    <p class="match__party-description">
+    <p class="match-display__party-description">
       <ShowMore :length="500" :text="$t(`parties.${party.index}.description`)" />
     </p>
   </div>
@@ -26,7 +26,7 @@
 import ShowMore from '@/components/elements/ShowMore.vue';
 
 export default {
-  name: 'Match',
+  name: 'MatchDisplay',
   components: {
     ShowMore,
   },
@@ -44,11 +44,11 @@ export default {
 </script>
 
 <style lang="scss">
-.match {
+.match-display {
   margin-bottom: 1em;
 }
 
-.match__bar {
+.match-display__bar {
   background-color: var(--theme-primary-dark-background); //bg-yellow-600
   border-radius: var(--border-radius);
   overflow: hidden;
@@ -56,14 +56,14 @@ export default {
   margin-bottom: 1em;
 }
 
-.match__progress {
+.match-display__progress {
   background-color: #fff;
   position: absolute;
   top: 0;
   bottom: 0;
 }
 
-.match__party-name {
+.match-display__party-name {
   font-weight: bold;
   color: #000;
   position: relative;
@@ -71,7 +71,7 @@ export default {
   padding: 1em;
 }
 
-.match__percentage {
+.match-display__percentage {
   color: #000;
   position: absolute;
   display: block;
@@ -81,7 +81,7 @@ export default {
   bottom: 0;
 }
 
-.match__party-description {
+.match-display__party-description {
   margin-bottom: 2.5em;
   color: #744210;
   font-size: 0.875em;

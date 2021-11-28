@@ -127,28 +127,28 @@ views:
         skip: "Nie wiem"
         skip-aria: "Pomiń – pomija to stwierdzenie, nie będzie liczone w wynikach."
         too-many-skip: "Jest tylko kilka stwierdzeń, więc nie możesz go pominąć | Proszę pominąć nie więcej niż 1 stwierdzenie jako ważne, aby otrzymać sensowny wynik! | Proszę pominąć nie więcej niż {count} stwierdzeń jako ważne, aby otrzymać sensowny wynik!"
-      statement:
+      statement-text:
         thesis: "Stwierdzenia {count} / {total}"
         statement-aria: "To stwierdzenie brzmi: '{statement}'"
         quoteStart: "‘"
         quoteEnd: "’"
-        badge:
+        statement-badge:
           skip: "Pominąłeś to"
           skip-aria: "Pominąłeś to swierdzenie."
           important: "Oznaczyłeś to jako ważne"
           important-aria: "Oznaczyłeś to stwierdzenie jako ważne."
-      thesis:
+      statement-wrapper:
         role-aria: "Stwierdzenia"
         region-aria: "Stwierdzenie {count} z {total}"
     party:
-      party:
+      party-item:
         party-aria: "Parta '{party}' – kliknij tutaj, żeby odznaczyć tę partię z wyboru."
       section:
         heading: "Wybierz partie, które chcesz porównać"
         instruction: "Proszę wybrać partie, z którymi chcesz porównać swoje własne decyzje. Możesz wybrać tyle partii, ilu chcesz, ale musisz wybrać co najmniej dwóch. Poniższa lista jest przedstawiona w takiej samej kolejności, w jakiej partie pojawią się na karcie do głosowania."
         proceed: "Załatwione"
     match:
-      match:
+      match-display:
         match-aria: "Twoja zgodność z partią '{party}' wynosi '{percentage}' %"
       section:
         heading: "Twój wynik"

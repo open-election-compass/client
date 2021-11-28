@@ -126,28 +126,28 @@ views:
         skip: "Weet ik niet"
         skip-aria: "Weet ik niet – slaat deze stelling over zodat deze niet wordt meegeteld."
         too-many-skip: "Er zijn maar een paar stellingen, dus je kunt deze niet overslaan. | Sla alsjeblieft maximaal 1 stelling over om een nuttig resultaat te ontvangen! | Sla alsjeblieft maximaal {count} stellingen over om een nuttig resultaat te ontvangen"
-      statement:
+      statement-text:
         thesis: "Stelling {count} / {total}"
         statement-aria: "De stelling is: '{statement}'"
         quoteStart: "‘"
         quoteEnd: "’"
-        badge:
+        statement-badge:
           skip: "Je hebt deze overgeslagen"
           skip-aria: "Je hebt deze stelling overgeslagen."
           important: "Je hebt deze gemarkeerd als belangrijk"
           important-aria: "Je hebt deze stelling gemarkeerd als belangrijk."
-      thesis:
+      statement-wrapper:
         role-aria: "Stelling"
         region-aria: "Stelling {count} van de {total}"
     party:
-      party:
+      party-item:
         party-aria: "Partij '{party}' – klik hier om deze partij te selecteren of deselecteren voor vergelijking."
       section:
         heading: "Kies de partijen die je wilt vergelijken"
         instruction: "Selecteer alsjeblieft de partijen die je wilt vergelijken met je eigen keuzes. Je kan zoveel partijen selecteren als je wilt, maar je moet er minstens twee selecteren. De volgende lijst is in de volgorde getoond waarop de partijen op het stembiljet staan."
         proceed: "Klaar"
     match:
-      match:
+      match-display:
         match-aria: "Je overeenkomst met partij '{party}' is {percentage} %"
       section:
         heading: "Je resultaat"

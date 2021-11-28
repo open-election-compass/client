@@ -4,25 +4,25 @@
     v-if="$store.getters['options/friendsEnabled']"
   >
     <li v-for="answer in answers" :key="answer.friend.peerId" class="friends-positions__answer">
-      <Badge
+      <StatementBadge
         :icon="answer.icon"
         :backgroundColor="answer.colors.base"
         :textColor="answer.colors.contrast"
         :aria-label="answerAria(answer.alias)"
       >
         {{ answer.friend.profile.name || answer.friend.peerId }}
-      </Badge>
+      </StatementBadge>
     </li>
   </ul>
 </template>
 
 <script>
-import Badge from '@/components/views/home/sections/03-theses/Badge.vue';
+import StatementBadge from '@/components/views/home/sections/03-theses/StatementBadge.vue';
 
 export default {
   name: 'FriendsPositions',
   components: {
-    Badge,
+    StatementBadge,
   },
   props: {
     thesis: {

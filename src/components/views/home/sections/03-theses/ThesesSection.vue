@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Thesis
+    <StatementWrapper
       v-for="(thesis, index) in theses"
       :key="index"
       :index="index"
@@ -12,7 +12,7 @@
 
 <script>
 import FriendsProgress from '@/components/views/home/sections/03-theses/FriendsProgress.vue';
-import Thesis from '@/components/views/home/sections/03-theses/Thesis.vue';
+import StatementWrapper from '@/components/views/home/sections/03-theses/StatementWrapper.vue';
 
 export default {
   name: 'ThesesSection',
@@ -23,7 +23,7 @@ export default {
   },
   components: {
     FriendsProgress,
-    Thesis,
+    StatementWrapper,
   },
 };
 </script>

@@ -4,22 +4,22 @@
     full
     :padding="false"
     :class="{
-      thesis: true,
-      'thesis--status-skip': status === 'skip',
+      'statement-wrapper': true,
+      'statement-wrapper--status-skip': status === 'skip',
     }"
     :data-section="`thesis-${index}`"
     role="region"
-    :aria-roledescription="$t('views.home.theses.thesis.role-aria')"
-    :aria-label="$t('views.home.theses.thesis.region-aria', { count: index + 1, total })"
+    :aria-roledescription="$t('views.home.theses.statement-wrapper.role-aria')"
+    :aria-label="$t('views.home.theses.statement-wrapper.region-aria', { count: index + 1, total })"
     :data-test="`thesis-${index}`"
   >
     <!-- Thesis -->
-    <div class="thesis__statement">
-      <statement :index="index" :status="status" />
+    <div class="statement-wrapper__statement">
+      <StatementText :index="index" :status="status" />
     </div>
 
     <!-- Buttons -->
-    <div class="thesis__skip">
+    <div class="statement-wrapper__skip">
       <SkipButton
         :disabled="skipButtonDisabled"
         :tooltipDisabled="!skipButtonDisabled || status === 'skip'"
@@ -27,7 +27,7 @@
         @click="clickVoteButton('skip')"
       />
     </div>
-    <div class="thesis__vote-buttons">
+    <div class="statement-wrapper__vote-buttons">
       <VoteButton
         v-for="(option, index) in algorithm.options"
         :key="option.alias"
@@ -44,7 +44,7 @@
     </div>
 
     <!-- Important Toggle -->
-    <div class="thesis__important-button">
+    <div class="statement-wrapper__important-button">
       <ImportantButton
         :name="`important-${index}`"
         v-model="factor"
@@ -61,16 +61,16 @@ import { mapGetters } from 'vuex';
 import ImportantButton from '@/components/views/home/sections/03-theses/ImportantButton.vue';
 import PageSection from '@/components/elements/PageSection.vue';
 import SkipButton from '@/components/views/home/sections/03-theses/SkipButton.vue';
-import Statement from '@/components/views/home/sections/03-theses/Statement.vue';
+import StatementText from '@/components/views/home/sections/03-theses/StatementText.vue';
 import VoteButton from '@/components/views/home/sections/03-theses/VoteButton.vue';
 
 export default {
-  name: 'Thesis',
+  name: 'StatementWrapper',
   components: {
     ImportantButton,
     PageSection,
     SkipButton,
-    Statement,
+    StatementText,
     VoteButton,
   },
   props: {
@@ -180,18 +180,18 @@ export default {
 </script>
 
 <style lang="scss">
-.thesis {
+.statement-wrapper {
   transition: opacity 0.2s ease-out;
-  &.thesis--status-skip {
+  &.statement-wrapper--status-skip {
     opacity: 0.5;
     background-color: #f7fafc;
   }
-  & + .thesis {
+  & + .statement-wrapper {
     border-top: 2px solid var(--theme-neutral-background);
   }
 }
 
-.thesis__statement {
+.statement-wrapper__statement {
   padding: 2em;
   @media (min-width: 40em) {
     padding-bottom: 4em;
@@ -201,7 +201,7 @@ export default {
   }
 }
 
-.thesis__skip {
+.statement-wrapper__skip {
   margin-right: 2.25em;
   margin-bottom: 0.5em;
   @media (min-width: 48em) {
@@ -214,7 +214,7 @@ export default {
   }
 }
 
-.thesis__vote-buttons {
+.statement-wrapper__vote-buttons {
   display: flex;
   flex-direction: column;
   margin: 0 2em 1em 2em;
@@ -224,7 +224,7 @@ export default {
   }
 }
 
-.thesis__important-button {
+.statement-wrapper__important-button {
   margin: 2em 2em 2em 2em;
   text-align: center;
   @media (min-width: 48em) {

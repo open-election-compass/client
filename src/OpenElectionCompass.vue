@@ -13,7 +13,7 @@
       </div>
     </div>
     <div v-else class="oec-wrapper__page">
-      <Home />
+      <HomeView />
     </div>
   </div>
 </template>
@@ -24,13 +24,13 @@ import _forEach from 'lodash/forEach';
 import _get from 'lodash/get';
 import _set from 'lodash/set';
 import { localize } from 'vee-validate';
-import Home from '@/components/views/home/Home.vue';
+import HomeView from '@/components/views/home/HomeView.vue';
 
 export default {
   name: 'OpenElectionCompass',
 
   components: {
-    Home,
+    HomeView,
   },
 
   data() {

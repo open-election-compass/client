@@ -127,28 +127,28 @@ views:
         skip: "No lo sé"
         skip-aria: "Omitir: omite esta declaración para que no se cuente."
         too-many-skip: "Hay muy pocas declaraciones, por lo que no puedes saltarte ninguno. | Por favor, no omitas más de 1 declaración para obtener un resultado significativo. | Por favor, no omitas más de {count} declaraciones para recibir un resultado significativo!"
-      statement:
+      statement-text:
         thesis: "Declaración {count} / {total}"
         statement-aria: "La declaración es: '{statement}'"
         quoteStart: "‘"
         quoteEnd: "’"
-        badge:
+        statement-badge:
           skip: "Te has saltado esto"
           skip-aria: "Te has saltado esta declaración."
           important: "Has marcado esto como importante"
           important-aria: "Has marcado esta declaración como importante."
-      thesis:
+      statement-wrapper:
         role-aria: "Declaración"
         region-aria: "Declaración {count} de {total}"
     party:
-      party:
+      party-item:
         party-aria: "Grupo '{party}' - haga clic aquí para seleccionar o anular la selección de este grupo para la comparación."
       section:
         heading: "Elige los grupos que quieres comparar"
         instruction: "Seleccione los grupos con los que desea comparar sus propias decisiones. Puede seleccionar cuantos grupos quiera, pero tiene que seleccionar al menos dos. La siguiente lista se presenta en el mismo orden en que los grupos aparecerán en la papeleta."
         proceed: "Listo"
     match:
-      match:
+      match-display:
         match-aria: "Tu coincidencia para el grupo '{party}' está en {percentage} %"
       section:
         heading: "Tu resultado"

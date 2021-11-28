@@ -18,6 +18,6 @@ export default function loadOpenElectionCompassUI() {
   Vue.component('FieldInput', FieldInput);
   Vue.component('FieldSelect', FieldSelect);
   Vue.component('FieldSwitch', FieldSwitch);
-  Vue.component('Icon', Icon);
-  Vue.component('Modal', Modal);
+  Vue.component('Icon', Icon); // eslint-disable-line vue/multi-word-component-names
+  Vue.component('Modal', Modal); // eslint-disable-line vue/multi-word-component-names
 }

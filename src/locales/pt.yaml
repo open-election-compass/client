@@ -127,28 +127,28 @@ views:
         skip: "Não sei"
         skip-aria: "Pular - pular esta declaração e desconsiderá-la."
         too-many-skip: "Há poucas declarações e portanto não é possível pular nenhuma | Por favor, para que o resultado seja significativo não pule mais do que uma declaração! | Por favor, para obter um resultado significativo não pule mais do que {count} declarações!"
-      statement:
+      statement-text:
         thesis: "Declarações {count} / {total}"
         statement-aria: "A declaração é: '{statement}'"
         quoteStart: "‘"
         quoteEnd: "’"
-        badge:
+        statement-badge:
           skip: "Você pulou esta"
           skip-aria: "Você pulou esta declaração."
           important: "Você marcou isto como importante"
           important-aria: "Você marcou esta declaração como importante."
-      thesis:
+      statement-wrapper:
         role-aria: "Declaração"
         region-aria: "Declaração {count} de {total}"
     party:
-      party:
+      party-item:
         party-aria: "Partido '{party}' – clique aqui para selecionar ou desfazer a seleção deste partido para realizar a comparação."
       section:
         heading: "Selecione os partidos que quer comparar"
         instruction: "Comece com a primeira declaração."
         proceed: "Feito"
     match:
-      match:
+      match-display:
         match-aria: "Alinhamento de {percentage} % com o partido '{party}'"
       section:
         heading: "Seu resultado"

@@ -4,7 +4,7 @@
     'important-button--disabled': disabled,
     'important-button--active': active,
   }">
-    <tooltip
+    <TippyTooltip
       class="tooltip"
       :content="$tc('views.home.theses.important-button.too-many-important', maxImportant)"
       :enabled="!tooltipDisabled"
@@ -32,7 +32,7 @@
           {{ $t('views.home.theses.important-button.important') }}
         </span>
       </label>
-    </tooltip>
+    </TippyTooltip>
   </div>
 </template>
 

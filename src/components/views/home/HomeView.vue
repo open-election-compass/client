@@ -56,7 +56,7 @@ import ThesesSection from '@/components/views/home/sections/03-theses/ThesesSect
 import PartySection from '@/components/views/home/sections/04-party/PartySection.vue';
 
 export default {
-  name: 'Home',
+  name: 'HomeView',
   data() {
     return {
       ready: false,

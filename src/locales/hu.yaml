@@ -127,28 +127,28 @@ views:
         skip: "Nem tudom"
         skip-aria: "Átugrás - kihagyod ezt az állítást, nem lesz figyelembe véve."
         too-many-skip: "Túl kevés állítás van, ezért nem ugorhatod át őket. | Kérlek, legfeljebb egy állítást ugorj át, különben nem kapsz hasznos eredményt! | Kérlek, legfeljebb {count} állítást ugorj át, különben nem kapsz hasznos eredményt!"
-      statement:
+      statement-text:
         thesis: "Állítás: {count} / {total}"
         statement-aria: "Az állítás: „{statement}”"
         quoteStart: "‘"
         quoteEnd: "’"
-        badge:
+        statement-badge:
           skip: "Átugrottad"
           skip-aria: "Átugrottad ezt az állítást."
           important: "Fontosnak jelölted"
           important-aria: "Fontosnak jelölted ezt az állítást."
-      thesis:
+      statement-wrapper:
         role-aria: "Állítás"
         region-aria: "Állítás: {count} / {total}"
     party:
-      party:
+      party-item:
         party-aria: "„{party}” párt – kattints ide ennek a pártnak a kiválasztásához / ki nem választásához az összehasonlításra."
       section:
         heading: "Válaszd ki az összehasonlítandó pártokat"
         instruction: "Kérlek, válaszd ki a pártokat, akiket össze akarsz hasonlítani a saját döntéseiddel. Legalább két pártot ki kell választanod, felső korlát nincs. Az alábbi lista ugyanabban a sorrendben van, ahogy a pártok megjelennek a szavazólapon."
         proceed: "Kész"
     match:
-      match:
+      match-display:
         match-aria: "{percentage} százalékban egyeznek a válaszaid a(z) „{party}” pártéval"
       section:
         heading: "Az eredményed"

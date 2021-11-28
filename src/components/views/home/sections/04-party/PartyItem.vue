@@ -1,32 +1,34 @@
 <template>
   <div
     :class="{
-      party: true,
-      'party--selected': selected,
-      'party--logo': showLogo && logo,
+      'party-item': true,
+      'party-item--selected': selected,
+      'party-item--logo': showLogo && logo,
     }"
     role="listitem"
   >
     <button
-      :for="`party-${index}-checkbox`"
-      class="party__button"
-      :aria-label="$t('views.home.party.party.party-aria', { party: $t(`parties.${index}.name`) })"
+      :for="`party-item-${index}-checkbox`"
+      class="party-item__button"
+      :aria-label="
+        $t('views.home.party.party-item.party-aria', { party: $t(`parties.${index}.name`) })
+      "
       role="checkbox"
       tabindex="0"
       :aria-checked="selected"
       @click="selected = !selected"
     >
-      <div v-if="showLogo && logo" class="party__logo" aria-hidden="true">
+      <div v-if="showLogo && logo" class="party-item__logo" aria-hidden="true">
         <img :src="logo" :alt="$t(`parties.${index}.name`)" />
       </div>
-      <div class="party__caption" aria-hidden="true">
+      <div class="party-item__caption" aria-hidden="true">
         <Icon
           :name="selected ? 'check' : 'circle'"
-          class="party__icon"
+          class="party-item__icon"
         />
-        <div class="party__details" aria-hidden="true">
-          <span class="party__short">{{ $t(`parties.${index}.short`) }}</span>
-          <span class="party__name">{{ $t(`parties.${index}.name`) }}</span>
+        <div class="party-item__details" aria-hidden="true">
+          <span class="party-item__short">{{ $t(`parties.${index}.short`) }}</span>
+          <span class="party-item__name">{{ $t(`parties.${index}.name`) }}</span>
         </div>
       </div>
     </button>
@@ -35,7 +37,7 @@
 
 <script>
 export default {
-  name: 'Party',
+  name: 'PartyItem',
   props: {
     index: {
       type: Number,
@@ -64,7 +66,7 @@ export default {
 </script>
 
 <style lang="scss">
-.party__button {
+.party-item__button {
   width: 100%;
   padding: 1em;
   display: block;
@@ -78,7 +80,6 @@ export default {
   transition-duration: 0.2s;
   transition-timing-function: ease-out;
   box-shadow: var(--shadow-normal);
-  border: 1px solid var(--theme-neutral-border);
   background-color: var(--theme-neutral-background);
   color: var(--theme-neutral-text);
   font-size: 1em;
@@ -94,19 +95,19 @@ export default {
   }
 }
 
-.party--selected .party__button {
+.party-item--selected .party-item__button {
   border: 1px solid var(--theme-primary-border);
   background-color: var(--theme-primary-background);
   color: var(--theme-primary-text);
 }
 
-.party__icon {
+.party-item__icon {
   color: #fff;
   margin-right: 1em;
   flex: 0 1 auto;
 }
 
-.party__logo {
+.party-item__logo {
   flex: none;
   order: 2;
   img {
@@ -128,24 +129,24 @@ export default {
   }
 }
 
-.party__caption {
+.party-item__caption {
   display: flex;
   align-items: center;
 }
 
-.party__details {
+.party-item__details {
   flex: 1 1 auto;
   display: flex;
   align-items: center;
 }
 
-.party__short {
+.party-item__short {
   flex: 0 1 auto;
   font-weight: bold;
   margin-right: 2em;
 }
 
-.party__name {
+.party-item__name {
   flex: 1 1 auto;
   text-align: right;
   word-wrap: anywhere;
@@ -156,10 +157,10 @@ export default {
   }
 }
 
-.party--logo {
+.party-item--logo {
   height: 100%;
 
-  .party__button {
+  .party-item__button {
     display: flex;
     align-items: center;
     @media (min-width: 48em) {
@@ -168,7 +169,7 @@ export default {
     }
   }
 
-  .party__caption {
+  .party-item__caption {
     flex: 1 1 auto;
     display: flex;
     align-items: center;
@@ -182,7 +183,7 @@ export default {
     }
   }
 
-  .party__details {
+  .party-item__details {
     display: block;
     flex: 1 1 auto;
     margin-right: 0.75em;
@@ -194,11 +195,11 @@ export default {
     }
   }
 
-  .party__short {
+  .party-item__short {
     margin-right: 0;
   }
 
-  .party__name {
+  .party-item__name {
     text-align: left;
   }
 }

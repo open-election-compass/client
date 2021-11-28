@@ -127,28 +127,28 @@ views:
         skip: "Saya tidak tahu"
         skip-aria: "Langkahi - langkahi pernyataan ini agar tidak ikut dihitung."
         too-many-skip: "Hanya Ada beberapa pernyataan, jadi Anda tidak dapat memilih satu saja sebagai yang penting. | Harap pilih 1 pernyataan saja untuk mendapatkan hasil yang benar! | Harap pilih {count} pernyataan saja untuk mendapatkan hasil yang benar!"
-      statement:
+      statement-text:
         thesis: "Pernyataan {count} / {total}"
         statement-aria: "Pernyataan ini berbunyi: '{statement}'"
         quoteStart: "‘"
         quoteEnd: "’"
-        badge:
+        statement-badge:
           skip: "Anda melangkahi ini"
           skip-aria: "Anda melangkahi pernyataan ini."
           important: "Anda menandai ini penting"
           important-aria: "Anda menandai pernyataan ini sebagai pernyataan yang penting."
-      thesis:
+      statement-wrapper:
         role-aria: "Pernyataan"
         region-aria: "Pernyataan {count} dari {total}"
     party:
-      party:
+      party-item:
         party-aria: "Pihak '{party}' - klik ini untuk memilih atau mengurungkan pilihan pada partai ini sebagai bahan perbandingan."
       section:
         heading: "Pilih partai yang ingin Anda bandingkan"
         instruction: "Harap pilih partai yang ingin Anda bandingkan dengan pilihan Anda. Anda dapat memilih sebanyak mungkin, namun Anda harus memilih paling kurang dua. Daftar di bawah ini disusun berdasarkan urutan partai yang sama yang akan muncul pada kertas pemilihan."
         proceed: "Selesai"
     match:
-      match:
+      match-display:
         match-aria: "Kecocokan Anda dengan partai ''{party}' adalah {percentage} %"
       section:
         heading: "Hasil Anda"

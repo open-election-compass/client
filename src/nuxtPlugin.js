@@ -76,8 +76,8 @@ export default function installOpenElectionCompassNuxtPlugin({ app, store }) {
   Vue.component('FieldInput', FieldInput);
   Vue.component('FieldSelect', FieldSelect);
   Vue.component('FieldSwitch', FieldSwitch);
-  Vue.component('Icon', Icon);
-  Vue.component('Modal', Modal);
+  Vue.component('Icon', Icon); // eslint-disable-line vue/multi-word-component-names
+  Vue.component('Modal', Modal); // eslint-disable-line vue/multi-word-component-names
 
   // Install dependencies
   if (typeof document !== 'undefined' && typeof window !== 'undefined') {
@@ -90,7 +90,7 @@ export default function installOpenElectionCompassNuxtPlugin({ app, store }) {
     arrowType: 'round',
     distance: 25,
   });
-  Vue.component('tooltip', TippyComponent);
+  Vue.component('TippyTooltip', TippyComponent);
 
   localize({
     veeValidateAr,

@@ -127,28 +127,28 @@ views:
         skip: "لا أعرف"
         skip-aria: "تخطّى - تخطّى هذا السؤال بدون احتسابه."
         too-many-skip: "الأسئلة قليلة جداً، لذا لن تستطيع تخطّي هذا السؤال. | عليك -لطفاً- ألا تتخطى أكثر من سؤال واحد لتحصل على نتيجة مفيدة! | عليك -لطفاً- ألا تتخطّى أكثر من {count} سؤال لتحصل على نتيجة مفيدة!"
-      statement:
+      statement-text:
         thesis: "السؤال {count} من {total}"
         statement-aria: "السؤال هو: \"{statement}\""
         quoteStart: "\""
         quoteEnd: "\""
-        badge:
+        statement-badge:
           skip: "تخطَّيت هذا السؤال"
           skip-aria: "تخطَّيت هذا السؤال."
           important: "صنَّفت هذا كسؤال مهم"
           important-aria: "صنَّفت هذا كسؤال مهم."
-      thesis:
+      statement-wrapper:
         role-aria: "السؤال"
         region-aria: "السؤال {count} من {total}"
     party:
-      party:
+      party-item:
         party-aria: "الشخص \"{party}\": اضغط هنا لإضافة هذا الشخص أو الجهة أو لإزالتها من المقارنة."
       section:
         heading: "اختر أشخاصاً أو جهات لمقارنتهم"
         instruction: "اختر -لطفاً- الأشخاص أو الجهات الذين تريد مقارنة اختياراتك مع اختياراتهم. لا يوجد حد أعلى للاختيار، لكن عليك اختيار شخصين أو جهتين على الأقل. ترتيب الأسماء في هذه القائمة هو نفس ترتيبها في أوراق الاقتراع الحقيقية (إن وُجِدَت)."
         proceed: "إتمام الاختيار"
     match:
-      match:
+      match-display:
         match-aria: "تتوافق إجاباتك مع \"{party}\" بنسبة {percentage} %"
       section:
         heading: "النتيجة"

@@ -8,7 +8,7 @@
         Because IE11 cannot properly position the button using flexbox and other positioning methods
         cause the tooltip to be off, we're using the wrapper here.
       -->
-      <tooltip
+      <TippyTooltip
         class="tooltip"
         :content="$tc('views.home.theses.skip-button.too-many-skip', maxSkip)"
         :enabled="!tooltipDisabled"
@@ -27,7 +27,7 @@
         >
           {{ $t('views.home.theses.skip-button.skip') }}
         </BaseButton>
-      </tooltip>
+      </TippyTooltip>
     </div>
   </div>
 </template>

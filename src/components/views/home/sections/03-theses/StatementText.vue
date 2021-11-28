@@ -1,43 +1,44 @@
 <template>
   <div
     :class="{
-      statement: true,
-      'statement--status-empty': status === null,
-      'statement--status-skip': status === 'skip',
+      'statement-text': true,
+      'statement-text--status-empty': status === null,
+      'statement-text--status-skip': status === 'skip',
     }"
     :style="cssVariables"
   >
     <!-- Counter and Title -->
     <small :class="{
-      'statement__caption': true,
-      'statement__caption--counter-only': !$root.$te(`theses.${index}.title`),
+      'statement-text__caption': true,
+      'statement-text__caption--counter-only': !$root.$te(`theses.${index}.title`),
     }">
       <span
-        class="statement__counter"
+        class="statement-text__counter"
         aria-hidden="true"
       >
-        {{ $t('views.home.theses.statement.thesis', { count: index + 1, total }) }}
+        {{ $t('views.home.theses.statement-text.thesis', { count: index + 1, total }) }}
       </span>
-      <span v-if="$root.$te(`theses.${index}.title`)" class="statement__title">
+      <span v-if="$root.$te(`theses.${index}.title`)" class="statement-text__title">
         – {{ $t(`theses.${index}.title`) }}
       </span>
     </small>
 
     <!-- Statement -->
+    <!-- eslint-disable-next-line vuejs-accessibility/heading-has-content -->
     <h3
-      class="statement__thesis"
-      :aria-label="$t('views.home.theses.statement.statement-aria', {
+      class="statement-text__thesis"
+      :aria-label="$t('views.home.theses.statement-text.statement-aria', {
         statement: $t(`theses.${index}.statement`)
       })"
     >
-      <span class="statement__quote-start" aria-hidden="true">
-        <span>{{ $t('views.home.theses.statement.quoteStart') }}</span>
+      <span class="statement-text__quote-start" aria-hidden="true">
+        <span>{{ $t('views.home.theses.statement-text.quoteStart') }}</span>
       </span>
-      <Definitions :text="$t(`theses.${index}.statement`)" /><span class="statement__quote-end" aria-hidden="true">{{ $t('views.home.theses.statement.quoteEnd') }}</span><!-- eslint-disable-line max-len -->
+      <DefinitionsTooltip :text="$t(`theses.${index}.statement`)" /><span class="statement-text__quote-end" aria-hidden="true">{{ $t('views.home.theses.statement-text.quoteEnd') }}</span><!-- eslint-disable-line max-len -->
     </h3>
 
     <!-- Badges -->
-    <div v-if="badge" class="statement__badges">
+    <div v-if="badge" class="statement-text__badges">
       <template v-if="badge">
         <Badge
           :icon="option.icon"
@@ -49,28 +50,28 @@
         </Badge>
       </template>
       <template v-if="badge && factor > 1">
-        <Badge
+        <StatementBadge
           icon="exclamation-circle"
           backgroundColor="#FFD01C"
           textColor="#fff"
-          :aria-label="$t(`views.home.theses.statement.badge.important-aria`)"
+          :aria-label="$t(`views.home.theses.statement-text.statement-badge.important-aria`)"
         >
-          {{ $t(`views.home.theses.statement.badge.important`) }}
-        </Badge>
+          {{ $t(`views.home.theses.statement-text.statement-badge.important`) }}
+        </StatementBadge>
       </template>
     </div>
   </div>
 </template>
 
 <script>
-import Badge from '@/components/views/home/sections/03-theses/Badge.vue';
-import Definitions from '@/components/elements/Definitions.vue';
+import StatementBadge from '@/components/views/home/sections/03-theses/StatementBadge.vue';
+import DefinitionsTooltip from '@/components/elements/DefinitionsTooltip.vue';
 
 export default {
-  name: 'Statement',
+  name: 'StatementText',
   components: {
-    Badge,
-    Definitions,
+    StatementBadge,
+    DefinitionsTooltip,
   },
   props: {
     index: {
@@ -141,12 +142,12 @@ export default {
 </script>
 
 <style lang="scss">
-.statement__caption {
+.statement-text__caption {
   display: block;
   text-align: left;
   margin-bottom: 1em;
   font-size: 0.875em;
-  &.statement__caption--counter-only {
+  &.statement-text__caption--counter-only {
     text-align: center;
   }
   @media (min-width: 40em) {
@@ -158,16 +159,16 @@ export default {
   }
 }
 
-.statement__counter {
+.statement-text__counter {
   font-weight: bold;
   color: var(--theme-primary-text);
 }
 
-.statement__title {
+.statement-text__title {
   color: #777;
 }
 
-.statement__thesis {
+.statement-text__thesis {
   color: var(--base-color);
   font-size: 1.35em;
   line-height: 1.25;
@@ -188,16 +189,16 @@ export default {
   }
 }
 
-.statement.statement--status-empty, .statement.statement--status-skip {
-  .statement__thesis {
+.statement-text.statement-text--status-empty, .statement-text.statement-text--status-skip {
+  .statement-text__thesis {
     color: var(--theme-primary-color);
   }
 }
-.statement.statement--status-skip .statement__thesis {
+.statement-text.statement-text--status-skip .statement-text__thesis {
   text-decoration: line-through;
 }
 
-.statement__quote-start {
+.statement-text__quote-start {
   position: relative;
   color: #e2e8f0;
   span {
@@ -206,11 +207,11 @@ export default {
   }
 }
 
-.statement__quote-end {
+.statement-text__quote-end {
   color: #e2e8f0;
 }
 
-.statement__badges {
+.statement-text__badges {
   margin-top: 2em;
 }
 </style>

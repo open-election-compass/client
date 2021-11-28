@@ -142,7 +142,7 @@ describe('Friends Store (Host)', () => {
     const dispatch = store.dispatch('friends/host/hostSession');
     jest.advanceTimersToNextTimer();
     await dispatch;
-    expect(store.getters['friends/mode']).toEqual('HOST');
+    expect(store.getters['friends/mode']).toBe('HOST');
     expect(store.getters['friends/host/guests']).toHaveLength(0);
   });
 
@@ -301,7 +301,7 @@ describe('Friends Store (Host)', () => {
     store.commit('friends/host/updateGuestAnswers', { peerId: 'jkl', answers: [null, null, null] });
     // -> Joscha hasn't been accepted yet
 
-    expect(store.getters['friends/mode']).toEqual('HOST');
+    expect(store.getters['friends/mode']).toBe('HOST');
     expect(store.getters['friends/host/guests']).toHaveLength(4);
 
     // Attempt to send updates in the wrong mode

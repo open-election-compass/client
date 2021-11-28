@@ -1,6 +1,6 @@
 <template>
   <div :class="classes">
-    <Bubble
+    <ChatBubble
       :party="party"
       :content="content"
       :direction="option.direction"
@@ -16,12 +16,12 @@
 </template>
 
 <script>
-import Bubble from './Bubble.vue';
+import ChatBubble from './ChatBubble.vue';
 
 export default {
-  name: 'Answer',
+  name: 'FullAnswer',
   components: {
-    Bubble,
+    ChatBubble,
   },
   props: {
     party: {
@@ -105,8 +105,8 @@ export default {
     },
     classes() {
       return [
-        'answer',
-        `answer--${this.option.direction}`,
+        'full-answer',
+        `full-answer--${this.option.direction}`,
       ];
     },
   },
@@ -114,13 +114,13 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.answer {
+.full-answer {
   margin-top: 3em;
   @media (min-width: 64em) {
-    &.answer--positive, &.answer--negative {
+    &.full-answer--positive, &.full-answer--negative {
       margin-top: 6em;
     }
-    &.answer--neutral {
+    &.full-answer--neutral {
       margin-top: 5em;
     }
   }

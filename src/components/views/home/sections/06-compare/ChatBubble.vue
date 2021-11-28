@@ -1,25 +1,25 @@
 <template>
-  <div class="bubble" :class="classes" :style="cssVariables">
-    <blockquote class="bubble__quote" :aria-label="answerTextAria">
+  <div class="chat-bubble" :class="classes" :style="cssVariables">
+    <blockquote class="chat-bubble__quote" :aria-label="answerTextAria">
       <p
-        class="bubble__bubble"
+        class="chat-bubble__bubble"
         aria-hidden="true"
       >
         <ShowMore :text="content" :length="showMoreLimit" />
       </p>
-      <footer class="bubble__footer" aria-hidden="true">
+      <footer class="chat-bubble__footer" aria-hidden="true">
         <cite>
-          <span class="bubble__party">
+          <span class="chat-bubble__party">
             {{ $t(`parties.${party.index}.short`) }}
           </span>
-          <span class="bubble__status">
-            <Badge
+          <span class="chat-bubble__status">
+            <StatementBadge
               :icon="statusIcon"
               :background-color="statusBackgroundColor"
               :text-color="statusTextColor"
             >
               {{ statusText }}
-            </Badge>
+            </StatementBadge>
           </span>
         </cite>
       </footer>
@@ -28,13 +28,13 @@
 </template>
 
 <script>
-import Badge from '@/components/views/home/sections/03-theses/Badge.vue';
+import StatementBadge from '@/components/views/home/sections/03-theses/StatementBadge.vue';
 import ShowMore from '@/components/elements/ShowMore.vue';
 
 export default {
-  name: 'Bubble',
+  name: 'ChatBubble',
   components: {
-    Badge,
+    StatementBadge,
     ShowMore,
   },
   props: {
@@ -86,7 +86,7 @@ export default {
   computed: {
     classes() {
       return [
-        `bubble--${this.direction}`,
+        `chat-bubble--${this.direction}`,
       ];
     },
     cssVariables() {
@@ -100,7 +100,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.bubble {
+.chat-bubble {
   @media (min-width: 80em) {
     &.bubble--positive {
       transform: translateX(-8rem);
@@ -110,29 +110,29 @@ export default {
     }
   }
   @media (min-width: 100em) {
-    &.bubble--positive {
+    &.chat-bubble--positive {
       transform: translateX(-14rem);
     }
-    &.bubble--negative {
+    &.chat-bubble--negative {
       transform: translateX(14rem);
     }
   }
 }
 
-.bubble__quote {
+.chat-bubble__quote {
   margin-top: 2rem;
   display: flex;
   flex-direction: column;
 }
 
 @media (min-width: 64em) {
-  .bubble--positive .bubble__quote,
-  .bubble--negative .bubble__quote {
+  .chat-bubble--positive .chat-bubble__quote,
+  .chat-bubble--negative .chat-bubble__quote {
     flex-direction: row;
   }
 }
 
-.bubble__bubble {
+.chat-bubble__bubble {
   border-radius: 0.25rem;
   padding: 1rem;
   position: relative;
@@ -158,22 +158,22 @@ export default {
 }
 
 @media (min-width: 64em) {
-  .bubble__bubble {
+  .chat-bubble__bubble {
     padding: 2em;
     font-size: 1.125em;
   }
-  .bubble--positive .bubble__bubble::before {
+  .chat-bubble--positive .chat-bubble__bubble::before {
     top: 2rem;
     left: 0;
     border-width: 1rem 1rem 1rem 0;
     border-color: transparent var(--bubble-background) transparent transparent;
   }
-  .bubble--neutral .bubble__bubble {
+  .chat-bubble--neutral .chat-bubble__bubble {
     margin-right: auto;
     margin-left: auto;
     align-self: center;
   }
-  .bubble--negative .bubble__bubble {
+  .chat-bubble--negative .chat-bubble__bubble {
     order: 1;
     &::before {
       top: 2rem;
@@ -185,7 +185,7 @@ export default {
   }
 }
 
-.bubble__footer {
+.chat-bubble__footer {
   order: 1;
   flex: none;
   text-align: center;
@@ -198,7 +198,7 @@ export default {
   }
 }
 
-.bubble__party {
+.chat-bubble__party {
   font-weight: bold;
   display: block;
   margin-bottom: 0.5em;
@@ -211,28 +211,28 @@ export default {
   }
 }
 
-.bubble__status {}
+.chat-bubble__status {}
 
 @media (min-width: 64em) {
-  .bubble--positive .bubble__footer {
+  .chat-bubble--positive .chat-bubble__footer {
     margin-right: 3em;
     margin-bottom: 0;
     padding: 1.5em 0;
-    .bubble__party {
+    .chat-bubble__party {
       text-align: right;
     }
   }
 
-  .bubble--neutral .bubble__footer {
+  .chat-bubble--neutral .chat-bubble__footer {
     margin-bottom: 3em;
   }
 
-  .bubble--negative .bubble__footer {
+  .chat-bubble--negative .chat-bubble__footer {
     order: 2;
     margin-left: 3em;
     margin-bottom: 0;
     padding: 1.5em 0;
-    .bubble__party {
+    .chat-bubble__party {
       text-align: left;
     }
   }

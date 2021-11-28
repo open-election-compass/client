@@ -127,28 +127,28 @@ views:
         skip: "Weiß ich nicht"
         skip-aria: "Überspringen – überspringt diese These, sodass sie nicht gezählt wird."
         too-many-skip: "Es gibt nur sehr wenige Thesen, du kannst daher keine überspringen. | Bitte überspringe nicht mehr als 1 These um ein aussagekräftiges Ergebnis zu erhalten! | Bitte überspringe nicht mehr als {count} Thesen um ein aussagekräftiges Ergebnis zu erhalten!"
-      statement:
+      statement-text:
         thesis: "These {count} / {total}"
         statement-aria: "Die These lautet: '{statement}'"
         quoteStart: "„"
         quoteEnd: "“"
-        badge:
+        statement-badge:
           skip: "Übersprungen"
           skip-aria: "Du hast diese These übersprungen."
           important: "Von dir als wichtig markiert"
           important-aria: "Du hast diese These als wichtig markiert."
-      thesis:
+      statement-wrapper:
         role-aria: "These"
         region-aria: "These {count} von {total}"
     party:
-      party:
+      party-item:
         party-aria: "Partei '{party}' – klicke hier um diese Partei zum Vergleich aus- bzw. abzuwählen."
       section:
         heading: "Wähle die zu vergleichenden Parteien"
         instruction: "Bitte wähle die Parteien aus, mit denen du deine eigenen Entscheidungen vergleichen möchtest. Du kannst beliebig viele Parteien auswählen, jedoch mindestens zwei. Die Reihenfolge der Liste orientiert sich an der Reihenfolge der Parteien auf dem Wahlzettel."
         proceed: "Fertig"
     match:
-      match:
+      match-display:
         match-aria: "Deine Übereinstimmung mit den Positionen der Partei '{party}' liegt bei {percentage} %"
       section:
         heading: "Dein Ergebnis"

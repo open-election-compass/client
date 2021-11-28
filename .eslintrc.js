@@ -3,8 +3,12 @@ module.exports = {
   env: {
     node: true,
   },
+  plugins: [
+    'vuejs-accessibility',
+  ],
   extends: [
     'plugin:vue/essential',
+    'plugin:vuejs-accessibility/recommended',
     '@vue/airbnb',
   ],
   rules: {},
