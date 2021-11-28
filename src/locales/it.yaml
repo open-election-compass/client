@@ -210,14 +210,14 @@ views:
           content: "Il partito '{party}' non ha fornito motivi o spiegazioni alla sua opinione su questa dichiarazione."
       section:
         heading: "Le loro risposte"
-        explanation: "I partiti normalmente indicano una posizione per ogni dichiarazione per spiegare i loro motivi. Non è sempre ovvio il motivo per cui un partito assume certe posizioni si raccomanda quindi la lettura di queste dichiarazioni e delle rispettive dichiarazioni elettorali."
+        explanation: "The parties typically provide statements for every thesis to explain their reasoning. It is not always obvious why a party assumes a certain position so it is recommended to read this statements or the respective election manifestos."
         region-aria: "Dichiarazione {count} di {total}"
       friends-position:
         answer-aria: "{name}: {position}"
         skip: "Saltata"
       kiosk-mode-hint:
         heading: "Per favore resetta quando hai finito"
-        explanation: "Prenditi il tempo per leggere e confrontare le risposte qui sotto. Quando hai finito puoi resettare la bussola elettorale per il prossimo utilizzatore. Questo cancellerà le tue risposte. Nb puoi trovare un tasto cancella anche nel menu. Grazie!"
+        explanation: "Take your time reading and comparing the answers to the statements below. When you're done, you can reset the election compass here for the next person. This will also delete your own answers. Hint: you can also find a reset button in the menu. Thank you!"
         reset: "Cancella"
     footer:
       section:
