@@ -11,6 +11,7 @@ import veeValidateFr from 'vee-validate/dist/locale/fr.json';
 import veeValidateHu from 'vee-validate/dist/locale/hu.json';
 import veeValidateId from 'vee-validate/dist/locale/id.json';
 import veeValidateIt from 'vee-validate/dist/locale/it.json';
+import veeValidateNl from 'vee-validate/dist/locale/nl.json';
 import veeValidatePl from 'vee-validate/dist/locale/pl.json';
 import veeValidatePt from 'vee-validate/dist/locale/pt_BR.json';
 import veeValidateTr from 'vee-validate/dist/locale/tr.json';
@@ -40,6 +41,7 @@ import fr from './locales/fr.yaml';
 import hu from './locales/hu.yaml';
 import id from './locales/id.yaml';
 import it from './locales/it.yaml';
+import nl from './locales/nl.yaml';
 import pl from './locales/pl.yaml';
 import pt from './locales/pt.yaml';
 import tr from './locales/tr.yaml';
@@ -54,6 +56,7 @@ export default function installOpenElectionCompassNuxtPlugin({ app, store }) {
   app.i18n.mergeLocaleMessage('hu', hu);
   app.i18n.mergeLocaleMessage('id', id);
   app.i18n.mergeLocaleMessage('it', it);
+  app.i18n.mergeLocaleMessage('nl', nl);
   app.i18n.mergeLocaleMessage('pl', pl);
   app.i18n.mergeLocaleMessage('pt', pt);
   app.i18n.mergeLocaleMessage('tr', tr);
@@ -98,6 +101,7 @@ export default function installOpenElectionCompassNuxtPlugin({ app, store }) {
     veeValidateHu,
     veeValidateId,
     veeValidateIt,
+    veeValidateNl,
     veeValidatePl,
     veeValidatePt,
     veeValidateTr,
