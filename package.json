@@ -61,8 +61,8 @@
     "yup": "^0.32.11"
   },
   "devDependencies": {
-    "@commitlint/cli": "^8.3.6",
-    "@commitlint/config-conventional": "^8.3.6",
+    "@commitlint/cli": "^15.0.0",
+    "@commitlint/config-conventional": "^15.0.0",
     "@intlify/vue-i18n-loader": "^1.1.0",
     "@vue/cli-plugin-babel": "^4.5.15",
     "@vue/cli-plugin-e2e-cypress": "^4.5.15",
@@ -80,7 +80,7 @@
     "eslint-plugin-jest": "^23.20.0",
     "eslint-plugin-vue": "^6.2.2",
     "geckodriver": "^1.22.3",
-    "husky": "^3.1.0",
+    "husky": "^7.0.4",
     "node-sass": "^4.14.1",
     "np": "^7.6.0",
     "sass-loader": "^8.0.2",
