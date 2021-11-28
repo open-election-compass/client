@@ -210,14 +210,14 @@ views:
           content: "Taraf '{party}' bu açıklamaya istinaden konumunu açıklamak için herhangi bir gerekçe sunmadı."
       section:
         heading: "Cevapları"
-        explanation: "Taraflar genel olarak gerekçelerini açıklamak amacıyla her açıklama için konum sağlarlar. Bir tarafın neden belirli bir pozisyon aldığı her zaman açık değildir, bu nedenle bu açıklamaları veya ilgili seçim beyannamelerini okumanız tavsiye edilir."
+        explanation: "The parties typically provide statements for every thesis to explain their reasoning. It is not always obvious why a party assumes a certain position so it is recommended to read this statements or the respective election manifestos."
         region-aria: "Açıklama {count} / {total}"
       friends-position:
         answer-aria: "{name}: {position}"
         skip: "Atlandı"
       kiosk-mode-hint:
         heading: "Tamamladığınızda lütfen sıfırlayın"
-        explanation: "Aşağıdaki yanıtları ve açıklamaları okumaya ve karşılaştırmaya zaman ayırın. Hazır olduğunuzda, sıradaki kişi için seçim pusulasını sıfırlayabilirsiniz. Bu ayrıca cevaplarınızı silecektir. İpucu: Ayrıca menüde de sıfırlama butonu bulabilirsiniz. Teşekkürler!"
+        explanation: "Take your time reading and comparing the answers to the statements below. When you're done, you can reset the election compass here for the next person. This will also delete your own answers. Hint: you can also find a reset button in the menu. Thank you!"
         reset: "Sıfırla"
     footer:
       section:
