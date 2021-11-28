@@ -210,14 +210,14 @@ views:
           content: "El grupo \"{party}\" no aportó ningún razonamiento para explicar su posición respecto a esta tesis."
       section:
         heading: "Las respuestas"
-        explanation: "Los grupos suelen ofrecer posicionamientos para cada declaración con el fin de explicar su razonamiento. No siempre es obvio por qué un grupo asume una determinada posición, por lo que se recomienda leer estas declaraciones o los respectivos programas electorales."
+        explanation: "The parties typically provide statements for every thesis to explain their reasoning. It is not always obvious why a party assumes a certain position so it is recommended to read this statements or the respective election manifestos."
         region-aria: "Declaraciones {count} de {total}"
       friends-position:
         answer-aria: "{name}: {position}"
         skip: "Se ha omitido"
       kiosk-mode-hint:
         heading: "Por favor, reinicia cuando hayas terminado"
-        explanation: "Tómate tu tiempo para leer y comparar las declaraciones de las respuestas a continuación. Cuando hayas terminado, puedes restablecer la brújula electoral aquí para la siguiente persona. Esto también borrará tus propias respuestas. Sugerencia: también puedes encontrar un botón de reinicio en el menú. Gracias!"
+        explanation: "Take your time reading and comparing the answers to the statements below. When you're done, you can reset the election compass here for the next person. This will also delete your own answers. Hint: you can also find a reset button in the menu. Thank you!"
         reset: "Reinciar"
     footer:
       section:
