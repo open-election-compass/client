@@ -293,8 +293,8 @@ export default {
 </script>
 
 <style lang="scss">
-@import './main.scss';
-@import '@/styles/core.scss';
+@import './main';
+@import '@/styles/core';
 
 #oec-wrapper {
   font-family: Arial, sans-serif;
