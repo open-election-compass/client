@@ -127,29 +127,29 @@ views:
         skip: "Nie wiem"
         skip-aria: "Pomiń – pomija to stwierdzenie, nie będzie liczone w wynikach."
         too-many-skip: "Jest tylko kilka stwierdzeń, więc nie możesz go pominąć | Proszę pominąć nie więcej niż 1 stwierdzenie jako ważne, aby otrzymać sensowny wynik! | Proszę pominąć nie więcej niż {count} stwierdzeń jako ważne, aby otrzymać sensowny wynik!"
-      statement:
-        thesis: "Stwierdzenia {count} / {total}"
-        statement-aria: "To stwierdzenie brzmi: '{statement}'"
+      statement-text:
+        thesis: "Thesis {count} / {total}"
+        statement-aria: "The thesis is: '{statement}'"
         quoteStart: "‘"
         quoteEnd: "’"
-        badge:
-          skip: "Pominąłeś to"
-          skip-aria: "Pominąłeś to swierdzenie."
-          important: "Oznaczyłeś to jako ważne"
-          important-aria: "Oznaczyłeś to stwierdzenie jako ważne."
-      thesis:
-        role-aria: "Stwierdzenia"
-        region-aria: "Stwierdzenie {count} z {total}"
+        statement-badge:
+          skip: "You skipped this"
+          skip-aria: "You skipped this thesis."
+          important: "You marked this as important"
+          important-aria: "You marked this thesis as important."
+      statement-wrapper:
+        role-aria: "Thesis"
+        region-aria: "Thesis {count} of {total}"
     party:
-      party:
-        party-aria: "Parta '{party}' – kliknij tutaj, żeby odznaczyć tę partię z wyboru."
+      party-item:
+        party-aria: "Party '{party}' – click here to select or deselect this party for comparison."
       section:
         heading: "Wybierz partie, które chcesz porównać"
         instruction: "Proszę wybrać partie, z którymi chcesz porównać swoje własne decyzje. Możesz wybrać tyle partii, ilu chcesz, ale musisz wybrać co najmniej dwóch. Poniższa lista jest przedstawiona w takiej samej kolejności, w jakiej partie pojawią się na karcie do głosowania."
         proceed: "Załatwione"
     match:
-      match:
-        match-aria: "Twoja zgodność z partią '{party}' wynosi '{percentage}' %"
+      match-display:
+        match-aria: "Your match for the party '{party}' is at {percentage} %"
       section:
         heading: "Twój wynik"
         explanation: "Ten wykres opisuje, w jakim stopniu Ty i poszczególne partie zgadzacie się co do przedstawionych stwierdzeń. Im wyższy procent, tym bardziej wasze stanowiska są zbieżne. Należy pamiętać, że nie jest to rekomendacja do głosowania, lecz narzędzie orientacji i dyskusji."
