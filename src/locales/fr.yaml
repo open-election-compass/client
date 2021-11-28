@@ -127,29 +127,29 @@ views:
         skip: "Je ne sais pas"
         skip-aria: "Ignorer - ignore cette instruction afin qu'elle ne soit pas comptée."
         too-many-skip: "Veuillez ne pas sauter plus d'une instruction pour recevoir un résultat significatif ! / Veuillez ne pas sauter plus de {count} instructions pour obtenir un résultat significatif !"
-      statement:
-        thesis: "Relevé {count} / {total}"
-        statement-aria: "L'énoncé est : '{statement}'"
+      statement-text:
+        thesis: "Thesis {count} / {total}"
+        statement-aria: "The thesis is: '{statement}'"
         quoteStart: "‘"
         quoteEnd: "’"
-        badge:
-          skip: "Vous avez sauté"
-          skip-aria: "Vous avez sauté cette déclaration."
-          important: "Vous avez marqué cela comme important"
-          important-aria: "Vous avez marqué cette déclaration comme importante."
-      thesis:
-        role-aria: "Déclaration"
-        region-aria: "Déclaration {count} / {total}"
+        statement-badge:
+          skip: "You skipped this"
+          skip-aria: "You skipped this thesis."
+          important: "You marked this as important"
+          important-aria: "You marked this thesis as important."
+      statement-wrapper:
+        role-aria: "Thesis"
+        region-aria: "Thesis {count} of {total}"
     party:
-      party:
-        party-aria: "Partie '{party}' - cliquez ici pour sélectionner ou désélectionner cette partie à des fins de comparaison."
+      party-item:
+        party-aria: "Party '{party}' – click here to select or deselect this party for comparison."
       section:
         heading: "Choisissez les parties que vous souhaitez comparer"
         instruction: "Veuillez sélectionner les parties auxquelles vous souhaitez comparer vos propres décisions. Vous pouvez sélectionner autant de parties que vous le souhaitez, mais vous devez en sélectionner au moins deux. La liste suivante est présentée dans le même ordre que les partis apparaîtront sur le bulletin de vote."
         proceed: "Fait"
     match:
-      match:
-        match-aria: "Votre taux de correspondance avec le parti \"{party}\" est de {percentage} %"
+      match-display:
+        match-aria: "Your match for the party '{party}' is at {percentage} %"
       section:
         heading: "Votre résultat"
         explanation: "Ce tableau décrit dans quelle mesure vous et les partis respectifs êtes d'accord sur les déclarations ci-dessus. Plus le pourcentage est élevé, plus vos positions correspondent. N'oubliez pas qu'il ne s'agit pas d'une recommandation de vote, mais d'un outil d'orientation et de discussion."
