@@ -10,6 +10,7 @@ import {
   huLocale as huUILocale,
   idLocale as idUILocale,
   itLocale as itUILocale,
+  nlLocale as nlUILocale,
   plLocale as plUILocale,
   ptLocale as ptUILocale,
   trLocale as trUILocale,
@@ -22,6 +23,7 @@ import fr from './fr.yaml';
 import hu from './hu.yaml';
 import id from './id.yaml';
 import it from './it.yaml';
+import nl from './nl.yaml';
 import pl from './pl.yaml';
 import pt from './pt.yaml';
 import tr from './tr.yaml';
@@ -63,6 +65,9 @@ i18n.mergeLocaleMessage('id', idUILocale);
 i18n.setLocaleMessage('it', it);
 i18n.mergeLocaleMessage('it', itUILocale);
 
+i18n.setLocaleMessage('nl', nl);
+i18n.mergeLocaleMessage('nl', nlUILocale);
+
 i18n.setLocaleMessage('pl', pl);
 i18n.mergeLocaleMessage('pl', plUILocale);
 
@@ -80,6 +85,7 @@ localize('fr', fr.validation);
 localize('hu', hu.validation);
 localize('id', id.validation);
 localize('it', it.validation);
+localize('nl', nl.validation);
 localize('pl', pl.validation);
 localize('pt', pt.validation);
 localize('tr', tr.validation);

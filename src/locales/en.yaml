@@ -209,14 +209,14 @@ views:
           content: "The party '{party}' did not provide any statement to explain their position regarding this thesis."
       section:
         heading: "Their answers"
-        explanation: "The parties typically provide statements for every thesis to explain their reasoning. It is not always obvious why a party asumes a certain position so it is recommended to read this statements or the respective election manifestos."
+        explanation: "The parties typically provide statements for every thesis to explain their reasoning. It is not always obvious why a party assumes a certain position so it is recommended to read this statements or the respective election manifestos."
         region-aria: "Thesis {count} of {total}"
       friends-position:
         answer-aria: "{name}: {position}"
         skip: "Skipped"
       kiosk-mode-hint:
         heading: "Please reset when you're done"
-        explanation: "Take your time reading and comparing the answers statements below. When you're done, you can reset the election compass here for the next person. This will also delete your own answers. Hint: you can also find a reset button in the menu. Thank you!"
+        explanation: "Take your time reading and comparing the answers to the statements below. When you're done, you can reset the election compass here for the next person. This will also delete your own answers. Hint: you can also find a reset button in the menu. Thank you!"
         reset: "Reset"
     footer:
       section:
