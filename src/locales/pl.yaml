@@ -210,14 +210,14 @@ views:
           content: "Partia '{party}' nie przedstawiła swojego uzasadnienia."
       section:
         heading: "Ich odpowiedzi"
-        explanation: "Partie zazwyczaj przedstawiają stanowiska do każdego oświadczenia, aby wyjaśnić swoje rozumowanie. Nie zawsze jest oczywiste, dlaczego dana partia zajmuje określone stanowisko, dlatego zaleca się przeczytanie tych oświadczeń lub odpowiednich manifestów wyborczych."
+        explanation: "The parties typically provide statements for every thesis to explain their reasoning. It is not always obvious why a party assumes a certain position so it is recommended to read this statements or the respective election manifestos."
         region-aria: "Stwierdzenie {count} z {total}"
       friends-position:
         answer-aria: "{name}: {position}"
         skip: "Pominięto"
       kiosk-mode-hint:
         heading: "Proszę zresetować, gdy skończysz"
-        explanation: "Nie spiesz się z czytaniem i porównywaniem poniższych odpowiedzi. Kiedy skończysz, możesz tutaj zresetować kompas wyborczy dla następnej osoby. W ten sposób usuniesz również swoje własne odpowiedzi. Wskazówka: przycisk resetowania znajdziesz również w menu. Dziękujemy!"
+        explanation: "Take your time reading and comparing the answers to the statements below. When you're done, you can reset the election compass here for the next person. This will also delete your own answers. Hint: you can also find a reset button in the menu. Thank you!"
         reset: "Reset"
     footer:
       section:
