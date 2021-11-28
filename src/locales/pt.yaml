@@ -127,29 +127,29 @@ views:
         skip: "Não sei"
         skip-aria: "Pular - pular esta declaração e desconsiderá-la."
         too-many-skip: "Há poucas declarações e portanto não é possível pular nenhuma | Por favor, para que o resultado seja significativo não pule mais do que uma declaração! | Por favor, para obter um resultado significativo não pule mais do que {count} declarações!"
-      statement:
-        thesis: "Declarações {count} / {total}"
-        statement-aria: "A declaração é: '{statement}'"
+      statement-text:
+        thesis: "Thesis {count} / {total}"
+        statement-aria: "The thesis is: '{statement}'"
         quoteStart: "‘"
         quoteEnd: "’"
-        badge:
-          skip: "Você pulou esta"
-          skip-aria: "Você pulou esta declaração."
-          important: "Você marcou isto como importante"
-          important-aria: "Você marcou esta declaração como importante."
-      thesis:
-        role-aria: "Declaração"
-        region-aria: "Declaração {count} de {total}"
+        statement-badge:
+          skip: "You skipped this"
+          skip-aria: "You skipped this thesis."
+          important: "You marked this as important"
+          important-aria: "You marked this thesis as important."
+      statement-wrapper:
+        role-aria: "Thesis"
+        region-aria: "Thesis {count} of {total}"
     party:
-      party:
-        party-aria: "Partido '{party}' – clique aqui para selecionar ou desfazer a seleção deste partido para realizar a comparação."
+      party-item:
+        party-aria: "Party '{party}' – click here to select or deselect this party for comparison."
       section:
         heading: "Selecione os partidos que quer comparar"
         instruction: "Comece com a primeira declaração."
         proceed: "Feito"
     match:
-      match:
-        match-aria: "Alinhamento de {percentage} % com o partido '{party}'"
+      match-display:
+        match-aria: "Your match for the party '{party}' is at {percentage} %"
       section:
         heading: "Seu resultado"
         explanation: "Este quadro mostra em que medida você e os partidos selecionados estão de acordo com as declarações acima. Quanto maior a porcentagem, mais a posição de vocês está alinhada. Lembre-se que isto não é uma recomendação de voto, mas uma ferramenta de orientação para facilitar debates."
