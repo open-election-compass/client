@@ -127,29 +127,29 @@ views:
         skip: "Non so"
         skip-aria: "Salta - salta questa dichiarazione e non verrà conteggiata."
         too-many-skip: "Ci sono solo poche dichiarazioni, non ne puoi saltare. | Per favore non saltare più di 1 dichiarazione per ottenere un risultato significativo! | Per favore non saltare più di {count} dichiarazioni per ottenere un risultato significativo!"
-      statement:
-        thesis: "Dichiarazione {count} / {total}"
-        statement-aria: "La dichiarazione è: '{statement}'"
+      statement-text:
+        thesis: "Thesis {count} / {total}"
+        statement-aria: "The thesis is: '{statement}'"
         quoteStart: "‘"
         quoteEnd: "’"
-        badge:
-          skip: "Hai saltato"
-          skip-aria: "Hai saltato questa dichiarazione."
-          important: "Hai contrassegnato questo come importante"
-          important-aria: "Hai contrassegnato questa dichiarazione come importante."
-      thesis:
-        role-aria: "Dichiarazione"
-        region-aria: "Dichiarazione {count} di {total}"
+        statement-badge:
+          skip: "You skipped this"
+          skip-aria: "You skipped this thesis."
+          important: "You marked this as important"
+          important-aria: "You marked this thesis as important."
+      statement-wrapper:
+        role-aria: "Thesis"
+        region-aria: "Thesis {count} of {total}"
     party:
-      party:
-        party-aria: "Partito '{party}' - clicca qui per selezionare o deselezionare questo partito per il confronto."
+      party-item:
+        party-aria: "Party '{party}' – click here to select or deselect this party for comparison."
       section:
         heading: "Scegli i partiti che vuoi confrontare"
         instruction: "Per favore seleziona i partiti con i quali vuoi effettuare il confronto. Puoi selezionarne quanti ne vuoi ma devi selezionarne almeno due. La seguente lista è presentata nello stesso ordine con cui i partiti appariranno nel voto."
         proceed: "Fatto"
     match:
-      match:
-        match-aria: "La tua corrispondenza con il partito '{party}' e del {percentage} %"
+      match-display:
+        match-aria: "Your match for the party '{party}' is at {percentage} %"
       section:
         heading: "Il tuo risultato"
         explanation: "Questo grafico descrive quanto tu e i rispettivi partiti concordate sulle dichiarazioni di cui sopra. Più è elevata la percentuale più le vostre posizioni concordano. Tinei presente che questo non è un suggerimento di voto bensì uno strumento per valutazioni e per la discussione."
