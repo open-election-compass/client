@@ -68,7 +68,7 @@ export default {
         && this.$store.getters['sections/guideButtonEnabled']
         && typeof this.activeSection.completed === 'boolean'
         && typeof this.activeSection.message === 'string'
-        && this.$te(`elements.guide-button.${this.activeSection.message}`)
+        && this.$root.$te(`elements.guide-button.${this.activeSection.message}`, this.$i18n.fallbackLocale)
       );
     },
     nextSection() {

@@ -30,6 +30,7 @@ Vue.use(VueI18n);
 
 const i18n = new VueI18n({
   locale: 'en',
+  fallbackLocale: 'en',
 
   // When accessing root locales in single file components with their own locales, vue-i18n will
   // print a fallback warning in the console. This gets quite annoying, since we do that a lot and

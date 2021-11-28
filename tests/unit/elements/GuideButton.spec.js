@@ -14,6 +14,7 @@ describe('GuideButton.vue', () => {
   const section1 = { alias: 'section-1', completed: true, message: '' };
   const section2 = { alias: 'section-2', completed: false, message: '' };
   const section3 = { alias: 'section-3', completed: false, message: '' };
+  const te = jest.fn().mockImplementation(() => true);
 
   beforeEach(() => {
     const store = new Vuex.Store({
@@ -49,7 +50,10 @@ describe('GuideButton.vue', () => {
     const options = {
       mocks: {
         $t: () => {},
-        $te: () => true,
+        $te: te,
+        $i18n: {
+          fallbackLocale: 'en',
+        },
       },
       propsData: {
         initialDelay: 0, // easier to test without timeouts
@@ -81,6 +85,19 @@ describe('GuideButton.vue', () => {
     await wrapper.vm.$store.commit('sections/setActualSection', section2);
     expect(wrapper.findComponent(BaseButton).exists()).toBe(false);
     await wrapper.vm.$store.commit('sections/setActiveSection', section1);
+    expect(wrapper.findComponent(BaseButton).exists()).toBe(true);
+  });
+
+  it('only shows when the button caption is at least available through a fallback translation', async () => {
+    await wrapper.vm.$store.commit('sections/setActualSection', section2);
+    await wrapper.vm.$store.commit('sections/setActiveSection', section2);
+    te.mockImplementationOnce(() => false)
+    await wrapper.vm.$store.commit('sections/setActualSection', section1);
+    expect(wrapper.findComponent(BaseButton).exists()).toBe(false);
+    await wrapper.vm.$store.commit('sections/setActualSection', section2);
+
+    te.mockImplementationOnce((path, locale) => locale === 'en')
+    await wrapper.vm.$store.commit('sections/setActualSection', section1);
     expect(wrapper.findComponent(BaseButton).exists()).toBe(true);
   });
 
