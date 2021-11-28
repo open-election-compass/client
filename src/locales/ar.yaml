@@ -210,14 +210,14 @@ views:
           content: "لم يقدم \"{party}\" أي تفاصيل لشرح جوابهم على هذا السؤال."
       section:
         heading: "إجاباتهم"
-        explanation: "عادة ما يضيف كل مُرشَّح تفاصيلاً لشرح إجابتهم وموقفهم، ونحن ننصح بقراءة هذه التفاصيل لأن فهم موقف المُرشَّح وإجاباتهم يبقى ناقصاً بدونها."
+        explanation: "The parties typically provide statements for every thesis to explain their reasoning. It is not always obvious why a party assumes a certain position so it is recommended to read this statements or the respective election manifestos."
         region-aria: "السؤال {count} من {total}"
       friends-position:
         answer-aria: "{name}: {position}"
         skip: "تخطَّيته"
       kiosk-mode-hint:
         heading: "لطفاً إعادة التعيين حينما تنتهي"
-        explanation: "خذ وقتك في قراءة تفاصيل الإجابات أدناه ومقارنتها ببعضها. حينما تنتهي، بإمكانك إعادة تعيين \"بوصلة الانتخابات\" ليستخدمها شخص آخر. سوف تُحْذَف إجاباتك -كذلك- أثناء إعادة التعيين. تلميح: توجد ميزة إعادة التعيين في القائمة الجانبية أيضاً. شكراً لك!"
+        explanation: "Take your time reading and comparing the answers to the statements below. When you're done, you can reset the election compass here for the next person. This will also delete your own answers. Hint: you can also find a reset button in the menu. Thank you!"
         reset: "إعادة"
     footer:
       section:
