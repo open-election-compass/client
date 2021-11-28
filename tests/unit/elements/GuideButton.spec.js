@@ -91,12 +91,12 @@ describe('GuideButton.vue', () => {
   it('only shows when the button caption is at least available through a fallback translation', async () => {
     await wrapper.vm.$store.commit('sections/setActualSection', section2);
     await wrapper.vm.$store.commit('sections/setActiveSection', section2);
-    te.mockImplementationOnce(() => false)
+    te.mockImplementationOnce(() => false);
     await wrapper.vm.$store.commit('sections/setActualSection', section1);
     expect(wrapper.findComponent(BaseButton).exists()).toBe(false);
     await wrapper.vm.$store.commit('sections/setActualSection', section2);
 
-    te.mockImplementationOnce((path, locale) => locale === 'en')
+    te.mockImplementationOnce((path, locale) => locale === 'en');
     await wrapper.vm.$store.commit('sections/setActualSection', section1);
     expect(wrapper.findComponent(BaseButton).exists()).toBe(true);
   });
