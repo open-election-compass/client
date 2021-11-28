@@ -127,28 +127,28 @@ views:
         skip: "I don't know"
         skip-aria: "Skip – skips this thesis so it will not be counted."
         too-many-skip: "There are only very few theses, so you cannot skip one. | Please skip no more than 1 thesis to receive a meaningful result! | Please skip no more than {count} theses to receive a meaningful result!"
-      statement:
+      statement-text:
         thesis: "Thesis {count} / {total}"
         statement-aria: "The thesis is: '{statement}'"
         quoteStart: "‘"
         quoteEnd: "’"
-        badge:
+        statement-badge:
           skip: "You skipped this"
           skip-aria: "You skipped this thesis."
           important: "You marked this as important"
           important-aria: "You marked this thesis as important."
-      thesis:
+      statement-wrapper:
         role-aria: "Thesis"
         region-aria: "Thesis {count} of {total}"
     party:
-      party:
+      party-item:
         party-aria: "Party '{party}' – click here to select or deselect this party for comparison."
       section:
         heading: "Choose the parties you want to compare"
         instruction: "Please select the parties you want to compare your own decisions to. You can select as many parties as you like, but you have to select at least two. The following list is presented in the same order as the parties will appear on the ballot."
         proceed: "Done"
     match:
-      match:
+      match-display:
         match-aria: "Your match for the party '{party}' is at {percentage} %"
       section:
         heading: "Your result"
