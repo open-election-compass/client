@@ -127,29 +127,29 @@ views:
         skip: "لا أعرف"
         skip-aria: "تخطّى - تخطّى هذا السؤال بدون احتسابه."
         too-many-skip: "الأسئلة قليلة جداً، لذا لن تستطيع تخطّي هذا السؤال. | عليك -لطفاً- ألا تتخطى أكثر من سؤال واحد لتحصل على نتيجة مفيدة! | عليك -لطفاً- ألا تتخطّى أكثر من {count} سؤال لتحصل على نتيجة مفيدة!"
-      statement:
-        thesis: "السؤال {count} من {total}"
-        statement-aria: "السؤال هو: \"{statement}\""
-        quoteStart: "\""
-        quoteEnd: "\""
-        badge:
-          skip: "تخطَّيت هذا السؤال"
-          skip-aria: "تخطَّيت هذا السؤال."
-          important: "صنَّفت هذا كسؤال مهم"
-          important-aria: "صنَّفت هذا كسؤال مهم."
-      thesis:
-        role-aria: "السؤال"
-        region-aria: "السؤال {count} من {total}"
+      statement-text:
+        thesis: "Thesis {count} / {total}"
+        statement-aria: "The thesis is: '{statement}'"
+        quoteStart: "‘"
+        quoteEnd: "’"
+        statement-badge:
+          skip: "You skipped this"
+          skip-aria: "You skipped this thesis."
+          important: "You marked this as important"
+          important-aria: "You marked this thesis as important."
+      statement-wrapper:
+        role-aria: "Thesis"
+        region-aria: "Thesis {count} of {total}"
     party:
-      party:
-        party-aria: "الشخص \"{party}\": اضغط هنا لإضافة هذا الشخص أو الجهة أو لإزالتها من المقارنة."
+      party-item:
+        party-aria: "Party '{party}' – click here to select or deselect this party for comparison."
       section:
         heading: "اختر أشخاصاً أو جهات لمقارنتهم"
         instruction: "اختر -لطفاً- الأشخاص أو الجهات الذين تريد مقارنة اختياراتك مع اختياراتهم. لا يوجد حد أعلى للاختيار، لكن عليك اختيار شخصين أو جهتين على الأقل. ترتيب الأسماء في هذه القائمة هو نفس ترتيبها في أوراق الاقتراع الحقيقية (إن وُجِدَت)."
         proceed: "إتمام الاختيار"
     match:
-      match:
-        match-aria: "تتوافق إجاباتك مع \"{party}\" بنسبة {percentage} %"
+      match-display:
+        match-aria: "Your match for the party '{party}' is at {percentage} %"
       section:
         heading: "النتيجة"
         explanation: "يُوضِّح هذا الرسم درجة التوافق بين إجاباتك وإجابات كل شخص أو جهة من المشاركين في الانتخابات. كُلَّما زادت النسبة دلَّ ذلك على زيادة التوافق بينكما. نرجو -رغم ذلك- أن تأخذ بعين الاعتبار أن الهدف من هذه الأداة ليس استخدامها لاختيار أصواتك، وإنما للاسترشاد بها ولمساعدتك في نقاش النتائج مع الآخرين."
