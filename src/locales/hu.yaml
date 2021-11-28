@@ -127,29 +127,29 @@ views:
         skip: "Nem tudom"
         skip-aria: "Átugrás - kihagyod ezt az állítást, nem lesz figyelembe véve."
         too-many-skip: "Túl kevés állítás van, ezért nem ugorhatod át őket. | Kérlek, legfeljebb egy állítást ugorj át, különben nem kapsz hasznos eredményt! | Kérlek, legfeljebb {count} állítást ugorj át, különben nem kapsz hasznos eredményt!"
-      statement:
-        thesis: "Állítás: {count} / {total}"
-        statement-aria: "Az állítás: „{statement}”"
+      statement-text:
+        thesis: "Thesis {count} / {total}"
+        statement-aria: "The thesis is: '{statement}'"
         quoteStart: "‘"
         quoteEnd: "’"
-        badge:
-          skip: "Átugrottad"
-          skip-aria: "Átugrottad ezt az állítást."
-          important: "Fontosnak jelölted"
-          important-aria: "Fontosnak jelölted ezt az állítást."
-      thesis:
-        role-aria: "Állítás"
-        region-aria: "Állítás: {count} / {total}"
+        statement-badge:
+          skip: "You skipped this"
+          skip-aria: "You skipped this thesis."
+          important: "You marked this as important"
+          important-aria: "You marked this thesis as important."
+      statement-wrapper:
+        role-aria: "Thesis"
+        region-aria: "Thesis {count} of {total}"
     party:
-      party:
-        party-aria: "„{party}” párt – kattints ide ennek a pártnak a kiválasztásához / ki nem választásához az összehasonlításra."
+      party-item:
+        party-aria: "Party '{party}' – click here to select or deselect this party for comparison."
       section:
         heading: "Válaszd ki az összehasonlítandó pártokat"
         instruction: "Kérlek, válaszd ki a pártokat, akiket össze akarsz hasonlítani a saját döntéseiddel. Legalább két pártot ki kell választanod, felső korlát nincs. Az alábbi lista ugyanabban a sorrendben van, ahogy a pártok megjelennek a szavazólapon."
         proceed: "Kész"
     match:
-      match:
-        match-aria: "{percentage} százalékban egyeznek a válaszaid a(z) „{party}” pártéval"
+      match-display:
+        match-aria: "Your match for the party '{party}' is at {percentage} %"
       section:
         heading: "Az eredményed"
         explanation: "Ez a diagram azt mutatja, mennyire hozzád hasonlóan ítélték meg az egyes pártok a fenti állításokat. Minél magasabb a szám, annál nagyobb az egyezés. Ne feledd, hogy ez nem szavazási tanács, csak egy eszköz a tájékozódáshoz és a megbeszéléshez."
