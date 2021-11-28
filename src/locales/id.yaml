@@ -210,14 +210,14 @@ views:
           content: "Pihak '{party}' tidak memberikan alasan apapun untuk menjelaskan posisinya terkait tesis ini."
       section:
         heading: "Jawaban mereka"
-        explanation: "Para pihak biasanya memberikan posisi untuk setiap pernyataan untuk menjelaskan alasan mereka. Tidak selalu jelas mengapa suatu partai mengambil posisi tertentu sehingga dianjurkan untuk membaca pernyataan ini atau manifesto pemilu masing-masing."
+        explanation: "The parties typically provide statements for every thesis to explain their reasoning. It is not always obvious why a party assumes a certain position so it is recommended to read this statements or the respective election manifestos."
         region-aria: "Pernyataan {count} dari {total}"
       friends-position:
         answer-aria: "{name}: {position}"
         skip: "Dilewati"
       kiosk-mode-hint:
         heading: "Silakan reset setelah selesai"
-        explanation: "Luangkan waktu Anda untuk membaca dan membandingkan pernyataan jawaban di bawah ini. Setelah selesai, Anda dapat mengatur ulang kompas pemilihan di sini untuk orang berikutnya. Ini juga akan menghapus jawaban Anda sendiri. Petunjuk: Anda juga dapat menemukan tombol reset di menu. Terima kasih!"
+        explanation: "Take your time reading and comparing the answers to the statements below. When you're done, you can reset the election compass here for the next person. This will also delete your own answers. Hint: you can also find a reset button in the menu. Thank you!"
         reset: "Mengatur ulang"
     footer:
       section:
