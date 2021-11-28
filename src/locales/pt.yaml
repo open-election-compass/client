@@ -210,14 +210,14 @@ views:
           content: "O partido '{party}' não respondeu ou não se posicionou sobre esta declaração."
       section:
         heading: "Respostas deles"
-        explanation: "Os partidos normalmente se posicionam sobre todas as declarações para explicar sua lógica. Nem sempre é óbvio porque um partido assume uma determinada posição, pelo que se recomenda a leitura destas declarações ou dos respectivos programas eleitorais."
+        explanation: "The parties typically provide statements for every thesis to explain their reasoning. It is not always obvious why a party assumes a certain position so it is recommended to read this statements or the respective election manifestos."
         region-aria: "Declarações {count} de {total}"
       friends-position:
         answer-aria: "{name}: {position}"
         skip: "Não respondida"
       kiosk-mode-hint:
         heading: "Por favor, reinicie quando tiver terminado"
-        explanation: "Por favor, selecione os partidos cujas decisões quer comparar com as suas. É possível selecionar quantos partidos quiser, mas devem ser pelo menos dois. A ordem dos partidos na lista será a mesma para a votação!"
+        explanation: "Take your time reading and comparing the answers to the statements below. When you're done, you can reset the election compass here for the next person. This will also delete your own answers. Hint: you can also find a reset button in the menu. Thank you!"
         reset: "Feito"
     footer:
       section:
