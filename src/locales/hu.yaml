@@ -210,14 +210,14 @@ views:
           content: "A(z) „{party}” párt nem indokolta az álláspontját ebben a kérdésben."
       section:
         heading: "A válaszaik"
-        explanation: "A pártok jellemzően indoklást mellékelnek minden állításhoz, hogy elmagyarázzák, hogyan gondolkoznak róla. Nem mindig magától értetődő, miért helyezkedik egy adott párt egy adott álláspontra, úgyhogy érdemes elolvasni az indoklásukat vagy a választási nyilatkozatukat."
+        explanation: "The parties typically provide statements for every thesis to explain their reasoning. It is not always obvious why a party assumes a certain position so it is recommended to read this statements or the respective election manifestos."
         region-aria: "{count} / {total} állítás"
       friends-position:
         answer-aria: "{name}: {position}"
         skip: "Átugorva"
       kiosk-mode-hint:
         heading: "Kérlek, állítsd alaphelyzetbe, ha készen vagy"
-        explanation: "Tovább nézheted az állításokat és válaszokat. Ha kész vagy, kérlek állítsd alaphelyzetbe a választási iránytűt a következő felhasználó számára. Ez törli a válaszaidat. (A menüben is találsz egy alaphelyzetbe állítás gombot.) Köszönjük!"
+        explanation: "Take your time reading and comparing the answers to the statements below. When you're done, you can reset the election compass here for the next person. This will also delete your own answers. Hint: you can also find a reset button in the menu. Thank you!"
         reset: "Alaphelyzetbe állítás"
     footer:
       section:
