@@ -127,29 +127,29 @@ views:
         skip: "모르겠습니다"
         skip-aria: "건너뛰기 – 이 문장을 건너뛰므로 계산되지 않습니다."
         too-many-skip: "의미 있는 결과를 얻으려면 1문항 이상 건너뛰지 마세요! / 의미 있는 결과를 얻으려면 {count} 개 이상의 문을 건너뛰지 마세요!"
-      statement:
-        thesis: "진술 {count} / {total}"
-        statement-aria: "그 문장은 '{statement}'입니다."
+      statement-text:
+        thesis: "Thesis {count} / {total}"
+        statement-aria: "The thesis is: '{statement}'"
         quoteStart: "‘"
         quoteEnd: "’"
-        badge:
-          skip: "당신은 이것을 건너 뛰었습니다"
-          skip-aria: "이 문장을 건너뛰었습니다."
-          important: "중요 항목으로 표시했습니다."
-          important-aria: "이 문장을 중요하다고 표시했습니다."
-      thesis:
-        role-aria: "서술"
-        region-aria: "{total} 중 {count} 회의 진술"
+        statement-badge:
+          skip: "You skipped this"
+          skip-aria: "You skipped this thesis."
+          important: "You marked this as important"
+          important-aria: "You marked this thesis as important."
+      statement-wrapper:
+        role-aria: "Thesis"
+        region-aria: "Thesis {count} of {total}"
     party:
-      party:
-        party-aria: "정당 '{party}' – 비교를 위해 이 당사자를 선택하거나 선택 취소하려면 여기를 클릭하세요."
+      party-item:
+        party-aria: "Party '{party}' – click here to select or deselect this party for comparison."
       section:
         heading: "비교하려는 당사자를 선택하세요."
         instruction: "자신의 결정을 비교하고 싶은 정당을 선택하세요. 원하는 만큼 정당을 선택할 수 있지만 최소 2개는 선택해야 합니다. 다음 목록은 정당이 투표용지에 표시되는 것과 동일한 순서로 제공됩니다."
         proceed: "완료"
     match:
-      match:
-        match-aria: "정당 '{party}'에 대한 귀하의 일치는 {percentage} %입니다"
+      match-display:
+        match-aria: "Your match for the party '{party}' is at {percentage} %"
       section:
         heading: "귀하의 결과"
         explanation: "이 차트는 귀하와 각 정당이 위의 진술에 얼마나 동의했는지 설명합니다. 백분율이 높을수록 귀하의 위치가 더 많이 일치합니다. 이것은 투표 권장 사항이 아니라 오리엔테이션 및 토론을 위한 도구임을 명심하세요."
