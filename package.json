@@ -43,7 +43,7 @@
     "@open-election-compass/ui": "^0.12.0",
     "@wordpress/dom-ready": "^3.2.3",
     "core-js": "^3.19.1",
-    "cross-fetch": "^3.1.4",
+    "cross-fetch": "^3.1.5",
     "get-user-locale": "^1.4.0",
     "ie11-custom-properties": "^4.1.0",
     "lodash": "^4.17.21",
