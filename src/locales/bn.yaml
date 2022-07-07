@@ -1,36 +1,36 @@
 ---
 elements:
   friends-invite-modal:
-    heading: "Invite friends"
-    description: "Invite your friends to a shared session where everyone can see each other's answers in real time."
+    heading: "বন্ধুদের আমন্ত্রণ জানান"
+    description: "আপনার বন্ধুদের এমন একটি বৈঠকে আমন্ত্রণ জানান যেখানে প্রত্যেকে একে অন্যের উত্তরগুলি রিয়েল টাইমে দেখতে পাবেন৷."
     form:
       name:
-        label: "Your name / nickname"
-        description: "Please provide your name so your friends can recognize you. You can also use a nickname."
+        label: "আপনার নাম/ডাকনাম"
+        description: "অনুগ্রহ করে আপনার নাম দিন যাতে আপনার বন্ধুরা আপনাকে শনাক্ত করতে পারেন। আপনি একটি ডাকনামও ব্যবহার করতে পারেন।."
     introduction:
-      heading: "What is a shared session?"
+      heading: "একটি শেয়ার করা বৈঠকের মানে কি?"
       explanation:
-        - "A shared session allows you to experience the election compass with your friends. One person invites the others to a shared session. Once everyone joined, you can each use the election compass as you normally would. But in addition to the parties, you can now also see each other's answers and start a discussion."
+        - "একটি শেয়ার করা বৈঠক আপনাকে আপনার বন্ধুদের সাথে নির্বাচনী কম্পাসের অভিজ্ঞতা লাভ করতে দেয়। কোনও একজন ব্যক্তি অন্যদের একটি শেয়ার করা বৈঠকে আমন্ত্রণ জানায়৷ সবাই যোগদান করার পরে, প্রত্যেকে নির্বাচনী কম্পাস ব্যবহার করতে পারবেন যেমনটা আপনারা সাধারণত করে থাকেন। কিন্তু দলগুলি ছাড়াও, এবার আপনারাও প্রার্থীদের উত্তর দেখতে এবং একটি আলোচনা শুরু করতে পারেন।."
     security:
-      heading: "Are my answers safe?"
+      heading: "আমার উত্তরগুলি কি সুরক্ষিত থাকে?"
       explanation:
-        - "Yes! Your answers are exchanged directly between your devices via a secure connection. A server helps the devices find themselves on the Internet - your answers, however, are not sent via the server, but directly from device to device."
+        - "হ্যাঁ! একটি নিরাপদ সংযোগের মাধ্যমে আপনার উত্তরগুলি সরাসরি আপনাদের ডিভাইসগুলির মধ্যেই বিনিময় করা হয়৷ ডিভাইসগুলিকে ইন্টারনেটে নিজেদের খুঁজে নিতে একটি সার্ভার সাহায্য করে - তবে, আপনার উত্তরগুলি সার্ভারের মাধ্যমে পাঠানো হয় না, সরাসরি ডিভাইস থেকে ডিভাইসে পাঠানো হয়৷."
     registration:
-      heading: "Do I need to register to use this feature?"
+      heading: "এই বৈশিষ্ট্যটি ব্যবহার করার জন্য আমাকে কি রেজিস্টার করতে হবে?"
       explanation:
-        - "No registration is necessary. All you have to do is enter your name and you can join a session."
-    cancel: "Cancel"
-    confirm: "Open session"
+        - "কোনও রেজিস্ট্রেশনের প্রয়োজন নেই। আপনাকে শুধুমাত্র আপনার নাম লিখতে হবে, তাহলেই আপনি বৈঠকে যোগ দিতে পারবেন৷."
+    cancel: "বাতিল করুন"
+    confirm: "মুক্ত বৈঠক"
   friends-join-modal:
-    heading: "Join friends"
-    description: "Connect with your friends in a shared session and see everyone's answers in real time."
+    heading: "বন্ধুদের সাথে যুক্ত হোন"
+    description: "বৈঠকে আপনার বন্ধুদের সাথে সংযুক্ত হয়ে রিয়েল টাইমে প্রত্যেকের উত্তর দেখুন।."
     form:
       name:
-        label: "Your name / nickname"
-        description: "Please provide your name so your friends can recognize you. You can also use a nickname."
+        label: "আপনার নাম/ডাকনাম"
+        description: "অনুগ্রহ করে আপনার নাম দিন যাতে আপনার বন্ধুরা আপনাকে শনাক্ত করতে পারেন। আপনি একটি ডাকনামও ব্যবহার করতে পারেন।."
       join:
-        label: "Friend's device"
-        description: "Join a shared session by entering the device ID of whoever is hosting the session."
+        label: "বন্ধুর ডিভাইস"
+        description: "বৈঠকটি যে কেউ হোস্ট করলেও আপনার ডিভাইসের আইডি দিয়ে প্রবেশ করে বৈঠকে যোগ দিন।."
     introduction:
       heading: "What is a shared session?"
       explanation:
