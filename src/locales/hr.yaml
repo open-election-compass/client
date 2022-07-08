@@ -1,80 +1,80 @@
 ---
 elements:
   friends-invite-modal:
-    heading: "Invite friends"
-    description: "Invite your friends to a shared session where everyone can see each other's answers in real time."
+    heading: "Pozovite prijatelje"
+    description: "Pozovite svoje prijatelje na zajedničku sesiju gdje svi mogu vidjeti odgovore onih drugih u stvarnom vremenu."
     form:
       name:
-        label: "Your name / nickname"
-        description: "Please provide your name so your friends can recognize you. You can also use a nickname."
+        label: "Vaše ime/nadimak"
+        description: "Navedite svoje ime kako bi vas prijatelji mogli prepoznati. Možete upotrijebiti i nadimak."
     introduction:
-      heading: "What is a shared session?"
+      heading: "Što je zajednička sesija?"
       explanation:
-        - "A shared session allows you to experience the election compass with your friends. One person invites the others to a shared session. Once everyone joined, you can each use the election compass as you normally would. But in addition to the parties, you can now also see each other's answers and start a discussion."
+        - "Zajednička sesija omogućuje vam da doživite izborni kompas sa svojim prijateljima. Jedna osoba poziva ostale na zajedničku sesiju. Nakon što se svi pridruže, svatko od vas može upotrijebiti izborni kompas na uobičajeni način. No, osim stranaka, sada možete vidjeti i odgovore svih drugih te započeti raspravu."
     security:
-      heading: "Are my answers safe?"
+      heading: "Jesu li moji odgovori sigurni?"
       explanation:
-        - "Yes! Your answers are exchanged directly between your devices via a secure connection. A server helps the devices find themselves on the Internet - your answers, however, are not sent via the server, but directly from device to device."
+        - "Da! Vaši se odgovori razmjenjuju izravno između vaših uređaja putem sigurne veze. Poslužitelj pomaže uređajima da se pronađu na Internetu – vaši se odgovori, međutim, ne šalju preko poslužitelja, već izravno s uređaja na uređaj."
     registration:
-      heading: "Do I need to register to use this feature?"
+      heading: "Trebam li se registrirati za uporabu ove značajke?"
       explanation:
-        - "No registration is necessary. All you have to do is enter your name and you can join a session."
-    cancel: "Cancel"
-    confirm: "Open session"
+        - "Ne, registracija nije nužna. Sve što trebate učiniti jest unijeti svoje ime i možete se pridružiti sesiji."
+    cancel: "Odustani"
+    confirm: "Otvori sesiju"
   friends-join-modal:
-    heading: "Join friends"
-    description: "Connect with your friends in a shared session and see everyone's answers in real time."
+    heading: "Pridruži se prijateljima"
+    description: "Povežite se s prijateljima na zajedničkoj sesiji i pogledajte njihove odgovore u stvarnom vremenu."
     form:
       name:
-        label: "Your name / nickname"
-        description: "Please provide your name so your friends can recognize you. You can also use a nickname."
+        label: "Vaše ime/nadimak"
+        description: "Navedite svoje ime kako bi vas prijatelji mogli prepoznati. Možete upotrijebiti i nadimak."
       join:
-        label: "Friend's device"
-        description: "Join a shared session by entering the device ID of whoever is hosting the session."
+        label: "Prijateljev uređaj"
+        description: "Pridružite se zajedničkoj sesiji unosom ID-a uređaja domaćina sesije."
     introduction:
-      heading: "What is a shared session?"
+      heading: "Što je zajednička sesija?"
       explanation:
-        - "A shared session allows you to experience the election compass with your friends. One person invites the others to a shared session. Once everyone joined, you can each use the election compass as you normally would. But in addition to the parties, you can now also see each other's answers and start a discussion."
+        - "Zajednička sesija omogućuje vam da doživite izborni kompas sa svojim prijateljima. Jedna osoba poziva ostale na zajedničku sesiju. Nakon što se svi pridruže, svatko od vas može upotrijebiti izborni kompas na uobičajeni način. No, osim stranaka, sada možete vidjeti i odgovore svih drugih te započeti raspravu."
     security:
-      heading: "Are my answers safe?"
+      heading: "Jesu li moji odgovori sigurni?"
       explanation:
-        - "Yes! Your answers are exchanged directly between your devices via a secure connection. A server helps the devices find themselves on the Internet - your answers, however, are not sent via the server, but directly from device to device."
+        - "Da! Vaši se odgovori razmjenjuju izravno između vaših uređaja putem sigurne veze. Poslužitelj pomaže uređajima da se pronađu na Internetu – vaši se odgovori, međutim, ne šalju preko poslužitelja, već izravno s uređaja na uređaj."
     registration:
-      heading: "Do I need to register to use this feature?"
+      heading: "Trebam li se registrirati za uporabu ove značajke?"
       explanation:
-        - "No registration is necessary. All you have to do is enter your name and you can join a session."
-    cancel: "Cancel"
-    confirm: "Join"
+        - "Ne, registracija nije nužna. Sve što trebate učiniti jest unijeti svoje ime i možete se pridružiti sesiji."
+    cancel: "Odustani"
+    confirm: "Pridruži se"
   friends-list:
-    heading: "Connected devices"
-    empty: "The host needs to accept you're request to join the session."
-    host: "Host"
+    heading: "Povezani uređaji"
+    empty: "Domaćin treba prihvatiti vaš zahtjev za pridruživanje sesiji."
+    host: "Domaćin"
   friends-status-modal:
-    heading: "Shared Session"
+    heading: "Zajednička sesija"
     mode:
       INACTIVE:
-        heading: "Not connected"
-        text: "You're not connected to anybody. Join your an existing session or host your own over the main menu."
+        heading: "Nije povezan"
+        text: "Ni s kim niste povezani. Pridružite se postojećoj sesiji ili budite domaćin vlastite preko glavnog izbornika."
       GUEST:
-        heading: "Guest"
-        text: "You're participating in a shared session, hosted by someone else."
+        heading: "Gost"
+        text: "Sudjelujete u zajedničkoj sesiji koju vodi netko drugi."
       HOST:
-        heading: "Host"
-        text: "You're the host of this session. Invite your friends using your device ID and accept their requests to join."
+        heading: "Domaćin"
+        text: "Vi ste domaćin ove sesije. Pozovite prijatelje s pomoću ID-a svojeg uređaja i prihvatite njihove zahtjeve za pridruživanje."
     own-peer-id:
-      label: "Your device"
-      description: "This is your device ID. Your friends need to enter this on their device to connect to our shared session."
+      label: "Vaš uređaj"
+      description: "Ovo je ID vašeg uređaja. Vaši prijatelji to trebaju unijeti u svoj uređaj kako bi se povezali s našom zajedničkom sesijom."
   guests-list:
-    heading: "Connected devices"
-    empty: "Nobody joined the session yet."
-    accept: "Accept"
+    heading: "Povezani uređaji"
+    empty: "Nitko se još nije pridružio sesiji."
+    accept: "Prihvati"
     status:
-      connecting: "Connecting"
-      connected: "Connected"
-      disconnected: "Disconnected"
+      connecting: "Povezivanje"
+      connected: "Povezan"
+      disconnected: "Veza je prekinuta"
   guide-button:
-    start: "Let's go"
-    introduction: "Learn how this works"
+    start: "Krenimo"
+    introduction: "Naučite kako ovo radi"
     first-thesis: "Start with the first thesis"
     thesis: "Proceed to the next thesis"
     party: "Select the parties"
@@ -145,105 +145,105 @@ views:
         party-aria: "Party '{party}' – click here to select or deselect this party for comparison."
       section:
         heading: "Choose the parties you want to compare"
-        instruction: "Please select the parties you want to compare your own decisions to. You can select as many parties as you like, but you have to select at least two. The following list is presented in the same order as the parties will appear on the ballot."
-        proceed: "Done"
+        instruction: "Odaberite stranke s kojima želite usporediti vlastite odluke. Možete odabrati koliko god želite stranaka, ali morate odabrati najmanje dvije. Sljedeći popis prikazuje isti redoslijed kojim će se stranke prikazati na glasačkom listiću."
+        proceed: "Izvršeno"
     match:
       match-display:
-        match-aria: "Your match for the party '{party}' is at {percentage} %"
+        match-aria: "Podudarnost koju ste dobili za stranku „{party}” je {percentage} %"
       section:
-        heading: "Your result"
-        explanation: "This chart describes how much you and the respective parties agreed on the above theses. The higher the percentage, the more your positions match. Keep in mind, that this is no voting recommendation, but a tool for orientation and discussion."
+        heading: "Vaš rezultat"
+        explanation: "Ovaj grafikon prikazuje koliko ste se vi i dotične stranke složili oko gore navedenih teza. Što je veći postotak, više se podudaraju vaši stavovi. Imajte na umu da ovo nije preporuka za glasovanje, već alat za orijentaciju i raspravu."
     compare:
       additional-analysis:
-        heading: "Statistics"
+        heading: "Statistika"
         buttons:
-          close: "Quit"
-          start: "Let's go"
-          proceed: "Submit and next"
-          open-questionnaire: "Open survey in new tab"
-        start: "Thank you for sharing! Your data becomes more valuable for statistics if you share some more background information about yourself – would you help some more? Simply answer as many questions as you like!"
-        help-even-more: "Thank you very much! Would you like to help even more? You can answer some more specific questions here:"
-        thanks: "Thank you for sharing! Those were all the questions – you helped us a lot! Click on 'Quit' to go back to your results."
+          close: "Prekini"
+          start: "Prekini"
+          proceed: "Pošalji tekst"
+          open-questionnaire: "Otvorite anketu u novoj kartici"
+        start: "Hvala što ste podijelili! Vaši podaci postaju vredniji za statistiku ako podijelite još neke pozadinske informacije o sebi – biste li još malo pomogli? Jednostavno odgovorite na ona pitanja na koja želite!"
+        help-even-more: "Puno hvala! Želite li pomoći još više? Ovdje možete odgovoriti na neka konkretnija pitanja:"
+        thanks: "Hvala što ste podijelili! To su bila sva pitanja – puno ste nam pomogli! Kliknite na „Prekini” kako biste se vratili na svoje rezultate."
         fields:
           age:
-            name: "Age"
-            label: "How old are you now?"
+            name: "Dob"
+            label: "Koliko vam je sada godina?"
             placeholder: "25"
-            description: "Your age is important to research what people of different age groups think about the theses and parties."
+            description: "Vaša dob je važna za istraživanje stavova ljudi različitih dobnih skupina o navedenim tezama i strankama."
           gender:
-            name: "Gender"
-            label: "What is your gender?"
+            name: "Spol"
+            label: "Kojeg ste spola?"
             options:
-              female: "female"
-              diverse: "diverse"
-              male: "male"
-              none: "no answer"
+              female: "ženski"
+              diverse: "razni"
+              male: "muški"
+              none: "nema odgovora"
           education:
-            name: "Qualification"
-            label: "What is your highest educational qualification?"
+            name: "Kvalifikacija"
+            label: "Koja je vaša najviša obrazovna kvalifikacija?"
             options:
-              student: "Currently a student"
-              nothing: "No complete qualification"
-              lower: "Middle School or similar"
-              higher: "High School or similar"
-              academic: "Academic"
-              none: "no answer"
+              student: "Trenutačno student"
+              nothing: "Bez kvalifikacije"
+              lower: "Srednja škola ili slično"
+              higher: "Viša škola ili slično"
+              academic: "Akademsko obrazovanje"
+              none: "nema odgovora"
           party:
-            name: "Party"
-            label: "If the election was today, who would you cast your vote for?"
+            name: "Stranka"
+            label: "Da su izbori danas, kome biste dali svoj glas?"
             options:
-              other: "Other"
-              non-voter: "I won't vote"
-              not-eligible: "I am not eligible"
-              not-sure: "I'm not sure"
-              none: "no answer"
+              other: "Drugo"
+              non-voter: "Neću glasovati"
+              not-eligible: "Ne ispunjavam uvjete"
+              not-sure: "Nisam siguran/na"
+              none: "nema odgovora"
       analysis-banner:
-        heading: "Do you want to donate your answers to science?"
-        explanation: "You can help {someone} understand this election better by donating your answers and results to scientific research. We only save anonymized data which we can not trace back to you."
-        send: "Submit statistic data now"
-        close: "No, continue reading"
+        heading: "Želite li svoje odgovore donirati znanosti?"
+        explanation: "Možete pomoći {someone} da bolje razumije ove izbore doniranjem svojih odgovora i rezultata znanstvenom istraživanju. Spremamo samo anonimne podatke s pomoću kojih ne možemo povratno doći do vas."
+        send: "Odmah pošalji statističke podatke"
+        close: "Ne, nastavi čitati"
       answer:
         skip:
-          status-text: "unknown"
-          content: "The party '{party}' did not provide any answers or position regarding this thesis."
+          status-text: "nepoznato"
+          content: "Stranka „{party}” nije dala nikakve odgovore ili stav u vezi s ovom izjavom."
         empty:
-          content: "The party '{party}' did not provide any statement to explain their position regarding this thesis."
+          content: "Stranka „{party}” nije dala nikakvo obrazloženje kako bi objasnila svoj stav u vezi s ovom tezom."
       section:
-        heading: "Their answers"
-        explanation: "The parties typically provide statements for every thesis to explain their reasoning. It is not always obvious why a party assumes a certain position so it is recommended to read this statements or the respective election manifestos."
-        region-aria: "Thesis {count} of {total}"
+        heading: "Njihovi odgovori"
+        explanation: "Stranke obično daju stavove za svaku izjavu kako bi pojasnile svoje obrazloženje. Nije uvijek očito zašto neka stranka zauzima određeni stav pa se preporučuje pročitati ove izjave ili odgovarajuće izborne proglase."
+        region-aria: "Broj izjava: {count} od {total}"
       friends-position:
         answer-aria: "{name}: {position}"
-        skip: "Skipped"
+        skip: "Preskočeno"
       kiosk-mode-hint:
-        heading: "Please reset when you're done"
-        explanation: "Take your time reading and comparing the answers to the statements below. When you're done, you can reset the election compass here for the next person. This will also delete your own answers. Hint: you can also find a reset button in the menu. Thank you!"
-        reset: "Reset"
+        heading: "Nakon što završite vratite na zadano"
+        explanation: "Uzmite si vremena za čitanje i usporedbu odgovora navedenih u nastavku. Kada završite, ovdje možete vratiti zadane postavke izbornog kompasa za sljedeću osobu. Time ćete također izbrisati vaše odgovore. Savjet: gumb za vraćanje zadanih postavki možete pronaći i u izborniku. Hvala vam!"
+        reset: "Vrati zadano"
     footer:
       section:
-        explanation: "This election compass is based on the free open source project {0}."
-        oec: "OpenElectionCompass"
+        explanation: "Ovaj izborni kompas temelji se na besplatnom projektu otvorenog koda {0}."
+        oec: "Otvoreni izborni kompas"
 validation:
   names:
-    name: "Name"
-    remote-peer-id: "Friend's device"
+    name: "Ime"
+    remote-peer-id: "Prijateljev uređaj"
   fields:
     name:
-      min: "Please enter a name."
-      regex: "Only letters, numbers and spaces, no special characters."
-      required: "Please enter a name."
+      min: "Unesite ime."
+      regex: "Samo slova, brojevi i razmaci, bez posebnih znakova."
+      required: "Unesite ime."
 algorithm:
   options:
     strongly-approve:
-      button: "Strongly approve"
-      button-aria: "Strongly approve – click here to strongly approve this thesis!"
-      badge: "You strongly approved"
-      badge-aria: "You strongly approved this thesis."
-      status: "strongly approves"
-      answer-aria: "The party '{party}' strongly approves this thesis with the following answer: {answer}"
+      button: "Odobravam u potpunosti"
+      button-aria: "Odobravam u potpunosti – kliknite ovdje kako biste u potpunosti odobrili ovu izjavu!"
+      badge: "Odobrili ste u potpunosti"
+      badge-aria: "Ovu ste izjavu odobrili u potpunosti."
+      status: "odobrava u potpunosti"
+      answer-aria: "Stranka „{party}” u potpunosti odobrava ovu izjavu uz sljedeći odgovor: {answer}"
     approve:
-      button: "Approve"
-      button-aria: "Approve – click here to approve this thesis!"
+      button: "Odobravam"
+      button-aria: "Odobravam – kliknite ovdje kako biste odobrili ovu izjavu!"
       badge: "You approved"
       badge-aria: "You approved this thesis."
       status: "approves"
