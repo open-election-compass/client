@@ -88,63 +88,63 @@ elements:
   language-switch:
     button: "ভাষাসমূহ"
     heading: "ভাষাসমূহ"
-    description: "Please choose your preferred language."
+    description: "আপনার পছন্দের ভাষা বেছে নিন।."
   main-navigation:
-    menu: "Menu"
-    thesis: "Thesis {count}"
+    menu: "মেনু"
+    thesis: "বিবৃতিটি {count}"
     links:
-      compass: "Election Compass"
-      languages: "Change language"
-      friends-join: "Join friends"
-      friends-invite: "Invite friends"
-      reset: "Reset"
-      home: "Start"
-      introduction: "Introduction"
-      theses: "Theses"
-      evaluation: "Evaluation"
-      party: "Party selection"
-      match: "Result"
-      compare: "Statements"
-      about: "About"
+      compass: "নির্বাচনী কম্পাস"
+      languages: "ভাষা পরিবর্তন করুন"
+      friends-join: "বন্ধুদের সাথে যুক্ত হোন"
+      friends-invite: "বন্ধুদের আমন্ত্রণ জানান"
+      reset: "পুনরায় শুরু করুন"
+      home: "শুরু করুন"
+      introduction: "ভূমিকা"
+      theses: "বিবৃতিটি"
+      evaluation: "মূল্যায়ন"
+      party: "প্রার্থীদের নির্বাচন"
+      match: "ফলাফল"
+      compare: "বিবৃতিটি"
+      about: "সম্পর্কিত"
   open-election-compass-logo:
-    alt: "Logo of the Election Compass"
+    alt: "নির্বাচনী কম্পাসের লোগো"
   show-more:
-    show: "show more"
-    hide: "hide"
+    show: "আরো দেখান"
+    hide: "লুকিয়ে দিন"
 views:
   home:
     home:
-      role-aria: "Election Compass"
+      role-aria: "নির্বাচনী কম্পাস"
     start:
       section:
-        banner-aria: "Start section"
+        banner-aria: "শুরু সম্পর্কিত বিভাগ"
     theses:
       important-button:
-        important: "Important to me"
-        important-aria: "Important – marks this thesis as important for you."
-        too-many-important: "There are only very few theses, so you cannot mark one as important. | Please mark no more than 1 thesis as important to receive a meaningful result! | Please mark no more than {count} theses as important to receive a meaningful result!"
+        important: "আমার কাছে গুরুত্বপূর্ণ"
+        important-aria: "গুরুত্বপূর্ণ - এই বিবৃতিটিকে আপনার ক্ষেত্রে গুরুত্বপূর্ণ হিসাবে চিহ্নিত করুন৷."
+        too-many-important: "এখানে কয়েকটি বিবৃতি মাত্র আছে, তাই আপনি একটিকে গুরুত্বপূর্ণ হিসাবে চিহ্নিত করতে পারবেন না। | অর্থবহ ফলাফল পাওয়ার জন্য অনুগ্রহ করে ১-এর বেশী বিবৃতিকে গুরুত্বপূর্ণ হিসাবে চিহ্নিত করবেন না! | অর্থবহ ফলাফল পাওয়ার জন্য অনুগ্রহ করে {count} এর বেশী বিবৃতিকে গুরুত্বপূর্ণ হিসাবে চিহ্নিত করবেন না!"
       skip-button:
-        skip: "I don't know"
-        skip-aria: "Skip – skips this thesis so it will not be counted."
-        too-many-skip: "There are only very few theses, so you cannot skip one. | Please skip no more than 1 thesis to receive a meaningful result! | Please skip no more than {count} theses to receive a meaningful result!"
+        skip: "আমি জানি না"
+        skip-aria: "এড়িয়ে যান - এই বিবৃতিটিকে এড়িয়ে যান তাতে এটি গণনা করা হবে না।."
+        too-many-skip: "এখানে কয়েকটি বিবৃতি মাত্র আছে, তাই আপনি একটিকে এড়িয়ে যেতে পারবেন না। | অর্থবহ ফলাফল পেতে অনুগ্রহ করে ১-টির বেশী বিবৃতি এড়িয়ে যাবেন না! | অর্থবহ ফলাফল পেতে অনুগ্রহ করে {count} টির বেশী বিবৃতি এড়িয়ে যাবেন না!"
       statement-text:
-        thesis: "Thesis {count} / {total}"
-        statement-aria: "The thesis is: '{statement}'"
+        thesis: "বিবৃতিটি {count} / {total}"
+        statement-aria: "বিবৃতিটি হল: '{statement}'"
         quoteStart: "‘"
         quoteEnd: "’"
         statement-badge:
-          skip: "You skipped this"
-          skip-aria: "You skipped this thesis."
-          important: "You marked this as important"
-          important-aria: "You marked this thesis as important."
+          skip: "আপনি এটি এড়িয়ে গেছেন"
+          skip-aria: "আপনি এই বিবৃতিটি এড়িয়ে গেছেন।."
+          important: "আপনি এটিকে গুরুত্বপূর্ণ হিসেবে চিহ্নিত করেছেন"
+          important-aria: "আপনি এই বিবৃতিটিকে গুরুত্বপূর্ণ হিসাবে চিহ্নিত করেছেন৷."
       statement-wrapper:
-        role-aria: "Thesis"
-        region-aria: "Thesis {count} of {total}"
+        role-aria: "বিবৃতিটি"
+        region-aria: "{total}-এর {count} বিবৃতি"
     party:
       party-item:
-        party-aria: "Party '{party}' – click here to select or deselect this party for comparison."
+        party-aria: "{party}' প্রার্থী - তুলনার জন্য এই প্রার্থীকে নির্বাচন করতে বা বাদ দিতে এখানে ক্লিক করুন৷."
       section:
-        heading: "Choose the parties you want to compare"
+        heading: "আপনি এমন প্রার্থীদের বেছে নিন যেগুলির তুলনা করতে চান"
         instruction: "অনুগ্রহ করে এমন প্রার্থীদের নির্বাচন করুন যেগুলির সাথে আপনার নিজের সিদ্ধান্তের তুলনা করতে চান। আপনি আপনার পছন্দ অনুযায়ী অনেকগুলি প্রার্থীদের নির্বাচন করতে পারেন, তবে আপনাকে অন্তত দুটি নির্বাচন করতে হবে। নিম্নলিখিত তালিকাটি একই ক্রমে উপস্থাপন করা হয়েছে যেভাবে দলগুলি ব্যালটে উপস্থাপিত হবে।."
         proceed: "সম্পন্ন হয়েছে"
     match:
