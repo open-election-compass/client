@@ -1,50 +1,50 @@
 ---
 elements:
   friends-invite-modal:
-    heading: "Invite friends"
-    description: "Invite your friends to a shared session where everyone can see each other's answers in real time."
+    heading: "Alika marafiki"
+    description: "Alika marafiki zako kwenye kipindi cha pamoja ambapo kila mmoja anaweza kuona majibu ya mwenzake kwa wakati halisi."
     form:
       name:
-        label: "Your name / nickname"
-        description: "Please provide your name so your friends can recognize you. You can also use a nickname."
+        label: "Jina lako / jina la utani"
+        description: "Tafadhali taja jina lako ili marafiki zako wakutambue. Unaweza pia kutumia jina la utani."
     introduction:
-      heading: "What is a shared session?"
+      heading: "Kipindi cha pamoja ni nini?"
       explanation:
-        - "A shared session allows you to experience the election compass with your friends. One person invites the others to a shared session. Once everyone joined, you can each use the election compass as you normally would. But in addition to the parties, you can now also see each other's answers and start a discussion."
+        - "Kipindi cha pamoja kinakuruhusu kufurahia dira ya uchaguzi na marafiki zako. Mtu mmoja huwaalika wengine kwenye kipindi cha pamoja. Mara tu kila mtu akishajiunga, kila mmoja wenu anaweza kutumia dira ya uchaguzi kama kawaida. Lakini zaidi ya kuwa na sehemu sehemu, sasa unaweza kuona majibu ya kila mmoja na kuanza mjadala."
     security:
-      heading: "Are my answers safe?"
+      heading: "Je, majibu yangu ni salama?"
       explanation:
-        - "Yes! Your answers are exchanged directly between your devices via a secure connection. A server helps the devices find themselves on the Internet - your answers, however, are not sent via the server, but directly from device to device."
+        - "Ndiyo! Majibu yako yanabadilishwa moja kwa moja kati ya vifaa vyako kupitia muunganisho salama. Seva husaidia vifaa kujikuta kwenye Mtandao - majibu yako, hata hivyo, hayatumwi kupitia seva, lakini moja kwa moja kutoka kwa kifaa hadi kifaa."
     registration:
-      heading: "Do I need to register to use this feature?"
+      heading: "Je, ninahitaji kujisajili ili kutumia kipengele hiki?"
       explanation:
-        - "No registration is necessary. All you have to do is enter your name and you can join a session."
-    cancel: "Cancel"
-    confirm: "Open session"
+        - "Hakuna usajili unaohitajika. Unachohitajika kufanya ni kuingiza jina lako na unaweza kujiunga na kipindi."
+    cancel: "Ghairi"
+    confirm: "Fungua kipindi"
   friends-join-modal:
-    heading: "Join friends"
-    description: "Connect with your friends in a shared session and see everyone's answers in real time."
+    heading: "Jiunge na marafiki"
+    description: "Ungana na marafiki zako katika kipindi cha pamoja na uone majibu ya kila mtu kwa wakati halisi."
     form:
       name:
-        label: "Your name / nickname"
-        description: "Please provide your name so your friends can recognize you. You can also use a nickname."
+        label: "Jina lako / jina la utani"
+        description: "Tafadhali taja jina lako ili marafiki zako wakutambue. Unaweza pia kutumia jina la utani."
       join:
-        label: "Friend's device"
-        description: "Join a shared session by entering the device ID of whoever is hosting the session."
+        label: "Kifaa cha rafiki"
+        description: "Jiunge na kipindi cha pamoja kwa kuweka kitambulisho cha kifaa cha yeyote anayeendesha kipindi."
     introduction:
-      heading: "What is a shared session?"
+      heading: "Kipindi cha pamoja ni nini?"
       explanation:
-        - "A shared session allows you to experience the election compass with your friends. One person invites the others to a shared session. Once everyone joined, you can each use the election compass as you normally would. But in addition to the parties, you can now also see each other's answers and start a discussion."
+        - "Kipindi cha pamoja hukuruhusu kufurahia dira ya uchaguzi na marafiki zako. Mtu mmoja huwaalika wengine kwenye kipindi cha pamoja. Mara tu kila mtu akishajiunga, kila mmoja wenu anaweza kutumia dira ya uchaguzi kama kawaida. Lakini pamoja na kuwa na sehemu sehemu, sasa unaweza kuona majibu ya kila mmoja na kuanza mjadala."
     security:
-      heading: "Are my answers safe?"
+      heading: "Je, majibu yangu ni salama?"
       explanation:
-        - "Yes! Your answers are exchanged directly between your devices via a secure connection. A server helps the devices find themselves on the Internet - your answers, however, are not sent via the server, but directly from device to device."
+        - "Ndiyo! Majibu yako yanabadilishwa moja kwa moja kati ya vifaa vyako kupitia muunganisho salama. Seva husaidia vifaa kujikuta kwenye Mtandao - majibu yako, hata hivyo, hayatumwi kupitia seva, lakini moja kwa moja kutoka kifaa kimoja hadi kifaa kingine."
     registration:
-      heading: "Do I need to register to use this feature?"
+      heading: "Je, ninahitaji kujisajili ili kutumia kipengele hiki?"
       explanation:
-        - "No registration is necessary. All you have to do is enter your name and you can join a session."
-    cancel: "Cancel"
-    confirm: "Join"
+        - "Hakuna usajili unaohitajika. Unachohitajika kufanya ni kuingiza jina lako na unaweza kujiunga na kipindi."
+    cancel: "Ghairi"
+    confirm: "Jiunge"
   friends-list:
     heading: "Connected devices"
     empty: "The host needs to accept you're request to join the session."
