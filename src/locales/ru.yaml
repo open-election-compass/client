@@ -1,97 +1,97 @@
 ---
 elements:
   friends-invite-modal:
-    heading: "Invite friends"
-    description: "Invite your friends to a shared session where everyone can see each other's answers in real time."
+    heading: "Пригласить друзей"
+    description: "Пригласите своих друзей на общую сессию, где каждый сможет увидеть ответы друг друга в режиме реального времени."
     form:
       name:
-        label: "Your name / nickname"
-        description: "Please provide your name so your friends can recognize you. You can also use a nickname."
+        label: "Ваше имя / никнейм"
+        description: "Пожалуйста, укажите ваше имя, чтобы ваши друзья могли вас узнать. Вы также можете использовать никнейм."
     introduction:
-      heading: "What is a shared session?"
+      heading: "Что такое общая сессия?"
       explanation:
-        - "A shared session allows you to experience the election compass with your friends. One person invites the others to a shared session. Once everyone joined, you can each use the election compass as you normally would. But in addition to the parties, you can now also see each other's answers and start a discussion."
+        - "Общая сессия позволяет вам испытать компас с друзьями. Один человек приглашает остальных на общую сессию. Как только все присоединятся, вы сможете использовать компас, как обычно. Но также, вы сможете видеть ответы других и обсуждать их."
     security:
-      heading: "Are my answers safe?"
+      heading: "Мои ответы в безопасности?"
       explanation:
-        - "Yes! Your answers are exchanged directly between your devices via a secure connection. A server helps the devices find themselves on the Internet - your answers, however, are not sent via the server, but directly from device to device."
+        - "Да! Ваши ответы передаются напрямую между вашими устройствами через безопасное соединение. Сервер помогает устройствам найти себя в интернете, однако ваши ответы отправляются не через сервер, а напрямую с устройства на устройство."
     registration:
-      heading: "Do I need to register to use this feature?"
+      heading: "Мне нужно регистрироваться для использования этой функции?"
       explanation:
-        - "No registration is necessary. All you have to do is enter your name and you can join a session."
-    cancel: "Cancel"
-    confirm: "Open session"
+        - "Регистрация не требуется. Всё, что нужно для присоединения к сессии, ввести ваше имя."
+    cancel: "Отмена"
+    confirm: "Открыть сессию"
   friends-join-modal:
-    heading: "Join friends"
-    description: "Connect with your friends in a shared session and see everyone's answers in real time."
+    heading: "Присоединиться к друзьям"
+    description: "Общайтесь с друзьями во время общего сеанса и просматривайте ответы каждого в режиме реального времени."
     form:
       name:
-        label: "Your name / nickname"
-        description: "Please provide your name so your friends can recognize you. You can also use a nickname."
+        label: "Ваше имя / псевдоним"
+        description: "Пожалуйста, укажите свое имя, чтобы ваши друзья могли вас узнать. Вы также можете использовать псевдоним."
       join:
-        label: "Friend's device"
-        description: "Join a shared session by entering the device ID of whoever is hosting the session."
+        label: "Устройство друга"
+        description: "Присоединитесь к общему сеансу, введя идентификатор устройства того, кто является организатором сеанса."
     introduction:
-      heading: "What is a shared session?"
+      heading: "Что такое общий сеанс?"
       explanation:
-        - "A shared session allows you to experience the election compass with your friends. One person invites the others to a shared session. Once everyone joined, you can each use the election compass as you normally would. But in addition to the parties, you can now also see each other's answers and start a discussion."
+        - "Общий сеанс позволяет испытать избирательный компас вместе с друзьями. Один человек приглашает других на общий сеанс. Как только все присоединятся, каждый из вас сможет использовать избирательный компас, как обычно. Но кроме партий, теперь вы также можете видеть ответы друг друга и начинать обсуждение."
     security:
-      heading: "Are my answers safe?"
+      heading: "Безопасны ли мои ответы?"
       explanation:
-        - "Yes! Your answers are exchanged directly between your devices via a secure connection. A server helps the devices find themselves on the Internet - your answers, however, are not sent via the server, but directly from device to device."
+        - "Да! Ваши ответы передаются напрямую между вашими устройствами через безопасное соединение. Сервер помогает устройствам найти себя в интернете, однако ваши ответы отправляются не через сервер, а напрямую с устройства на устройство."
     registration:
-      heading: "Do I need to register to use this feature?"
+      heading: "Нужно ли мне регистрироваться, чтобы использовать эту функцию?"
       explanation:
-        - "No registration is necessary. All you have to do is enter your name and you can join a session."
-    cancel: "Cancel"
-    confirm: "Join"
+        - "Регистрация не требуется. Все, что вам нужно сделать, это ввести свое имя, и вы можете присоединиться к сеансу."
+    cancel: "Скасувати"
+    confirm: "Присоединиться"
   friends-list:
-    heading: "Connected devices"
-    empty: "The host needs to accept you're request to join the session."
-    host: "Host"
+    heading: "Подключенные устройства"
+    empty: "Организатор должен принять ваш запрос на присоединение к сеансу."
+    host: "Организатор"
   friends-status-modal:
-    heading: "Shared Session"
+    heading: "Общий сеанс"
     mode:
       INACTIVE:
-        heading: "Not connected"
-        text: "You're not connected to anybody. Join your an existing session or host your own over the main menu."
+        heading: "Не подключен"
+        text: "Вы ни с кем не связаны. Присоединяйтесь к существующему сеансу или разместите свой собственный через главное меню."
       GUEST:
-        heading: "Guest"
-        text: "You're participating in a shared session, hosted by someone else."
+        heading: "Гость"
+        text: "Вы участвуете в общем сеансе, организованном кем-то другим."
       HOST:
-        heading: "Host"
-        text: "You're the host of this session. Invite your friends using your device ID and accept their requests to join."
+        heading: "Организатор"
+        text: "Вы являетесь организатором этого сеанса. Пригласите друзей, используя идентификатор вашего устройства, и примите их запросы на присоединение."
     own-peer-id:
-      label: "Your device"
-      description: "This is your device ID. Your friends need to enter this on their device to connect to our shared session."
+      label: "Ваше устройство"
+      description: "Это идентификатор вашего устройства. Ваши друзья должны ввести это на своем устройстве, чтобы подключиться к общему сеансу."
   guests-list:
-    heading: "Connected devices"
-    empty: "Nobody joined the session yet."
-    accept: "Accept"
+    heading: "Подключенные устройства"
+    empty: "К сеансу еще никто не присоединился."
+    accept: "Принять"
     status:
-      connecting: "Connecting"
-      connected: "Connected"
-      disconnected: "Disconnected"
+      connecting: "Подключение"
+      connected: "Подключено"
+      disconnected: "Отключено"
   guide-button:
-    start: "Let's go"
-    introduction: "Learn how this works"
-    first-thesis: "Start with the first thesis"
-    thesis: "Proceed to the next thesis"
-    party: "Select the parties"
-    match: "See your result"
-    compare: "Read the statements"
+    start: "Поехали"
+    introduction: "Узнайте, как это работает"
+    first-thesis: "Начать с первого утверждения"
+    thesis: "Перейти к следующему утверждению"
+    party: "Выберите партии"
+    match: "Посмотреть свой результат"
+    compare: "Читать позиции"
   kiosk-mode:
-    heading: "Should we reset?"
-    description: "The election compass will be reset now and all your answers will be deleted. | The election compass will be reset in {count} seconds and all your answers will be deleted. | The election compass will be reset in {count} second and all your answers will be deleted."
-    reset: "Reset now"
-    resume: "Not yet!"
+    heading: "Сбросить?"
+    description: "Избирательный компас сейчас будет сброшен, и все ваши ответы будут удалены. | Избирательный компас будет сброшен через {count} секунд, и все ваши ответы будут удалены. | Избирательный компас будет сброшен через {count} секунды, и все ваши ответы будут удалены."
+    reset: "Сбросить сейчас"
+    resume: "Еще нет!"
   language-switch:
-    button: "Languages"
-    heading: "Languages"
-    description: "Please choose your preferred language."
+    button: "Языки"
+    heading: "Языки"
+    description: "Пожалуйста, выберите предпочитаемый язык."
   main-navigation:
-    menu: "Menu"
-    thesis: "Thesis {count}"
+    menu: "Меню"
+    thesis: "Тезис {count}"
     links:
       compass: "Election Compass"
       languages: "Change language"
@@ -161,31 +161,31 @@ views:
           start: "Let's go"
           proceed: "Submit and next"
           open-questionnaire: "Open survey in new tab"
-        start: "Thank you for sharing! Your data becomes more valuable for statistics if you share some more background information about yourself – would you help some more? Simply answer as many questions as you like!"
-        help-even-more: "Thank you very much! Would you like to help even more? You can answer some more specific questions here:"
-        thanks: "Thank you for sharing! Those were all the questions – you helped us a lot! Click on 'Quit' to go back to your results."
+        start: "Спасибо, что поделились! Ваши данные станут более ценными для статистики, если вы поделитесь дополнительной информацией о себе. Не могли бы вы помочь еще? Просто ответьте на столько вопросов, сколько хотите!"
+        help-even-more: "Большое спасибо! Хотите помочь еще больше? Вы можете ответить на более конкретные вопросы здесь:"
+        thanks: "Спасибо, что поделились! Это были все вопросы – вы нам очень помогли! Нажмите 'Выйти', чтобы вернуться к результатам."
         fields:
           age:
-            name: "Age"
-            label: "How old are you now?"
+            name: "Возраст"
+            label: "Сколько лет вам сейчас?"
             placeholder: "25"
-            description: "Your age is important to research what people of different age groups think about the theses and parties."
+            description: "Ваш возраст важен для исследования того, что люди разных возрастных групп думают о тезисах и партиях."
           gender:
-            name: "Gender"
-            label: "What is your gender?"
+            name: "Пол"
+            label: "Какого вы пола?"
             options:
-              female: "female"
-              diverse: "diverse"
-              male: "male"
-              none: "no answer"
+              female: "женский "
+              diverse: "другой "
+              male: "мужской "
+              none: "нет ответа"
           education:
-            name: "Qualification"
-            label: "What is your highest educational qualification?"
+            name: "Квалификация"
+            label: "Какая ваша образовательная квалификация"
             options:
-              student: "Currently a student"
-              nothing: "No complete qualification"
-              lower: "Middle School or similar"
-              higher: "High School or similar"
+              student: "В настоящее время студент"
+              nothing: "Нет полной квалификации"
+              lower: "Средняя школа или аналогичная"
+              higher: "Высшая школа или аналогичная"
               academic: "Academic"
               none: "no answer"
           party:
