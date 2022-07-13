@@ -128,28 +128,28 @@ views:
         skip-aria: "Pomiń – pomija to stwierdzenie, nie będzie liczone w wynikach."
         too-many-skip: "Jest tylko kilka stwierdzeń, więc nie możesz go pominąć | Proszę pominąć nie więcej niż 1 stwierdzenie jako ważne, aby otrzymać sensowny wynik! | Proszę pominąć nie więcej niż {count} stwierdzeń jako ważne, aby otrzymać sensowny wynik!"
       statement-text:
-        thesis: "Thesis {count} / {total}"
-        statement-aria: "The thesis is: '{statement}'"
+        thesis: "Stwierdzenia {count} / {total}"
+        statement-aria: "To stwierdzenie brzmi: '{statement}'"
         quoteStart: "‘"
         quoteEnd: "’"
         statement-badge:
-          skip: "You skipped this"
-          skip-aria: "You skipped this thesis."
-          important: "You marked this as important"
-          important-aria: "You marked this thesis as important."
+          skip: "Pominąłeś to"
+          skip-aria: "Pominąłeś to swierdzenie."
+          important: "Oznaczyłeś to jako ważne"
+          important-aria: "Oznaczyłeś to stwierdzenie jako ważne."
       statement-wrapper:
-        role-aria: "Thesis"
-        region-aria: "Thesis {count} of {total}"
+        role-aria: "Stwierdzenia"
+        region-aria: "Stwierdzenie {count} z {total}"
     party:
       party-item:
-        party-aria: "Party '{party}' – click here to select or deselect this party for comparison."
+        party-aria: "Parta '{party}' – kliknij tutaj, żeby odznaczyć tę partię z wyboru."
       section:
         heading: "Wybierz partie, które chcesz porównać"
         instruction: "Proszę wybrać partie, z którymi chcesz porównać swoje własne decyzje. Możesz wybrać tyle partii, ilu chcesz, ale musisz wybrać co najmniej dwóch. Poniższa lista jest przedstawiona w takiej samej kolejności, w jakiej partie pojawią się na karcie do głosowania."
         proceed: "Załatwione"
     match:
       match-display:
-        match-aria: "Your match for the party '{party}' is at {percentage} %"
+        match-aria: "Twoja zgodność z partią '{party}' wynosi '{percentage}' %"
       section:
         heading: "Twój wynik"
         explanation: "Ten wykres opisuje, w jakim stopniu Ty i poszczególne partie zgadzacie się co do przedstawionych stwierdzeń. Im wyższy procent, tym bardziej wasze stanowiska są zbieżne. Należy pamiętać, że nie jest to rekomendacja do głosowania, lecz narzędzie orientacji i dyskusji."
@@ -210,14 +210,14 @@ views:
           content: "Partia '{party}' nie przedstawiła swojego uzasadnienia."
       section:
         heading: "Ich odpowiedzi"
-        explanation: "The parties typically provide statements for every thesis to explain their reasoning. It is not always obvious why a party assumes a certain position so it is recommended to read this statements or the respective election manifestos."
+        explanation: "Partie zazwyczaj przedstawiają stanowiska do każdego oświadczenia, aby wyjaśnić swoje rozumowanie. Nie zawsze jest oczywiste, dlaczego dana partia zajmuje określone stanowisko, dlatego zaleca się przeczytanie tych oświadczeń lub odpowiednich manifestów wyborczych."
         region-aria: "Stwierdzenie {count} z {total}"
       friends-position:
         answer-aria: "{name}: {position}"
         skip: "Pominięto"
       kiosk-mode-hint:
         heading: "Proszę zresetować, gdy skończysz"
-        explanation: "Take your time reading and comparing the answers to the statements below. When you're done, you can reset the election compass here for the next person. This will also delete your own answers. Hint: you can also find a reset button in the menu. Thank you!"
+        explanation: "Nie spiesz się z czytaniem i porównywaniem poniższych odpowiedzi. Kiedy skończysz, możesz tutaj zresetować kompas wyborczy dla następnej osoby. W ten sposób usuniesz również swoje własne odpowiedzi. Wskazówka: przycisk resetowania znajdziesz również w menu. Dziękujemy!"
         reset: "Reset"
     footer:
       section:
