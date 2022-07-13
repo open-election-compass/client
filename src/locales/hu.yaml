@@ -128,28 +128,28 @@ views:
         skip-aria: "Átugrás - kihagyod ezt az állítást, nem lesz figyelembe véve."
         too-many-skip: "Túl kevés állítás van, ezért nem ugorhatod át őket. | Kérlek, legfeljebb egy állítást ugorj át, különben nem kapsz hasznos eredményt! | Kérlek, legfeljebb {count} állítást ugorj át, különben nem kapsz hasznos eredményt!"
       statement-text:
-        thesis: "Thesis {count} / {total}"
-        statement-aria: "The thesis is: '{statement}'"
+        thesis: "Állítás: {count} / {total}"
+        statement-aria: "Az állítás: „{statement}”"
         quoteStart: "‘"
         quoteEnd: "’"
         statement-badge:
-          skip: "You skipped this"
-          skip-aria: "You skipped this thesis."
-          important: "You marked this as important"
-          important-aria: "You marked this thesis as important."
+          skip: "Átugrottad"
+          skip-aria: "Átugrottad ezt az állítást."
+          important: "Fontosnak jelölted"
+          important-aria: "Fontosnak jelölted ezt az állítást."
       statement-wrapper:
-        role-aria: "Thesis"
-        region-aria: "Thesis {count} of {total}"
+        role-aria: "Állítás"
+        region-aria: "Állítás: {count} / {total}"
     party:
       party-item:
-        party-aria: "Party '{party}' – click here to select or deselect this party for comparison."
+        party-aria: "„{party}” párt – kattints ide ennek a pártnak a kiválasztásához / ki nem választásához az összehasonlításra."
       section:
         heading: "Válaszd ki az összehasonlítandó pártokat"
         instruction: "Kérlek, válaszd ki a pártokat, akiket össze akarsz hasonlítani a saját döntéseiddel. Legalább két pártot ki kell választanod, felső korlát nincs. Az alábbi lista ugyanabban a sorrendben van, ahogy a pártok megjelennek a szavazólapon."
         proceed: "Kész"
     match:
       match-display:
-        match-aria: "Your match for the party '{party}' is at {percentage} %"
+        match-aria: "{percentage} százalékban egyeznek a válaszaid a(z) „{party}” pártéval"
       section:
         heading: "Az eredményed"
         explanation: "Ez a diagram azt mutatja, mennyire hozzád hasonlóan ítélték meg az egyes pártok a fenti állításokat. Minél magasabb a szám, annál nagyobb az egyezés. Ne feledd, hogy ez nem szavazási tanács, csak egy eszköz a tájékozódáshoz és a megbeszéléshez."
@@ -210,14 +210,14 @@ views:
           content: "A(z) „{party}” párt nem indokolta az álláspontját ebben a kérdésben."
       section:
         heading: "A válaszaik"
-        explanation: "The parties typically provide statements for every thesis to explain their reasoning. It is not always obvious why a party assumes a certain position so it is recommended to read this statements or the respective election manifestos."
+        explanation: "A pártok jellemzően indoklást mellékelnek minden állításhoz, hogy elmagyarázzák, hogyan gondolkoznak róla. Nem mindig magától értetődő, miért helyezkedik egy adott párt egy adott álláspontra, úgyhogy érdemes elolvasni az indoklásukat vagy a választási nyilatkozatukat."
         region-aria: "{count} / {total} állítás"
       friends-position:
         answer-aria: "{name}: {position}"
         skip: "Átugorva"
       kiosk-mode-hint:
         heading: "Kérlek, állítsd alaphelyzetbe, ha készen vagy"
-        explanation: "Take your time reading and comparing the answers to the statements below. When you're done, you can reset the election compass here for the next person. This will also delete your own answers. Hint: you can also find a reset button in the menu. Thank you!"
+        explanation: "Tovább nézheted az állításokat és válaszokat. Ha kész vagy, kérlek állítsd alaphelyzetbe a választási iránytűt a következő felhasználó számára. Ez törli a válaszaidat. (A menüben is találsz egy alaphelyzetbe állítás gombot.) Köszönjük!"
         reset: "Alaphelyzetbe állítás"
     footer:
       section:
