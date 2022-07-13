@@ -128,28 +128,28 @@ views:
         skip-aria: "Atla – bu açıklamayı atlar, böylece bu sayılmaz."
         too-many-skip: "Sadece çok az tez var, bu yüzden birini atlayamazsınız. | Anlamlı bir sonuç almak için lütfen 1'den fazla tezi atlamayın! | Anlamlı bir sonuç almak için lütfen {count} tezden fazlasını atlamayın!"
       statement-text:
-        thesis: "Thesis {count} / {total}"
-        statement-aria: "The thesis is: '{statement}'"
+        thesis: "Açıklama {count} / {total}"
+        statement-aria: "Açıklama: '{statement}'"
         quoteStart: "‘"
         quoteEnd: "’"
         statement-badge:
-          skip: "You skipped this"
-          skip-aria: "You skipped this thesis."
-          important: "You marked this as important"
-          important-aria: "You marked this thesis as important."
+          skip: "Bunu atladınız"
+          skip-aria: "Bu açıklamayı atladınız."
+          important: "Bunu önemli olarak işaretlediniz"
+          important-aria: "Bu açıklamayı önemli olarak işaretlediniz."
       statement-wrapper:
-        role-aria: "Thesis"
-        region-aria: "Thesis {count} of {total}"
+        role-aria: "Açıklama"
+        region-aria: "Açıklama {count} / {total}"
     party:
       party-item:
-        party-aria: "Party '{party}' – click here to select or deselect this party for comparison."
+        party-aria: "{party}' partisi – karşılaştırmak için buraya tıklayarak seçin veya seçimi kaldırın."
       section:
         heading: "Karşılaştırmak istediğiniz partileri seçin"
         instruction: "Lütfen kararlarınızı karşılaştırmak istediğiniz tarafları seçin. İstediğiniz kadar taraf seçebilirsiniz ancak en az iki taraf seçmelisiniz. Aşağıdaki liste, tarafların oy pusulasındaki sırasıyla aynı sıralama doğrultusunda sunulmaktadır."
         proceed: "Tamamlandı"
     match:
       match-display:
-        match-aria: "Your match for the party '{party}' is at {percentage} %"
+        match-aria: "Adayla '{party}' uyumunuz % {percentage}"
       section:
         heading: "Sonuçlarınız"
         explanation: "Bu tablo yukarıdaki açıklamalarla sizin ve ilgili kişilerin ne kadar uyuştuğunuzu gösterir. Yüzde ne kadar yüksekse konumlarınız da o kadar fazla eşleşiyor demektir. Lütfen bunun bir oylama önerisi olmadığını, yalnızca bir yönlendirme ve tartışma aracı olduğunu aklınızda bulundurun."
