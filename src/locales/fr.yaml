@@ -128,28 +128,28 @@ views:
         skip-aria: "Ignorer - ignore cette instruction afin qu'elle ne soit pas comptée."
         too-many-skip: "Veuillez ne pas sauter plus d'une instruction pour recevoir un résultat significatif ! / Veuillez ne pas sauter plus de {count} instructions pour obtenir un résultat significatif !"
       statement-text:
-        thesis: "Thesis {count} / {total}"
-        statement-aria: "The thesis is: '{statement}'"
+        thesis: "Relevé {count} / {total}"
+        statement-aria: "L'énoncé est : '{statement}'"
         quoteStart: "‘"
         quoteEnd: "’"
         statement-badge:
-          skip: "You skipped this"
-          skip-aria: "You skipped this thesis."
-          important: "You marked this as important"
-          important-aria: "You marked this thesis as important."
+          skip: "Vous avez sauté"
+          skip-aria: "Vous avez sauté cette déclaration."
+          important: "Vous avez marqué cela comme important"
+          important-aria: "Vous avez marqué cette déclaration comme importante."
       statement-wrapper:
-        role-aria: "Thesis"
-        region-aria: "Thesis {count} of {total}"
+        role-aria: "Déclaration"
+        region-aria: "Déclaration {count} / {total}"
     party:
       party-item:
-        party-aria: "Party '{party}' – click here to select or deselect this party for comparison."
+        party-aria: "Partie '{party}' - cliquez ici pour sélectionner ou désélectionner cette partie à des fins de comparaison."
       section:
         heading: "Choisissez les parties que vous souhaitez comparer"
         instruction: "Veuillez sélectionner les parties auxquelles vous souhaitez comparer vos propres décisions. Vous pouvez sélectionner autant de parties que vous le souhaitez, mais vous devez en sélectionner au moins deux. La liste suivante est présentée dans le même ordre que les partis apparaîtront sur le bulletin de vote."
         proceed: "Fait"
     match:
       match-display:
-        match-aria: "Your match for the party '{party}' is at {percentage} %"
+        match-aria: "Votre taux de correspondance avec le parti \"{party}\" est de {percentage} %"
       section:
         heading: "Votre résultat"
         explanation: "Ce tableau décrit dans quelle mesure vous et les partis respectifs êtes d'accord sur les déclarations ci-dessus. Plus le pourcentage est élevé, plus vos positions correspondent. N'oubliez pas qu'il ne s'agit pas d'une recommandation de vote, mais d'un outil d'orientation et de discussion."
@@ -210,14 +210,14 @@ views:
           content: "Le parti '{party}' n'a pas fourni aucune justification pour expliquer sa position concernant cette déclaration."
       section:
         heading: "Leurs réponses"
-        explanation: "The parties typically provide statements for every thesis to explain their reasoning. It is not always obvious why a party assumes a certain position so it is recommended to read this statements or the respective election manifestos."
+        explanation: "Les partis fournissent généralement des positions pour chaque déclaration afin d'expliquer leur raisonnement. Il n'est pas toujours évident de savoir pourquoi un parti adopte une certaine position. Il est donc recommandé de lire ces déclarations ou les manifestes électoraux respectifs."
         region-aria: "{count} déclarations sur un total de {total}"
       friends-position:
         answer-aria: "{name}: {position}"
         skip: "Sauté"
       kiosk-mode-hint:
         heading: "Veuillez réinitialiser quand vous avez terminé"
-        explanation: "Take your time reading and comparing the answers to the statements below. When you're done, you can reset the election compass here for the next person. This will also delete your own answers. Hint: you can also find a reset button in the menu. Thank you!"
+        explanation: "Prenez votre temps pour lire et comparer les réponses ci-dessous. Lorsque vous avez terminé, vous pouvez réinitialiser la boussole électorale ici pour la personne suivante. Cela supprimera également vos propres réponses. Conseil: vous pouvez également trouver un bouton de réinitialisation dans le menu. Merci de votre attention!"
         reset: "Réinitialiser"
     footer:
       section:
