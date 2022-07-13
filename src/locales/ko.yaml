@@ -1,278 +1,278 @@
 ---
 elements:
   friends-invite-modal:
-    heading: "친구를 초대"
-    description: "모든 사람이 서로의 답변을 실시간으로 볼 수 있는 공유 세션에 친구를 초대하세요."
+    heading: "친구 초대하기"
+    description: "모든 사람이 실시간으로 서로의 답변을 볼 수 있는 공유 세션에 친구를 초대하십시오."
     form:
       name:
-        label: "당신의 이름 / 닉네임"
-        description: "친구들이 당신을 알아볼 수 있도록 이름을 알려주세요. 별명을 사용할 수도 있습니다."
+        label: "귀하의 이름 / 별명"
+        description: "친구들이 귀하를 알아볼 수 있도록 이름을 알려 주세요. 별명도 사용할 수 있습니다."
     introduction:
-      heading: "공유 세션이란 무엇입니까?"
+      heading: "공유 세션이 무엇인가요?"
       explanation:
-        - "공유 세션을 통해 친구들과 선거 나침반을 경험할 수 있습니다. 한 사람이 다른 사람을 공유 세션에 초대합니다. 모든 사람이 가입하면 평소와 같이 선거 나침반을 사용할 수 있습니다. 그러나 이제 당사자 외에도 서로의 답변을 보고 토론을 시작할 수도 있습니다."
+        - "공유 세션을 통해 친구들과 선거 나침반을 경험할 수 있습니다. 한 사람이 다른 사람을 공유 세션에 초대합니다. 모든 사람이 참가하면 평소와 같이 각자가 선거 나침반을 사용할 수 있습니다. 그러나 이제 당사자 외에도 서로의 답변을 보고 토론을 시작할 수도 있습니다."
     security:
-      heading: "제 답변은 안전한가요?"
+      heading: "내 답변은 안전한가요?"
       explanation:
-        - "예! 귀하의 답변은 보안 연결을 통해 장치 간에 직접 교환됩니다. 서버는 장치가 인터넷에서 자신을 찾을 수 있도록 도와줍니다. 그러나 귀하의 답변은 서버를 통해 전송되지 않고 장치에서 장치로 직접 전송됩니다."
+        - "네! 답변은 보안 연결을 통해 기기 사이에 직접 전달됩니다. 서버는 기기가 인터넷에서 자신을 찾을 수 있도록 지원합니다. 그러나 답변은 서버를 통해 전송되지 않고 기기에서 기기로 직접 전송됩니다."
     registration:
-      heading: "이 기능을 사용하려면 등록해야 합니까?"
+      heading: "이 기능을 사용하려면 등록이 필요한가요?"
       explanation:
-        - "등록이 필요하지 않습니다. 이름만 입력하면 세션에 참여할 수 있습니다."
+        - "등록할 필요는 없습니다. 이름을 입력하기만 하면 세션에 참가할 수 있습니다."
     cancel: "취소"
-    confirm: "오픈 세션"
+    confirm: "세션 열기"
   friends-join-modal:
-    heading: "친구 가입"
-    description: "공유 세션에서 친구와 연결하고 모든 사람의 답변을 실시간으로 확인하세요."
+    heading: "친구와 함께하기"
+    description: "공유 세션에서 친구와 연결하고 실시간으로 모든 사람의 답변을 확인하세요."
     form:
       name:
-        label: "당신의 이름 / 닉네임"
-        description: "친구들이 당신을 알아볼 수 있도록 이름을 알려주세요. 별명을 사용할 수도 있습니다."
+        label: "귀하의 이름 / 별명"
+        description: "친구들이 귀하를 알아볼 수 있도록 이름을 알려 주세요. 별명도 사용할 수 있습니다."
       join:
-        label: "친구의 장치"
-        description: "세션을 호스팅하는 사람의 장치 ID를 입력하여 공유 세션에 참여합니다."
+        label: "친구의 기기"
+        description: "세션을 주최하는 사람의 기기 ID를 입력하여 공유 세션에 참여하십시오."
     introduction:
-      heading: "공유 세션이란 무엇입니까?"
+      heading: "공유 세션이 무엇인가요?"
       explanation:
-        - "공유 세션을 통해 친구들과 선거 나침반을 경험할 수 있습니다. 한 사람이 다른 사람을 공유 세션에 초대합니다. 모든 사람이 가입하면 평소와 같이 선거 나침반을 사용할 수 있습니다. 그러나 이제 당사자 외에도 서로의 답변을 보고 토론을 시작할 수도 있습니다."
+        - "공유 세션을 통해 친구들과 선거 나침반을 경험할 수 있습니다. 한 사람이 다른 사람을 공유 세션에 초대합니다. 모든 사람이 참가하면 평소와 같이 각자가 선거 나침반을 사용할 수 있습니다. 그러나 이제 당사자 외에도 서로의 답변을 보고 토론을 시작할 수도 있습니다."
     security:
-      heading: "제 답변은 안전한가요?"
+      heading: "내 답변은 안전한가요?"
       explanation:
-        - "예! 귀하의 답변은 보안 연결을 통해 장치 간에 직접 교환됩니다. 서버는 장치가 인터넷에서 자신을 찾을 수 있도록 도와줍니다. 그러나 귀하의 답변은 서버를 통해 전송되지 않고 장치에서 장치로 직접 전송됩니다."
+        - "네! 답변은 보안 연결을 통해 기기 사이에 직접 전달됩니다. 서버는 기기가 인터넷에서 자신을 찾을 수 있도록 지원합니다. 그러나 답변은 서버를 통해 전송되지 않고 기기에서 기기로 직접 전송됩니다."
     registration:
-      heading: "이 기능을 사용하려면 등록해야 합니까?"
+      heading: "이 기능을 사용하려면 등록이 필요한가요?"
       explanation:
-        - "등록이 필요하지 않습니다. 이름만 입력하면 세션에 참여할 수 있습니다."
+        - "등록할 필요는 없습니다. 이름을 입력하기만 하면 세션에 참가할 수 있습니다."
     cancel: "취소"
-    confirm: "가입하세요"
+    confirm: "참가하기"
   friends-list:
-    heading: "연결된 장치"
-    empty: "주최자는 세션 참여 요청을 수락해야 합니다."
-    host: "주최자"
+    heading: "연결된 기기"
+    empty: "호스트가 세션 참여 요청을 수락해야 합니다."
+    host: "호스트"
   friends-status-modal:
     heading: "공유 세션"
     mode:
       INACTIVE:
         heading: "연결되지 않음"
-        text: "당신은 누구와도 연결되어 있지 않습니다. 기존 세션에 참여하거나 기본 메뉴를 통해 자신의 세션을 호스팅하세요."
+        text: "다른 누구와도 연결되어 있지 않습니다. 기존 세션에 참가하거나 기본 메뉴를 통해 자신의 세션을 주최하십시오."
       GUEST:
-        heading: "손님"
-        text: "다른 사람이 호스팅하는 공유 세션에 참여하고 있습니다."
+        heading: "게스트"
+        text: "다른 사람이 주최하는 공유 세션에 참가하고 있습니다."
       HOST:
-        heading: "주최자"
-        text: "당신은 이 세션의 주최자입니다. 기기 ID를 사용하여 친구를 초대하고 가입 요청을 수락하세요."
+        heading: "호스트"
+        text: "귀하가 이 세션의 호스트입니다. 기기 ID를 사용하여 친구를 초대하고 그들의 참가 요청을 수락하십시오."
     own-peer-id:
-      label: "당신의 장치"
-      description: "이것은 장치 ID입니다. 친구가 공유 세션에 연결하려면 장치에 이 정보를 입력해야 합니다."
+      label: "귀하의 기기"
+      description: "이것이 귀하의 기기 ID입니다. 친구가 공유 세션에 연결하려면 기기에 이 정보를 입력해야 합니다."
   guests-list:
-    heading: "연결된 장치"
-    empty: "아직 아무도 세션에 참여하지 않았습니다."
-    accept: "수락"
+    heading: "연결된 기기"
+    empty: "아직 아무도 세션에 참가하지 않았습니다."
+    accept: "수락하기"
     status:
-      connecting: "연결"
-      connected: "연결됨"
-      disconnected: "연결 끊김"
+      connecting: "연결 중"
+      connected: "연결 완료"
+      disconnected: "연결 종료"
   guide-button:
-    start: "갑시다"
-    introduction: "작동 방식 알아보기"
-    first-thesis: "첫 번째 진술로 시작"
-    thesis: "다음 진술로 진행"
-    party: "당사자 선택"
-    match: "결과 보기"
-    compare: "위치 읽기"
+    start: "시작합시다"
+    introduction: "어떤 방식으로 동작하는지 알아보기"
+    first-thesis: "첫 번째 성명으로 시작하기"
+    thesis: "다음 성명으로 진행하기"
+    party: "정당 선택하기"
+    match: "결과 확인하기"
+    compare: "견해 읽기"
   kiosk-mode:
-    heading: "재설정해야 합니까?"
-    description: "The election compass will be reset now and all your answers will be deleted. | The election compass will be reset in {count} seconds and all your answers will be deleted. | The election compass will be reset in {count} second and all your answers will be deleted."
-    reset: "지금 재설정"
-    resume: "아직 아닙니다!"
+    heading: "재설정해야 할까요?"
+    description: "이제 선거 나침반이 재설정되고 모든 답변은 삭제됩니다. | 선거 나침반이 {count} 초 후에 재설정되며 모든 답변은 삭제됩니다. | 선거 나침반이 {count} 초 후에 재설정되며 모든 답변은 삭제됩니다."
+    reset: "지금 재설정하기"
+    resume: "아직 아니에요!"
   language-switch:
     button: "언어"
     heading: "언어"
-    description: "선호하는 언어를 선택하세요."
+    description: "선호하는 언어를 선택해 주세요."
   main-navigation:
     menu: "메뉴"
-    thesis: "성명서 {count}"
+    thesis: "성명 {count}"
     links:
-      compass: "선거 나침반"
+      compass: "선거 나침반 (Election Compass)"
       languages: "언어 변경"
-      friends-join: "친구 가입"
-      friends-invite: "친구 초대"
-      reset: "재설정"
-      home: "시작"
+      friends-join: "친구와 함께하기"
+      friends-invite: "친구 초대하기"
+      reset: "재설정하기"
+      home: "시작하기"
       introduction: "소개"
-      theses: "성명서"
+      theses: "성명"
       evaluation: "평가"
       party: "정당 선택"
       match: "결과"
       compare: "성명서"
-      about: "소개"
+      about: "정보"
   open-election-compass-logo:
-    alt: "선거 나침반 로고"
+    alt: "선거 나침반(Election Compass) 로고"
   show-more:
-    show: "자세히보기"
+    show: "더 표시하기"
     hide: "숨기기"
 views:
   home:
     home:
-      role-aria: "선거 나침반"
+      role-aria: "선거 나침반(Election Compass)"
     start:
       section:
         banner-aria: "시작 섹션"
     theses:
       important-button:
-        important: "나 한테 중요합니다"
+        important: "나에게 중요함"
         important-aria: "중요 – 이 진술을 귀하에게 중요한 것으로 표시합니다."
-        too-many-important: "There are only very few theses, so you cannot mark one as important. | Please mark no more than 1 thesis as important to receive a meaningful result! | Please mark no more than {count} theses as important to receive a meaningful result!"
+        too-many-important: "성명의 수가 너무 적으므로 하나를 중요한 것으로 표시할 수 없습니다. | 의미 있는 결과를 얻으려면 1개보다 많은 성명을 중요한 것으로 표시하지 마십시오! | 의미 있는 결과를 얻으려면 {count} 개보다 많은 성명을 중요한 것으로 표시하지 마십시오!"
       skip-button:
-        skip: "모르겠습니다"
-        skip-aria: "건너뛰기 – 이 문장을 건너뛰므로 계산되지 않습니다."
-        too-many-skip: "의미 있는 결과를 얻으려면 1문항 이상 건너뛰지 마세요! / 의미 있는 결과를 얻으려면 {count} 개 이상의 문을 건너뛰지 마세요!"
+        skip: "모르겠어요"
+        skip-aria: "건너뛰기 – 이 성명을 건너뛰므로 카운트에서 제외됩니다."
+        too-many-skip: "성명의 수가 너무 적으므로 하나를 건너뛸 수 없습니다. | 의미 있는 결과를 얻으려면 1개보다 많은 성명을 건너뛰지 마십시오! | 의미 있는 결과를 얻으려면 {count} 개보다 많은 성명을 건너뛰지 마십시오!"
       statement-text:
-        thesis: "Thesis {count} / {total}"
-        statement-aria: "The thesis is: '{statement}'"
+        thesis: "성명 {count} / {total}"
+        statement-aria: "성명은 다음입니다: '{statement}'"
         quoteStart: "‘"
         quoteEnd: "’"
         statement-badge:
-          skip: "You skipped this"
-          skip-aria: "You skipped this thesis."
-          important: "You marked this as important"
-          important-aria: "You marked this thesis as important."
+          skip: "이것을 건너뛰셨습니다"
+          skip-aria: "이 성명을 건너뛰셨습니다."
+          important: "이것을 중요로 표시하셨습니다"
+          important-aria: "이 성명을 중요로 표시하셨습니다."
       statement-wrapper:
-        role-aria: "Thesis"
-        region-aria: "Thesis {count} of {total}"
+        role-aria: "성명"
+        region-aria: "{total} 중 {count} 회의 진술"
     party:
       party-item:
-        party-aria: "Party '{party}' – click here to select or deselect this party for comparison."
+        party-aria: "'{party}' 정당 – 비교를 위해 이 정당을 선택하거나 선택을 취소하려면 여기를 클릭하십시오."
       section:
-        heading: "비교하려는 당사자를 선택하세요."
-        instruction: "자신의 결정을 비교하고 싶은 정당을 선택하세요. 원하는 만큼 정당을 선택할 수 있지만 최소 2개는 선택해야 합니다. 다음 목록은 정당이 투표용지에 표시되는 것과 동일한 순서로 제공됩니다."
+        heading: "비교하려는 정당을 선택하십시오"
+        instruction: "자신의 결정을 비교하고 싶은 정당을 선택하십시오. 원하는 만큼 정당을 선택할 수 있으며, 최소 2개를 선택하셔야 합니다. 다음 목록은 정당이 투표용지에 표시되는 것과 같은 순서로 제공됩니다."
         proceed: "완료"
     match:
       match-display:
-        match-aria: "Your match for the party '{party}' is at {percentage} %"
+        match-aria: "귀하와 '{party}' 정당의 일치율은 {percentage}%입니다."
       section:
         heading: "귀하의 결과"
-        explanation: "이 차트는 귀하와 각 정당이 위의 진술에 얼마나 동의했는지 설명합니다. 백분율이 높을수록 귀하의 위치가 더 많이 일치합니다. 이것은 투표 권장 사항이 아니라 오리엔테이션 및 토론을 위한 도구임을 명심하세요."
+        explanation: "이 도표는 귀하와 각 정당이 위 주장에 대해 얼마나 공감했는지를 나타냅니다. 백분율이 높을수록 귀하의 견해와 더 많이 일치합니다. 이는 투표 권고가 아니며 예비 교육과 토론을 위한 도구임을 명심하십시오."
     compare:
       additional-analysis:
         heading: "통계"
         buttons:
-          close: "중지"
-          start: "시작합니다"
-          proceed: "제출 그리고 다음"
+          close: "끝내기"
+          start: "시작합시다"
+          proceed: "제출하고 다음으로"
           open-questionnaire: "새 탭에서 설문조사 열기"
-        start: "공유해 주셔서 감사합니다! 자신에 대한 배경 정보를 더 많이 공유하면 데이터가 통계에 더 가치가 있습니다. 더 도움이 되겠습니까? 원하는 만큼 질문에 답하기만 하면 됩니다!"
-        help-even-more: "매우 감사합니다! 더 많은 도움이 되시겠습니까? 여기에서 더 구체적인 질문에 답할 수 있습니다:"
-        thanks: "공유해 주셔서 감사합니다! 이것이 전부였습니다. 당신은 우리에게 많은 도움을 주었습니다! 결과로 돌아가려면 '종료'를 클릭하세요."
+        start: "공유해 주셔서 감사합니다! 자신에 관한 배경 정보를 추가로 공유해 주시면 데이터의 통계적 가치가 더욱 높아집니다. 추가로 도움을 주시겠습니까? 원하는 만큼 질문에 답해 주시면 됩니다!"
+        help-even-more: "대단히 감사합니다! 더 많은 도움을 주시겠습니까? 여기에서 더 구체적인 질문에 답하실 수 있습니다:"
+        thanks: "공유해 주셔서 감사합니다! 이것으로 모든 질문이 끝났습니다. 많은 도움을 주셨습니다! 자신의 결과로 돌아가려면 '끝내기'를 클릭하십시오."
         fields:
           age:
-            name: "연령"
-            label: "이제 몇 살이신가요?"
+            name: "나이"
+            label: "현재 나이는 몇 세인가요?"
             placeholder: "25"
-            description: "귀하의 연령은 다양한 연령대의 사람들이 성명서 및 당사자에 대해 어떻게 생각하는지 조사하는 데 중요합니다."
+            description: "귀하의 나이는 다양한 연령대의 사람들이 주장과 정당에 관해 어떻게 생각하는지 조사하는 데 중요합니다."
           gender:
             name: "성별"
-            label: "성별은 무엇입니까?"
+            label: "귀하의 성별은 무엇입니까?"
             options:
               female: "여성"
-              diverse: "성소수자"
+              diverse: "제3의 성"
               male: "남성"
-              none: "답변 없음"
+              none: "답하지 않음"
           education:
-            name: "자격"
-            label: "귀하의 가장 높은 교육 자격은 무엇입니까"
+            name: "최종 학력"
+            label: "귀하의 최종 학력은 무엇입니까"
             options:
               student: "현재 학생"
               nothing: "완전한 자격 없음"
-              lower: "중학교 또는 동급"
-              higher: "고등학교 또는 동급"
-              academic: "학생"
-              none: "답변 없음"
+              lower: "중학교 또는 그에 준하는 학력"
+              higher: "고등학교 또는 그에 준하는 학력"
+              academic: "학자"
+              none: "답하지 않음"
           party:
             name: "정당"
             label: "선거가 오늘이라면 누구에게 투표하시겠습니까?"
             options:
               other: "기타"
-              non-voter: "투표하지 않을 것입니다."
-              not-eligible: "저는 자격이 없습니다."
-              not-sure: "잘 모르겠습니다."
-              none: "답변 없음"
+              non-voter: "투표하지 않는다"
+              not-eligible: "본인에게는 자격이 없다"
+              not-sure: "잘 모르겠다"
+              none: "답하지 않음"
       analysis-banner:
-        heading: "당신의 답을 과학에 기부하시겠습니까?"
-        explanation: "귀하의 답변과 결과를 과학 연구에 기부하여 {someone} 가 이번 선거를 더 잘 이해하도록 도울 수 있습니다. 우리는 추적할 수 없는 익명화된 데이터만 저장합니다."
-        send: "지금 통계 데이터 제출"
-        close: "아니요, 계속 읽으세요"
+        heading: "자신의 답변을 과학 연구를 위해 기부하시겠습니까?"
+        explanation: "자신의 답변과 결과를 과학 연구를 위해 기부하여 {someone}(이)가 선거를 더 잘 이해하도록 도우실 수 있습니다. 귀하가 누구인지 추적할 수 없도록 익명으로 처리된 데이터만이 저장됩니다."
+        send: "지금 통계 데이터 제출하기"
+        close: "아니요, 계속 읽습니다"
       answer:
         skip:
           status-text: "알 수 없음"
-          content: "정당 '{party}'은 이 진술에 대해 어떠한 답변이나 입장도 제공하지 않았습니다."
+          content: "'{party}' 정당은 이 성명에 관한 답변이나 견해를 제공하지 않았습니다."
         empty:
-          content: "정당 '{party}'은(는) 이 진술과 관련하여 자신의 입장을 설명할 이유를 제공하지 않았습니다."
+          content: "'{party}' 정당은 이 주장에 대한 자신의 견해를 설명할 논리 근거를 제공하지 않았습니다."
       section:
         heading: "그들의 대답"
-        explanation: "The parties typically provide statements for every thesis to explain their reasoning. It is not always obvious why a party assumes a certain position so it is recommended to read this statements or the respective election manifestos."
-        region-aria: "{total} 중 {count} 회의 진술"
+        explanation: "정당은 일반적으로 모든 성명에 대한 견해를 제공하여 자신의 논리 근거를 설명합니다. 정당이 특정 견해를 밝히는 이유가 항상 명확한 것은 아니므로, 이 성명이나 해당 선거 선언문을 읽는 것이 좋습니다."
+        region-aria: "성명 {total} 중 {count}"
       friends-position:
         answer-aria: "{name}: {position}"
         skip: "건너뜀"
       kiosk-mode-hint:
-        heading: "완료되면 재설정하세요"
-        explanation: "Take your time reading and comparing the answers to the statements below. When you're done, you can reset the election compass here for the next person. This will also delete your own answers. Hint: you can also find a reset button in the menu. Thank you!"
-        reset: "재설정"
+        heading: "완료되면 재설정하십시오"
+        explanation: "시간을 두고 천천히 아래 답변 성명을 읽고 비교하십시오. 완료되면 여기에서 다음 사람을 위해 선거 나침반을 재설정할 수 있습니다. 이렇게 하면 귀하 자신의 답변도 삭제됩니다. 힌트: 메뉴에서 재설정 버튼을 찾는 방법도 있습니다. 감사합니다!"
+        reset: "재설정하기"
     footer:
       section:
-        explanation: "이 선거 나침반은 무료 오픈 소스 프로젝트 {0} 를 기반으로 합니다."
+        explanation: "이 선거 나침반은 무료 오픈 소스 프로젝트({0})를 기반으로 합니다."
         oec: "OpenElectionCompass"
 validation:
   names:
     name: "이름"
-    remote-peer-id: "친구의 장치"
+    remote-peer-id: "친구의 기기"
   fields:
     name:
-      min: "이름을 입력하세요."
-      regex: "문자, 숫자, 공백만 사용할 수 있으며 특수 문자는 사용할 수 없습니다."
-      required: "이름을 입력하세요."
+      min: "이름을 입력해 주세요."
+      regex: "알파벳, 숫자, 공백만 사용할 수 있으며 특수 문자는 사용할 수 없습니다."
+      required: "이름을 입력해 주세요."
 algorithm:
   options:
     strongly-approve:
-      button: "강력하게 승인"
-      button-aria: "강력히 승인 – 이 진술을 강력히 승인하려면 여기를 클릭하세요!"
-      badge: "당신은 강력하게 승인"
+      button: "강력하게 찬성"
+      button-aria: "강력하게 찬성 – 이 성명에 강력하게 찬성하시면 여기를 클릭하십시오!"
+      badge: "귀하는 강력하게 찬성하셨습니다"
       badge-aria: "귀하는 이 진술을 강력하게 승인했습니다."
-      status: "강력하게 승인"
-      answer-aria: "정당 '{party}'은(는) 다음 답변으로 이 진술을 강력히 승인합니다: {answer}"
+      status: "강력하게 찬성"
+      answer-aria: "'{party}' 정당은 다음 답변과 함께 이 성명에 강력하게 찬성합니다: {answer}"
     approve:
-      button: "승인"
-      button-aria: "승인 – 이 진술을 승인하려면 여기를 클릭하세요!"
-      badge: "승인했습니다"
-      badge-aria: "이 진술을 승인했습니다."
-      status: "승인"
-      answer-aria: "정당 '{party}'은(는) 다음 답변으로 이 진술을 승인합니다: {answer}"
+      button: "찬성"
+      button-aria: "찬성 - 이 성명에 찬성하시면 여기를 클릭하십시오!"
+      badge: "귀하는 찬성하셨습니다"
+      badge-aria: "귀하는 이 성명에 찬성하셨습니다."
+      status: "찬성"
+      answer-aria: "'{party}' 정당은 다음 답변과 함께 이 성명에 찬성합니다: {answer}"
     neutral:
       button: "중립"
-      button-aria: "중립 – 이 진술에 대해 중립을 유지하려면 여기를 클릭하세요!"
-      badge: "당신은 우리가 중립입니다"
-      badge-aria: "당신은 이 진술에 대해 중립적입니다."
+      button-aria: "중립 – 이 성명에 대해 중립을 유지하시면 여기를 클릭하십시오!"
+      badge: "귀하는 중립을 유지하셨습니다"
+      badge-aria: "귀하는 이 성명에 대해 중립을 유지하셨습니다."
       status: "중립"
-      answer-aria: "정당 '{party}'은(는) 이 진술에 대해 중립을 유지하며 다음 답변을 제공합니다: {answer}"
+      answer-aria: "'{party}' 정당은 다음 답변과 함께 이 성명에 대해 중립을 유지합니다: {answer}"
     partly:
-      button: "부분적"
-      button-aria: "부분적 – 이 진술에 부분적으로 동의하려면 여기를 클릭하세요!"
-      badge: "당신은 부분적으로 동의했습니다"
-      badge-aria: "당신은 이 말에 부분적으로 동의했습니다."
-      status: "부분적"
-      answer-aria: "정당 '{party}'은(는) 이 진술을 부분적으로 지지하며 다음 답변을 제공합니다.: {answer}"
+      button: "부분적으로 동의"
+      button-aria: "부분적으로 동의 – 이 성명에 부분적으로 동의하시면 여기를 클릭하십시오!"
+      badge: "귀하는 부분적으로 동의하셨습니다"
+      badge-aria: "귀하는 이 성명에 대해 부분적으로 동의하셨습니다."
+      status: "부분적으로 동의"
+      answer-aria: "'{party}' 정당은 다음 답변과 함께 이 성명에 대해 부분적으로 동의합니다: {answer}"
     reject:
       button: "거부"
-      button-aria: "거부 – 이 진술을 거부하려면 여기를 클릭하세요!"
-      badge: "당신은 거부했습니다"
-      badge-aria: "이 진술을 거부했습니다."
-      status: "거부합니다"
-      answer-aria: "정당 '{party}'은(는) 다음 답변으로 이 진술을 거부합니다: {answer}"
+      button-aria: "거부 – 이 성명을 거부하시면 여기를 클릭하십시오!"
+      badge: "귀하는 거부하셨습니다"
+      badge-aria: "귀하는 이 성명을 거부하셨습니다."
+      status: "거부"
+      answer-aria: "'{party}' 정당은 다음 답변과 함께 이 성명을 거부합니다: {answer}"
     strongly-reject:
-      button: "강하게 거부"
-      button-aria: "강하게 거부 – 이 진술을 강력히 거부하려면 여기를 클릭하세요!"
-      badge: "당신은 강력하게 거부했습니다"
-      badge-aria: "당신은 이 진술을 강력하게 거부했습니다."
-      status: "강하게 거부"
-      answer-aria: "정당 '{party}'은(는) 다음 답변으로 이 진술을 강력히 거부합니다: {answer}"
+      button: "강력하게 거부"
+      button-aria: "강력하게 거부 - 이 성명을 강력히 거부하시면 여기를 클릭하십시오!"
+      badge: "귀하는 강력하게 거부하셨습니다"
+      badge-aria: "귀하는 이 성명을 강력하게 거부하셨습니다"
+      status: "강력하게 거부"
+      answer-aria: "'{party}' 정당은 다음 답변과 함께 이 성명을 강력하게 거부합니다: {answer}"
