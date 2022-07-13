@@ -128,28 +128,28 @@ views:
         skip-aria: "Omitir: omite esta declaración para que no se cuente."
         too-many-skip: "Hay muy pocas declaraciones, por lo que no puedes saltarte ninguno. | Por favor, no omitas más de 1 declaración para obtener un resultado significativo. | Por favor, no omitas más de {count} declaraciones para recibir un resultado significativo!"
       statement-text:
-        thesis: "Thesis {count} / {total}"
-        statement-aria: "The thesis is: '{statement}'"
+        thesis: "Declaración {count} / {total}"
+        statement-aria: "La declaración es: '{statement}'"
         quoteStart: "‘"
         quoteEnd: "’"
         statement-badge:
-          skip: "You skipped this"
-          skip-aria: "You skipped this thesis."
-          important: "You marked this as important"
-          important-aria: "You marked this thesis as important."
+          skip: "Te has saltado esto"
+          skip-aria: "Te has saltado esta declaración."
+          important: "Has marcado esto como importante"
+          important-aria: "Has marcado esta declaración como importante."
       statement-wrapper:
-        role-aria: "Thesis"
-        region-aria: "Thesis {count} of {total}"
+        role-aria: "Declaración"
+        region-aria: "Declaración {count} de {total}"
     party:
       party-item:
-        party-aria: "Party '{party}' – click here to select or deselect this party for comparison."
+        party-aria: "Grupo '{party}' - haga clic aquí para seleccionar o anular la selección de este grupo para la comparación."
       section:
         heading: "Elige los grupos que quieres comparar"
         instruction: "Seleccione los grupos con los que desea comparar sus propias decisiones. Puede seleccionar cuantos grupos quiera, pero tiene que seleccionar al menos dos. La siguiente lista se presenta en el mismo orden en que los grupos aparecerán en la papeleta."
         proceed: "Listo"
     match:
       match-display:
-        match-aria: "Your match for the party '{party}' is at {percentage} %"
+        match-aria: "Tu coincidencia para el grupo '{party}' está en {percentage} %"
       section:
         heading: "Tu resultado"
         explanation: "Este gráfico describe en qué medida tú y las respectivas partes están de acuerdo en las tesis anteriores. Cuanto más alto sea el porcentaje, más coinciden tus posiciones. Debes tener en cuenta que no se trata de una recomendación de voto, sino de una herramienta de orientación y debate."
@@ -210,14 +210,14 @@ views:
           content: "El grupo \"{party}\" no aportó ningún razonamiento para explicar su posición respecto a esta tesis."
       section:
         heading: "Las respuestas"
-        explanation: "The parties typically provide statements for every thesis to explain their reasoning. It is not always obvious why a party assumes a certain position so it is recommended to read this statements or the respective election manifestos."
+        explanation: "Los grupos suelen ofrecer posicionamientos para cada declaración con el fin de explicar su razonamiento. No siempre es obvio por qué un grupo asume una determinada posición, por lo que se recomienda leer estas declaraciones o los respectivos programas electorales."
         region-aria: "Declaraciones {count} de {total}"
       friends-position:
         answer-aria: "{name}: {position}"
         skip: "Se ha omitido"
       kiosk-mode-hint:
         heading: "Por favor, reinicia cuando hayas terminado"
-        explanation: "Take your time reading and comparing the answers to the statements below. When you're done, you can reset the election compass here for the next person. This will also delete your own answers. Hint: you can also find a reset button in the menu. Thank you!"
+        explanation: "Tómate tu tiempo para leer y comparar las declaraciones de las respuestas a continuación. Cuando hayas terminado, puedes restablecer la brújula electoral aquí para la siguiente persona. Esto también borrará tus propias respuestas. Sugerencia: también puedes encontrar un botón de reinicio en el menú. Gracias!"
         reset: "Reinciar"
     footer:
       section:
