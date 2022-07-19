@@ -1,16 +1,16 @@
 ---
 elements:
   friends-invite-modal:
-    heading: "Invite friends"
-    description: "Invite your friends to a shared session where everyone can see each other's answers in real time."
+    heading: "邀請朋友"
+    description: "邀請您的朋友參加共享活動，每個人都可以即時看到彼此的答案。"
     form:
       name:
-        label: "Your name / nickname"
-        description: "Please provide your name so your friends can recognize you. You can also use a nickname."
+        label: "您的姓名/暱稱"
+        description: "請提供您的姓名，讓您的朋友能認出您。您也可以使用暱稱。"
     introduction:
-      heading: "What is a shared session?"
+      heading: "什麼是共享活動？"
       explanation:
-        - "A shared session allows you to experience the election compass with your friends. One person invites the others to a shared session. Once everyone joined, you can each use the election compass as you normally would. But in addition to the parties, you can now also see each other's answers and start a discussion."
+        - "共享活動可讓您與朋友一起體驗選舉指南針。由一個人邀請其他人參加。每個人都加入後，所有人都可以像往常一樣使用選舉指南針。但除了政黨之外，您現在還可以看到其他人的答案並展開討論。"
     security:
       heading: "Are my answers safe?"
       explanation:
