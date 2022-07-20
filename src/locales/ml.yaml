@@ -1,65 +1,65 @@
 ---
 elements:
   friends-invite-modal:
-    heading: "Invite friends"
-    description: "Invite your friends to a shared session where everyone can see each other's answers in real time."
+    heading: "സുഹൃത്തുക്കളെ ക്ഷണിക്കുക"
+    description: "എല്ലാവർക്കും തത്സമയം പരസ്പരം ഉത്തരങ്ങൾ കാണാൻ കഴിയുന്ന ഒരു പങ്കിട്ട സെഷനിലേക്ക് നിങ്ങളുടെ സുഹൃത്തുക്കളെ ക്ഷണിക്കുക."
     form:
       name:
-        label: "Your name / nickname"
-        description: "Please provide your name so your friends can recognize you. You can also use a nickname."
+        label: "നിങ്ങളുടെ പേര് / വിളിപ്പേര്"
+        description: "നിങ്ങളുടെ സുഹൃത്തുക്കൾക്ക് നിങ്ങളെ തിരിച്ചറിയാൻ ദയവായി നിങ്ങളുടെ പേര് നൽകുക. നിങ്ങൾക്ക് ഒരു വിളിപ്പേരും ഉപയോഗിക്കാം."
     introduction:
-      heading: "What is a shared session?"
+      heading: "ഒരു പങ്കിട്ട-സെഷൻ എന്താണ്?"
       explanation:
-        - "A shared session allows you to experience the election compass with your friends. One person invites the others to a shared session. Once everyone joined, you can each use the election compass as you normally would. But in addition to the parties, you can now also see each other's answers and start a discussion."
+        - "നിങ്ങളുടെ സുഹൃത്തുക്കളുമായി ഇലക്ഷൻ കോമ്പസ് ഉപയോഗം അനുഭവിക്കാൻ ഒരു പങ്കിട്ട സെഷൻ നിങ്ങളെ അനുവദിക്കുന്നു. ഒരു പങ്കിട്ട സെഷനിലേക്ക് ഒരാൾ മറ്റുള്ളവരെ ക്ഷണിക്കുന്നു. എല്ലാവരും ചേർന്നുകഴിഞ്ഞാൽ, നിങ്ങൾക്ക് ഓരോരുത്തർക്കും സാധാരണപോലെ തിരഞ്ഞെടുപ്പ് കോമ്പസ് ഉപയോഗിക്കാം. എന്നാൽ കക്ഷികൾക്ക് പുറമേ, നിങ്ങൾക്ക് ഇപ്പോൾ പരസ്പരം ഉത്തരങ്ങൾ കാണാനും ഒരു ചർച്ച ആരംഭിക്കാനും കഴിയും."
     security:
-      heading: "Are my answers safe?"
+      heading: "എന്റെ മറുപടി ഉത്തരങ്ങൾ സുരക്ഷിതമാണോ?"
       explanation:
-        - "Yes! Your answers are exchanged directly between your devices via a secure connection. A server helps the devices find themselves on the Internet - your answers, however, are not sent via the server, but directly from device to device."
+        - "അതെ! ഒരു സുരക്ഷിത കണക്ഷൻ വഴി നിങ്ങളുടെ ഉത്തരങ്ങൾ നിങ്ങളുടെ ഉപകരണങ്ങൾ തമ്മിൽ നേരിട്ട് കൈമാറ്റം ചെയ്യപ്പെടുന്നു. ഇന്റർനെറ്റിൽ സ്വയം കണ്ടെത്താൻ ഉപകരണങ്ങളെ ഒരു സെർവർ സഹായിക്കുന്നു - എന്നിരുന്നാലും, നിങ്ങളുടെ ഉത്തരങ്ങൾ സെർവർ വഴിയല്ല, മറിച്ച് ഉപകരണത്തിൽ നിന്ന് ഉപകരണത്തിലേക്ക് നേരിട്ട് അയയ്ക്കപ്പെടുന്നു."
     registration:
-      heading: "Do I need to register to use this feature?"
+      heading: "ഈ സവിശേഷത ഉപയോഗിക്കാൻ ഞാൻ രജിസ്റ്റർ ചെയ്യേണ്ടതുണ്ടോ?"
       explanation:
-        - "No registration is necessary. All you have to do is enter your name and you can join a session."
-    cancel: "Cancel"
-    confirm: "Open session"
+        - "രജിസ്ട്രേഷൻ ആവശ്യമില്ല. നിങ്ങൾ ചെയ്യേണ്ടത് നിങ്ങളുടെ പേര് നൽകുക, നിങ്ങൾക്ക് ഒരു സെഷനിൽ ചേരാം."
+    cancel: "റദ്ദാക്കുക"
+    confirm: "സെഷൻ തുറക്കുക"
   friends-join-modal:
-    heading: "Join friends"
-    description: "Connect with your friends in a shared session and see everyone's answers in real time."
+    heading: "സുഹൃത്തുക്കളുമായി ചേരുക"
+    description: "പങ്കിട്ട സെഷനിൽ നിങ്ങളുടെ സുഹൃത്തുക്കളുമായി കണക്റ്റുചെയ്‌ത് എല്ലാവരുടെയും ഉത്തരങ്ങൾ തത്സമയം കാണുക."
     form:
       name:
-        label: "Your name / nickname"
-        description: "Please provide your name so your friends can recognize you. You can also use a nickname."
+        label: "നിങ്ങളുടെ പേര് / വിളിപ്പേര്"
+        description: "നിങ്ങളുടെ സുഹൃത്തുക്കൾക്ക് നിങ്ങളെ തിരിച്ചറിയാൻ ദയവായി നിങ്ങളുടെ പേര് നൽകുക. നിങ്ങൾക്ക് ഒരു വിളിപ്പേരും ഉപയോഗിക്കാം."
       join:
-        label: "Friend's device"
-        description: "Join a shared session by entering the device ID of whoever is hosting the session."
+        label: "സുഹൃത്തിന്റെ ഉപകരണം"
+        description: "സെഷൻ ഹോസ്റ്റുചെയ്യുന്നവരുടെ ഉപകരണ ഐ. ഡി. (device ID) നൽകി ഒരു പങ്കിട്ട സെഷനിൽ ചേരുക."
     introduction:
-      heading: "What is a shared session?"
+      heading: "ഒരു പങ്കിട്ട സെഷൻ എന്നാൽ എന്താണ്?"
       explanation:
-        - "A shared session allows you to experience the election compass with your friends. One person invites the others to a shared session. Once everyone joined, you can each use the election compass as you normally would. But in addition to the parties, you can now also see each other's answers and start a discussion."
+        - "നിങ്ങളുടെ സുഹൃത്തുക്കളുമായി ഇലക്ഷൻ കോമ്പസ് ഉപയോഗം അനുഭവിക്കാൻ ഒരു പങ്കിട്ട സെഷൻ നിങ്ങളെ അനുവദിക്കുന്നു. ഒരു പങ്കിട്ട സെഷനിലേക്ക് ഒരാൾ മറ്റുള്ളവരെ ക്ഷണിക്കുന്നു. എല്ലാവരും ചേർന്നുകഴിഞ്ഞാൽ, നിങ്ങൾക്ക് ഓരോരുത്തർക്കും സാധാരണപോലെ തിരഞ്ഞെടുപ്പ് കോമ്പസ് ഉപയോഗിക്കാം. എന്നാൽ കക്ഷികൾക്ക് പുറമേ, നിങ്ങൾക്ക് ഇപ്പോൾ പരസ്പരം ഉത്തരങ്ങൾ കാണാനും ഒരു ചർച്ച ആരംഭിക്കാനും കഴിയും."
     security:
-      heading: "Are my answers safe?"
+      heading: "എന്റെ മറുപടി ഉത്തരങ്ങൾ സുരക്ഷിതമാണോ?"
       explanation:
-        - "Yes! Your answers are exchanged directly between your devices via a secure connection. A server helps the devices find themselves on the Internet - your answers, however, are not sent via the server, but directly from device to device."
+        - "അതെ! ഒരു സുരക്ഷിത കണക്ഷൻ വഴി നിങ്ങളുടെ ഉത്തരങ്ങൾ നിങ്ങളുടെ ഉപകരണങ്ങൾ തമ്മിൽ നേരിട്ട് കൈമാറ്റം ചെയ്യപ്പെടുന്നു. ഇന്റർനെറ്റിൽ സ്വയം കണ്ടെത്താൻ ഉപകരണങ്ങളെ ഒരു സെർവർ സഹായിക്കുന്നു - എന്നിരുന്നാലും, നിങ്ങളുടെ ഉത്തരങ്ങൾ സെർവർ വഴിയല്ല, മറിച്ച് ഉപകരണത്തിൽ നിന്ന് ഉപകരണത്തിലേക്ക് നേരിട്ട് അയയ്ക്കപ്പെടുന്നു."
     registration:
-      heading: "Do I need to register to use this feature?"
+      heading: "ഈ സവിശേഷത ഉപയോഗിക്കാൻ ഞാൻ രജിസ്റ്റർ ചെയ്യേണ്ടതുണ്ടോ?"
       explanation:
-        - "No registration is necessary. All you have to do is enter your name and you can join a session."
-    cancel: "Cancel"
-    confirm: "Join"
+        - "രജിസ്ട്രേഷൻ ആവശ്യമില്ല. നിങ്ങൾ ചെയ്യേണ്ടത് നിങ്ങളുടെ പേര് നൽകുക, നിങ്ങൾക്ക് ഒരു സെഷനിൽ ചേരാം."
+    cancel: "റദ്ദാക്കുക"
+    confirm: "ചേരുക"
   friends-list:
-    heading: "Connected devices"
-    empty: "The host needs to accept you're request to join the session."
-    host: "Host"
+    heading: "ബന്ധിപ്പിച്ച ഉപകരണങ്ങൾ"
+    empty: "സെഷനിൽ ചേരാനുള്ള നിങ്ങളുടെ അഭ്യർത്ഥന ഹോസ്റ്റ് അംഗീകരിക്കേണ്ടതുണ്ട്."
+    host: "ഹോസ്റ്റ് (ആതിഥേയൻ)"
   friends-status-modal:
-    heading: "Shared Session"
+    heading: "പങ്കിട്ട സെഷൻ"
     mode:
       INACTIVE:
-        heading: "Not connected"
-        text: "You're not connected to anybody. Join your an existing session or host your own over the main menu."
+        heading: "ബന്ധിപ്പിച്ചിട്ടില്ല"
+        text: "നിങ്ങൾ ആരുമായും ബന്ധപ്പെട്ടിട്ടില്ല. നിങ്ങളുടെ നിലവിലുള്ള സെഷനിൽ ചേരുക അല്ലെങ്കിൽ പ്രധാന മെനുവിൽ സ്വന്തമായി ഹോസ്റ്റ് ചെയ്യുക."
       GUEST:
-        heading: "Guest"
-        text: "You're participating in a shared session, hosted by someone else."
+        heading: "അതിഥി"
+        text: "നിങ്ങൾ പങ്കിട്ട-സെഷനിൽ പങ്കെടുക്കുന്നു, മറ്റൊരാൾ ആണ് ഇത് ആതിഥേയത്വം വഹിക്കുന്നത്."
       HOST:
-        heading: "Host"
+        heading: "ഹോസ്റ്റ് (ആതിഥേയൻ)"
         text: "You're the host of this session. Invite your friends using your device ID and accept their requests to join."
     own-peer-id:
       label: "Your device"
