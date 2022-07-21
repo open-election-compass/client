@@ -66,8 +66,6 @@ export default {
 </script>
 
 <style lang="scss">
-@import "@/styles/core.scss";
-
 .friends-progress {
   position: fixed;
   display: flex;
@@ -88,15 +86,15 @@ export default {
     &--friend, &--self {
       min-height: 1em + 0.25em * 2;
       flex: 0 0;
-      background: $theme-neutral-background;
-      color: $theme-neutral-text;
+      background: var(--theme-neutral-background);
+      color: var(--theme-neutral-text);
       padding: 0.25em 0.25em 0.25em 1em;
       margin-bottom: 2px;
       border-radius: 0 1em 1em 0;
     }
     &--self {
-      color: $theme-primary-text;
-      background: $theme-primary-background;
+      color: var(--theme-primary-text);
+      background: var(--theme-primary-background);
       padding-right: 0.75em;
     }
     &--thesis {

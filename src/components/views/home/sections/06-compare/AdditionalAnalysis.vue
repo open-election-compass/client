@@ -1,5 +1,5 @@
 <template>
-  <Modal
+  <ModalView
     class="additional-analysis"
     :heading="$t('views.home.compare.additional-analysis.heading')"
     :buttons="modalButtons"
@@ -44,10 +44,10 @@
           : undefined
         "
         :options="currentQuestion.options"
-        v-model="currentFieldValue"
+        v-model:value="currentFieldValue"
       />
     </div>
-  </Modal>
+  </ModalView>
 </template>
 
 <script>

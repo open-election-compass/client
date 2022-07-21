@@ -1,0 +1,364 @@
+{
+  "elements": {
+    "friends-invite-modal": {
+      "heading": "Invitar a amigos",
+      "description": "Invita a tus amigos a una sesión compartida en la que todos pueden ver las respuestas de los demás en tiempo real.",
+      "form": {
+        "name": {
+          "label": "Tu nombre / apodo",
+          "description": "Indica tu nombre para que tus amigos puedan reconocerte. También puedes utilizar un apodo."
+        }
+      },
+      "introduction": {
+        "heading": "¿Qué es una sesión compartida?",
+        "explanation": [
+          "Una sesión compartida te permite experimentar la brújula electoral con tus amigos. Una persona invita a los demás a una sesión compartida. Una vez que todos se han unido, cada uno puede utilizar la brújula electoral como lo haría normalmente. Pero además de los grupos, ahora también puedes ver las respuestas de los demás e iniciar un debate."
+        ]
+      },
+      "security": {
+        "heading": "¿Son seguras mis respuestas?",
+        "explanation": [
+          "Sí, tus respuestas se intercambian directamente entre tus dispositivos a través de una conexión segura. Un servidor ayuda a los dispositivos a encontrarse en Internet, pero tus respuestas no se envían a través del servidor, sino directamente de dispositivo a dispositivo."
+        ]
+      },
+      "registration": {
+        "heading": "¿Tengo que registrarme para utilizar esta función?",
+        "explanation": [
+          "No es necesario registrarse. Solo tienes que introducir tu nombre y podrás unirte a una sesión."
+        ]
+      },
+      "cancel": "Anular",
+      "confirm": "Sesión abierta"
+    },
+    "friends-join-modal": {
+      "heading": "Únete a tus amigos",
+      "description": "Conéctate con tus amigos en una sesión compartida y ve las respuestas de todos en tiempo real.",
+      "form": {
+        "name": {
+          "label": "Tu nombre / apodo",
+          "description": "Indica tu nombre para que tus amigos puedan reconocerte. También puedes utilizar un apodo."
+        },
+        "join": {
+          "label": "Dispositivo del amigo",
+          "description": "Únete a una sesión compartida introduciendo el ID del dispositivo de quien aloja la sesión."
+        }
+      },
+      "introduction": {
+        "heading": "¿Qué es una sesión compartida?",
+        "explanation": [
+          "Una sesión compartida te permite experimentar la brújula electoral con tus amigos. Una persona invita a los demás a una sesión compartida. Una vez que todos se han unido, cada uno puede utilizar la brújula electoral como lo haría normalmente. Pero además de los grupos, ahora también puedes ver las respuestas de los demás e iniciar un debate."
+        ]
+      },
+      "security": {
+        "heading": "¿Son seguras mis respuestas?",
+        "explanation": [
+          "Sí, tus respuestas se intercambian directamente entre tus dispositivos a través de una conexión segura. Un servidor ayuda a los dispositivos a encontrarse en Internet, pero tus respuestas no se envían a través del servidor, sino directamente de dispositivo a dispositivo."
+        ]
+      },
+      "registration": {
+        "heading": "¿Tengo que registrarme para utilizar esta función?",
+        "explanation": [
+          "No es necesario registrarse. Solo tienes que introducir tu nombre y podrás unirte a una sesión."
+        ]
+      },
+      "cancel": "Anular",
+      "confirm": "Únete"
+    },
+    "friends-list": {
+      "heading": "Dispositivos conectados",
+      "empty": "El anfitrión debe aceptar tu solicitud para unirse a la sesión.",
+      "host": "Anfitrión"
+    },
+    "friends-status-modal": {
+      "heading": "Sesión compartida",
+      "mode": {
+        "INACTIVE": {
+          "heading": "No conectado",
+          "text": "No estás conectado con nadie. Únete a una sesión existente o organiza la tuya propia a través del menú principal."
+        },
+        "GUEST": {
+          "heading": "Invitado",
+          "text": "Estás participando en una sesión compartida, organizada por otra persona."
+        },
+        "HOST": {
+          "heading": "Anfitrión",
+          "text": "Eres el anfitrión de esta sesión. Invita a tus amigos con el ID de tu dispositivo y acepta sus solicitudes de participación."
+        }
+      },
+      "own-peer-id": {
+        "label": "Tu dispositivo",
+        "description": "Este es el ID de tu dispositivo. Tus amigos deben introducirlo en su dispositivo para conectarse a nuestra sesión compartida."
+      }
+    },
+    "guests-list": {
+      "heading": "Dispositivos conectados",
+      "empty": "Todavía no se ha incorporado nadie a la sesión.",
+      "accept": "Aceptar",
+      "status": {
+        "connecting": "Conectando",
+        "connected": "Conectado",
+        "disconnected": "Desconectado"
+      }
+    },
+    "guide-button": {
+      "start": "Vamos",
+      "introduction": "Aprende cómo funciona",
+      "first-thesis": "Empieza con la primera declaración",
+      "thesis": "Pasa a la siguiente declaración",
+      "party": "Seleccionar los grupos",
+      "match": "Ver el resultado",
+      "compare": "Leer las posiciones"
+    },
+    "kiosk-mode": {
+      "heading": "¿Debemos reiniciar?",
+      "description": "La brújula electoral se restablecerá ahora y se borrarán todas tus respuestas. | La brújula electoral se reiniciará en {count} segundos y todas tus respuestas serán borradas. | La brújula electoral se reiniciará en {count} segundo y todas tus respuestas serán borradas.",
+      "reset": "Reiniciar ahora",
+      "resume": "¡Aún no!"
+    },
+    "language-switch": {
+      "button": "Idiomas",
+      "heading": "Idiomas",
+      "description": "Por favor, elige tu idioma preferido."
+    },
+    "main-navigation": {
+      "menu": "Menu",
+      "thesis": "Declaraciones {count}",
+      "links": {
+        "compass": "Brújula electoral",
+        "languages": "Cambiar el idioma",
+        "friends-join": "Únete a tus amigos",
+        "friends-invite": "Invitar a amigos",
+        "reset": "Reiniciar",
+        "home": "Comenzar",
+        "introduction": "Introducción",
+        "theses": "Declaraciones",
+        "evaluation": "Evaluación",
+        "party": "Selección grupal",
+        "match": "Resultados",
+        "compare": "Declaraciones",
+        "about": "Acerca de"
+      }
+    },
+    "open-election-compass-logo": {
+      "alt": "Logotipo de la brújula electoral"
+    },
+    "show-more": {
+      "show": "mostrar más",
+      "hide": "esconder"
+    }
+  },
+  "views": {
+    "home": {
+      "home": {
+        "role-aria": "Brújula electoral"
+      },
+      "start": {
+        "section": {
+          "banner-aria": "Sección de inicio"
+        }
+      },
+      "theses": {
+        "important-button": {
+          "important": "Importante para mí",
+          "important-aria": "Importante: marca esta afirmación como importante para ti.",
+          "too-many-important": "Hay muy pocas declaraciones, por lo que no puedes marcar una como importante. | Por favor, no marcar más de 1 declaración como importante para recibir un resultado significativo. | ¡Por favor, no marcar más de {count} declaraciones como importantes para recibir un resultado significativo!"
+        },
+        "skip-button": {
+          "skip": "No lo sé",
+          "skip-aria": "Omitir: omite esta declaración para que no se cuente.",
+          "too-many-skip": "Hay muy pocas declaraciones, por lo que no puedes saltarte ninguno. | Por favor, no omitas más de 1 declaración para obtener un resultado significativo. | Por favor, no omitas más de {count} declaraciones para recibir un resultado significativo!"
+        },
+        "statement-text": {
+          "thesis": "Declaración {count} / {total}",
+          "statement-aria": "La declaración es: '{statement}'",
+          "quoteStart": "‘",
+          "quoteEnd": "’",
+          "statement-badge": {
+            "skip": "Te has saltado esto",
+            "skip-aria": "Te has saltado esta declaración.",
+            "important": "Has marcado esto como importante",
+            "important-aria": "Has marcado esta declaración como importante."
+          }
+        },
+        "statement-wrapper": {
+          "role-aria": "Declaración",
+          "region-aria": "Declaración {count} de {total}"
+        }
+      },
+      "party": {
+        "party-item": {
+          "party-aria": "Grupo '{party}' - haga clic aquí para seleccionar o anular la selección de este grupo para la comparación."
+        },
+        "section": {
+          "heading": "Elige los grupos que quieres comparar",
+          "instruction": "Seleccione los grupos con los que desea comparar sus propias decisiones. Puede seleccionar cuantos grupos quiera, pero tiene que seleccionar al menos dos. La siguiente lista se presenta en el mismo orden en que los grupos aparecerán en la papeleta.",
+          "proceed": "Listo"
+        }
+      },
+      "match": {
+        "match-display": {
+          "match-aria": "Tu coincidencia para el grupo '{party}' está en {percentage} %"
+        },
+        "section": {
+          "heading": "Tu resultado",
+          "explanation": "Este gráfico describe en qué medida tú y las respectivas partes están de acuerdo en las tesis anteriores. Cuanto más alto sea el porcentaje, más coinciden tus posiciones. Debes tener en cuenta que no se trata de una recomendación de voto, sino de una herramienta de orientación y debate."
+        }
+      },
+      "compare": {
+        "additional-analysis": {
+          "heading": "Estadísticas",
+          "buttons": {
+            "close": "Salir",
+            "start": "Vamos",
+            "proceed": "Enviar y siguiente",
+            "open-questionnaire": "Abrir la encuesta en una nueva pestaña"
+          },
+          "start": "Gracias por compartir. Tus datos son más valiosos para las estadísticas si compartes algo más de información sobre ti. Simplemente responde a todas las preguntas que quieras!",
+          "help-even-more": "Muchas gracias. ¿Quiere ayudar aún más? Aquí puedes responder a algunas preguntas más específicas:",
+          "thanks": "¡Gracias por compartirlo! Esas eran todas las preguntas, ¡nos has ayudado mucho! Haz clic en \"Salir\" para volver a tus resultados.",
+          "fields": {
+            "age": {
+              "name": "Edad",
+              "label": "¿Qué edad tienes ahora?",
+              "placeholder": "25",
+              "description": "Tu edad es importante para investigar qué piensan las personas de diferentes grupos de edad sobre las declaraciones y los grupos."
+            },
+            "gender": {
+              "name": "Género",
+              "label": "¿Cuál es tú género?",
+              "options": {
+                "female": "femenino",
+                "diverse": "diverso",
+                "male": "masculino",
+                "none": "sin respuesta"
+              }
+            },
+            "education": {
+              "name": "Calificación",
+              "label": "¿Cuál es tu máxima calificación educativa?",
+              "options": {
+                "student": "Actualmente estudiante",
+                "nothing": "Ninguna titulación completa",
+                "lower": "Escuela secundaria o similar",
+                "higher": "Bachillerato o similar",
+                "academic": "Académico",
+                "none": "sin respuesta"
+              }
+            },
+            "party": {
+              "name": "Grupo",
+              "label": "Si las elecciones fueran hoy, ¿a quién votarías?",
+              "options": {
+                "other": "Otros",
+                "non-voter": "No voy a votar",
+                "not-eligible": "No soy elegible",
+                "not-sure": "No estoy seguro",
+                "none": "sin respuesta"
+              }
+            }
+          }
+        },
+        "analysis-banner": {
+          "heading": "¿Quieres donar tus respuestas a la ciencia?",
+          "explanation": "Puedes ayudar a {someone} a entender mejor esta elección donando tus respuestas y resultados a la investigación científica. Solo guardamos datos anónimos que no pueden ser rastreados hasta ti.",
+          "send": "Enviar datos estadísticos ahora",
+          "close": "No, seguir leyendo"
+        },
+        "answer": {
+          "skip": {
+            "status-text": "desconocido",
+            "content": "El grupo \"{party}\" no proporcionó ninguna respuesta o posición respecto a esta declaración."
+          },
+          "empty": {
+            "content": "El grupo \"{party}\" no aportó ningún razonamiento para explicar su posición respecto a esta tesis."
+          }
+        },
+        "section": {
+          "heading": "Las respuestas",
+          "explanation": "Los grupos suelen ofrecer posicionamientos para cada declaración con el fin de explicar su razonamiento. No siempre es obvio por qué un grupo asume una determinada posición, por lo que se recomienda leer estas declaraciones o los respectivos programas electorales.",
+          "region-aria": "Declaraciones {count} de {total}"
+        },
+        "friends-position": {
+          "answer-aria": "{name}: {position}",
+          "skip": "Se ha omitido"
+        },
+        "kiosk-mode-hint": {
+          "heading": "Por favor, reinicia cuando hayas terminado",
+          "explanation": "Tómate tu tiempo para leer y comparar las declaraciones de las respuestas a continuación. Cuando hayas terminado, puedes restablecer la brújula electoral aquí para la siguiente persona. Esto también borrará tus propias respuestas. Sugerencia: también puedes encontrar un botón de reinicio en el menú. Gracias!",
+          "reset": "Reinciar"
+        }
+      },
+      "footer": {
+        "section": {
+          "explanation": "Esta brújula electoral está basada en el proyecto gratuito de código abierto {0}.",
+          "oec": "OpenElectionCompass"
+        }
+      }
+    }
+  },
+  "validation": {
+    "names": {
+      "name": "Nombre",
+      "remote-peer-id": "Dispositivo de un amigo"
+    },
+    "fields": {
+      "name": {
+        "min": "Por favor, introduce un nombre.",
+        "regex": "Sólo letras, números y espacios, sin caracteres especiales.",
+        "required": "Por favor, introduce un nombre."
+      }
+    }
+  },
+  "algorithm": {
+    "options": {
+      "strongly-approve": {
+        "button": "Lo apruebo firmemente",
+        "button-aria": "Lo apruebo firmemente - haz clic aquí para aprobar firmemente esta declaración!",
+        "badge": "Has apoyado firmemente",
+        "badge-aria": "Has aprobado firmemente esta declaración.",
+        "status": "aprueba firmemente",
+        "answer-aria": "El grupo \"{party}\" aprueba firmemente esta declaración con la siguiente respuesta: {answer}"
+      },
+      "approve": {
+        "button": "Aprueba",
+        "button-aria": "Aprueba - Haz clic aquí para aprobar esta declaración!",
+        "badge": "Has aprobado",
+        "badge-aria": "Has aprobado esta declaración.",
+        "status": "aprueba",
+        "answer-aria": "El grupo \"{party}\" aprueba esta declaración con la siguiente respuesta: {answer}"
+      },
+      "neutral": {
+        "button": "Neutral",
+        "button-aria": "Neutral - ¡haz clic aquí para mantenerte neutral con respecto a esta declaración!",
+        "badge": "Eres neutral",
+        "badge-aria": "Eres neutral con respecto a esta declaración.",
+        "status": "neutral",
+        "answer-aria": "El grupo \"{party}\" se mantiene neutral ante esta declaración, dando la siguiente respuesta: {answer}"
+      },
+      "partly": {
+        "button": "En parte",
+        "button-aria": "En parte - haz clic aquí para estar parcialmente de acuerdo con esta declaración!",
+        "badge": "Has estado de acuerdo en parte",
+        "badge-aria": "Estás de acuerdo en parte con esta declaración.",
+        "status": "en parte",
+        "answer-aria": "El grupo \"{party}\" apoya parcialmente esta declaración, dando la siguiente respuesta: {answer}"
+      },
+      "reject": {
+        "button": "Rechazo",
+        "button-aria": "Rechazo - ¡haz clic aquí para rechazar esta declaración!",
+        "badge": "Has rechazado",
+        "badge-aria": "Ha rechazado esta declaración.",
+        "status": "rechaza",
+        "answer-aria": "El grupo \"{party}\" rechaza esta declaración con la siguiente respuesta: {answer}"
+      },
+      "strongly-reject": {
+        "button": "Rechazó con firmeza",
+        "button-aria": "Rechazó con firmeza - ¡haz clic aquí para rechazar firmemente esta declaración!",
+        "badge": "Rechazó con firmeza",
+        "badge-aria": "Has rechazado firmemente esta declaración.",
+        "status": "rechazó firmemente",
+        "answer-aria": "El grupo \"{party}\" rechaza firmemente esta declaración con la siguiente respuesta: {answer}"
+      }
+    }
+  }
+}

@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="icon" href="favicon.ico">
+    <title>OpenElectionCompass, Demo Hybrid Algorithm</title>
+  </head>
+  <body>
+    <noscript>
+      <strong>We're sorry but OpenElectionCompass doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+    </noscript>
+    <div id="open-election-compass">
+      <open-election-compass load-tag="#oec-content" kiosk-mode friends />
+    </div>
+    <script type="application/json" id="oec-content">
+      {
+        "version": "1",
+        "algorithm": "hybrid",
+        "analysis": {
+          "endpoint": "http://localhost:3333/data/luedenscheid",
+          "survey": {
+            "de": "http://example.com/survey/de",
+            "en": "http://example.com/survey/en"
+          },
+          "institution": {
+            "de": "Universität Münster",
+            "en": "University Münster"
+          }
+        },
+        "languages": [{
+          "name": "Deutsch",
+          "code": "de",
+          "direction": "rtl"
+        }, {
+          "name": "English",
+          "code": "en"
+        }],
+        "title": {
+          "de": "Hogwarts Schülervertretung 1993",
+          "en": "Hogwarts Head Boy and Girl Elections 1993"
+        },
+        "subtitle": {
+          "de": "Ein Wahlkompass von Hermine Granger",
+          "en": "An election compass by Hermione Granger"
+        },
+        "introduction": {
+          "heading": {
+            "de": "Willkommen zum Wahlkompass",
+            "en": "Welcome to the Election Compass"
+          },
+          "text": {
+            "de": "Alle 5 teilnehmenden Studierenden haben die 10 Thesen des Wahlkompasses für die Wahl zur Hogwarts Schülervertretung 1993 beantwortet. Jetzt seid ihr an der Reihe – bezieht selbst Position und findet Übereinstimmungen. Der Wahlkompass ist ein Informationsangebot und keine Wahlempfehlung.",
+            "en": "All 5 contending students have answered the 10 theses of the Election Compass for the Hogwarts Head Boy and Girl Election 1993. Now it is your turn – select your own views and find matching positions. The Election Compass is a purely informational offer and provides no voting recommendations."
+          }
+        },
+        "theses": [{
+            "statement": {
+              "de": "Der Sprechende Hut soll sich in Zukunft an die [DSGVO]<Datenschutz-Grundverordnung der Europäischen Union> halten.",
+              "en": "The Sorting Hat should implement a [GDPR]<General Data Protection Regulation of the European Union>-compliant privacy policy."
+            },
+            "positions": {
+              "spew": {
+                "position": "approve",
+                "explanation": {
+                  "de": "Expecto riddikulus aparecium ferula evanesco lacarnum locomotor inflamarae aresto charm rictusempra. Lumos aparecium sonorus locomotor jinx fidelius sonorus inflamarae deletrius. Incarcerous rictusempra petrificus stupefy kedavra rictusempra. Aparecium inflamarae crucio homorphus mortis rennervate orchideous.",
+                  "en": "Expecto riddikulus aparecium ferula evanesco lacarnum locomotor inflamarae aresto charm rictusempra. Lumos aparecium sonorus locomotor jinx fidelius sonorus inflamarae deletrius. Incarcerous rictusempra petrificus stupefy kedavra rictusempra. Aparecium inflamarae crucio homorphus mortis rennervate orchideous."
+                }
+              },
+              "snape": {
+                "position": "strongly-reject",
+                "explanation": {
+                  "de": "Lumos amortentia stupefy immobilus patronum. Funnunculus lumos reparo serpensortia protego evanesco inflamarae. Cushioning locomotor mortis totalus protego. Quietus engorgio felicis fidelius patronum deletrius mortis lumos rictusempra rictusempra.",
+                  "en": "Lumos amortentia stupefy immobilus patronum. Funnunculus lumos reparo serpensortia protego evanesco inflamarae. Cushioning locomotor mortis totalus protego. Quietus engorgio felicis fidelius patronum deletrius mortis lumos rictusempra rictusempra."
+                }
+              },
+              "qlp": {
+                "position": "neutral",
+                "explanation": {
+                  "de": "Ennervate alohomora leviosa peskipiksi protego patronum nox charm alohomora quietus muffliato. Stupefy patronum alohomora sonorus engorgio protego. Wingardium stupefy imperio mobilicorpus petrificus rictusempra engorgio alohomora. Bulbadox serpensortia incantatem protego inflamarae lumos legilimens wingardium lumos vipera. Ennervate immobilus rictusempra funnunculus protego.",
+                  "en": "Ennervate alohomora leviosa peskipiksi protego patronum nox charm alohomora quietus muffliato. Stupefy patronum alohomora sonorus engorgio protego. Wingardium stupefy imperio mobilicorpus petrificus rictusempra engorgio alohomora. Bulbadox serpensortia incantatem protego inflamarae lumos legilimens wingardium lumos vipera. Ennervate immobilus rictusempra funnunculus protego."
+                }
+              },
+              "fun": {
+                "position": "strongly-approve",
+                "explanation": {
+                  "de": "Unbreakable leviosa curse portus rictusempra portus expecto portus impedimenta stupefy. Anapneo mobilicorpus engorgio quietus protego sonorus aparecium mortis protego petrificus. Vipera rictusempra drought tarantallegra lacarnum tergeo nox engorgio aparecium mobilicorpus lacarnum. Imperio stupefy incarcerous wingardium lacarnum sonorus. Lumos totalus expecto aparecium impedimenta incarcerous aparecium lacarnum wingardium.",
+                  "en": "Unbreakable leviosa curse portus rictusempra portus expecto portus impedimenta stupefy. Anapneo mobilicorpus engorgio quietus protego sonorus aparecium mortis protego petrificus. Vipera rictusempra drought tarantallegra lacarnum tergeo nox engorgio aparecium mobilicorpus lacarnum. Imperio stupefy incarcerous wingardium lacarnum sonorus. Lumos totalus expecto aparecium impedimenta incarcerous aparecium lacarnum wingardium."
+                }
+              },
+              "fff": {
+                "position": null,
+                "explanation": {
+                  "de": "Unbreakable inflamarae wingardium crucio. Morsmordre evanesco aresto rennervate. Pesternomi totalus incarcerous mortis incarcerous obliviate lumos expelliarmus serpensortia patronum. Aparecium protego patronum orchideous aresto skele-gro funnunculus unction funnunculus. Expecto unbreakable wingardium tarantallegra nox leviosa expecto kedavra.",
+                  "en": "Unbreakable inflamarae wingardium crucio. Morsmordre evanesco aresto rennervate. Pesternomi totalus incarcerous mortis incarcerous obliviate lumos expelliarmus serpensortia patronum. Aparecium protego patronum orchideous aresto skele-gro funnunculus unction funnunculus. Expecto unbreakable wingardium tarantallegra nox leviosa expecto kedavra."
+                }
+              }
+            }
+          },
+          {
+            "statement": {
+              "de": "Den Tod eines Studierenden vorherzusagen soll durch den [Verhaltenskodex]<Hogwarts hat im Jahr 1641 einen Verhaltenskodex für Schüler:innen und Lehrkräfte festgelegt.> verboten sein.",
+              "en": "Predicting the death of a student should be discouraged by the [Code of Conduct]<Hogwarts established a Code Of Conduct for students and teachers in 1641.>."
+            },
+            "positions": {
+              "spew": {
+                "position": "strongly-approve",
+                "explanation": {
+                  "de": "Expecto riddikulus aparecium ferula evanesco lacarnum locomotor inflamarae aresto charm rictusempra. Lumos aparecium sonorus locomotor jinx fidelius sonorus inflamarae deletrius. Incarcerous rictusempra petrificus stupefy kedavra rictusempra. Aparecium inflamarae crucio homorphus mortis rennervate orchideous.",
+                  "en": "Expecto riddikulus aparecium ferula evanesco lacarnum locomotor inflamarae aresto charm rictusempra. Lumos aparecium sonorus locomotor jinx fidelius sonorus inflamarae deletrius. Incarcerous rictusempra petrificus stupefy kedavra rictusempra. Aparecium inflamarae crucio homorphus mortis rennervate orchideous."
+                }
+              },
+              "snape": {
+                "position": "reject",
+                "explanation": {
+                  "de": "Lumos amortentia stupefy immobilus patronum. Funnunculus lumos reparo serpensortia protego evanesco inflamarae. Cushioning locomotor mortis totalus protego. Quietus engorgio felicis fidelius patronum deletrius mortis lumos rictusempra rictusempra.",
+                  "en": "Lumos amortentia stupefy immobilus patronum. Funnunculus lumos reparo serpensortia protego evanesco inflamarae. Cushioning locomotor mortis totalus protego. Quietus engorgio felicis fidelius patronum deletrius mortis lumos rictusempra rictusempra."
+                }
+              },
+              "qlp": {
+                "position": "approve",
+                "explanation": {
+                  "de": "Ennervate alohomora leviosa peskipiksi protego patronum nox charm alohomora quietus muffliato. Stupefy patronum alohomora sonorus engorgio protego. Wingardium stupefy imperio mobilicorpus petrificus rictusempra engorgio alohomora. Bulbadox serpensortia incantatem protego inflamarae lumos legilimens wingardium lumos vipera. Ennervate immobilus rictusempra funnunculus protego.",
+                  "en": "Ennervate alohomora leviosa peskipiksi protego patronum nox charm alohomora quietus muffliato. Stupefy patronum alohomora sonorus engorgio protego. Wingardium stupefy imperio mobilicorpus petrificus rictusempra engorgio alohomora. Bulbadox serpensortia incantatem protego inflamarae lumos legilimens wingardium lumos vipera. Ennervate immobilus rictusempra funnunculus protego."
+                }
+              },
+              "fun": {
+                "position": "reject",
+                "explanation": {
+                  "de": "Unbreakable leviosa curse portus rictusempra portus expecto portus impedimenta stupefy. Anapneo mobilicorpus engorgio quietus protego sonorus aparecium mortis protego petrificus. Vipera rictusempra drought tarantallegra lacarnum tergeo nox engorgio aparecium mobilicorpus lacarnum. Imperio stupefy incarcerous wingardium lacarnum sonorus. Lumos totalus expecto aparecium impedimenta incarcerous aparecium lacarnum wingardium.",
+                  "en": "Unbreakable leviosa curse portus rictusempra portus expecto portus impedimenta stupefy. Anapneo mobilicorpus engorgio quietus protego sonorus aparecium mortis protego petrificus. Vipera rictusempra drought tarantallegra lacarnum tergeo nox engorgio aparecium mobilicorpus lacarnum. Imperio stupefy incarcerous wingardium lacarnum sonorus. Lumos totalus expecto aparecium impedimenta incarcerous aparecium lacarnum wingardium."
+                }
+              },
+              "fff": {
+                "position": "strongly-reject",
+                "explanation": {
+                  "de": "Unbreakable inflamarae wingardium crucio. Morsmordre evanesco aresto rennervate. Pesternomi totalus incarcerous mortis incarcerous obliviate lumos expelliarmus serpensortia patronum. Aparecium protego patronum orchideous aresto skele-gro funnunculus unction funnunculus. Expecto unbreakable wingardium tarantallegra nox leviosa expecto kedavra.",
+                  "en": "Unbreakable inflamarae wingardium crucio. Morsmordre evanesco aresto rennervate. Pesternomi totalus incarcerous mortis incarcerous obliviate lumos expelliarmus serpensortia patronum. Aparecium protego patronum orchideous aresto skele-gro funnunculus unction funnunculus. Expecto unbreakable wingardium tarantallegra nox leviosa expecto kedavra."
+                }
+              }
+            }
+          },
+          {
+            "statement": {
+              "de": "Nachsitzen im Verbotenen Wald soll ... verboten sein.",
+              "en": "Detention in the forbidden forest should be ... forbidden."
+            },
+            "positions": {
+              "spew": {
+                "position": "approve",
+                "explanation": {
+                  "de": "Expecto riddikulus aparecium ferula evanesco lacarnum locomotor inflamarae aresto charm rictusempra. Lumos aparecium sonorus locomotor jinx fidelius sonorus inflamarae deletrius. Incarcerous rictusempra petrificus stupefy kedavra rictusempra. Aparecium inflamarae crucio homorphus mortis rennervate orchideous.",
+                  "en": "Expecto riddikulus aparecium ferula evanesco lacarnum locomotor inflamarae aresto charm rictusempra. Lumos aparecium sonorus locomotor jinx fidelius sonorus inflamarae deletrius. Incarcerous rictusempra petrificus stupefy kedavra rictusempra. Aparecium inflamarae crucio homorphus mortis rennervate orchideous."
+                }
+              },
+              "snape": {
+                "position": "strongly-reject",
+                "explanation": {
+                  "de": "Lumos amortentia stupefy immobilus patronum. Funnunculus lumos reparo serpensortia protego evanesco inflamarae. Cushioning locomotor mortis totalus protego. Quietus engorgio felicis fidelius patronum deletrius mortis lumos rictusempra rictusempra.",
+                  "en": "Lumos amortentia stupefy immobilus patronum. Funnunculus lumos reparo serpensortia protego evanesco inflamarae. Cushioning locomotor mortis totalus protego. Quietus engorgio felicis fidelius patronum deletrius mortis lumos rictusempra rictusempra."
+                }
+              },
+              "qlp": {
+                "position": "approve",
+                "explanation": {
+                  "de": "Ennervate alohomora leviosa peskipiksi protego patronum nox charm alohomora quietus muffliato. Stupefy patronum alohomora sonorus engorgio protego. Wingardium stupefy imperio mobilicorpus petrificus rictusempra engorgio alohomora. Bulbadox serpensortia incantatem protego inflamarae lumos legilimens wingardium lumos vipera. Ennervate immobilus rictusempra funnunculus protego.",
+                  "en": "Ennervate alohomora leviosa peskipiksi protego patronum nox charm alohomora quietus muffliato. Stupefy patronum alohomora sonorus engorgio protego. Wingardium stupefy imperio mobilicorpus petrificus rictusempra engorgio alohomora. Bulbadox serpensortia incantatem protego inflamarae lumos legilimens wingardium lumos vipera. Ennervate immobilus rictusempra funnunculus protego."
+                }
+              },
+              "fun": {
+                "position": "strongly-reject",
+                "explanation": {
+                  "de": "Unbreakable leviosa curse portus rictusempra portus expecto portus impedimenta stupefy. Anapneo mobilicorpus engorgio quietus protego sonorus aparecium mortis protego petrificus. Vipera rictusempra drought tarantallegra lacarnum tergeo nox engorgio aparecium mobilicorpus lacarnum. Imperio stupefy incarcerous wingardium lacarnum sonorus. Lumos totalus expecto aparecium impedimenta incarcerous aparecium lacarnum wingardium.",
+                  "en": "Unbreakable leviosa curse portus rictusempra portus expecto portus impedimenta stupefy. Anapneo mobilicorpus engorgio quietus protego sonorus aparecium mortis protego petrificus. Vipera rictusempra drought tarantallegra lacarnum tergeo nox engorgio aparecium mobilicorpus lacarnum. Imperio stupefy incarcerous wingardium lacarnum sonorus. Lumos totalus expecto aparecium impedimenta incarcerous aparecium lacarnum wingardium."
+                }
+              },
+              "fff": {
+                "position": "reject",
+                "explanation": {
+                  "de": "Unbreakable inflamarae wingardium crucio. Morsmordre evanesco aresto rennervate. Pesternomi totalus incarcerous mortis incarcerous obliviate lumos expelliarmus serpensortia patronum. Aparecium protego patronum orchideous aresto skele-gro funnunculus unction funnunculus. Expecto unbreakable wingardium tarantallegra nox leviosa expecto kedavra.",
+                  "en": "Unbreakable inflamarae wingardium crucio. Morsmordre evanesco aresto rennervate. Pesternomi totalus incarcerous mortis incarcerous obliviate lumos expelliarmus serpensortia patronum. Aparecium protego patronum orchideous aresto skele-gro funnunculus unction funnunculus. Expecto unbreakable wingardium tarantallegra nox leviosa expecto kedavra."
+                }
+              }
+            }
+          },
+          {
+            "statement": {
+              "de": "Professor Dolores Umbridge soll Professor Albus Dumbledore als Schulleitung ersetzen.",
+              "en": "Professor Dolores Umbridge should supersede Professor Albus Dumbledore as Headmaster."
+            },
+            "positions": {
+              "spew": {
+                "position": "strongly-reject",
+                "explanation": {
+                  "de": "Expecto riddikulus aparecium ferula evanesco lacarnum locomotor inflamarae aresto charm rictusempra. Lumos aparecium sonorus locomotor jinx fidelius sonorus inflamarae deletrius. Incarcerous rictusempra petrificus stupefy kedavra rictusempra. Aparecium inflamarae crucio homorphus mortis rennervate orchideous.",
+                  "en": "Expecto riddikulus aparecium ferula evanesco lacarnum locomotor inflamarae aresto charm rictusempra. Lumos aparecium sonorus locomotor jinx fidelius sonorus inflamarae deletrius. Incarcerous rictusempra petrificus stupefy kedavra rictusempra. Aparecium inflamarae crucio homorphus mortis rennervate orchideous."
+                }
+              },
+              "snape": {
+                "position": "approve",
+                "explanation": {
+                  "de": "Lumos amortentia stupefy immobilus patronum. Funnunculus lumos reparo serpensortia protego evanesco inflamarae. Cushioning locomotor mortis totalus protego. Quietus engorgio felicis fidelius patronum deletrius mortis lumos rictusempra rictusempra.",
+                  "en": "Lumos amortentia stupefy immobilus patronum. Funnunculus lumos reparo serpensortia protego evanesco inflamarae. Cushioning locomotor mortis totalus protego. Quietus engorgio felicis fidelius patronum deletrius mortis lumos rictusempra rictusempra."
+                }
+              },
+              "qlp": {
+                "position": "strongly-reject",
+                "explanation": {
+                  "de": "Ennervate alohomora leviosa peskipiksi protego patronum nox charm alohomora quietus muffliato. Stupefy patronum alohomora sonorus engorgio protego. Wingardium stupefy imperio mobilicorpus petrificus rictusempra engorgio alohomora. Bulbadox serpensortia incantatem protego inflamarae lumos legilimens wingardium lumos vipera. Ennervate immobilus rictusempra funnunculus protego.",
+                  "en": "Ennervate alohomora leviosa peskipiksi protego patronum nox charm alohomora quietus muffliato. Stupefy patronum alohomora sonorus engorgio protego. Wingardium stupefy imperio mobilicorpus petrificus rictusempra engorgio alohomora. Bulbadox serpensortia incantatem protego inflamarae lumos legilimens wingardium lumos vipera. Ennervate immobilus rictusempra funnunculus protego."
+                }
+              },
+              "fun": {
+                "position": "strongly-reject",
+                "explanation": {
+                  "de": "Unbreakable leviosa curse portus rictusempra portus expecto portus impedimenta stupefy. Anapneo mobilicorpus engorgio quietus protego sonorus aparecium mortis protego petrificus. Vipera rictusempra drought tarantallegra lacarnum tergeo nox engorgio aparecium mobilicorpus lacarnum. Imperio stupefy incarcerous wingardium lacarnum sonorus. Lumos totalus expecto aparecium impedimenta incarcerous aparecium lacarnum wingardium.",
+                  "en": "Unbreakable leviosa curse portus rictusempra portus expecto portus impedimenta stupefy. Anapneo mobilicorpus engorgio quietus protego sonorus aparecium mortis protego petrificus. Vipera rictusempra drought tarantallegra lacarnum tergeo nox engorgio aparecium mobilicorpus lacarnum. Imperio stupefy incarcerous wingardium lacarnum sonorus. Lumos totalus expecto aparecium impedimenta incarcerous aparecium lacarnum wingardium."
+                }
+              },
+              "fff": {
+                "position": "neutral",
+                "explanation": {
+                  "de": "Unbreakable inflamarae wingardium crucio. Morsmordre evanesco aresto rennervate. Pesternomi totalus incarcerous mortis incarcerous obliviate lumos expelliarmus serpensortia patronum. Aparecium protego patronum orchideous aresto skele-gro funnunculus unction funnunculus. Expecto unbreakable wingardium tarantallegra nox leviosa expecto kedavra.",
+                  "en": "Unbreakable inflamarae wingardium crucio. Morsmordre evanesco aresto rennervate. Pesternomi totalus incarcerous mortis incarcerous obliviate lumos expelliarmus serpensortia patronum. Aparecium protego patronum orchideous aresto skele-gro funnunculus unction funnunculus. Expecto unbreakable wingardium tarantallegra nox leviosa expecto kedavra."
+                }
+              }
+            }
+          },
+          {
+            "statement": {
+              "de": "Hogwarts soll nicht weiter Hauselfen beschäftigen.",
+              "en": "Hogwarts should no longer employ Houselves."
+            },
+            "positions": {
+              "spew": {
+                "position": "strongly-approve",
+                "explanation": {
+                  "de": "Expecto riddikulus aparecium ferula evanesco lacarnum locomotor inflamarae aresto charm rictusempra. Lumos aparecium sonorus locomotor jinx fidelius sonorus inflamarae deletrius. Incarcerous rictusempra petrificus stupefy kedavra rictusempra. Aparecium inflamarae crucio homorphus mortis rennervate orchideous.",
+                  "en": "Expecto riddikulus aparecium ferula evanesco lacarnum locomotor inflamarae aresto charm rictusempra. Lumos aparecium sonorus locomotor jinx fidelius sonorus inflamarae deletrius. Incarcerous rictusempra petrificus stupefy kedavra rictusempra. Aparecium inflamarae crucio homorphus mortis rennervate orchideous."
+                }
+              },
+              "snape": {
+                "position": "reject",
+                "explanation": {
+                  "de": "Lumos amortentia stupefy immobilus patronum. Funnunculus lumos reparo serpensortia protego evanesco inflamarae. Cushioning locomotor mortis totalus protego. Quietus engorgio felicis fidelius patronum deletrius mortis lumos rictusempra rictusempra.",
+                  "en": "Lumos amortentia stupefy immobilus patronum. Funnunculus lumos reparo serpensortia protego evanesco inflamarae. Cushioning locomotor mortis totalus protego. Quietus engorgio felicis fidelius patronum deletrius mortis lumos rictusempra rictusempra."
+                }
+              },
+              "qlp": {
+                "position": "reject",
+                "explanation": {
+                  "de": "Ennervate alohomora leviosa peskipiksi protego patronum nox charm alohomora quietus muffliato. Stupefy patronum alohomora sonorus engorgio protego. Wingardium stupefy imperio mobilicorpus petrificus rictusempra engorgio alohomora. Bulbadox serpensortia incantatem protego inflamarae lumos legilimens wingardium lumos vipera. Ennervate immobilus rictusempra funnunculus protego.",
+                  "en": "Ennervate alohomora leviosa peskipiksi protego patronum nox charm alohomora quietus muffliato. Stupefy patronum alohomora sonorus engorgio protego. Wingardium stupefy imperio mobilicorpus petrificus rictusempra engorgio alohomora. Bulbadox serpensortia incantatem protego inflamarae lumos legilimens wingardium lumos vipera. Ennervate immobilus rictusempra funnunculus protego."
+                }
+              },
+              "fun": {
+                "position": "neutral",
+                "explanation": {
+                  "de": "Unbreakable leviosa curse portus rictusempra portus expecto portus impedimenta stupefy. Anapneo mobilicorpus engorgio quietus protego sonorus aparecium mortis protego petrificus. Vipera rictusempra drought tarantallegra lacarnum tergeo nox engorgio aparecium mobilicorpus lacarnum. Imperio stupefy incarcerous wingardium lacarnum sonorus. Lumos totalus expecto aparecium impedimenta incarcerous aparecium lacarnum wingardium.",
+                  "en": "Unbreakable leviosa curse portus rictusempra portus expecto portus impedimenta stupefy. Anapneo mobilicorpus engorgio quietus protego sonorus aparecium mortis protego petrificus. Vipera rictusempra drought tarantallegra lacarnum tergeo nox engorgio aparecium mobilicorpus lacarnum. Imperio stupefy incarcerous wingardium lacarnum sonorus. Lumos totalus expecto aparecium impedimenta incarcerous aparecium lacarnum wingardium."
+                }
+              },
+              "fff": {
+                "position": "neutral",
+                "explanation": {
+                  "de": "Unbreakable inflamarae wingardium crucio. Morsmordre evanesco aresto rennervate. Pesternomi totalus incarcerous mortis incarcerous obliviate lumos expelliarmus serpensortia patronum. Aparecium protego patronum orchideous aresto skele-gro funnunculus unction funnunculus. Expecto unbreakable wingardium tarantallegra nox leviosa expecto kedavra.",
+                  "en": "Unbreakable inflamarae wingardium crucio. Morsmordre evanesco aresto rennervate. Pesternomi totalus incarcerous mortis incarcerous obliviate lumos expelliarmus serpensortia patronum. Aparecium protego patronum orchideous aresto skele-gro funnunculus unction funnunculus. Expecto unbreakable wingardium tarantallegra nox leviosa expecto kedavra."
+                }
+              }
+            }
+          },
+          {
+            "statement": {
+              "de": "Toiletten sollen im Winter beheizt werden.",
+              "en": "Restrooms should be heated during winter."
+            },
+            "positions": {
+              "spew": {
+                "position": "approve",
+                "explanation": {
+                  "de": "Expecto riddikulus aparecium ferula evanesco lacarnum locomotor inflamarae aresto charm rictusempra. Lumos aparecium sonorus locomotor jinx fidelius sonorus inflamarae deletrius. Incarcerous rictusempra petrificus stupefy kedavra rictusempra. Aparecium inflamarae crucio homorphus mortis rennervate orchideous.",
+                  "en": "Expecto riddikulus aparecium ferula evanesco lacarnum locomotor inflamarae aresto charm rictusempra. Lumos aparecium sonorus locomotor jinx fidelius sonorus inflamarae deletrius. Incarcerous rictusempra petrificus stupefy kedavra rictusempra. Aparecium inflamarae crucio homorphus mortis rennervate orchideous."
+                }
+              },
+              "snape": {
+                "position": "reject",
+                "explanation": {
+                  "de": "Lumos amortentia stupefy immobilus patronum. Funnunculus lumos reparo serpensortia protego evanesco inflamarae. Cushioning locomotor mortis totalus protego. Quietus engorgio felicis fidelius patronum deletrius mortis lumos rictusempra rictusempra.",
+                  "en": "Lumos amortentia stupefy immobilus patronum. Funnunculus lumos reparo serpensortia protego evanesco inflamarae. Cushioning locomotor mortis totalus protego. Quietus engorgio felicis fidelius patronum deletrius mortis lumos rictusempra rictusempra."
+                }
+              },
+              "qlp": {
+                "position": null,
+                "explanation": {
+                  "de": "Ennervate alohomora leviosa peskipiksi protego patronum nox charm alohomora quietus muffliato. Stupefy patronum alohomora sonorus engorgio protego. Wingardium stupefy imperio mobilicorpus petrificus rictusempra engorgio alohomora. Bulbadox serpensortia incantatem protego inflamarae lumos legilimens wingardium lumos vipera. Ennervate immobilus rictusempra funnunculus protego.",
+                  "en": "Ennervate alohomora leviosa peskipiksi protego patronum nox charm alohomora quietus muffliato. Stupefy patronum alohomora sonorus engorgio protego. Wingardium stupefy imperio mobilicorpus petrificus rictusempra engorgio alohomora. Bulbadox serpensortia incantatem protego inflamarae lumos legilimens wingardium lumos vipera. Ennervate immobilus rictusempra funnunculus protego."
+                }
+              },
+              "fun": {
+                "position": "strongly-approve",
+                "explanation": {
+                  "de": "Unbreakable leviosa curse portus rictusempra portus expecto portus impedimenta stupefy. Anapneo mobilicorpus engorgio quietus protego sonorus aparecium mortis protego petrificus. Vipera rictusempra drought tarantallegra lacarnum tergeo nox engorgio aparecium mobilicorpus lacarnum. Imperio stupefy incarcerous wingardium lacarnum sonorus. Lumos totalus expecto aparecium impedimenta incarcerous aparecium lacarnum wingardium.",
+                  "en": "Unbreakable leviosa curse portus rictusempra portus expecto portus impedimenta stupefy. Anapneo mobilicorpus engorgio quietus protego sonorus aparecium mortis protego petrificus. Vipera rictusempra drought tarantallegra lacarnum tergeo nox engorgio aparecium mobilicorpus lacarnum. Imperio stupefy incarcerous wingardium lacarnum sonorus. Lumos totalus expecto aparecium impedimenta incarcerous aparecium lacarnum wingardium."
+                }
+              },
+              "fff": {
+                "position": "reject",
+                "explanation": {
+                  "de": "Unbreakable inflamarae wingardium crucio. Morsmordre evanesco aresto rennervate. Pesternomi totalus incarcerous mortis incarcerous obliviate lumos expelliarmus serpensortia patronum. Aparecium protego patronum orchideous aresto skele-gro funnunculus unction funnunculus. Expecto unbreakable wingardium tarantallegra nox leviosa expecto kedavra.",
+                  "en": "Unbreakable inflamarae wingardium crucio. Morsmordre evanesco aresto rennervate. Pesternomi totalus incarcerous mortis incarcerous obliviate lumos expelliarmus serpensortia patronum. Aparecium protego patronum orchideous aresto skele-gro funnunculus unction funnunculus. Expecto unbreakable wingardium tarantallegra nox leviosa expecto kedavra."
+                }
+              }
+            }
+          },
+          {
+            "statement": {
+              "de": "Professor Severus Snape soll Verteidigung gegen die Dunklen Künste unterrichten.",
+              "en": "Professor Severus Snape should be allowed to teach Defence against the Dark Arts."
+            },
+            "positions": {
+              "spew": {
+                "position": "neutral",
+                "explanation": {
+                  "de": "Expecto riddikulus aparecium ferula evanesco lacarnum locomotor inflamarae aresto charm rictusempra. Lumos aparecium sonorus locomotor jinx fidelius sonorus inflamarae deletrius. Incarcerous rictusempra petrificus stupefy kedavra rictusempra. Aparecium inflamarae crucio homorphus mortis rennervate orchideous.",
+                  "en": "Expecto riddikulus aparecium ferula evanesco lacarnum locomotor inflamarae aresto charm rictusempra. Lumos aparecium sonorus locomotor jinx fidelius sonorus inflamarae deletrius. Incarcerous rictusempra petrificus stupefy kedavra rictusempra. Aparecium inflamarae crucio homorphus mortis rennervate orchideous."
+                }
+              },
+              "snape": {
+                "position": "strongly-approve",
+                "explanation": {
+                  "de": "Lumos amortentia stupefy immobilus patronum. Funnunculus lumos reparo serpensortia protego evanesco inflamarae. Cushioning locomotor mortis totalus protego. Quietus engorgio felicis fidelius patronum deletrius mortis lumos rictusempra rictusempra.",
+                  "en": "Lumos amortentia stupefy immobilus patronum. Funnunculus lumos reparo serpensortia protego evanesco inflamarae. Cushioning locomotor mortis totalus protego. Quietus engorgio felicis fidelius patronum deletrius mortis lumos rictusempra rictusempra."
+                }
+              },
+              "qlp": {
+                "position": "approve",
+                "explanation": {
+                  "de": "Ennervate alohomora leviosa peskipiksi protego patronum nox charm alohomora quietus muffliato. Stupefy patronum alohomora sonorus engorgio protego. Wingardium stupefy imperio mobilicorpus petrificus rictusempra engorgio alohomora. Bulbadox serpensortia incantatem protego inflamarae lumos legilimens wingardium lumos vipera. Ennervate immobilus rictusempra funnunculus protego.",
+                  "en": "Ennervate alohomora leviosa peskipiksi protego patronum nox charm alohomora quietus muffliato. Stupefy patronum alohomora sonorus engorgio protego. Wingardium stupefy imperio mobilicorpus petrificus rictusempra engorgio alohomora. Bulbadox serpensortia incantatem protego inflamarae lumos legilimens wingardium lumos vipera. Ennervate immobilus rictusempra funnunculus protego."
+                }
+              },
+              "fun": {
+                "position": "strongly-reject",
+                "explanation": {
+                  "de": "Unbreakable leviosa curse portus rictusempra portus expecto portus impedimenta stupefy. Anapneo mobilicorpus engorgio quietus protego sonorus aparecium mortis protego petrificus. Vipera rictusempra drought tarantallegra lacarnum tergeo nox engorgio aparecium mobilicorpus lacarnum. Imperio stupefy incarcerous wingardium lacarnum sonorus. Lumos totalus expecto aparecium impedimenta incarcerous aparecium lacarnum wingardium.",
+                  "en": "Unbreakable leviosa curse portus rictusempra portus expecto portus impedimenta stupefy. Anapneo mobilicorpus engorgio quietus protego sonorus aparecium mortis protego petrificus. Vipera rictusempra drought tarantallegra lacarnum tergeo nox engorgio aparecium mobilicorpus lacarnum. Imperio stupefy incarcerous wingardium lacarnum sonorus. Lumos totalus expecto aparecium impedimenta incarcerous aparecium lacarnum wingardium."
+                }
+              },
+              "fff": {
+                "position": "strongly-reject",
+                "explanation": {
+                  "de": "Unbreakable inflamarae wingardium crucio. Morsmordre evanesco aresto rennervate. Pesternomi totalus incarcerous mortis incarcerous obliviate lumos expelliarmus serpensortia patronum. Aparecium protego patronum orchideous aresto skele-gro funnunculus unction funnunculus. Expecto unbreakable wingardium tarantallegra nox leviosa expecto kedavra.",
+                  "en": "Unbreakable inflamarae wingardium crucio. Morsmordre evanesco aresto rennervate. Pesternomi totalus incarcerous mortis incarcerous obliviate lumos expelliarmus serpensortia patronum. Aparecium protego patronum orchideous aresto skele-gro funnunculus unction funnunculus. Expecto unbreakable wingardium tarantallegra nox leviosa expecto kedavra."
+                }
+              }
+            }
+          }
+        ],
+        "parties": [{
+            "alias": "spew",
+            "name": {
+              "de": "Bund für Elfenrechte",
+              "en": "Society for the Promotion of Elvish Welfare"
+            },
+            "short": {
+              "de": "B.ELFE.R",
+              "en": "SPEW"
+            },
+            "description": {
+              "de": "Die Bund für Elfenrechte wurde 1991 gegründet und hat seither große Anstrengungen unternommen um das Leben derer zu verbessern, die uns dienen.",
+              "en": "The Society for the Promotion of Elvish Welfare was founded in 1991 and has since put great efforts into improving the lifes of those in our service."
+            }
+          },
+          {
+            "alias": "snape",
+            "name": {
+              "de": "Gesellschaft für beachtliche Erfolge im Bereich Tränke und Elixire",
+              "en": "Society for Noteworthy Achievements concerning Potions and Elixirs"
+            },
+            "short": {
+              "de": "SNAPE",
+              "en": "SNAPE"
+            },
+            "description": {
+              "de": "Der einzige Zweck und die einzige Forderung der Gesellschaft für beachtliche Erfolge im Bereich Tränke und Elixire ist es, Professor Severus Snape als Lehrer für Verteidigung gegen die Dunklen Künste zu etablieren.",
+              "en": "The sole purpose and single demand of the Society for Noteworthy Achievements concerning Potions and Elixirs is to establish Professor Severus Snape as the new Defence Against the Dark Arts teacher."
+            }
+          },
+          {
+            "alias": "qlp",
+            "name": {
+              "de": "Partei eifrigen Lernens",
+              "en": "Quiet Learning Party"
+            },
+            "short": {
+              "de": "PEL",
+              "en": "QLP"
+            },
+            "description": {
+              "de": "Die Partei eifrigen Lernens ist eine Bewegung, offen für jedermann, die sich für eine qualitativ hochwertige Lernumgebung einsetzt.",
+              "en": "The Quiet Learning Party is a group open to anyone concerned about the quality of our learning environment."
+            }
+          },
+          {
+            "alias": "fun",
+            "name": {
+              "de": "Unvernünftiger, unverantwortlicher Unsinn",
+              "en": "Foolish Unaccountable Nonsense"
+            },
+            "short": {
+              "de": "FUN",
+              "en": "FUN"
+            },
+            "description": {
+              "de": "Die Partei Unvernünftigen, unverantwortlichen Unsinns wurde von den Weasley Zwillingen gegründet um 'einen echten Unterschied zu machen' und 'seriöse Politik' zu betreiben, die gleichzeitig auch 'echt lustig' ist.",
+              "en": "The party 'Foolish Unaccountable Nonsense' was founded by the Weasley Twins to make a 'real and lasting difference' and 'serious politics' while also being the 'a hell lot of fun'."
+            }
+          },
+          {
+            "alias": "fff",
+            "name": {
+              "de": "Weibliche, werdende Wahrsagerinnen",
+              "en": "Female Future Fortunetellers"
+            },
+            "short": {
+              "de": "WWW",
+              "en": "FFF"
+            },
+            "description": {
+              "de": "Die Initiative Weiblicher, werdender Wahrsagerinnen, gegründet von Sophie Spickboom aus der 5. Klasse, bemüht sich um eine verbesserte Ausbildung im Wahrsagen.",
+              "en": "The initiative of Female Future Fortunetellers, launched by Miss Sophie Spickboom of the 5th grade, seeks to improve education in the field of general fortunetelling."
+            }
+          }
+        ],
+        "footer-links": [
+          {
+            "text": {
+              "de": "Über Hogwarts",
+              "en": "About Hogwarts"
+            },
+            "href": {
+              "de": "https://open-election-compass.com/de/",
+              "en": "https://open-election-compass.com"
+            }
+          },
+          {
+            "text": {
+              "de": "Über die Schülervertretung",
+              "en": "About the Head Boy and Girl"
+            },
+            "href": {
+              "de": "https://open-election-compass.com/de/",
+              "en": "https://open-election-compass.com"
+            }
+          }
+        ]
+      }
+    </script>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

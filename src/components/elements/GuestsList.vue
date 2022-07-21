@@ -14,7 +14,7 @@
         ]"
       >
         <td>
-          <Icon :name="guest.connectionStatus === 'DISCONNECTED' ? 'times' : 'circle'" />
+          <IconDisplay :name="guest.connectionStatus === 'DISCONNECTED' ? 'times' : 'circle'" />
         </td>
         <td>
           {{ getGuestName(guest) }}
@@ -65,13 +65,11 @@ export default {
 </script>
 
 <style lang="scss">
-@import "@/styles/core.scss";
-
 .guests-list {
   margin-top: 2rem;
-  color: $theme-neutral-text;
-  background: $theme-neutral-background;
-  border-radius: $border-radius;
+  color: var(--theme-neutral-text);
+  background: var(--theme-neutral-background);
+  border-radius: var(--border-radius);
   &__empty {
     font-style: italic;
     text-align: center;
@@ -93,12 +91,12 @@ export default {
     }
     &--accepted {
       .icon {
-        color: $theme-positive-background;
+        color: var(--theme-positive-background);
       }
     }
     &--not-accepted {
       .icon {
-        color: $theme-negative-background;
+        color: var(--theme-negative-background);
       }
     }
     td {
@@ -118,7 +116,7 @@ export default {
       font-size: 1em;
     }
     & + & td {
-      border-top: 1px solid $theme-neutral-border;
+      border-top: 1px solid var(--theme-neutral-border);
     }
   }
 }

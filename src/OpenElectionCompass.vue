@@ -1,5 +1,5 @@
 <template>
-  <div id="oec-wrapper">
+  <div id="oec-wrapper" :dir="$store.getters['languages/active'].direction ?? 'ltr'">
     <div
       v-if="status === 'loading' || status === 'error'"
       :class="{
@@ -8,8 +8,8 @@
       }"
     >
       <div class="oec-wrapper__loading-icon">
-        <Icon v-if="status === 'loading'" name="slash" spinning monospace />
-        <Icon v-else-if="status === 'error'" name="times" monospace />
+        <IconDisplay v-if="status === 'loading'" name="slash" spinning monospace />
+        <IconDisplay v-else-if="status === 'error'" name="times" monospace />
       </div>
     </div>
     <div v-else class="oec-wrapper__page">
@@ -23,8 +23,8 @@ import domReady from '@wordpress/dom-ready';
 import _forEach from 'lodash/forEach';
 import _get from 'lodash/get';
 import _set from 'lodash/set';
-import { localize } from 'vee-validate';
-import HomeView from '@/components/views/home/HomeView.vue';
+import HomeView from '/src/components/views/home/HomeView.vue';
+import { setLocale } from '@vee-validate/i18n';
 
 export default {
   name: 'OpenElectionCompass',
@@ -129,7 +129,9 @@ export default {
     loadContentFromTag(tag) {
       const element = document.querySelector(tag);
       if (element.tagName !== 'SCRIPT') {
-        throw new Error('Please reference a script-tag in the load-url attribute to load the content from.');
+        throw new Error(
+          'Please reference a script-tag in the load-url attribute to load the content from.'
+        );
       }
       const content = JSON.parse(element.text);
       const result = this.parseContent(content);
@@ -177,6 +179,7 @@ export default {
           index,
           name: language.name,
           code: language.code,
+          direction: language.direction,
           overwrites: language.overwrites ?? null,
         });
       });
@@ -219,7 +222,11 @@ export default {
         this.readTranslation(content, `theses.${index}.statement`, translations);
         const positions = {};
         _forEach(content.parties, (party) => {
-          this.readTranslation(content, `theses.${index}.positions.${party.alias}.explanation`, translations);
+          this.readTranslation(
+            content,
+            `theses.${index}.positions.${party.alias}.explanation`,
+            translations
+          );
           positions[party.alias] = thesis.positions[party.alias].position;
         });
         this.$store.commit('theses/addThesis', {
@@ -260,7 +267,7 @@ export default {
      */
     setLocale(locale) {
       this.$i18n.locale = locale;
-      localize(locale); // vee-validate
+      setLocale(locale); // vee-validate
     },
 
     /**
@@ -281,21 +288,16 @@ export default {
         console.warn(`Found no translations at path '${path}'. Check your configuration.`); // eslint-disable-line no-console
         return to;
       }
-      _forEach(
-        translations,
-        (translation, language) => _set(to, `${language}.${path}`, translation),
+      _forEach(translations, (translation, language) =>
+        _set(to, `${language}.${path}`, translation)
       );
       return to;
     },
   },
-
 };
 </script>
 
 <style lang="scss">
-@import './main';
-@import '@/styles/core';
-
 #oec-wrapper {
   font-family: Arial, sans-serif;
   color: #222;
@@ -311,10 +313,10 @@ export default {
     left: 0;
     background: linear-gradient(
       0deg,
-      $theme-dark-background 0%,
-      $theme-dark-background 50%,
-      #FFF 50%,
-      #FFF 100%
+      var(--theme-dark-background) 0%,
+      var(--theme-dark-background) 50%,
+      #fff 50%,
+      #fff 100%
     );
   }
 }

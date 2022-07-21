@@ -38,8 +38,8 @@
 </template>
 
 <script>
-import PageSection from '@/components/elements/PageSection.vue';
-import PartyItem from '@/components/views/home/sections/04-party/PartyItem.vue';
+import PageSection from '/src/components/elements/PageSection.vue';
+import PartyItem from '/src/components/views/home/sections/04-party/PartyItem.vue';
 
 export default {
   name: 'PartySection',
@@ -55,6 +55,7 @@ export default {
       return this.$store.getters['parties/selectedParties'];
     },
     chosen() {
+      // console.log(this.$store.getters['parties/chosen']);
       return this.$store.getters['parties/chosen'];
     },
     showLogos() {

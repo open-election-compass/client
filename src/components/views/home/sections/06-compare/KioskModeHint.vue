@@ -1,7 +1,7 @@
 <template>
   <aside class="kiosk-mode-hint">
     <div class="kiosk-mode-hint__box">
-      <Icon name="undo" />
+      <IconDisplay name="undo" />
     </div>
     <strong class="kiosk-mode-hint__heading">
       {{ $t('views.home.compare.kiosk-mode-hint.heading') }}
@@ -12,7 +12,7 @@
       theme="negative"
       left="undo"
       size="small"
-      @click="$root.$emit('reset', { seconds: 15 })"
+      @click="bus.emit('reset', { seconds: 15 })"
     >
       {{ $t('views.home.compare.kiosk-mode-hint.reset') }}
     </BaseButton>

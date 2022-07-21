@@ -1,7 +1,7 @@
 <template>
   <div class="statement-badge">
     <small class="statement-badge__badge" :style="cssVariables">
-      <Icon class="statement-badge__icon" :name="icon" />
+      <IconDisplay class="statement-badge__icon" :name="icon" />
       <slot />
     </small>
   </div>
@@ -44,7 +44,10 @@ export default {
 .statement-badge__badge {
   display: inline-block;
   border-radius: 9999px;
-  padding: 0.5em 1em 0.5em 0.75em;
+  padding-top: 0.5em;
+  padding-inline-start: 0.75em;
+  padding-bottom: 0.5em;
+  padding-inline-end: 1em;
   background-color: var(--color-background);
   color: var(--color-text);
   font-weight: bold;
@@ -57,11 +60,11 @@ export default {
     padding-top: 0;
   }
   .statement-badge + .statement-badge {
-    margin-left: 1em;
+    margin-inline-start: 1em;
   }
 }
 
 .statement-badge__icon {
-  margin-right: 0.5em;
+  margin-inline-end: 0.5em;
 }
 </style>

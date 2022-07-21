@@ -1,0 +1,364 @@
+{
+  "elements": {
+    "friends-invite-modal": {
+      "heading": "Freund:innen einladen",
+      "description": "Lade deine Freund:innen zu einer gemeinsame Sitzung ein, sodass alle die Antworten der anderen in Echtzeit sehen können.",
+      "form": {
+        "name": {
+          "label": "Dein Name",
+          "description": "Damit ihr euch in einer gemeinsamen Sitzung auch wiedererkennt, benötigen wir einen Namen oder Spitznamen."
+        }
+      },
+      "introduction": {
+        "heading": "Was ist eine gemeinsame Sitzung?",
+        "explanation": [
+          "Eine gemeinsame Sitzung ermöglicht es dir, den Wahlkompass gemeinsam mit deinen Freund:innen zu erleben. Eine Person lädt die anderen zu einer gemeinsamen Sitzung ein. Sobald alle beigetreten sind, gehen alle den Wahlkompass durch, wie sie es normalerweise tun würden. Zusätzlich zu den Parteien, sehr ihr nun auch die Antworten der anderen und könnt eine Diskussion beginnen."
+        ]
+      },
+      "security": {
+        "heading": "Sind meine Antworten sicher?",
+        "explanation": [
+          "Ja! Eure Antworten werden über eine sichere Verbindung direkt zwischen euren Geräten ausgetauscht. Ein Server hilft den Geräten dabei, sich im Internet zu finden – eure Antworten werden jedoch nicht über den Server geschickt, sondern direkt von Gerät zu Gerät."
+        ]
+      },
+      "registration": {
+        "heading": "Muss ich mich registrieren um diese Funktion nutzen zu können?",
+        "explanation": [
+          "Es ist keine Registrierung nötig. Du musst nur deinen Namen eingeben und schon kannst du einer Sitzung beitreten."
+        ]
+      },
+      "cancel": "Abbrechen",
+      "confirm": "Sitzung starten"
+    },
+    "friends-join-modal": {
+      "heading": "Mit Freund:innen verbinden",
+      "description": "Verbinde dich mit deinen Freund:innen über eine gemeinsame Sitzung und sehe alle Antworten in Echtzeit.",
+      "form": {
+        "name": {
+          "label": "Dein Name",
+          "description": "Damit ihr euch in einer gemeinsamen Sitzung auch wiedererkennt, benötigen wir einen Namen oder Spitznamen."
+        },
+        "join": {
+          "label": "Befreundetes Gerät",
+          "description": "Trete einer gemeinsamen Sitzung bei indem du die Geräte-ID des:der Gastgeber:in eingibst."
+        }
+      },
+      "introduction": {
+        "heading": "Was ist eine gemeinsame Sitzung?",
+        "explanation": [
+          "Eine gemeinsame Sitzung ermöglicht es dir, den Wahlkompass gemeinsam mit deinen Freund:innen zu erleben. Eine Person lädt die anderen zu einer gemeinsamen Sitzung ein. Sobald alle beigetreten sind, gehen alle den Wahlkompass durch, wie sie es normalerweise tun würden. Zusätzlich zu den Parteien, sehr ihr nun auch die Antworten der anderen und könnt eine Diskussion beginnen."
+        ]
+      },
+      "security": {
+        "heading": "Sind meine Antworten sicher?",
+        "explanation": [
+          "Ja! Eure Antworten werden über eine sichere Verbindung direkt zwischen euren Geräten ausgetauscht. Ein Server hilft den Geräten dabei, sich im Internet zu finden – eure Antworten werden jedoch nicht über den Server geschickt, sondern direkt von Gerät zu Gerät."
+        ]
+      },
+      "registration": {
+        "heading": "Muss ich mich registrieren um diese Funktion nutzen zu können?",
+        "explanation": [
+          "Es ist keine Registrierung nötig. Du musst nur deinen Namen eingeben und schon kannst du einer Sitzung beitreten."
+        ]
+      },
+      "cancel": "Abbrechen",
+      "confirm": "Beitreten"
+    },
+    "friends-list": {
+      "heading": "Verbundene Geräte",
+      "empty": "Deine Anfrage der Sitzung beizutreten muss noch akzeptiert werden.",
+      "host": "Gastgeber:in"
+    },
+    "friends-status-modal": {
+      "heading": "Gemeinsame Sitzung",
+      "mode": {
+        "INACTIVE": {
+          "heading": "Nicht verbunden",
+          "text": "Du bist mit keiner Person verbunden. Trete einer bestehenden Sitzung teil oder erstelle über das Hauptmenü deine eigene."
+        },
+        "GUEST": {
+          "heading": "Gast",
+          "text": "Du nimmst an einer gemeinsamen Sitzung teil, die von einer anderen Person verwaltet wird."
+        },
+        "HOST": {
+          "heading": "Gastgeber:in",
+          "text": "Du bist Gastgeber:in dieser Sitzung. Lade mit deiner Geräte ID deine Freund:innen ein und akzeptiere ihre Beitrittsanfragen."
+        }
+      },
+      "own-peer-id": {
+        "label": "Dein Gerät",
+        "description": "Dies ist deine Geräte-ID. Deine Freund:innen müssen diese ID auf ihren Geräten eingeben um der gemeinsamen Sitzung beizutreten."
+      }
+    },
+    "guests-list": {
+      "heading": "Verbundene Geräte",
+      "empty": "Bisher ist niemand der Sitzung beigetreten.",
+      "accept": "Hinzufügen",
+      "status": {
+        "connecting": "Verbinden ...",
+        "connected": "Verbunden",
+        "disconnected": "Getrennt"
+      }
+    },
+    "guide-button": {
+      "start": "Los geht's",
+      "introduction": "Zur Einführung",
+      "first-thesis": "Auf zur ersten These",
+      "thesis": "Weiter zur nächsten These",
+      "party": "Parteien auswählen",
+      "match": "Ergebnis anschauen",
+      "compare": "Begründungen der Parteien lesen"
+    },
+    "kiosk-mode": {
+      "heading": "Zurücksetzen?",
+      "description": "Der Wahlkompass wird in jetzt zurückgesetzt und deine Antworten gelöscht. | Der Wahlkompass wird in {count} Sekunde zurückgesetzt und deine Antworten gelöscht. | Der Wahlkompass wird in {count} Sekunden zurückgesetzt und deine Antworten gelöscht.",
+      "reset": "Ja, sofort",
+      "resume": "Noch nicht!"
+    },
+    "language-switch": {
+      "button": "Sprachen",
+      "heading": "Sprachen",
+      "description": "Bitte wähle deine bevorzugte Sprache."
+    },
+    "main-navigation": {
+      "menu": "Menü",
+      "thesis": "These {count}",
+      "links": {
+        "compass": "Wahlkompass",
+        "languages": "Sprache wechseln",
+        "friends-join": "Mit Freund:innen verbinden",
+        "friends-invite": "Freund:innen einladen",
+        "reset": "Zurücksetzen",
+        "home": "Start",
+        "introduction": "Einleitung",
+        "theses": "Thesen",
+        "evaluation": "Auswertung",
+        "party": "Parteienwahl",
+        "match": "Ergebnis",
+        "compare": "Antworten der Parteien",
+        "about": "Über"
+      }
+    },
+    "open-election-compass-logo": {
+      "alt": "Logo des Wahl-Kompasses"
+    },
+    "show-more": {
+      "show": "weiterlesen",
+      "hide": "verbergen"
+    }
+  },
+  "views": {
+    "home": {
+      "home": {
+        "role-aria": "Wahl-Kompass"
+      },
+      "start": {
+        "section": {
+          "banner-aria": "Startseite"
+        }
+      },
+      "theses": {
+        "important-button": {
+          "important": "Wichtig für mich",
+          "important-aria": "Wichtig – markiert diese These als wichtig für dich.",
+          "too-many-important": "Es gibt nur sehr wenige Thesen, du kannst daher keine als wichtig markieren. | Bitte markiere nicht mehr als 1 These als wichtig um ein aussagekräftiges Ergebnis zu erhalten! | Bitte markiere nicht mehr als {count} Thesen als wichtig um ein aussagekräftiges Ergebnis zu erhalten!"
+        },
+        "skip-button": {
+          "skip": "Weiß ich nicht",
+          "skip-aria": "Überspringen – überspringt diese These, sodass sie nicht gezählt wird.",
+          "too-many-skip": "Es gibt nur sehr wenige Thesen, du kannst daher keine überspringen. | Bitte überspringe nicht mehr als 1 These um ein aussagekräftiges Ergebnis zu erhalten! | Bitte überspringe nicht mehr als {count} Thesen um ein aussagekräftiges Ergebnis zu erhalten!"
+        },
+        "statement-text": {
+          "thesis": "These {count} / {total}",
+          "statement-aria": "Die These lautet: '{statement}'",
+          "quoteStart": "„",
+          "quoteEnd": "“",
+          "statement-badge": {
+            "skip": "Übersprungen",
+            "skip-aria": "Du hast diese These übersprungen.",
+            "important": "Von dir als wichtig markiert",
+            "important-aria": "Du hast diese These als wichtig markiert."
+          }
+        },
+        "statement-wrapper": {
+          "role-aria": "These",
+          "region-aria": "These {count} von {total}"
+        }
+      },
+      "party": {
+        "party-item": {
+          "party-aria": "Partei '{party}' – klicke hier um diese Partei zum Vergleich aus- bzw. abzuwählen."
+        },
+        "section": {
+          "heading": "Wähle die zu vergleichenden Parteien",
+          "instruction": "Bitte wähle die Parteien aus, mit denen du deine eigenen Entscheidungen vergleichen möchtest. Du kannst beliebig viele Parteien auswählen, jedoch mindestens zwei. Die Reihenfolge der Liste orientiert sich an der Reihenfolge der Parteien auf dem Wahlzettel.",
+          "proceed": "Fertig"
+        }
+      },
+      "match": {
+        "match-display": {
+          "match-aria": "Deine Übereinstimmung mit den Positionen der Partei '{party}' liegt bei {percentage} %"
+        },
+        "section": {
+          "heading": "Dein Ergebnis",
+          "explanation": "Dieses Diagramm zeigt an, wie sehr du und die jeweiligen Parteien bzgl. der obigen Thesen übereinstimmt. Je höher die Prozentzahl, desto ähnlicher sind eure Positionen. Denke daran, dass dies keine Wahl-Empfehlung ist, sondern nur ein Werkzeug der Orientierung und Diskussion."
+        }
+      },
+      "compare": {
+        "additional-analysis": {
+          "heading": "Statistik",
+          "buttons": {
+            "close": "Beenden",
+            "start": "Los geht's",
+            "proceed": "Senden und weiter",
+            "open-questionnaire": "Umfrage in neuem Tab öffnen"
+          },
+          "start": "Vielen Dank für's Teilen! Dein Datensatz wird wertvoller, wenn du noch einige Fragen zu deiner Person beantwortest – würdest du noch etwas mehr mithelfen? Beantworte einfach so viele Fragen, wie du möchtest!",
+          "help-even-more": "Vielen Dank! Möchtest du noch mehr tun? Dann kannst du noch ein paar genauere Fragen beantworten:",
+          "thanks": "Vielen Dank! Das waren alle Fragen – du hast uns sehr geholfen. Klicke auf 'Beenden' um zu deinem Ergebnis zurückzukehren.",
+          "fields": {
+            "age": {
+              "name": "Alter",
+              "label": "Wie alt bist du?",
+              "placeholder": "25",
+              "description": "Dein Alter ist wichtig um zu ermitteln wie die jeweiligen Altersgruppen zu den Thesen und Parteien stehen."
+            },
+            "gender": {
+              "name": "Geschlecht",
+              "label": "Welches Geschlecht hast du?",
+              "options": {
+                "female": "weiblich",
+                "diverse": "divers",
+                "male": "männlich",
+                "none": "keine Angabe"
+              }
+            },
+            "education": {
+              "name": "Bildungsabschluss",
+              "label": "Was ist dein höchster Bildungsabschluss?",
+              "options": {
+                "student": "Noch Schüler:in",
+                "nothing": "Schule beendet ohne Abschluss",
+                "lower": "Haupt- oder Realschulabschluss",
+                "higher": "Abitur oder Fachoberschulreife",
+                "academic": "Abgeschlossenes Studium",
+                "none": "keine Angabe"
+              }
+            },
+            "party": {
+              "name": "Partei",
+              "label": "Wenn heute der gewählt würde, wer bekäme deine Stimme?",
+              "options": {
+                "other": "Sonstige",
+                "non-voter": "Ich nehme nicht teil",
+                "not-eligible": "Ich bin nicht stimmberechtigt",
+                "not-sure": "Ich bin nicht sicher",
+                "none": "keine Angabe"
+              }
+            }
+          }
+        },
+        "analysis-banner": {
+          "heading": "Möchtest du deine Antworten der Wissenschaft spenden?",
+          "explanation": "Du kannst {someone} helfen, diese Wahlen besser zu verstehen indem du deine Antworten und Ergebnisse der Forschung spendest. Wir speichern nur anonymisierte Datensätze, die wir nicht zu dir zurückverfolgen können.",
+          "send": "Statistische Daten jetzt senden",
+          "close": "Nein, weiterlesen"
+        },
+        "answer": {
+          "skip": {
+            "status-text": "unbekannt",
+            "content": "Die Partei '{party}' hat keine Position oder Begründung für diese These bereitgestellt."
+          },
+          "empty": {
+            "content": "Die Partei '{party}' hat keine Erklärung zu ihrer Position für diese These bereitgestellt."
+          }
+        },
+        "section": {
+          "heading": "Die Antworten",
+          "explanation": "Die Parteien stellen üblicherweise eine Erklärung zu jeder Entscheidung bereit. Da es nicht immer offensichtlich ist, warum eine Partei eine bestimmte Position vertritt, empfiehlt es sich, diese Erklärungen oder die jeweiligen Wahlprogramme zu lesen.",
+          "region-aria": "These {count} von {total}"
+        },
+        "friends-position": {
+          "answer-aria": "{name}: {position}",
+          "skip": "Skipped"
+        },
+        "kiosk-mode-hint": {
+          "heading": "Bitte setz mich zurück, wenn du fertig bist",
+          "explanation": "Lies und vergleiche die Erklärungen unterhalb in Ruhe. Wenn du fertig bist, kannst du den Wahlkompass hier für die nächste Person zurücksetzen. Dadurch werden auch deine eigenen Antworten gelöscht. Tipp: Du findest diese Option auch im Menü. Vielen Dank!",
+          "reset": "Zurücksetzen"
+        }
+      },
+      "footer": {
+        "section": {
+          "explanation": "Dieser Wahlkompass basiert auf dem freien Open Source Projekt {0}.",
+          "oec": "OpenElectionCompass"
+        }
+      }
+    }
+  },
+  "validation": {
+    "names": {
+      "name": "Name",
+      "remote-peer-id": "Befreundetes Gerät"
+    },
+    "fields": {
+      "name": {
+        "min": "Bitte gib einen Namen ein.",
+        "regex": "Nur Buchstaben, Zahlen und Leerzeichen, keine Sonderzeichen.",
+        "required": "Bitte gib einen Namen ein."
+      }
+    }
+  },
+  "algorithm": {
+    "options": {
+      "strongly-approve": {
+        "button": "Starke Zustimmung",
+        "button-aria": "Starke Zustimmung – klicke hier, um dieser These deutlich zuzustimmen!",
+        "badge": "Du hast stark zugestimmt",
+        "badge-aria": "Du hast dieser These stark zugestimmt.",
+        "status": "stimmt deutlich zu",
+        "answer-aria": "Die Partei '{party}' stimmt dieser These deutlich zu mit der folgenden Begründung: {answer}"
+      },
+      "approve": {
+        "button": "Zustimmung",
+        "button-aria": "Zustimmung – klicke hier, um dieser These zuzustimmen!",
+        "badge": "Du hast zugestimmt",
+        "badge-aria": "Du hast dieser These zugestimmt.",
+        "status": "stimmt zu",
+        "answer-aria": "Die Partei '{party}' stimmt dieser These zu mit der folgenden Begründung: {answer}"
+      },
+      "neutral": {
+        "button": "Neutral",
+        "button-aria": "Neutral – klicke hier, um bei dieser These neutral zu bleiben!",
+        "badge": "Du warst neutral",
+        "badge-aria": "Du warst zu dieser These neutral.",
+        "status": "neutral",
+        "answer-aria": "Die Partei '{party}' bleibt bei dieser These neutral, mit der folgenden Begründung: {answer}"
+      },
+      "partly": {
+        "button": "Teilweise",
+        "button-aria": "Teilweise – klicke hier, um dieser These teilweise zuzustimmen!",
+        "badge": "Du hast teilweise zugestimmt",
+        "badge-aria": "Du hast dieser These teilweise zugestimmt.",
+        "status": "teilweise",
+        "answer-aria": "Die Partei '{party}' unterstützt diese These teilweise, mit der folgenden Begründung: {answer}"
+      },
+      "reject": {
+        "button": "Ablehnung",
+        "button-aria": "Ablehnung – klicke hier, um diese These abzulehnen!",
+        "badge": "Du hast abgelehnt",
+        "badge-aria": "Du hast diese These abgelehnt.",
+        "status": "lehnt ab",
+        "answer-aria": "Die Partei '{party}' lehnt diese These ab mit der folgenden Begründung: {answer}"
+      },
+      "strongly-reject": {
+        "button": "Starke Ablehnung",
+        "button-aria": "Starke Ablehnung – klicke hier, um diese deutlich These abzulehnen!",
+        "badge": "Du hast stark abgelehnt",
+        "badge-aria": "Du hast diese These stark abgelehnt.",
+        "status": "lehnt deutlich ab",
+        "answer-aria": "Die Partei '{party}' lehnt diese These deutlich ab mit der folgenden Begründung: {answer}"
+      }
+    }
+  }
+}

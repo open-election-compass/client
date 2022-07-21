@@ -7,18 +7,20 @@
       @click="toggleMenu()"
       class="main-navigation__toggle"
     >
-      <span class="main-navigation__toggle-caption">
-        {{ $t('elements.main-navigation.menu') }}
-      </span>
-      <span class="main-navigation__toggle-icon">
-        <Icon :name="active ? 'times' : 'bars'" monospace />
-      </span>
+      <bdi>
+        <span class="main-navigation__toggle-caption">
+          {{ $t('elements.main-navigation.menu') }}
+        </span>
+        <span class="main-navigation__toggle-icon">
+          <IconDisplay :name="active ? 'times' : 'bars'" monospace />
+        </span>
+      </bdi>
     </button>
     <transition name="menu">
       <nav
         v-if="active"
-        v-scroll-lock="active && fullWidthMode"
         ref="menu"
+        v-scroll-lock="active && fullWidthMode"
         class="main-navigation__menu"
       >
         <ul class="main-navigation__groups">
@@ -33,7 +35,7 @@
               <button class="main-navigation__group-toggle" @click="toggleGroup(group.alias)">
                 <span>{{ group.caption }}</span>
                 &nbsp;
-                <Icon :name="!hiddenGroups.includes(group.alias) ? 'angle-down' : 'angle-up'" />
+                <IconDisplay :name="!hiddenGroups.includes(group.alias) ? 'angle-down' : 'angle-up'" />
               </button>
               <ul v-if="!hiddenGroups.includes(group.alias)" class="main-navigation__links">
                 <li
@@ -55,7 +57,9 @@
                     text-align="left"
                     @click="goToLink(link.to, $event)"
                   >
-                    {{ link.caption }}
+                    <span>
+                      {{ link.caption }}
+                    </span>
                     <small v-if="link.description">
                       <DefinitionsTooltip :text="link.description" disabled />
                     </small>
@@ -94,10 +98,14 @@
 </template>
 
 <script>
-import DefinitionsTooltip from '@/components/elements/DefinitionsTooltip.vue';
+import { vScrollLock } from '@vueuse/components';
+import DefinitionsTooltip from '/src/components/elements/DefinitionsTooltip.vue';
 
 export default {
   name: 'MainNavigation',
+  directives: {
+    'scroll-lock': vScrollLock,
+  },
   components: {
     DefinitionsTooltip,
   },
@@ -114,7 +122,7 @@ export default {
     }, { deep: true });
 
     // Listen for a new friends session being started
-    this.$root.$on('how-u-doin', () => {
+    this.bus.on('how-u-doin', () => {
       this.hideMenu();
     });
 
@@ -313,7 +321,7 @@ export default {
     goToLink(href, event) {
       if (href.charAt(0) === '#') {
         event.preventDefault();
-        this.$root.$emit('navigate-to:section', href.substring(1));
+        this.bus.emit('navigate-to:section', href.substring(1));
         this.hideMenu();
       }
     },
@@ -418,7 +426,7 @@ button.main-navigation__group-toggle {
   box-sizing: border-box;
   background-color: var(--theme-primary-background);
   width: 100%;
-  text-align: left;
+  text-align: start;
   color: var(--theme-primary-text);
   padding: 2rem 2rem 2rem 2rem;
   display: block;
@@ -430,6 +438,9 @@ button.main-navigation__group-toggle {
     span {
       text-decoration: underline;
     }
+  }
+  [dir='rtl'] & {
+    padding-inline-start: 2em;
   }
 }
 
@@ -443,6 +454,10 @@ button.main-navigation__group-toggle {
       transform: scale(1.025);
     }
   }
+}
+
+.main-navigation__link .base-button__caption span {
+  display: block;
 }
 
 .main-navigation__link,

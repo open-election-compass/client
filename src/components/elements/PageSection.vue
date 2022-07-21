@@ -33,8 +33,6 @@ export default {
 </script>
 
 <style lang="scss">
-@import "@/styles/core";
-
 .page-section {
   &.page-section--full {
     display: flex;

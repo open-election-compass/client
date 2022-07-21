@@ -1,3 +1,4 @@
+import { describe, expect, it } from 'vitest';
 import VuexThesesModule from '@/store/modules/theses/theses';
 
 const state = {

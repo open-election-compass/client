@@ -1,5 +1,5 @@
 import getUserLocale from 'get-user-locale';
-import i18n from '@/locales/i18n';
+import i18n from '/src/locales/i18n';
 
 const officialLanguages = ['ar', 'de', 'en', 'es', 'fr', 'hu', 'id', 'it', 'nl', 'pl', 'pt', 'tr'];
 
@@ -36,12 +36,13 @@ export default {
         // eslint-disable-next-line no-console
         console.warn(`The language code '${language.code}' is not recognized as an officially supported language. This is not a concern if you added a custom language. If you want to expand the official language support, please get in touch with the maintainers.`);
       }
-      if (typeof language.overwrites === 'object') {
-        i18n.mergeLocaleMessage(language.code, language.overwrites);
+      if (typeof language.overwrites === 'object' && language.overwrites !== null) {
+        i18n.global.mergeLocaleMessage(language.code, language.overwrites);
       }
       state.languages.push({
         code: language.code,
         name: language.name,
+        direction: language.direction ?? 'ltr',
         active: false,
         fallback: state.languages.length === 0,
       });

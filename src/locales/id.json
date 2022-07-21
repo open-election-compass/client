@@ -1,0 +1,364 @@
+{
+  "elements": {
+    "friends-invite-modal": {
+      "heading": "Undang rekan Anda",
+      "description": "Undang rekan Anda untuk membuat sebuah sesi bersama, di mana Anda dapat melihat jawaban satu sama lain secara langsung.",
+      "form": {
+        "name": {
+          "label": "Nama/nama panggilan Anda",
+          "description": "Harap berikan nama Anda, agar rekan Anda dapat mengenali Anda. Anda juga dapat menggunakan nama samaran."
+        }
+      },
+      "introduction": {
+        "heading": "Apa itu sesi bersama?",
+        "explanation": [
+          "Sesi bersama adalah sebuah periode di mana Anda dapat mengeksplorasi Kompas Pemilihan dengan rekan-rekan Anda. Satu orang dapat mengundang yang lain ke sebuah sesi bersama. Setelah semua bergabung, Anda dapat menggunakan Kompas sebagaimana biasa; namun, Anda juga dapat melihat jawaban satu sama lain dan mulai berdiskusi."
+        ]
+      },
+      "security": {
+        "heading": "Apakah jawaban saya aman?",
+        "explanation": [
+          "Ya! Jawaban Anda akan dipertukarkan secara langsung melalui perangkat Anda melalui sebuah saluran koneksi yang aman. Sebuah server akan membantu perangkat yang ada untuk saling mencari di Internet. Jawaban Anda tidak dikirim melalui server tersebut, namun secara langsung dari perangkat ke perangkat."
+        ]
+      },
+      "registration": {
+        "heading": "Apakah saya perlu mendaftar untuk menggunakan Kompas ini?",
+        "explanation": [
+          "Anda tidak perlu mendaftar. Anda hanya perlu menerakan nama Anda untuk bergabung ke sebuah sesi."
+        ]
+      },
+      "cancel": "Batal",
+      "confirm": "Sesi terbuka"
+    },
+    "friends-join-modal": {
+      "heading": "Bergabung dengan rekan-rekan Anda",
+      "description": "Saling tersambung dengan rekan-rekan Anda pada sebuah sesi bersama dan lihat jawaban semua orang secara langsung.",
+      "form": {
+        "name": {
+          "label": "Nama/nama panggilan Anda",
+          "description": "Harap berikan nama Anda, agar rekan Anda dapat mengenali Anda. Anda juga dapat menggunakan nama samaran."
+        },
+        "join": {
+          "label": "Perangkat rekan",
+          "description": "Bergabung dengan sebuah sesi bersama dengan memasukkan ID perangkat dari penyelenggara sesi tersebut."
+        }
+      },
+      "introduction": {
+        "heading": "Apa itu sesi bersama?",
+        "explanation": [
+          "Sesi bersama adalah sebuah periode di mana Anda dapat mengeksplorasi Kompas Pemilihan dengan rekan-rekan Anda. Satu orang dapat mengundang yang lain ke sebuah sesi bersama. Setelah semua bergabung, Anda dapat menggunakan Kompas sebagaimana biasa; namun, Anda juga dapat melihat jawaban satu sama lain dan mulai berdiskusi."
+        ]
+      },
+      "security": {
+        "heading": "Apakah jawaban saya aman?",
+        "explanation": [
+          "Ya! Jawaban Anda akan dipertukarkan secara langsung melalui perangkat Anda melalui sebuah saluran koneksi yang aman. Sebuah server akan membantu perangkat yang ada untuk saling mencari di Internet. Jawaban Anda tidak dikirim melalui server tersebut, namun secara langsung dari perangkat ke perangkat."
+        ]
+      },
+      "registration": {
+        "heading": "Apakah saya perlu mendaftar untuk menggunakan Kompas ini?",
+        "explanation": [
+          "Anda tidak perlu mendaftar. Anda hanya perlu menerakan nama Anda untuk bergabung ke sebuah sesi."
+        ]
+      },
+      "cancel": "Batal",
+      "confirm": "Gabung"
+    },
+    "friends-list": {
+      "heading": "Perangkat yang terhubung",
+      "empty": "Penyelenggara harus menerima permintaan Anda untuk bergabung pada sesi ini.",
+      "host": "Penyelenggara"
+    },
+    "friends-status-modal": {
+      "heading": "Sesi bersama",
+      "mode": {
+        "INACTIVE": {
+          "heading": "Tidak terhubung",
+          "text": "Anda tidak sedang terhubung pada siapa pun. Silakan bergabung pada sesi yang sedang berlangsung atau mulai sesi Anda sendiri di menu utama."
+        },
+        "GUEST": {
+          "heading": "Tamu",
+          "text": "Anda sedang berada pada sesi bersama yang diselenggarakan oleh orang lain."
+        },
+        "HOST": {
+          "heading": "Penyelenggara",
+          "text": "Anda adalah penyelenggara sesi ini. Anda dapat mengundang rekan Anda menggunakan ID perangkat dan menerima permintaan mereka untuk bergabung."
+        }
+      },
+      "own-peer-id": {
+        "label": "Perangkat Anda",
+        "description": "Ini adalah ID perangkat Anda. Rekan Anda perlu memasukkan ID ini untuk dapat bergabung pada sesi bersama yang Anda selenggarakan."
+      }
+    },
+    "guests-list": {
+      "heading": "Perangkat yang terhubung",
+      "empty": "Belum ada yang bergabung.",
+      "accept": "Terima",
+      "status": {
+        "connecting": "Sedang menghubungi",
+        "connected": "Terhubungi",
+        "disconnected": "Tidak terhubung"
+      }
+    },
+    "guide-button": {
+      "start": "Mari masuk",
+      "introduction": "Pelajari selengkapnya",
+      "first-thesis": "Mulai dengan pernyataan pertama",
+      "thesis": "Lanjut ke pernyataan berikutnya",
+      "party": "Pilih pihak",
+      "match": "Lihat hasil Anda",
+      "compare": "Periksa posisi"
+    },
+    "kiosk-mode": {
+      "heading": "Perlu atur ulang?",
+      "description": "Kompas pemilihan akan diatur ulang dan semua jawaban Anda akan terhapus. | Kompas pemilihan akan diatur ulang dalam {count} detik dan semua jawaban Anda akan terhapus. | Kompas pemilihan akan diatur ulang dalam {count} detik dan semua jawaban Anda akan terhapus.",
+      "reset": "Atur ulang sekarang",
+      "resume": "Belum!"
+    },
+    "language-switch": {
+      "button": "Bahasa",
+      "heading": "Bahasa",
+      "description": "Harap pilih bahasa Anda."
+    },
+    "main-navigation": {
+      "menu": "Menu",
+      "thesis": "Pernyataan {count}",
+      "links": {
+        "compass": "Kompas Pemilihan",
+        "languages": "Ubah bahasa",
+        "friends-join": "Gabung dengan rekan Anda",
+        "friends-invite": "Undang rekan Anda",
+        "reset": "Atur ulang",
+        "home": "Mulai",
+        "introduction": "Pengantar",
+        "theses": "Pernyataan",
+        "evaluation": "Peninjauan ulang",
+        "party": "Pilihan partai",
+        "match": "Hasil",
+        "compare": "Pernyataan",
+        "about": "Perihal"
+      }
+    },
+    "open-election-compass-logo": {
+      "alt": "Logo Kompas Pemilihan"
+    },
+    "show-more": {
+      "show": "lihat lebih banyak",
+      "hide": "sembunyikan"
+    }
+  },
+  "views": {
+    "home": {
+      "home": {
+        "role-aria": "Kompas Pemilihan"
+      },
+      "start": {
+        "section": {
+          "banner-aria": "Mulai bagian"
+        }
+      },
+      "theses": {
+        "important-button": {
+          "important": "Penting bagi saya",
+          "important-aria": "Penting - tandai pernyataan ini sebagai pernyataan yang penting bagi Anda.",
+          "too-many-important": "Hanya Ada beberapa pernyataan, jadi Anda tidak dapat memilih satu saja sebagai yang penting. | Harap pilih 1 pernyataan saja untuk mendapatkan hasil yang benar! | Harap pilih {count} pernyataan saja untuk mendapatkan hasil yang benar!"
+        },
+        "skip-button": {
+          "skip": "Saya tidak tahu",
+          "skip-aria": "Langkahi - langkahi pernyataan ini agar tidak ikut dihitung.",
+          "too-many-skip": "Hanya Ada beberapa pernyataan, jadi Anda tidak dapat memilih satu saja sebagai yang penting. | Harap pilih 1 pernyataan saja untuk mendapatkan hasil yang benar! | Harap pilih {count} pernyataan saja untuk mendapatkan hasil yang benar!"
+        },
+        "statement-text": {
+          "thesis": "Pernyataan {count} / {total}",
+          "statement-aria": "Pernyataan ini berbunyi: '{statement}'",
+          "quoteStart": "‘",
+          "quoteEnd": "’",
+          "statement-badge": {
+            "skip": "Anda melangkahi ini",
+            "skip-aria": "Anda melangkahi pernyataan ini.",
+            "important": "Anda menandai ini penting",
+            "important-aria": "Anda menandai pernyataan ini sebagai pernyataan yang penting."
+          }
+        },
+        "statement-wrapper": {
+          "role-aria": "Pernyataan",
+          "region-aria": "Pernyataan {count} dari {total}"
+        }
+      },
+      "party": {
+        "party-item": {
+          "party-aria": "Pihak '{party}' - klik ini untuk memilih atau mengurungkan pilihan pada partai ini sebagai bahan perbandingan."
+        },
+        "section": {
+          "heading": "Pilih partai yang ingin Anda bandingkan",
+          "instruction": "Harap pilih partai yang ingin Anda bandingkan dengan pilihan Anda. Anda dapat memilih sebanyak mungkin, namun Anda harus memilih paling kurang dua. Daftar di bawah ini disusun berdasarkan urutan partai yang sama yang akan muncul pada kertas pemilihan.",
+          "proceed": "Selesai"
+        }
+      },
+      "match": {
+        "match-display": {
+          "match-aria": "Kecocokan Anda dengan partai ''{party}' adalah {percentage} %"
+        },
+        "section": {
+          "heading": "Hasil Anda",
+          "explanation": "Bagan ini menunjukkan kecocokan pandangan Anda dengan partai-partai berikut ini. Semakin tinggi persentasenya, semakin cocok posisi Anda. Ini bukanlah rekomendasi untuk memilih, melainkan hanyalah satu perangkat untuk memandu diskusi."
+        }
+      },
+      "compare": {
+        "additional-analysis": {
+          "heading": "Statistik",
+          "buttons": {
+            "close": "Keluar",
+            "start": "Mari mulai",
+            "proceed": "Kirim dan lanjutkan",
+            "open-questionnaire": "Survei terbuka di tab baru"
+          },
+          "start": "Terima kasih sudah berbagi! Data Anda menjadi lebih berharga untuk statistik jika Anda membagikan lebih banyak informasi latar belakang tentang diri Anda – maukah Anda membantu lebih banyak lagi? Cukup jawab pertanyaan sebanyak yang Anda suka!",
+          "help-even-more": "Terima kasih banyak! Apakah Anda ingin membantu lebih banyak lagi? Anda dapat menjawab beberapa pertanyaan yang lebih spesifik di sini:",
+          "thanks": "Terima kasih telah berbagi! Itu semua pertanyaannya – Anda sangat membantu kami! Klik 'Keluar' untuk kembali ke hasil Anda.",
+          "fields": {
+            "age": {
+              "name": "Usia",
+              "label": "Berapa usia Anda sekarang?",
+              "placeholder": "25",
+              "description": "Usia Anda penting untuk meneliti apa yang dipikirkan orang-orang dari kelompok usia yang berbeda tentang tesis dan pesta."
+            },
+            "gender": {
+              "name": "Jenis kelamin",
+              "label": "Apa jenis kelaminmu?",
+              "options": {
+                "female": "perempuan",
+                "diverse": "beragam",
+                "male": "pria",
+                "none": "tidak ada Jawaban"
+              }
+            },
+            "education": {
+              "name": "Kualifikasi",
+              "label": "Apa kualifikasi pendidikan tertinggi Anda?",
+              "options": {
+                "student": "Saat ini mahasiswa",
+                "nothing": "Tidak ada kualifikasi yang lengkap",
+                "lower": "SMP atau sederajat",
+                "higher": "SMA atau sederajat",
+                "academic": "Akademik",
+                "none": "tidak ada Jawaban"
+              }
+            },
+            "party": {
+              "name": "Berpesta",
+              "label": "Jika pemilihan hari ini, siapa yang akan Anda pilih?",
+              "options": {
+                "other": "Lainnya",
+                "non-voter": "Saya tidak akan memilih",
+                "not-eligible": "Saya tidak memenuhi syarat",
+                "not-sure": "Saya tidak yakin",
+                "none": "tidak ada Jawaban"
+              }
+            }
+          }
+        },
+        "analysis-banner": {
+          "heading": "Apakah Anda ingin menyumbangkan jawaban Anda untuk sains?",
+          "explanation": "Anda dapat membantu {someone} memahami pemilihan ini lebih baik dengan menyumbangkan jawaban dan hasil Anda untuk penelitian ilmiah. Kami hanya menyimpan data anonim yang tidak dapat kami lacak kembali kepada Anda.",
+          "send": "Kirim data statistik sekarang",
+          "close": "Tidak, teruskan membaca"
+        },
+        "answer": {
+          "skip": {
+            "status-text": "tidak diketahui",
+            "content": "Pihak '{party}' tidak memberikan jawaban atau posisi apa pun terkait pernyataan ini."
+          },
+          "empty": {
+            "content": "Pihak '{party}' tidak memberikan alasan apapun untuk menjelaskan posisinya terkait tesis ini."
+          }
+        },
+        "section": {
+          "heading": "Jawaban mereka",
+          "explanation": "Para pihak biasanya memberikan posisi untuk setiap pernyataan untuk menjelaskan alasan mereka. Tidak selalu jelas mengapa suatu partai mengambil posisi tertentu sehingga dianjurkan untuk membaca pernyataan ini atau manifesto pemilu masing-masing.",
+          "region-aria": "Pernyataan {count} dari {total}"
+        },
+        "friends-position": {
+          "answer-aria": "{name}: {position}",
+          "skip": "Dilewati"
+        },
+        "kiosk-mode-hint": {
+          "heading": "Silakan reset setelah selesai",
+          "explanation": "Luangkan waktu Anda untuk membaca dan membandingkan pernyataan jawaban di bawah ini. Setelah selesai, Anda dapat mengatur ulang kompas pemilihan di sini untuk orang berikutnya. Ini juga akan menghapus jawaban Anda sendiri. Petunjuk: Anda juga dapat menemukan tombol reset di menu. Terima kasih!",
+          "reset": "Mengatur ulang"
+        }
+      },
+      "footer": {
+        "section": {
+          "explanation": "Kompas pemiliu ini didasarkan pada proyek sumber terbuka gratis {0}.",
+          "oec": "OpenElectionCompass"
+        }
+      }
+    }
+  },
+  "validation": {
+    "names": {
+      "name": "Nama",
+      "remote-peer-id": "Perangkat teman"
+    },
+    "fields": {
+      "name": {
+        "min": "Harap masukkan nama.",
+        "regex": "Hanya huruf, angka dan spasi, tidak ada karakter khusus.",
+        "required": "Harap masukkan nama."
+      }
+    }
+  },
+  "algorithm": {
+    "options": {
+      "strongly-approve": {
+        "button": "Sangat setuju",
+        "button-aria": "Sangat setuju – klik di sini untuk sangat menyetujui pernyataan ini!",
+        "badge": "Anda sangat setuju",
+        "badge-aria": "Anda sangat menyetujui pernyataan ini.",
+        "status": "sangat setuju",
+        "answer-aria": "Pihak '{party}' sangat menyetujui pernyataan ini dengan jawaban sebagai berikut: {answer}"
+      },
+      "approve": {
+        "button": "Menyetujui",
+        "button-aria": "Setuju – klik di sini untuk menyetujui pernyataan ini!",
+        "badge": "Anda menyetujui",
+        "badge-aria": "Anda menyetujui pernyataan ini.",
+        "status": "menyetujui",
+        "answer-aria": "Pihak '{party}' menyetujui pernyataan ini dengan jawaban berikut: {answer}"
+      },
+      "neutral": {
+        "button": "Netral",
+        "button-aria": "Netral – klik di sini untuk tetap netral mengenai pernyataan ini!",
+        "badge": "Kamu kami netral",
+        "badge-aria": "Anda kami netral mengenai pernyataan ini.",
+        "status": "netral",
+        "answer-aria": "Pihak '{party}' tetap netral terhadap pernyataan ini, dengan memberikan jawaban berikut: {answer}"
+      },
+      "partly": {
+        "button": "Sebagian",
+        "button-aria": "Sebagian – klik di sini untuk setuju sebagian dengan pernyataan ini!",
+        "badge": "Anda setuju sebagian",
+        "badge-aria": "Anda sebagian setuju dengan pernyataan ini.",
+        "status": "sebagian",
+        "answer-aria": "Pihak '{party}' mendukung pernyataan ini sebagian, dengan memberikan jawaban berikut: {answer}"
+      },
+      "reject": {
+        "button": "Menolak",
+        "button-aria": "Tolak – klik di sini untuk menolak pernyataan ini!",
+        "badge": "Anda menolak",
+        "badge-aria": "Anda menolak pernyataan ini.",
+        "status": "menolak",
+        "answer-aria": "Pihak '{party}' menolak pernyataan ini dengan jawaban berikut: {answer}"
+      },
+      "strongly-reject": {
+        "button": "Sangat menolak",
+        "button-aria": "Sangat menolak – klik di sini untuk sangat menolak pernyataan ini!",
+        "badge": "Anda sangat menolak",
+        "badge-aria": "Anda sangat menolak pernyataan ini.",
+        "status": "sangat menolak",
+        "answer-aria": "Pihak '{party}' sangat menolak pernyataan ini dengan jawaban sebagai berikut: {answer}"
+      }
+    }
+  }
+}

@@ -1,13 +1,15 @@
-import { createLocalVue } from '@vue/test-utils';
-import Vuex from 'vuex';
+import { afterEach, describe, expect, it, vi } from 'vitest';
+import { createStore } from 'vuex';
+
+const peerMock = vi.fn();
+
+vi.mock('peerjs', () => ({
+  default: peerMock,
+}));
+vi.useFakeTimers();
+
 import Peer from 'peerjs';
 import VuexFriendsModule from '@/store/modules/friends/friends';
-
-const localVue = createLocalVue();
-localVue.use(Vuex);
-
-jest.mock('peerjs');
-jest.useFakeTimers();
 
 const factory = () => ({
   signal: 'DISCONNECTED',
@@ -27,8 +29,8 @@ const friendFactory = (peerId, status = 'CONNECTED', accepted = false) => ({
   connection: {},
 });
 
-beforeEach(() => {
-  Peer.mockClear();
+afterEach(() => {
+  vi.resetAllMocks();
 });
 
 describe('Friends Store (General)', () => {
@@ -86,13 +88,13 @@ describe('Friends Store (General)', () => {
   });
 
   it('creates a peer and waits for connection to open and close, while setting the signal accordingly', async () => {
-    const store = new Vuex.Store({
+    const store = createStore({
       modules: {
         friends: VuexFriendsModule,
       },
     });
-    Peer.mockImplementation(() => ({
-      on: jest.fn().mockImplementation((event, handler) => {
+    peerMock.mockImplementation(() => ({
+      on: vi.fn().mockImplementation((event, handler) => {
         if (event === 'open') setTimeout(handler, 1000);
         if (event === 'disconnected') setTimeout(handler, 2000);
       }),
@@ -104,13 +106,13 @@ describe('Friends Store (General)', () => {
 
     // Try to open another connection
     const dispatchAgain = store.dispatch('friends/createOwnPeer', { force: false });
-    jest.advanceTimersToNextTimer();
+    vi.advanceTimersToNextTimer();
     await dispatch;
     await dispatchAgain;
     expect(Peer).toHaveBeenCalledTimes(1);
 
     // Close connection
-    jest.advanceTimersToNextTimer();
+    vi.advanceTimersToNextTimer();
     expect(store.getters['friends/signal']).toBe('DISCONNECTED');
   });
 });

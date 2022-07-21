@@ -22,7 +22,7 @@
         <img :src="logo" :alt="$t(`parties.${index}.name`)" />
       </div>
       <div class="party-item__caption" aria-hidden="true">
-        <Icon
+        <IconDisplay
           :name="selected ? 'check' : 'circle'"
           class="party-item__icon"
         />
@@ -103,7 +103,7 @@ export default {
 
 .party-item__icon {
   color: #fff;
-  margin-right: 1em;
+  margin-inline-end: 1em;
   flex: 0 1 auto;
 }
 
@@ -143,17 +143,17 @@ export default {
 .party-item__short {
   flex: 0 1 auto;
   font-weight: bold;
-  margin-right: 2em;
+  margin-inline-end: 2em;
 }
 
 .party-item__name {
   flex: 1 1 auto;
-  text-align: right;
+  text-align: end;
   word-wrap: anywhere;
   hyphens: auto;
   font-size: 1em;
   @media (min-width: 48em) {
-    font-size: 0.75em
+    font-size: 0.75em;
   }
 }
 
@@ -173,7 +173,7 @@ export default {
     flex: 1 1 auto;
     display: flex;
     align-items: center;
-    text-align: left;
+    text-align: start;
     order: 1;
     width: 100%;
     @media (min-width: 48em) {
@@ -191,16 +191,16 @@ export default {
       display: block;
     }
     @media (min-width: 48em) {
-      margin-right: 0;
+      margin-inline-end: 0;
     }
   }
 
   .party-item__short {
-    margin-right: 0;
+    margin-inline-end: 0;
   }
 
   .party-item__name {
-    text-align: left;
+    text-align: start;
   }
 }
 </style>

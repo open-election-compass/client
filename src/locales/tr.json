@@ -1,0 +1,364 @@
+{
+  "elements": {
+    "friends-invite-modal": {
+      "heading": "Arkadaşlarınızı davet edin",
+      "description": "Herkesin gerçek zamanlı olarak cevapları görebileceği paylaşım oturumuna arkadaşlarınızı davet edin.",
+      "form": {
+        "name": {
+          "label": "Adınız / kullanıcı adınız",
+          "description": "Arkadaşlarınızın sizi tanıyabilmesi için lütfen adınızı girin. Kullanıcı adı da kullanabilirsiniz."
+        }
+      },
+      "introduction": {
+        "heading": "Paylaşım oturumu nedir?",
+        "explanation": [
+          "Paylaşımlı oturum, seçim pusulasını arkadaşlarınızla deneyimlemenizi sağlar. Bir kişi diğerlerini paylaşımlı bir oturuma davet eder. Herkes katıldıktan sonra, her bir seçim pusulasını normalde yaptığınız gibi kullanabilirsiniz. Ancak taraflara ek olarak, birbirinizin cevaplarını görebilir ve bir tartışma başlatabilirsiniz."
+        ]
+      },
+      "security": {
+        "heading": "Cevaplarım güvende mi?",
+        "explanation": [
+          "Evet! Yanıtlarınız güvenli bir bağlantı aracılığıyla doğrudan cihazlarınız arasında değiştirilir. Bir sunucu, cihazların kendisini İnternette bulmasına yardımcı olur - ancak yanıtlarınız sunucu üzerinden değil, doğrudan cihazdan cihaza gönderilir."
+        ]
+      },
+      "registration": {
+        "heading": "Bunu kullanabilmek için kayıt olmam gerekir mi?",
+        "explanation": [
+          "Hayır kayıt olunmayı gerektirmez. Tek yapmanız gereken adınızı girmektir sonrasında oturuma katılabilirsiniz."
+        ]
+      },
+      "cancel": "İptal",
+      "confirm": "Açık oturum"
+    },
+    "friends-join-modal": {
+      "heading": "Arkadaşlarınıza katılın",
+      "description": "Arkadaşlarınızla, herkesin birbirinin cevabını gerçek zamanlı olarak gördüğü paylaşımlı bir oturuma katılın.",
+      "form": {
+        "name": {
+          "label": "Adınız / kullanıcı adınız",
+          "description": "Arkadaşlarınızın sizi tanıması için lütfen adınızı girin. Ayrıca kullanıcı adı da kullabilirsiniz."
+        },
+        "join": {
+          "label": "Arkadaşlarınızın cihazları",
+          "description": "Oturumu sunanın cihaz kimliğini girerek paylaşım oturumuna katılabilirsiniz."
+        }
+      },
+      "introduction": {
+        "heading": "Paylaşımlı oturum nedir?",
+        "explanation": [
+          "Paylaşımlı oturum, seçim pusulasını arkadaşlarınızla deneyimlemenizi sağlar. Bir kişi diğerlerini paylaşımlı bir oturuma davet eder. Herkes katıldıktan sonra, her bir seçim pusulasını normalde yaptığınız gibi kullanabilirsiniz. Ancak taraflara ek olarak, birbirinizin cevaplarını görebilir ve bir tartışma başlatabilirsiniz."
+        ]
+      },
+      "security": {
+        "heading": "Cevaplarım güvende mi?",
+        "explanation": [
+          "Evet! Yanıtlarınız güvenli bir bağlantı aracılığıyla doğrudan cihazlarınız arasında değiştirilir. Bir sunucu, cihazların kendisini İnternette bulmasına yardımcı olur - ancak yanıtlarınız sunucu üzerinden değil, doğrudan cihazdan cihaza gönderilir."
+        ]
+      },
+      "registration": {
+        "heading": "Bu özelliği kullanmak için kayıt olmam gerekir mi?",
+        "explanation": [
+          "Hayır kayıt olunmayı gerektirmez. Tek yapmanız gereken adınızı girmektir sonrasında oturuma katılabilirsiniz."
+        ]
+      },
+      "cancel": "İptal",
+      "confirm": "Katıl"
+    },
+    "friends-list": {
+      "heading": "Bağlı cihazlar",
+      "empty": "Katılabilmek için sunucuya istek göndermeniz ve isteğinizin sunucu tarafından kabul edilmesi gerekiyor.",
+      "host": "Sunucu"
+    },
+    "friends-status-modal": {
+      "heading": "Paylaşılan Oturum",
+      "mode": {
+        "INACTIVE": {
+          "heading": "Bağlı değil",
+          "text": "Kimseye bağlanmadınız. Mevcut oturumunuza katılabilir veya ana menüden kendi oturumunuzu yönetebilirsiniz."
+        },
+        "GUEST": {
+          "heading": "Misafir",
+          "text": "Başkası tarafından sunulan bir paylaşım oturumuna katılıyorsunuz."
+        },
+        "HOST": {
+          "heading": "Sunucu",
+          "text": "Bu oturumu siz sunuyorsunuz. Cihaz kimliğinizi arkadaşlarınızla paylaşarak onları davet edin ve onların katılma isteklerini onaylayın."
+        }
+      },
+      "own-peer-id": {
+        "label": "Cihazınız",
+        "description": "Bu sizin cihaz kimliğinizdir. Arkadaşlarınızın paylaşım oturumlarımıza katılabilmeleri için kendi cihazlarından bunu girmeleri gerekiyor."
+      }
+    },
+    "guests-list": {
+      "heading": "Bağlı cihazlar",
+      "empty": "Henüz oturuma kimse katılmadı.",
+      "accept": "Onayla",
+      "status": {
+        "connecting": "Bağlanıyor",
+        "connected": "Bağlandı",
+        "disconnected": "Bağlantı koptu"
+      }
+    },
+    "guide-button": {
+      "start": "Haydi başlayalım",
+      "introduction": "Nasıl çalıştığını öğrenin",
+      "first-thesis": "İlk açıklama ile başlayın",
+      "thesis": "Sonraki açıklamaya geçin",
+      "party": "Partileri seçin",
+      "match": "Sonuçlarınızı görün",
+      "compare": "Pozisyonları okuyun"
+    },
+    "kiosk-mode": {
+      "heading": "Sıfırlamalı mıyız?",
+      "description": "Seçim pusulası şimdi sıfırlanacak ve tüm cevaplarınız silinecek. | Seçim pusulası {count} saniye içinde sıfırlanacak ve tüm cevaplarınız silinecek. | Seçim pusulası {count} saniye içinde sıfırlanacak ve tüm cevaplarınız silinecek.",
+      "reset": "Hemen sıfırla",
+      "resume": "Henüz değil!"
+    },
+    "language-switch": {
+      "button": "Diller",
+      "heading": "Diller",
+      "description": "Lütfen tercih ettiğiniz dili seçin."
+    },
+    "main-navigation": {
+      "menu": "Menü",
+      "thesis": "Açıklamalar {count}",
+      "links": {
+        "compass": "Seçim Pusulası",
+        "languages": "Dili değiştirin",
+        "friends-join": "Arkadaşlarınıza katılın",
+        "friends-invite": "Arkadaşlarınızı davet edin",
+        "reset": "Sıfırla",
+        "home": "Başla",
+        "introduction": "Giriş",
+        "theses": "Açıklamalar",
+        "evaluation": "Değerlendirme",
+        "party": "Parti seçimleri",
+        "match": "Sonuç",
+        "compare": "Açıklamalar",
+        "about": "Hakkında"
+      }
+    },
+    "open-election-compass-logo": {
+      "alt": "Seçim Pusulası Logosu"
+    },
+    "show-more": {
+      "show": "daha fazla göster",
+      "hide": "gizle"
+    }
+  },
+  "views": {
+    "home": {
+      "home": {
+        "role-aria": "Seçim Pusulası"
+      },
+      "start": {
+        "section": {
+          "banner-aria": "Bölümü başlat"
+        }
+      },
+      "theses": {
+        "important-button": {
+          "important": "Benim için önemli",
+          "important-aria": "Önemli – bu açıklamayı sizin için önemli olarak işaretler.",
+          "too-many-important": "Sadece çok az tez var, bu yüzden birini önemli olarak işaretleyemezsiniz. | Anlamlı bir sonuç almak için lütfen 1'den fazla tezi önemli olarak işaretleyin! | Anlamlı bir sonuç almak için lütfen en fazla {count} tezi önemli olarak işaretleyin!"
+        },
+        "skip-button": {
+          "skip": "Bilmiyorum",
+          "skip-aria": "Atla – bu açıklamayı atlar, böylece bu sayılmaz.",
+          "too-many-skip": "Sadece çok az tez var, bu yüzden birini atlayamazsınız. | Anlamlı bir sonuç almak için lütfen 1'den fazla tezi atlamayın! | Anlamlı bir sonuç almak için lütfen {count} tezden fazlasını atlamayın!"
+        },
+        "statement-text": {
+          "thesis": "Açıklama {count} / {total}",
+          "statement-aria": "Açıklama: '{statement}'",
+          "quoteStart": "‘",
+          "quoteEnd": "’",
+          "statement-badge": {
+            "skip": "Bunu atladınız",
+            "skip-aria": "Bu açıklamayı atladınız.",
+            "important": "Bunu önemli olarak işaretlediniz",
+            "important-aria": "Bu açıklamayı önemli olarak işaretlediniz."
+          }
+        },
+        "statement-wrapper": {
+          "role-aria": "Açıklama",
+          "region-aria": "Açıklama {count} / {total}"
+        }
+      },
+      "party": {
+        "party-item": {
+          "party-aria": "{party}' partisi – karşılaştırmak için buraya tıklayarak seçin veya seçimi kaldırın."
+        },
+        "section": {
+          "heading": "Karşılaştırmak istediğiniz partileri seçin",
+          "instruction": "Lütfen kararlarınızı karşılaştırmak istediğiniz tarafları seçin. İstediğiniz kadar taraf seçebilirsiniz ancak en az iki taraf seçmelisiniz. Aşağıdaki liste, tarafların oy pusulasındaki sırasıyla aynı sıralama doğrultusunda sunulmaktadır.",
+          "proceed": "Tamamlandı"
+        }
+      },
+      "match": {
+        "match-display": {
+          "match-aria": "Tarafla '{party}' uyumunuz % {percentage}"
+        },
+        "section": {
+          "heading": "Sonuçlarınız",
+          "explanation": "Bu tablo yukarıdaki açıklamalarla sizin ve ilgili kişilerin ne kadar uyuştuğunuzu gösterir. Yüzde ne kadar yüksekse konumlarınız da o kadar fazla eşleşiyor demektir. Lütfen bunun bir oylama önerisi olmadığını, yalnızca bir yönlendirme ve tartışma aracı olduğunu aklınızda bulundurun."
+        }
+      },
+      "compare": {
+        "additional-analysis": {
+          "heading": "İstatistikler",
+          "buttons": {
+            "close": "Çıkış",
+            "start": "Haydi başlayalım",
+            "proceed": "Gönder ve sonrakine geç",
+            "open-questionnaire": "Anketi yeni sayfada aç"
+          },
+          "start": "Paylaştığınız için teşekkür ederiz! Kendiniz hakkında daha fazla bilgi paylaşırsanız, verileriniz istatistikler için daha değerli olacaktır. Daha fazla yardımcı olmak ister misiniz? İstediğiniz kadar fazla cevap vermeniz yeterli!",
+          "help-even-more": "Çok teşekkür ederiz! Daha da fazla yardımcı olmak ister misiniz? Buradaki bazı özel sorulara cevap verebilirsiniz:",
+          "thanks": "Paylaştığınız için teşekkürler! Hepsi bu kadardı. Bize çok yardımcı oldunuz! Sonuçlarınıza geri dönmek için 'Quit' tuşuna basınız.",
+          "fields": {
+            "age": {
+              "name": "Yaş",
+              "label": "Şu an kaç yaşındasınız?",
+              "placeholder": "25",
+              "description": "Yaşınız, açıklamalar ve partiler hakkında farklı yaş gruplarının ne düşündüğünün araştırılabilmesi açısından önemlidir."
+            },
+            "gender": {
+              "name": "Cinsiyet",
+              "label": "Cinsiyetiniz nedir?",
+              "options": {
+                "female": "kadın",
+                "diverse": "çeşitli",
+                "male": "erkek",
+                "none": "yanıt yok"
+              }
+            },
+            "education": {
+              "name": "Nitelikler",
+              "label": "En yüksek eğitim düzeyiniz nedir?",
+              "options": {
+                "student": "Şu anda öğrenci",
+                "nothing": "Yeterli nitelik yok",
+                "lower": "Ortaokul ya da dengi",
+                "higher": "Lise ya da dengi",
+                "academic": "Akademik",
+                "none": "yanıt yok"
+              }
+            },
+            "party": {
+              "name": "Parti",
+              "label": "Eğer bugün seçim olsaydı, oyunuzu kime kullanırdınız?",
+              "options": {
+                "other": "Diğer",
+                "non-voter": "Oy kullanmayacağım",
+                "not-eligible": "Uygun değilim",
+                "not-sure": "Emin değilim",
+                "none": "yanıt yok"
+              }
+            }
+          }
+        },
+        "analysis-banner": {
+          "heading": "Cevabınızı bilime adamak ister misiniz?",
+          "explanation": "{someone}'nin/nın bu seçimleri daha iyi anlamasını sağlamak için cevaplarınızın ve sonuçların bilimsel araştırmalar için kullanılmasına izin verebilirsiniz. Yalnızca size geri izleme yapamadığımız anonim verileri kaydediyoruz.",
+          "send": "İstatistiksel verileri şimdi kaydedin",
+          "close": "Hayır, okumaya devam edin"
+        },
+        "answer": {
+          "skip": {
+            "status-text": "bilinmiyor",
+            "content": "Taraf '{party}' bu açıklamaya istinaden herhangi bir cevap ya da konum sağlamadı."
+          },
+          "empty": {
+            "content": "Taraf '{party}' bu açıklamaya istinaden konumunu açıklamak için herhangi bir gerekçe sunmadı."
+          }
+        },
+        "section": {
+          "heading": "Cevapları",
+          "explanation": "Taraflar genel olarak gerekçelerini açıklamak amacıyla her açıklama için konum sağlarlar. Bir tarafın neden belirli bir pozisyon aldığı her zaman açık değildir, bu nedenle bu açıklamaları veya ilgili seçim beyannamelerini okumanız tavsiye edilir.",
+          "region-aria": "Açıklama {count} / {total}"
+        },
+        "friends-position": {
+          "answer-aria": "{name}: {position}",
+          "skip": "Atlandı"
+        },
+        "kiosk-mode-hint": {
+          "heading": "Tamamladığınızda lütfen sıfırlayın",
+          "explanation": "Aşağıdaki yanıtları ve açıklamaları okumaya ve karşılaştırmaya zaman ayırın. Hazır olduğunuzda, sıradaki kişi için seçim pusulasını sıfırlayabilirsiniz. Bu ayrıca cevaplarınızı silecektir. İpucu: Ayrıca menüde de sıfırlama butonu bulabilirsiniz. Teşekkürler!",
+          "reset": "Sıfırla"
+        }
+      },
+      "footer": {
+        "section": {
+          "explanation": "Bu seçim pusulası ücretsiz açık kaynak projesi {0} temeline dayanmaktadır.",
+          "oec": "OpenElectionCompass"
+        }
+      }
+    }
+  },
+  "validation": {
+    "names": {
+      "name": "Ad",
+      "remote-peer-id": "Arkadaşlarınızın cihazları"
+    },
+    "fields": {
+      "name": {
+        "min": "Lütfen bir ad girin.",
+        "regex": "Sadece harfler, sayılar ve boşluk olmalı, özel karakter içermemeli.",
+        "required": "Lütfen bir ad girin."
+      }
+    }
+  },
+  "algorithm": {
+    "options": {
+      "strongly-approve": {
+        "button": "Güçlü destek",
+        "button-aria": "Güçlü destek – buraya tıklayarak açıklamayı güçlü bir şekilde destekleyin!",
+        "badge": "Güçlü destek verdiniz",
+        "badge-aria": "Bu açıklamayı güçlü bir şekilde desteklediniz.",
+        "status": "güçlü destekler",
+        "answer-aria": "Taraf '{party}' şu cevapla, bu açıklamayı güçlü bir şekilde destekliyor: {answer}"
+      },
+      "approve": {
+        "button": "Onayla",
+        "button-aria": "Onayla – buraya tıklayarak açıklamayı onaylayın!",
+        "badge": "Onayladınız",
+        "badge-aria": "Bu açıklamayı onayladınız.",
+        "status": "onaylar",
+        "answer-aria": "Taraf '{party}' şu cevapla, bu açıklamayı destekliyor: {answer}"
+      },
+      "neutral": {
+        "button": "Tarafsız",
+        "button-aria": "Tarafsız - bu açıklamaya istinaden tarafsız kalmak için buraya tıklayın!",
+        "badge": "Tarafsızsınız",
+        "badge-aria": "Bu açıklamaya istinaden tarafsızsınız.",
+        "status": "tarafsız",
+        "answer-aria": "Taraf '{party}' şu cevapla, bu açıklamaya tarafsız kalıyor: {answer}"
+      },
+      "partly": {
+        "button": "Kısmi destek",
+        "button-aria": "Kısmi destek - bu açıklamaya kısmen katılmak için buraya tıklayın!",
+        "badge": "Kısmi destek verdiniz",
+        "badge-aria": "Bu açıklamaya kısmi destek verdiniz.",
+        "status": "kısmi destek",
+        "answer-aria": "Taraf '{party}' şu cevapla, bu açıklamayı kısmen destekliyor: {answer}"
+      },
+      "reject": {
+        "button": "Karşı",
+        "button-aria": "Karşı çık – buraya tıklayarak açıklamaya karşı çıkın!",
+        "badge": "Karşı çıktınız",
+        "badge-aria": "Bu açıklamaya karşı çıktınız.",
+        "status": "karşı oylar",
+        "answer-aria": "Taraf '{party}' şu cevapla, bu açıklamaya karşı çıkıyor: {answer}"
+      },
+      "strongly-reject": {
+        "button": "Şiddetle karşı",
+        "button-aria": "Şiddetle karşı çık – buraya tıklayarak açıklamaya şiddetle karşı çıkın!",
+        "badge": "Şiddetle karşı çıktınız",
+        "badge-aria": "Bu açıklamaya şiddetle karşı çıktınız.",
+        "status": "şiddetle karşılar",
+        "answer-aria": "Taraf '{party}' şu cevapla, bu açıklamaya şiddetle karşı çıkıyor: {answer}"
+      }
+    }
+  }
+}

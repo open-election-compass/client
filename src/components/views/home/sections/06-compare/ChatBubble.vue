@@ -28,8 +28,8 @@
 </template>
 
 <script>
-import StatementBadge from '@/components/views/home/sections/03-theses/StatementBadge.vue';
-import ShowMore from '@/components/elements/ShowMore.vue';
+import StatementBadge from '/src/components/views/home/sections/03-theses/StatementBadge.vue';
+import ShowMore from '/src/components/elements/ShowMore.vue';
 
 export default {
   name: 'ChatBubble',
@@ -129,6 +129,9 @@ export default {
   .chat-bubble--positive .chat-bubble__quote,
   .chat-bubble--negative .chat-bubble__quote {
     flex-direction: row;
+    [dir='rtl'] & {
+      flex-direction: row-reverse;
+    }
   }
 }
 

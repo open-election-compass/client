@@ -17,7 +17,7 @@
 </template>
 
 <script>
-import StatementBadge from '@/components/views/home/sections/03-theses/StatementBadge.vue';
+import StatementBadge from '/src/components/views/home/sections/03-theses/StatementBadge.vue';
 
 export default {
   name: 'FriendsPositions',

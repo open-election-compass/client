@@ -13,7 +13,9 @@
         {{ $t(`parties.${party.index}.short`) }}
       </span>
       <span class="match-display__percentage">
-        {{ $n(percentage, { style: 'percent' }) }}
+        <bdi>
+          {{ $n(percentage, { style: 'percent' }) }}
+        </bdi>
       </span>
     </div>
     <p class="match-display__party-description">
@@ -23,7 +25,7 @@
 </template>
 
 <script>
-import ShowMore from '@/components/elements/ShowMore.vue';
+import ShowMore from '/src/components/elements/ShowMore.vue';
 
 export default {
   name: 'MatchDisplay',
@@ -79,6 +81,10 @@ export default {
   top: 0;
   right: 0;
   bottom: 0;
+  [dir='rtl'] & {
+    right: unset;
+    left: 0;
+  }
 }
 
 .match-display__party-description {

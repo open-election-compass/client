@@ -1,5 +1,5 @@
 <template>
-  <Modal
+  <ModalView
     :visible="isInactive"
     :heading="$t('elements.kiosk-mode.heading')"
     :description="$tc('elements.kiosk-mode.description', secondsTilReset)"
@@ -20,7 +20,7 @@
     @reset="reset"
     @resume="resume"
   >
-  </Modal>
+  </ModalView>
 </template>
 
 <script>
@@ -90,7 +90,7 @@ export default {
     window.addEventListener('keydown', this.resetUserActivityTimeout);
     window.addEventListener('resize', this.resetUserActivityTimeout);
     window.addEventListener('touchstart', this.resetUserActivityTimeout);
-    this.$root.$on('reset', ({ seconds }) => {
+    this.bus.on('reset', ({ seconds }) => {
       if (typeof seconds === 'number' && seconds > 0) {
         this.isInactive = true;
         return this.startCountdown(seconds);

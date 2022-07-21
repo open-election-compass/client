@@ -9,7 +9,7 @@
         <BaseButton
           class="guide-button__button"
           theme="positive"
-          right="arrow-right"
+          :right="$store.getters['languages/active'].direction === 'ltr' ? 'arrow-right' : 'arrow-left'"
           size="large"
           @click="goToActiveSection"
         >
@@ -111,7 +111,7 @@ export default {
       this.lastCallToUpdateRelevanceFunction = Date.now();
 
       // Trigger scrolling
-      this.$root.$emit('navigate-to:active-section');
+      this.bus.emit('navigate-to:active-section');
     },
   },
 };

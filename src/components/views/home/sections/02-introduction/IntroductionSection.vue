@@ -10,7 +10,7 @@
 </template>
 
 <script>
-import PageSection from '@/components/elements/PageSection.vue';
+import PageSection from '/src/components/elements/PageSection.vue';
 
 export default {
   name: 'IntroductionSection',

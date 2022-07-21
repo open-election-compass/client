@@ -11,8 +11,8 @@
 </template>
 
 <script>
-import FriendsProgress from '@/components/views/home/sections/03-theses/FriendsProgress.vue';
-import StatementWrapper from '@/components/views/home/sections/03-theses/StatementWrapper.vue';
+import FriendsProgress from '/src/components/views/home/sections/03-theses/FriendsProgress.vue';
+import StatementWrapper from '/src/components/views/home/sections/03-theses/StatementWrapper.vue';
 
 export default {
   name: 'ThesesSection',

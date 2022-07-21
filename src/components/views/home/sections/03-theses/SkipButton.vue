@@ -10,17 +10,15 @@
       -->
       <TippyTooltip
         class="tooltip"
-        :content="$tc('views.home.theses.skip-button.too-many-skip', maxSkip)"
-        :enabled="!tooltipDisabled"
+        :content="tooltipDisabled ? undefined : $tc('views.home.theses.skip-button.too-many-skip', maxSkip)"
         :a11y="false"
-        size="large"
         trigger="mouseenter focusin"
       >
         <BaseButton
           class="skip-button__button"
           theme="transparent"
           size="small"
-          right="arrow-right"
+          :right="$store.getters['languages/active'].direction === 'ltr' ? 'arrow-right' : 'arrow-left'"
           :data-test="`thesis-skip`"
           :aria-label="$t('views.home.theses.skip-button.skip-aria')"
           @click="$emit('click', $event)"

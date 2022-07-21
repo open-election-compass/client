@@ -22,7 +22,7 @@
     <div class="statement-wrapper__skip">
       <SkipButton
         :disabled="skipButtonDisabled"
-        :tooltipDisabled="!skipButtonDisabled || status === 'skip'"
+        :tooltip-disabled="!skipButtonDisabled || status === 'skip'"
         :max-skip="maxSkip"
         @click="clickVoteButton('skip')"
       />
@@ -47,9 +47,9 @@
     <div class="statement-wrapper__important-button">
       <ImportantButton
         :name="`important-${index}`"
-        v-model="factor"
+        v-model:factor="factor"
         :disabled="status && direction === 'neutral' || maxImportantReached"
-        :tooltipDisabled="!maxImportantReached || direction === 'neutral' || status === 'skip'"
+        :tooltip-disabled="!maxImportantReached || direction === 'neutral' || status === 'skip'"
         :max-important="maxImportant"
       />
     </div>
@@ -58,11 +58,11 @@
 
 <script>
 import { mapGetters } from 'vuex';
-import ImportantButton from '@/components/views/home/sections/03-theses/ImportantButton.vue';
-import PageSection from '@/components/elements/PageSection.vue';
-import SkipButton from '@/components/views/home/sections/03-theses/SkipButton.vue';
-import StatementText from '@/components/views/home/sections/03-theses/StatementText.vue';
-import VoteButton from '@/components/views/home/sections/03-theses/VoteButton.vue';
+import ImportantButton from '/src/components/views/home/sections/03-theses/ImportantButton.vue';
+import PageSection from '/src/components/elements/PageSection.vue';
+import SkipButton from '/src/components/views/home/sections/03-theses/SkipButton.vue';
+import StatementText from '/src/components/views/home/sections/03-theses/StatementText.vue';
+import VoteButton from '/src/components/views/home/sections/03-theses/VoteButton.vue';
 
 export default {
   name: 'StatementWrapper',
@@ -202,15 +202,14 @@ export default {
 }
 
 .statement-wrapper__skip {
-  margin-right: 2.25em;
+  margin-inline-end: 2.25em;
   margin-bottom: 0.5em;
+  text-align: end;
   @media (min-width: 48em) {
     margin-bottom: 1em;
   }
-  button {
-    margin-left: auto;
-    display: block;
-    width: auto;
+  .skip-button {
+    display: inline-block;
   }
 }
 

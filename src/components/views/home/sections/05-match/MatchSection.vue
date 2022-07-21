@@ -22,8 +22,8 @@
 
 <script>
 import { mapGetters } from 'vuex';
-import MatchDisplay from '@/components/views/home/sections/05-match/MatchDisplay.vue';
-import PageSection from '@/components/elements/PageSection.vue';
+import MatchDisplay from '/src/components/views/home/sections/05-match/MatchDisplay.vue';
+import PageSection from '/src/components/elements/PageSection.vue';
 
 export default {
   name: 'MatchSection',

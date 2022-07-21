@@ -1,6 +1,6 @@
 <template>
   <nav class="language-switch">
-    <Modal
+    <ModalView
       :visible="visible"
       :heading="$t('elements.language-switch.heading')"
       :description="$t('elements.language-switch.description')"
@@ -28,7 +28,7 @@
           </BaseButton>
         </li>
       </ul>
-    </Modal>
+    </ModalView>
   </nav>
 </template>
 
@@ -56,8 +56,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "@/styles/core.scss";
-
 .language-switch__menu {
   list-style-type: none;
   padding: 0;

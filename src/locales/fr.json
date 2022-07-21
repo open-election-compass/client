@@ -1,0 +1,364 @@
+{
+  "elements": {
+    "friends-invite-modal": {
+      "heading": "Inviter des amis",
+      "description": "Invitez vos amis à une session partagée où tout le monde peut voir les réponses des autres en temps réel.",
+      "form": {
+        "name": {
+          "label": "Votre nom / pseudo",
+          "description": "Veuillez fournir votre nom afin que vos amis puissent vous reconnaître. Vous pouvez également utiliser un surnom."
+        }
+      },
+      "introduction": {
+        "heading": "Qu'est-ce qu'une session partagée ?",
+        "explanation": [
+          "Une session partagée vous permet d'expérimenter la boussole électorale avec vos amis. Une personne invite les autres à une session partagée. Une fois que tout le monde a rejoint, vous pouvez chacun utiliser la boussole électorale comme vous le feriez normalement. Mais en plus des parties, vous pouvez désormais également voir les réponses des uns et des autres et démarrer une discussion."
+        ]
+      },
+      "security": {
+        "heading": "Mes réponses sont-elles sûres ?",
+        "explanation": [
+          "Oui! Vos réponses sont échangées directement entre vos appareils via une connexion sécurisée. Un serveur aide les appareils à se retrouver sur Internet - vos réponses, cependant, ne sont pas envoyées via le serveur, mais directement d'un appareil à l'autre."
+        ]
+      },
+      "registration": {
+        "heading": "Dois-je m'inscrire pour utiliser cette fonctionnalité ?",
+        "explanation": [
+          "Aucune inscription n'est nécessaire. Tout ce que vous avez à faire est d'entrer votre nom et vous pouvez rejoindre une session."
+        ]
+      },
+      "cancel": "Annuler",
+      "confirm": "Discussion ouverte"
+    },
+    "friends-join-modal": {
+      "heading": "Rejoignez des amis",
+      "description": "Connectez-vous avec vos amis dans une session partagée et voyez les réponses de chacun en temps réel.",
+      "form": {
+        "name": {
+          "label": "Votre nom / pseudo",
+          "description": "Veuillez fournir votre nom afin que vos amis puissent vous reconnaître. Vous pouvez également utiliser un surnom."
+        },
+        "join": {
+          "label": "Appareil d'un.e ami.e",
+          "description": "Rejoignez une session partagée en saisissant l'ID de l'appareil de la personne qui héberge la session."
+        }
+      },
+      "introduction": {
+        "heading": "Qu'est-ce qu'une session partagée ?",
+        "explanation": [
+          "Une session partagée vous permet d'expérimenter la boussole électorale avec vos amis. Une personne invite les autres à une session partagée. Une fois que tout le monde a rejoint, vous pouvez chacun utiliser la boussole électorale comme vous le feriez normalement. Mais en plus des parties, vous pouvez désormais également voir les réponses des uns et des autres et démarrer une discussion."
+        ]
+      },
+      "security": {
+        "heading": "Mes réponses sont-elles sûres ?",
+        "explanation": [
+          "Oui! Vos réponses sont échangées directement entre vos appareils via une connexion sécurisée. Un serveur aide les appareils à se retrouver sur Internet - vos réponses, cependant, ne sont pas envoyées via le serveur, mais directement d'un appareil à l'autre."
+        ]
+      },
+      "registration": {
+        "heading": "Dois-je m'inscrire pour utiliser cette fonctionnalité ?",
+        "explanation": [
+          "Aucune inscription n'est nécessaire. Tout ce que vous avez à faire est d'entrer votre nom et vous pouvez rejoindre une session."
+        ]
+      },
+      "cancel": "Annuler",
+      "confirm": "Joindre"
+    },
+    "friends-list": {
+      "heading": "Des appareils connectés",
+      "empty": "L'hôte doit accepter votre demande de rejoindre la session.",
+      "host": "hôte"
+    },
+    "friends-status-modal": {
+      "heading": "Services partagés",
+      "mode": {
+        "INACTIVE": {
+          "heading": "Pas connecté",
+          "text": "Vous n'êtes connecté à personne. Rejoignez votre session existante ou hébergez la vôtre via le menu principal."
+        },
+        "GUEST": {
+          "heading": "Invité",
+          "text": "Vous participez à une session partagée, hébergée par quelqu'un d'autre."
+        },
+        "HOST": {
+          "heading": "hôte",
+          "text": "Vous êtes l'hôte de cette session. Invitez vos amis à l'aide de l'ID de votre appareil et acceptez leurs demandes d'adhésion."
+        }
+      },
+      "own-peer-id": {
+        "label": "Votre appareil",
+        "description": "Il s'agit de l'identifiant de votre appareil. Vos amis doivent le saisir sur leur appareil pour se connecter à notre session partagée."
+      }
+    },
+    "guests-list": {
+      "heading": "Des appareils connectés",
+      "empty": "Personne n'a encore rejoint la session.",
+      "accept": "Accepter",
+      "status": {
+        "connecting": "En train de Connecter",
+        "connected": "Connecté",
+        "disconnected": "Déconnecté"
+      }
+    },
+    "guide-button": {
+      "start": "Allons-y",
+      "introduction": "Apprenez comment cela fonctionne",
+      "first-thesis": "Commencez par le premier déclaration",
+      "thesis": "Passez à la déclaration suivante",
+      "party": "Sélectionnez les parties",
+      "match": "Voir votre résultat",
+      "compare": "Lire les postes"
+    },
+    "kiosk-mode": {
+      "heading": "Doit-on réinitialiser ?",
+      "description": "La boussole électorale sera réinitialisée dans {count} secondes et toutes vos réponses seront supprimées. / La boussole électorale sera réinitialisée dans {count} seconde et toutes vos réponses seront supprimées.",
+      "reset": "Réinitialiser maintenant",
+      "resume": "Pas encore!"
+    },
+    "language-switch": {
+      "button": "Langues",
+      "heading": "Langues",
+      "description": "Veuillez choisir votre langue préférée."
+    },
+    "main-navigation": {
+      "menu": "Menu",
+      "thesis": "Déclarations {count}",
+      "links": {
+        "compass": "Boussole électorale",
+        "languages": "Changer de langue",
+        "friends-join": "Rejoignez des amis",
+        "friends-invite": "Inviter des amis",
+        "reset": "Réinitialiser",
+        "home": "Début",
+        "introduction": "Introduction",
+        "theses": "Déclarations",
+        "evaluation": "Évaluation",
+        "party": "Sélection du parti",
+        "match": "Résultat",
+        "compare": "Déclarations",
+        "about": "À propos"
+      }
+    },
+    "open-election-compass-logo": {
+      "alt": "Logo de la boussole électorale"
+    },
+    "show-more": {
+      "show": "montrer plus",
+      "hide": "cacher"
+    }
+  },
+  "views": {
+    "home": {
+      "home": {
+        "role-aria": "Boussole électorale"
+      },
+      "start": {
+        "section": {
+          "banner-aria": "Section de démarrage"
+        }
+      },
+      "theses": {
+        "important-button": {
+          "important": "Important pour moi",
+          "important-aria": "Important – marque cette déclaration comme importante pour vous.",
+          "too-many-important": "Please mark no more than 1 statement as important to receive a meaningful result! / Please mark no more than {count} statements as important to receive a meaningful result!"
+        },
+        "skip-button": {
+          "skip": "Je ne sais pas",
+          "skip-aria": "Ignorer - ignore cette instruction afin qu'elle ne soit pas comptée.",
+          "too-many-skip": "Veuillez ne pas sauter plus d'une instruction pour recevoir un résultat significatif ! / Veuillez ne pas sauter plus de {count} instructions pour obtenir un résultat significatif !"
+        },
+        "statement-text": {
+          "thesis": "Relevé {count} / {total}",
+          "statement-aria": "L'énoncé est : '{statement}'",
+          "quoteStart": "‘",
+          "quoteEnd": "’",
+          "statement-badge": {
+            "skip": "Vous avez sauté",
+            "skip-aria": "Vous avez sauté cette déclaration.",
+            "important": "Vous avez marqué cela comme important",
+            "important-aria": "Vous avez marqué cette déclaration comme importante."
+          }
+        },
+        "statement-wrapper": {
+          "role-aria": "Déclaration",
+          "region-aria": "Déclaration {count} / {total}"
+        }
+      },
+      "party": {
+        "party-item": {
+          "party-aria": "Partie '{party}' - cliquez ici pour sélectionner ou désélectionner cette partie à des fins de comparaison."
+        },
+        "section": {
+          "heading": "Choisissez les parties que vous souhaitez comparer",
+          "instruction": "Veuillez sélectionner les parties auxquelles vous souhaitez comparer vos propres décisions. Vous pouvez sélectionner autant de parties que vous le souhaitez, mais vous devez en sélectionner au moins deux. La liste suivante est présentée dans le même ordre que les partis apparaîtront sur le bulletin de vote.",
+          "proceed": "Fait"
+        }
+      },
+      "match": {
+        "match-display": {
+          "match-aria": "Votre taux de correspondance avec le parti \"{party}\" est de {percentage} %"
+        },
+        "section": {
+          "heading": "Votre résultat",
+          "explanation": "Ce tableau décrit dans quelle mesure vous et les partis respectifs êtes d'accord sur les déclarations ci-dessus. Plus le pourcentage est élevé, plus vos positions correspondent. N'oubliez pas qu'il ne s'agit pas d'une recommandation de vote, mais d'un outil d'orientation et de discussion."
+        }
+      },
+      "compare": {
+        "additional-analysis": {
+          "heading": "Statiques",
+          "buttons": {
+            "close": "Quitter",
+            "start": "Allons-y",
+            "proceed": "Valider et suivant",
+            "open-questionnaire": "Ouvrir le questionnaire dans un nouvel onglet"
+          },
+          "start": "Merci de partager ! Vos données seront d'autant plus précieuses pour les statistiques si vous partagez quelques informations supplémentaires sur vous-même - pourriez-vous nous aider davantage? Répondez simplement à autant de questions que vous le souhaitez!",
+          "help-even-more": "Merci beaucoup ! Vous souhaitez aider encore plus? Vous pouvez répondre à des questions plus spécifiques ici:",
+          "thanks": "Merci pour le partage ! C'était toutes les questions - vous nous avez beaucoup aidés ! Cliquez sur \"Quitter\" pour revenir à vos résultats.",
+          "fields": {
+            "age": {
+              "name": "Âge",
+              "label": "Quel âge avez-vous ?",
+              "placeholder": "25",
+              "description": "Votre âge est important pour rechercher ce que les personnes de différentes tranches d'âge pensent des déclarations et des partis."
+            },
+            "gender": {
+              "name": "Genre",
+              "label": "Quel est votre sexe?",
+              "options": {
+                "female": "féminin",
+                "diverse": "autre",
+                "male": "masculin",
+                "none": "pas de réponse"
+              }
+            },
+            "education": {
+              "name": "Diplôme",
+              "label": "Quel est votre diplôme le plus élevé?",
+              "options": {
+                "student": "Actuellement étudiant.e",
+                "nothing": "Aucune qualification complète",
+                "lower": "Collège ou similaire",
+                "higher": "Lycée ou similaire",
+                "academic": "Universitaire",
+                "none": "Pas de réponse"
+              }
+            },
+            "party": {
+              "name": "Parti",
+              "label": "Si l'élection avait lieu aujourd'hui, pour qui voteriez-vous?",
+              "options": {
+                "other": "Autres",
+                "non-voter": "Je ne voterai pas",
+                "not-eligible": "Je ne suis pas éligible",
+                "not-sure": "Je ne suis pas sûr.e",
+                "none": "Pas de réponse"
+              }
+            }
+          }
+        },
+        "analysis-banner": {
+          "heading": "Voulez-vous faire don de vos réponses à la science?",
+          "explanation": "Vous pouvez aider {someone} à mieux comprendre cette élection en faisant don de vos réponses et résultats à la recherche scientifique. Nous ne sauvegardons que des données anonymes qui ne permettent pas de remonter jusqu'à vous.",
+          "send": "Soumettre les données statistiques maintenant",
+          "close": "Non, continuer la lecture"
+        },
+        "answer": {
+          "skip": {
+            "status-text": "inconnu",
+            "content": "Le parti '{party}' n'a fourni aucune réponse ou position concernant cette déclaration."
+          },
+          "empty": {
+            "content": "Le parti '{party}' n'a pas fourni aucune justification pour expliquer sa position concernant cette déclaration."
+          }
+        },
+        "section": {
+          "heading": "Leurs réponses",
+          "explanation": "Les partis fournissent généralement des positions pour chaque déclaration afin d'expliquer leur raisonnement. Il n'est pas toujours évident de savoir pourquoi un parti adopte une certaine position. Il est donc recommandé de lire ces déclarations ou les manifestes électoraux respectifs.",
+          "region-aria": "{count} déclarations sur un total de {total}"
+        },
+        "friends-position": {
+          "answer-aria": "{name}: {position}",
+          "skip": "Sauté"
+        },
+        "kiosk-mode-hint": {
+          "heading": "Veuillez réinitialiser quand vous avez terminé",
+          "explanation": "Prenez votre temps pour lire et comparer les réponses ci-dessous. Lorsque vous avez terminé, vous pouvez réinitialiser la boussole électorale ici pour la personne suivante. Cela supprimera également vos propres réponses. Conseil: vous pouvez également trouver un bouton de réinitialisation dans le menu. Merci de votre attention!",
+          "reset": "Réinitialiser"
+        }
+      },
+      "footer": {
+        "section": {
+          "explanation": "Cette boussole électorale est basée sur le projet open source libre {0}.",
+          "oec": "OpenElectionCompass"
+        }
+      }
+    }
+  },
+  "validation": {
+    "names": {
+      "name": "Nom",
+      "remote-peer-id": "Appareil d'un.e ami.e"
+    },
+    "fields": {
+      "name": {
+        "min": "Veuillez entrer un nom.",
+        "regex": "Uniquement des lettres, des chiffres et des espaces, pas de caractères spéciaux.",
+        "required": "Veuillez entrer un nom."
+      }
+    }
+  },
+  "algorithm": {
+    "options": {
+      "strongly-approve": {
+        "button": "Entièrement d’accord",
+        "button-aria": "Totalement d'accord - cliquez ici pour approuver totalement cette déclaration!",
+        "badge": "Vous êtes fortement d'accord",
+        "badge-aria": "Vous êtes fortement d'accord avec cette déclaration.",
+        "status": "entièrement d’accord",
+        "answer-aria": "Le parti '{party}' approuve fortement cette affirmation avec la réponse suivante : {answer}"
+      },
+      "approve": {
+        "button": "Approuver",
+        "button-aria": "D'accord - cliquez ici pour approuver cette déclaration!",
+        "badge": "Vous avez approuvé",
+        "badge-aria": "Vous avez approuvé cette déclaration.",
+        "status": "approuve",
+        "answer-aria": "Le parti '{party}' approuve cette affirmation avec la réponse suivante: {answer}"
+      },
+      "neutral": {
+        "button": "Neutre",
+        "button-aria": "Neutre - cliquez ici pour rester neutre par rapport à cette déclaration!",
+        "badge": "Vous êtes neutre",
+        "badge-aria": "Vous êtes neutre par rapport à cette déclaration.",
+        "status": "neutre",
+        "answer-aria": "Le parti '{party}' reste neutre par rapport à cette affirmation avec la réponse suivante: {answer}"
+      },
+      "partly": {
+        "button": "En partie",
+        "button-aria": "En partie - cliquez ici pour être en partie d'accord avec cette affirmation!",
+        "badge": "Vous êtes en partie d'accord",
+        "badge-aria": "Vous êtres en partie d'accord avec cette déclaration.",
+        "status": "en partie",
+        "answer-aria": "Le parti '{party}' est en partie d'accord avec cette affirmation avec la réponse suivante: {answer}"
+      },
+      "reject": {
+        "button": "Contre",
+        "button-aria": "Contre - Cliquez ici pour être contre cette déclaration!",
+        "badge": "Vous êtes contre",
+        "badge-aria": "Vous êtes contre cette déclaration.",
+        "status": "est contre",
+        "answer-aria": "Le parti '{party}' est contre cette affirmation avec la réponse suivante: {answer}"
+      },
+      "strongly-reject": {
+        "button": "Entièrement contre",
+        "button-aria": "Entièrement contre - cliquez ici pour rejeter totalement cette déclaration!",
+        "badge": "Vous êtes entièrement contre",
+        "badge-aria": "Vous êtes entièrement contre cette déclaration.",
+        "status": "est entièrement contre",
+        "answer-aria": "Le parti '{party}' est entièrement contre cette affirmation avec la réponse suivante : {answer}"
+      }
+    }
+  }
+}
