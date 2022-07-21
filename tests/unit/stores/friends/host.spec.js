@@ -60,42 +60,60 @@ describe('Friends Store (Host)', () => {
     expect(state.guests[0].connection.foo).toBe('baz');
   });
 
-  it('updates a guest\'s profile', () => {
+  it("updates a guest's profile", () => {
     const state = factory();
     VuexFriendsHostModule.mutations.addGuest(state, { peer: 'abc', foo: 'bar' });
     expect(state.guests[0].profile.name).toBeNull();
 
-    let result = VuexFriendsHostModule.mutations.updateGuestProfile(state, { peerId: 'abc', profile: { name: 'Sophinka' } });
+    let result = VuexFriendsHostModule.mutations.updateGuestProfile(state, {
+      peerId: 'abc',
+      profile: { name: 'Sophinka' },
+    });
     expect(result).toBe(true);
     expect(state.guests[0].profile.name).toBe('Sophinka');
 
-    result = VuexFriendsHostModule.mutations.updateGuestProfile(state, { peerId: 'def', profile: { name: 'Joscha' } });
+    result = VuexFriendsHostModule.mutations.updateGuestProfile(state, {
+      peerId: 'def',
+      profile: { name: 'Joscha' },
+    });
     expect(result).toBe(false);
   });
 
-  it('updates a guest\'s answers', () => {
+  it("updates a guest's answers", () => {
     const state = factory();
     VuexFriendsHostModule.mutations.addGuest(state, { peer: 'abc', foo: 'bar' });
     expect(state.guests[0].answers).toStrictEqual([]);
 
-    let result = VuexFriendsHostModule.mutations.updateGuestAnswers(state, { peerId: 'abc', answers: ['approve', null] });
+    let result = VuexFriendsHostModule.mutations.updateGuestAnswers(state, {
+      peerId: 'abc',
+      answers: ['approve', null],
+    });
     expect(result).toBe(true);
     expect(state.guests[0].answers).toStrictEqual(['approve', null]);
 
-    result = VuexFriendsHostModule.mutations.updateGuestAnswers(state, { peerId: 'def', answers: ['approve', null] });
+    result = VuexFriendsHostModule.mutations.updateGuestAnswers(state, {
+      peerId: 'def',
+      answers: ['approve', null],
+    });
     expect(result).toBe(false);
   });
 
-  it('updates a guest\'s connection status', () => {
+  it("updates a guest's connection status", () => {
     const state = factory();
     VuexFriendsHostModule.mutations.addGuest(state, { peer: 'abc', foo: 'bar' });
     expect(state.guests[0].connectionStatus).toBe('CONNECTING');
 
-    let result = VuexFriendsHostModule.mutations.updateGuestConnectionStatus(state, { peerId: 'abc', connectionStatus: 'CONNECTED' });
+    let result = VuexFriendsHostModule.mutations.updateGuestConnectionStatus(state, {
+      peerId: 'abc',
+      connectionStatus: 'CONNECTED',
+    });
     expect(result).toBe(true);
     expect(state.guests[0].connectionStatus).toBe('CONNECTED');
 
-    result = VuexFriendsHostModule.mutations.updateGuestConnectionStatus(state, { peerId: 'def', connectionStatus: 'CONNECTED' });
+    result = VuexFriendsHostModule.mutations.updateGuestConnectionStatus(state, {
+      peerId: 'def',
+      connectionStatus: 'CONNECTED',
+    });
     expect(result).toBe(false);
   });
 
@@ -242,11 +260,7 @@ describe('Friends Store (Host)', () => {
         theses: {
           namespaced: true,
           state: {
-            theses: [
-              { status: 'approve' },
-              { status: null },
-              { status: null },
-            ],
+            theses: [{ status: 'approve' }, { status: null }, { status: null }],
           },
           getters: {
             theses: (thesesState) => thesesState.theses,
@@ -270,28 +284,52 @@ describe('Friends Store (Host)', () => {
 
     const sendFunctionABC = vi.fn();
     store.commit('friends/host/addGuest', { peer: 'abc', send: sendFunctionABC });
-    store.commit('friends/host/updateGuestConnectionStatus', { peerId: 'abc', connectionStatus: 'CONNECTED' });
-    store.commit('friends/host/updateGuestProfile', { peerId: 'abc', profile: { name: 'Sophinka' } });
-    store.commit('friends/host/updateGuestAnswers', { peerId: 'abc', answers: ['approve', null, null] });
+    store.commit('friends/host/updateGuestConnectionStatus', {
+      peerId: 'abc',
+      connectionStatus: 'CONNECTED',
+    });
+    store.commit('friends/host/updateGuestProfile', {
+      peerId: 'abc',
+      profile: { name: 'Sophinka' },
+    });
+    store.commit('friends/host/updateGuestAnswers', {
+      peerId: 'abc',
+      answers: ['approve', null, null],
+    });
     store.commit('friends/host/acceptGuest', { peerId: 'abc' });
 
     const sendFunctionDEF = vi.fn();
     store.commit('friends/host/addGuest', { peer: 'def', send: sendFunctionDEF });
-    store.commit('friends/host/updateGuestConnectionStatus', { peerId: 'def', connectionStatus: 'CONNECTED' });
+    store.commit('friends/host/updateGuestConnectionStatus', {
+      peerId: 'def',
+      connectionStatus: 'CONNECTED',
+    });
     store.commit('friends/host/updateGuestProfile', { peerId: 'def', profile: { name: 'Jonas' } });
-    store.commit('friends/host/updateGuestAnswers', { peerId: 'def', answers: ['reject', 'skip', null] });
+    store.commit('friends/host/updateGuestAnswers', {
+      peerId: 'def',
+      answers: ['reject', 'skip', null],
+    });
     store.commit('friends/host/acceptGuest', { peerId: 'def' });
 
     const sendFunctionGHI = vi.fn();
     store.commit('friends/host/addGuest', { peer: 'ghi', send: sendFunctionGHI });
-    store.commit('friends/host/updateGuestConnectionStatus', { peerId: 'ghi', connectionStatus: 'CONNECTING' });
+    store.commit('friends/host/updateGuestConnectionStatus', {
+      peerId: 'ghi',
+      connectionStatus: 'CONNECTING',
+    });
     store.commit('friends/host/updateGuestProfile', { peerId: 'ghi', profile: { name: 'Anna' } });
-    store.commit('friends/host/updateGuestAnswers', { peerId: 'ghi', answers: ['reject', 'skip', null] });
+    store.commit('friends/host/updateGuestAnswers', {
+      peerId: 'ghi',
+      answers: ['reject', 'skip', null],
+    });
     store.commit('friends/host/acceptGuest', { peerId: 'ghi' });
 
     const sendFunctionJKL = vi.fn();
     store.commit('friends/host/addGuest', { peer: 'jkl', send: sendFunctionJKL });
-    store.commit('friends/host/updateGuestConnectionStatus', { peerId: 'jkl', connectionStatus: 'CONNECTED' });
+    store.commit('friends/host/updateGuestConnectionStatus', {
+      peerId: 'jkl',
+      connectionStatus: 'CONNECTED',
+    });
     store.commit('friends/host/updateGuestProfile', { peerId: 'jkl', profile: { name: 'Joscha' } });
     store.commit('friends/host/updateGuestAnswers', { peerId: 'jkl', answers: [null, null, null] });
     // -> Joscha hasn't been accepted yet

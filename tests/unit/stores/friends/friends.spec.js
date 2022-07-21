@@ -63,10 +63,7 @@ describe('Friends Store (General)', () => {
       friendFactory('ABCDEFG3'),
     ];
     expect(VuexFriendsModule.getters.friends(state)).toStrictEqual(state.friends);
-    const newFriends = [
-      friendFactory('ABCDEFG4'),
-      friendFactory('ABCDEFG5'),
-    ];
+    const newFriends = [friendFactory('ABCDEFG4'), friendFactory('ABCDEFG5')];
     VuexFriendsModule.mutations.overwriteFriends(state, { friends: newFriends });
     expect(VuexFriendsModule.getters.friends(state)).toStrictEqual(newFriends);
     VuexFriendsModule.mutations.clearFriends(state);
@@ -83,8 +80,12 @@ describe('Friends Store (General)', () => {
         { status: 'skip' },
       ],
     };
-    expect(VuexFriendsModule.getters.answers(state, {}, {}, rootGetters))
-      .toStrictEqual(['approve', 'approve', 'reject', 'skip']);
+    expect(VuexFriendsModule.getters.answers(state, {}, {}, rootGetters)).toStrictEqual([
+      'approve',
+      'approve',
+      'reject',
+      'skip',
+    ]);
   });
 
   it('creates a peer and waits for connection to open and close, while setting the signal accordingly', async () => {

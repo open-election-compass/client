@@ -22,10 +22,7 @@
         <img :src="logo" :alt="$t(`parties.${index}.name`)" />
       </div>
       <div class="party-item__caption" aria-hidden="true">
-        <IconDisplay
-          :name="selected ? 'check' : 'circle'"
-          class="party-item__icon"
-        />
+        <IconDisplay :name="selected ? 'check' : 'circle'" class="party-item__icon" />
         <div class="party-item__details" aria-hidden="true">
           <span class="party-item__short">{{ $t(`parties.${index}.short`) }}</span>
           <span class="party-item__name">{{ $t(`parties.${index}.name`) }}</span>
@@ -49,7 +46,8 @@ export default {
     },
     logo: {
       type: String,
-      default: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEXe4+j77++FAAAACklEQVR4AWNhAAAACgAF3HyfDQAAAABJRU5ErkJggg==',
+      default:
+        'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEXe4+j77++FAAAACklEQVR4AWNhAAAACgAF3HyfDQAAAABJRU5ErkJggg==',
     },
   },
   computed: {

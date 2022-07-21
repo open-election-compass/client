@@ -12,7 +12,7 @@
       {
         theme: 'neutral',
         caption: $t('elements.friends-join-modal.cancel'),
-        eventName: 'close'
+        eventName: 'close',
       },
       {
         theme: 'positive',
@@ -35,7 +35,7 @@
         :rules="{
           required: true,
           min: 1,
-          regex: new RegExp(/^[\p{Letter}\p{Mark}\d\s]*$/, 'u')
+          regex: new RegExp(/^[\p{Letter}\p{Mark}\d\s]*$/, 'u'),
         }"
         v-model:value="name"
       />
@@ -53,20 +53,23 @@
       :items="[
         {
           alias: 'introduction',
-          caption: $t('elements.friends-join-modal.introduction.heading')
-        }, {
+          caption: $t('elements.friends-join-modal.introduction.heading'),
+        },
+        {
           alias: 'security',
-          caption: $t('elements.friends-join-modal.security.heading')
-        }, {
+          caption: $t('elements.friends-join-modal.security.heading'),
+        },
+        {
           alias: 'registration',
-          caption: $t('elements.friends-join-modal.registration.heading')
+          caption: $t('elements.friends-join-modal.registration.heading'),
         },
       ]"
     >
       <template v-slot:introduction>
         <p
-          v-for="
-            (explanation, index) in $tm('elements.friends-join-modal.introduction.explanation')"
+          v-for="(explanation, index) in $tm(
+            'elements.friends-join-modal.introduction.explanation'
+          )"
           :key="index"
         >
           {{ explanation }}
@@ -74,8 +77,7 @@
       </template>
       <template v-slot:security>
         <p
-          v-for="
-            (explanation, index) in $tm('elements.friends-join-modal.security.explanation')"
+          v-for="(explanation, index) in $tm('elements.friends-join-modal.security.explanation')"
           :key="index"
         >
           {{ explanation }}
@@ -83,8 +85,9 @@
       </template>
       <template v-slot:registration>
         <p
-          v-for="
-            (explanation, index) in $tm('elements.friends-join-modal.registration.explanation')"
+          v-for="(explanation, index) in $tm(
+            'elements.friends-join-modal.registration.explanation'
+          )"
           :key="index"
         >
           {{ explanation }}

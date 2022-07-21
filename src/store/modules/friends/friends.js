@@ -67,9 +67,7 @@ export default {
      * Creates a new Peer with a random ID using peer.js. This is necessary to either host a session
      * or join a session. The connection status of this Peer is made available in the signal prop.
      */
-    createOwnPeer({
-      commit, getters, rootGetters,
-    }, { force }) {
+    createOwnPeer({ commit, getters, rootGetters }, { force }) {
       return new Promise((resolve) => {
         // Check for existing Peer.js instance
         if (['CONNECTING', 'CONNECTED'].includes(getters.signal) && force !== true) {

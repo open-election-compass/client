@@ -98,7 +98,7 @@ export default {
       return this.reset();
     });
   },
-  beforeDestroy() {
+  beforeUnmount() {
     window.removeEventListener('mousemove', this.userActivityThrottler);
     window.removeEventListener('scroll', this.userActivityThrottler);
     window.removeEventListener('keydown', this.userActivityThrottler);

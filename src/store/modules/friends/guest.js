@@ -38,41 +38,46 @@ export default {
         commit({ type: 'friends/clearFriends' }, { root: true });
         commit('setStatus', 'CONNECTING');
 
-        dispatch('friends/createOwnPeer', { force: false }, { root: true }).then((ownPeer) => {
-          // Immediately close incoming connections in guest mode
-          ownPeer.on('connection', (incomingConnection) => {
-            incomingConnection.close();
-          });
+        dispatch('friends/createOwnPeer', { force: false }, { root: true })
+          .then((ownPeer) => {
+            // Immediately close incoming connections in guest mode
+            ownPeer.on('connection', (incomingConnection) => {
+              incomingConnection.close();
+            });
 
-          // Connect to host
-          const hostConnection = ownPeer.connect(remoteId);
-          commit('setHostConnection', hostConnection);
+            // Connect to host
+            const hostConnection = ownPeer.connect(remoteId);
+            commit('setHostConnection', hostConnection);
 
-          // Is connection to host open?
-          hostConnection.on('open', () => {
-            commit('setStatus', 'OPEN');
-            dispatch('sendProfileToHost');
-            dispatch('sendAnswersToHost');
-            resolve(hostConnection);
-          });
+            // Is connection to host open?
+            hostConnection.on('open', () => {
+              commit('setStatus', 'OPEN');
+              dispatch('sendProfileToHost');
+              dispatch('sendAnswersToHost');
+              resolve(hostConnection);
+            });
 
-          // Listen for updates
-          hostConnection.on('data', (incomingData) => {
-            incomingDataSchema.validateSync(incomingData);
-            if (incomingData.action === 'SEND_FRIEND_LIST_TO_GUESTS' && rootGetters['friends/mode'] === 'GUEST') {
-              const friends = friendsSchema.validateSync(incomingData.payload.friends);
-              commit('friends/overwriteFriends', { friends }, { root: true });
-            }
-          });
+            // Listen for updates
+            hostConnection.on('data', (incomingData) => {
+              incomingDataSchema.validateSync(incomingData);
+              if (
+                incomingData.action === 'SEND_FRIEND_LIST_TO_GUESTS' &&
+                rootGetters['friends/mode'] === 'GUEST'
+              ) {
+                const friends = friendsSchema.validateSync(incomingData.payload.friends);
+                commit('friends/overwriteFriends', { friends }, { root: true });
+              }
+            });
 
-          // Is connection to host lost?
-          hostConnection.on('close', () => {
-            commit('setStatus', 'DISCONNECTED');
-            reject(new Error('Connection closed.'));
+            // Is connection to host lost?
+            hostConnection.on('close', () => {
+              commit('setStatus', 'DISCONNECTED');
+              reject(new Error('Connection closed.'));
+            });
+          })
+          .catch((error) => {
+            reject(error);
           });
-        }).catch((error) => {
-          reject(error);
-        });
       });
     },
 

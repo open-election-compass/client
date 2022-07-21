@@ -21,12 +21,14 @@
       </div>
       <component
         v-else-if="currentField"
-        :is="{
-          'text': 'FieldInput',
-          'number': 'FieldInput',
-          'switch': 'FieldSwitch',
-          'select': 'FieldSelect',
-        }[currentQuestion.type]"
+        :is="
+          {
+            text: 'FieldInput',
+            number: 'FieldInput',
+            switch: 'FieldSwitch',
+            select: 'FieldSelect',
+          }[currentQuestion.type]
+        "
         :key="currentQuestion.alias"
         :alias="currentQuestion.alias"
         :type="currentQuestion.type"
@@ -35,13 +37,17 @@
         :rules="currentQuestion.rules"
         :placeholder="
           $te(`views.home.compare.additional-analysis.fields.${currentQuestion.alias}.placeholder`)
-          ? $t(`views.home.compare.additional-analysis.fields.${currentQuestion.alias}.placeholder`)
-          : undefined
+            ? $t(
+                `views.home.compare.additional-analysis.fields.${currentQuestion.alias}.placeholder`
+              )
+            : undefined
         "
         :description="
           $te(`views.home.compare.additional-analysis.fields.${currentQuestion.alias}.description`)
-          ? $t(`views.home.compare.additional-analysis.fields.${currentQuestion.alias}.description`)
-          : undefined
+            ? $t(
+                `views.home.compare.additional-analysis.fields.${currentQuestion.alias}.description`
+              )
+            : undefined
         "
         :options="currentQuestion.options"
         v-model:value="currentFieldValue"
@@ -84,7 +90,7 @@ export default {
     },
     nextQuestion() {
       const currentIndex = this.questions.findIndex(
-        (question) => question.alias === this.currentQuestionAlias,
+        (question) => question.alias === this.currentQuestionAlias
       );
       return this.questions[currentIndex + 1];
     },
@@ -112,11 +118,15 @@ export default {
           options: [
             {
               value: 'female',
-              option: this.$t('views.home.compare.additional-analysis.fields.gender.options.female'),
+              option: this.$t(
+                'views.home.compare.additional-analysis.fields.gender.options.female'
+              ),
             },
             {
               value: 'diverse',
-              option: this.$t('views.home.compare.additional-analysis.fields.gender.options.diverse'),
+              option: this.$t(
+                'views.home.compare.additional-analysis.fields.gender.options.diverse'
+              ),
             },
             {
               value: 'male',
@@ -137,27 +147,39 @@ export default {
           options: [
             {
               value: 'student',
-              option: this.$t('views.home.compare.additional-analysis.fields.education.options.student'),
+              option: this.$t(
+                'views.home.compare.additional-analysis.fields.education.options.student'
+              ),
             },
             {
               value: 'nothing',
-              option: this.$t('views.home.compare.additional-analysis.fields.education.options.nothing'),
+              option: this.$t(
+                'views.home.compare.additional-analysis.fields.education.options.nothing'
+              ),
             },
             {
               value: 'lower',
-              option: this.$t('views.home.compare.additional-analysis.fields.education.options.lower'),
+              option: this.$t(
+                'views.home.compare.additional-analysis.fields.education.options.lower'
+              ),
             },
             {
               value: 'higher',
-              option: this.$t('views.home.compare.additional-analysis.fields.education.options.higher'),
+              option: this.$t(
+                'views.home.compare.additional-analysis.fields.education.options.higher'
+              ),
             },
             {
               value: 'academic',
-              option: this.$t('views.home.compare.additional-analysis.fields.education.options.academic'),
+              option: this.$t(
+                'views.home.compare.additional-analysis.fields.education.options.academic'
+              ),
             },
             {
               value: 'none',
-              option: this.$t('views.home.compare.additional-analysis.fields.education.options.none'),
+              option: this.$t(
+                'views.home.compare.additional-analysis.fields.education.options.none'
+              ),
             },
           ],
           rules: 'required',
@@ -178,15 +200,21 @@ export default {
             });
             options.push({
               value: '###NON_VOTER###',
-              option: this.$t('views.home.compare.additional-analysis.fields.party.options.non-voter'),
+              option: this.$t(
+                'views.home.compare.additional-analysis.fields.party.options.non-voter'
+              ),
             });
             options.push({
               value: '###NOT_ELIGIBLE###',
-              option: this.$t('views.home.compare.additional-analysis.fields.party.options.not-eligible'),
+              option: this.$t(
+                'views.home.compare.additional-analysis.fields.party.options.not-eligible'
+              ),
             });
             options.push({
               value: '###NOT_SURE###',
-              option: this.$t('views.home.compare.additional-analysis.fields.party.options.not-sure'),
+              option: this.$t(
+                'views.home.compare.additional-analysis.fields.party.options.not-sure'
+              ),
             });
             options.push({
               value: '###NONE###',
@@ -247,9 +275,10 @@ export default {
       // Start / Next Button
       if (this.currentQuestionAlias !== 'end') {
         buttons.push({
-          caption: this.currentQuestionAlias === 'start'
-            ? this.$t('views.home.compare.additional-analysis.buttons.start')
-            : this.$t('views.home.compare.additional-analysis.buttons.proceed'),
+          caption:
+            this.currentQuestionAlias === 'start'
+              ? this.$t('views.home.compare.additional-analysis.buttons.start')
+              : this.$t('views.home.compare.additional-analysis.buttons.proceed'),
           theme: 'positive',
           eventName: 'proceed',
         });
@@ -270,25 +299,13 @@ export default {
         this.currentQuestionAlias = this.nextQuestion.alias || undefined;
         return;
       }
-      this.$refs.field.animate(
-        [
-          { opacity: 1 },
-          { opacity: 0 },
-        ],
-        {
-          duration: 100,
-        },
-      ).onfinish = () => {
+      this.$refs.field.animate([{ opacity: 1 }, { opacity: 0 }], {
+        duration: 100,
+      }).onfinish = () => {
         this.currentQuestionAlias = this.nextQuestion.alias || undefined;
-        this.$refs.field.animate(
-          [
-            { opacity: 0 },
-            { opacity: 1 },
-          ],
-          {
-            duration: 400,
-          },
-        );
+        this.$refs.field.animate([{ opacity: 0 }, { opacity: 1 }], {
+          duration: 400,
+        });
       };
     },
   },

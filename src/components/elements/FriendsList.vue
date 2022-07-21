@@ -4,11 +4,7 @@
       {{ $t('elements.friends-list.empty') }}
     </p>
     <table v-else class="friends-list__friends">
-      <tr
-        v-for="friend in friends"
-        :key="friend.peerId"
-        class="friends-list__friend"
-      >
+      <tr v-for="friend in friends" :key="friend.peerId" class="friends-list__friend">
         <td>
           <IconDisplay
             v-if="friend.peerId === host.peer"

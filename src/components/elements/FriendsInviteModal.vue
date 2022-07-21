@@ -12,7 +12,7 @@
       {
         theme: 'neutral',
         caption: $t('elements.friends-invite-modal.cancel'),
-        eventName: 'close'
+        eventName: 'close',
       },
       {
         theme: 'positive',
@@ -43,20 +43,23 @@
       :items="[
         {
           alias: 'introduction',
-          caption: $t('elements.friends-invite-modal.introduction.heading')
-        }, {
+          caption: $t('elements.friends-invite-modal.introduction.heading'),
+        },
+        {
           alias: 'security',
-          caption: $t('elements.friends-invite-modal.security.heading')
-        }, {
+          caption: $t('elements.friends-invite-modal.security.heading'),
+        },
+        {
           alias: 'registration',
-          caption: $t('elements.friends-invite-modal.registration.heading')
+          caption: $t('elements.friends-invite-modal.registration.heading'),
         },
       ]"
     >
       <template v-slot:introduction>
         <p
-          v-for="
-            (explanation, index) in $tm('elements.friends-invite-modal.introduction.explanation')"
+          v-for="(explanation, index) in $tm(
+            'elements.friends-invite-modal.introduction.explanation'
+          )"
           :key="index"
         >
           {{ explanation }}
@@ -64,8 +67,7 @@
       </template>
       <template v-slot:security>
         <p
-          v-for="
-            (explanation, index) in $tm('elements.friends-invite-modal.security.explanation')"
+          v-for="(explanation, index) in $tm('elements.friends-invite-modal.security.explanation')"
           :key="index"
         >
           {{ explanation }}
@@ -73,8 +75,9 @@
       </template>
       <template v-slot:registration>
         <p
-          v-for="
-            (explanation, index) in $tm('elements.friends-invite-modal.registration.explanation')"
+          v-for="(explanation, index) in $tm(
+            'elements.friends-invite-modal.registration.explanation'
+          )"
           :key="index"
         >
           {{ explanation }}

@@ -10,7 +10,7 @@
         :class="[
           'guests-list__guest',
           `guests-list__guest--connection-status-${guest.connectionStatus.toLowerCase()}`,
-          `guests-list__guest--${guest.accepted ? 'accepted' : 'not-accepted'}`
+          `guests-list__guest--${guest.accepted ? 'accepted' : 'not-accepted'}`,
         ]"
       >
         <td>
@@ -105,7 +105,8 @@ export default {
     td:first-child {
       padding: 1.2rem 0.5rem 1.2rem 1rem;
     }
-    td:first-child, td:last-child {
+    td:first-child,
+    td:last-child {
       width: 0;
     }
     td:last-child small {
@@ -122,12 +123,14 @@ export default {
 }
 
 @keyframes pulsate {
-  0%, 100%, 50% {
-    opacity: 1
+  0%,
+  100%,
+  50% {
+    opacity: 1;
   }
   25%,
   75% {
-    opacity: 0.5
+    opacity: 0.5;
   }
 }
 </style>

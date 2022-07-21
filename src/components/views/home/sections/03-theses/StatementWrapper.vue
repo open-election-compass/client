@@ -48,7 +48,7 @@
       <ImportantButton
         :name="`important-${index}`"
         v-model:factor="factor"
-        :disabled="status && direction === 'neutral' || maxImportantReached"
+        :disabled="(status && direction === 'neutral') || maxImportantReached"
         :tooltip-disabled="!maxImportantReached || direction === 'neutral' || status === 'skip'"
         :max-important="maxImportant"
       />
@@ -130,9 +130,9 @@ export default {
       },
       set(value) {
         if (
-          (this.status && this.direction === 'neutral')
-          || this.status === 'skip'
-          || this.maxImportantReached
+          (this.status && this.direction === 'neutral') ||
+          this.status === 'skip' ||
+          this.maxImportantReached
         ) {
           // The important-button is greyed out, so we're stopping here. Instead of doing this check
           // here, we could simply disable the checkbox of the important-button, but it would then
@@ -229,7 +229,7 @@ export default {
   @media (min-width: 48em) {
     margin: 3em 1.5em 0 1.5em;
   }
-   @media (min-width: 64em) {
+  @media (min-width: 64em) {
     margin-top: 6em;
   }
 }

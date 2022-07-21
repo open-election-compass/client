@@ -64,6 +64,6 @@ export default function loadFontAwesome(app: App) {
     faUndo,
     faUnlink,
     faUserFriends,
-    faUserPlus,
+    faUserPlus
   );
 }

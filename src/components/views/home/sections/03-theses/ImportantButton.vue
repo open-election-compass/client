@@ -1,12 +1,18 @@
 <template>
-  <div :class="{
-    'important-button': true,
-    'important-button--disabled': disabled,
-    'important-button--active': active,
-  }">
+  <div
+    :class="{
+      'important-button': true,
+      'important-button--disabled': disabled,
+      'important-button--active': active,
+    }"
+  >
     <TippyTooltip
       class="tooltip"
-      :content="tooltipDisabled ? undefined : $tc('views.home.theses.important-button.too-many-important', maxImportant)"
+      :content="
+        tooltipDisabled
+          ? undefined
+          : $tc('views.home.theses.important-button.too-many-important', maxImportant)
+      "
       :a11y="false"
       trigger="mouseenter focusin"
     >

@@ -50,7 +50,9 @@ export default {
     },
   },
   computed: {
-    largeIcons() { return this.$store.getters['algorithm/algorithm'].options.length > 3; },
+    largeIcons() {
+      return this.$store.getters['algorithm/algorithm'].options.length > 3;
+    },
     cssVariables() {
       return {
         '--darker-color': this.darkerColor,

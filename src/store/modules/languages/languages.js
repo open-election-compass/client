@@ -34,7 +34,9 @@ export default {
     addLanguage(state, language) {
       if (!officialLanguages.includes(language.code)) {
         // eslint-disable-next-line no-console
-        console.warn(`The language code '${language.code}' is not recognized as an officially supported language. This is not a concern if you added a custom language. If you want to expand the official language support, please get in touch with the maintainers.`);
+        console.warn(
+          `The language code '${language.code}' is not recognized as an officially supported language. This is not a concern if you added a custom language. If you want to expand the official language support, please get in touch with the maintainers.`
+        );
       }
       if (typeof language.overwrites === 'object' && language.overwrites !== null) {
         i18n.global.mergeLocaleMessage(language.code, language.overwrites);

@@ -26,8 +26,7 @@ export default {
      */
     addGuest(state, incomingConnection) {
       // If guest has connected before, update the connection
-      const existing = state.guests
-        .find((guest) => guest.peerId === incomingConnection.peer);
+      const existing = state.guests.find((guest) => guest.peerId === incomingConnection.peer);
       if (existing) {
         existing.connection = incomingConnection;
         return;
@@ -52,8 +51,7 @@ export default {
      * if guest connection is not found.
      */
     updateGuestProfile(state, { peerId, profile }) {
-      const existing = state.guests
-        .find((guest) => guest.peerId === peerId);
+      const existing = state.guests.find((guest) => guest.peerId === peerId);
       if (!existing) {
         return false;
       }
@@ -67,8 +65,7 @@ export default {
      * guest connection is not found.
      */
     updateGuestAnswers(state, { peerId, answers }) {
-      const existing = state.guests
-        .find((guest) => guest.peerId === peerId);
+      const existing = state.guests.find((guest) => guest.peerId === peerId);
       if (!existing) {
         return false;
       }
@@ -82,8 +79,7 @@ export default {
      * Returns false if guest connection is not found.
      */
     updateGuestConnectionStatus(state, { peerId, connectionStatus }) {
-      const existing = state.guests
-        .find((guest) => guest.peerId === peerId);
+      const existing = state.guests.find((guest) => guest.peerId === peerId);
       if (!existing) {
         return false;
       }
@@ -96,8 +92,7 @@ export default {
      * that connection. Returns false if guest connection is not found.
      */
     acceptGuest(state, { peerId }) {
-      const existing = state.guests
-        .find((guest) => guest.peerId === peerId);
+      const existing = state.guests.find((guest) => guest.peerId === peerId);
       if (!existing) {
         return false;
       }
@@ -120,14 +115,16 @@ export default {
         commit({ type: 'friends/clearFriends' }, { root: true });
         commit('clearGuests');
 
-        dispatch('friends/createOwnPeer', { force: false }, { root: true }).then((ownPeer) => {
-          ownPeer.on('connection', (incomingConnection) => {
-            dispatch('addGuest', { incomingConnection });
+        dispatch('friends/createOwnPeer', { force: false }, { root: true })
+          .then((ownPeer) => {
+            ownPeer.on('connection', (incomingConnection) => {
+              dispatch('addGuest', { incomingConnection });
+            });
+            resolve(ownPeer);
+          })
+          .catch((error) => {
+            reject(error);
           });
-          resolve(ownPeer);
-        }).catch((error) => {
-          reject(error);
-        });
       });
     },
 
@@ -152,10 +149,16 @@ export default {
 
       // Keep tabs on connection
       incomingConnection.on('open', () => {
-        commit('updateGuestConnectionStatus', { peerId: incomingConnection.peer, connectionStatus: 'CONNECTED' });
+        commit('updateGuestConnectionStatus', {
+          peerId: incomingConnection.peer,
+          connectionStatus: 'CONNECTED',
+        });
       });
       incomingConnection.on('close', () => {
-        commit('updateGuestConnectionStatus', { peerId: incomingConnection.peer, connectionStatus: 'DISCONNECTED' });
+        commit('updateGuestConnectionStatus', {
+          peerId: incomingConnection.peer,
+          connectionStatus: 'DISCONNECTED',
+        });
       });
     },
 
@@ -169,12 +172,14 @@ export default {
         return;
       }
       // Filter guests and omit some details
-      const friends = guests.filter((guest) => guest.accepted).map((guest) => ({
-        peerId: guest.peerId,
-        profile: guest.profile,
-        answers: guest.answers,
-        dataUpdatedAt: guest.dataUpdatedAt,
-      }));
+      const friends = guests
+        .filter((guest) => guest.accepted)
+        .map((guest) => ({
+          peerId: guest.peerId,
+          profile: guest.profile,
+          answers: guest.answers,
+          dataUpdatedAt: guest.dataUpdatedAt,
+        }));
 
       // Add host to list of friends, since it is not part of the guests array.
       friends.unshift({
@@ -187,11 +192,13 @@ export default {
       });
 
       // Send updated friend list to all guests
-      guests.filter((guest) => guest.accepted).forEach((guest) => {
-        if (guest.connectionStatus === 'CONNECTED') {
-          guest.connection.send({ action: 'SEND_FRIEND_LIST_TO_GUESTS', payload: { friends } });
-        }
-      });
+      guests
+        .filter((guest) => guest.accepted)
+        .forEach((guest) => {
+          if (guest.connectionStatus === 'CONNECTED') {
+            guest.connection.send({ action: 'SEND_FRIEND_LIST_TO_GUESTS', payload: { friends } });
+          }
+        });
 
       // Update own friend list
       commit('friends/overwriteFriends', { friends }, { root: true });

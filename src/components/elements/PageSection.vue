@@ -1,9 +1,12 @@
 <template>
-  <component :is="tag" :class="{
-    'page-section': true,
-    'page-section--full': full,
-    'page-section--padding': padding,
-  }">
+  <component
+    :is="tag"
+    :class="{
+      'page-section': true,
+      'page-section--full': full,
+      'page-section--padding': padding,
+    }"
+  >
     <div class="page-section__container">
       <div class="page-section__slot">
         <slot></slot>

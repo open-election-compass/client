@@ -1,12 +1,6 @@
 <template>
-  <div
-    class="main-navigation"
-    :class="active ? 'main-navigation--active' : ''"
-  >
-    <button
-      @click="toggleMenu()"
-      class="main-navigation__toggle"
-    >
+  <div class="main-navigation" :class="active ? 'main-navigation--active' : ''">
+    <button @click="toggleMenu()" class="main-navigation__toggle">
       <bdi>
         <span class="main-navigation__toggle-caption">
           {{ $t('elements.main-navigation.menu') }}
@@ -24,18 +18,14 @@
         class="main-navigation__menu"
       >
         <ul class="main-navigation__groups">
-          <template
-            v-for="group in groups"
-          >
-            <li
-              v-if="group.links.length > 0"
-              :key="group.alias"
-              class="main-navigation__group"
-            >
+          <template v-for="group in groups">
+            <li v-if="group.links.length > 0" :key="group.alias" class="main-navigation__group">
               <button class="main-navigation__group-toggle" @click="toggleGroup(group.alias)">
                 <span>{{ group.caption }}</span>
                 &nbsp;
-                <IconDisplay :name="!hiddenGroups.includes(group.alias) ? 'angle-down' : 'angle-up'" />
+                <IconDisplay
+                  :name="!hiddenGroups.includes(group.alias) ? 'angle-down' : 'angle-up'"
+                />
               </button>
               <ul v-if="!hiddenGroups.includes(group.alias)" class="main-navigation__links">
                 <li
@@ -86,10 +76,7 @@
       </nav>
     </transition>
     <!-- eslint-disable-next-line vuejs-accessibility/click-events-have-key-events -->
-    <div
-      class="main-navigation__site-wrapper"
-      @click="hideMenu()"
-    >
+    <div class="main-navigation__site-wrapper" @click="hideMenu()">
       <div class="main-navigation__site">
         <slot name="site" />
       </div>
@@ -117,9 +104,13 @@ export default {
     };
   },
   mounted() {
-    this.$watch('actualSection', () => {
-      this.focusActiveMenuItem(true);
-    }, { deep: true });
+    this.$watch(
+      'actualSection',
+      () => {
+        this.focusActiveMenuItem(true);
+      },
+      { deep: true }
+    );
 
     // Listen for a new friends session being started
     this.bus.on('how-u-doin', () => {
@@ -300,9 +291,9 @@ export default {
         offset = caption.offsetHeight + 10; // some extra px to account for the shadow
       }
       if (
-        this.$refs.menu.scrollTop > (activeItem.offsetTop - offset)
-        || (activeItem.offsetTop + activeItem.offsetHeight)
-        > (this.$refs.menu.scrollTop + this.$refs.menu.offsetHeight)
+        this.$refs.menu.scrollTop > activeItem.offsetTop - offset ||
+        activeItem.offsetTop + activeItem.offsetHeight >
+          this.$refs.menu.scrollTop + this.$refs.menu.offsetHeight
       ) {
         this.$refs.menu.scrollTo({
           behavior: smooth ? 'smooth' : undefined, // using iamdustan/smoothscroll polyfill
@@ -327,10 +318,10 @@ export default {
     },
     isActive(link) {
       return (
-        this.actualSection
-        && link.to
-        && link.to.charAt(0) === '#'
-        && this.actualSection.alias === link.to.substring(1)
+        this.actualSection &&
+        link.to &&
+        link.to.charAt(0) === '#' &&
+        this.actualSection.alias === link.to.substring(1)
       );
     },
   },
@@ -343,7 +334,7 @@ export default {
 }
 
 .main-navigation__site {
-  background-color: #FFF;
+  background-color: #fff;
 }
 
 .main-navigation__toggle {
@@ -352,7 +343,8 @@ export default {
   top: 1.5rem;
   right: 0;
   background-color: transparent;
-  &:hover, &:focus {
+  &:hover,
+  &:focus {
     box-shadow: none;
     .main-navigation__toggle-caption,
     .main-navigation__toggle-icon {
@@ -397,10 +389,11 @@ export default {
       opacity: 0;
       pointer-events: none;
     }
-    &:hover, &:focus {
+    &:hover,
+    &:focus {
       .main-navigation__toggle-caption,
       .main-navigation__toggle-icon {
-        background-color: #FFF;
+        background-color: #fff;
       }
     }
   }
@@ -465,7 +458,8 @@ button.main-navigation__group-toggle {
   width: 100%;
 }
 
-.menu-enter, .menu-leave-to {
+.menu-enter,
+.menu-leave-to {
   transform: translateX(40rem);
 }
 

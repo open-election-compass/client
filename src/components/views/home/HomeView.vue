@@ -1,17 +1,8 @@
 <template>
   <div>
-    <LanguageSwitch
-      :visible="showLanguageSwitch"
-      @close="showLanguageSwitch = false"
-    />
-    <FriendsJoinModal
-      :visible="showFriendsJoinModal"
-      @close="showFriendsJoinModal = false"
-    />
-    <FriendsInviteModal
-      :visible="showFriendsInviteModal"
-      @close="showFriendsInviteModal = false"
-    />
+    <LanguageSwitch :visible="showLanguageSwitch" @close="showLanguageSwitch = false" />
+    <FriendsJoinModal :visible="showFriendsJoinModal" @close="showFriendsJoinModal = false" />
+    <FriendsInviteModal :visible="showFriendsInviteModal" @close="showFriendsInviteModal = false" />
     <FriendsStatusBar />
     <MainNavigation
       @open-language-switch="showLanguageSwitch = true"

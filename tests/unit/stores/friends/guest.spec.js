@@ -49,11 +49,7 @@ describe('Friends Store (Guest)', () => {
         theses: {
           namespaced: true,
           state: {
-            theses: [
-              { status: 'approve' },
-              { status: null },
-              { status: null },
-            ],
+            theses: [{ status: 'approve' }, { status: null }, { status: null }],
           },
           getters: {
             theses: (thesesState) => thesesState.theses,
@@ -114,9 +110,12 @@ describe('Friends Store (Guest)', () => {
 
     // Wait for hostConnection to be available before triggering the next events
     const hostConnectionAvailable = new Promise((resolve) => {
-      store.watch((storeState, getters) => getters['friends/guest/hostConnection'], () => {
-        if (store.getters['friends/guest/hostConnection'] !== null) resolve();
-      });
+      store.watch(
+        (storeState, getters) => getters['friends/guest/hostConnection'],
+        () => {
+          if (store.getters['friends/guest/hostConnection'] !== null) resolve();
+        }
+      );
     });
 
     // Now trigger the main function

@@ -9,21 +9,14 @@
       icon="language"
       @close="$emit('close')"
     >
-      <ul
-        class="language-switch__menu"
-        role="menu"
-      >
+      <ul class="language-switch__menu" role="menu">
         <li
           v-for="language in languages"
           :key="language.code"
           class="language-switch__item"
           role="menuitem"
         >
-          <BaseButton
-            theme="neutral"
-            text-align="left"
-            @click="activateLanguage(language)"
-          >
+          <BaseButton theme="neutral" text-align="left" @click="activateLanguage(language)">
             {{ language.name }}
           </BaseButton>
         </li>

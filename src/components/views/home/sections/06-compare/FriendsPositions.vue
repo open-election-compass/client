@@ -1,8 +1,5 @@
 <template>
-  <ul
-    class="friends-positions"
-    v-if="$store.getters['options/friendsEnabled']"
-  >
+  <ul class="friends-positions" v-if="$store.getters['options/friendsEnabled']">
     <li v-for="answer in answers" :key="answer.friend.peerId" class="friends-positions__answer">
       <StatementBadge
         :icon="answer.icon"
@@ -33,7 +30,7 @@ export default {
   computed: {
     friends() {
       return this.$store.getters['friends/friends'].filter(
-        (friend) => friend.peerId !== this.$store.getters['friends/ownPeer'].id,
+        (friend) => friend.peerId !== this.$store.getters['friends/ownPeer'].id
       );
     },
     algorithm() {

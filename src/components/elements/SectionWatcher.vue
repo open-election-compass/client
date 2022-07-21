@@ -123,8 +123,8 @@ export default {
       });
     },
     updateActualSection() {
-      const scrollPosition = window.pageYOffset
-        || document.documentElement.scrollTop || document.body.scrollTop || 0;
+      const scrollPosition =
+        window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
       const wrapperHeight = window.innerHeight;
 
       const sections = this.sections.slice(); // = clone

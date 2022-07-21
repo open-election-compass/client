@@ -7,14 +7,8 @@
       {{ $t('views.home.match.section.explanation') }}
     </p>
     <ul>
-      <li
-        v-for="({ party, percentage }) in results"
-        :key="party.alias"
-      >
-        <MatchDisplay
-          :party="party"
-          :percentage="percentage"
-        />
+      <li v-for="{ party, percentage } in results" :key="party.alias">
+        <MatchDisplay :party="party" :percentage="percentage" />
       </li>
     </ul>
   </PageSection>

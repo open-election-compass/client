@@ -1,16 +1,9 @@
 <template>
   <div class="friends-status-bar">
-    <button
-      v-if="visible"
-      class="friends-status-bar__button"
-      @click="showModal = true"
-    >
-        <IconDisplay name="user-friends" />
+    <button v-if="visible" class="friends-status-bar__button" @click="showModal = true">
+      <IconDisplay name="user-friends" />
     </button>
-    <FriendsStatusModal
-      :visible="showModal"
-      @close="showModal = false"
-    />
+    <FriendsStatusModal :visible="showModal" @close="showModal = false" />
   </div>
 </template>
 

@@ -55,25 +55,42 @@ export default {
     content() {
       // TODO: This is not a nice implementation.
       if (this.skipped) {
-        return this.$t('views.home.compare.answer.skip.content', { party: this.$t(`parties.${this.party.index}.name`) });
+        return this.$t('views.home.compare.answer.skip.content', {
+          party: this.$t(`parties.${this.party.index}.name`),
+        });
       }
       if (
-        !this.$te(`theses.${this.thesis.index}.positions.${this.party.alias}.explanation`)
-        && !this.$te(`theses.${this.thesis.index}.positions.${this.party.alias}.explanation`, this.$store.getters['languages/fallback'].code)
-        && !this.$root.$te(`theses.${this.thesis.index}.positions.${this.party.alias}.explanation`)
+        !this.$te(`theses.${this.thesis.index}.positions.${this.party.alias}.explanation`) &&
+        !this.$te(
+          `theses.${this.thesis.index}.positions.${this.party.alias}.explanation`,
+          this.$store.getters['languages/fallback'].code
+        ) &&
+        !this.$root.$te(`theses.${this.thesis.index}.positions.${this.party.alias}.explanation`)
       ) {
-        return this.$t('views.home.compare.answer.empty.content', { party: this.$t(`parties.${this.party.index}.name`) });
+        return this.$t('views.home.compare.answer.empty.content', {
+          party: this.$t(`parties.${this.party.index}.name`),
+        });
       }
       if (
-        !this.$te(`theses.${this.thesis.index}.positions.${this.party.alias}.explanation`)
-        && this.$te(`theses.${this.thesis.index}.positions.${this.party.alias}.explanation`, this.$store.getters['languages/fallback'].code)
-        && !this.$root.$te(`theses.${this.thesis.index}.positions.${this.party.alias}.explanation`)
+        !this.$te(`theses.${this.thesis.index}.positions.${this.party.alias}.explanation`) &&
+        this.$te(
+          `theses.${this.thesis.index}.positions.${this.party.alias}.explanation`,
+          this.$store.getters['languages/fallback'].code
+        ) &&
+        !this.$root.$te(`theses.${this.thesis.index}.positions.${this.party.alias}.explanation`)
       ) {
-        return this.$t(`theses.${this.thesis.index}.positions.${this.party.alias}.explanation`, this.$store.getters['languages/fallback'].code);
+        return this.$t(
+          `theses.${this.thesis.index}.positions.${this.party.alias}.explanation`,
+          this.$store.getters['languages/fallback'].code
+        );
       }
-      const explanation = this.$t(`theses.${this.thesis.index}.positions.${this.party.alias}.explanation`).trim();
+      const explanation = this.$t(
+        `theses.${this.thesis.index}.positions.${this.party.alias}.explanation`
+      ).trim();
       if (explanation === '') {
-        return this.$t('views.home.compare.answer.empty.content', { party: this.$t(`parties.${this.party.index}.name`) });
+        return this.$t('views.home.compare.answer.empty.content', {
+          party: this.$t(`parties.${this.party.index}.name`),
+        });
       }
       return explanation;
     },
@@ -96,7 +113,9 @@ export default {
     },
     answerTextAria() {
       if (this.skipped) {
-        return this.$t('views.home.compare.answer.skip.content', { party: this.$t(`parties.${this.party.index}.name`) });
+        return this.$t('views.home.compare.answer.skip.content', {
+          party: this.$t(`parties.${this.party.index}.name`),
+        });
       }
       return this.$t(`algorithm.options.${this.option.alias}.answer-aria`, {
         party: this.$t(`parties.${this.party.index}.name`),
@@ -104,10 +123,7 @@ export default {
       });
     },
     classes() {
-      return [
-        'full-answer',
-        `full-answer--${this.option.direction}`,
-      ];
+      return ['full-answer', `full-answer--${this.option.direction}`];
     },
   },
 };
@@ -117,7 +133,8 @@ export default {
 .full-answer {
   margin-top: 3em;
   @media (min-width: 64em) {
-    &.full-answer--positive, &.full-answer--negative {
+    &.full-answer--positive,
+    &.full-answer--negative {
       margin-top: 6em;
     }
     &.full-answer--neutral {

@@ -3,10 +3,7 @@
     <PageSection class="footer-section__links" :padding="false">
       <nav>
         <ul>
-          <li
-            v-for="(link, index) in footerLinks"
-            :key="index"
-          >
+          <li v-for="(link, index) in footerLinks" :key="index">
             <a :href="$t(`footer-links.${index}.href`)" target="_blank">
               {{ $t(`footer-links.${index}.text`) }}
             </a>
@@ -16,21 +13,16 @@
     </PageSection>
     <PageSection class="footer-section__open-source">
       <div class="footer-section__project">
-        <OpenElectionCompassLogo
-          class="footer-section__logo"
-          width="50px"
-          color="#718096"
-        />
+        <OpenElectionCompassLogo class="footer-section__logo" width="50px" color="#718096" />
         <i18n-t
           class="footer-section__project-link"
           keypath="views.home.footer.section.explanation"
           tag="p"
           for="oec"
         >
-          <a
-            href="https://open-election-compass.com"
-            target="_blank"
-          >{{ $t('views.home.footer.section.oec') }}</a>
+          <a href="https://open-election-compass.com" target="_blank">{{
+            $t('views.home.footer.section.oec')
+          }}</a>
         </i18n-t>
       </div>
     </PageSection>
