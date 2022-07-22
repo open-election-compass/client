@@ -1,0 +1,278 @@
+---
+elements:
+  friends-invite-modal:
+    heading: "Invita degli amici"
+    description: "Invita degli amici in una sessione condivisa in cui ognuno può vedere le risposte degli altri in tempo reale."
+    form:
+      name:
+        label: "Il tuo nome/nickname"
+        description: "Per favore inserisci un nome in modo che i tuoi amici possano riconoscerti. Puoi anche usare un nickname."
+    introduction:
+      heading: "Cos'è una sessione condivisa?"
+      explanation:
+        - "Una sessione condivisa permette di usare la bussola elettorale con amici. Una persona ne invita altre in una sessione condivisa. Quando tutti si sono collegati ognuno può usare la bussola nel modo consueto. Oltre ai partiti è però possibile vedere anche le risposte degli altri e iniziare una discussione."
+    security:
+      heading: "Le mie risposte sono al sicuro?"
+      explanation:
+        - "Sì! Le tue risposte sono scambiate direttamente tramite i dispositivi con una connessione sicura. Un server aiuta a trovare i dispositivi nella rete, le tue risposte non sono però inviate tramite server bensì direttamente da dispositivo a dispositivo."
+    registration:
+      heading: "Devo registrarmi per usare questa modalità?"
+      explanation:
+        - "No, la registrazione non è necessaria. Tutto ciò che devi fare è inserire un nome e unirti ad una sessione."
+    cancel: "Cancella"
+    confirm: "Apri sessione"
+  friends-join-modal:
+    heading: "Unisciti agli amici"
+    description: "Collegati con i tuoi amici in una sessione condivisa per vedere le risposte di tutti in tempo reale."
+    form:
+      name:
+        label: "Il tuo nome/nickname"
+        description: "Per favore inserisci un nome in modo che i tuoi amici possano riconoscerti. Puoi anche usare un nickname."
+      join:
+        label: "Dispositivo di un amico"
+        description: "Unisciti ad una sessione condivisa inserendo l'ID del dispositivo di chi sta ospitando la sessione."
+    introduction:
+      heading: "Cos'è una sessione condivisa?"
+      explanation:
+        - "Una sessione condivisa permette di usare la bussola elettorale con amici. Una persona ne invita altre in una sessione condivisa. Quando tutti si sono collegati ognuno può usare la bussola nel modo consueto. Oltre ai partiti è però possibile vedere anche le risposte degli altri e iniziare una discussione."
+    security:
+      heading: "Le mie risposte sono al sicuro?"
+      explanation:
+        - "Sì! Le tue risposte sono scambiate direttamente tramite i dispositivi con una connessione sicura. Un server aiuta a trovare i dispositivi nella rete, le tue risposte non sono però inviate tramite server bensì direttamente da dispositivo a dispositivo."
+    registration:
+      heading: "Devo registrarmi per usare questa modalità?"
+      explanation:
+        - "No, la registrazione non è necessaria. Tutto ciò che devi fare è inserire un nome e unirti ad una sessione."
+    cancel: "Cancella"
+    confirm: "Unisciti"
+  friends-list:
+    heading: "Dispositivi collegati"
+    empty: "L'ospite deve confermare la tua richiesta di unirti alla sessione."
+    host: "Ospite"
+  friends-status-modal:
+    heading: "Sessione condivisa"
+    mode:
+      INACTIVE:
+        heading: "Non connesso"
+        text: "Non sei collegato a nessuno. Unisciti ad una sessione esistente o ospitane una tramite il menu principale."
+      GUEST:
+        heading: "Invitato"
+        text: "Stai partecipando ad una sessione condivisa ospitata da qualcun altro."
+      HOST:
+        heading: "Ospite"
+        text: "Sei l'ospite di questa sessione. Invita i tuoi amici usando il tuo dispositivo e accetta le loro richieste di partecipazione."
+    own-peer-id:
+      label: "Il tuo dispositivo"
+      description: "Questo è l'ID del tuo dispositivo. I tuoi amici dovranno inserirlo nel loro dispositivo per collegarsi alla sessione condivisa."
+  guests-list:
+    heading: "Dispositivi collegati"
+    empty: "Nessuno si è unito alla sessione."
+    accept: "Accetta"
+    status:
+      connecting: "In collegamento"
+      connected: "Collegato"
+      disconnected: "Scollegato"
+  guide-button:
+    start: "Andiamo"
+    introduction: "Leggi come funziona"
+    first-thesis: "Inizia con la prima dichiarazione"
+    thesis: "Procedi alla dichiarazione successiva"
+    party: "Selezione le parti"
+    match: "Vedi i risultati"
+    compare: "Leggi le opinioni"
+  kiosk-mode:
+    heading: "Desideri annullare?"
+    description: "La bussola elettorale verrà resettata e tutte le tue risposte verranno cancellate. | La bussola elettorale verrà resettata tra {count} secondi e tutte le tue risposte verranno cancellate. | La bussola elettorale verrà resettata tra {count} secondo e tutte le tue risposte verranno cancellate."
+    reset: "Annulla ora"
+    resume: "Non ancora!"
+  language-switch:
+    button: "Lingue"
+    heading: "Lingue"
+    description: "Per favore scegli la lingua preferita."
+  main-navigation:
+    menu: "Menu"
+    thesis: "Dichiarazioni {count}"
+    links:
+      compass: "Bussola elettorale"
+      languages: "Cambia lingua"
+      friends-join: "Unisciti agli amici"
+      friends-invite: "Invita amici"
+      reset: "Annulla"
+      home: "Inizia"
+      introduction: "Introduzione"
+      theses: "Dichiarazioni"
+      evaluation: "Valutazione"
+      party: "Selezione dei partiti"
+      match: "Risultati"
+      compare: "Dichiarazioni"
+      about: "A proposito di"
+  open-election-compass-logo:
+    alt: "Logo della bussola elettorale"
+  show-more:
+    show: "mostra di più"
+    hide: "nascondi"
+views:
+  home:
+    home:
+      role-aria: "Bussola elettorale"
+    start:
+      section:
+        banner-aria: "Inizia sezione"
+    theses:
+      important-button:
+        important: "Importante per me"
+        important-aria: "Importante – contrassegna questa dichiarazione come importante per te."
+        too-many-important: "Ci sono solo poche dichiarazioni, non puoi contrassegnarne una come importante. | Per favore non contrassegnare più di 1 dichiarazione come importante per ottenere un risultato significativo! | Per favore non contrassegnare più di {count} dichiarazioni come importanti per ottenere un risultato significativo!"
+      skip-button:
+        skip: "Non so"
+        skip-aria: "Salta - salta questa dichiarazione e non verrà conteggiata."
+        too-many-skip: "Ci sono solo poche dichiarazioni, non ne puoi saltare. | Per favore non saltare più di 1 dichiarazione per ottenere un risultato significativo! | Per favore non saltare più di {count} dichiarazioni per ottenere un risultato significativo!"
+      statement-text:
+        thesis: "Dichiarazione {count} / {total}"
+        statement-aria: "La dichiarazione è: '{statement}'"
+        quoteStart: "‘"
+        quoteEnd: "’"
+        statement-badge:
+          skip: "Hai saltato"
+          skip-aria: "Hai saltato questa dichiarazione."
+          important: "Hai contrassegnato questo come importante"
+          important-aria: "Hai contrassegnato questa dichiarazione come importante."
+      statement-wrapper:
+        role-aria: "Dichiarazione"
+        region-aria: "Dichiarazione {count} di {total}"
+    party:
+      party-item:
+        party-aria: "Partito '{party}' - clicca qui per selezionare o deselezionare questo partito per il confronto."
+      section:
+        heading: "Scegli i partiti che vuoi confrontare"
+        instruction: "Per favore seleziona i partiti con i quali vuoi effettuare il confronto. Puoi selezionarne quanti ne vuoi ma devi selezionarne almeno due. La seguente lista è presentata nello stesso ordine con cui i partiti appariranno nel voto."
+        proceed: "Fatto"
+    match:
+      match-display:
+        match-aria: "La tua corrispondenza con il partito '{party}' e del {percentage} %"
+      section:
+        heading: "Il tuo risultato"
+        explanation: "Questo grafico descrive quanto tu e i rispettivi partiti concordate sulle dichiarazioni di cui sopra. Più è elevata la percentuale più le vostre posizioni concordano. Tinei presente che questo non è un suggerimento di voto bensì uno strumento per valutazioni e per la discussione."
+    compare:
+      additional-analysis:
+        heading: "Statistiche"
+        buttons:
+          close: "Esci"
+          start: "Andiamo"
+          proceed: "Invia e procedi"
+          open-questionnaire: "Apri il sondaggio in una nuova scheda"
+        start: "Grazie per la condivisione! I tuoi dati saranno più utili per le statistiche se ci fornirai qualche informazione su di te, vuoi aiutarci ancora un po'? Rispondi a tutte o parte delle seguenti domande!"
+        help-even-more: "Grazie mille! Vuoi aiutare ancora un po'? Puoi rispondere ad alcune domande qui:"
+        thanks: "Grazie per la condivisione! Le domande sono finite e ci hai aiutato parecchio! Clicca su 'esci' per tornare ai tuoi risultati."
+        fields:
+          age:
+            name: "Età"
+            label: "Quanti anni hai?"
+            placeholder: "25"
+            description: "La tua età è importante per comprendere cosa pensano persone di differenti fasce di età di queste dichiarazioni e di questi partiti."
+          gender:
+            name: "Genere"
+            label: "Qual è il tuo genere?"
+            options:
+              female: "femmina"
+              diverse: "altro"
+              male: "maschio"
+              none: "nessuna risposta"
+          education:
+            name: "Qualifica"
+            label: "Qual è il tuo titolo di studio?"
+            options:
+              student: "Sono uno studente"
+              nothing: "Non ho titoli di studio"
+              lower: "Scuola media o simili"
+              higher: "Scuola superiore o simili"
+              academic: "Laurea"
+              none: "nessuna risposta"
+          party:
+            name: "Partito"
+            label: "Se le elezioni fossero oggi per chi voteresti?"
+            options:
+              other: "Altro"
+              non-voter: "Non voto"
+              not-eligible: "Non ho diritto di voto"
+              not-sure: "Non sono sicuro"
+              none: "nessuna risposta"
+      analysis-banner:
+        heading: "Vuoi donare le tue risposte alla scienza?"
+        explanation: "Puoi contribuire a far comprendere megio questa elezione a {someone} donando le tue risposte alla ricerca scientifica. Salviamo solo dati anonimizzati che non sono riconducibili a te."
+        send: "Fornisci i dati statistici ora"
+        close: "No, continua a leggere"
+      answer:
+        skip:
+          status-text: "sconosciuto"
+          content: "Il partito '{party}' non ha fornito risposte o opinioni su questa dichiarazione."
+        empty:
+          content: "Il partito '{party}' non ha fornito motivi o spiegazioni alla sua opinione su questa dichiarazione."
+      section:
+        heading: "Le loro risposte"
+        explanation: "I partiti normalmente indicano una posizione per ogni dichiarazione per spiegare i loro motivi. Non è sempre ovvio il motivo per cui un partito assume certe posizioni si raccomanda quindi la lettura di queste dichiarazioni e delle rispettive dichiarazioni elettorali."
+        region-aria: "Dichiarazione {count} di {total}"
+      friends-position:
+        answer-aria: "{name}: {position}"
+        skip: "Saltata"
+      kiosk-mode-hint:
+        heading: "Per favore resetta quando hai finito"
+        explanation: "Prenditi il tempo per leggere e confrontare le risposte qui sotto. Quando hai finito puoi resettare la bussola elettorale per il prossimo utilizzatore. Questo cancellerà le tue risposte. NB: puoi trovare un tasto cancella anche nel menu. Grazie!"
+        reset: "Cancella"
+    footer:
+      section:
+        explanation: "Questa bussola elettorale è basata sul progetto gratuito e open source {0}."
+        oec: "OpenElectionCompass"
+validation:
+  names:
+    name: "Nome"
+    remote-peer-id: "Dispositivo di un amico"
+  fields:
+    name:
+      min: "Per favore inserisci un nome."
+      regex: "Solo lettere, numeri e spazi, non sono ammessi caratteri speciali."
+      required: "Per favore inserisci un nome."
+algorithm:
+  options:
+    strongly-approve:
+      button: "Fortemente favorevole"
+      button-aria: "Fortemente favorevole - clicca qui per confermare la tua approvazione!"
+      badge: "Sei molto favorevole"
+      badge-aria: "Sei molto favorevole a questa dichiarazione."
+      status: "approva fortemente"
+      answer-aria: "Il partito '{party}' è molto favorevole a questa dichiarazione con la seguente risposta: {answer}"
+    approve:
+      button: "Favorevole"
+      button-aria: "Favorevole - clicca qui per confermare la tua approvazione!"
+      badge: "Sei favorevole"
+      badge-aria: "Sei favorevole a questa dichiarazione."
+      status: "approva"
+      answer-aria: "Il partito '{party}' è favorevole a questa dichiarazione con la seguente risposta: {answer}"
+    neutral:
+      button: "Neutrale"
+      button-aria: "Neutrale – clicca qui per rimanere neutrale rispetto a questa dichiarazione!"
+      badge: "Sei neutrale"
+      badge-aria: "Sei neutrale rispetto a questa dichiarazione."
+      status: "neutrale"
+      answer-aria: "Il partito '{party}' è neutrale rispetto a questa dichiarazione e fornisce la seguente risposta: {answer}"
+    partly:
+      button: "In parte"
+      button-aria: "In parte - clicca qui se sei parzialmente favorevole a questa dichiarazione!"
+      badge: "Sei parzialmente favorevole"
+      badge-aria: "Sei parzialmente favorevole a questa dichiarazione."
+      status: "in parte"
+      answer-aria: "Il partito '{party}' è parzialmente a favore di questa dichiarazione e fornisce la seguente risposta: {answer}"
+    reject:
+      button: "Respinta"
+      button-aria: "Respinta - clicca qui per respingere questa dichiarazione!"
+      badge: "Hai respinto"
+      badge-aria: "Hai respinto questa dichiarazione."
+      status: "respinge"
+      answer-aria: "Il partito '{party}' respinge questa dichiarazione e fornisce la seguente risposta: {answer}"
+    strongly-reject:
+      button: "Fortemente contrario"
+      button-aria: "Fortemente contrario - clicca qui se sei fortemente contrario!"
+      badge: "Sei fortemente contrario"
+      badge-aria: "Sei fortemente contrario a questa dichiarazione."
+      status: "fortemente contrario"
+      answer-aria: "Il partito '{party}' è fortemente contrario a questa dichiarazione e fornisce la seguente risposta: {answer}"
