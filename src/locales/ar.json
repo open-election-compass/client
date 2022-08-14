@@ -171,8 +171,8 @@
         "statement-text": {
           "thesis": "السؤال {count} من {total}",
           "statement-aria": "السؤال هو: \"{statement}\"",
-          "quoteStart": "\"",
-          "quoteEnd": "\"",
+          "quoteStart": "‘",
+          "quoteEnd": "’",
           "statement-badge": {
             "skip": "تخطَّيت هذا السؤال",
             "skip-aria": "تخطَّيت هذا السؤال.",

@@ -1,6 +1,6 @@
 {
   "name": "@open-election-compass/client",
-  "version": "2.0.0-alpha.0",
+  "version": "2.0.0-alpha.1",
   "author": "Till Sanders <mail@till-sanders.de>",
   "license": "GPL-3.0",
   "main": "dist/open-election-compass.umd.min.js",

@@ -1,0 +1,364 @@
+{
+  "elements": {
+    "friends-invite-modal": {
+      "heading": "Pozovite prijatelje",
+      "description": "Pozovite svoje prijatelje na zajedničku sesiju gdje svi mogu vidjeti odgovore onih drugih u stvarnom vremenu.",
+      "form": {
+        "name": {
+          "label": "Vaše ime/nadimak",
+          "description": "Navedite svoje ime kako bi vas prijatelji mogli prepoznati. Možete upotrijebiti i nadimak."
+        }
+      },
+      "introduction": {
+        "heading": "Što je zajednička sesija?",
+        "explanation": [
+          "Zajednička sesija omogućuje vam da doživite izborni kompas sa svojim prijateljima. Jedna osoba poziva ostale na zajedničku sesiju. Nakon što se svi pridruže, svatko od vas može upotrijebiti izborni kompas na uobičajeni način. No, osim stranaka, sada možete vidjeti i odgovore svih drugih te započeti raspravu."
+        ]
+      },
+      "security": {
+        "heading": "Jesu li moji odgovori sigurni?",
+        "explanation": [
+          "Da! Vaši se odgovori razmjenjuju izravno između vaših uređaja putem sigurne veze. Poslužitelj pomaže uređajima da se pronađu na Internetu – vaši se odgovori, međutim, ne šalju preko poslužitelja, već izravno s uređaja na uređaj."
+        ]
+      },
+      "registration": {
+        "heading": "Trebam li se registrirati za uporabu ove značajke?",
+        "explanation": [
+          "Ne, registracija nije nužna. Sve što trebate učiniti jest unijeti svoje ime i možete se pridružiti sesiji."
+        ]
+      },
+      "cancel": "Odustani",
+      "confirm": "Otvori sesiju"
+    },
+    "friends-join-modal": {
+      "heading": "Pridruži se prijateljima",
+      "description": "Povežite se s prijateljima na zajedničkoj sesiji i pogledajte njihove odgovore u stvarnom vremenu.",
+      "form": {
+        "name": {
+          "label": "Vaše ime/nadimak",
+          "description": "Navedite svoje ime kako bi vas prijatelji mogli prepoznati. Možete upotrijebiti i nadimak."
+        },
+        "join": {
+          "label": "Prijateljev uređaj",
+          "description": "Pridružite se zajedničkoj sesiji unosom ID-a uređaja domaćina sesije."
+        }
+      },
+      "introduction": {
+        "heading": "Što je zajednička sesija?",
+        "explanation": [
+          "Zajednička sesija omogućuje vam da doživite izborni kompas sa svojim prijateljima. Jedna osoba poziva ostale na zajedničku sesiju. Nakon što se svi pridruže, svatko od vas može upotrijebiti izborni kompas na uobičajeni način. No, osim stranaka, sada možete vidjeti i odgovore svih drugih te započeti raspravu."
+        ]
+      },
+      "security": {
+        "heading": "Jesu li moji odgovori sigurni?",
+        "explanation": [
+          "Da! Vaši se odgovori razmjenjuju izravno između vaših uređaja putem sigurne veze. Poslužitelj pomaže uređajima da se pronađu na Internetu – vaši se odgovori, međutim, ne šalju preko poslužitelja, već izravno s uređaja na uređaj."
+        ]
+      },
+      "registration": {
+        "heading": "Trebam li se registrirati za uporabu ove značajke?",
+        "explanation": [
+          "Ne, registracija nije nužna. Sve što trebate učiniti jest unijeti svoje ime i možete se pridružiti sesiji."
+        ]
+      },
+      "cancel": "Odustani",
+      "confirm": "Pridruži se"
+    },
+    "friends-list": {
+      "heading": "Povezani uređaji",
+      "empty": "Domaćin treba prihvatiti vaš zahtjev za pridruživanje sesiji.",
+      "host": "Domaćin"
+    },
+    "friends-status-modal": {
+      "heading": "Zajednička sesija",
+      "mode": {
+        "INACTIVE": {
+          "heading": "Nije povezan",
+          "text": "Ni s kim niste povezani. Pridružite se postojećoj sesiji ili budite domaćin vlastite preko glavnog izbornika."
+        },
+        "GUEST": {
+          "heading": "Gost",
+          "text": "Sudjelujete u zajedničkoj sesiji koju vodi netko drugi."
+        },
+        "HOST": {
+          "heading": "Domaćin",
+          "text": "Vi ste domaćin ove sesije. Pozovite prijatelje s pomoću ID-a svojeg uređaja i prihvatite njihove zahtjeve za pridruživanje."
+        }
+      },
+      "own-peer-id": {
+        "label": "Vaš uređaj",
+        "description": "Ovo je ID vašeg uređaja. Vaši prijatelji to trebaju unijeti u svoj uređaj kako bi se povezali s našom zajedničkom sesijom."
+      }
+    },
+    "guests-list": {
+      "heading": "Povezani uređaji",
+      "empty": "Nitko se još nije pridružio sesiji.",
+      "accept": "Prihvati",
+      "status": {
+        "connecting": "Povezivanje",
+        "connected": "Povezan",
+        "disconnected": "Veza je prekinuta"
+      }
+    },
+    "guide-button": {
+      "start": "Krenimo",
+      "introduction": "Naučite kako ovo radi",
+      "first-thesis": "Započnite s prvom izjavom",
+      "thesis": "Prijeđite na sljedeću izjavu",
+      "party": "Odaberite stranke",
+      "match": "Pogledajte svoje rezultate",
+      "compare": "Pročitajte stavove"
+    },
+    "kiosk-mode": {
+      "heading": "Trebamo li vratiti zadano?",
+      "description": "Izborni kompas sada će se resetirati i svi će se vaši odgovori izbrisati. | Izborni kompas resetirat će se za {count} sekundi/e/u i svi će se vaši odgovori izbrisati. | Izborni kompas resetirat će se za {count} sekundi/e/u i svi će se vaši odgovori izbrisati.",
+      "reset": "Odmah vrati zadano",
+      "resume": "Ne još!"
+    },
+    "language-switch": {
+      "button": "Jezici",
+      "heading": "Jezici",
+      "description": "Odaberite željeni jezik."
+    },
+    "main-navigation": {
+      "menu": "Izbornik",
+      "thesis": "Broj izjava {count}",
+      "links": {
+        "compass": "Izborni kompas",
+        "languages": "Promijeni jezik",
+        "friends-join": "Pridružite se prijateljima",
+        "friends-invite": "Pozovite prijatelje",
+        "reset": "Povratak na zadano",
+        "home": "Započni",
+        "introduction": "Uvod",
+        "theses": "Izjave",
+        "evaluation": "Evaluacija",
+        "party": "Odabir stranke",
+        "match": "Rezultat",
+        "compare": "Izjave",
+        "about": "O izbornom kompasu"
+      }
+    },
+    "open-election-compass-logo": {
+      "alt": "Logotip izbornog kompasa"
+    },
+    "show-more": {
+      "show": "prikaži više",
+      "hide": "sakrij"
+    }
+  },
+  "views": {
+    "home": {
+      "home": {
+        "role-aria": "Izborni kompas"
+      },
+      "start": {
+        "section": {
+          "banner-aria": "Započni odjeljak"
+        }
+      },
+      "theses": {
+        "important-button": {
+          "important": "Ovo mi je bitno",
+          "important-aria": "Bitno – označava da vam je ova izjava bitna.",
+          "too-many-important": "Postoji vrlo malo izjava, tako da jednu ne možete označiti kao bitnu. | Nemojte označiti više od jedne izjave kao bitne kako biste dobili smisleni rezultat! | Nemojte označiti više od {count} izjava kao bitne kako biste dobili smisleni rezultat!"
+        },
+        "skip-button": {
+          "skip": "Ne znam",
+          "skip-aria": "Preskoči – preskače ovu izjavu pa se neće računati.",
+          "too-many-skip": "Postoji vrlo malo izjava, tako da nijednu ne možete preskočiti. | Nemojte preskočiti više od jedne izjave kako biste dobili smisleni rezultat! | Nemojte preskočiti više od {count} izjava kako biste dobili smisleni rezultat!"
+        },
+        "statement-text": {
+          "thesis": "Broj izjava: {count} / {total}",
+          "statement-aria": "Izjava je: '{statement}'",
+          "quoteStart": "‘",
+          "quoteEnd": "’",
+          "statement-badge": {
+            "skip": "Ovo ste preskočili",
+            "skip-aria": "Preskočili ste ovu izjavu.",
+            "important": "Ovo ste označili kao bitno",
+            "important-aria": "Ovu ste izjavu označili kao bitnu."
+          }
+        },
+        "statement-wrapper": {
+          "role-aria": "Izjava",
+          "region-aria": "Broj izjava: {count} od {total}"
+        }
+      },
+      "party": {
+        "party-item": {
+          "party-aria": "Stranka „{party}” – kliknite ovdje kako biste odabrali ili poništili odabir ove stranke za usporedbu."
+        },
+        "section": {
+          "heading": "Odaberite stranke koje želite usporediti",
+          "instruction": "Odaberite stranke s kojima želite usporediti vlastite odluke. Možete odabrati koliko god želite stranaka, ali morate odabrati najmanje dvije. Sljedeći popis prikazuje isti redoslijed kojim će se stranke prikazati na glasačkom listiću.",
+          "proceed": "Izvršeno"
+        }
+      },
+      "match": {
+        "match-display": {
+          "match-aria": "Podudarnost koju ste dobili za stranku „{party}” je {percentage} %"
+        },
+        "section": {
+          "heading": "Vaš rezultat",
+          "explanation": "Ovaj grafikon prikazuje koliko ste se vi i dotične stranke složili oko gore navedenih teza. Što je veći postotak, više se podudaraju vaši stavovi. Imajte na umu da ovo nije preporuka za glasovanje, već alat za orijentaciju i raspravu."
+        }
+      },
+      "compare": {
+        "additional-analysis": {
+          "heading": "Statistika",
+          "buttons": {
+            "close": "Prekini",
+            "start": "Prekini",
+            "proceed": "Pošalji tekst",
+            "open-questionnaire": "Otvorite anketu u novoj kartici"
+          },
+          "start": "Hvala što ste podijelili! Vaši podaci postaju vredniji za statistiku ako podijelite još neke pozadinske informacije o sebi – biste li još malo pomogli? Jednostavno odgovorite na ona pitanja na koja želite!",
+          "help-even-more": "Puno hvala! Želite li pomoći još više? Ovdje možete odgovoriti na neka konkretnija pitanja:",
+          "thanks": "Hvala što ste podijelili! To su bila sva pitanja – puno ste nam pomogli! Kliknite na „Prekini” kako biste se vratili na svoje rezultate.",
+          "fields": {
+            "age": {
+              "name": "Dob",
+              "label": "Koliko vam je sada godina?",
+              "placeholder": "25",
+              "description": "Vaša dob je važna za istraživanje stavova ljudi različitih dobnih skupina o navedenim tezama i strankama."
+            },
+            "gender": {
+              "name": "Spol",
+              "label": "Kojeg ste spola?",
+              "options": {
+                "female": "ženski",
+                "diverse": "razni",
+                "male": "muški",
+                "none": "nema odgovora"
+              }
+            },
+            "education": {
+              "name": "Kvalifikacija",
+              "label": "Koja je vaša najviša obrazovna kvalifikacija?",
+              "options": {
+                "student": "Trenutačno student",
+                "nothing": "Bez kvalifikacije",
+                "lower": "Srednja škola ili slično",
+                "higher": "Viša škola ili slično",
+                "academic": "Akademsko obrazovanje",
+                "none": "nema odgovora"
+              }
+            },
+            "party": {
+              "name": "Stranka",
+              "label": "Da su izbori danas, kome biste dali svoj glas?",
+              "options": {
+                "other": "Drugo",
+                "non-voter": "Neću glasovati",
+                "not-eligible": "Ne ispunjavam uvjete",
+                "not-sure": "Nisam siguran/na",
+                "none": "nema odgovora"
+              }
+            }
+          }
+        },
+        "analysis-banner": {
+          "heading": "Želite li svoje odgovore donirati znanosti?",
+          "explanation": "Možete pomoći {someone} da bolje razumije ove izbore doniranjem svojih odgovora i rezultata znanstvenom istraživanju. Spremamo samo anonimne podatke s pomoću kojih ne možemo povratno doći do vas.",
+          "send": "Odmah pošalji statističke podatke",
+          "close": "Ne, nastavi čitati"
+        },
+        "answer": {
+          "skip": {
+            "status-text": "nepoznato",
+            "content": "Stranka „{party}” nije dala nikakve odgovore ili stav u vezi s ovom izjavom."
+          },
+          "empty": {
+            "content": "Stranka „{party}” nije dala nikakvo obrazloženje kako bi objasnila svoj stav u vezi s ovom tezom."
+          }
+        },
+        "section": {
+          "heading": "Njihovi odgovori",
+          "explanation": "Stranke obično daju stavove za svaku izjavu kako bi pojasnile svoje obrazloženje. Nije uvijek očito zašto neka stranka zauzima određeni stav pa se preporučuje pročitati ove izjave ili odgovarajuće izborne proglase.",
+          "region-aria": "Broj izjava: {count} od {total}"
+        },
+        "friends-position": {
+          "answer-aria": "{name}: {position}",
+          "skip": "Preskočeno"
+        },
+        "kiosk-mode-hint": {
+          "heading": "Nakon što završite vratite na zadano",
+          "explanation": "Uzmite si vremena za čitanje i usporedbu odgovora navedenih u nastavku. Kada završite, ovdje možete vratiti zadane postavke izbornog kompasa za sljedeću osobu. Time ćete također izbrisati vaše odgovore. Savjet: gumb za vraćanje zadanih postavki možete pronaći i u izborniku. Hvala vam!",
+          "reset": "Vrati zadano"
+        }
+      },
+      "footer": {
+        "section": {
+          "explanation": "Ovaj izborni kompas temelji se na besplatnom projektu otvorenog koda {0}.",
+          "oec": "Otvoreni izborni kompas"
+        }
+      }
+    }
+  },
+  "validation": {
+    "names": {
+      "name": "Ime",
+      "remote-peer-id": "Prijateljev uređaj"
+    },
+    "fields": {
+      "name": {
+        "min": "Unesite ime.",
+        "regex": "Samo slova, brojevi i razmaci, bez posebnih znakova.",
+        "required": "Unesite ime."
+      }
+    }
+  },
+  "algorithm": {
+    "options": {
+      "strongly-approve": {
+        "button": "Odobravam u potpunosti",
+        "button-aria": "Odobravam u potpunosti – kliknite ovdje kako biste u potpunosti odobrili ovu izjavu!",
+        "badge": "Odobrili ste u potpunosti",
+        "badge-aria": "Ovu ste izjavu odobrili u potpunosti.",
+        "status": "odobrava u potpunosti",
+        "answer-aria": "Stranka „{party}” u potpunosti odobrava ovu izjavu uz sljedeći odgovor: {answer}"
+      },
+      "approve": {
+        "button": "Odobravam",
+        "button-aria": "Odobravam – kliknite ovdje kako biste odobrili ovu izjavu!",
+        "badge": "Odobrili ste",
+        "badge-aria": "Ovu ste izjavu odobrili.",
+        "status": "odobrava",
+        "answer-aria": "Stranka „{party}” odobrava ovu izjavu uz sljedeći odgovor: {answer}"
+      },
+      "neutral": {
+        "button": "Neopredijeljen",
+        "button-aria": "Neopredijeljen – kliknite ovdje da ostanete neopredijeljeni u pogledu ove izjave!",
+        "badge": "Neopredijeljeni ste",
+        "badge-aria": "Neopredijeljeni ste u pogledu ove izjave.",
+        "status": "neopredijeljen",
+        "answer-aria": "Stranka „{party}” ostaje neopredijeljena u vezi s ovom izjavom dajući sljedeći odgovor: {answer}"
+      },
+      "partly": {
+        "button": "Djelomično",
+        "button-aria": "Djelomično – kliknite ovdje kako biste se djelomično složili s ovom izjavom!",
+        "badge": "Djelomično ste se složili",
+        "badge-aria": "Djelomično ste se složili s ovom izjavom.",
+        "status": "djelomično",
+        "answer-aria": "Stranka „{party}” djelomično podupire ovu izjavu dajući sljedeći odgovor: {answer}"
+      },
+      "reject": {
+        "button": "Odbaci",
+        "button-aria": "Odbaci – kliknite ovdje kako biste odbacili ovu izjavu!",
+        "badge": "Odbacili ste",
+        "badge-aria": "Ovu ste izjavu odbacili.",
+        "status": "odbacuje",
+        "answer-aria": "Stranka „{party}” odbacuje ovu izjavu uz sljedeći odgovor: {answer}"
+      },
+      "strongly-reject": {
+        "button": "Odbacujem u potpunosti",
+        "button-aria": "Odbacujem u potpunosti – kliknite ovdje kako biste u potpunosti odbacili ovu izjavu!",
+        "badge": "Odbacili ste u potpunosti",
+        "badge-aria": "Ovu ste izjavu odbacili u potpunosti.",
+        "status": "odbacuje u potpunosti",
+        "answer-aria": "Stranka „{party}” u potpunosti odbacuje ovu izjavu uz sljedeći odgovor: {answer}"
+      }
+    }
+  }
+}

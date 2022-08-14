@@ -1,0 +1,364 @@
+{
+  "elements": {
+    "friends-invite-modal": {
+      "heading": "Mời bạn bè",
+      "description": "Mời bạn bè tham gia một phiên chung; trong phiên này mọi người sẽ có thể thấy câu trả lời của nhau theo thời gian thực.",
+      "form": {
+        "name": {
+          "label": "Tên/biệt danh của bạn",
+          "description": "Để bạn bè nhận ra bạn, hãy chọn một cái tên. Bạn có thể sử dụng biệt danh."
+        }
+      },
+      "introduction": {
+        "heading": "Phiên chung là gì?",
+        "explanation": [
+          "Phiên chung cho phép bạn cùng trải nghiệm La bàn Bầu cử với bạn bè. Một người sẽ tạo phiên và mời những người khác tham gia. Sau đó, bạn sẽ thấy được cả câu trả lời của những người khác và có thể thảo luận với họ khi sử dụng La bàn."
+        ]
+      },
+      "security": {
+        "heading": "Nội dung tôi trả lời có được bảo mật không?",
+        "explanation": [
+          "Có! Các câu trả lời của bạn được trao đổi trực tiếp giữa các thiết bị thông qua một kết nối an toàn. Máy chủ sẽ giúp các thiết bị tìm nhau qua mạng internet; tuy nhiên, nội dung bạn trả lời sẽ không được chuyển đến máy chủ, mà trực tiếp từ thiết bị này đến thiết bị khác."
+        ]
+      },
+      "registration": {
+        "heading": "Tôi có cần phải đăng ký để sử dụng tính năng này không?",
+        "explanation": [
+          "Bạn không cần đăng ký. Ngay sau khi chọn tên, bạn sẽ có thể tham gia một phiên bất kỳ."
+        ]
+      },
+      "cancel": "Huỷ",
+      "confirm": "Tạo phiên"
+    },
+    "friends-join-modal": {
+      "heading": "Tham gia cùng bạn bè",
+      "description": "Kết nối với bạn bè trong một phiên chung và xem câu trả lời của họ theo thời gian thực.",
+      "form": {
+        "name": {
+          "label": "Tên/biệt danh của bạn",
+          "description": "Hãy chọn một cái tên; tên này sẽ giúp bạn bè của bạn nhận ra bạn. Bạn có thể sử dụng biệt danh."
+        },
+        "join": {
+          "label": "Thiết bị của bạn bè",
+          "description": "Tham gia một phiên chung bằng cách nhập ID thiết bị của chủ phiên."
+        }
+      },
+      "introduction": {
+        "heading": "Phiên chung là gì?",
+        "explanation": [
+          "Phiên chung cho phép bạn cùng trải nghiệm La bàn Bầu cử với bạn bè. Một người sẽ tạo phiên và mời những người khác tham gia. Sau đó, bạn sẽ thấy được cả câu trả lời của những người khác và có thể thảo luận với họ khi sử dụng La bàn."
+        ]
+      },
+      "security": {
+        "heading": "Nội dung tôi trả lời có được bảo mật không?",
+        "explanation": [
+          "Có! Các câu trả lời của bạn được trao đổi trực tiếp giữa các thiết bị thông qua một kết nối an toàn. Máy chủ sẽ giúp các thiết bị tìm nhau qua mạng internet; tuy nhiên, nội dung bạn trả lời sẽ không được chuyển đến máy chủ, mà trực tiếp từ thiết bị này đến thiết bị khác."
+        ]
+      },
+      "registration": {
+        "heading": "Tôi có cần phải đăng ký để sử dụng tính năng này không?",
+        "explanation": [
+          "Bạn không cần đăng ký. Ngay sau khi chọn tên, bạn sẽ có thể tham gia một phiên bất kỳ."
+        ]
+      },
+      "cancel": "Huỷ",
+      "confirm": "Tham gia"
+    },
+    "friends-list": {
+      "heading": "Các thiết bị đã kết nối",
+      "empty": "Để tham gia phiên, chủ phiên cần chấp nhận yêu cầu của bạn.",
+      "host": "Chủ phiên"
+    },
+    "friends-status-modal": {
+      "heading": "Phiên chung",
+      "mode": {
+        "INACTIVE": {
+          "heading": "Không kết nối",
+          "text": "Hiện bạn không kết nối với ai. Hãy tham gia một phiên có sẵn hoặc tự mở phiên mới bằng cách dùng menu chính."
+        },
+        "GUEST": {
+          "heading": "Khách",
+          "text": "Bạn đang tham gia một phiên chia sẻ do người khác làm chủ."
+        },
+        "HOST": {
+          "heading": "Chủ phiên",
+          "text": "Bạn là chủ phiên này. Hãy mời bạn bè tham gia bằng ID thiết bị của bạn và chấp nhận yêu cầu của họ."
+        }
+      },
+      "own-peer-id": {
+        "label": "Thiết bị của bạn bè",
+        "description": "Đây là ID thiết bị của bạn. Bạn bè của bạn cần nhập ID này trên thiết bị của họ để kết nối vào phiên chung."
+      }
+    },
+    "guests-list": {
+      "heading": "Các thiết bị đã kết nối",
+      "empty": "Chưa có ai tham gia phiên.",
+      "accept": "Chấp nhận",
+      "status": {
+        "connecting": "Đang kết nối",
+        "connected": "Đã kết nối",
+        "disconnected": "Đã ngắt kết nối"
+      }
+    },
+    "guide-button": {
+      "start": "Đi nào",
+      "introduction": "Tìm hiểu cách hoạt động",
+      "first-thesis": "Bắt đầu với phát biểu đầu tiên",
+      "thesis": "Đến phát biểu tiếp theo",
+      "party": "Chọn các bên",
+      "match": "Xem kết quả cá nhân",
+      "compare": "Xem kết quả"
+    },
+    "kiosk-mode": {
+      "heading": "Có đặt lại không?",
+      "description": "La bàn Bầu cử sẽ được đặt lại ngay bây giờ; toàn bộ câu trả lời của bạn sẽ bị xoá. | La bàn Bầu cử sẽ được đặt lại trong {count} giây nữa; toàn bộ câu trả lời của bạn sẽ bị xoá. | La bàn Bầu cử sẽ được đặt lại trong {count} giây nữa; toàn bộ câu trả lời của bạn sẽ bị xoá.",
+      "reset": "Đặt lại ngay",
+      "resume": "Chưa!"
+    },
+    "language-switch": {
+      "button": "Ngôn ngữ",
+      "heading": "Ngôn ngữ",
+      "description": "Hãy chọn ngôn ngữ bạn muốn."
+    },
+    "main-navigation": {
+      "menu": "Menu",
+      "thesis": "Các phát biểu thứ {count}",
+      "links": {
+        "compass": "La bàn Bầu cử",
+        "languages": "Đổi ngôn ngữ",
+        "friends-join": "Tham gia cùng bạn bè",
+        "friends-invite": "Mời bạn bè",
+        "reset": "Đặt lại",
+        "home": "Bắt đầu",
+        "introduction": "Giới thiệu",
+        "theses": "Phát biểu",
+        "evaluation": "Đánh giá",
+        "party": "Lựa chọn bên",
+        "match": "Kết quả",
+        "compare": "Phát biểu",
+        "about": "Giới thiệu"
+      }
+    },
+    "open-election-compass-logo": {
+      "alt": "Logo của La bàn Bầu cử"
+    },
+    "show-more": {
+      "show": "xem thêm",
+      "hide": "ẩn"
+    }
+  },
+  "views": {
+    "home": {
+      "home": {
+        "role-aria": "La bàn Bầu cử"
+      },
+      "start": {
+        "section": {
+          "banner-aria": "Bắt đầu mục mới"
+        }
+      },
+      "theses": {
+        "important-button": {
+          "important": "Quan trọng với tôi",
+          "important-aria": "Quan trọng – đánh dấu lời phát biểu này là quan trọng với bạn.",
+          "too-many-important": "Có rất ít lời phát biểu nên bạn không thể đánh dấu quan trọng! | Để có kết quả rõ ràng, vui lòng chỉ đánh dấu không quá một lời phát biểu là quan trọng! | Để có kết quả rõ ràng, vui lòng chỉ đánh dấu không quá {count} lời phát biểu là quan trọng!"
+        },
+        "skip-button": {
+          "skip": "Tôi không biết",
+          "skip-aria": "Bỏ qua – bỏ qua lời phát biểu này; nó sẽ không được tính.",
+          "too-many-skip": "Có rất ít lời phát biểu nên bạn không thể bỏ qua. | Để có kết quả rõ ràng, vui lòng chỉ bỏ qua không quá một lời phát biểu! | Để có kết quả rõ ràng, vui lòng chỉ bỏ qua không quá {count} lời phát biểu!"
+        },
+        "statement-text": {
+          "thesis": "Phát biểu thứ {count} / {total}",
+          "statement-aria": "Nội dung lời phát biểu: '{statement}'",
+          "quoteStart": "‘",
+          "quoteEnd": "’",
+          "statement-badge": {
+            "skip": "Bạn đã bỏ qua",
+            "skip-aria": "Bạn đã bỏ qua lời phát biểu này.",
+            "important": "Bạn đã đánh dấu là quan trọng",
+            "important-aria": "Bạn đã đánh dấu phát biểu này là quan trọng."
+          }
+        },
+        "statement-wrapper": {
+          "role-aria": "Phát biểu",
+          "region-aria": "Phát biểu thứ {count} trên {total}"
+        }
+      },
+      "party": {
+        "party-item": {
+          "party-aria": "Bên '{party}' – nhấp vào đây để chọn hoặc huỷ chọn bên này."
+        },
+        "section": {
+          "heading": "Chọn các bên bạn muốn so sánh",
+          "instruction": "Hãy chọn các bên mà bạn muốn so sánh quyết định của mình. Tuy không có giới hạn tối đa, bạn cần chọn tối thiểu hai bên. Danh sách dưới đây được xếp theo cùng thứ tự với danh sách các bên trên phiếu.",
+          "proceed": "Xong"
+        }
+      },
+      "match": {
+        "match-display": {
+          "match-aria": "Kết quả của bạn trùng {percentage}% với bên '{party}'"
+        },
+        "section": {
+          "heading": "Kết quả của bạn",
+          "explanation": "Biểu đồ này mô tả mức độ mà bạn và các bên tương ứng đã đồng ý với các luận điểm trên. Tỷ lệ càng cao, quyết định của các bạn càng giống nhau. Hãy nhớ rằng đây chỉ là một công cụ định hướng và thảo luận; nó không đề xuất phiếu."
+        }
+      },
+      "compare": {
+        "additional-analysis": {
+          "heading": "Thống kê",
+          "buttons": {
+            "close": "Thoát",
+            "start": "Đi nào",
+            "proceed": "Gửi và tiếp tục",
+            "open-questionnaire": "Mở khảo sát trong thẻ mới"
+          },
+          "start": "Cảm ơn bạn đã chia sẻ! Dữ liệu của bạn sẽ càng có giá trị hơn cho việc thống kê nếu bạn chia sẻ thêm một số thông tin cơ bản về bản thân. Bạn có thể trả lời bao nhiêu câu tuỳ ý!",
+          "help-even-more": "Cảm ơn bạn rất nhiều! Bạn có thể giúp chúng tôi một chút nữa không? Hãy trả lời các câu hỏi cụ thể hơn dưới đây:",
+          "thanks": "Cảm ơn bạn đã chia sẻ! Không còn câu hỏi nào nữa; bạn đã giúp chúng tôi rất nhiều! Nhấp \"Thoát\" để quay trở lại xem kết quả cá nhân.",
+          "fields": {
+            "age": {
+              "name": "Tuổi",
+              "label": "Bạn bao nhiêu tuổi?",
+              "placeholder": "25",
+              "description": "Chúng tôi cần biết tuổi của bạn để nghiên cứu xem người ở những nhóm tuổi khác nhau nghĩ gì về các bên và các luận điểm."
+            },
+            "gender": {
+              "name": "Giới tính",
+              "label": "Giới tính của bạn là gì?",
+              "options": {
+                "female": "nữ",
+                "diverse": "đa dạng",
+                "male": "nam",
+                "none": "không trả lời"
+              }
+            },
+            "education": {
+              "name": "Học vấn",
+              "label": "Trình độ học vấn cao nhất của bạn là gì?",
+              "options": {
+                "student": "Hiện là sinh viên",
+                "nothing": "Chưa hoàn thiện bằng cấp nào",
+                "lower": "Trung học cơ sở hoặc tương tự",
+                "higher": "Trung học phổ thông hoặc tương tự",
+                "academic": "Học thuật",
+                "none": "không trả lời"
+              }
+            },
+            "party": {
+              "name": "Bên",
+              "label": "Nếu hôm nay là ngày tổ chức bầu cử, bạn sẽ bỏ phiếu cho ai?",
+              "options": {
+                "other": "Khác",
+                "non-voter": "Tôi không bỏ phiếu",
+                "not-eligible": "Tôi không đủ điều kiện",
+                "not-sure": "Tôi không chắc",
+                "none": "không trả lời"
+              }
+            }
+          }
+        },
+        "analysis-banner": {
+          "heading": "Bạn có muốn hiến tặng câu trả lời của mình cho khoa học không?",
+          "explanation": "Bạn có thể giúp {someone} hiểu cuộc bầu cử này hơn bằng cách hiến tặng câu trả lời và kết quả của mình để phục vụ cho việc nghiên cứu khoa học. Chúng tôi chỉ thu thập dữ liệu ẩn danh; từ những dữ liệu này, chúng tôi không thể biết bạn là ai.",
+          "send": "Gửi dữ liệu thống kê ngay bây giờ",
+          "close": "Không, tiếp tục đọc"
+        },
+        "answer": {
+          "skip": {
+            "status-text": "không rõ",
+            "content": "Bên '{party}' không có câu trả lời hoặc quyết định nào về phát biểu này."
+          },
+          "empty": {
+            "content": "Bên '{party}' không đưa ra lý do nào để giải thích quyết định của mình về phát biểu này."
+          }
+        },
+        "section": {
+          "heading": "Câu trả lời của họ",
+          "explanation": "Các bên thường đưa ra quyết định cho mọi phát biểu để giải thích cho lý do của mình. Không phải lúc nào lý do họ chọn cũng rõ ràng; bạn nên đọc phát biểu này hoặc các phát biểu bầu cử tương ứng.",
+          "region-aria": "Các phát biểu thứ {count} trên {total}"
+        },
+        "friends-position": {
+          "answer-aria": "{name}: {position}",
+          "skip": "Đã bỏ qua"
+        },
+        "kiosk-mode-hint": {
+          "heading": "Hãy đặt lại khi đã thực hiện xong",
+          "explanation": "Hãy đọc và so sánh các câu trả lời dưới đây. Khi đã xong, bạn có thể đặt lại la bàn để tiếp tục với người tiếp theo; sau khi đặt lại, các câu trả lời của bạn sẽ bị xoá. Lưu ý: Trong menu cũng có một nút đặt lại. Cảm ơn bạn!",
+          "reset": "Đặt lại"
+        }
+      },
+      "footer": {
+        "section": {
+          "explanation": "La bàn Bầu cử này dựa trên dự án mã nguồn mở {0}.",
+          "oec": "Mở La bàn Bầu cử"
+        }
+      }
+    }
+  },
+  "validation": {
+    "names": {
+      "name": "Tên",
+      "remote-peer-id": "Thiết bị của bạn bè"
+    },
+    "fields": {
+      "name": {
+        "min": "Hãy nhập tên.",
+        "regex": "Chỉ bao gồm chữ cái, chữ số và dấu cách; không được phép sử dụng ký tự đặc biệt.",
+        "required": "Hãy nhập tên."
+      }
+    }
+  },
+  "algorithm": {
+    "options": {
+      "strongly-approve": {
+        "button": "Ủng hộ mạnh",
+        "button-aria": "Ủng hộ mạnh – nhấp vào đây để ủng hộ mạnh phát biểu này!",
+        "badge": "Bạn đã ủng hộ mạnh",
+        "badge-aria": "Bạn đã ủng hộ mạnh phát biểu này.",
+        "status": "ủng hộ mạnh",
+        "answer-aria": "Bên '{party}' ủng hộ mạnh phát biểu này và đưa ra câu trả lời sau: {answer}"
+      },
+      "approve": {
+        "button": "Ủng hộ",
+        "button-aria": "Ủng hộ – nhấp vào đây để ủng hộ phát biểu này!",
+        "badge": "Bạn đã ủng hộ",
+        "badge-aria": "Bạn đã ủng hộ phát biểu này.",
+        "status": "ủng hộ",
+        "answer-aria": "Bên '{party}' ủng hộ phát biểu này và đưa ra câu trả lời sau: {answer}"
+      },
+      "neutral": {
+        "button": "Trung lập",
+        "button-aria": "Trung lập – nhấp vào đây để giữ quan điểm trung lập với phát biểu này!",
+        "badge": "Bạn đã giữ quan điểm trung lập",
+        "badge-aria": "Bạn đã giữ quan điểm trung lập với phát biểu này.",
+        "status": "trung lập",
+        "answer-aria": "Bên '{party}' giữ quan điểm trung lập với phát biểu này và đưa ra câu trả lời sau: {answer}"
+      },
+      "partly": {
+        "button": "Đồng ý một phần",
+        "button-aria": "Đồng ý một phần – nhấp vào đây để đồng ý một phần với phát biểu này!",
+        "badge": "Bạn đã đồng ý một phần",
+        "badge-aria": "Bạn đã đồng ý một phần với phát biểu này.",
+        "status": "đồng ý một phần",
+        "answer-aria": "Bên '{party}' ủng hộ phát biểu này một phần và đưa ra câu trả lời sau: {answer}"
+      },
+      "reject": {
+        "button": "Phản đối",
+        "button-aria": "Phản đối – nhấp vào đây để phản đối phát biểu này!",
+        "badge": "Bạn đã phản đối",
+        "badge-aria": "Bạn đã phản đối phát biểu này.",
+        "status": "phản đối",
+        "answer-aria": "Bên '{party}' phản đối phát biểu này và đưa ra câu trả lời sau: {answer}"
+      },
+      "strongly-reject": {
+        "button": "Phản đối mạnh",
+        "button-aria": "Phản đối mạnh – nhấp vào đây để phản đối mạnh phát biểu này!",
+        "badge": "Bạn đã phản đối mạnh",
+        "badge-aria": "Bạn đã phản đối mạnh phát biểu này.",
+        "status": "phản đối mạnh",
+        "answer-aria": "Bên '{party}' phản đối mạnh phát biểu này và đưa ra câu trả lời sau: {answer}"
+      }
+    }
+  }
+}

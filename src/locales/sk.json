@@ -1,0 +1,364 @@
+{
+  "elements": {
+    "friends-invite-modal": {
+      "heading": "Invite friends",
+      "description": "Invite your friends to a shared session where everyone can see each other's answers in real time.",
+      "form": {
+        "name": {
+          "label": "Your name / nickname",
+          "description": "Please provide your name so your friends can recognize you. You can also use a nickname."
+        }
+      },
+      "introduction": {
+        "heading": "What is a shared session?",
+        "explanation": [
+          "A shared session allows you to experience the election compass with your friends. One person invites the others to a shared session. Once everyone joined, you can each use the election compass as you normally would. But in addition to the parties, you can now also see each other's answers and start a discussion."
+        ]
+      },
+      "security": {
+        "heading": "Are my answers safe?",
+        "explanation": [
+          "Yes! Your answers are exchanged directly between your devices via a secure connection. A server helps the devices find themselves on the Internet - your answers, however, are not sent via the server, but directly from device to device."
+        ]
+      },
+      "registration": {
+        "heading": "Do I need to register to use this feature?",
+        "explanation": [
+          "No registration is necessary. All you have to do is enter your name and you can join a session."
+        ]
+      },
+      "cancel": "Cancel",
+      "confirm": "Open session"
+    },
+    "friends-join-modal": {
+      "heading": "Join friends",
+      "description": "Connect with your friends in a shared session and see everyone's answers in real time.",
+      "form": {
+        "name": {
+          "label": "Your name / nickname",
+          "description": "Please provide your name so your friends can recognize you. You can also use a nickname."
+        },
+        "join": {
+          "label": "Friend's device",
+          "description": "Join a shared session by entering the device ID of whoever is hosting the session."
+        }
+      },
+      "introduction": {
+        "heading": "What is a shared session?",
+        "explanation": [
+          "A shared session allows you to experience the election compass with your friends. One person invites the others to a shared session. Once everyone joined, you can each use the election compass as you normally would. But in addition to the parties, you can now also see each other's answers and start a discussion."
+        ]
+      },
+      "security": {
+        "heading": "Are my answers safe?",
+        "explanation": [
+          "Yes! Your answers are exchanged directly between your devices via a secure connection. A server helps the devices find themselves on the Internet - your answers, however, are not sent via the server, but directly from device to device."
+        ]
+      },
+      "registration": {
+        "heading": "Do I need to register to use this feature?",
+        "explanation": [
+          "No registration is necessary. All you have to do is enter your name and you can join a session."
+        ]
+      },
+      "cancel": "Cancel",
+      "confirm": "Join"
+    },
+    "friends-list": {
+      "heading": "Connected devices",
+      "empty": "The host needs to accept you're request to join the session.",
+      "host": "Host"
+    },
+    "friends-status-modal": {
+      "heading": "Shared Session",
+      "mode": {
+        "INACTIVE": {
+          "heading": "Not connected",
+          "text": "You're not connected to anybody. Join your an existing session or host your own over the main menu."
+        },
+        "GUEST": {
+          "heading": "Guest",
+          "text": "You're participating in a shared session, hosted by someone else."
+        },
+        "HOST": {
+          "heading": "Host",
+          "text": "You're the host of this session. Invite your friends using your device ID and accept their requests to join."
+        }
+      },
+      "own-peer-id": {
+        "label": "Your device",
+        "description": "This is your device ID. Your friends need to enter this on their device to connect to our shared session."
+      }
+    },
+    "guests-list": {
+      "heading": "Connected devices",
+      "empty": "Nobody joined the session yet.",
+      "accept": "Accept",
+      "status": {
+        "connecting": "Connecting",
+        "connected": "Connected",
+        "disconnected": "Disconnected"
+      }
+    },
+    "guide-button": {
+      "start": "Let's go",
+      "introduction": "Learn how this works",
+      "first-thesis": "Start with the first thesis",
+      "thesis": "Proceed to the next thesis",
+      "party": "Select the parties",
+      "match": "See your result",
+      "compare": "Read the statements"
+    },
+    "kiosk-mode": {
+      "heading": "Should we reset?",
+      "description": "The election compass will be reset now and all your answers will be deleted. | The election compass will be reset in {count} seconds and all your answers will be deleted. | The election compass will be reset in {count} second and all your answers will be deleted.",
+      "reset": "Reset now",
+      "resume": "Not yet!"
+    },
+    "language-switch": {
+      "button": "Languages",
+      "heading": "Languages",
+      "description": "Please choose your preferred language."
+    },
+    "main-navigation": {
+      "menu": "Menu",
+      "thesis": "Thesis {count}",
+      "links": {
+        "compass": "Election Compass",
+        "languages": "Change language",
+        "friends-join": "Join friends",
+        "friends-invite": "Invite friends",
+        "reset": "Reset",
+        "home": "Start",
+        "introduction": "Introduction",
+        "theses": "Theses",
+        "evaluation": "Evaluation",
+        "party": "Party selection",
+        "match": "Result",
+        "compare": "Statements",
+        "about": "About"
+      }
+    },
+    "open-election-compass-logo": {
+      "alt": "Logo of the Election Compass"
+    },
+    "show-more": {
+      "show": "show more",
+      "hide": "hide"
+    }
+  },
+  "views": {
+    "home": {
+      "home": {
+        "role-aria": "Election Compass"
+      },
+      "start": {
+        "section": {
+          "banner-aria": "Start section"
+        }
+      },
+      "theses": {
+        "important-button": {
+          "important": "Important to me",
+          "important-aria": "Important – marks this thesis as important for you.",
+          "too-many-important": "There are only very few theses, so you cannot mark one as important. | Please mark no more than 1 thesis as important to receive a meaningful result! | Please mark no more than {count} theses as important to receive a meaningful result!"
+        },
+        "skip-button": {
+          "skip": "I don't know",
+          "skip-aria": "Skip – skips this thesis so it will not be counted.",
+          "too-many-skip": "There are only very few theses, so you cannot skip one. | Please skip no more than 1 thesis to receive a meaningful result! | Please skip no more than {count} theses to receive a meaningful result!"
+        },
+        "statement-text": {
+          "thesis": "Thesis {count} / {total}",
+          "statement-aria": "The thesis is: '{statement}'",
+          "quoteStart": "‘",
+          "quoteEnd": "’",
+          "statement-badge": {
+            "skip": "You skipped this",
+            "skip-aria": "You skipped this thesis.",
+            "important": "You marked this as important",
+            "important-aria": "You marked this thesis as important."
+          }
+        },
+        "statement-wrapper": {
+          "role-aria": "Thesis",
+          "region-aria": "Thesis {count} of {total}"
+        }
+      },
+      "party": {
+        "party-item": {
+          "party-aria": "Party '{party}' – click here to select or deselect this party for comparison."
+        },
+        "section": {
+          "heading": "Choose the parties you want to compare",
+          "instruction": "Please select the parties you want to compare your own decisions to. You can select as many parties as you like, but you have to select at least two. The following list is presented in the same order as the parties will appear on the ballot.",
+          "proceed": "Done"
+        }
+      },
+      "match": {
+        "match-display": {
+          "match-aria": "Your match for the party '{party}' is at {percentage} %"
+        },
+        "section": {
+          "heading": "Your result",
+          "explanation": "This chart describes how much you and the respective parties agreed on the above theses. The higher the percentage, the more your positions match. Keep in mind, that this is no voting recommendation, but a tool for orientation and discussion."
+        }
+      },
+      "compare": {
+        "additional-analysis": {
+          "heading": "Statistics",
+          "buttons": {
+            "close": "Quit",
+            "start": "Let's go",
+            "proceed": "Submit and next",
+            "open-questionnaire": "Open survey in new tab"
+          },
+          "start": "Thank you for sharing! Your data becomes more valuable for statistics if you share some more background information about yourself – would you help some more? Simply answer as many questions as you like!",
+          "help-even-more": "Thank you very much! Would you like to help even more? You can answer some more specific questions here:",
+          "thanks": "Thank you for sharing! Those were all the questions – you helped us a lot! Click on 'Quit' to go back to your results.",
+          "fields": {
+            "age": {
+              "name": "Age",
+              "label": "How old are you now?",
+              "placeholder": "25",
+              "description": "Your age is important to research what people of different age groups think about the theses and parties."
+            },
+            "gender": {
+              "name": "Gender",
+              "label": "What is your gender?",
+              "options": {
+                "female": "female",
+                "diverse": "diverse",
+                "male": "male",
+                "none": "no answer"
+              }
+            },
+            "education": {
+              "name": "Qualification",
+              "label": "What is your highest educational qualification?",
+              "options": {
+                "student": "Currently a student",
+                "nothing": "No complete qualification",
+                "lower": "Middle School or similar",
+                "higher": "High School or similar",
+                "academic": "Academic",
+                "none": "no answer"
+              }
+            },
+            "party": {
+              "name": "Party",
+              "label": "If the election was today, who would you cast your vote for?",
+              "options": {
+                "other": "Other",
+                "non-voter": "I won't vote",
+                "not-eligible": "I am not eligible",
+                "not-sure": "I'm not sure",
+                "none": "no answer"
+              }
+            }
+          }
+        },
+        "analysis-banner": {
+          "heading": "Do you want to donate your answers to science?",
+          "explanation": "You can help {someone} understand this election better by donating your answers and results to scientific research. We only save anonymized data which we can not trace back to you.",
+          "send": "Submit statistic data now",
+          "close": "No, continue reading"
+        },
+        "answer": {
+          "skip": {
+            "status-text": "unknown",
+            "content": "The party '{party}' did not provide any answers or position regarding this thesis."
+          },
+          "empty": {
+            "content": "The party '{party}' did not provide any statement to explain their position regarding this thesis."
+          }
+        },
+        "section": {
+          "heading": "Their answers",
+          "explanation": "The parties typically provide statements for every thesis to explain their reasoning. It is not always obvious why a party assumes a certain position so it is recommended to read this statements or the respective election manifestos.",
+          "region-aria": "Thesis {count} of {total}"
+        },
+        "friends-position": {
+          "answer-aria": "{name}: {position}",
+          "skip": "Skipped"
+        },
+        "kiosk-mode-hint": {
+          "heading": "Please reset when you're done",
+          "explanation": "Take your time reading and comparing the answers to the statements below. When you're done, you can reset the election compass here for the next person. This will also delete your own answers. Hint: you can also find a reset button in the menu. Thank you!",
+          "reset": "Reset"
+        }
+      },
+      "footer": {
+        "section": {
+          "explanation": "This election compass is based on the free open source project {0}.",
+          "oec": "OpenElectionCompass"
+        }
+      }
+    }
+  },
+  "validation": {
+    "names": {
+      "name": "Name",
+      "remote-peer-id": "Friend's device"
+    },
+    "fields": {
+      "name": {
+        "min": "Please enter a name.",
+        "regex": "Only letters, numbers and spaces, no special characters.",
+        "required": "Please enter a name."
+      }
+    }
+  },
+  "algorithm": {
+    "options": {
+      "strongly-approve": {
+        "button": "Strongly approve",
+        "button-aria": "Strongly approve – click here to strongly approve this thesis!",
+        "badge": "You strongly approved",
+        "badge-aria": "You strongly approved this thesis.",
+        "status": "strongly approves",
+        "answer-aria": "The party '{party}' strongly approves this thesis with the following answer: {answer}"
+      },
+      "approve": {
+        "button": "Approve",
+        "button-aria": "Approve – click here to approve this thesis!",
+        "badge": "You approved",
+        "badge-aria": "You approved this thesis.",
+        "status": "approves",
+        "answer-aria": "The party '{party}' approves this thesis with the following answer: {answer}"
+      },
+      "neutral": {
+        "button": "Neutral",
+        "button-aria": "Neutral – click here to remain neutral regarding this thesis!",
+        "badge": "You we're neutral",
+        "badge-aria": "You we're neutral regarding this thesis.",
+        "status": "neutral",
+        "answer-aria": "The party '{party}' remains neutral to this thesis, providing the following answer: {answer}"
+      },
+      "partly": {
+        "button": "Partly",
+        "button-aria": "Partly – click here to agree partly with this thesis!",
+        "badge": "You agreed partly",
+        "badge-aria": "You agreed partly with this thesis.",
+        "status": "partly",
+        "answer-aria": "The party '{party}' supports this thesis partly, providing the following answer: {answer}"
+      },
+      "reject": {
+        "button": "Reject",
+        "button-aria": "Reject – click here to reject this thesis!",
+        "badge": "You rejected",
+        "badge-aria": "You rejected this thesis.",
+        "status": "rejects",
+        "answer-aria": "The party '{party}' rejects this thesis with the following answer: {answer}"
+      },
+      "strongly-reject": {
+        "button": "Strongly reject",
+        "button-aria": "Strongly reject – click here to strongly reject this thesis!",
+        "badge": "You strongly rejected",
+        "badge-aria": "You strongly rejected this thesis.",
+        "status": "strongly rejects",
+        "answer-aria": "The party '{party}' strongly rejects this thesis with the following answer: {answer}"
+      }
+    }
+  }
+}

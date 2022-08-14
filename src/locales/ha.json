@@ -1,0 +1,364 @@
+{
+  "elements": {
+    "friends-invite-modal": {
+      "heading": "Gayyaci abokai",
+      "description": "Gayyaci abokan ka zuwa zaman tattaunawa wanda kowa zai iya ganin amsar wani a lokacin da ake yi.",
+      "form": {
+        "name": {
+          "label": "Sunan ku / laƙabi",
+          "description": "Yi haƙuri ku sanya sunan ku saboda abokanan ku su iya gane ku. Zaku iya kuma amfani da laƙabi."
+        }
+      },
+      "introduction": {
+        "heading": "Menene zama yaɗaɗɗe?",
+        "explanation": [
+          "Zama yaɗaɗɗe na baku damar samun sanin komfas ɗin zaɓe tare da abokanan ku. Mutum ɗaya ya gayyaci wasu zuwa yaɗaɗɗen zama. A sanda duk kowa ya shiga, zaku iya kowa yayi amfani da komfas na zaɓen kamar yadda kuka saba yi. Amma ga ƙarin adadi da aka samu, zaku iya ganin amsoshin junan ku kuma ku tattauna."
+        ]
+      },
+      "security": {
+        "heading": "Shin amsoshi na nada aminci?",
+        "explanation": [
+          "Ee! Amsoshin ku ana rabawa tsakanin ku kai tsaye akan na'urorin ku ta hanyar wata alaƙa tsararriya. Server na taimakawa na'urori su nema junan su a intanet - amsoshin ku. Amma dai, bawai ana aikawa ta server ɗin bane, sai dai kai tsaye ne daga na'ura zuwa na'ura."
+        ]
+      },
+      "registration": {
+        "heading": "Shin ina buƙatar inyi rijista dan amfani da samfur ɗin?",
+        "explanation": [
+          "Ba'a buƙatar yin rijista. Abun da zaka yi shine sanya sunan ka kawai zaka iya shiga zaman."
+        ]
+      },
+      "cancel": "Soke",
+      "confirm": "Zama dake buɗe"
+    },
+    "friends-join-modal": {
+      "heading": "Shiga cikin abokai",
+      "description": "Yi alaƙa da abokai a yaɗaɗɗen zama kuma ku ga amsoshin kowa a zahiri.",
+      "form": {
+        "name": {
+          "label": "Sunan ku / laƙabi",
+          "description": "Yi hakuri ku sanya sunan ku saboda abokanan ku su iya gane ku. Zaku iya kuma amfani da laƙabi."
+        },
+        "join": {
+          "label": "Na'urar aboki",
+          "description": "Shiga yaɗaɗɗen zama ta sanya ID na na'urar duk wanda yake ɗaukar nauyin zama."
+        }
+      },
+      "introduction": {
+        "heading": "Menene zama yaɗaɗɗe?",
+        "explanation": [
+          "Zama yaɗaɗɗe na baku damar samun sanin komfas ɗin zaɓen tare da abokanan ku. Mutum ɗaya ya gayyaci wasu zuwa yaɗaɗɗen zaman. A sanda dukka kowa ya shiga, zaku iya kowa yayi amfani da komfas na zaɓen kamar yadda kuka saba yi. Amma ga ƙarin adadi da aka samu, zaku iya ganin amsoshin junan ku kuma ku tattaunawa."
+        ]
+      },
+      "security": {
+        "heading": "Shin amsoshi na nada tsaro?",
+        "explanation": [
+          "Ee! Amsoshin ku ana rabawa tsakanin ku kai tsaye akan na'urorin ku ta hanyar wata alaƙa tsararre. Server na taimaka wa na'urorin su nema junan su a intanet - amsoshin ku. Amma dai, bawai ana aikawa ta server ɗin bane, sai dai kai tsaye ne daga na'ura zuwa na'ura."
+        ]
+      },
+      "registration": {
+        "heading": "Shin ina buƙatar inyi rijista dan amfani da samfur ɗin?",
+        "explanation": [
+          "Ba'a buƙatar yin rijista. Abun da zaka yi shine sanya sunan ka kawai zaka iya shiga zaman."
+        ]
+      },
+      "cancel": "Soke",
+      "confirm": "Shiga"
+    },
+    "friends-list": {
+      "heading": "Na'urorin da suke ciki",
+      "empty": "Mai ɗaukar nauyin zaman na buƙatar yarda da shigar ku na zaman.",
+      "host": "Mai ɗaukar nauyi"
+    },
+    "friends-status-modal": {
+      "heading": "Yaɗaɗɗen zama",
+      "mode": {
+        "INACTIVE": {
+          "heading": "Ba'a da alaƙa",
+          "text": "Baku da alaƙa zuwa ga kowa. Shiga zaman dake aukuwa ko ku ɗauki nauyin zaman ku ta babban jadawali."
+        },
+        "GUEST": {
+          "heading": "Baƙo",
+          "text": "Kuna kasancewa cikin zama yaɗaɗɗe, wanda wani ke ɗaukar nauyi."
+        },
+        "HOST": {
+          "heading": "Mai ɗaukar nauyi",
+          "text": "Kai ne mai ɗaukar nauyin wannan zaman. Gayyaci abokanan ku ta amfani da ID na na'urar ku da yarda da buƙatar su shiga."
+        }
+      },
+      "own-peer-id": {
+        "label": "Na'uarar ku",
+        "description": "Wannan ne ID na na'urar ku. Abokan ku na buƙatar sanya ta a na'urar su dan samun shiga wannan yaɗaɗɗen zaman."
+      }
+    },
+    "guests-list": {
+      "heading": "Na'uarar dake alaƙa",
+      "empty": "Babu wanda ya shigo zaman har yanzu.",
+      "accept": "Karɓa",
+      "status": {
+        "connecting": "Samun yin alaƙa",
+        "connected": "Anyi alaƙa",
+        "disconnected": "An katse alaƙa"
+      }
+    },
+    "guide-button": {
+      "start": "Mu tafi",
+      "introduction": "Koyi yadda wannan ke aiki",
+      "first-thesis": "Fara da bayanin farko",
+      "thesis": "Cigaba zuwa bayani na gaba",
+      "party": "Zaɓi jam'iyyu",
+      "match": "Duba sakamakon ku",
+      "compare": "Karanta matakan"
+    },
+    "kiosk-mode": {
+      "heading": "Shin zamu sake saiti?",
+      "description": "Komfas na zaɓen za'a sake saitin shi yanzu kuma dukkan amsoshin ku zasu goge. | Komfas na zaɓen za'a sake saita shi daƙiƙoƙi {count} kuma dukkan amsoshin zasu goge. | Komfas na zaɓen zai sake saiti a daƙiƙoƙi {count} kuma dukkan amsoshin zasu goge.",
+      "reset": "Sake saiti yanzu",
+      "resume": "Har dai yanzu!"
+    },
+    "language-switch": {
+      "button": "Yaruka",
+      "heading": "Yaruka",
+      "description": "Yi haƙuri zaɓi yaren da kuka fi so."
+    },
+    "main-navigation": {
+      "menu": "Jadawali",
+      "thesis": "Bayanai {count}",
+      "links": {
+        "compass": "Komfas na Zaɓe",
+        "languages": "Sauya yare",
+        "friends-join": "Shiga cikin abokai",
+        "friends-invite": "Gayyaci abokai",
+        "reset": "Sake saiti",
+        "home": "Fara",
+        "introduction": "Gabatarwa",
+        "theses": "Sanarwa",
+        "evaluation": "Kamantawa",
+        "party": "Zaɓan jam'iyya",
+        "match": "Sakamako",
+        "compare": "Sanarwa",
+        "about": "Game da"
+      }
+    },
+    "open-election-compass-logo": {
+      "alt": "Logo na Komfas ɗin zaɓe"
+    },
+    "show-more": {
+      "show": "nuna ƙari",
+      "hide": "ɓoye"
+    }
+  },
+  "views": {
+    "home": {
+      "home": {
+        "role-aria": "Komfas na Zaɓe"
+      },
+      "start": {
+        "section": {
+          "banner-aria": "Fara sashe"
+        }
+      },
+      "theses": {
+        "important-button": {
+          "important": "Mai muhimmanci gare ni",
+          "important-aria": "Muhimmi – sanya wannan bayani amatsayin muhimmi gare ka.",
+          "too-many-important": "Akwai kawai sanarwa kaɗan ne, dan haka ba zaka iya sanya ɗaya amatsayin muhimmi ba. | Yi haƙuri sanya kada ya wuce ɗaya na sanarwan amatsayin muhimmi dan samun sakamako mai ma'ana! | Yi haƙuri sanya sanarwa kada ya wuce {count} amatsayin muhimmi dan samun sakamako mai ma'ana!"
+        },
+        "skip-button": {
+          "skip": "Ban sani ba",
+          "skip-aria": "Tsallake – tsallake wannan sanarwan saboda ba za'a ƙirga ta ba.",
+          "too-many-skip": "Akwai kawai sanarwa kaɗan ne, dan haka ba zaka iya tsallake ɗaya ba. | Yi hakuri tsallake kada ya wuce ɗaya na sanarwan dan samun sakamako mai ma'ana! | Yi haƙuri tsallake sanarwa kada ya wuce {count} dan samun sakamako mai ma'ana!"
+        },
+        "statement-text": {
+          "thesis": "Sanarwa {count} / {total}",
+          "statement-aria": "Sanarwan shi ne: '{statement}'",
+          "quoteStart": "‘",
+          "quoteEnd": "’",
+          "statement-badge": {
+            "skip": "Kun tsallake wannan",
+            "skip-aria": "Kun tsallake wannan sanarwan.",
+            "important": "Ka sanya wannan amatsayin muhimmi",
+            "important-aria": "Ka sanya wannan sanarwan amatsayin muhimmi."
+          }
+        },
+        "statement-wrapper": {
+          "role-aria": "Sanarwa",
+          "region-aria": "Sanarwa {count} na {total}"
+        }
+      },
+      "party": {
+        "party-item": {
+          "party-aria": "Jam'iyya '{party}' – latsa nan dan zaɓa ko kin zaɓan wannan jam'iyya dan kwatantawa."
+        },
+        "section": {
+          "heading": "Zaɓi jam'iyyun da kuke son kwatantawa",
+          "instruction": "Yi haƙuri zaɓi jam'iyyu da kuke son kwatantawa na naku shawarar. Zaku iya zaɓan jam'iyyu da yawa da kuke so, amma sai dai ku zaɓi a ƙalla guda biyu. Waɗannan jerin masu zuwa an gabatar da sune a tsari iri ɗaya kamar yadda jam'iyyun zasu fito a takardan ƙuri'a.",
+          "proceed": "Na gama"
+        }
+      },
+      "match": {
+        "match-display": {
+          "match-aria": "Haɗin ku na jam'iyya '{party}' yana a {percentage} %"
+        },
+        "section": {
+          "heading": "Sakamakon ku",
+          "explanation": "Wannan taswira yana bayyana yawan yadda kai da wasu ƴan jam'iyyu kuka yarda akan abubuwan nan. Yawan yadda kason yake, hakane yawan yadda muƙaman suka daidaita. Sa aran ka, wannan ba buƙatan zaɓe bane, amma abin aiki ne na wayar da kai da tattaunawa."
+        }
+      },
+      "compare": {
+        "additional-analysis": {
+          "heading": "Ƙididdiga",
+          "buttons": {
+            "close": "Daina",
+            "start": "Mu tafi",
+            "proceed": "Sallamar kayi gaba",
+            "open-questionnaire": "Bude safiyo a sabon tab"
+          },
+          "start": "Mun gode da yadawa! Bayanan ku ya zamo mai ƙarin daraja ga ƙididdigan idan kuka bayyana karin bayana akan ku – zaku taimaka da ƙarin haka? kawai amsa tambaya da yawa da kuke so!",
+          "help-even-more": "Mun gode sosai! Kuna son taimakawa sosai kuma? Zaku iya amsa tambayoyi sosai da kuke so anan:",
+          "thanks": "Mun gode da yadawa! Wadancan sune dukka tambayoyin – kun taimaka mana sosai! Danna 'Fita' ku koma baya ga sakamakon ku.",
+          "fields": {
+            "age": {
+              "name": "Shekara",
+              "label": "Nawa shekarar ka yanzu?",
+              "placeholder": "25",
+              "description": "Shekarar ka na da muhimmanci ga binciken sanin me mutane a mabanbantan shekaru suke gani akan wadannan jam'iyoyi."
+            },
+            "gender": {
+              "name": "Jinsi",
+              "label": "Menene jinsin ka?",
+              "options": {
+                "female": "mace",
+                "diverse": "ire-ire",
+                "male": "namiji",
+                "none": "ba amsa"
+              }
+            },
+            "education": {
+              "name": "Matakan cancanta",
+              "label": "Menene mafi nisan matakin karatun ka?",
+              "options": {
+                "student": "A yanzu ɗalibi ne",
+                "nothing": "Babu cikakken cancanta",
+                "lower": "Makarantar sakandare ko makamanciya",
+                "higher": "Makarantar ƙaramar sakandare ko makamanciya",
+                "academic": "Akademiya",
+                "none": "ba amsa"
+              }
+            },
+            "party": {
+              "name": "Jam'iyya",
+              "label": "Idan zaɓen yau ne, waye zaka kaɗa wa ƙuri'ar ka?",
+              "options": {
+                "other": "Wani",
+                "non-voter": "Ba zan ƙada ƙuri'a ba",
+                "not-eligible": "Ban cancanta ba",
+                "not-sure": "Bani da yaƙini",
+                "none": "ba amsa"
+              }
+            }
+          }
+        },
+        "analysis-banner": {
+          "heading": "Shin kana son bada amsar ga kimiyya?",
+          "explanation": "Zaka iya taimakawa {someone} ya fahimci wannan zaɓen sosai ta tallafar da amsoshin ka ga binciken kimiyya. Muna kawai adana bayanai ne a boye da ba za'a iya mayarwa gare ka ba.",
+          "send": "Sallamar da bayanan ƙididdiga yanzu",
+          "close": "A'a, cigaba da karatu"
+        },
+        "answer": {
+          "skip": {
+            "status-text": "ba'a sani ba",
+            "content": "Jam'iyya '{party}' bata bada wani amsa ba ko mataki akan wannan sanarwan."
+          },
+          "empty": {
+            "content": "Jam'iyya '{party}' bata bada wani tunani ba ko matakin ta akan wannan sanarwan."
+          }
+        },
+        "section": {
+          "heading": "Amsoshin su",
+          "explanation": "Jam'iyyu sukan bada matsayan su ga kowane sanarwa dan bayyana tunanin su. Ba koda yaushe ne yake a buɗe ba me yasa jam'iyya take ɗaukar wani mataki shiyasa ake son karanta wannan sanarwan ko muradan zaɓukan su.",
+          "region-aria": "Sanarwa {count} na {total}"
+        },
+        "friends-position": {
+          "answer-aria": "{name}: {position}",
+          "skip": "Tsallake"
+        },
+        "kiosk-mode-hint": {
+          "heading": "Yi haƙuri ka sake saiti idan ka gama",
+          "explanation": "Ɗauki lokacin ka ka karanta da gwama amsoshin sanarwan dake kasa. Sanda ka gama, zaka iya sake saita komfas na zaɓen anan dan mutum na gaba. Wannan kuma zai goge naka amsoshin. Haske: zaka iya samun maɓallin sake saiti a jadawali. Na gode!",
+          "reset": "Sake saiti"
+        }
+      },
+      "footer": {
+        "section": {
+          "explanation": "Wannan komfas ɗin zaɓen anyi shi ne akan manhaja ta kyauta {0}.",
+          "oec": "OpenElectionCompass"
+        }
+      }
+    }
+  },
+  "validation": {
+    "names": {
+      "name": "Suna",
+      "remote-peer-id": "Na'urar aboki"
+    },
+    "fields": {
+      "name": {
+        "min": "Yi haƙuri shigar da suna.",
+        "regex": "Baƙaƙe kawai, lambobi da sarare, banda alamomi masu muhimmanci.",
+        "required": "Yi haƙuri shigar da suna."
+      }
+    }
+  },
+  "algorithm": {
+    "options": {
+      "strongly-approve": {
+        "button": "Na aminta sosai",
+        "button-aria": "Na aminta sosai – danna nan dan amincewa sosai da wannan sanarwa!",
+        "badge": "Ka aminta sosai",
+        "badge-aria": "Ka aminta sosai da wannan sanarwa.",
+        "status": "amincewa sosai",
+        "answer-aria": "Jam'iyya '{party}' ta aminta sosai da wannan sanarwa tare da waɗannan amsoshin: {answer}"
+      },
+      "approve": {
+        "button": "Aminta",
+        "button-aria": "Amincewa – danna nan ka amince da wannan sanrwat!",
+        "badge": "Ka amince",
+        "badge-aria": "Ka amince da wannan sanarwa.",
+        "status": "amince",
+        "answer-aria": "Jam'iyya '{party}' ta aminta sosai da wannan sanarwa tare da waɗannan amsoshin: {answer}"
+      },
+      "neutral": {
+        "button": "Tsaka tsaki",
+        "button-aria": "Tsaka tsaki – danna nan ka cigaba da zama a tsaka tsaki akan wannan sanarwa!",
+        "badge": "Kai a tsaka tsaki kake",
+        "badge-aria": "Kai a tsaka tsaki kake akan wannan sanarwan.",
+        "status": "tsaka tsaki",
+        "answer-aria": "Jam'iyya '{party}' ta tsaya a tsaka tsaki ga wannan sanarwa, da bada waɗannan amsar: {answer}"
+      },
+      "partly": {
+        "button": "Mafi yawa",
+        "button-aria": "Mafi yawa – danna nan ka yarda da mafi yawan wannan sanarwan!",
+        "badge": "Ka yarda da mafi yawa",
+        "badge-aria": "Ka yarda da mafi yawan wannan sanarwan.",
+        "status": "mafi yawa",
+        "answer-aria": "Jam'iyya '{party}' ta goyi bayan mafi yawa na wannan sanarwa, da bayar da wannan amsa: {answer}"
+      },
+      "reject": {
+        "button": "Ƙi",
+        "button-aria": "Ƙi – danna nan ka ƙi amincewa da wannan sanarwan!",
+        "badge": "Ka ƙi",
+        "badge-aria": "Ka ƙi wannan sanarwan.",
+        "status": "ƙi",
+        "answer-aria": "Jam'iyya '{party}' ta ƙi wannan sanarwan tare da wannan amsa: {answer}"
+      },
+      "strongly-reject": {
+        "button": "Ƙi sosai",
+        "button-aria": "Ƙi sosai – danna nan ka ƙi wannan sanarwan sosai!",
+        "badge": "Ka ƙi sosai",
+        "badge-aria": "Ka ƙi wannan sanarwan sosai.",
+        "status": "ka ƙi sosai",
+        "answer-aria": "Jam'iyya '{party}' ta ƙi wannan sanarwan tare da wannan amsar: {answer}"
+      }
+    }
+  }
+}

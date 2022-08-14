@@ -1,0 +1,364 @@
+{
+  "elements": {
+    "friends-invite-modal": {
+      "heading": "Dostlarınızı dəvət edin",
+      "description": "Dostlarınızı hər kəsin bir-birinin cavablarını real vaxtda görə biləcəyi ortaq sessiyaya dəvət edin.",
+      "form": {
+        "name": {
+          "label": "Adınız / Ləqəbiniz",
+          "description": "Dostlarınızın sizi tanıması üçün adınızı qeyd edin. Siz həmçinin ləqəbdən də istifadə edə bilərsiniz."
+        }
+      },
+      "introduction": {
+        "heading": "Ortaq sessiya nədir?",
+        "explanation": [
+          "Ortaq sessiya dostlarınızla seçki kompası ilə tanış olmağa imkan verir. Bir şəxs digərlərini ortaq sessiyaya dəvət edir. Hamı qoşulduqdan sonra hər biriniz seçki kompasından həmişə olduğu kimi istifadə edə bilərsiniz. Amma partiyalardan əlavə, indi siz də bir-birinizin cavablarını görüb müzakirəyə başlaya bilərsiniz."
+        ]
+      },
+      "security": {
+        "heading": "Cavablarımın təhlükəsizliniyə zəmanət verilir?",
+        "explanation": [
+          "Bəli! Cavablarınız təhlükəsiz bağlantı vasitəsilə birbaşa cihazlarınız arasında mübadilə edilir. Server cihazların İnternetdə özlərini tapmasına kömək edir - cavablarınız server vasitəsilə deyil, birbaşa cihazdan cihaza göndərilir."
+        ]
+      },
+      "registration": {
+        "heading": "Bu funksiyadan istifadə etmək üçün qeydiyyatdan keçməliyəmmi?",
+        "explanation": [
+          "Heç bir qeydiyyat tələb olunmur. Sizə sadəcə adınızı daxil etmək kifayətdir və sessiyaya qoşula bilərsiniz."
+        ]
+      },
+      "cancel": "Ləğv et",
+      "confirm": "Açıq sessiya"
+    },
+    "friends-join-modal": {
+      "heading": "Dostlarınıza qoşulun",
+      "description": "Paylaşılan sessiyada dostlarınızla əlaqə qurun və real vaxt rejimində hər kəsin cavablarına baxın.",
+      "form": {
+        "name": {
+          "label": "Adınız / Ləqəbiniz",
+          "description": "Dostlarınızın sizi tanıması üçün adınızı qeyd edin. Siz həmçinin ləqəbdən də istifadə edə bilərsiniz."
+        },
+        "join": {
+          "label": "Dostunuzun cihazı",
+          "description": "Sessiyaya icraçılıq edən şəxsin cihaz İD-sini daxil etməklə paylaşılan sessiyaya qoşulun."
+        }
+      },
+      "introduction": {
+        "heading": "Ortaq sessiya nədir?",
+        "explanation": [
+          "Ortaq sessiya dostlarınızla seçki kompası ilə tanış olmağa imkan verir. Bir şəxs digərlərini ortaq sessiyaya dəvət edir. Hamı qoşulduqdan sonra hər biriniz seçki kompasından həmişə olduğu kimi istifadə edə bilərsiniz. Amma partiyalardan əlavə, indi siz də bir-birinizin cavablarını görüb müzakirəyə başlaya bilərsiniz."
+        ]
+      },
+      "security": {
+        "heading": "Cavablarımın təhlükəsizliniyə zəmanət verilir?",
+        "explanation": [
+          "Bəli! Cavablarınız təhlükəsiz bağlantı vasitəsilə birbaşa cihazlarınız arasında mübadilə edilir. Server cihazların İnternetdə özlərini tapmasına kömək edir - cavablarınız server vasitəsilə deyil, birbaşa cihazdan cihaza göndərilir."
+        ]
+      },
+      "registration": {
+        "heading": "Bu funksiyadan istifadə etmək üçün qeydiyyatdan keçməliyəmmi?",
+        "explanation": [
+          "Heç bir qeydiyyat tələb olunmur. Sizə sadəcə adınızı daxil etmək kifayətdir və sessiyaya qoşula bilərsiniz."
+        ]
+      },
+      "cancel": "Ləğv et",
+      "confirm": "Qoşul"
+    },
+    "friends-list": {
+      "heading": "Qoşulmuş cihazlar",
+      "empty": "Sessiyaya qoşulmaq üçün icraçı sorğunuzu qəbul etməlidir.",
+      "host": "İcraçı"
+    },
+    "friends-status-modal": {
+      "heading": "Ortaq Sessiya",
+      "mode": {
+        "INACTIVE": {
+          "heading": "Bağlantı yoxdur",
+          "text": "Heç kimlə bağlantıda deyilsiniz. Mövcud sessiyanıza qoşulun və ya əsas menyuda öz sessiyanızı keçirin."
+        },
+        "GUEST": {
+          "heading": "Qonaq",
+          "text": "Siz başqasının icraçısı olduğu ortaq sessiyada iştirak edirsiniz."
+        },
+        "HOST": {
+          "heading": "İcraçı",
+          "text": "Siz bu sessiyanın icraçısısınız. Cihaz ID-nizdən istifadə edərək dostlarınızı dəvət edin və qoşulmaq üçün onların sorğularını qəbul edin."
+        }
+      },
+      "own-peer-id": {
+        "label": "Sizin cihazınız",
+        "description": "Bu sizin cihaz ID-nizdir. Ortaq sessiyamıza qoşulmaq üçün dostlarınız bunu öz cihazlarında daxil etməlidir."
+      }
+    },
+    "guests-list": {
+      "heading": "Qoşulmuş cihazlar",
+      "empty": "Hələ heç kim sessiyaya qoşulmayıb.",
+      "accept": "Qəbul edin",
+      "status": {
+        "connecting": "Qoşulur",
+        "connected": "Qoşuldu",
+        "disconnected": "Qoşulmadı"
+      }
+    },
+    "guide-button": {
+      "start": "Başlayaq",
+      "introduction": "Bunun necə işlədiyini öyrənin",
+      "first-thesis": "İlk bəyanatla başlayın",
+      "thesis": "Növbəti bəyanata keçin",
+      "party": "Partiyaları seçin",
+      "match": "Nəticənizə baxın",
+      "compare": "Vəzifələri oxuyun"
+    },
+    "kiosk-mode": {
+      "heading": "Sıfırlamalıyıq?",
+      "description": "Seçki kompası sıfırlanacaq və bütün cavablarınız silinəcək. | Seçki kompası {count} saniyə ərzində sıfırlanacaq və bütün cavablarınız silinəcək. | Seçki kompası {count} saniyəyə sıfırlanacaq və bütün cavablarınız silinəcək.",
+      "reset": "İndi sıfırlayın",
+      "resume": "Hələ yox!"
+    },
+    "language-switch": {
+      "button": "Dillər",
+      "heading": "Dillər",
+      "description": "Lütfən, istədiyiniz dili seçin."
+    },
+    "main-navigation": {
+      "menu": "Menyu",
+      "thesis": "Bəyanatlar {count}",
+      "links": {
+        "compass": "Seçki kompas",
+        "languages": "Dili dəyişdirin",
+        "friends-join": "Dostlarınıza qoşulun",
+        "friends-invite": "Dostlarınızı dəvət edin",
+        "reset": "Sıfırlayın",
+        "home": "Başlamaq",
+        "introduction": "Təqdimat",
+        "theses": "Bəyanatlar",
+        "evaluation": "Dəyərləndirmə",
+        "party": "Partiya seçimi",
+        "match": "Nəticə",
+        "compare": "Bəyanatlar",
+        "about": "Haqqında"
+      }
+    },
+    "open-election-compass-logo": {
+      "alt": "Seçki Kompasının Loqosu"
+    },
+    "show-more": {
+      "show": "daha çox göstər",
+      "hide": "gizlə"
+    }
+  },
+  "views": {
+    "home": {
+      "home": {
+        "role-aria": "Seçki Kompası"
+      },
+      "start": {
+        "section": {
+          "banner-aria": "Başlanğıc bölməsi"
+        }
+      },
+      "theses": {
+        "important-button": {
+          "important": "Mənim üçün vacibdir",
+          "important-aria": "Vacib - bu bəyanatı sizin üçün vacib olaraq qeyd edin.",
+          "too-many-important": "Yalnızca bir neçə bəyanat var, ona görə də yalnız birini vacib olaraq qeyd edə bilməzsiniz. | Lütfən, mənalı nəticə əldə etmək üçün 1-dən çox bəyanatı vacib kimi qeyd edin! | Lütfən, mənalı nəticə əldə etmək üçün ən çox {count} bəyanatı vacib kimi qeyd edin!"
+        },
+        "skip-button": {
+          "skip": "Mən bilmirəm",
+          "skip-aria": "Ötürün – sayılmaması üçün bu bəyanatı ötürün.",
+          "too-many-skip": "Yalnızca bir neçə bəyanat var, ona görə də yalnız birini ötürə bilməzsiniz. | Lütfən, mənalı nəticə əldə etmək üçün 1-dən çox bəyanatı ötürün! | Lütfən, mənalı nəticə əldə etmək üçün ən çox {count} bəyanatı ötürün!"
+        },
+        "statement-text": {
+          "thesis": "Bəyanat {count} / {total}",
+          "statement-aria": "Bəyanat belədir: '{statement}'",
+          "quoteStart": "‘",
+          "quoteEnd": "’",
+          "statement-badge": {
+            "skip": "Bunu ötürdünüz",
+            "skip-aria": "Bu bəyanatı ötürdünüz.",
+            "important": "Bunu vacib olaraq qeyd etdiniz",
+            "important-aria": "Bu bəyanatı vacib olaraq qeyd etdiniz."
+          }
+        },
+        "statement-wrapper": {
+          "role-aria": "Bəayant",
+          "region-aria": "Bəyanat {total}-dən {count}-i"
+        }
+      },
+      "party": {
+        "party-item": {
+          "party-aria": "Partiya '{party}' – müqayisə üçün bu partiyanı seçmək və ya seçimini ləğv etmək üçün bura klikləyin."
+        },
+        "section": {
+          "heading": "Müqayisə etmək istədiyiniz partiyaları seçin",
+          "instruction": "Öz qərarlarınıza əsasəm müqayisə etmək istədiyiniz partiyaları seçin. İstədiyiniz qədər partiya seçə bilərsiniz, lakin ən azı ikisini seçməlisiniz. Aşağıdakı siyahı partiyaların bülletendə görünəcəyi ardıcıllıqla təqdim olunur.",
+          "proceed": "Edildi"
+        }
+      },
+      "match": {
+        "match-display": {
+          "match-aria": "{party}' partiyası üçün uyğunluğunuz {percentage} %-dir"
+        },
+        "section": {
+          "heading": "Sizin nəticəniz",
+          "explanation": "Bu cədvəl sizin və müvafiq partiyaların yuxarıdakı tezislər üzrə nə qədər razılaşdığınızı təsvir edir. Faiz nə qədər yüksəkdirsə, mövqeləriniz bir o qədər uyğun gəlir. Nəzərə alın ki, bu səsvermə tövsiyəsi deyil, oriyentasiya və müzakirə vasitəsidir."
+        }
+      },
+      "compare": {
+        "additional-analysis": {
+          "heading": "Statistikalar",
+          "buttons": {
+            "close": "Çıxın",
+            "start": "Başlayaq",
+            "proceed": "Təsdiq et və irəlilə",
+            "open-questionnaire": "Sorğunu yeni tabda açın"
+          },
+          "start": "Paylaşdığınız üçün təşəkkür edirik! Özünüz haqqında daha çox məlumat paylaşsanız, məlumatlarınız statistika üçün daha dəyərli olur – daha çox kömək etmək istərdinizmi? Sadəcə istədiyiniz qədər suallara cavab verin!",
+          "help-even-more": "Təşəkkür edirik! Daha çox kömək etmək istərdinizmi? Daha konkret suallara burada cavab verə bilərsiniz:",
+          "thanks": "Paylaşdığınız üçün təşəkkür edirik! Bütün suallar bunlar idi - siz bizə çox kömək etdiniz! Nəticələrinizə qayıtmaq üçün 'Çıxın' üzərinə klikləyin.",
+          "fields": {
+            "age": {
+              "name": "Yaşınız",
+              "label": "Hal-hazırda neçə yaşınız var?",
+              "placeholder": "25",
+              "description": "Müxtəlif yaş qruplarından olan insanların tezislər və partiyalar haqqında nə düşündüklərini araşdırmaq üçün yaşınız vacibdir."
+            },
+            "gender": {
+              "name": "Cinsiyyət",
+              "label": "Cinsiyyətiniz necedi?",
+              "options": {
+                "female": "qadın",
+                "diverse": "digər",
+                "male": "kişi",
+                "none": "cavab vermək istəmirəm"
+              }
+            },
+            "education": {
+              "name": "Təhsil səviyyəniz",
+              "label": "Ən yüksək təhsil səviyyəniz necədir?",
+              "options": {
+                "student": "Tələbə",
+                "nothing": "Tam ixtisas yoxdur",
+                "lower": "Orta məktəb və ya bənzəri",
+                "higher": "Universitet və ya bənzəri",
+                "academic": "Akademik",
+                "none": "cavab vermək istəmirəm"
+              }
+            },
+            "party": {
+              "name": "Partiya",
+              "label": "Seçki bu gün olsaydı, kimə səs verərdiniz?",
+              "options": {
+                "other": "Digər",
+                "non-voter": "Mən səs verməyəcəyəm",
+                "not-eligible": "Uyğun deyiləm",
+                "not-sure": "Əmin deyiləm",
+                "none": "cavab vermək istəmirəm"
+              }
+            }
+          }
+        },
+        "analysis-banner": {
+          "heading": "Cavablarınızı elmə bağışlamaq istəyirsiniz?",
+          "explanation": "Cavablarınızı və nəticələrinizi elmi araşdırmalara bağışlamaqla {someone} kimilərə bu seçkini daha yaxşı başa düşməyə kömək edə bilərsiniz. Biz yalnız sizə geri qaytara bilməyəcəyimiz anonim məlumatları saxlayırıq.",
+          "send": "Statistik məlumatları indi təqdim edin",
+          "close": "Xeyr, oxumağa davam edin"
+        },
+        "answer": {
+          "skip": {
+            "status-text": "naməlum",
+            "content": "{party}' partiyası bu bəyanatla bağlı heç bir cavab və ya mövqe bildirməyib."
+          },
+          "empty": {
+            "content": "{party}' partiyası bu tezislə bağlı mövqeyini izah etmək üçün heç bir əsas təqdim etməyib."
+          }
+        },
+        "section": {
+          "heading": "Onların cavabları",
+          "explanation": "Partiyalar öz əsaslandırmalarını izah etmək üçün adətən hər bir bəyanat üçün mövqelər təqdim edirlər. Bir partiyanın niyə müəyyən mövqe tutması həmişə aydın olmur, ona görə də bu bəyanatları və ya müvafiq seçki manifestlərini oxumaq tövsiyə olunur.",
+          "region-aria": "Bəyanat {total}-dən {count}-i"
+        },
+        "friends-position": {
+          "answer-aria": "{name}: {position}",
+          "skip": "Buraxıldı"
+        },
+        "kiosk-mode-hint": {
+          "heading": "Bitirdikdən sonra sıfırlayın",
+          "explanation": "Aşağıdakı cavab ifadələrini oxumağa və müqayisə etməyə vaxt ayırın. Bitirdikdən sonra növbəti şəxs üçün burada seçki kompasını sıfırlaya bilərsiniz. Bu, öz cavablarınızı da siləcək. İpucu: menyuda sıfırlama düyməsini də tapa bilərsiniz. Çox sağ olun!",
+          "reset": "Sıfırlayın"
+        }
+      },
+      "footer": {
+        "section": {
+          "explanation": "Bu seçki kompası pulsuz açıq mənbə layihəsinə əsaslanır {0}.",
+          "oec": "OpenElectionCompass"
+        }
+      }
+    }
+  },
+  "validation": {
+    "names": {
+      "name": "Ad",
+      "remote-peer-id": "Dostun cihazı"
+    },
+    "fields": {
+      "name": {
+        "min": "Zəhmət olmasa ad daxil edin.",
+        "regex": "Yalnız hərflər, rəqəmlər və boşluqlar, xüsusi simvollar yoxdur.",
+        "required": "Zəhmət olmasa ad daxil edin."
+      }
+    }
+  },
+  "algorithm": {
+    "options": {
+      "strongly-approve": {
+        "button": "Güclü dəstək",
+        "button-aria": "Güclü dəstək – bu bəyanatı güclü şəkildə dəstəkləmək üçün bura klikləyin!",
+        "badge": "Güclü dəstəklədiniz",
+        "badge-aria": "Siz bu bəyanatı güclü dəstəklədiniz.",
+        "status": "güclü dəstəklər",
+        "answer-aria": "{party}' partiyası bu bəyanatı aşağıdakı cavabla qəti şəkildə təsdiqləyir: {answer}"
+      },
+      "approve": {
+        "button": "Təsdiq edin",
+        "button-aria": "Təsdiq edin – bəyanatı təsdiqləmək üçün bura klikləyin!",
+        "badge": "Təsdiq etdiniz",
+        "badge-aria": "Siz bu bəyanatı təsdiqlədiniz.",
+        "status": "təsdiqlənmişlər",
+        "answer-aria": "{party}' tərəfi bu bəyanatı aşağıdakı cavabla təsdiqləyir: {answer}"
+      },
+      "neutral": {
+        "button": "Neytral",
+        "button-aria": "Tərəfsiz – bəyanatla bağlı neytral qalmaq üçün bura klikləyin!",
+        "badge": "Təfəfsizsiniz",
+        "badge-aria": "Bəyanatla bağlı tərəfsizsiniz.",
+        "status": "tərəfsiz",
+        "answer-aria": "{party}' tərəfi bu bəyanata neytral qalır və aşağıdakı cavabı verir: {answer}"
+      },
+      "partly": {
+        "button": "Qismən",
+        "button-aria": "Qismən – bu bəyanatla qismən razılaşmaq üçün bura klikləyin!",
+        "badge": "Qismən razılaşdınız",
+        "badge-aria": "Siz bu bəyanatla qismən razılaşdınız.",
+        "status": "qismən",
+        "answer-aria": "{party}' partiyası bu bəyanatı qismən dəstəkləyir və aşağıdakı cavabı verir: {answer}"
+      },
+      "reject": {
+        "button": "Qarşı çıxın",
+        "button-aria": "Qarşı çıxın – bu bəyanata qarşı çıxmaq üçün bura klikləyin!",
+        "badge": "Qarşı çıxdınız",
+        "badge-aria": "Siz bu bəyanata qarşı çıxdınız.",
+        "status": "qarşı çıxılanlar",
+        "answer-aria": "{party}' tərəfi bu bəyanata aşağıdakı cavabla qarşı çıxır: {answer}"
+      },
+      "strongly-reject": {
+        "button": "Qəti şəkildə qarşı çıxmaq",
+        "button-aria": "Qəti şəkildə qarşı çıxmaq – bu bəyanata qəti şəkildə qarşı çıxmaq üçün bura klikləyin!",
+        "badge": "Qəti şəkildə qarşı çıxdınız",
+        "badge-aria": "Siz bu bəyanata qəti şəkildə qarşı çıxdınız.",
+        "status": "qəti şəkildə qarşı çıxılanlar",
+        "answer-aria": "{party}' partiyası bu bəyanata aşağıdakı cavabla qəti şəkildə qarşı çıxır: {answer}"
+      }
+    }
+  }
+}

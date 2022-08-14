@@ -1,0 +1,364 @@
+{
+  "elements": {
+    "friends-invite-modal": {
+      "heading": "友達を招待する",
+      "description": "全員がお互いの回答をリアルタイムで見ることができる共有セッションに友達を招待しましょう。",
+      "form": {
+        "name": {
+          "label": "あなたの名前・ニックネーム",
+          "description": "あなたの友達があなたを認識できるよう、お名前を入力してください。ニックネームを使うこともできます。"
+        }
+      },
+      "introduction": {
+        "heading": "共有セッションとは？",
+        "explanation": [
+          "共有セッションでは、Election Compassを友達と一緒に行うことができます。1人が他の人達を共有セッションに招待します。全員が参加したら、通常通りに各自でElection Compassを使うことができます。党だけでなく、お互いの回答を見ながら議論することができます。"
+        ]
+      },
+      "security": {
+        "heading": "私の回答のプライバシーは保たれますか？",
+        "explanation": [
+          "はい！あなたの回答はセキュアな接続を通じてあなたのデバイス間で直接送受信されます。サーバーはデバイスがインターネット上のどこにあるかを知ることを助けますが、あなたの回答はサーバーを経由せず、直接デバイス間で送受信されます。"
+        ]
+      },
+      "registration": {
+        "heading": "この機能を使うために登録を行う必要はありますか？",
+        "explanation": [
+          "登録は必要ありません。お名前を入力するだけで、セッションに参加できます。"
+        ]
+      },
+      "cancel": "キャンセル",
+      "confirm": "セッションを開く"
+    },
+    "friends-join-modal": {
+      "heading": "友達に加わる",
+      "description": "共有セッションに参加中の友達とつながり、みんなの回答をリアルタイムで見ましょう。",
+      "form": {
+        "name": {
+          "label": "あなたの名前・ニックネーム",
+          "description": "あなたの友達があなたを認識できるよう、お名前を入力してください。ニックネームを使うこともできます。"
+        },
+        "join": {
+          "label": "友達のデバイス",
+          "description": "セッションをホストしている人のデバイスIDを入力すると、共有セッションに参加できます。"
+        }
+      },
+      "introduction": {
+        "heading": "共有セッションとは？",
+        "explanation": [
+          "共有セッションでは、Election Compassを友達と一緒に行うことができます。1人が他の人達を共有セッションに招待します。全員が参加したら、通常通りに各自でElection Compassを使うことができます。党だけでなく、お互いの回答を見ながら議論することができます。"
+        ]
+      },
+      "security": {
+        "heading": "私の回答のプライバシーは保たれますか？",
+        "explanation": [
+          "はい！あなたの回答はセキュアな接続を通じてあなたのデバイス間で直接送受信されます。サーバーはデバイスがインターネット上のどこにあるかを知ることを助けますが、あなたの回答はサーバーを経由せず、直接デバイス間で送受信されます。"
+        ]
+      },
+      "registration": {
+        "heading": "この機能を使うために登録を行う必要はありますか？",
+        "explanation": [
+          "登録は必要ありません。お名前を入力するだけで、セッションに参加できます。"
+        ]
+      },
+      "cancel": "キャンセル",
+      "confirm": "参加する"
+    },
+    "friends-list": {
+      "heading": "接続されたデバイス",
+      "empty": "セッションに参加するには、ホストがあなたのリクエストを承認する必要があります。",
+      "host": "ホスト"
+    },
+    "friends-status-modal": {
+      "heading": "共有セッション",
+      "mode": {
+        "INACTIVE": {
+          "heading": "接続されていない",
+          "text": "あなたは誰ともつながっていません。既存のセッションに参加するか、メインメニューから自分でセッションをホストしましょう。"
+        },
+        "GUEST": {
+          "heading": "ゲスト",
+          "text": "あなたは別の人がホストを務める共有セッションに参加しています。"
+        },
+        "HOST": {
+          "heading": "ホスト",
+          "text": "あなたがこのセッションのホストです。あなたのデバイスIDを使って友達を招待し、友達の参加リクエストを承認しましょう。"
+        }
+      },
+      "own-peer-id": {
+        "label": "あなたのデバイス",
+        "description": "これがあなたのデバイスIDです。友達があなたの共有セッションに参加するためには、各自のデバイスにこれを入力する必要があります。"
+      }
+    },
+    "guests-list": {
+      "heading": "接続されたデバイス",
+      "empty": "まだ誰もセッションに参加していません。",
+      "accept": "承認する",
+      "status": {
+        "connecting": "接続中",
+        "connected": "接続されました",
+        "disconnected": "切断しました"
+      }
+    },
+    "guide-button": {
+      "start": "さあ、始めましょう",
+      "introduction": "仕組みを学びましょう",
+      "first-thesis": "まず最初の記述から始めます",
+      "thesis": "それから次の記述に進みます",
+      "party": "党を選択します",
+      "match": "結果を見ます",
+      "compare": "各候補の立場を読みます"
+    },
+    "kiosk-mode": {
+      "heading": "リセットしますか？",
+      "description": "Election Compassはリセットされ、あなたのすべての回答が消去されます。| Election Compass は{count}秒でリセットされ、あなたのすべての回答が消去されます。| Election Compass は{count}秒でリセットされ、あなたのすべての回答が消去されます。",
+      "reset": "今すぐリセットする",
+      "resume": "まだしない！"
+    },
+    "language-switch": {
+      "button": "言語",
+      "heading": "言語",
+      "description": "優先言語を選択してください。"
+    },
+    "main-navigation": {
+      "menu": "メニュー",
+      "thesis": "記述{count}",
+      "links": {
+        "compass": "Election Compass",
+        "languages": "言語を変更",
+        "friends-join": "友達に加わる",
+        "friends-invite": "友達を招待する",
+        "reset": "リセット",
+        "home": "開始",
+        "introduction": "はじめに",
+        "theses": "記述",
+        "evaluation": "評価",
+        "party": "党の選択",
+        "match": "結果",
+        "compare": "記述",
+        "about": "About"
+      }
+    },
+    "open-election-compass-logo": {
+      "alt": "Election Compass のロゴ"
+    },
+    "show-more": {
+      "show": "もっと見る",
+      "hide": "表示しない"
+    }
+  },
+  "views": {
+    "home": {
+      "home": {
+        "role-aria": "Election Compass"
+      },
+      "start": {
+        "section": {
+          "banner-aria": "セクションを開始"
+        }
+      },
+      "theses": {
+        "important-button": {
+          "important": "自分にとって重要",
+          "important-aria": "重要：この記述をあなたにとって重要なものとしてマークします。",
+          "too-many-important": "記述の数が非常に少ないため、1つに重要マークをつけることはできません。| 意味のある結果を得るためには、重要マークをつける記述は1つまでにしてください。| 意味のある結果を得るためには、重要マークをつける記述は{count}つまでにしてください。"
+        },
+        "skip-button": {
+          "skip": "わからない",
+          "skip-aria": "飛ばす：この記述を飛ばします。カウントされなくなります。",
+          "too-many-skip": "記述の数が非常に少ないため、1つを飛ばすことはできません。| 意味のある結果を得るためには、飛ばす記述は1つまでにしてください。| 意味のある結果を得るためには、飛ばす記述は{count}つまでにしてください。"
+        },
+        "statement-text": {
+          "thesis": "記述{count} / {total}",
+          "statement-aria": "こちらが記述です：'{statement}'",
+          "quoteStart": "‘",
+          "quoteEnd": "’",
+          "statement-badge": {
+            "skip": "これを飛ばしました",
+            "skip-aria": "この記述を飛ばしています。",
+            "important": "これに重要マークをつけています。",
+            "important-aria": "この記述に重要マークをつけています。"
+          }
+        },
+        "statement-wrapper": {
+          "role-aria": "記述",
+          "region-aria": "{total}つの記述のうち{count}つ目"
+        }
+      },
+      "party": {
+        "party-item": {
+          "party-aria": "党'{party}'：ここをクリックして、党を選択対象に入れたり、外したりできます。"
+        },
+        "section": {
+          "heading": "比較したい党を選択",
+          "instruction": "あなたの考えを比べたい党を選択してください。党は最低2つ選択してください。上限はありません。以下のリストは投票用紙の記載と同じ順序で並んでいます。",
+          "proceed": "完了"
+        }
+      },
+      "match": {
+        "match-display": {
+          "match-aria": "あなたと党'{party}'の一致度は{percentage} %です"
+        },
+        "section": {
+          "heading": "あなたの結果",
+          "explanation": "この表は、上記のテーマに関してあなたと各党の立場がどれくらい一致しているかを示しています。パーセントの数字が高いほど、あなたと党の立場の一致度が高いことを意味します。これは投票を薦めるものではなく、あくまで方向づけや議論のためのツールにすぎないことをご留意ください。"
+        }
+      },
+      "compare": {
+        "additional-analysis": {
+          "heading": "統計",
+          "buttons": {
+            "close": "やめる",
+            "start": "さあ、始めましょう",
+            "proceed": "送信し次に進む",
+            "open-questionnaire": "新しいタブで開く"
+          },
+          "start": "ありがとうございます！あなたに関する背景情報をご提供いただければ、あなたのデータは統計学的にさらに貴重な情報となります―お手伝いいただけますか？お差し支えない範囲で何問でもお答えください！",
+          "help-even-more": "ありがとうございます！さらにお手伝いいただけますか？さらに具体的な質問に、こちらからお答えいただけます：",
+          "thanks": "\"ありがとうございます！質問は以上となります。ご回答は大変役立ちます！「やめる」をクリックすると、あなたの結果に戻ります。\n\"",
+          "fields": {
+            "age": {
+              "name": "年齢",
+              "label": "あなたの現在の年齢は？",
+              "placeholder": "25",
+              "description": "あなたの年齢は、テーマや党について各年齢層がどう考えるかを分析する上で重要な情報となります。"
+            },
+            "gender": {
+              "name": "性別",
+              "label": "あなたの性別は？",
+              "options": {
+                "female": "女性",
+                "diverse": "多様",
+                "male": "男性",
+                "none": "無回答"
+              }
+            },
+            "education": {
+              "name": "学歴",
+              "label": "あなたの最終学歴は",
+              "options": {
+                "student": "現在は学生",
+                "nothing": "卒業資格はない",
+                "lower": "中学校卒業か同等",
+                "higher": "高校卒業か同等",
+                "academic": "Academic",
+                "none": "無回答"
+              }
+            },
+            "party": {
+              "name": "党",
+              "label": "もし選挙が今日だったら、誰に投票しますか？",
+              "options": {
+                "other": "その他",
+                "non-voter": "投票しない",
+                "not-eligible": "資格がない",
+                "not-sure": "わからない",
+                "none": "無回答"
+              }
+            }
+          }
+        },
+        "analysis-banner": {
+          "heading": "あなたの回答で、科学に貢献しませんか？",
+          "explanation": "あなたの回答と結果を科学的調査に寄付いただければ、今回の選挙の{someone}理解を深める助けとなります。データは匿名化して保存され、あなたに紐づけられることはありません。",
+          "send": "統計データを送信する",
+          "close": "いいえ、読み続けます"
+        },
+        "answer": {
+          "skip": {
+            "status-text": "不明",
+            "content": "党{party}はこの記述に関して答えも立場も表明しなかった。"
+          },
+          "empty": {
+            "content": "党{party}はこのテーマに関して論理的な裏付けを用いて立場を説明しなかった。"
+          }
+        },
+        "section": {
+          "heading": "党の回答",
+          "explanation": "党はすべての記述について通常、取っている姿勢の論理的な裏付けを提供している。党がある特定の立場をとる理由は必ずしも明白ではないため、こちらの記述または各党のマニフェストを読むことが推奨されます。",
+          "region-aria": "{total}つの記述のうち{count}つ"
+        },
+        "friends-position": {
+          "answer-aria": "{name}: {position}",
+          "skip": "飛ばした（無回答）"
+        },
+        "kiosk-mode-hint": {
+          "heading": "終わったらリセットしてください",
+          "explanation": "時間をかけて以下の回答文に目を通し、比較してください。終わったら、次の人のためにこちらからElection Compassをリセットできます。これにより、あなたの回答も消去されます。注：リセットボタンはメニューから出すこともできます。ありがとうございました！",
+          "reset": "リセット"
+        }
+      },
+      "footer": {
+        "section": {
+          "explanation": "Election Compassはフリーオープンソースプロジェクトに基づいています{0}。",
+          "oec": "OpenElectionCompass"
+        }
+      }
+    }
+  },
+  "validation": {
+    "names": {
+      "name": "名前",
+      "remote-peer-id": "友達のデバイス"
+    },
+    "fields": {
+      "name": {
+        "min": "お名前を入力してください。",
+        "regex": "英数字とスペースのみ使用可。特殊文字は使用できません。",
+        "required": "お名前を入力してください。"
+      }
+    }
+  },
+  "algorithm": {
+    "options": {
+      "strongly-approve": {
+        "button": "強く支持",
+        "button-aria": "強く支持：この記述を強く支持するにはここをクリック！",
+        "badge": "「強く支持」しました",
+        "badge-aria": "あなたはこの記述を強く支持しました。",
+        "status": "強く支持",
+        "answer-aria": "党{party}は以下の回答でこの記述を強く支持しています：{answer}"
+      },
+      "approve": {
+        "button": "支持",
+        "button-aria": "支持：この記述を支持するにはここをクリック！",
+        "badge": "「支持」しました",
+        "badge-aria": "あなたはこの記述を支持しました。",
+        "status": "支持",
+        "answer-aria": "党{party}は以下の回答でこの記述を支持しています：{answer}"
+      },
+      "neutral": {
+        "button": "中立",
+        "button-aria": "中立：この記述について中立 でいるにはここをクリック！",
+        "badge": "「中立」にしました",
+        "badge-aria": "あなたはこの記述について中立です。",
+        "status": "中立",
+        "answer-aria": "党{party}は以下の回答でこの記述については中立です：{answer}"
+      },
+      "partly": {
+        "button": "部分的",
+        "button-aria": "部分的：この記述を部分的に支持するにはここをクリック！",
+        "badge": "「部分的に支持」しました",
+        "badge-aria": "あなたはこの記述を部分的に支持しました。",
+        "status": "部分的",
+        "answer-aria": "党{party}は以下の回答でこの記述を部分的に支持しています：{answer}"
+      },
+      "reject": {
+        "button": "反対",
+        "button-aria": "反対：この記述に反対するにはここをクリック！",
+        "badge": "「反対」しました",
+        "badge-aria": "あなたはこの記述に反対しました。",
+        "status": "反対",
+        "answer-aria": "党{party}は以下の回答でこの記述に反対しています：{answer}"
+      },
+      "strongly-reject": {
+        "button": "強く反対",
+        "button-aria": "強く反対：この記述に強く反対するにはここをクリック！",
+        "badge": "「強く反対」しました",
+        "badge-aria": "あなたはこの記述に強く反対しました。",
+        "status": "強く反対",
+        "answer-aria": "党{party}は以下の回答でこの記述に強く反対しています：{answer}"
+      }
+    }
+  }
+}

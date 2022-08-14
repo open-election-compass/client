@@ -169,25 +169,25 @@
           "too-many-skip": "Es gibt nur sehr wenige Thesen, du kannst daher keine überspringen. | Bitte überspringe nicht mehr als 1 These um ein aussagekräftiges Ergebnis zu erhalten! | Bitte überspringe nicht mehr als {count} Thesen um ein aussagekräftiges Ergebnis zu erhalten!"
         },
         "statement-text": {
-          "thesis": "These {count} / {total}",
-          "statement-aria": "Die These lautet: '{statement}'",
-          "quoteStart": "„",
-          "quoteEnd": "“",
+          "thesis": "Thesis {count} / {total}",
+          "statement-aria": "The thesis is: '{statement}'",
+          "quoteStart": "‘",
+          "quoteEnd": "’",
           "statement-badge": {
-            "skip": "Übersprungen",
-            "skip-aria": "Du hast diese These übersprungen.",
-            "important": "Von dir als wichtig markiert",
-            "important-aria": "Du hast diese These als wichtig markiert."
+            "skip": "You skipped this",
+            "skip-aria": "You skipped this thesis.",
+            "important": "You marked this as important",
+            "important-aria": "You marked this thesis as important."
           }
         },
         "statement-wrapper": {
-          "role-aria": "These",
-          "region-aria": "These {count} von {total}"
+          "role-aria": "Thesis",
+          "region-aria": "Thesis {count} of {total}"
         }
       },
       "party": {
         "party-item": {
-          "party-aria": "Partei '{party}' – klicke hier um diese Partei zum Vergleich aus- bzw. abzuwählen."
+          "party-aria": "Party '{party}' – click here to select or deselect this party for comparison."
         },
         "section": {
           "heading": "Wähle die zu vergleichenden Parteien",
@@ -197,7 +197,7 @@
       },
       "match": {
         "match-display": {
-          "match-aria": "Deine Übereinstimmung mit den Positionen der Partei '{party}' liegt bei {percentage} %"
+          "match-aria": "Your match for the party '{party}' is at {percentage} %"
         },
         "section": {
           "heading": "Dein Ergebnis",
@@ -275,7 +275,7 @@
         },
         "section": {
           "heading": "Die Antworten",
-          "explanation": "Die Parteien stellen üblicherweise eine Erklärung zu jeder Entscheidung bereit. Da es nicht immer offensichtlich ist, warum eine Partei eine bestimmte Position vertritt, empfiehlt es sich, diese Erklärungen oder die jeweiligen Wahlprogramme zu lesen.",
+          "explanation": "The parties typically provide statements for every thesis to explain their reasoning. It is not always obvious why a party assumes a certain position so it is recommended to read this statements or the respective election manifestos.",
           "region-aria": "These {count} von {total}"
         },
         "friends-position": {
@@ -284,7 +284,7 @@
         },
         "kiosk-mode-hint": {
           "heading": "Bitte setz mich zurück, wenn du fertig bist",
-          "explanation": "Lies und vergleiche die Erklärungen unterhalb in Ruhe. Wenn du fertig bist, kannst du den Wahlkompass hier für die nächste Person zurücksetzen. Dadurch werden auch deine eigenen Antworten gelöscht. Tipp: Du findest diese Option auch im Menü. Vielen Dank!",
+          "explanation": "Take your time reading and comparing the answers to the statements below. When you're done, you can reset the election compass here for the next person. This will also delete your own answers. Hint: you can also find a reset button in the menu. Thank you!",
           "reset": "Zurücksetzen"
         }
       },

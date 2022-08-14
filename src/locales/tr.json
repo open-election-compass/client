@@ -197,7 +197,7 @@
       },
       "match": {
         "match-display": {
-          "match-aria": "Tarafla '{party}' uyumunuz % {percentage}"
+          "match-aria": "Adayla '{party}' uyumunuz % {percentage}"
         },
         "section": {
           "heading": "Sonuçlarınız",

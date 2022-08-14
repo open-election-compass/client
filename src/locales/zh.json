@@ -1,0 +1,364 @@
+{
+  "elements": {
+    "friends-invite-modal": {
+      "heading": "邀請朋友",
+      "description": "邀請您的朋友參加共享活動，每個人都可以即時看到彼此的答案。",
+      "form": {
+        "name": {
+          "label": "您的姓名/暱稱",
+          "description": "請提供您的姓名，讓您的朋友能認出您。您也可以使用暱稱。"
+        }
+      },
+      "introduction": {
+        "heading": "什麼是共享活動？",
+        "explanation": [
+          "共享活動可讓您與朋友一起體驗選舉指南針。由一個人邀請其他人參加。每個人都加入後，所有人都可以像往常一樣使用選舉指南針。但除了政黨之外，您現在還可以看到其他人的答案並展開討論。"
+        ]
+      },
+      "security": {
+        "heading": "我的答案安全性能被確保嗎？",
+        "explanation": [
+          "是的！答案會透過安全連線在裝置之間直接交換。伺服器會幫助裝置在網際網路上找到自己，不過，您的答案不是由伺服器傳送，而是直接從裝置傳送到裝置。"
+        ]
+      },
+      "registration": {
+        "heading": "使用此功能需要註冊嗎？",
+        "explanation": [
+          "不必註冊。只需輸入您的名字，就可以加入活動。"
+        ]
+      },
+      "cancel": "取消",
+      "confirm": "開啟活動"
+    },
+    "friends-join-modal": {
+      "heading": "加入好友",
+      "description": "在共享活動中連結您的好友，並即時查看每個人的答案。",
+      "form": {
+        "name": {
+          "label": "您的名字/暱稱",
+          "description": "請提供您的名字，讓您的好友認出您。您也可以使用暱稱。"
+        },
+        "join": {
+          "label": "好友的裝置",
+          "description": "輸入活動主持人的裝置 ID，加入共享活動。"
+        }
+      },
+      "introduction": {
+        "heading": "什麼是共享活動？",
+        "explanation": [
+          "共享活動可讓您與朋友一起體驗選舉指南針。由一個人邀請其他人參加。每個人都加入後，所有人都可以像往常一樣使用選舉指南針。但除了政黨之外，您現在還可以看到其他人的答案並展開討論。"
+        ]
+      },
+      "security": {
+        "heading": "我的答案安全性能被確保嗎？",
+        "explanation": [
+          "是的！答案會透過安全連線在裝置之間直接交換。伺服器會幫助裝置在網際網路上找到自己，不過，您的答案不是由伺服器傳送，而是直接從裝置傳送到裝置。"
+        ]
+      },
+      "registration": {
+        "heading": "使用此功能需要註冊嗎？",
+        "explanation": [
+          "不必註冊。只需輸入您的名字，就可以加入活動。"
+        ]
+      },
+      "cancel": "取消",
+      "confirm": "加入"
+    },
+    "friends-list": {
+      "heading": "連線的裝置",
+      "empty": "主持人需要接受您加入活動的要求。",
+      "host": "主持人"
+    },
+    "friends-status-modal": {
+      "heading": "共享活動",
+      "mode": {
+        "INACTIVE": {
+          "heading": "未連線",
+          "text": "您並未與任何人連線。加入現有的共享活動，或透過主選單主持您的活動。"
+        },
+        "GUEST": {
+          "heading": "訪客",
+          "text": "您正在參與其他人主持的共享活動。"
+        },
+        "HOST": {
+          "heading": "主持人",
+          "text": "您是此活動的主持人。\n使用您的裝置 ID 邀請好友，並接受他們的加入要求。"
+        }
+      },
+      "own-peer-id": {
+        "label": "您的裝置",
+        "description": "這是您的裝置 ID。您的好友必須在他們的裝置上輸入此資訊，才能連線至此共享活動。"
+      }
+    },
+    "guests-list": {
+      "heading": "連線的裝置",
+      "empty": "還沒有人加入活動。",
+      "accept": "接受",
+      "status": {
+        "connecting": "正在連線",
+        "connected": "已連線",
+        "disconnected": "已中斷連線"
+      }
+    },
+    "guide-button": {
+      "start": "開始吧",
+      "introduction": "了解運作方式",
+      "first-thesis": "從第一項聲明開始",
+      "thesis": "繼續下一項聲明",
+      "party": "選擇政黨",
+      "match": "查看您的結果",
+      "compare": "讀取立場"
+    },
+    "kiosk-mode": {
+      "heading": "您要重置嗎？",
+      "description": "選舉指南針現在將進行重置，您的所有答案都將遭到刪除。 | 選舉指南針將於 {count} 秒後重置，您的所有答案都將遭到刪除。 | 選舉指南針將於 {count} 秒後重置，您的所有答案都將遭到刪除。",
+      "reset": "立即重置",
+      "resume": "還不要"
+    },
+    "language-switch": {
+      "button": "語言",
+      "heading": "語言",
+      "description": "請選擇您偏好的語言。"
+    },
+    "main-navigation": {
+      "menu": "選單",
+      "thesis": "聲明 {count}",
+      "links": {
+        "compass": "選舉指南針",
+        "languages": "變更語言",
+        "friends-join": "加入好友",
+        "friends-invite": "邀請好友",
+        "reset": "重置",
+        "home": "開始",
+        "introduction": "介紹",
+        "theses": "聲明",
+        "evaluation": "評估",
+        "party": "政黨選擇",
+        "match": "結果",
+        "compare": "聲明",
+        "about": "關於"
+      }
+    },
+    "open-election-compass-logo": {
+      "alt": "選舉指南針的標誌"
+    },
+    "show-more": {
+      "show": "顯示更多",
+      "hide": "隱藏"
+    }
+  },
+  "views": {
+    "home": {
+      "home": {
+        "role-aria": "選舉指南針"
+      },
+      "start": {
+        "section": {
+          "banner-aria": "開始部分"
+        }
+      },
+      "theses": {
+        "important-button": {
+          "important": "對我而言重要",
+          "important-aria": "重要 - 將此項聲明標記為對您很重要。",
+          "too-many-important": "聲明過少，因此您無法將其中一項聲明標記為重要。 | 請勿將超過 1 項聲明標記為重要，以便獲得有意義的結果。 | 請勿將超過 {count} 項聲明標記為重要，以便獲得有意義的結果。"
+        },
+        "skip-button": {
+          "skip": "我不知道",
+          "skip-aria": "略過 – 略過此項聲明，不將之計算在內。",
+          "too-many-skip": "聲明過少，因此您無法將其中一項聲明標記為重要。 | 請勿將超過 1 項聲明標記為重要，以便獲得有意義的結果。 | 請勿將超過 {count} 項聲明標記為重要，以便獲得有意義的結果。"
+        },
+        "statement-text": {
+          "thesis": "聲明 {count} / {total}",
+          "statement-aria": "聲明為： '{statement}'",
+          "quoteStart": "‘",
+          "quoteEnd": "’",
+          "statement-badge": {
+            "skip": "您略過了此項",
+            "skip-aria": "您略過了此項聲明。",
+            "important": "您將此標記為重要",
+            "important-aria": "您將此項聲明標記為重要。"
+          }
+        },
+        "statement-wrapper": {
+          "role-aria": "聲明",
+          "region-aria": "第 {count} 項聲明，共 {total} 項"
+        }
+      },
+      "party": {
+        "party-item": {
+          "party-aria": "政黨 '{party}' – 按一下這裡以選擇或取消選擇要進行比較的政黨。"
+        },
+        "section": {
+          "heading": "選擇您要比較的政黨",
+          "instruction": "請選擇您想與自己的決定進行比較的政黨。您可以選擇任意數量的政黨，但必須至少選擇兩個。以下列表的順序與政黨出現在選票上的順序相同。",
+          "proceed": "完成"
+        }
+      },
+      "match": {
+        "match-display": {
+          "match-aria": "您與政黨 '{party}' 的契合度為 {percentage}%"
+        },
+        "section": {
+          "heading": "您的結果",
+          "explanation": "此圖表說明了您和這些政黨對上述觀點具備共識的程度。\n百分比越高，你們的立場就越契合。請記住，這不是投票建議，而是探索價值取向和討論的工具。"
+        }
+      },
+      "compare": {
+        "additional-analysis": {
+          "heading": "統計",
+          "buttons": {
+            "close": "退出",
+            "start": "開始吧",
+            "proceed": "提交並前往下一項",
+            "open-questionnaire": "在新索引標籤中開啟問卷調查"
+          },
+          "start": "感謝您的分享！如果您分享更多關於您個人的背景資訊，您的資料在統計上會更有價值——您願意提供更多協助嗎？請回答問題，回答越多題越好！",
+          "help-even-more": "非常謝謝您！您願意提供更多協助嗎？您可以在這裡回答幾個更具體的問題：",
+          "thanks": "感謝您的分享！以上是這次的問題——您幫了我們大忙！請按一下「退出」返回您的結果。",
+          "fields": {
+            "age": {
+              "name": "年齡",
+              "label": "您目前幾歲？",
+              "placeholder": "25",
+              "description": "您的年齡可以幫助我們研究不同年齡層的人對各種觀點和各個政黨的看法。"
+            },
+            "gender": {
+              "name": "性別",
+              "label": "您的性別是？",
+              "options": {
+                "female": "女性",
+                "diverse": "多元",
+                "male": "男性",
+                "none": "不作答"
+              }
+            },
+            "education": {
+              "name": "學歷",
+              "label": "您的最高學歷為何？",
+              "options": {
+                "student": "目前仍在學",
+                "nothing": "沒有完整的學歷",
+                "lower": "國中或同等程度",
+                "higher": "高中或同等程度",
+                "academic": "大學或更高學歷",
+                "none": "不作答"
+              }
+            },
+            "party": {
+              "name": "政黨",
+              "label": "如果今天選舉，您會投票給哪個政黨？",
+              "options": {
+                "other": "其他",
+                "non-voter": "我不會投票",
+                "not-eligible": "我沒有投票資格",
+                "not-sure": "不確定",
+                "none": "不作答"
+              }
+            }
+          }
+        },
+        "analysis-banner": {
+          "heading": "您想把您的答案貢獻給研究嗎？",
+          "explanation": "將您的答案和結果貢獻給學術研究，您就能幫助 {someone} 更深入地了解這次選舉。我們只會保存匿名資料，這些資料無法追溯出您的身分。",
+          "send": "立即提交數據",
+          "close": "不，繼續閱讀"
+        },
+        "answer": {
+          "skip": {
+            "status-text": "未知",
+            "content": "政黨 '{party}' 並未就此項聲明提供任何答案或立場。"
+          },
+          "empty": {
+            "content": "政黨 '{party}' 並未提供任何理由來解釋他們對該觀點的立場。"
+          }
+        },
+        "section": {
+          "heading": "他們的回答",
+          "explanation": "政黨通常會提供其對每項聲明的立場，並說明他們的理由。我們不一定能看出該政黨為何採取某種立場，因此建議閱讀這些項聲明或相應的競選宣言。",
+          "region-aria": "第 {count} 項聲明，共 {total} 項"
+        },
+        "friends-position": {
+          "answer-aria": "{name}: {position}",
+          "skip": "略過"
+        },
+        "kiosk-mode-hint": {
+          "heading": "完成後請重置",
+          "explanation": "請花點時間閱讀並比較下方的答案聲明。完成後，您可以重置選舉指南針，供下一個人使用。此時您的答案也會刪除。提示：您也可以在選單中找到重置按鈕。謝謝您！",
+          "reset": "重置"
+        }
+      },
+      "footer": {
+        "section": {
+          "explanation": "此選舉指南針來自於開放原始碼計畫 {0}。",
+          "oec": "OpenElectionCompass"
+        }
+      }
+    }
+  },
+  "validation": {
+    "names": {
+      "name": "名字",
+      "remote-peer-id": "好友的裝置"
+    },
+    "fields": {
+      "name": {
+        "min": "請輸入名字。",
+        "regex": "只能使用字母、數字和空格，不得使用特殊字元。",
+        "required": "請輸入名字。"
+      }
+    }
+  },
+  "algorithm": {
+    "options": {
+      "strongly-approve": {
+        "button": "強烈贊成",
+        "button-aria": "強烈贊成 – 按一下這裡表示強烈贊成此項聲明。",
+        "badge": "您強烈贊成",
+        "badge-aria": "您強烈贊成此項聲明。",
+        "status": "強烈贊成",
+        "answer-aria": "政黨 '{party}' 強烈贊成此項聲明，其答案如下：{answer}"
+      },
+      "approve": {
+        "button": "贊成",
+        "button-aria": "贊成 – 按一下這裡表示贊成此項聲明！",
+        "badge": "您贊成",
+        "badge-aria": "您贊成此項聲明。",
+        "status": "贊成",
+        "answer-aria": "政黨 '{party}' 贊成此項聲明，其答案如下：{answer}"
+      },
+      "neutral": {
+        "button": "中立",
+        "button-aria": "中立 – 按一下這裡表示對此項聲明保持中立！",
+        "badge": "您保持中立",
+        "badge-aria": "您對此項聲明保持中立。",
+        "status": "中立",
+        "answer-aria": "政黨 '{party}' 部分支持此項聲明，其答案如下：{answer}"
+      },
+      "partly": {
+        "button": "部分同意",
+        "button-aria": "部分同意 – 按一下這裡表示部分同意此項聲明！",
+        "badge": "您部分同意",
+        "badge-aria": "您部分同意此項聲明。",
+        "status": "部分同意",
+        "answer-aria": "政黨 '{party}'部分支持此項聲明，其答案如下：{answer}"
+      },
+      "reject": {
+        "button": "反對",
+        "button-aria": "反對 – 按一下這裡表示反對此項聲明！",
+        "badge": "您反對",
+        "badge-aria": "您反對此項聲明。",
+        "status": "反對",
+        "answer-aria": "政黨 '{party}'反對此項聲明，其答案如下：{answer}"
+      },
+      "strongly-reject": {
+        "button": "強烈反對",
+        "button-aria": "強烈反對 – 按一下這裡表示強烈反對此項聲明！",
+        "badge": "您強烈反對",
+        "badge-aria": "您強烈反對此項聲明。",
+        "status": "強烈反對",
+        "answer-aria": "政黨 '{party}'強烈反對此項聲明，其答案如下：{answer}"
+      }
+    }
+  }
+}

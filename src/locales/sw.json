@@ -1,0 +1,364 @@
+{
+  "elements": {
+    "friends-invite-modal": {
+      "heading": "Alika marafiki",
+      "description": "Alika marafiki zako kwenye kipindi cha pamoja ambapo kila mmoja anaweza kuona majibu ya mwenzake kwa wakati halisi.",
+      "form": {
+        "name": {
+          "label": "Jina lako / jina la utani",
+          "description": "Tafadhali taja jina lako ili marafiki zako wakutambue. Unaweza pia kutumia jina la utani."
+        }
+      },
+      "introduction": {
+        "heading": "Kipindi cha pamoja ni nini?",
+        "explanation": [
+          "Kipindi cha pamoja kinakuruhusu kufurahia dira ya uchaguzi na marafiki zako. Mtu mmoja huwaalika wengine kwenye kipindi cha pamoja. Mara tu kila mtu akishajiunga, kila mmoja wenu anaweza kutumia dira ya uchaguzi kama kawaida. Lakini zaidi ya kuwa na sehemu sehemu, sasa unaweza kuona majibu ya kila mmoja na kuanza mjadala."
+        ]
+      },
+      "security": {
+        "heading": "Je, majibu yangu ni salama?",
+        "explanation": [
+          "Ndiyo! Majibu yako yanabadilishwa moja kwa moja kati ya vifaa vyako kupitia muunganisho salama. Seva husaidia vifaa kujikuta kwenye Mtandao - majibu yako, hata hivyo, hayatumwi kupitia seva, lakini moja kwa moja kutoka kwa kifaa hadi kifaa."
+        ]
+      },
+      "registration": {
+        "heading": "Je, ninahitaji kujisajili ili kutumia kipengele hiki?",
+        "explanation": [
+          "Hakuna usajili unaohitajika. Unachohitajika kufanya ni kuingiza jina lako na unaweza kujiunga na kipindi."
+        ]
+      },
+      "cancel": "Ghairi",
+      "confirm": "Fungua kipindi"
+    },
+    "friends-join-modal": {
+      "heading": "Jiunge na marafiki",
+      "description": "Ungana na marafiki zako katika kipindi cha pamoja na uone majibu ya kila mtu kwa wakati halisi.",
+      "form": {
+        "name": {
+          "label": "Jina lako / jina la utani",
+          "description": "Tafadhali taja jina lako ili marafiki zako wakutambue. Unaweza pia kutumia jina la utani."
+        },
+        "join": {
+          "label": "Kifaa cha rafiki",
+          "description": "Jiunge na kipindi cha pamoja kwa kuweka kitambulisho cha kifaa cha yeyote anayeendesha kipindi."
+        }
+      },
+      "introduction": {
+        "heading": "Kipindi cha pamoja ni nini?",
+        "explanation": [
+          "Kipindi cha pamoja hukuruhusu kufurahia dira ya uchaguzi na marafiki zako. Mtu mmoja huwaalika wengine kwenye kipindi cha pamoja. Mara tu kila mtu akishajiunga, kila mmoja wenu anaweza kutumia dira ya uchaguzi kama kawaida. Lakini pamoja na kuwa na sehemu sehemu, sasa unaweza kuona majibu ya kila mmoja na kuanza mjadala."
+        ]
+      },
+      "security": {
+        "heading": "Je, majibu yangu ni salama?",
+        "explanation": [
+          "Ndiyo! Majibu yako yanabadilishwa moja kwa moja kati ya vifaa vyako kupitia muunganisho salama. Seva husaidia vifaa kujikuta kwenye Mtandao - majibu yako, hata hivyo, hayatumwi kupitia seva, lakini moja kwa moja kutoka kifaa kimoja hadi kifaa kingine."
+        ]
+      },
+      "registration": {
+        "heading": "Je, ninahitaji kujisajili ili kutumia kipengele hiki?",
+        "explanation": [
+          "Hakuna usajili unaohitajika. Unachohitajika kufanya ni kuingiza jina lako na unaweza kujiunga na kipindi."
+        ]
+      },
+      "cancel": "Ghairi",
+      "confirm": "Jiunge"
+    },
+    "friends-list": {
+      "heading": "Vifaa vilivyounganishwa",
+      "empty": "Mwenyeji anahitaji kukubali ombi lako la kujiunga na kipindi.",
+      "host": "Mwenyeji"
+    },
+    "friends-status-modal": {
+      "heading": "Kipindi Kishiriki",
+      "mode": {
+        "INACTIVE": {
+          "heading": "Haijaunganishwa",
+          "text": "Hujaunganishwa na mtu yeyote. Jiunge na kipindi chako kilichopo au uandae chako chako kwenye menyu kuu."
+        },
+        "GUEST": {
+          "heading": "Mgeni",
+          "text": "Unashiriki katika kipindi cha pamoja, kinachoratibiwa na mtu mwingine."
+        },
+        "HOST": {
+          "heading": "Mwenyeji",
+          "text": "Wewe ndiwe mratibu wa kipindi hiki. Alika marafiki wako kwa kutumia kitambulisho cha kifaa chako na ukubali maombi yao ya kujiunga."
+        }
+      },
+      "own-peer-id": {
+        "label": "Kifaa chako",
+        "description": "Hiki ni kitambulisho cha kifaa chako. Marafiki zako wanahitaji kuandika utambulisho huu kwenye vifaa vyao ili kujiunganisha kwenye kipindi chetu kipindi cha pamoja."
+      }
+    },
+    "guests-list": {
+      "heading": "Vifaa vilivyounganishwa",
+      "empty": "Bado hakuna aliyejiunga na kipindi.",
+      "accept": "Kubali",
+      "status": {
+        "connecting": "Inaunganisha",
+        "connected": "Imeunganishwa",
+        "disconnected": "Imekatika"
+      }
+    },
+    "guide-button": {
+      "start": "Tuanze",
+      "introduction": "Jifunze hii inafanyaje kazi",
+      "first-thesis": "Anza na kauli ya kwanza",
+      "thesis": "Endelea kwenye taarifa inayofuata",
+      "party": "Chagua vyama",
+      "match": "Tazama matokeo yako",
+      "compare": "Soma nafasi"
+    },
+    "kiosk-mode": {
+      "heading": "Tuseti upya?",
+      "description": "Dira ya uchaguzi itawekwa upya sasa na majibu yako yote yatafutwa. | Dira ya uchaguzi itawekwa upya baada ya sekunde {count} na majibu yako yote yatafutwa. | Dira ya uchaguzi itawekwa upya baada ya sekunde {count} na majibu yako yote yatafutwa.",
+      "reset": "Weka upya sasa",
+      "resume": "Bado!"
+    },
+    "language-switch": {
+      "button": "Lugha",
+      "heading": "Lugha",
+      "description": "Tafadhali chagua lugha unayopendelea."
+    },
+    "main-navigation": {
+      "menu": "Menyu",
+      "thesis": "Taarifa {count}",
+      "links": {
+        "compass": "Dira ya Uchaguzi",
+        "languages": "Badilisha lugha",
+        "friends-join": "Jiunge na marafiki",
+        "friends-invite": "Alika marafiki",
+        "reset": "Seti upya",
+        "home": "Anza",
+        "introduction": "Utangulizi",
+        "theses": "Taarifa",
+        "evaluation": "Tathmini",
+        "party": "Uchaguzi wa sehemu",
+        "match": "Matokeo",
+        "compare": "Taarifa",
+        "about": "Kuhusu"
+      }
+    },
+    "open-election-compass-logo": {
+      "alt": "Nembo ya Dira ya Uchaguzi"
+    },
+    "show-more": {
+      "show": "onesha zaidi",
+      "hide": "ficha"
+    }
+  },
+  "views": {
+    "home": {
+      "home": {
+        "role-aria": "Dira ya Uchaguzi"
+      },
+      "start": {
+        "section": {
+          "banner-aria": "Sehemu ya kuanzia"
+        }
+      },
+      "theses": {
+        "important-button": {
+          "important": "Muhimu kwangu",
+          "important-aria": "Muhimu - inaashiria kauli hii kuwa muhimu kwako.",
+          "too-many-important": "Kuna kauli chache tu, kwa hiyo huwezi kutia alama moja kuwa muhimu. | Tafadhali weka alama isiyozidi taarifa 1 kuwa muhimu ili kupokea matokeo yenye maana! | Tafadhali weka alama isiyozidi {count} maelezo kama muhimu ili kupokea matokeo yenye maana!"
+        },
+        "skip-button": {
+          "skip": "Sijui",
+          "skip-aria": "Ruka - ruka kauli hii ili isihesabiwe.",
+          "too-many-skip": "Kuna kauli chache tu, kwa hivyo huwezi kuruka moja. | Tafadhali ruka taarifa isiyozidi 1 ili kupokea matokeo yenye maana! | Tafadhali ruka taarifa zisizozidi {count} ili kupokea matokeo yenye maana!"
+        },
+        "statement-text": {
+          "thesis": "Taarifa {count} / {total}",
+          "statement-aria": "Taarifa ni: '{statement}'",
+          "quoteStart": "‘",
+          "quoteEnd": "’",
+          "statement-badge": {
+            "skip": "Uliruka hii",
+            "skip-aria": "Umeruka kauli hii.",
+            "important": "Umetia alama hii kama muhimu",
+            "important-aria": "Umeashiria taarifa hii kuwa muhimu."
+          }
+        },
+        "statement-wrapper": {
+          "role-aria": "Maelezo",
+          "region-aria": "Taarifa {count} ya {total}"
+        }
+      },
+      "party": {
+        "party-item": {
+          "party-aria": "Sehemu '{party}' - bofya hapa ili kuchagua au kuacha kuchagua kijisehemu hiki kwa kulinganisha."
+        },
+        "section": {
+          "heading": "Chagua sehemu unayotaka kulinganisha",
+          "instruction": "Tafadhali chagua ssehemu unayotaka kulinganisha maamuzi yako mwenyewe. Unaweza kuchagua sehemu nyingi unazopenda, lakini unapaswa kuchagua angalau mbili. Orodha ifuatayo imewasilishwa kwa mpangilio sawa na wahusika watakavyoonekana kwenye kura.",
+          "proceed": "Imekamilika"
+        }
+      },
+      "match": {
+        "match-display": {
+          "match-aria": "Ulinganisho wako wa sehemu '{party}' uko katika {percentage} %"
+        },
+        "section": {
+          "heading": "Matokeo yako",
+          "explanation": "Chati hii inaelezea ni kwa kiasi gani wewe na wahusika mlikubaliana juu ya nadharia zilizo hapo juu. Kadiri asilimia inavyoongezeka, ndivyo nafasi zako zinavyolingana. Kumbuka kwamba hili sio pendekezo la kupiga kura, bali ni zana ya mwelekeo na majadiliano."
+        }
+      },
+      "compare": {
+        "additional-analysis": {
+          "heading": "Takwimu",
+          "buttons": {
+            "close": "Toka",
+            "start": "Twende zetu",
+            "proceed": "Wasilisha na ijayo",
+            "open-questionnaire": "Fungua uchunguzi katika tab nyingine"
+          },
+          "start": "Asante kwa kushiriki! Data yako inakuwa ya thamani zaidi kwa takwimu ikiwa utashiriki maelezo zaidi ya historia kukuhusu - je, ungependa kusaidia zaidi? Jibu maswali mengi upendavyo!",
+          "help-even-more": "Asante sana! Je, ungependa kusaidia hata zaidi? Unaweza kujibu maswali maalum zaidi hapa:",
+          "thanks": "Asante kwa kushiriki! Hayo yote yalikuwa maswali - ulitusaidia sana! Bofya 'Acha' ili kurudi kwenye matokeo yako.",
+          "fields": {
+            "age": {
+              "name": "Umri",
+              "label": "Una umri gani kwa sasa?",
+              "placeholder": "25",
+              "description": "Umri wako ni muhimu kutafiti watu wa rika tofauti wanafikiria nini kuhusu nadharia na sehemu."
+            },
+            "gender": {
+              "name": "Jinsia",
+              "label": "Jinsia yako ni nini?",
+              "options": {
+                "female": "kike",
+                "diverse": "mbalimbali",
+                "male": "kiume",
+                "none": "hakuna jibu"
+              }
+            },
+            "education": {
+              "name": "Sifa",
+              "label": "Je, una sifa gani ya juu zaidi ya kielimu?",
+              "options": {
+                "student": "Kwa sasa ni mwanafunzi",
+                "nothing": "Hakuna sifa kamili",
+                "lower": "Shule ya Kati au sawa na hiyo",
+                "higher": "Shule ya Upili au sawa na hiyo",
+                "academic": "Kitaaluma",
+                "none": "hakuna jibu"
+              }
+            },
+            "party": {
+              "name": "Sehemu",
+              "label": "Kama uchaguzi ungekuwa leo, ungempigia nani kura yako?",
+              "options": {
+                "other": "Nyingine",
+                "non-voter": "Sitapiga kura",
+                "not-eligible": "Sistahiki",
+                "not-sure": "Sina uhakika",
+                "none": "sina jibu"
+              }
+            }
+          }
+        },
+        "analysis-banner": {
+          "heading": "Je, ungependa kuchangia majibu yako kwa sayansi?",
+          "explanation": "Unaweza kumsaidia {someone} kuelewa uchaguzi huu vyema zaidi kwa kuchangia majibu na matokeo yako kwenye utafiti wa kisayansi. Tunahifadhi tu data isiyojulikana ambayo hatuwezi kukufuatilia.",
+          "send": "Wasilisha data ya takwimu sasa",
+          "close": "Hapana, endelea kusoma"
+        },
+        "answer": {
+          "skip": {
+            "status-text": "haijulikani",
+            "content": "Sehemu '{party}' haikutoa majibu au msimamo wowote kuhusu taarifa hii."
+          },
+          "empty": {
+            "content": "Sehemu '{party}' haikutoa sababu yoyote ya kueleza msimamo wao kuhusu tasnifu hii."
+          }
+        },
+        "section": {
+          "heading": "Majibu yao",
+          "explanation": "Wahusika kwa kawaida hutoa misimamo kwa kila taarifa ili kueleza hoja zao. Sio wazi kila mara kwa nini chama kinachukua nafasi fulani hivyo inashauriwa kusoma taarifa hizi au ilani za uchaguzi husika.",
+          "region-aria": "Taarifa {count} kati ya {total}"
+        },
+        "friends-position": {
+          "answer-aria": "{name}: {position}",
+          "skip": "Imerukwa"
+        },
+        "kiosk-mode-hint": {
+          "heading": "Tafadhali weka upya ukimaliza",
+          "explanation": "Chukua muda wako kusoma na kulinganisha taarifa za majibu hapa chini. Ukimaliza, unaweza kuweka upya dira ya uchaguzi hapa kwa mtu anayefuata. Hii pia itafuta majibu yako mwenyewe. Kidokezo: unaweza pia kupata kitufe cha kuseti upya kwenye menyu. Asante!",
+          "reset": "Seti upya"
+        }
+      },
+      "footer": {
+        "section": {
+          "explanation": "Dira hii ya uchaguzi inatokana na mradi wa programu huria {0}.",
+          "oec": "DiraWaziYaUchaguzi"
+        }
+      }
+    }
+  },
+  "validation": {
+    "names": {
+      "name": "Jina",
+      "remote-peer-id": "Kifaa cha rafiki"
+    },
+    "fields": {
+      "name": {
+        "min": "Tafadhali weka jina.",
+        "regex": "Herufi, nambari na nafasi pekee, hakuna herufi maalum.",
+        "required": "Tafadhali weka jina."
+      }
+    }
+  },
+  "algorithm": {
+    "options": {
+      "strongly-approve": {
+        "button": "Idhinisha kabisa",
+        "button-aria": "Idhinisha kabisa - bofya hapa ili kuidhinisha kauli hii kwa dhati!",
+        "badge": "Umeidhinisha kabisa",
+        "badge-aria": "Umeidhinisha kabisa kauli hii.",
+        "status": "inaidhinisha kabisa",
+        "answer-aria": "Sehemu '{party}' inaidhinisha kabisa kauli hii kwa jibu lifuatalo: {answer}"
+      },
+      "approve": {
+        "button": "Idhinisha",
+        "button-aria": "Idhinisha - bofya hapa ili kuidhinisha kauli hii!",
+        "badge": "Umeidhinisha",
+        "badge-aria": "Umeidhinisha taarifa hii.",
+        "status": "inaidhinisha",
+        "answer-aria": "Sehemu '{party}' inaidhinisha taarifa hii kwa jibu lifuatalo: {answer}"
+      },
+      "neutral": {
+        "button": "Si upande wowote",
+        "button-aria": "Kutoegemea upande wowote - bofya hapa ili kubaki kutoegemea upande wowote kuhusu kauli hii!",
+        "badge": "Wewe hauko upande wowote",
+        "badge-aria": "Wewe hauegemei upande wowote kuhusu suala hili.",
+        "status": "si upande wowote",
+        "answer-aria": "Sehemu '{party}' inabaki kutoegamia upande wowote kwa taarifa hii, kwa kutoa jibu lifuatalo: {answer}"
+      },
+      "partly": {
+        "button": "Kwa kiasi",
+        "button-aria": "Kwa kiasi - bofya hapa ili kukubaliana kwa kiasi fulani na taarifa hii!",
+        "badge": "Ulikubali kwa sehemu",
+        "badge-aria": "Ulikubali kwa kiasi fulani taarifa hii.",
+        "status": "sehemu",
+        "answer-aria": "Sehemu '{party}' kinaunga mkono kauli hii kwa kiasi, na kutoa jibu lifuatalo: {answer}"
+      },
+      "reject": {
+        "button": "Kataa",
+        "button-aria": "Kataa - bofya hapa ili kukataa kauli hii!",
+        "badge": "Ulikataa",
+        "badge-aria": "Umekataa kauli hii.",
+        "status": "inakataa",
+        "answer-aria": "Sehemu '{party}' kinakataa taarifa hii kwa jibu lifuatalo: {answer}"
+      },
+      "strongly-reject": {
+        "button": "Kataa kabisa",
+        "button-aria": "Kataa kabisa - bofya hapa ili kukataa kauli hii kabisa!",
+        "badge": "Ulikataa kwa nguvu zote",
+        "badge-aria": "Umekataa kabisa kauli hii.",
+        "status": "inakataa kabisa",
+        "answer-aria": "Sehemu '{party}' kinakataa kauli hii vikali kwa jibu lifuatalo: {answer}"
+      }
+    }
+  }
+}

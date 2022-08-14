@@ -284,7 +284,7 @@
         },
         "kiosk-mode-hint": {
           "heading": "Per favore resetta quando hai finito",
-          "explanation": "Prenditi il tempo per leggere e confrontare le risposte qui sotto. Quando hai finito puoi resettare la bussola elettorale per il prossimo utilizzatore. Questo cancellerà le tue risposte. Nb puoi trovare un tasto cancella anche nel menu. Grazie!",
+          "explanation": "Prenditi il tempo per leggere e confrontare le risposte qui sotto. Quando hai finito puoi resettare la bussola elettorale per il prossimo utilizzatore. Questo cancellerà le tue risposte. NB: puoi trovare un tasto cancella anche nel menu. Grazie!",
           "reset": "Cancella"
         }
       },

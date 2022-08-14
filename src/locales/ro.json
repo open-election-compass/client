@@ -1,0 +1,364 @@
+{
+  "elements": {
+    "friends-invite-modal": {
+      "heading": "Invită prieteni",
+      "description": "Invitați-vă prietenii la o sesiune comună în care fiecare poate vedea răspunsurile celorlalți în timp real.",
+      "form": {
+        "name": {
+          "label": "Numele dv. / numele de utilizator",
+          "description": "Vă rugăm să vă spuneți numele sau numele de utilizator ca prietenii să vă poată recunoaște."
+        }
+      },
+      "introduction": {
+        "heading": "Ce este o sesiune comună?",
+        "explanation": [
+          "O sesiune comună vă permite să experimentați busola electorală cu prietenii dvs. O persoană invită pe ceilalți la o sesiune comună. Odată ce toată lumea s-a alăturat, fiecare poate utiliza busola electorală așa cum ar face de obicei. Dar, pe lângă părți, puteți vedea și răspunsurile celorlalți și puteți începe o discuție."
+        ]
+      },
+      "security": {
+        "heading": "Răspunsurile mele sunt securizate?",
+        "explanation": [
+          "Da! Răspunsurile dv. sunt transmise direct între dispozitivele dv. printr-o conexiune securizată. Un server ajută dispozitivele să se regăsească pe Internet - însă răspunsurile dv. nu sunt trimise prin server, ci direct de la dispozitiv la dispozitiv."
+        ]
+      },
+      "registration": {
+        "heading": "Trebuie să mă înregistrez pentru a folosi această funcție?",
+        "explanation": [
+          "Nu este necesară înregistrarea. Tot ce trebuie să faceți este să vă introduceți numele și puteți să participați la sesiune."
+        ]
+      },
+      "cancel": "Anulare",
+      "confirm": "Sesiune deschisă"
+    },
+    "friends-join-modal": {
+      "heading": "Alăturați-vă prietenilor",
+      "description": "Conectați-vă cu prietenii dv. într-o sesiune comună și vedeți răspunsurile tuturor în timp real.",
+      "form": {
+        "name": {
+          "label": "Numele dv. / numele de utilizator",
+          "description": "Vă rugăm să vă spuneți numele sau numele de utilizator ca prietenii să vă poată recunoaște."
+        },
+        "join": {
+          "label": "Dispozitivul prietenului",
+          "description": "Alăturați-vă unei sesiuni comune introducând ID-ul dispozitivului celui care găzduiește sesiunea."
+        }
+      },
+      "introduction": {
+        "heading": "Ce este o sesiune comună?",
+        "explanation": [
+          "O sesiune comună vă permite să experimentați busola electorală cu prietenii dvs. O persoană invită pe ceilalți la o sesiune comună. Odată ce toată lumea s-a alăturat, fiecare poate utiliza busola electorală așa cum ar face de obicei. Dar, pe lângă părți, puteți vedea și răspunsurile celorlalți și puteți începe o discuție."
+        ]
+      },
+      "security": {
+        "heading": "Răspunsurile mele sunt securizate?",
+        "explanation": [
+          "Da! Răspunsurile dv. sunt transmise direct între dispozitivele dv. printr-o conexiune securizată. Un server ajută dispozitivele să se regăsească pe Internet - însă răspunsurile dv. nu sunt trimise prin server, ci direct de la dispozitiv la dispozitiv."
+        ]
+      },
+      "registration": {
+        "heading": "Trebuie să mă înregistrez pentru a folosi această funcție?",
+        "explanation": [
+          "Nu este necesară înregistrarea. Tot ce trebuie să faceți este să vă introduceți numele și puteți să participați la sesiune."
+        ]
+      },
+      "cancel": "Anulare",
+      "confirm": "Conectează"
+    },
+    "friends-list": {
+      "heading": "Dispozitive conectate",
+      "empty": "Gazda trebuie să accepte cererea dv. de conectare la sesiune.",
+      "host": "Gazdă"
+    },
+    "friends-status-modal": {
+      "heading": "Sesiune comună",
+      "mode": {
+        "INACTIVE": {
+          "heading": "Neconectat",
+          "text": "Nu sunteți conectat cu nimeni. Alăturați-vă unei sesiuni existente sau găzduiți-vă propria sesiune folosind meniul principal."
+        },
+        "GUEST": {
+          "heading": "Oaspete",
+          "text": "Participați la o sesiune comună, găzduită de altcineva."
+        },
+        "HOST": {
+          "heading": "Gazdă",
+          "text": "Sunteți gazda acestei sesiuni. Invitați-vă prietenii folosind ID-ul dispozitivului și acceptați cererile lor de a se alătura."
+        }
+      },
+      "own-peer-id": {
+        "label": "Dispozituvul dv",
+        "description": "Acesta este ID-ul dispozitivului dv. Prietenii trebuie să-l introducă pe dispozitivul lor pentru a se conecta la sesiunea comună."
+      }
+    },
+    "guests-list": {
+      "heading": "Dispozitive conectate",
+      "empty": "Încă nimeni nu s-a alăturat sesiunii.",
+      "accept": "Acceptă",
+      "status": {
+        "connecting": "Se conectează",
+        "connected": "Conectat",
+        "disconnected": "Deconectat"
+      }
+    },
+    "guide-button": {
+      "start": "Să începem",
+      "introduction": "Aflați cum funcționează",
+      "first-thesis": "Începeți cu prima declarație",
+      "thesis": "Treceți la declarația următoare",
+      "party": "Selectați părțile",
+      "match": "Vedeți rezultatul dv",
+      "compare": "Citiți locațiile"
+    },
+    "kiosk-mode": {
+      "heading": "Ar trebui să resetăm?",
+      "description": "Busola electorală va fi acum resetată și toate răspunsurile dv. vor fi șterse. | Busola electorală va fi resetată în {count} secunde și toate răspunsurile dv. vor fi șterse. | Busola electorală va fi resetată în {count} secunde și toate răspunsurile dv. vor fi șterse.",
+      "reset": "Resetează acum",
+      "resume": "Încă nu!"
+    },
+    "language-switch": {
+      "button": "Limbi",
+      "heading": "Limbi",
+      "description": "Vă rugăm să alegeți limba preferată."
+    },
+    "main-navigation": {
+      "menu": "Meniu",
+      "thesis": "Declarații {count}",
+      "links": {
+        "compass": "Busola electorală",
+        "languages": "Schimbă limba",
+        "friends-join": "Alăturați-vă prietenilor",
+        "friends-invite": "Invitați prieteni",
+        "reset": "Reset",
+        "home": "Începe",
+        "introduction": "Introducere",
+        "theses": "Declarații",
+        "evaluation": "Evaluare",
+        "party": "Alegerea părților",
+        "match": "Rezultat",
+        "compare": "Declarații",
+        "about": "Despre"
+      }
+    },
+    "open-election-compass-logo": {
+      "alt": "Logoul busolei electorale"
+    },
+    "show-more": {
+      "show": "arată mai mult",
+      "hide": "ascunde"
+    }
+  },
+  "views": {
+    "home": {
+      "home": {
+        "role-aria": "Busolă Electorală"
+      },
+      "start": {
+        "section": {
+          "banner-aria": "Secțiunea inițială"
+        }
+      },
+      "theses": {
+        "important-button": {
+          "important": "Important pentru mine",
+          "important-aria": "Important – marcați această afirmație ca fiind importantă pentru dv.",
+          "too-many-important": "Există doar foarte puține declarații, așa că nu puteți marca una ca fiind importantă. | Vă rugăm să marcați nu mai mult de o declarație ca fiind importantă pentru a primi un rezultat semnificativ! | Vă rugăm să marcați ca importante nu mai mult de {count} declarații pentru a primi un rezultat semnificativ!"
+        },
+        "skip-button": {
+          "skip": "Nu știu",
+          "skip-aria": "Salt - săriți peste această declarație, ea nu va fi luată în considerare.",
+          "too-many-skip": "Există doar foarte puține afirmații, așa că nu se poate sări peste una. | Vă rugăm să săriți peste nu mai mult de o declarație pentru a primi un rezultat semnificativ! | Vă rugăm să săriți peste nu mai mult de {count} declarații pentru a primi un rezultat semnificativ!"
+        },
+        "statement-text": {
+          "thesis": "Declarație {count} / {total}",
+          "statement-aria": "Declarația este: '{statement}'",
+          "quoteStart": "‘",
+          "quoteEnd": "’",
+          "statement-badge": {
+            "skip": "Ați sărit peste asta",
+            "skip-aria": "Ați sărit peste această declarație.",
+            "important": "Ați marcat asta ca fiind importantă",
+            "important-aria": "Ați marcat acestă declarație ca fiind importantă."
+          }
+        },
+        "statement-wrapper": {
+          "role-aria": "Declarație",
+          "region-aria": "Declarația {count} din {total}"
+        }
+      },
+      "party": {
+        "party-item": {
+          "party-aria": "Partea '{party}' – faceți clic aici pentru a selecta sau deselecta această parte pentru comparație."
+        },
+        "section": {
+          "heading": "Alegeți părțile pe care doriți să le comparați",
+          "instruction": "Vă rugăm să selectați părțile la care doriți să vă comparați propriile decizii. Puteți selecta câte părți doriți, dar trebuie să selectați cel puțin două. Următoarea listă este prezentată în aceeași ordine în care părțile vor apărea pe buletinul de vot.",
+          "proceed": "Efectuat"
+        }
+      },
+      "match": {
+        "match-display": {
+          "match-aria": "Corespondența dv. cu partea \"{party}\" este de {percentage} %"
+        },
+        "section": {
+          "heading": "Rezultatul dv.",
+          "explanation": "Acest grafic descrie cât de mult ați fost de acord cu părțile respective cu privire la tezele de mai sus. Cu cât procentajul este mai mare, cu atât mai mult pozițiile dumneavoastră coincid. Rețineți că aceasta nu reprezintă o recomandare de vot, ci un instrument de orientare și de discuție."
+        }
+      },
+      "compare": {
+        "additional-analysis": {
+          "heading": "Statistici",
+          "buttons": {
+            "close": "Ieșire",
+            "start": "Să începem",
+            "proceed": "Trimiteți și treceți la următorul",
+            "open-questionnaire": "Deschideți sondajul într-o filă nouă"
+          },
+          "start": "Vă mulțumim pentru ce ne-ați spus! Datele dv. devin mai valoroase pentru statistici dacă ne dați mai multe informații despre dv. – ne-ați ajuta mai mult? Răspundeți doar la cât de multe întrebări doriți!",
+          "help-even-more": "Vă mulțumesc foarte mult! Doriți să ajutați și mai mult? Puteți răspunde la câteva întrebări mai punctuale aici:",
+          "thanks": "Vă mulțumim pentru ce ne-ați spus! Acestea au fost toate întrebările – ne-ați ajutat foarte mult! Dați click pe \"Ieșire\" pentru a vă întoarce la rezultate.",
+          "fields": {
+            "age": {
+              "name": "Vârsta",
+              "label": "Câți ani aveți acum?",
+              "placeholder": "25",
+              "description": "Vârsta dvs. este importantă pentru a vedea ce cred persoanele din diferite grupe de vârstă despre teze și părți."
+            },
+            "gender": {
+              "name": "Gen",
+              "label": "Care este genul dv.?",
+              "options": {
+                "female": "femeie",
+                "diverse": "altul",
+                "male": "bărbat",
+                "none": "nu răspund"
+              }
+            },
+            "education": {
+              "name": "Calificare",
+              "label": "Care este cel mai înalt nivel de calificare al dv.?",
+              "options": {
+                "student": "Sunt un elev",
+                "nothing": "Nu am absolvit nimic",
+                "lower": "Școală generală (8 clase) sau similar",
+                "higher": "Liceu sau similar",
+                "academic": "Universitate",
+                "none": "nu răspund"
+              }
+            },
+            "party": {
+              "name": "Parte",
+              "label": "Dacă alegerile ar avea loc astăzi, pe cine ați vota?",
+              "options": {
+                "other": "Pe altul",
+                "non-voter": "Nu aș vota",
+                "not-eligible": "Nu sunt eligibil la vot",
+                "not-sure": "Nu sunt hotărât",
+                "none": "nu răspund"
+              }
+            }
+          }
+        },
+        "analysis-banner": {
+          "heading": "Sunteți de acord să donați răspunsurile dv. pentru cercetare?",
+          "explanation": "Îl puteți ajuta pe {someone} să înțeleagă mai bine aceste alegeri donând răspunsurile și rezultatele dv. pentru cercetarea științifică. Noi le salvăm doar ca date anonime, care nu pot conduce la dumneavoastră.",
+          "send": "Trimiteți datele statistice acum",
+          "close": "Nu, continuă lectura"
+        },
+        "answer": {
+          "skip": {
+            "status-text": "necunoscut",
+            "content": "Partea \"{party}\" nu a formulat niciun răspuns sau poziție cu privire la această declarație."
+          },
+          "empty": {
+            "content": "Partea \"{party}\" nu a furnizat niciun raționament care să explice poziția sa cu privire la această teză."
+          }
+        },
+        "section": {
+          "heading": "Răspunsurile lor",
+          "explanation": "De obicei, părțile furnizează poziționări pentru fiecare declarație pentru a-și explica raționamentul. Nu este întotdeauna evident de ce o parte își asumă o anumită poziție, astfel încât se recomandă să citiți aceste declarații sau manifestele electorale respective.",
+          "region-aria": "Declarația {count} din {total}"
+        },
+        "friends-position": {
+          "answer-aria": "{name}: {position}",
+          "skip": "S-a sărit peste"
+        },
+        "kiosk-mode-hint": {
+          "heading": "Vă rugăm să resetați când ați terminat",
+          "explanation": "Nu vă grăbiți, citiți și comparați răspunsurile de mai jos. Când ați terminat, puteți reseta busola electorală pentru următoarea persoană. Acest lucru va șterge zonele cu răspunsurile dv. Indicație: puteți găsi butonul de resetare și în meniu. Vă mulțumim!",
+          "reset": "Resetează"
+        }
+      },
+      "footer": {
+        "section": {
+          "explanation": "Această busolă electorală se bazează pe un proiect gratuit cu sursă deschisă {0}.",
+          "oec": "OpenElectionCompass"
+        }
+      }
+    }
+  },
+  "validation": {
+    "names": {
+      "name": "Nume",
+      "remote-peer-id": "Dispozitivul prietenului"
+    },
+    "fields": {
+      "name": {
+        "min": "Vă rugăm să vă spuneți numele.",
+        "regex": "Doar litere, cifre și spații, fără caractere speciale.",
+        "required": "Vă rugăm să vă spuneți numele."
+      }
+    }
+  },
+  "algorithm": {
+    "options": {
+      "strongly-approve": {
+        "button": "Aprob ferm",
+        "button-aria": "Aprobați ferm – faceți clic aici pentru a aproba ferm această declarație!",
+        "badge": "Ați aprobat ferm",
+        "badge-aria": "Ați aprobat ferm această declarație.",
+        "status": "aprobă ferm",
+        "answer-aria": "Partea \"{party}\" aprobă ferm această afirmație cu următorul răspuns: {answer}"
+      },
+      "approve": {
+        "button": "Aprob",
+        "button-aria": "Aprobați – faceți clic aici pentru a aproba această declarație!",
+        "badge": "Ați aprobat",
+        "badge-aria": "Ați aprobat această declarație.",
+        "status": "aprobă",
+        "answer-aria": "Partea \"{party}\" aprobă această afirmație cu următorul răspuns: {answer}"
+      },
+      "neutral": {
+        "button": "Neutru",
+        "button-aria": "Neutru – faceți clic aici pentru a rămâne neutru față de această declarație!",
+        "badge": "V-ați declarat neutru",
+        "badge-aria": "V-ați declarat neutru față de această declarație.",
+        "status": "neutru",
+        "answer-aria": "Partea \"{party}\" se declară neutră față de această afirmație dând următorul răspuns: {answer}"
+      },
+      "partly": {
+        "button": "Parțial",
+        "button-aria": "Aprobați parțial – faceți clic aici pentru a aproba parțial această declarație!",
+        "badge": "Ați aprobat parțial",
+        "badge-aria": "Ați aprobat parțial această declarație.",
+        "status": "aprobă parțial",
+        "answer-aria": "Partea \"{party}\" susține doar parțial această afirmație dând următorul răspuns: {answer}"
+      },
+      "reject": {
+        "button": "Respinge",
+        "button-aria": "Respinge – faceți clic aici pentru a respinge această declarație!",
+        "badge": "Ați respins",
+        "badge-aria": "Ați respins această declarație.",
+        "status": "respinge",
+        "answer-aria": "Partea \"{party}\" respinge această afirmație cu următorul răspuns: {answer}"
+      },
+      "strongly-reject": {
+        "button": "Respinge ferm",
+        "button-aria": "Respinge ferm – faceți clic aici pentru a respinge ferm această declarație!",
+        "badge": "Ați respins ferm",
+        "badge-aria": "Ați respins ferm această declarație.",
+        "status": "respinge ferm",
+        "answer-aria": "Partea \"{party}\" respinge ferm această afirmație cu următorul răspuns: {answer}"
+      }
+    }
+  }
+}
