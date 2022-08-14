@@ -47,6 +47,8 @@ export default {
         direction: language.direction ?? 'ltr',
         active: false,
         fallback: state.languages.length === 0,
+        loadFromUrl: language.loadFromUrl,
+        loadFromTag: language.loadFromTag,
       });
     },
     activateLanguage(state, { code }) {
@@ -61,6 +63,13 @@ export default {
         }
       });
     },
+    parseLanguage(state, { code, translations }) {
+      i18n.global.mergeLocaleMessage(code, {
+        ...translations.client,
+        ...translations.content,
+        ui: translations.ui,
+      });
+    },
     setFallbackLanguage(state, code) {
       const match = state.languages.find((language) => language.code === code);
       if (match) {
@@ -73,6 +82,52 @@ export default {
     setBrowserLanguageAsFallback(context) {
       const code = getUserLocale().substr(0, 2); // e.g. 'en' or 'en_US'
       context.commit('setFallbackLanguage', { code });
+    },
+    preloadLanguage({ state, commit }, { code }) {
+      return new Promise((resolve, reject) => {
+        const language = state.languages.find((language) => language.code === code);
+        if (
+          language === undefined ||
+          (typeof language.loadFromUrl !== 'string' && typeof language.loadFromTag !== 'string')
+        ) {
+          reject(new Error('The language you requested is not available.'));
+        }
+        if (typeof language.loadFromUrl === 'string') {
+          // Load from URL
+          const xhr = new XMLHttpRequest();
+          xhr.onload = () => {
+            if (xhr.status >= 200 && xhr.status < 300) {
+              commit('parseLanguage', {
+                code: language.code,
+                translations: JSON.parse(xhr.responseText),
+              });
+              resolve();
+            } else {
+              reject(
+                new Error(`Failed loading requested language from URL '${language.loadFromUrl}'.`)
+              );
+            }
+            return;
+          };
+          xhr.open('GET', language.loadFromUrl);
+          xhr.send();
+        } else if (typeof language.loadFromTag === 'string') {
+          // Load from tag
+          const selector = language.loadFromTag;
+          const tag = document.querySelector(selector);
+          if (tag === undefined) {
+            reject(
+              new Error(`Failed loading requested language from tag '${language.loadFromTag}'.`)
+            );
+            return;
+          }
+          commit('parseLanguage', {
+            code: language.code,
+            translations: JSON.parse(tag.textContent),
+          });
+          resolve();
+        }
+      });
     },
   },
 };

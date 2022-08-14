@@ -55,7 +55,6 @@ export default {
       return this.$store.getters['parties/selectedParties'];
     },
     chosen() {
-      // console.log(this.$store.getters['parties/chosen']);
       return this.$store.getters['parties/chosen'];
     },
     showLogos() {

@@ -181,7 +181,12 @@ export default {
           code: language.code,
           direction: language.direction,
           overwrites: language.overwrites ?? null,
+          loadFromUrl: language['load-from-url'] ?? false,
+          loadFromTag: language['load-from-tag'] ?? false,
         });
+        if (typeof language['load-from-tag'] === 'string') {
+          this.$store.dispatch('languages/preloadLanguage', { code: language.code });
+        }
       });
       this.$store.dispatch('languages/setBrowserLanguageAsFallback');
 

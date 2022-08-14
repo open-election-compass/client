@@ -3,10 +3,10 @@
   "version": "2.0.0-alpha.0",
   "author": "Till Sanders <mail@till-sanders.de>",
   "license": "GPL-3.0",
-  "main": "dist/lib/open-election-compass.umd.min.js",
+  "main": "dist/open-election-compass.umd.min.js",
   "files": [
-    "/dist/lib",
-    "/dist/nuxt",
+    "/dist/",
+    "/src/locales",
     "LICENSE",
     "README.md"
   ],
@@ -38,7 +38,7 @@
     "@fortawesome/fontawesome-svg-core": "^6.1.1",
     "@fortawesome/free-solid-svg-icons": "^6.1.1",
     "@fortawesome/vue-fontawesome": "^3.0.1",
-    "@open-election-compass/ui": "^0.13.0-rc.0",
+    "@open-election-compass/ui": "^0.13.0-rc.3",
     "@vee-validate/i18n": "^4.6.1",
     "@vee-validate/rules": "^4.6.1",
     "@vueuse/components": "^8.9.4",
