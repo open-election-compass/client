@@ -1,5 +1,4 @@
 import { createI18n } from 'vue-i18n';
-import { enLocale as enUILocale } from '@open-election-compass/ui';
 import en from './en.json';
 
 type MessageSchema = typeof en;
@@ -20,6 +19,5 @@ const i18n = createI18n<[MessageSchema], 'en'>({
 });
 
 i18n.global.setLocaleMessage('en', en);
-i18n.global.mergeLocaleMessage('en', enUILocale);
 
 export default i18n;
