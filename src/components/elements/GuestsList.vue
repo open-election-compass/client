@@ -10,11 +10,11 @@
         :class="[
           'guests-list__guest',
           `guests-list__guest--connection-status-${guest.connectionStatus.toLowerCase()}`,
-          `guests-list__guest--${guest.accepted ? 'accepted' : 'not-accepted'}`
+          `guests-list__guest--${guest.accepted ? 'accepted' : 'not-accepted'}`,
         ]"
       >
         <td>
-          <Icon :name="guest.connectionStatus === 'DISCONNECTED' ? 'times' : 'circle'" />
+          <IconDisplay :name="guest.connectionStatus === 'DISCONNECTED' ? 'times' : 'circle'" />
         </td>
         <td>
           {{ getGuestName(guest) }}
@@ -65,13 +65,11 @@ export default {
 </script>
 
 <style lang="scss">
-@import "@/styles/core.scss";
-
 .guests-list {
   margin-top: 2rem;
-  color: $theme-neutral-text;
-  background: $theme-neutral-background;
-  border-radius: $border-radius;
+  color: var(--theme-neutral-text);
+  background: var(--theme-neutral-background);
+  border-radius: var(--border-radius);
   &__empty {
     font-style: italic;
     text-align: center;
@@ -93,12 +91,12 @@ export default {
     }
     &--accepted {
       .icon {
-        color: $theme-positive-background;
+        color: var(--theme-positive-background);
       }
     }
     &--not-accepted {
       .icon {
-        color: $theme-negative-background;
+        color: var(--theme-negative-background);
       }
     }
     td {
@@ -107,7 +105,8 @@ export default {
     td:first-child {
       padding: 1.2rem 0.5rem 1.2rem 1rem;
     }
-    td:first-child, td:last-child {
+    td:first-child,
+    td:last-child {
       width: 0;
     }
     td:last-child small {
@@ -118,18 +117,20 @@ export default {
       font-size: 1em;
     }
     & + & td {
-      border-top: 1px solid $theme-neutral-border;
+      border-top: 1px solid var(--theme-neutral-border);
     }
   }
 }
 
 @keyframes pulsate {
-  0%, 100%, 50% {
-    opacity: 1
+  0%,
+  100%,
+  50% {
+    opacity: 1;
   }
   25%,
   75% {
-    opacity: 0.5
+    opacity: 0.5;
   }
 }
 </style>

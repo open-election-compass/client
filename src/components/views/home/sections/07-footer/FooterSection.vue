@@ -3,10 +3,7 @@
     <PageSection class="footer-section__links" :padding="false">
       <nav>
         <ul>
-          <li
-            v-for="(link, index) in footerLinks"
-            :key="index"
-          >
+          <li v-for="(link, index) in footerLinks" :key="index">
             <a :href="$t(`footer-links.${index}.href`)" target="_blank">
               {{ $t(`footer-links.${index}.text`) }}
             </a>
@@ -16,30 +13,25 @@
     </PageSection>
     <PageSection class="footer-section__open-source">
       <div class="footer-section__project">
-        <OpenElectionCompassLogo
-          class="footer-section__logo"
-          width="50px"
-          color="#718096"
-        />
-        <i18n
+        <OpenElectionCompassLogo class="footer-section__logo" width="50px" color="#718096" />
+        <i18n-t
           class="footer-section__project-link"
-          path="views.home.footer.section.explanation"
+          keypath="views.home.footer.section.explanation"
           tag="p"
           for="oec"
         >
-          <a
-            href="https://open-election-compass.com"
-            target="_blank"
-          >{{ $t('views.home.footer.section.oec') }}</a>
-        </i18n>
+          <a href="https://open-election-compass.com" target="_blank">{{
+            $t('views.home.footer.section.oec')
+          }}</a>
+        </i18n-t>
       </div>
     </PageSection>
   </footer>
 </template>
 
 <script>
-import OpenElectionCompassLogo from '@/components/elements/OpenElectionCompassLogo.vue';
-import PageSection from '@/components/elements/PageSection.vue';
+import OpenElectionCompassLogo from '/src/components/elements/OpenElectionCompassLogo.vue';
+import PageSection from '/src/components/elements/PageSection.vue';
 
 export default {
   name: 'FooterSection',
@@ -82,7 +74,10 @@ export default {
   flex: none;
   margin: 0 auto 1.5em auto;
   @media (min-width: 40em) {
-    margin: 0 2em 0 0;
+    margin-top: 0;
+    margin-inline-end: 2em;
+    margin-bottom: 0;
+    margin-inline-start: 0;
   }
 }
 
@@ -101,7 +96,7 @@ export default {
   color: #718096;
   text-align: center;
   @media (min-width: 40em) {
-    text-align: left;
+    text-align: start;
   }
   a {
     text-decoration: underline;

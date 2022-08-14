@@ -3,17 +3,21 @@
     <div
       class="match-display__bar"
       role="img"
-      :aria-label="$t('views.home.match.match-display.match-aria', {
-        party: $t(`parties.${party.index}.name`),
-        percentage: Math.round(percentage * 100),
-      })"
+      :aria-label="
+        $t('views.home.match.match-display.match-aria', {
+          party: $t(`parties.${party.index}.name`),
+          percentage: Math.round(percentage * 100),
+        })
+      "
     >
       <div class="match-display__progress" :style="`width:${percentage * 100}%`" />
       <span class="match-display__party-name">
         {{ $t(`parties.${party.index}.short`) }}
       </span>
       <span class="match-display__percentage">
-        {{ $n(percentage, { style: 'percent' }) }}
+        <bdi>
+          {{ $n(percentage, { style: 'percent' }) }}
+        </bdi>
       </span>
     </div>
     <p class="match-display__party-description">
@@ -23,7 +27,7 @@
 </template>
 
 <script>
-import ShowMore from '@/components/elements/ShowMore.vue';
+import ShowMore from '/src/components/elements/ShowMore.vue';
 
 export default {
   name: 'MatchDisplay',
@@ -79,6 +83,10 @@ export default {
   top: 0;
   right: 0;
   bottom: 0;
+  [dir='rtl'] & {
+    right: unset;
+    left: 0;
+  }
 }
 
 .match-display__party-description {

@@ -1,15 +1,13 @@
 <template>
   <div class="guide-button">
     <transition name="popup">
-      <div
-        class="guide-button__wrapper"
-        v-if="active"
-        aria-hidden="true"
-      >
+      <div class="guide-button__wrapper" v-if="active" aria-hidden="true">
         <BaseButton
           class="guide-button__button"
           theme="positive"
-          right="arrow-right"
+          :right="
+            $store.getters['languages/active'].direction === 'ltr' ? 'arrow-right' : 'arrow-left'
+          "
           size="large"
           @click="goToActiveSection"
         >
@@ -63,17 +61,21 @@ export default {
     },
     active() {
       return (
-        this.activeSection
-        && this.relevant
-        && this.$store.getters['sections/guideButtonEnabled']
-        && typeof this.activeSection.completed === 'boolean'
-        && typeof this.activeSection.message === 'string'
-        && this.$root.$te(`elements.guide-button.${this.activeSection.message}`, this.$i18n.fallbackLocale)
+        this.activeSection &&
+        this.relevant &&
+        this.$store.getters['sections/guideButtonEnabled'] &&
+        typeof this.activeSection.completed === 'boolean' &&
+        typeof this.activeSection.message === 'string' &&
+        this.$root.$te(
+          `elements.guide-button.${this.activeSection.message}`,
+          this.$i18n.fallbackLocale
+        )
       );
     },
     nextSection() {
-      const indexOfCurrentSection = this.sections
-        .findIndex((section) => section.alias === this.activeSection.alias);
+      const indexOfCurrentSection = this.sections.findIndex(
+        (section) => section.alias === this.activeSection.alias
+      );
       if (indexOfCurrentSection === this.sections.length - 1) {
         return false;
       }
@@ -111,7 +113,7 @@ export default {
       this.lastCallToUpdateRelevanceFunction = Date.now();
 
       // Trigger scrolling
-      this.$root.$emit('navigate-to:active-section');
+      this.bus.emit('navigate-to:active-section');
     },
   },
 };

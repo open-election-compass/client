@@ -6,10 +6,10 @@ export default function calculatePointsForParty(party, theses, algorithm) {
 
     // Skipped thesis?
     if (
-      userPosition === 'skip'
-      || userPosition === null
-      || partyPosition === 'skip'
-      || partyPosition === null
+      userPosition === 'skip' ||
+      userPosition === null ||
+      partyPosition === 'skip' ||
+      partyPosition === null
     ) {
       return points;
     }

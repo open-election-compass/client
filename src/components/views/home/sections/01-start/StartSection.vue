@@ -19,8 +19,8 @@
 </template>
 
 <script>
-import OpenElectionCompassLogo from '@/components/elements/OpenElectionCompassLogo.vue';
-import PageSection from '@/components/elements/PageSection.vue';
+import OpenElectionCompassLogo from '/src/components/elements/OpenElectionCompassLogo.vue';
+import PageSection from '/src/components/elements/PageSection.vue';
 
 export default {
   name: 'StartSection',

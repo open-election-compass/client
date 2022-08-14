@@ -4,13 +4,9 @@
       {{ $t('elements.friends-list.empty') }}
     </p>
     <table v-else class="friends-list__friends">
-      <tr
-        v-for="friend in friends"
-        :key="friend.peerId"
-        class="friends-list__friend"
-      >
+      <tr v-for="friend in friends" :key="friend.peerId" class="friends-list__friend">
         <td>
-          <Icon
+          <IconDisplay
             v-if="friend.peerId === host.peer"
             name="crown"
             :title="$t('elements.friends-list.host')"
@@ -44,13 +40,11 @@ export default {
 </script>
 
 <style lang="scss">
-@import "@/styles/core.scss";
-
 .friends-list {
   margin-top: 2rem;
-  color: $theme-neutral-text;
-  background: $theme-neutral-background;
-  border-radius: $border-radius;
+  color: var(--theme-neutral-text);
+  background: var(--theme-neutral-background);
+  border-radius: var(--border-radius);
   &__empty {
     font-style: italic;
     text-align: center;
@@ -72,7 +66,7 @@ export default {
       padding-right: 1rem;
     }
     & + & td {
-      border-top: 1px solid $theme-neutral-border;
+      border-top: 1px solid var(--theme-neutral-border);
     }
   }
 }

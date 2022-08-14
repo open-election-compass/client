@@ -17,8 +17,8 @@ export default {
       window.addEventListener('scroll', this.updateActualSection);
     }
     this.initSections();
-    this.$root.$on('navigate-to:active-section', this.goToActiveSection);
-    this.$root.$on('navigate-to:section', this.goToSection);
+    this.bus.on('navigate-to:active-section', this.goToActiveSection);
+    this.bus.on('navigate-to:section', this.goToSection);
   },
   computed: {
     sections() {
@@ -81,7 +81,8 @@ export default {
         completed: false,
         message: 'party',
       });
-      this.$watch('partiesChosen', (chosen) => {
+      this.$watch('partiesChosen', async (chosen) => {
+        await this.$nextTick(); // prevent race condition
         if (chosen) {
           this.$store.commit('sections/markSectionAsCompleted', 'party');
           this.$store.dispatch('sections/disableGuideButton');
@@ -122,8 +123,8 @@ export default {
       });
     },
     updateActualSection() {
-      const scrollPosition = window.pageYOffset
-        || document.documentElement.scrollTop || document.body.scrollTop || 0;
+      const scrollPosition =
+        window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
       const wrapperHeight = window.innerHeight;
 
       const sections = this.sections.slice(); // = clone

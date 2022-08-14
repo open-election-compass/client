@@ -1,39 +1,31 @@
 <template>
-  <div
-    class="main-navigation"
-    :class="active ? 'main-navigation--active' : ''"
-  >
-    <button
-      @click="toggleMenu()"
-      class="main-navigation__toggle"
-    >
-      <span class="main-navigation__toggle-caption">
-        {{ $t('elements.main-navigation.menu') }}
-      </span>
-      <span class="main-navigation__toggle-icon">
-        <Icon :name="active ? 'times' : 'bars'" monospace />
-      </span>
+  <div class="main-navigation" :class="active ? 'main-navigation--active' : ''">
+    <button @click="toggleMenu()" class="main-navigation__toggle">
+      <bdi>
+        <span class="main-navigation__toggle-caption">
+          {{ $t('elements.main-navigation.menu') }}
+        </span>
+        <span class="main-navigation__toggle-icon">
+          <IconDisplay :name="active ? 'times' : 'bars'" monospace />
+        </span>
+      </bdi>
     </button>
     <transition name="menu">
       <nav
         v-if="active"
-        v-scroll-lock="active && fullWidthMode"
         ref="menu"
+        v-scroll-lock="active && fullWidthMode"
         class="main-navigation__menu"
       >
         <ul class="main-navigation__groups">
-          <template
-            v-for="group in groups"
-          >
-            <li
-              v-if="group.links.length > 0"
-              :key="group.alias"
-              class="main-navigation__group"
-            >
+          <template v-for="group in groups">
+            <li v-if="group.links.length > 0" :key="group.alias" class="main-navigation__group">
               <button class="main-navigation__group-toggle" @click="toggleGroup(group.alias)">
                 <span>{{ group.caption }}</span>
                 &nbsp;
-                <Icon :name="!hiddenGroups.includes(group.alias) ? 'angle-down' : 'angle-up'" />
+                <IconDisplay
+                  :name="!hiddenGroups.includes(group.alias) ? 'angle-down' : 'angle-up'"
+                />
               </button>
               <ul v-if="!hiddenGroups.includes(group.alias)" class="main-navigation__links">
                 <li
@@ -55,7 +47,9 @@
                     text-align="left"
                     @click="goToLink(link.to, $event)"
                   >
-                    {{ link.caption }}
+                    <span>
+                      {{ link.caption }}
+                    </span>
                     <small v-if="link.description">
                       <DefinitionsTooltip :text="link.description" disabled />
                     </small>
@@ -82,10 +76,7 @@
       </nav>
     </transition>
     <!-- eslint-disable-next-line vuejs-accessibility/click-events-have-key-events -->
-    <div
-      class="main-navigation__site-wrapper"
-      @click="hideMenu()"
-    >
+    <div class="main-navigation__site-wrapper" @click="hideMenu()">
       <div class="main-navigation__site">
         <slot name="site" />
       </div>
@@ -94,10 +85,14 @@
 </template>
 
 <script>
-import DefinitionsTooltip from '@/components/elements/DefinitionsTooltip.vue';
+import { vScrollLock } from '@vueuse/components';
+import DefinitionsTooltip from '/src/components/elements/DefinitionsTooltip.vue';
 
 export default {
   name: 'MainNavigation',
+  directives: {
+    'scroll-lock': vScrollLock,
+  },
   components: {
     DefinitionsTooltip,
   },
@@ -109,12 +104,16 @@ export default {
     };
   },
   mounted() {
-    this.$watch('actualSection', () => {
-      this.focusActiveMenuItem(true);
-    }, { deep: true });
+    this.$watch(
+      'actualSection',
+      () => {
+        this.focusActiveMenuItem(true);
+      },
+      { deep: true }
+    );
 
     // Listen for a new friends session being started
-    this.$root.$on('how-u-doin', () => {
+    this.bus.on('how-u-doin', () => {
       this.hideMenu();
     });
 
@@ -292,9 +291,9 @@ export default {
         offset = caption.offsetHeight + 10; // some extra px to account for the shadow
       }
       if (
-        this.$refs.menu.scrollTop > (activeItem.offsetTop - offset)
-        || (activeItem.offsetTop + activeItem.offsetHeight)
-        > (this.$refs.menu.scrollTop + this.$refs.menu.offsetHeight)
+        this.$refs.menu.scrollTop > activeItem.offsetTop - offset ||
+        activeItem.offsetTop + activeItem.offsetHeight >
+          this.$refs.menu.scrollTop + this.$refs.menu.offsetHeight
       ) {
         this.$refs.menu.scrollTo({
           behavior: smooth ? 'smooth' : undefined, // using iamdustan/smoothscroll polyfill
@@ -313,16 +312,16 @@ export default {
     goToLink(href, event) {
       if (href.charAt(0) === '#') {
         event.preventDefault();
-        this.$root.$emit('navigate-to:section', href.substring(1));
+        this.bus.emit('navigate-to:section', href.substring(1));
         this.hideMenu();
       }
     },
     isActive(link) {
       return (
-        this.actualSection
-        && link.to
-        && link.to.charAt(0) === '#'
-        && this.actualSection.alias === link.to.substring(1)
+        this.actualSection &&
+        link.to &&
+        link.to.charAt(0) === '#' &&
+        this.actualSection.alias === link.to.substring(1)
       );
     },
   },
@@ -335,7 +334,7 @@ export default {
 }
 
 .main-navigation__site {
-  background-color: #FFF;
+  background-color: #fff;
 }
 
 .main-navigation__toggle {
@@ -344,7 +343,8 @@ export default {
   top: 1.5rem;
   right: 0;
   background-color: transparent;
-  &:hover, &:focus {
+  &:hover,
+  &:focus {
     box-shadow: none;
     .main-navigation__toggle-caption,
     .main-navigation__toggle-icon {
@@ -389,10 +389,11 @@ export default {
       opacity: 0;
       pointer-events: none;
     }
-    &:hover, &:focus {
+    &:hover,
+    &:focus {
       .main-navigation__toggle-caption,
       .main-navigation__toggle-icon {
-        background-color: #FFF;
+        background-color: #fff;
       }
     }
   }
@@ -418,7 +419,7 @@ button.main-navigation__group-toggle {
   box-sizing: border-box;
   background-color: var(--theme-primary-background);
   width: 100%;
-  text-align: left;
+  text-align: start;
   color: var(--theme-primary-text);
   padding: 2rem 2rem 2rem 2rem;
   display: block;
@@ -430,6 +431,9 @@ button.main-navigation__group-toggle {
     span {
       text-decoration: underline;
     }
+  }
+  [dir='rtl'] & {
+    padding-inline-start: 2em;
   }
 }
 
@@ -445,12 +449,17 @@ button.main-navigation__group-toggle {
   }
 }
 
+.main-navigation__link .base-button__caption span {
+  display: block;
+}
+
 .main-navigation__link,
 .main-navigation__action {
   width: 100%;
 }
 
-.menu-enter, .menu-leave-to {
+.menu-enter,
+.menu-leave-to {
   transform: translateX(40rem);
 }
 

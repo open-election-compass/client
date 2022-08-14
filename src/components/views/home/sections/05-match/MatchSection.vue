@@ -7,14 +7,8 @@
       {{ $t('views.home.match.section.explanation') }}
     </p>
     <ul>
-      <li
-        v-for="({ party, percentage }) in results"
-        :key="party.alias"
-      >
-        <MatchDisplay
-          :party="party"
-          :percentage="percentage"
-        />
+      <li v-for="{ party, percentage } in results" :key="party.alias">
+        <MatchDisplay :party="party" :percentage="percentage" />
       </li>
     </ul>
   </PageSection>
@@ -22,8 +16,8 @@
 
 <script>
 import { mapGetters } from 'vuex';
-import MatchDisplay from '@/components/views/home/sections/05-match/MatchDisplay.vue';
-import PageSection from '@/components/elements/PageSection.vue';
+import MatchDisplay from '/src/components/views/home/sections/05-match/MatchDisplay.vue';
+import PageSection from '/src/components/elements/PageSection.vue';
 
 export default {
   name: 'MatchSection',

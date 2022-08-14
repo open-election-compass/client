@@ -22,7 +22,7 @@
     <div class="statement-wrapper__skip">
       <SkipButton
         :disabled="skipButtonDisabled"
-        :tooltipDisabled="!skipButtonDisabled || status === 'skip'"
+        :tooltip-disabled="!skipButtonDisabled || status === 'skip'"
         :max-skip="maxSkip"
         @click="clickVoteButton('skip')"
       />
@@ -47,9 +47,9 @@
     <div class="statement-wrapper__important-button">
       <ImportantButton
         :name="`important-${index}`"
-        v-model="factor"
-        :disabled="status && direction === 'neutral' || maxImportantReached"
-        :tooltipDisabled="!maxImportantReached || direction === 'neutral' || status === 'skip'"
+        v-model:factor="factor"
+        :disabled="(status && direction === 'neutral') || maxImportantReached"
+        :tooltip-disabled="!maxImportantReached || direction === 'neutral' || status === 'skip'"
         :max-important="maxImportant"
       />
     </div>
@@ -58,11 +58,11 @@
 
 <script>
 import { mapGetters } from 'vuex';
-import ImportantButton from '@/components/views/home/sections/03-theses/ImportantButton.vue';
-import PageSection from '@/components/elements/PageSection.vue';
-import SkipButton from '@/components/views/home/sections/03-theses/SkipButton.vue';
-import StatementText from '@/components/views/home/sections/03-theses/StatementText.vue';
-import VoteButton from '@/components/views/home/sections/03-theses/VoteButton.vue';
+import ImportantButton from '/src/components/views/home/sections/03-theses/ImportantButton.vue';
+import PageSection from '/src/components/elements/PageSection.vue';
+import SkipButton from '/src/components/views/home/sections/03-theses/SkipButton.vue';
+import StatementText from '/src/components/views/home/sections/03-theses/StatementText.vue';
+import VoteButton from '/src/components/views/home/sections/03-theses/VoteButton.vue';
 
 export default {
   name: 'StatementWrapper',
@@ -130,9 +130,9 @@ export default {
       },
       set(value) {
         if (
-          (this.status && this.direction === 'neutral')
-          || this.status === 'skip'
-          || this.maxImportantReached
+          (this.status && this.direction === 'neutral') ||
+          this.status === 'skip' ||
+          this.maxImportantReached
         ) {
           // The important-button is greyed out, so we're stopping here. Instead of doing this check
           // here, we could simply disable the checkbox of the important-button, but it would then
@@ -202,15 +202,14 @@ export default {
 }
 
 .statement-wrapper__skip {
-  margin-right: 2.25em;
+  margin-inline-end: 2.25em;
   margin-bottom: 0.5em;
+  text-align: end;
   @media (min-width: 48em) {
     margin-bottom: 1em;
   }
-  button {
-    margin-left: auto;
-    display: block;
-    width: auto;
+  .skip-button {
+    display: inline-block;
   }
 }
 
@@ -230,7 +229,7 @@ export default {
   @media (min-width: 48em) {
     margin: 3em 1.5em 0 1.5em;
   }
-   @media (min-width: 64em) {
+  @media (min-width: 64em) {
     margin-top: 6em;
   }
 }

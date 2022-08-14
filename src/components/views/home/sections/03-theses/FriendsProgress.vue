@@ -8,10 +8,7 @@
     <li
       v-for="item in items"
       :key="item.alias"
-      :class="[
-        'friends-progress__item',
-        `friends-progress__item--${item.type}`,
-      ]"
+      :class="['friends-progress__item', `friends-progress__item--${item.type}`]"
     >
       <span v-if="item.type === 'friend' || item.type === 'self'">
         {{ item.caption }}
@@ -58,16 +55,17 @@ export default {
   },
   methods: {
     friendsAt(index) {
-      return this.friends.filter((friend) => friend.answers[index] !== null
-        && (index === this.theses.length - 1 || friend.answers[index + 1] === null));
+      return this.friends.filter(
+        (friend) =>
+          friend.answers[index] !== null &&
+          (index === this.theses.length - 1 || friend.answers[index + 1] === null)
+      );
     },
   },
 };
 </script>
 
 <style lang="scss">
-@import "@/styles/core.scss";
-
 .friends-progress {
   position: fixed;
   display: flex;
@@ -85,18 +83,19 @@ export default {
     span {
       display: none;
     }
-    &--friend, &--self {
+    &--friend,
+    &--self {
       min-height: 1em + 0.25em * 2;
       flex: 0 0;
-      background: $theme-neutral-background;
-      color: $theme-neutral-text;
+      background: var(--theme-neutral-background);
+      color: var(--theme-neutral-text);
       padding: 0.25em 0.25em 0.25em 1em;
       margin-bottom: 2px;
       border-radius: 0 1em 1em 0;
     }
     &--self {
-      color: $theme-primary-text;
-      background: $theme-primary-background;
+      color: var(--theme-primary-text);
+      background: var(--theme-primary-background);
       padding-right: 0.75em;
     }
     &--thesis {

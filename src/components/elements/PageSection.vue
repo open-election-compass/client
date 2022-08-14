@@ -1,9 +1,12 @@
 <template>
-  <component :is="tag" :class="{
-    'page-section': true,
-    'page-section--full': full,
-    'page-section--padding': padding,
-  }">
+  <component
+    :is="tag"
+    :class="{
+      'page-section': true,
+      'page-section--full': full,
+      'page-section--padding': padding,
+    }"
+  >
     <div class="page-section__container">
       <div class="page-section__slot">
         <slot></slot>
@@ -33,8 +36,6 @@ export default {
 </script>
 
 <style lang="scss">
-@import "@/styles/core";
-
 .page-section {
   &.page-section--full {
     display: flex;

@@ -6,7 +6,7 @@
       <KioskModeHint v-if="kioskMode" />
     </PageSection>
     <PageSection
-      v-for="(thesis) in theses"
+      v-for="thesis in theses"
       :key="thesis.index"
       class="compare-section__theses"
       role="region"
@@ -21,14 +21,8 @@
         :badge="true"
       />
       <FriendsPositions :thesis="thesis" />
-      <template
-        v-for="result in results"
-      >
-        <FullAnswer
-          :key="`${thesis.index}-${result.party.index}`"
-          :party="result.party"
-          :thesis="thesis"
-        />
+      <template v-for="result in results" :key="`${thesis.index}-${result.party.index}`">
+        <FullAnswer :party="result.party" :thesis="thesis" />
       </template>
     </PageSection>
     <AdditionalAnalysis :active="$store.getters['analysis/optIn'] === true" />
@@ -38,13 +32,13 @@
 
 <script>
 import { mapGetters } from 'vuex';
-import AdditionalAnalysis from '@/components/views/home/sections/06-compare/AdditionalAnalysis.vue';
-import AnalysisBanner from '@/components/views/home/sections/06-compare/AnalysisBanner.vue';
-import FullAnswer from '@/components/views/home/sections/06-compare/FullAnswer.vue';
-import FriendsPositions from '@/components/views/home/sections/06-compare/FriendsPositions.vue';
-import KioskModeHint from '@/components/views/home/sections/06-compare/KioskModeHint.vue';
-import PageSection from '@/components/elements/PageSection.vue';
-import StatementText from '@/components/views/home/sections/03-theses/StatementText.vue';
+import AdditionalAnalysis from '/src/components/views/home/sections/06-compare/AdditionalAnalysis.vue';
+import AnalysisBanner from '/src/components/views/home/sections/06-compare/AnalysisBanner.vue';
+import FullAnswer from '/src/components/views/home/sections/06-compare/FullAnswer.vue';
+import FriendsPositions from '/src/components/views/home/sections/06-compare/FriendsPositions.vue';
+import KioskModeHint from '/src/components/views/home/sections/06-compare/KioskModeHint.vue';
+import PageSection from '/src/components/elements/PageSection.vue';
+import StatementText from '/src/components/views/home/sections/03-theses/StatementText.vue';
 
 export default {
   name: 'CompareSection',

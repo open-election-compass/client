@@ -1,24 +1,33 @@
-import { createLocalVue, shallowMount } from '@vue/test-utils';
-import Vuex from 'vuex';
+import { beforeEach, describe, expect, it, vi } from 'vitest';
+import { shallowMount } from '@vue/test-utils';
+import { createStore } from 'vuex';
 import GuideButton from '@/components/elements/GuideButton.vue';
 
 const BaseButton = {
   template: '<button><slot /></button>',
 };
 
-const localVue = createLocalVue();
-localVue.use(Vuex);
-
 describe('GuideButton.vue', () => {
   let wrapper;
   const section1 = { alias: 'section-1', completed: true, message: '' };
   const section2 = { alias: 'section-2', completed: false, message: '' };
   const section3 = { alias: 'section-3', completed: false, message: '' };
-  const te = jest.fn().mockImplementation(() => true);
+  const te = vi.fn().mockImplementation(() => true);
 
   beforeEach(() => {
-    const store = new Vuex.Store({
+    const store = createStore({
       modules: {
+        languages: {
+          namespaced: true,
+          state: {
+            active: {
+              directive: 'ltr',
+            },
+          },
+          getters: {
+            active: (state) => state.active,
+          },
+        },
         sections: {
           namespaced: true,
           state: {
@@ -48,22 +57,23 @@ describe('GuideButton.vue', () => {
       },
     });
     const options = {
-      mocks: {
-        $t: () => {},
-        $te: te,
-        $i18n: {
-          fallbackLocale: 'en',
+      global: {
+        mocks: {
+          $t: (msg) => msg,
+          $te: te,
+          $i18n: {
+            fallbackLocale: 'en',
+          },
         },
+        stubs: {
+          BaseButton,
+        },
+        plugins: [store],
       },
-      propsData: {
+      props: {
         initialDelay: 0, // easier to test without timeouts
-        throttle: 0, // jest.useFakeTimers() would not affect lodash's throttle()
+        throttle: 0, // vi.useFakeTimers() would not affect lodash's throttle()
       },
-      stubs: {
-        BaseButton,
-      },
-      store,
-      localVue,
     };
     wrapper = shallowMount(GuideButton, options);
   });
@@ -75,9 +85,9 @@ describe('GuideButton.vue', () => {
 
   it('calculates the index of the next section', async () => {
     await wrapper.vm.$store.commit('sections/setActiveSection', section1);
-    expect(wrapper.vm.nextSection).toBe(section2);
+    expect(wrapper.vm.nextSection).toStrictEqual(section2);
     await wrapper.vm.$store.commit('sections/setActiveSection', section2);
-    expect(wrapper.vm.nextSection).toBe(section3);
+    expect(wrapper.vm.nextSection).toStrictEqual(section3);
   });
 
   it('shows when active section is not the actually visible section', async () => {

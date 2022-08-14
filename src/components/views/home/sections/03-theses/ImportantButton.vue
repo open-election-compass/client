@@ -1,15 +1,19 @@
 <template>
-  <div :class="{
-    'important-button': true,
-    'important-button--disabled': disabled,
-    'important-button--active': active,
-  }">
+  <div
+    :class="{
+      'important-button': true,
+      'important-button--disabled': disabled,
+      'important-button--active': active,
+    }"
+  >
     <TippyTooltip
       class="tooltip"
-      :content="$tc('views.home.theses.important-button.too-many-important', maxImportant)"
-      :enabled="!tooltipDisabled"
+      :content="
+        tooltipDisabled
+          ? undefined
+          : $tc('views.home.theses.important-button.too-many-important', maxImportant)
+      "
       :a11y="false"
-      size="large"
       trigger="mouseenter focusin"
     >
       <label
@@ -27,7 +31,7 @@
           :false-value="1"
           :disabled="disabled"
         />
-        <Icon :name="factor === 1 ? 'circle' : 'exclamation-circle'" />
+        <IconDisplay :name="factor === 1 ? 'circle' : 'exclamation-circle'" />
         <span>
           {{ $t('views.home.theses.important-button.important') }}
         </span>
@@ -43,10 +47,6 @@ export default {
     return {
       cache: 1,
     };
-  },
-  model: {
-    prop: 'factor',
-    event: 'change',
   },
   props: {
     disabled: {
@@ -75,7 +75,7 @@ export default {
       this.cache = factor;
     },
     cache(cache) {
-      this.$emit('change', cache);
+      this.$emit('update:factor', cache);
     },
   },
   computed: {
@@ -97,7 +97,8 @@ export default {
 
 .important-button__button {
   display: inline-block;
-  padding: 0.75em 1em 0.75em 0.75em;
+  padding: 0.75em;
+  padding-inline-end: 1em;
   cursor: pointer;
   font-size: 0.875em;
   border-radius: 9999px;
@@ -124,7 +125,7 @@ export default {
     font-size: 1.25em;
   }
   span {
-    margin-left: 0.75em;
+    margin-inline-start: 0.75em;
     font-weight: bold;
   }
 }

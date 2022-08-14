@@ -11,7 +11,7 @@
     :aria-checked="active"
     @click="$emit('click', $event)"
   >
-    <Icon class="vote-button__icon" :name="icon" />
+    <IconDisplay class="vote-button__icon" :name="icon" />
     <div class="vote-button__caption">
       <span>
         {{ $t(`algorithm.options.${alias}.button`) }}
@@ -50,7 +50,9 @@ export default {
     },
   },
   computed: {
-    largeIcons() { return this.$store.getters['algorithm/algorithm'].options.length > 3; },
+    largeIcons() {
+      return this.$store.getters['algorithm/algorithm'].options.length > 3;
+    },
     cssVariables() {
       return {
         '--darker-color': this.darkerColor,
@@ -63,8 +65,6 @@ export default {
 </script>
 
 <style lang="scss">
-@import '@/styles/core';
-
 .vote-button {
   width: 100%;
   text-align: left;
@@ -73,19 +73,19 @@ export default {
   font-size: 0.875em;
   margin: 0.25em 0;
   line-height: 1;
-  border: 1px solid $theme-neutral-border;
+  border: 1px solid var(--theme-neutral-border);
   transition-property: background-color, border-color, color, opacity, box-shadow;
   transition-duration: 0.2s;
   transition-timing-function: ease-out;
-  border-radius: $border-radius;
-  box-shadow: $shadow-normal;
-  background-color: $theme-neutral-background;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-normal);
+  background-color: var(--theme-neutral-background);
   color: var(--darker-color);
   &:hover {
-    box-shadow: $shadow-hover;
+    box-shadow: var(--shadow-hover);
   }
   &:focus {
-    box-shadow: $shadow-focus;
+    box-shadow: var(--shadow-focus);
   }
   &.vote-button--active {
     background-color: var(--base-color);

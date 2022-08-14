@@ -1,16 +1,9 @@
 <template>
   <div class="friends-status-bar">
-    <button
-      v-if="visible"
-      class="friends-status-bar__button"
-      @click="showModal = true"
-    >
-        <Icon name="user-friends" />
+    <button v-if="visible" class="friends-status-bar__button" @click="showModal = true">
+      <IconDisplay name="user-friends" />
     </button>
-    <FriendsStatusModal
-      :visible="showModal"
-      @close="showModal = false"
-    />
+    <FriendsStatusModal :visible="showModal" @close="showModal = false" />
   </div>
 </template>
 
@@ -29,7 +22,7 @@ export default {
   },
   mounted() {
     // Listen for a new friends session being started
-    this.$root.$on('how-u-doin', () => {
+    this.bus.on('how-u-doin', () => {
       this.showModal = true;
     });
   },
@@ -42,18 +35,16 @@ export default {
 </script>
 
 <style lang="scss">
-@import "@/styles/core.scss";
-
 .friends-status-bar {
   &__button {
     position: fixed;
     z-index: 201;
     top: 5.5rem;
     right: 0;
-    background: $theme-positive-background;
-    color: $theme-positive-text;
+    background: var(--theme-positive-background);
+    color: var(--theme-positive-text);
     padding: 0.5rem;
-    border-radius: $border-radius 0 0 $border-radius;
+    border-radius: var(--border-radius) 0 0 var(--border-radius);
   }
 }
 </style>

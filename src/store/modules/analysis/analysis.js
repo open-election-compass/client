@@ -36,7 +36,9 @@ export default {
       return state.optIn === true;
     },
     enabled(state) {
-      return typeof state.endpoint === 'string' && state.endpoint.length > 0 && state.optIn !== false;
+      return (
+        typeof state.endpoint === 'string' && state.endpoint.length > 0 && state.optIn !== false
+      );
     },
     analysis(state) {
       return state.analysis;

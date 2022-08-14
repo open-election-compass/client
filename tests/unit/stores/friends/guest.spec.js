@@ -1,14 +1,15 @@
-import { createLocalVue } from '@vue/test-utils';
-import Vuex from 'vuex';
-import Peer from 'peerjs';
+import { afterEach, describe, expect, it, vi } from 'vitest';
+import { createStore } from 'vuex';
+
+const peerMock = vi.fn();
+
+vi.mock('peerjs', () => ({
+  default: peerMock,
+}));
+vi.useFakeTimers();
+
 import VuexFriendsModule from '@/store/modules/friends/friends';
 import VuexFriendsGuestModule from '@/store/modules/friends/guest';
-
-const localVue = createLocalVue();
-localVue.use(Vuex);
-
-jest.mock('peerjs');
-jest.useFakeTimers();
 
 const factory = () => ({
   signal: 'DISCONNECTED',
@@ -22,8 +23,8 @@ const factory = () => ({
   hostConnection: null,
 });
 
-beforeEach(() => {
-  Peer.mockClear();
+afterEach(() => {
+  vi.resetAllMocks();
 });
 
 describe('Friends Store (Guest)', () => {
@@ -42,17 +43,13 @@ describe('Friends Store (Guest)', () => {
   });
 
   it('allows to join a session as a guest', async () => {
-    const store = new Vuex.Store({
+    const store = createStore({
       modules: {
         friends: VuexFriendsModule,
         theses: {
           namespaced: true,
           state: {
-            theses: [
-              { status: 'approve' },
-              { status: null },
-              { status: null },
-            ],
+            theses: [{ status: 'approve' }, { status: null }, { status: null }],
           },
           getters: {
             theses: (thesesState) => thesesState.theses,
@@ -86,26 +83,26 @@ describe('Friends Store (Guest)', () => {
     // Mocked peer connection to host
     const hostConnection = {
       id: null,
-      on: jest.fn().mockImplementation((event, handler) => {
+      on: vi.fn().mockImplementation((event, handler) => {
         if (event === 'open') setTimeout(handler, 3000);
         if (event === 'data') setTimeout(() => handler(incomingData), 4000);
         if (event === 'close') setTimeout(handler, 5000);
       }),
-      send: jest.fn(),
+      send: vi.fn(),
     };
 
     // Mock incoming connection (about to be closed because of guest mode)
     const incomingConnection = {
-      close: jest.fn(),
+      close: vi.fn(),
     };
 
     // Mocked peer client
-    Peer.mockImplementation(() => ({
-      on: jest.fn().mockImplementation((event, handler) => {
+    peerMock.mockImplementation(() => ({
+      on: vi.fn().mockImplementation((event, handler) => {
         if (event === 'open') setTimeout(handler, 1000);
         if (event === 'connection') setTimeout(() => handler(incomingConnection), 2000);
       }),
-      connect: jest.fn().mockImplementation((remoteId) => {
+      connect: vi.fn().mockImplementation((remoteId) => {
         hostConnection.id = remoteId;
         return hostConnection;
       }),
@@ -113,21 +110,24 @@ describe('Friends Store (Guest)', () => {
 
     // Wait for hostConnection to be available before triggering the next events
     const hostConnectionAvailable = new Promise((resolve) => {
-      store.watch((storeState, getters) => getters['friends/guest/hostConnection'], () => {
-        if (store.getters['friends/guest/hostConnection'] !== null) resolve();
-      });
+      store.watch(
+        (storeState, getters) => getters['friends/guest/hostConnection'],
+        () => {
+          if (store.getters['friends/guest/hostConnection'] !== null) resolve();
+        }
+      );
     });
 
     // Now trigger the main function
     const dispatch = store.dispatch('friends/guest/joinSession', { remoteId: 'abcdefgh' });
 
-    jest.advanceTimersToNextTimer(); // triggers the open-event of the peer client
+    vi.advanceTimersToNextTimer(); // triggers the open-event of the peer client
     await hostConnectionAvailable;
 
-    jest.advanceTimersToNextTimer(); // triggers the connection-event
+    vi.advanceTimersToNextTimer(); // triggers the connection-event
     expect(incomingConnection.close).toHaveBeenCalled();
 
-    jest.advanceTimersToNextTimer(); // triggers the open-event of the host connection
+    vi.advanceTimersToNextTimer(); // triggers the open-event of the host connection
     await dispatch;
 
     expect(store.getters['friends/mode']).toBe('GUEST');
@@ -144,16 +144,16 @@ describe('Friends Store (Guest)', () => {
     });
 
     // Trigger the data-event of the host connection (incoming guest list)
-    jest.advanceTimersToNextTimer();
+    vi.advanceTimersToNextTimer();
     expect(store.getters['friends/friends']).toStrictEqual(incomingData.payload.friends);
 
     // Trigger the close-event of the host connection
-    jest.advanceTimersToNextTimer();
+    vi.advanceTimersToNextTimer();
     expect(store.getters['friends/guest/status']).toBe('DISCONNECTED');
   });
 
   it('sends own profile to host when in guest mode', () => {
-    const hostConnection = { send: jest.fn() };
+    const hostConnection = { send: vi.fn() };
 
     // Don't do this when disconnected
     VuexFriendsGuestModule.actions.sendProfileToHost({
@@ -212,7 +212,7 @@ describe('Friends Store (Guest)', () => {
   });
 
   it('sends answers to host when in guest mode', () => {
-    const hostConnection = { send: jest.fn() };
+    const hostConnection = { send: vi.fn() };
 
     // Don't do this when disconnected
     VuexFriendsGuestModule.actions.sendAnswersToHost({

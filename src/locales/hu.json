@@ -1,0 +1,364 @@
+{
+  "elements": {
+    "friends-invite-modal": {
+      "heading": "Ismerősök meghívása",
+      "description": "Hívd meg a barátaidat egy közös eseményre, ahol mindenki látja a többiek válaszát valós időben.",
+      "form": {
+        "name": {
+          "label": "Neved / nicked",
+          "description": "Kérlek adj meg egy nevet, hogy a barátaid felismerhessenek. Használhatsz becenevet is."
+        }
+      },
+      "introduction": {
+        "heading": "Mi az a közös esemény?",
+        "explanation": [
+          "A közös esemény lehetővé teszi, hogy a barátaiddal együtt használd a választási iránytűt. Egyvalaki meghívja a többieket egy közös eseményre. Miután mindenki csatlakozott, ugyanúgy használhatjátok a választási iránytűt, ahogy külön-külön tennétek, de a pártok válaszai mellett egymáséit is láthatjátok, és beszélhettek egymással."
+        ]
+      },
+      "security": {
+        "heading": "Biztonságban vannak a válaszaink?",
+        "explanation": [
+          "Igen! A válaszaitokat a készülékeitek közvetlenül egymásnak küldik egy biztonságos kapcsolaton keresztül. A szerver segít a készülékeiteknek, hogy megtalálják egymást, de a válaszaitok nem mennek át a szerveren."
+        ]
+      },
+      "registration": {
+        "heading": "Kell-e regisztrálnom ennek a funkciónak a használatához?",
+        "explanation": [
+          "Nincs szükség regisztrációra. Csak írd be a neved, és már csatlakozhatsz is egy eseményhez."
+        ]
+      },
+      "cancel": "Mégsem",
+      "confirm": "Esemény megkezdése"
+    },
+    "friends-join-modal": {
+      "heading": "Csatlakozás a többiekhez",
+      "description": "Csatlakozz a barátaidhoz egy közös eseményen, ahol valós időben látjátok egymás válaszait.",
+      "form": {
+        "name": {
+          "label": "Neved / nicked",
+          "description": "Kérlek adj meg egy nevet, hogy a barátaid felismerhessenek. Használhatsz becenevet is."
+        },
+        "join": {
+          "label": "Barát eszköze",
+          "description": "Csatlakozz egy közös eseményhez a házigazda eszközazonosítójának megadásával."
+        }
+      },
+      "introduction": {
+        "heading": "Mi az a közös esemény?",
+        "explanation": [
+          "A közös esemény lehetővé teszi, hogy a barátaiddal együtt használd a választási iránytűt. Egyvalaki meghívja a többieket egy közös eseményre. Miután mindenki csatlakozott, ugyanúgy használhatjátok a választási iránytűt, ahogy külön-külön tennétek, de a pártok válaszai mellett egymáséit is láthatjátok, és beszélhettek egymással."
+        ]
+      },
+      "security": {
+        "heading": "Biztonságban vannak a válaszaink?",
+        "explanation": [
+          "Igen! A válaszaitokat a készülékeitek közvetlenül egymásnak küldik egy biztonságos kapcsolaton keresztül. A szerver segít a készülékeiteknek, hogy megtalálják egymást, de a válaszaitok nem mennek át a szerveren."
+        ]
+      },
+      "registration": {
+        "heading": "Kell-e regisztrálnom ennek a funkciónak a használatához?",
+        "explanation": [
+          "Nincs szükség regisztrációra. Csak írd be a neved, és már csatlakozhatsz is egy eseményhez."
+        ]
+      },
+      "cancel": "Mégsem",
+      "confirm": "Csatlakozás"
+    },
+    "friends-list": {
+      "heading": "Kapcsolódó eszközök",
+      "empty": "A házigazdának el kell fogadnia a csatlakozási kérelmedet.",
+      "host": "Házigazda"
+    },
+    "friends-status-modal": {
+      "heading": "Közös esemény",
+      "mode": {
+        "INACTIVE": {
+          "heading": "Nincs csatlakozva",
+          "text": "Senkihez nem csatlakoztál. Csatlakozz egy meglévő eseményhez, vagy indíts saját eseményt a főmenüben."
+        },
+        "GUEST": {
+          "heading": "Vendég",
+          "text": "Egy közös eseményen veszel részt."
+        },
+        "HOST": {
+          "heading": "Házigazda",
+          "text": "Te vagy ennek az eseménynek a házigazdája. Hívd meg a barátaidat az eszközazonosítód segítségével, és hagyd jóvá a csatlakozási kérelmeiket."
+        }
+      },
+      "own-peer-id": {
+        "label": "A te eszközöd",
+        "description": "Ez a te eszközazonosítód. A barátaid be kell, hogy írják ezt a saját eszközeiken, hogy csatlakozzanak a közös eseményhez."
+      }
+    },
+    "guests-list": {
+      "heading": "Csatlakozott eszközök",
+      "empty": "Még senki nem csatlakozott az eseményhez.",
+      "accept": "Jóváhagyás",
+      "status": {
+        "connecting": "Csatlakozik",
+        "connected": "Csatlakozva",
+        "disconnected": "Szétkapcsolódva"
+      }
+    },
+    "guide-button": {
+      "start": "Gyerünk",
+      "introduction": "Hogyan működik?",
+      "first-thesis": "Kezdd az első állásponttal",
+      "thesis": "Folytasd a következő állásponttal",
+      "party": "Válaszd ki a pártokat",
+      "match": "Nézd meg az eredményedet",
+      "compare": "Olvasd el az álláspontokat"
+    },
+    "kiosk-mode": {
+      "heading": "Újrakezdjük?",
+      "description": "A választási iránytű alaphelyzetbe fog állni, és a válaszaid törlődni fognak. | A választási iránytű {count} másodperc múlva alaphelyzetbe fog állni, és a válaszaid törlődni fognak. | A választási iránytű {count} másodperc múlva alaphelyzetbe fog állni, és a válaszaid törlődni fognak.",
+      "reset": "Törlés most",
+      "resume": "Még nem!"
+    },
+    "language-switch": {
+      "button": "Nyelvek",
+      "heading": "Nyelvek",
+      "description": "Kérlek, válassz nyelvet."
+    },
+    "main-navigation": {
+      "menu": "Menü",
+      "thesis": "Álláspontok {count}",
+      "links": {
+        "compass": "Választási iránytű",
+        "languages": "Nyelv kiválasztása",
+        "friends-join": "Csatlakozz a barátaidhoz",
+        "friends-invite": "Hívd meg a barátaidat",
+        "reset": "Alaphelyzetbe állítás",
+        "home": "Kezdés",
+        "introduction": "Bemutatás",
+        "theses": "Álláspontok {count}",
+        "evaluation": "Kiértékelés",
+        "party": "Pártok kiválasztása",
+        "match": "Eredmény",
+        "compare": "Álláspontok",
+        "about": "Erről az eszközről"
+      }
+    },
+    "open-election-compass-logo": {
+      "alt": "A választási iránytű logója"
+    },
+    "show-more": {
+      "show": "mutass többet",
+      "hide": "elrejtés"
+    }
+  },
+  "views": {
+    "home": {
+      "home": {
+        "role-aria": "Választási iránytű"
+      },
+      "start": {
+        "section": {
+          "banner-aria": "Szakasz megkezdése"
+        }
+      },
+      "theses": {
+        "important-button": {
+          "important": "Ez fontos nekem",
+          "important-aria": "Fontos - megjelöli az állítást mint számodra különösen fontosat",
+          "too-many-important": "Túl kevés állítás van, ezért nem jelölheted őket fontosnak. | Kérlek, legfeljebb egy állítást jelölj fontosnak, különben nem kapsz hasznos eredményt! | Kérlek, legfeljebb {count} állítást jelölj fontosnak, különben nem kapsz hasznos eredményt!"
+        },
+        "skip-button": {
+          "skip": "Nem tudom",
+          "skip-aria": "Átugrás - kihagyod ezt az állítást, nem lesz figyelembe véve.",
+          "too-many-skip": "Túl kevés állítás van, ezért nem ugorhatod át őket. | Kérlek, legfeljebb egy állítást ugorj át, különben nem kapsz hasznos eredményt! | Kérlek, legfeljebb {count} állítást ugorj át, különben nem kapsz hasznos eredményt!"
+        },
+        "statement-text": {
+          "thesis": "Állítás: {count} / {total}",
+          "statement-aria": "Az állítás: „{statement}”",
+          "quoteStart": "‘",
+          "quoteEnd": "’",
+          "statement-badge": {
+            "skip": "Átugrottad",
+            "skip-aria": "Átugrottad ezt az állítást.",
+            "important": "Fontosnak jelölted",
+            "important-aria": "Fontosnak jelölted ezt az állítást."
+          }
+        },
+        "statement-wrapper": {
+          "role-aria": "Állítás",
+          "region-aria": "Állítás: {count} / {total}"
+        }
+      },
+      "party": {
+        "party-item": {
+          "party-aria": "„{party}” párt – kattints ide ennek a pártnak a kiválasztásához / ki nem választásához az összehasonlításra."
+        },
+        "section": {
+          "heading": "Válaszd ki az összehasonlítandó pártokat",
+          "instruction": "Kérlek, válaszd ki a pártokat, akiket össze akarsz hasonlítani a saját döntéseiddel. Legalább két pártot ki kell választanod, felső korlát nincs. Az alábbi lista ugyanabban a sorrendben van, ahogy a pártok megjelennek a szavazólapon.",
+          "proceed": "Kész"
+        }
+      },
+      "match": {
+        "match-display": {
+          "match-aria": "{percentage} százalékban egyeznek a válaszaid a(z) „{party}” pártéval"
+        },
+        "section": {
+          "heading": "Az eredményed",
+          "explanation": "Ez a diagram azt mutatja, mennyire hozzád hasonlóan ítélték meg az egyes pártok a fenti állításokat. Minél magasabb a szám, annál nagyobb az egyezés. Ne feledd, hogy ez nem szavazási tanács, csak egy eszköz a tájékozódáshoz és a megbeszéléshez."
+        }
+      },
+      "compare": {
+        "additional-analysis": {
+          "heading": "Statisztika",
+          "buttons": {
+            "close": "Kilépés",
+            "start": "Mehet",
+            "proceed": "Beküldés és következő",
+            "open-questionnaire": "Felmérés megnyitása új fülön"
+          },
+          "start": "Köszönjük, hogy megosztottad velünk! Az adataidat jobban fel tudjuk használni statisztikák készítésére, ha megosztasz velünk némi háttérinformációt magadról - lenne kedved segíteni? Csak válaszolj meg annyi kérdést, ahányhoz kedved van!",
+          "help-even-more": "Nagyon köszönjük! Szeretnél még többet segíteni? Megválaszolhatsz néhány specifikusabb kérdést itt:",
+          "thanks": "Köszönjük, hogy megosztottad velünk! Nincs több kérdésünk – sokat segítettél! Kattints a „Kilépés” gombra az eredményekhez való visszatéréshez.",
+          "fields": {
+            "age": {
+              "name": "Kor",
+              "label": "Hány éves vagy most?",
+              "placeholder": "25",
+              "description": "A korod fontos ahhoz, hogy vizsgálni tudjuk, mit gondolnak a különböző korcsoportok tagjai ezekről az állításokról és pártokról."
+            },
+            "gender": {
+              "name": "Nem",
+              "label": "Milyen nemű vagy?",
+              "options": {
+                "female": "nő",
+                "diverse": "más",
+                "male": "férfi",
+                "none": "inkább nem válaszolnék"
+              }
+            },
+            "education": {
+              "name": "Végzettség",
+              "label": "Mi a legmagasabb végzettséged?",
+              "options": {
+                "student": "Iskolába járok",
+                "nothing": "Nincs",
+                "lower": "Általános iskola vagy hasonló",
+                "higher": "Középiskola vagy hasonló",
+                "academic": "Egyetem",
+                "none": "inkább nem válaszolnék"
+              }
+            },
+            "party": {
+              "name": "Párt",
+              "label": "Ha most lenne a választás, kire szavaznál?",
+              "options": {
+                "other": "Valaki másra",
+                "non-voter": "Nem szavaznék",
+                "not-eligible": "Nem szavazhatok",
+                "not-sure": "Nem tudom biztosan",
+                "none": "inkább nem válaszolnék"
+              }
+            }
+          }
+        },
+        "analysis-banner": {
+          "heading": "Felajánlanád a válaszaidat a tudománynak?",
+          "explanation": "Segíthetsz a(z) {someone} számára a választás jobb megértésében, ha a válaszaidat és eredményeidet hozzáférhetővé teszed a tudományos kutatások számára. Csak anonimizált adatokat tárolunk, amelyek nem köthetőek hozzád.",
+          "send": "Statisztikai adatok beküldése",
+          "close": "Nem, tovább olvasok"
+        },
+        "answer": {
+          "skip": {
+            "status-text": "ismeretlen",
+            "content": "A(z) „{party}” párt nem foglalt állást ebben a kérdésben."
+          },
+          "empty": {
+            "content": "A(z) „{party}” párt nem indokolta az álláspontját ebben a kérdésben."
+          }
+        },
+        "section": {
+          "heading": "A válaszaik",
+          "explanation": "A pártok jellemzően indoklást mellékelnek minden állításhoz, hogy elmagyarázzák, hogyan gondolkoznak róla. Nem mindig magától értetődő, miért helyezkedik egy adott párt egy adott álláspontra, úgyhogy érdemes elolvasni az indoklásukat vagy a választási nyilatkozatukat.",
+          "region-aria": "{count} / {total} állítás"
+        },
+        "friends-position": {
+          "answer-aria": "{name}: {position}",
+          "skip": "Átugorva"
+        },
+        "kiosk-mode-hint": {
+          "heading": "Kérlek, állítsd alaphelyzetbe, ha készen vagy",
+          "explanation": "Tovább nézheted az állításokat és válaszokat. Ha kész vagy, kérlek állítsd alaphelyzetbe a választási iránytűt a következő felhasználó számára. Ez törli a válaszaidat. (A menüben is találsz egy alaphelyzetbe állítás gombot.) Köszönjük!",
+          "reset": "Alaphelyzetbe állítás"
+        }
+      },
+      "footer": {
+        "section": {
+          "explanation": "A választási iránytű egy nyílt forráskódú szoftver: {0}.",
+          "oec": "OpenElectionCompass"
+        }
+      }
+    }
+  },
+  "validation": {
+    "names": {
+      "name": "Név",
+      "remote-peer-id": "Barát készüléke"
+    },
+    "fields": {
+      "name": {
+        "min": "Adj meg egy nevet.",
+        "regex": "Csak betűket, számokat és szóközöket tartalmazhat.",
+        "required": "Adj meg egy nevet."
+      }
+    }
+  },
+  "algorithm": {
+    "options": {
+      "strongly-approve": {
+        "button": "Nagyon egyetértek",
+        "button-aria": "Nagyon egyetértek - kattints ide, hogy jelezd, hogy nagyon egyetértesz ezzel az állítással!",
+        "badge": "Nagyon egyetértettél",
+        "badge-aria": "Nagyon egyetértettél ezzel az állítással.",
+        "status": "nagyon egyetért",
+        "answer-aria": "A(z) „{party}” párt nagyon egyetért ezzel az állítással, az alábbi indoklással: {answer}"
+      },
+      "approve": {
+        "button": "Egyetértek",
+        "button-aria": "Egyetértek - kattints ide, hogy jelezd, hogy egyetértesz ezzel az állítással!",
+        "badge": "Egyetértettél",
+        "badge-aria": "Egyetértettél ezzel az állítással.",
+        "status": "egyetért",
+        "answer-aria": "A(z) „{party}” párt egyetért ezzel az állítással, az alábbi indoklással: {answer}"
+      },
+      "neutral": {
+        "button": "Semleges",
+        "button-aria": "Semleges - kattints ide, hogy jelezd, hogy semleges vagy ezzel az állítással kapcsolatban!",
+        "badge": "Semleges voltál",
+        "badge-aria": "Semleges voltál ezzel az állítással kapcsolatban.",
+        "status": "semleges",
+        "answer-aria": "A(z) „{party}” párt semleges ezzel az állítással kapcsolatban, az alábbi indoklással: {answer}"
+      },
+      "partly": {
+        "button": "Részben",
+        "button-aria": "Részben - kattints ide, hogy jelezd, hogy részben egyetértesz ezzel az állítással!",
+        "badge": "Részben egyetértettél",
+        "badge-aria": "Részben egyetértettél.",
+        "status": "részben egyetért",
+        "answer-aria": "A(z) „{party}” párt részben egyetért ezzel az állítással, az alábbi indoklással: {answer}"
+      },
+      "reject": {
+        "button": "Ellenzem",
+        "button-aria": "Ellenzem - kattints ide, hogy jelezd, hogy ellenzed ezt az állítást!",
+        "badge": "Ellenezted",
+        "badge-aria": "Ellenezted ezt az állítást.",
+        "status": "ellenzi",
+        "answer-aria": "A(z) „{party}” párt ellenzi ezt az állítást, az alábbi indoklással: {answer}"
+      },
+      "strongly-reject": {
+        "button": "Nagyon ellenzem",
+        "button-aria": "Nagyon ellenzem - kattints ide, hogy jelezd, hogy nagyon ellenzed ezt az állítást!",
+        "badge": "Nagyon ellenezted",
+        "badge-aria": "Nagyon ellenezted ezt az állítást.",
+        "status": "nagyon ellenzi",
+        "answer-aria": "A(z) „{party}” párt nagyon ellenzi ezt az állítást, az alábbi indoklással: {answer}"
+      }
+    }
+  }
+}

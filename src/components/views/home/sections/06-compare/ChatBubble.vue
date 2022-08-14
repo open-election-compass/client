@@ -1,10 +1,7 @@
 <template>
   <div class="chat-bubble" :class="classes" :style="cssVariables">
     <blockquote class="chat-bubble__quote" :aria-label="answerTextAria">
-      <p
-        class="chat-bubble__bubble"
-        aria-hidden="true"
-      >
+      <p class="chat-bubble__bubble" aria-hidden="true">
         <ShowMore :text="content" :length="showMoreLimit" />
       </p>
       <footer class="chat-bubble__footer" aria-hidden="true">
@@ -28,8 +25,8 @@
 </template>
 
 <script>
-import StatementBadge from '@/components/views/home/sections/03-theses/StatementBadge.vue';
-import ShowMore from '@/components/elements/ShowMore.vue';
+import StatementBadge from '/src/components/views/home/sections/03-theses/StatementBadge.vue';
+import ShowMore from '/src/components/elements/ShowMore.vue';
 
 export default {
   name: 'ChatBubble',
@@ -85,9 +82,7 @@ export default {
   },
   computed: {
     classes() {
-      return [
-        `chat-bubble--${this.direction}`,
-      ];
+      return [`chat-bubble--${this.direction}`];
     },
     cssVariables() {
       return {
@@ -129,6 +124,9 @@ export default {
   .chat-bubble--positive .chat-bubble__quote,
   .chat-bubble--negative .chat-bubble__quote {
     flex-direction: row;
+    [dir='rtl'] & {
+      flex-direction: row-reverse;
+    }
   }
 }
 
@@ -211,7 +209,8 @@ export default {
   }
 }
 
-.chat-bubble__status {}
+.chat-bubble__status {
+}
 
 @media (min-width: 64em) {
   .chat-bubble--positive .chat-bubble__footer {

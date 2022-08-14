@@ -2,23 +2,16 @@
   <aside class="analysis-banner">
     <h2 class="analysis-banner__heading">{{ $t('views.home.compare.analysis-banner.heading') }}</h2>
     <p class="analysis-banner__explanation">
-      {{ $t('views.home.compare.analysis-banner.explanation', {
-        someone: $t('analysis.institution')
-      }) }}
+      {{
+        $t('views.home.compare.analysis-banner.explanation', {
+          someone: $t('analysis.institution'),
+        })
+      }}
     </p>
-    <BaseButton
-      class="analysis-banner__send"
-      theme="primary"
-      size="small"
-      @click="sendAnalysis"
-    >
+    <BaseButton class="analysis-banner__send" theme="primary" size="small" @click="sendAnalysis">
       {{ $t('views.home.compare.analysis-banner.send') }}
     </BaseButton>
-    <BaseButton
-      class="analysis-banner__close"
-      theme="positive"
-      @click="close"
-    >
+    <BaseButton class="analysis-banner__close" theme="positive" @click="close">
       {{ $t('views.home.compare.analysis-banner.close') }}
     </BaseButton>
   </aside>

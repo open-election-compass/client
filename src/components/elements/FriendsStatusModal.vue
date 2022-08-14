@@ -1,5 +1,5 @@
 <template>
-  <Modal
+  <ModalView
     :visible="visible"
     :heading="$t('elements.friends-status-modal.heading')"
     :icon="
@@ -24,11 +24,11 @@
       :description="$t('elements.friends-status-modal.own-peer-id.description')"
       rules=""
       readonly
-      :value="ownPeerId"
+      v-model:value="ownPeerId"
     />
     <GuestsList v-if="mode === 'HOST'" />
     <FriendsList v-else />
-  </Modal>
+  </ModalView>
 </template>
 
 <script>
@@ -63,26 +63,24 @@ export default {
 </script>
 
 <style lang="scss">
-@import "@/styles/core.scss";
-
 .friends-status-modal {
   &__mode {
-    color: $theme-neutral-text;
-    background: $theme-neutral-background;
-    border: 1px solid $theme-neutral-border;
-    border-radius: $border-radius;
+    color: var(--theme-neutral-text);
+    background: var(--theme-neutral-background);
+    border: 1px solid var(--theme-neutral-border);
+    border-radius: var(--border-radius);
     transition: all 0.25s ease-out;
     padding: 1rem;
     margin-bottom: 1rem;
     &--host {
-      color: $theme-primary-text;
-      background: $theme-primary-background;
-      border-color: $theme-primary-border;
+      color: var(--theme-primary-text);
+      background: var(--theme-primary-background);
+      border-color: var(--theme-primary-border);
     }
     &--guest {
-      color: $theme-positive-text;
-      background: $theme-positive-background;
-      border-color: $theme-positive-border;
+      color: var(--theme-positive-text);
+      background: var(--theme-positive-background);
+      border-color: var(--theme-positive-border);
     }
   }
 

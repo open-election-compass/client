@@ -34,7 +34,7 @@ export default {
     countSkip(state) {
       return state.theses.reduce(
         (count, thesis) => (thesis.status === 'skip' ? count + 1 : count),
-        0,
+        0
       );
     },
     maxSkip(state) {

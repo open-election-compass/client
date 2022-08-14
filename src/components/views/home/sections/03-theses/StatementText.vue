@@ -8,14 +8,13 @@
     :style="cssVariables"
   >
     <!-- Counter and Title -->
-    <small :class="{
-      'statement-text__caption': true,
-      'statement-text__caption--counter-only': !$root.$te(`theses.${index}.title`),
-    }">
-      <span
-        class="statement-text__counter"
-        aria-hidden="true"
-      >
+    <small
+      :class="{
+        'statement-text__caption': true,
+        'statement-text__caption--counter-only': !$root.$te(`theses.${index}.title`),
+      }"
+    >
+      <span class="statement-text__counter" aria-hidden="true">
         {{ $t('views.home.theses.statement-text.thesis', { count: index + 1, total }) }}
       </span>
       <span v-if="$root.$te(`theses.${index}.title`)" class="statement-text__title">
@@ -27,27 +26,35 @@
     <!-- eslint-disable-next-line vuejs-accessibility/heading-has-content -->
     <h3
       class="statement-text__thesis"
-      :aria-label="$t('views.home.theses.statement-text.statement-aria', {
-        statement: $t(`theses.${index}.statement`)
-      })"
+      :aria-label="
+        $t('views.home.theses.statement-text.statement-aria', {
+          statement: $t(`theses.${index}.statement`),
+        })
+      "
     >
-      <span class="statement-text__quote-start" aria-hidden="true">
-        <span>{{ $t('views.home.theses.statement-text.quoteStart') }}</span>
-      </span>
-      <DefinitionsTooltip :text="$t(`theses.${index}.statement`)" /><span class="statement-text__quote-end" aria-hidden="true">{{ $t('views.home.theses.statement-text.quoteEnd') }}</span><!-- eslint-disable-line max-len -->
+      <bdi>
+        <span class="statement-text__quote-start" aria-hidden="true">
+          <span>{{ $t('views.home.theses.statement-text.quoteStart') }}</span>
+        </span>
+        <DefinitionsTooltip :text="$t(`theses.${index}.statement`)" /><span
+          class="statement-text__quote-end"
+          aria-hidden="true"
+          ><span>{{ $t('views.home.theses.statement-text.quoteEnd') }}</span></span
+        ><!-- eslint-disable-line max-len -->
+      </bdi>
     </h3>
 
     <!-- Badges -->
     <div v-if="badge" class="statement-text__badges">
       <template v-if="badge">
-        <Badge
+        <StatementBadge
           :icon="option.icon"
           :backgroundColor="colors.base"
           :textColor="colors.contrast"
           :aria-label="badgeTextAria"
         >
           {{ badgeText }}
-        </Badge>
+        </StatementBadge>
       </template>
       <template v-if="badge && factor > 1">
         <StatementBadge
@@ -64,8 +71,8 @@
 </template>
 
 <script>
-import StatementBadge from '@/components/views/home/sections/03-theses/StatementBadge.vue';
-import DefinitionsTooltip from '@/components/elements/DefinitionsTooltip.vue';
+import StatementBadge from '/src/components/views/home/sections/03-theses/StatementBadge.vue';
+import DefinitionsTooltip from '/src/components/elements/DefinitionsTooltip.vue';
 
 export default {
   name: 'StatementText',
@@ -189,7 +196,8 @@ export default {
   }
 }
 
-.statement-text.statement-text--status-empty, .statement-text.statement-text--status-skip {
+.statement-text.statement-text--status-empty,
+.statement-text.statement-text--status-skip {
   .statement-text__thesis {
     color: var(--theme-primary-color);
   }
@@ -203,12 +211,23 @@ export default {
   color: #e2e8f0;
   span {
     position: absolute;
-    right:100%;
+    right: 100%;
+  }
+  [dir='rtl'] &,
+  [dir='rtl'] & span {
+    position: static;
   }
 }
 
 .statement-text__quote-end {
   color: #e2e8f0;
+  [dir='rtl'] & {
+    position: relative;
+    span {
+      position: absolute;
+      left: 100%;
+    }
+  }
 }
 
 .statement-text__badges {

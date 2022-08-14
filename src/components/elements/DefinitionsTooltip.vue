@@ -1,4 +1,6 @@
 <script>
+import { h as createElement, withDirectives, resolveDirective } from 'vue';
+
 export default {
   name: 'DefinitionsTooltip',
   functional: true,
@@ -12,38 +14,44 @@ export default {
       default: false,
     },
   },
-  render(createElement, { props }) {
-    let nodes = props.text.split(/(\[.*\]<.*>)/);
+  render() {
+    let nodes = this.text.split(/(\[.*\]<.*>)/);
     nodes = nodes.map((node) => {
       const matches = node.match(/\[(.*)\]<(.*)>/);
-      if (props.disabled && matches !== null) {
+      if (this.disabled && matches !== null) {
         return matches[1];
       }
       if (matches === null) {
         return node;
       }
-      return createElement('span', {
-        class: 'definitions-tooltip__expression',
-        attrs: {
-          content: `${matches[1]}: ${matches[2]}`,
-        },
-        directives: [
+      return withDirectives(
+        createElement(
+          'span',
           {
-            name: 'tooltip',
-            value: {
-              allowHTML: false,
-              distance: 10,
-              hideOnClick: false,
-              size: 'large',
-              theme: 'left',
-            },
+            class: 'definitions-tooltip__expression',
           },
-        ],
-      }, [matches[1]]);
+          [matches[1]]
+        ),
+        [
+          [
+            resolveDirective('tooltip'),
+            {
+              content: `${matches[1]}: ${matches[2]}`,
+              allowHTML: false,
+              offset: [0, 10],
+              hideOnClick: false,
+            },
+          ],
+        ]
+      );
     });
-    return createElement('span', {
-      class: 'definitions-tooltip',
-    }, nodes);
+    return createElement(
+      'span',
+      {
+        class: 'definitions-tooltip',
+      },
+      nodes
+    );
   },
 };
 </script>
