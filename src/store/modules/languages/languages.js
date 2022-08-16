@@ -47,6 +47,7 @@ export default {
         direction: language.direction ?? 'ltr',
         active: false,
         fallback: state.languages.length === 0,
+        overwrites: language.overwrites,
         loadFromUrl: language.loadFromUrl,
         loadFromTag: language.loadFromTag,
       });
@@ -63,12 +64,17 @@ export default {
         }
       });
     },
-    parseLanguage(state, { code, translations }) {
-      i18n.global.mergeLocaleMessage(code, {
+    parseLanguage(state, { language, translations }) {
+      i18n.global.mergeLocaleMessage(language.code, {
         ...translations.client,
         ...translations.content,
         ui: translations.ui,
       });
+      console.log('overwriting', language, language.overwrites);
+      if (typeof language.overwrites === 'object' && language.overwrites !== null) {
+        console.log('overwritten', language, language.overwrites);
+        i18n.global.mergeLocaleMessage(language.code, language.overwrites);
+      }
     },
     setFallbackLanguage(state, code) {
       const match = state.languages.find((language) => language.code === code);
@@ -98,7 +104,7 @@ export default {
           xhr.onload = () => {
             if (xhr.status >= 200 && xhr.status < 300) {
               commit('parseLanguage', {
-                code: language.code,
+                language,
                 translations: JSON.parse(xhr.responseText),
               });
               resolve();
@@ -122,7 +128,7 @@ export default {
             return;
           }
           commit('parseLanguage', {
-            code: language.code,
+            language,
             translations: JSON.parse(tag.textContent),
           });
           resolve();
