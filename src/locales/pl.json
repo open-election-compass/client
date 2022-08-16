@@ -285,7 +285,7 @@
         "kiosk-mode-hint": {
           "heading": "Proszę zresetować, gdy skończysz",
           "explanation": "Nie spiesz się z czytaniem i porównywaniem poniższych odpowiedzi. Kiedy skończysz, możesz tutaj zresetować kompas wyborczy dla następnej osoby. W ten sposób usuniesz również swoje własne odpowiedzi. Wskazówka: przycisk resetowania znajdziesz również w menu. Dziękujemy!",
-          "reset": "Reset"
+          "reset": "Zresetuj"
         }
       },
       "footer": {
