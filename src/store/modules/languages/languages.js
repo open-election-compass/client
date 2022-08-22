@@ -1,5 +1,6 @@
 import getUserLocale from 'get-user-locale';
 import i18n from '/src/locales/i18n';
+import cloneDeep from 'lodash/cloneDeep';
 
 const officialLanguages = ['ar', 'de', 'en', 'es', 'fr', 'hu', 'id', 'it', 'nl', 'pl', 'pt', 'tr'];
 
@@ -39,7 +40,7 @@ export default {
         );
       }
       if (typeof language.overwrites === 'object' && language.overwrites !== null) {
-        i18n.global.mergeLocaleMessage(language.code, language.overwrites);
+        i18n.global.mergeLocaleMessage(language.code, cloneDeep(language.overwrites));
       }
       state.languages.push({
         code: language.code,
@@ -70,10 +71,8 @@ export default {
         ...translations.content,
         ui: translations.ui,
       });
-      console.log('overwriting', language, language.overwrites);
       if (typeof language.overwrites === 'object' && language.overwrites !== null) {
-        console.log('overwritten', language, language.overwrites);
-        i18n.global.mergeLocaleMessage(language.code, language.overwrites);
+        i18n.global.mergeLocaleMessage(language.code, cloneDeep(language.overwrites));
       }
     },
     setFallbackLanguage(state, code) {
