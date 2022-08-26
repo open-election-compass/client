@@ -1,150 +1,150 @@
 {
   "elements": {
     "friends-invite-modal": {
-      "heading": "Invite friends",
-      "description": "Invite your friends to a shared session where everyone can see each other's answers in real time.",
+      "heading": "เชิญเพื่อน",
+      "description": "เชิญเพื่อนของคุณมายังการแบ่งปันเซสชันเพื่อดูคำตอบของแต่ละคนแบบเรียลไทม์",
       "form": {
         "name": {
-          "label": "Your name / nickname",
-          "description": "Please provide your name so your friends can recognize you. You can also use a nickname."
+          "label": "ชื่อของคุณ/ชื่อเล่น",
+          "description": "กรุณาบอกชื่อของคุณเพื่อให้เพื่อนจำคุณได้ สามารถใช้ชื่อเล่นแทนได้เช่นกัน"
         }
       },
       "introduction": {
-        "heading": "What is a shared session?",
+        "heading": "การแบ่งปันเซสชันคืออะไร",
         "explanation": [
           "A shared session allows you to experience the election compass with your friends. One person invites the others to a shared session. Once everyone joined, you can each use the election compass as you normally would. But in addition to the parties, you can now also see each other's answers and start a discussion."
         ]
       },
       "security": {
-        "heading": "Are my answers safe?",
+        "heading": "การตอบกลับของฉันปลอดภัยหรือไม่?",
         "explanation": [
-          "Yes! Your answers are exchanged directly between your devices via a secure connection. A server helps the devices find themselves on the Internet - your answers, however, are not sent via the server, but directly from device to device."
+          "ใช่แน่นอน! การตอบกลับของคุณจะถูกแลกเปลี่ยนกันผ่านการเชื่อมต่อที่ปลอดภัย เซอร์เวอร์เป็นเพียงตัวช่วยในการให้อุปกรณ์แต่ละเครื่องสามารถหากันพบบนอินเตอร์เน็ต แต่คำตอบของคุณไม่ได้ถูกแบ่งปันผ่านเซอร์เวอร์ แต่เป็นการสื่อสารจากเครื่องหนึ่งไปอีกเครื่องหนึ่งโดยตรง"
         ]
       },
       "registration": {
-        "heading": "Do I need to register to use this feature?",
+        "heading": "จำเป็นต้องลงทะเบียนก่อนใช้งานก่อนใช้ฟีเจอร์นี้หรือไม่",
         "explanation": [
-          "No registration is necessary. All you have to do is enter your name and you can join a session."
+          "ไม่จำเป็นต้องลงทะเบียน เพียงแค่คุณใส่ชื่อก็สามารถเข้าร่วมเซสชันได้เลย"
         ]
       },
-      "cancel": "Cancel",
-      "confirm": "Open session"
+      "cancel": "ยกเลิก",
+      "confirm": "เปิดเซสชัน"
     },
     "friends-join-modal": {
-      "heading": "Join friends",
-      "description": "Connect with your friends in a shared session and see everyone's answers in real time.",
+      "heading": "เข้าร่วมกับเพื่อน",
+      "description": "เชื่อมต่อกับเพื่อนของคุณในการแบ่งปันเซสชันและดูคำตอบของทุกคนแบบเรียลไทม์",
       "form": {
         "name": {
-          "label": "Your name / nickname",
-          "description": "Please provide your name so your friends can recognize you. You can also use a nickname."
+          "label": "ชื่อของคุณ/ชื่อเล่น",
+          "description": "กรุณาบอกชื่อของคุณเพื่อให้เพื่อนจำคุณได้ สามารถใช้ชื่อเล่นแทนได้เช่นกัน"
         },
         "join": {
-          "label": "Friend's device",
-          "description": "Join a shared session by entering the device ID of whoever is hosting the session."
+          "label": "อุปกรณ์ของเพื่อน",
+          "description": "เข้าร่วมการแบ่งปันเซสชันโดยการใส่หมายเลขอุปกรณ์ของคนที่เป็นเจ้าของเซสชัน"
         }
       },
       "introduction": {
-        "heading": "What is a shared session?",
+        "heading": "การแบ่งปันเซสชันคืออะไร",
         "explanation": [
           "A shared session allows you to experience the election compass with your friends. One person invites the others to a shared session. Once everyone joined, you can each use the election compass as you normally would. But in addition to the parties, you can now also see each other's answers and start a discussion."
         ]
       },
       "security": {
-        "heading": "Are my answers safe?",
+        "heading": "การตอบกลับของฉันปลอดภัยหรือไม่?",
         "explanation": [
-          "Yes! Your answers are exchanged directly between your devices via a secure connection. A server helps the devices find themselves on the Internet - your answers, however, are not sent via the server, but directly from device to device."
+          "ใช่แน่นอน! การตอบกลับของคุณจะถูกแลกเปลี่ยนกันผ่านการเชื่อมต่อที่ปลอดภัย เซอร์เวอร์เป็นเพียงตัวช่วยในการให้อุปกรณ์แต่ละเครื่องสามารถหากันพบบนอินเตอร์เน็ต แต่คำตอบของคุณไม่ได้ถูกแบ่งปันผ่านเซอร์เวอร์ แต่เป็นการสื่อสารจากเครื่องหนึ่งไปอีกเครื่องหนึ่งโดยตรง"
         ]
       },
       "registration": {
-        "heading": "Do I need to register to use this feature?",
+        "heading": "จำเป็นต้องลงทะเบียนก่อนใช้งานก่อนใช้ฟีเจอร์นี้หรือไม่",
         "explanation": [
-          "No registration is necessary. All you have to do is enter your name and you can join a session."
+          "ไม่จำเป็นต้องลงทะเบียน เพียงแค่คุณใส่ชื่อก็สามารถเข้าร่วมเซสชันได้เลย"
         ]
       },
-      "cancel": "Cancel",
-      "confirm": "Join"
+      "cancel": "ยกเลิก",
+      "confirm": "เข้าร่วม"
     },
     "friends-list": {
-      "heading": "Connected devices",
-      "empty": "The host needs to accept you're request to join the session.",
-      "host": "Host"
+      "heading": "อุุปกรณ์ที่เชื่อมต่อ",
+      "empty": "เจ้าของเซสชันจำเป็นต้องยอมรับคำขอของคุณก่อนเข้าร่วมเซสชันได้",
+      "host": "เจ้าของเซสชัน"
     },
     "friends-status-modal": {
-      "heading": "Shared Session",
+      "heading": "การแบ่งปันเซสชัน",
       "mode": {
         "INACTIVE": {
-          "heading": "Not connected",
-          "text": "You're not connected to anybody. Join your an existing session or host your own over the main menu."
+          "heading": "ยังไม่ได้เชื่อมต่อ",
+          "text": "คุณยังไม่ได้เชื่อมต่อกับใครเลย เข้าร่วมเซสชันที่มีอยู่แล้วหรือสร้างของคุณเองได้จากเมนูหลัก"
         },
         "GUEST": {
-          "heading": "Guest",
-          "text": "You're participating in a shared session, hosted by someone else."
+          "heading": "ผู้เข้าร่วม",
+          "text": "คุุณได้มีส่วนร่วมในการแบ่งปันเซสชันที่สร้างโดยผู้อื่น"
         },
         "HOST": {
-          "heading": "Host",
-          "text": "You're the host of this session. Invite your friends using your device ID and accept their requests to join."
+          "heading": "เจ้าของเซสชัน",
+          "text": "คุณเป็นเจ้าของเซสชันนี้ เชิญเพื่อนของคุณโดยใช้หมายเลขอุปกรณ์ของคุณและยอมรับคำขอของเพื่อนของคุณเพื่อเข้าร่วม"
         }
       },
       "own-peer-id": {
-        "label": "Your device",
-        "description": "This is your device ID. Your friends need to enter this on their device to connect to our shared session."
+        "label": "อุปกรณ์ของคุณ",
+        "description": "\"นี่คือหมายเลขอุปกรณ์ของคุณ เพื่อนของคุณจำเป็นต้องพิมพ์หมายเลขนี้บนอุปกรณ์ของพวกเขา เพื่อเชื่อมต่อในการแบ่งปันเซสชันของเรา\n\""
       }
     },
     "guests-list": {
-      "heading": "Connected devices",
-      "empty": "Nobody joined the session yet.",
-      "accept": "Accept",
+      "heading": "อุปกรณ์ที่เชื่อมต่อ",
+      "empty": "ยังไม่มีใครเข้าเชื่อมต่อ",
+      "accept": "ยอมรับ",
       "status": {
-        "connecting": "Connecting",
-        "connected": "Connected",
-        "disconnected": "Disconnected"
+        "connecting": "กำลังเชื่อมต่อ",
+        "connected": "เชื่อมต่อแล้ว",
+        "disconnected": "ยกเลิกการเชื่อมต่อแล้ว"
       }
     },
     "guide-button": {
-      "start": "Let's go",
-      "introduction": "Learn how this works",
-      "first-thesis": "Start with the first thesis",
-      "thesis": "Proceed to the next thesis",
-      "party": "Select the parties",
-      "match": "See your result",
-      "compare": "Read the statements"
+      "start": "เริ่มกันเลย",
+      "introduction": "ดูว่าเครื่องมือทำงานยังไง",
+      "first-thesis": "เริ่มจากถ้อยความแรก",
+      "thesis": "ไปยังถ้อยความถัดไป",
+      "party": "เลือกพรรค",
+      "match": "ดููผลลัพธ์ของคุณ",
+      "compare": "อ่านคำตอบ"
     },
     "kiosk-mode": {
-      "heading": "Should we reset?",
-      "description": "The election compass will be reset now and all your answers will be deleted. | The election compass will be reset in {count} seconds and all your answers will be deleted. | The election compass will be reset in {count} second and all your answers will be deleted.",
-      "reset": "Reset now",
-      "resume": "Not yet!"
+      "heading": "เราควรเริ่มต้นใหม่หรือไม่",
+      "description": "Election Compass จะรีเซ็ตตอนนี้และคำตอบทั้งหมดของคุณจะถูกลบ | Election Compass จะรีเซ็ตภายใน {count} วินาทีและคำตอบทั้งหมดของคุณจะถูกลบ | Election Compass จะรีเซ็ตภายใน {count} วินาทีและคำตอบทั้งหมดของคุณจะถูกลบ",
+      "reset": "รีเซ็ตตอนนี้",
+      "resume": "เลื่อนไปก่อน"
     },
     "language-switch": {
-      "button": "Languages",
-      "heading": "Languages",
-      "description": "Please choose your preferred language."
+      "button": "ภาษา",
+      "heading": "ภาษา",
+      "description": "กรุณาเลือกภาษาที่คุณต้องการ"
     },
     "main-navigation": {
-      "menu": "Menu",
-      "thesis": "Thesis {count}",
+      "menu": "เมนู",
+      "thesis": "ถ้อยความที่ {count}",
       "links": {
         "compass": "Election Compass",
-        "languages": "Change language",
-        "friends-join": "Join friends",
-        "friends-invite": "Invite friends",
-        "reset": "Reset",
-        "home": "Start",
-        "introduction": "Introduction",
-        "theses": "Theses",
-        "evaluation": "Evaluation",
-        "party": "Party selection",
-        "match": "Result",
-        "compare": "Statements",
-        "about": "About"
+        "languages": "เปลี่ยนภาษา",
+        "friends-join": "เข้าร่วมกับเพื่อน",
+        "friends-invite": "เชิญเพื่อน",
+        "reset": "รีเซ็ต",
+        "home": "เริ่มต้น",
+        "introduction": "บทนำ",
+        "theses": "ถ้อยความ",
+        "evaluation": "การประเมินผล",
+        "party": "การเลือกพรรค",
+        "match": "ผลลัพธ์",
+        "compare": "คำตอบ",
+        "about": "เกี่ยวกับ"
       }
     },
     "open-election-compass-logo": {
-      "alt": "Logo of the Election Compass"
+      "alt": "โลโก้ของ Election Compass"
     },
     "show-more": {
-      "show": "show more",
-      "hide": "hide"
+      "show": "แสดงเพิ่มเติม",
+      "hide": "ซ่อน"
     }
   },
   "views": {
