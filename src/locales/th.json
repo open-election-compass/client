@@ -12,7 +12,7 @@
       "introduction": {
         "heading": "การแบ่งปันเซสชันคืออะไร",
         "explanation": [
-          "A shared session allows you to experience the election compass with your friends. One person invites the others to a shared session. Once everyone joined, you can each use the election compass as you normally would. But in addition to the parties, you can now also see each other's answers and start a discussion."
+          "การแบ่งปันเซสชันเป็นฟีเจอร์ที่ทำให้คุณสามารถใช้งาน Election Compass พร้อม ๆ กับเพื่อนของคุณได้ ผู้ใช้งานคนแรกจะเชิญผู้อื่นเข้ามาในเซสชันและใช้งานเครื่องมือได้อย่างที่เคยทำ แต่นอกจากจะดูผลของแต่ละฝ่ายแล้ว คุณยังสามารถดูคำตอบของเพื่อนแต่ละคนและอภิปรายร่วมกันได้"
         ]
       },
       "security": {
@@ -46,7 +46,7 @@
       "introduction": {
         "heading": "การแบ่งปันเซสชันคืออะไร",
         "explanation": [
-          "A shared session allows you to experience the election compass with your friends. One person invites the others to a shared session. Once everyone joined, you can each use the election compass as you normally would. But in addition to the parties, you can now also see each other's answers and start a discussion."
+          "การแบ่งปันเซสชันเป็นฟีเจอร์ที่ทำให้คุณสามารถใช้งาน Election Compass พร้อม ๆ กับเพื่อนของคุณได้ ผู้ใช้งานคนแรกจะเชิญผู้อื่นเข้ามาในเซสชันและใช้งานเครื่องมือได้อย่างที่เคยทำ แต่นอกจากจะดูผลของแต่ละฝ่ายแล้ว คุณยังสามารถดูคำตอบของเพื่อนแต่ละคนและอภิปรายร่วมกันได้"
         ]
       },
       "security": {
@@ -154,143 +154,143 @@
       },
       "start": {
         "section": {
-          "banner-aria": "Start section"
+          "banner-aria": "เริ่มส่วน"
         }
       },
       "theses": {
         "important-button": {
-          "important": "Important to me",
-          "important-aria": "Important – marks this thesis as important for you.",
-          "too-many-important": "There are only very few theses, so you cannot mark one as important. | Please mark no more than 1 thesis as important to receive a meaningful result! | Please mark no more than {count} theses as important to receive a meaningful result!"
+          "important": "เป็นข้อสำคัญสำหรับฉัน",
+          "important-aria": "สำคัญ – ทำเครื่องหมายว่าถ้อยความนี้สำคัญสำหรับคุณ",
+          "too-many-important": "เนื่องจากมีถ้อยความน้อยเกินไป คุณจึงไม่สามารถทำเครื่องหมายว่าสำคัญได้ | กรุณาทำเครื่องหมายว่าสำคัญไม่เกิน 1 ถ้อยความ เพื่อให้ได้รับผลลัพธ์ที่สมเหตุสมผล | กรุณาทำเครื่องหมายว่าสำคัญไม่เกิน {count} ถ้อยความ เพื่อให้ได้รับผลลัพธ์ที่สมเหตุสมผล"
         },
         "skip-button": {
-          "skip": "I don't know",
-          "skip-aria": "Skip – skips this thesis so it will not be counted.",
-          "too-many-skip": "There are only very few theses, so you cannot skip one. | Please skip no more than 1 thesis to receive a meaningful result! | Please skip no more than {count} theses to receive a meaningful result!"
+          "skip": "ฉันไม่ทราบ",
+          "skip-aria": "ข้าม – ข้ามข้อนี้เพื่อให้ไม่ถูกนับ",
+          "too-many-skip": "เนื่องจากมีถ้อยความน้อยเกินไป คุุณจึงไม่สามารถข้ามได้ | กรุณาข้ามไม่เกิน 1 ถ้อยความเพื่อให้ได้ผลลัพธ์ที่สมเหตุสมผล | กรุณาข้ามไม่เกิน {count} ถ้อยความเพื่อให้ได้ผลลัพธ์ที่สมเหตุสมผล"
         },
         "statement-text": {
-          "thesis": "Thesis {count} / {total}",
-          "statement-aria": "The thesis is: '{statement}'",
+          "thesis": "ถ้อยความที่ {count} / {total}",
+          "statement-aria": "ถ้อยความคือ: '{statement}'",
           "quoteStart": "‘",
           "quoteEnd": "’",
           "statement-badge": {
-            "skip": "You skipped this",
-            "skip-aria": "You skipped this thesis.",
-            "important": "You marked this as important",
-            "important-aria": "You marked this thesis as important."
+            "skip": "คุณข้ามสิ่งนี้",
+            "skip-aria": "คุณข้ามถ้อยความนี้",
+            "important": "คุณทำเครื่องหมายสิ่งนี้ว่าสำคัญ",
+            "important-aria": "คุณทำเครื่องหมายถ้อยความนี้ว่าสำคัญ"
           }
         },
         "statement-wrapper": {
-          "role-aria": "Thesis",
-          "region-aria": "Thesis {count} of {total}"
+          "role-aria": "ถ้อยความ",
+          "region-aria": "ถ้อยความที่ {count} จาก {total}"
         }
       },
       "party": {
         "party-item": {
-          "party-aria": "Party '{party}' – click here to select or deselect this party for comparison."
+          "party-aria": "พรรค '{party}' – กดที่นี่เพื่อเลือกหรือยกเลิกการเลือกพรรคนี้จากการเทียบ"
         },
         "section": {
-          "heading": "Choose the parties you want to compare",
-          "instruction": "Please select the parties you want to compare your own decisions to. You can select as many parties as you like, but you have to select at least two. The following list is presented in the same order as the parties will appear on the ballot.",
-          "proceed": "Done"
+          "heading": "เลือกพรรคท่คุณต้องการเปรียบเทียบ",
+          "instruction": "กรุณาเลือกพรรคที่คุณต้องการเปรียบเทียบตัวเลือกของคุณด้วย คุณสามารถเลือกกี่พรรคก็ได้ แต่คุณต้องเลือกอย่างน้อย 2 พรรค รายการต่อไปนี้แสดงรายการตามที่แสดงบนบัตรเลือกตั้ง",
+          "proceed": "เรียบร้อย"
         }
       },
       "match": {
         "match-display": {
-          "match-aria": "Your match for the party '{party}' is at {percentage} %"
+          "match-aria": "ความเข้ากันของคำตอบของคุณกับพรรค '{party}' อยู่ที่ {percentage} %"
         },
         "section": {
-          "heading": "Your result",
-          "explanation": "This chart describes how much you and the respective parties agreed on the above theses. The higher the percentage, the more your positions match. Keep in mind, that this is no voting recommendation, but a tool for orientation and discussion."
+          "heading": "ผลลัพธ์ของคุณ",
+          "explanation": "กราฟด้านล่างแสดงให้เห็นว่าคุณและพรรคเห็นด้วยในมุมมองต่าง ๆ เพียงใด ยิ่งมีร้อยละสูงยิ่งหมายความว่าเข้ากันได้มากเท่านั้น หมายเหตุว่านี่ไม่ใช่การแนะนำการลงคะแนน แต่เป็นเพียงเครื่องมือในการดูมุมมองและอภิปรายเท่านั้น"
         }
       },
       "compare": {
         "additional-analysis": {
-          "heading": "Statistics",
+          "heading": "สถิติ",
           "buttons": {
-            "close": "Quit",
-            "start": "Let's go",
-            "proceed": "Submit and next",
-            "open-questionnaire": "Open survey in new tab"
+            "close": "ออก",
+            "start": "เริ่มเลย",
+            "proceed": "ส่งและถัดไป",
+            "open-questionnaire": "เปิดแบบสอบถามในแท็ปถัดไป"
           },
-          "start": "Thank you for sharing! Your data becomes more valuable for statistics if you share some more background information about yourself – would you help some more? Simply answer as many questions as you like!",
-          "help-even-more": "Thank you very much! Would you like to help even more? You can answer some more specific questions here:",
-          "thanks": "Thank you for sharing! Those were all the questions – you helped us a lot! Click on 'Quit' to go back to your results.",
+          "start": "ขอบคุณสำหรับการแบ่งปัน ข้อมูลของคุณจะมีคุณค่าด้านสถิติเป็นอย่างสูงหากคุณแบ่งปันข้อมูลเพหลังเกี่ยวกับตัวคุณ – คุณสนใจจะช่วยหรือไม่ โปรดตอบคำถามให้มากเท่าที่คุณต้องการ",
+          "help-even-more": "ขอขอบคุณเป็นอย่างสูง ยังอย่างช่วยเพิ่มเติมอีกหรือไม่ ตอบคำถามที่เฉพาะเจาะจงเพิ่มเติมนี้:",
+          "thanks": "ขอบคุุณสำหรับการแบ่งปัน และนั่นเป็นคำถามสุดท้ายแล้ว – คุณช่วยเราเยอะมากจริง ๆ กดที่ 'ออก' เพื่อกลับไปที่ผลลัพธ์ของคุณ",
           "fields": {
             "age": {
-              "name": "Age",
-              "label": "How old are you now?",
+              "name": "อายุ",
+              "label": "คุณมีอายุเท่าใดในตอนนี้",
               "placeholder": "25",
-              "description": "Your age is important to research what people of different age groups think about the theses and parties."
+              "description": "อายุุของคุณมีส่วนสำคัญในการวิจัยว่าคนแต่ละช่วยวัยคิดเห็นอย่างไรเกี่ยวกับแต่อย่างและพรรคเหล่านี้"
             },
             "gender": {
-              "name": "Gender",
-              "label": "What is your gender?",
+              "name": "เพศ",
+              "label": "คุณมีเพศใด",
               "options": {
-                "female": "female",
-                "diverse": "diverse",
-                "male": "male",
-                "none": "no answer"
+                "female": "หญิง",
+                "diverse": "หลากหลาย",
+                "male": "ชาย",
+                "none": "ไม่ต้องการตอบ"
               }
             },
             "education": {
-              "name": "Qualification",
-              "label": "What is your highest educational qualification?",
+              "name": "ระดับการศึกษา",
+              "label": "การศึกษาสูงสุดของคุณอยู่ระดับใด",
               "options": {
-                "student": "Currently a student",
-                "nothing": "No complete qualification",
-                "lower": "Middle School or similar",
-                "higher": "High School or similar",
-                "academic": "Academic",
-                "none": "no answer"
+                "student": "ยังเป็นนักเรียน",
+                "nothing": "ไม่สำเร็จการศึกษา",
+                "lower": "มัธยมต้นหรือเทียบเท่า",
+                "higher": "มัธยมปลายหรือเทียบเท่า",
+                "academic": "สูงกว่า",
+                "none": "ไม่ต้องการตอบ"
               }
             },
             "party": {
-              "name": "Party",
-              "label": "If the election was today, who would you cast your vote for?",
+              "name": "พรรค",
+              "label": "หากวันนี้เป็นวันเลือกตั้ง คุณจะเลือกตัวเลือกใด",
               "options": {
-                "other": "Other",
-                "non-voter": "I won't vote",
-                "not-eligible": "I am not eligible",
-                "not-sure": "I'm not sure",
-                "none": "no answer"
+                "other": "อื่น ๆ",
+                "non-voter": "ฉัันไม่ลงคะแนน",
+                "not-eligible": "ฉันไม่มีสิทธิ์ลงคะแนน",
+                "not-sure": "ฉันไม่มั่นใจ",
+                "none": "ไม่ต้องการตอบ"
               }
             }
           }
         },
         "analysis-banner": {
-          "heading": "Do you want to donate your answers to science?",
-          "explanation": "You can help {someone} understand this election better by donating your answers and results to scientific research. We only save anonymized data which we can not trace back to you.",
-          "send": "Submit statistic data now",
-          "close": "No, continue reading"
+          "heading": "คุณต้องการบริจาคคำตอบของคุณเพื่อประโยนช์ทางวิทยาศาสตร์หรือไม่",
+          "explanation": "คุณสามารถช่วยให้ {someone} เข้าใจการเลือกตั้งครั้งนี้ได้ดีขึ้นโดยการบริจาคคำตอบและผลลัพธ์เพื่อประโยชน์ในการวิจัยทางวิทยาศาสตร์ เราจะเก็บข้อมูลที่เป็นนิรนามเท่านั้นซึ่งไม่สามารถสืบย้อนกลับมาที่คุณได้",
+          "send": "ส่งข้อมูลทางสถิติตอนนี้",
+          "close": "ไม่ต้อง อ่านต่อไป"
         },
         "answer": {
           "skip": {
-            "status-text": "unknown",
-            "content": "The party '{party}' did not provide any answers or position regarding this thesis."
+            "status-text": "ไม่ทราบ",
+            "content": "พรรค '{party}' ไม่ได้ให้คำตอบหรือจุดยืนใด ๆ เกี่ยวกับถ้อยความนี้"
           },
           "empty": {
-            "content": "The party '{party}' did not provide any statement to explain their position regarding this thesis."
+            "content": "พรรค '{party}' ไม่ได้ขยายความสาเหตุที่เลือกจุดยืนนี้ในถ้อยความนี้"
           }
         },
         "section": {
-          "heading": "Their answers",
-          "explanation": "The parties typically provide statements for every thesis to explain their reasoning. It is not always obvious why a party assumes a certain position so it is recommended to read this statements or the respective election manifestos.",
-          "region-aria": "Thesis {count} of {total}"
+          "heading": "คำตอบของพวกเขา",
+          "explanation": "พรรคแต่ละพรรคจะอธิบายขยายความในมุมมองของพวกเขาเกี่ยวกับถ้อยความ โดยอาจไม่ใช่การกล่าวถึงว่าทำไมจึงเลือกตัวเลือกเสมอไปจึงแนะนำให้อ่านแถลงการณ์นี้หรือประกาศเกี่ยวกับการเลือกตั้งที่เกี่ยวข้อง",
+          "region-aria": "ถ้อยความที่ {count} จาก {total}"
         },
         "friends-position": {
           "answer-aria": "{name}: {position}",
-          "skip": "Skipped"
+          "skip": "ข้ามแล้ว"
         },
         "kiosk-mode-hint": {
-          "heading": "Please reset when you're done",
-          "explanation": "Take your time reading and comparing the answers to the statements below. When you're done, you can reset the election compass here for the next person. This will also delete your own answers. Hint: you can also find a reset button in the menu. Thank you!",
-          "reset": "Reset"
+          "heading": "โปรดรีเซ็ตเมื่อคุณใช้งานเรียบร้อยแล้ว",
+          "explanation": "โปรดใช้เวลาของคุณสักครู่หนึ่งเพื่ออ่านและเปรียบเทียบคำตอบต่อถ้อยความด้านล่าง เมื่อคุณอ่านเรียบร้อยแล้ว คุณสามารถรีเซ็ต Election Compass นี้เพื่อให้คนถัดไปได้ใช้งานต่อ ซึ่งจะลบคำตอบของตัวคุณเองด้วย ใบ้นิดนึงว่าคุณยังสามารถเจอปุ่มรีเซ็ตได้ที่เมนู ขอบคุณ",
+          "reset": "รีเซ็ต"
         }
       },
       "footer": {
         "section": {
-          "explanation": "This election compass is based on the free open source project {0}.",
+          "explanation": "Election Compass นี้ทำงานโดยโครงการโอเพนซอร์ส {0}",
           "oec": "OpenElectionCompass"
         }
       }
@@ -298,66 +298,66 @@
   },
   "validation": {
     "names": {
-      "name": "Name",
-      "remote-peer-id": "Friend's device"
+      "name": "ชื่่อ",
+      "remote-peer-id": "อุปกรณ์ของเพื่อน"
     },
     "fields": {
       "name": {
-        "min": "Please enter a name.",
-        "regex": "Only letters, numbers and spaces, no special characters.",
-        "required": "Please enter a name."
+        "min": "โปรดใส่ชื่อ",
+        "regex": "เฉพาะตัวอักษร ตัวเลข และช่องว่าง อย่าใส่อักขระพิเศษ",
+        "required": "โปรดใส่ชื่อ"
       }
     }
   },
   "algorithm": {
     "options": {
       "strongly-approve": {
-        "button": "Strongly approve",
-        "button-aria": "Strongly approve – click here to strongly approve this thesis!",
-        "badge": "You strongly approved",
-        "badge-aria": "You strongly approved this thesis.",
-        "status": "strongly approves",
-        "answer-aria": "The party '{party}' strongly approves this thesis with the following answer: {answer}"
+        "button": "เห็นด้วยอย่างยิ่ง",
+        "button-aria": "เห็นด้วยอย่างยิ่ง – กดที่นี่เพื่อแสดงความเห็นด้วยอย่างยิ่งกับถ้อยความนี้",
+        "badge": "คุณเห็นด้วยอย่างยิ่ง",
+        "badge-aria": "คุณเห็นด้วยอย่างยิ่งกับถ้อยความนี้",
+        "status": "เห็นด้วยอย่างยิ่ง",
+        "answer-aria": "พรรค '{party}' เห็นด้วยอย่างยิ่งกับถ้อยความนี้ด้วยเหตุผลดังต่อไปนี้: {answer}"
       },
       "approve": {
-        "button": "Approve",
-        "button-aria": "Approve – click here to approve this thesis!",
-        "badge": "You approved",
-        "badge-aria": "You approved this thesis.",
-        "status": "approves",
-        "answer-aria": "The party '{party}' approves this thesis with the following answer: {answer}"
+        "button": "เห็นด้วย",
+        "button-aria": "เห็นด้วย – กดที่นี่เพื่อแสดงความเห็นด้วยกับถ้อยความนี้",
+        "badge": "คุณเห็นด้วย",
+        "badge-aria": "คุณเห็นด้วยกับถ้อยความนี้",
+        "status": "เห็นด้วย",
+        "answer-aria": "พรรค '{party}' เห็นด้วยกับถ้อยความนี้ด้วยเหตุผลดังต่อไปนี้: {answer}"
       },
       "neutral": {
-        "button": "Neutral",
-        "button-aria": "Neutral – click here to remain neutral regarding this thesis!",
-        "badge": "You we're neutral",
-        "badge-aria": "You we're neutral regarding this thesis.",
-        "status": "neutral",
-        "answer-aria": "The party '{party}' remains neutral to this thesis, providing the following answer: {answer}"
+        "button": "เป็นกลาง",
+        "button-aria": "เป็นกลาง – กดที่นี่เพื่อเป็นกลางกับถ้อยความนี้",
+        "badge": "คุณเป็นกลาง",
+        "badge-aria": "คุณตอบเป็นกลางกับถ้อยความนี้",
+        "status": "เป็นกลาง",
+        "answer-aria": "พรรค '{party}' เป็นกลางกับถ้อยความนี้ด้วยเหตุผลดังต่อไปนี้: {answer}"
       },
       "partly": {
-        "button": "Partly",
-        "button-aria": "Partly – click here to agree partly with this thesis!",
-        "badge": "You agreed partly",
-        "badge-aria": "You agreed partly with this thesis.",
-        "status": "partly",
-        "answer-aria": "The party '{party}' supports this thesis partly, providing the following answer: {answer}"
+        "button": "กึ่งเห็นด้้วย",
+        "button-aria": "กึ่งเห็นด้วย – กดที่นี่เพื่อแสดงว่ากึ่งเห็นด้วยกับถ้อยความนี้",
+        "badge": "คุณเป็นกลาง",
+        "badge-aria": "คุณตอบกึ่งเห็นด้วยกับถ้อยความนี้",
+        "status": "กึ่งเห็นด้วย",
+        "answer-aria": "พรรค '{party}' กึ่งเห็นด้วยกับถ้อยความนี้ด้วยเหตุผลดังต่อไปนี้: {answer}"
       },
       "reject": {
-        "button": "Reject",
-        "button-aria": "Reject – click here to reject this thesis!",
-        "badge": "You rejected",
-        "badge-aria": "You rejected this thesis.",
-        "status": "rejects",
-        "answer-aria": "The party '{party}' rejects this thesis with the following answer: {answer}"
+        "button": "ไม่เห็นด้วย",
+        "button-aria": "ไม่เห็นด้วย – กดที่นี่เพื่อแสดงว่าไม่เห็นด้วยกับถ้อยความนี้",
+        "badge": "คุณไม่เห็นด้วย",
+        "badge-aria": "คุณตอบไม่เห็นด้วยกับถ้อยความนี้",
+        "status": "ไม่เห็นด้วย",
+        "answer-aria": "พรรค '{party}' ไม่เห็นด้วยกับถ้อยความนี้ด้วยเหตุผลดังต่อไปนี้: {answer}"
       },
       "strongly-reject": {
-        "button": "Strongly reject",
-        "button-aria": "Strongly reject – click here to strongly reject this thesis!",
-        "badge": "You strongly rejected",
-        "badge-aria": "You strongly rejected this thesis.",
-        "status": "strongly rejects",
-        "answer-aria": "The party '{party}' strongly rejects this thesis with the following answer: {answer}"
+        "button": "ไม่เห็นด้วยอย่างยิ่ง",
+        "button-aria": "ไม่เห็นด้วยอย่างยิ่ง – กดที่นี่เพื่อแสดงว่าไม่เห็นด้วยอย่างยิ่งกับถ้อยความนี้",
+        "badge": "คุณไม่เห็นด้วยอย่างยิ่ง",
+        "badge-aria": "คุณตอบไม่เห็นด้วยอย่างยิ่งกับถ้อยความนี้",
+        "status": "ไม่เห็นด้วยอย่างยิ่ง",
+        "answer-aria": "พรรค '{party}' ไม่เห็นด้วยอย่างยิ่งกับถ้อยความนี้ด้วยเหตุผลดังต่อไปนี้: {answer}"
       }
     }
   }
