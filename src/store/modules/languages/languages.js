@@ -2,7 +2,41 @@ import getUserLocale from 'get-user-locale';
 import i18n from '/src/locales/i18n';
 import cloneDeep from 'lodash/cloneDeep';
 
-const officialLanguages = ['ar', 'de', 'en', 'es', 'fr', 'hu', 'id', 'it', 'nl', 'pl', 'pt', 'tr'];
+const officialLanguages = [
+  'ar',
+  'az',
+  'bn',
+  'de',
+  'el',
+  'en',
+  'es',
+  'fa',
+  'fr',
+  'ha',
+  'he',
+  'hi',
+  'hr',
+  'hu',
+  'id',
+  'it',
+  'ja',
+  'ko',
+  'ml',
+  'nl',
+  'pl',
+  'pt',
+  'ro',
+  'ru',
+  'rw',
+  'sk',
+  'sr',
+  'sw',
+  'th',
+  'tr',
+  'uk',
+  'vi',
+  'zh',
+];
 
 export default {
   namespaced: true,
