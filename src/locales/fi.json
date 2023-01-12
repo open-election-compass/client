@@ -1,7 +1,7 @@
 {
   "elements": {
     "friends-invite-modal": {
-      "heading": "Invite friends",
+      "heading": "Kutsu ystäviä",
       "description": "Invite your friends to a shared session where everyone can see each other's answers in real time.",
       "form": {
         "name": {
