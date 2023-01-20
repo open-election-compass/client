@@ -2,21 +2,21 @@
   "elements": {
     "friends-invite-modal": {
       "heading": "Kutsu ystäviä",
-      "description": "Invite your friends to a shared session where everyone can see each other's answers in real time.",
+      "description": "Kutsu ystäväsi jaettuun istuntoon, jossa kaikki voivat nähdä toistensa vastaukset reaaliajassa.",
       "form": {
         "name": {
-          "label": "Your name / nickname",
-          "description": "Please provide your name so your friends can recognize you. You can also use a nickname."
+          "label": "Nimesi / nimimerkkisi",
+          "description": "Anna nimesi, jotta ystäväsi voivat tunnistaa sinut. Voit myös käyttää lempinimeä."
         }
       },
       "introduction": {
-        "heading": "What is a shared session?",
+        "heading": "Mikä on jaettu istunto?",
         "explanation": [
-          "A shared session allows you to experience the election compass with your friends. One person invites the others to a shared session. Once everyone joined, you can each use the election compass as you normally would. But in addition to the parties, you can now also see each other's answers and start a discussion."
+          "Jaettu istunto antaa sinulle mahdollisuuden kokea vaalikompassi ystäviesi kanssa. Yksi henkilö kutsuu muut jaettuun istuntoon. Kun kaikki ovat liittyneet, voitte jokainen käyttää vaalikompassia kuten normaalisti. Puolueiden lisäksi voitte nyt myös nähdä toistenne vastaukset ja aloittaa keskustelun."
         ]
       },
       "security": {
-        "heading": "Are my answers safe?",
+        "heading": "Ovatko vastaukseni turvassa?",
         "explanation": [
           "Yes! Your answers are exchanged directly between your devices via a secure connection. A server helps the devices find themselves on the Internet - your answers, however, are not sent via the server, but directly from device to device."
         ]
