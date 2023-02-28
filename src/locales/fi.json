@@ -170,19 +170,19 @@
         },
         "statement-text": {
           "thesis": "Väittämä {count} / {total}",
-          "statement-aria": "The thesis is: '{statement}'",
-          "quoteStart": "‘",
-          "quoteEnd": "’",
+          "statement-aria": "Väittämä: '{statement}'",
+          "quoteStart": "'",
+          "quoteEnd": "'",
           "statement-badge": {
-            "skip": "You skipped this",
-            "skip-aria": "You skipped this thesis.",
-            "important": "You marked this as important",
-            "important-aria": "You marked this thesis as important."
+            "skip": "Ohitit tämän",
+            "skip-aria": "Ohitit tämän väittämän.",
+            "important": "Merkitsit tämän tärkeäksi",
+            "important-aria": "Merkitsit tämän väittämän tärkeäksi."
           }
         },
         "statement-wrapper": {
-          "role-aria": "Thesis",
-          "region-aria": "Thesis {count} of {total}"
+          "role-aria": "Väittämä",
+          "region-aria": "Väittämä {count} / {total}"
         }
       },
       "party": {
@@ -354,9 +354,9 @@
       "strongly-reject": {
         "button": "Täysin eri mieltä",
         "button-aria": "Strongly reject – click here to strongly reject this thesis!",
-        "badge": "You strongly rejected",
-        "badge-aria": "You strongly rejected this thesis.",
-        "status": "strongly rejects",
+        "badge": "Olette täysin eri mieltä",
+        "badge-aria": "Olette täysin eri mieltä väittämän kanssa.",
+        "status": "täysin eri mieltä",
         "answer-aria": "The party '{party}' strongly rejects this thesis with the following answer: {answer}"
       }
     }
