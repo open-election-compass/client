@@ -104,72 +104,72 @@
       "start": "Aloitetaan",
       "introduction": "Opi kuinka tämä toimii",
       "first-thesis": "Aloita ensimmäisestä väittämästä",
-      "thesis": "Proceed to the next thesis",
+      "thesis": "Jatka seuraavaan väittämään",
       "party": "Select the parties",
-      "match": "See your result",
+      "match": "Näytä tuloksesi",
       "compare": "Read the statements"
     },
     "kiosk-mode": {
-      "heading": "Should we reset?",
-      "description": "The election compass will be reset now and all your answers will be deleted. | The election compass will be reset in {count} seconds and all your answers will be deleted. | The election compass will be reset in {count} second and all your answers will be deleted.",
-      "reset": "Reset now",
-      "resume": "Not yet!"
+      "heading": "Pitäisikö nollata?",
+      "description": "Vaalikompassi nollataan ja kaikki vastauksesi poistetaan. | Vaalikompaasi nollataan {count} sekunnin päästä ja kaikki vastauksesi poistetaan. | Vaalikompassi nollataan {count} sekunnin päästä ja kaikki vastauksesi poistetaan.",
+      "reset": "Nollaa nyt",
+      "resume": "Ei vielä!"
     },
     "language-switch": {
-      "button": "Languages",
-      "heading": "Languages",
-      "description": "Please choose your preferred language."
+      "button": "Kielet",
+      "heading": "Kielet",
+      "description": "Valitse haluamasi kieli."
     },
     "main-navigation": {
-      "menu": "Menu",
-      "thesis": "Thesis {count}",
+      "menu": "Valikko",
+      "thesis": "Väittämä {count}",
       "links": {
-        "compass": "Election Compass",
-        "languages": "Change language",
-        "friends-join": "Join friends",
-        "friends-invite": "Invite friends",
-        "reset": "Reset",
-        "home": "Start",
+        "compass": "Vaalikompassi",
+        "languages": "Vaihda kieltä",
+        "friends-join": "Liity ystäviesi seuraan",
+        "friends-invite": "Kutsu ystäviä",
+        "reset": "Nollaa",
+        "home": "Aloita",
         "introduction": "Introduction",
-        "theses": "Theses",
-        "evaluation": "Evaluation",
+        "theses": "Väittämät",
+        "evaluation": "Arviointi",
         "party": "Party selection",
-        "match": "Result",
+        "match": "Tulos",
         "compare": "Statements",
-        "about": "About"
+        "about": "Meistä"
       }
     },
     "open-election-compass-logo": {
-      "alt": "Logo of the Election Compass"
+      "alt": "Vaalikompassin logo"
     },
     "show-more": {
-      "show": "show more",
-      "hide": "hide"
+      "show": "näytä lisää",
+      "hide": "piilota"
     }
   },
   "views": {
     "home": {
       "home": {
-        "role-aria": "Election Compass"
+        "role-aria": "Vaalikompassi"
       },
       "start": {
         "section": {
-          "banner-aria": "Start section"
+          "banner-aria": "Aloitusosio"
         }
       },
       "theses": {
         "important-button": {
-          "important": "Important to me",
+          "important": "Minulle tärkeä",
           "important-aria": "Important – marks this thesis as important for you.",
           "too-many-important": "There are only very few theses, so you cannot mark one as important. | Please mark no more than 1 thesis as important to receive a meaningful result! | Please mark no more than {count} theses as important to receive a meaningful result!"
         },
         "skip-button": {
-          "skip": "I don't know",
-          "skip-aria": "Skip – skips this thesis so it will not be counted.",
+          "skip": "En tiedä",
+          "skip-aria": "Ohita – ohita tämä väittämä, jotta sitä ei lasketa.",
           "too-many-skip": "There are only very few theses, so you cannot skip one. | Please skip no more than 1 thesis to receive a meaningful result! | Please skip no more than {count} theses to receive a meaningful result!"
         },
         "statement-text": {
-          "thesis": "Thesis {count} / {total}",
+          "thesis": "Väittämä {count} / {total}",
           "statement-aria": "The thesis is: '{statement}'",
           "quoteStart": "‘",
           "quoteEnd": "’",
