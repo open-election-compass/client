@@ -1,6 +1,6 @@
 {
   "name": "@open-election-compass/client",
-  "version": "2.0.0-alpha.5",
+  "version": "2.0.0-alpha.6",
   "author": "Till Sanders <mail@till-sanders.de>",
   "license": "GPL-3.0",
   "main": "dist/open-election-compass.umd.min.js",
@@ -38,7 +38,7 @@
     "@fortawesome/fontawesome-svg-core": "^6.1.2",
     "@fortawesome/free-solid-svg-icons": "^6.1.2",
     "@fortawesome/vue-fontawesome": "^3.0.1",
-    "@open-election-compass/ui": "^0.13.1",
+    "@open-election-compass/ui": "^0.14.0",
     "@vee-validate/i18n": "^4.6.6",
     "@vee-validate/rules": "^4.6.6",
     "@vueuse/components": "^9.1.1",

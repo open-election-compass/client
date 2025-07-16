@@ -5,6 +5,7 @@ import cloneDeep from 'lodash/cloneDeep';
 const officialLanguages = [
   'ar',
   'az',
+  'bg',
   'bn',
   'de',
   'el',
