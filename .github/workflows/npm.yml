@@ -13,7 +13,7 @@ jobs:
 
     - name: Build
       # Several packages depend on 'which'. That package has SSL issues as of July 2025.
-      run: npm set strict-ssl false && npm ci && npm run build-only
+      run: npm set strict-ssl false && npm ci --force && npm run build-only
 
     - uses: JS-DevTools/npm-publish@v1
       if: success()
