@@ -14,7 +14,8 @@ jobs:
     - uses: actions/checkout@v2
 
     - name: Build
-      run: npm ci && npm run build:demo
+      # Several packages depend on 'which'. That package has SSL issues as of July 2025.
+      run: npm set strict-ssl false && npm ci --force && npm run build:demo
 
     - name: Deploy Demos to GitHub Pages
       if: success()
